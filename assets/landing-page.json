@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 2,
+  "resourceKey": "landing_page.kai",
+  "runtimeDataPolicy": "definitions_only",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": { "palette": "emerald", "primaryColor": "green", "secondaryColor": "green", "accentColor": "purple", "fontFamily": "inter" },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": { "canvas": "#fafaf9", "surface": "#ffffff", "sidebar": "#1a1a1a", "text": "#1a1a1a", "accent": "#c9fa54", "userBubble": "#1f5f32" },
+          "dark": { "canvas": "#111210", "surface": "#1a1c18", "sidebar": "#0c0d0b", "text": "#fafaf9", "accent": "#c9fa54", "userBubble": "#2f7d45" }
+        },
+        "typography": {
+          "body": { "source": "google", "family": "Urbanist" },
+          "display": { "source": "google", "family": "Urbanist" },
+          "label": { "source": "google", "family": "Urbanist" }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        { "label": "Product", "target": "product" },
+        { "label": "Mobile", "target": "mobile" },
+        { "label": "Stories", "target": "stories" },
+        { "label": "Features", "target": "features" },
+        { "label": "About", "target": "about" }
+      ],
+      "ctaLabel": "Meet KAI"
+    },
+    "badge": "Your shop, recipes, and calorie plan—connected",
+    "headline": "Shop the week. Cook what you have. See the calories.",
+    "headlineAccent": "Cook what you have.",
+    "subheadline": "Scan the fridge or a receipt. KAI turns what is already there into recipes, counts the calories, and shops only for what each meal still needs.",
+    "ctaLabel": "Talk to KAI",
+    "secondaryCtaLabel": "Scan to recipes",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": ["Real products and prices", "Review every choice", "Calories planned by household", "Recipes from what you have"],
+    "seoImage": { "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/og.png", "alt": "KAI, your Grocery Twin, connecting fridge scans, recipes, calories, and a reviewable grocery cart" },
+    "contact": { "heading": "Start with what you have", "body": "Scan the fridge or a receipt and let KAI prepare the grocery gaps for review." },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Home",
+        "subtitle": "Your Grocery Twin",
+        "secondaryEditionLabel": "Retail",
+        "navItems": [
+          { "label": "Product", "target": "product" },
+          { "label": "Mobile", "target": "mobile" },
+          { "label": "Stories", "target": "stories" },
+          { "label": "Features", "target": "features" },
+          { "label": "About", "target": "about" }
+        ],
+        "secondaryCtaLabel": "Meet KAI",
+        "primaryCtaLabel": "Start a cart"
+      },
+      "hero": {
+        "ratingLabel": "Your shop, recipes, and calorie plan—connected",
+        "heading": "Shop the week. Cook what you have. See the calories.",
+        "body": "Scan the fridge or a receipt. KAI turns what is already there into recipes, counts the calories, and shops only for what each meal still needs.",
+        "primaryCtaLabel": "Talk to KAI",
+        "secondaryCtaLabel": "Scan to recipes",
+        "trustItems": ["Real products and prices", "Review every choice", "Calories planned by household", "Recipes from what you have"],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "KAI, your full-body Grocery Twin persona",
+        "chat": {
+          "statusLabel": "Online",
+          "subtitle": "Fridge-to-recipe grocery assistant",
+          "openingMessage": "Hi, I’m KAI. Show me the fridge, pantry, or a recent receipt. I’ll suggest recipes from what you have and keep the spend, calories, and missing ingredients visible.",
+          "visitorMessage": "Scan my fridge and show what I can cook tonight.",
+          "assistantMessage": "I’ll turn what is already there into recipe options, show calories per serving, and shop only for the ingredients still missing.",
+          "inputPlaceholder": "Ask for groceries, a recipe, or a calorie check…",
+          "suggestions": ["Oat milk deals", "Balance my week", "Cook from my fridge"],
+          "demoNote": "Illustrative grocery, recipe, and nutrition demo · Check ingredients and dietary needs",
+          "sampleProduct": { "badge": "Deal found · Pantry+", "name": "Oatly Barista Edition", "detail": "1 L · 590 kcal · 20% off", "price": "€2.39", "actionLabel": "Try /restock" }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Choose a fridge, pantry, receipt, or shopping-list image",
+          "uploadHint": "JPEG, PNG, WebP, or HEIC · up to 6 images and 10 MB each",
+          "analyzingLabel": "KAI is reading the visible groceries…",
+          "inventoryHeading": "Review the extracted inventory",
+          "inventoryBody": "Correct quantities, remove mistakes, or add anything KAI missed.",
+          "itemNameLabel": "Item",
+          "quantityLabel": "Quantity",
+          "unitLabel": "Unit",
+          "addItemLabel": "Add item",
+          "removeItemLabel": "Remove",
+          "chatLabel": "Correct by chat",
+          "voiceLabel": "Correct by voice · 5 min",
+          "reviewLabel": "Review inventory",
+          "editLabel": "Edit inventory",
+          "confirmationHeading": "Inventory ready",
+          "confirmationBody": "KAI will reconfirm this list before proposing a cart. Nothing is ordered without your approval.",
+          "signInLabel": "Sign in to continue",
+          "signInNotice": "Sign in to move this grocery capture into a private KAI session and continue the restock workflow. Nothing is ordered without your explicit approval.",
+          "expiryCopy": "Unclaimed previews expire after one hour",
+          "errorCopy": "KAI could not read a grocery list from that image. Try a clearer fridge, pantry, receipt, or shopping-list photo."
+        }
+      },
+      "product": {
+        "kicker": "Your Grocery + Recipe + Calorie Twin",
+        "heading": "What can we cook—and what still needs shopping?",
+        "body": "KAI connects the scan, recipes, product search, calories, and cart so every meal starts with what you already have.",
+        "capabilityLabels": ["Product search", "Calorie plan", "Recipe ideas", "Image to list", "Voice help", "Deal matching"],
+        "cards": [
+          { "title": "Live cart", "body": "Compare real products, quantities, and prices in one reviewable cart.", "metric": "Spend + calories together" },
+          { "title": "Recipes from your scan", "body": "See cookable recipes ranked by what is already in the fridge and what is missing.", "metric": "Cook first, shop second" },
+          { "title": "Deal radar", "body": "Compare useful matches while preserving recipe coverage and household goals.", "metric": "Real grocery sources" }
+        ]
+      },
+      "mobile": {
+        "kicker": "KAI in your pocket",
+        "heading": "From fridge to recipe to cart,",
+        "accentHeading": "wherever you are.",
+        "items": [
+          { "label": "Build a cart", "title": "A live cart with your spend and calorie plan together.", "body": "Ask for an item, compare a real match, and see how price, calories, and quantity change the week." },
+          { "label": "Scan the fridge", "title": "Turn a fridge or receipt photo into recipes you can cook.", "body": "KAI identifies what is on hand, estimates the calories, and suggests recipes before building the missing-ingredient list." },
+          { "label": "Choose a recipe", "title": "Pick a meal, then buy only what is missing.", "body": "Compare cook time, calories per serving, ingredient coverage, and the small grocery gap for each recipe." },
+          { "label": "Talk to KAI", "title": "Talk through the shop and your weekly target.", "body": "Say what ran out or what you want to cook. KAI keeps the cart, spend, and calorie gap in context." }
+        ]
+      },
+      "features": {
+        "kicker": "The weekly shop, rebuilt",
+        "heading": "Manage groceries, recipes, spend, and calories with clarity",
+        "items": [
+          { "number": "01", "title": "Recipe, product & calorie discovery", "body": "Scan what you have or describe the meal you want. KAI shows cookable recipes, calories per serving, and the exact grocery gap for each option.", "tags": ["Fridge scan", "Recipes", "Calories", "Missing items"], "accent": "purple" },
+          { "number": "02", "title": "A cart built from the meals you choose", "body": "Choose a recipe and KAI removes ingredients already on hand. Only the missing products enter the cart, with spend and household calories updated together.", "tags": ["Recipe coverage", "Missing only", "Weekly kcal"], "accent": "blue" },
+          { "number": "03", "title": "Scan once. Cook from what is there.", "body": "KAI turns a fridge, pantry, or receipt scan into three practical recipes. Compare time and calories, pick one, then review only its missing ingredients.", "tags": ["3 recipe options", "Cook time", "Calories / serving"], "accent": "lime" }
+        ]
+      },
+      "stories": {
+        "kicker": "What cooking and shopping with KAI feels like",
+        "heading": "Small moments of fridge-to-dinner clarity",
+        "testimonials": [
+          { "quote": "KAI turns what is already in our fridge into dinner ideas, then shows the cost and family calories before I choose.", "name": "Mila", "meta": "Busy parent" },
+          { "quote": "I ask for cheese deals, compare the real options, and add the exact one I want. No tab hopping.", "name": "Noah", "meta": "Weekly shopper" },
+          { "quote": "The receipt scan gave me three recipes, the calories per serving, and only the ingredients I still needed to buy.", "name": "Sofia", "meta": "Home cook" },
+          { "quote": "I like that KAI builds the cart first and asks the planning questions only when they matter.", "name": "Lucas", "meta": "Student" },
+          { "quote": "Voice is perfect when my hands are full in the kitchen. I just tell KAI what ran out.", "name": "Emma", "meta": "Meal prep fan" },
+          { "quote": "Everything stays reviewable. I can change quantities and see both the spend and calorie total move with me.", "name": "Daan", "meta": "Smart shopper" }
+        ],
+        "articles": [
+          { "category": "Weekly routine", "title": "The seven-minute shop and meal plan", "body": "A solo shopper turned a scattered staples list into a cart, three cookable dinners, and 10,850 planned calories." },
+          { "category": "Fridge to recipe", "title": "From fridge photo to tonight’s dinner", "body": "KAI recognised the ingredients, suggested three recipes, and separated what was already there from what still needed buying." },
+          { "category": "Smart recipe search", "title": "Smart search that sees the whole week", "body": "A search weighed price, calories, recipe coverage, and a protein gap without losing the thread of the shop." }
+        ]
+      },
+      "about": {
+        "kicker": "One place, many ways in",
+        "heading": "Every input becomes recipes, one cart, and one calorie plan",
+        "body": "A photo, voice note, receipt, or list feeds the same view underneath: ingredients on hand, recipes you can cook, products still missing, weekly spend, and household calories.",
+        "capabilities": ["Photo", "Voice", "Deals", "Receipt", "List", "Delivery", "Calories", "Household", "Recipes"]
+      },
+      "closing": {
+        "kicker": "Your next fridge-to-dinner plan",
+        "heading": "Start with what you have. Shop only for what is missing.",
+        "body": "Scan the fridge or a receipt. KAI suggests cookable recipes, shows calories per serving, and turns the missing ingredients into a cart you can review.",
+        "ctaLabel": "Scan to find recipes"
+      },
+      "footer": {
+        "tagline": "Your fridge-to-cart Grocery Twin. Find recipes from what you have, see calories, and shop only for what is missing.",
+        "groups": [
+          { "label": "Product", "links": [{ "label": "Grocery demo", "target": "product" }, { "label": "How it works", "target": "features" }, { "label": "Stories", "target": "stories" }] },
+          { "label": "KAI", "links": [{ "label": "About KAI", "target": "about" }, { "label": "Contact", "target": "contact" }, { "label": "Back to top", "target": "top" }] }
+        ],
+        "copyright": "© 2026 KAI · Grocery Twin",
+        "closingStatement": "Good choices. Great week."
+      }
+    }
+  }
+}

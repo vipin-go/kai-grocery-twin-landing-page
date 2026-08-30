@@ -1,0 +1,5 @@
+{
+  "name": "kai-grocery-twin-landing-page",
+  "private": true,
+  "scripts": { "validate": "node scripts/validate-landing-page.js" }
+}

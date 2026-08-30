@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "target": "landing_page_definition",
+  "definitionFile": "assets/landing-page.json",
+  "landingPage": {
+    "fields": [
+      { "key": "headline", "type": "text", "required": true },
+      { "key": "subheadline", "type": "text", "required": false },
+      { "key": "ctaLabel", "type": "text", "required": false }
+    ],
+    "featureItem": {
+      "fields": [
+        { "key": "icon", "type": "text", "required": false, "description": "One of the allowed icon tokens — see SKILL.md" },
+        { "key": "title", "type": "text", "required": true },
+        { "key": "body", "type": "text", "required": true }
+      ]
+    },
+    "formOperations": {
+      "requiredWhen": { "design.variant": "form-operations" },
+      "sections": [
+        "heroDemo",
+        "proofItems",
+        "principle",
+        "impact",
+        "process",
+        "useCases",
+        "workedExample",
+        "control",
+        "leadCapture",
+        "footer"
+      ],
+      "constraints": {
+        "traceState": ["done", "active", "pending"],
+        "actor": ["persona", "human"],
+        "useCaseStatus": ["live", "next", "custom"],
+        "percentageRange": [0, 100],
+        "captureAndFill": {
+          "optional": true,
+          "requires": ["enabled", "commandTrigger"],
+          "runtimeLimits": "platform_controlled"
+        },
+        "optionalFooterFields": ["poweredBy", "closingStatement", "copyright"]
+      }
+    },
+    "cinematicCampaigns": {
+      "requiredWhen": { "design.variant": "cinematic-campaigns" },
+      "sections": [
+        "hero",
+        "workflow",
+        "capabilities",
+        "showcase",
+        "features",
+        "workspace",
+        "meetArcher",
+        "journal",
+        "closing",
+        "footer"
+      ],
+      "constraints": {
+        "workflowActs": 3,
+        "capabilityItems": 8,
+        "showcaseItems": 4,
+        "featureItems": 7,
+        "workspaceProjects": 3,
+        "directorPrinciples": 3,
+        "journalItems": 2,
+        "filmstripItems": 5,
+        "guidedDemo": {
+          "requires": ["enabled", "commandTrigger"],
+          "commandExecutionType": "operator_action",
+          "anonymousRuntime": "illustrative_only"
+        },
+        "runtimeDataPolicy": "definitions_only"
+      }
+    },
+    "recruitingOperations": {
+      "requiredWhen": { "design.variant": "recruiting-operations" },
+      "sections": ["hero", "features", "workflow", "comparison", "leads", "pillars", "principles", "faq", "closing", "footer"],
+      "constraints": {
+        "navigationItems": 4,
+        "heroSignals": 3,
+        "featureItems": 4,
+        "activityItems": 4,
+        "manualSteps": 5,
+        "personaSteps": 4,
+        "leadRows": 4,
+        "pillarItems": 5,
+        "principleItems": 3,
+        "faqItems": 5,
+        "commandExecutionType": "operator_action",
+        "runtimeDataPolicy": "definitions_only"
+      }
+    },
+    "groceryTwin": {
+      "requiredWhen": { "design.variant": "grocery-twin" },
+      "sections": ["header", "hero", "product", "mobile", "features", "stories", "about", "closing", "footer"],
+      "constraints": {
+        "navigationItems": 5,
+        "trustItems": 4,
+        "heroSuggestions": 3,
+        "productCapabilities": 6,
+        "productCards": 3,
+        "mobileItems": 4,
+        "featureItems": 3,
+        "testimonials": 6,
+        "storyItems": 3,
+        "aboutCapabilities": 9,
+        "heroDemo": {
+          "requires": ["enabled", "commandTrigger"],
+          "commandExecutionType": "operator_action",
+          "attachmentInputKey": "inventory_photos",
+          "runtimeLimits": "platform_controlled"
+        },
+        "runtimeDataPolicy": "definitions_only"
+      }
+    }
+  }
+}
