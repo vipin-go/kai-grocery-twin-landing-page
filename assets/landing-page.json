@@ -33,14 +33,14 @@
       "ctaLabel": "Meet KAI"
     },
     "badge": "Your shop, recipes, and calorie plan—connected",
-    "headline": "Shop the week. Cook what you have. See the calories.",
-    "headlineAccent": "Cook what you have.",
+    "headline": "Make grocery shopping feel easy again",
+    "headlineAccent": "feel easy again",
     "subheadline": "Scan the fridge or a receipt. KAI turns what is already there into recipes, counts the calories, and shops only for what each meal still needs.",
     "ctaLabel": "Talk to KAI",
     "secondaryCtaLabel": "Scan to recipes",
     "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
     "featureTags": ["Real products and prices", "Review every choice", "Calories planned by household", "Recipes from what you have"],
-    "seoImage": { "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/og.png", "alt": "KAI, your Grocery Twin, connecting fridge scans, recipes, calories, and a reviewable grocery cart" },
+    "seoImage": { "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.png", "alt": "KAI, your Grocery Twin, in a sunlit kitchen surrounded by fresh produce and a weekly meal plan" },
     "contact": { "heading": "Start with what you have", "body": "Scan the fridge or a receipt and let KAI prepare the grocery gaps for review." },
     "groceryTwin": {
       "header": {
@@ -59,7 +59,7 @@
       },
       "hero": {
         "ratingLabel": "Your shop, recipes, and calorie plan—connected",
-        "heading": "Shop the week. Cook what you have. See the calories.",
+        "heading": "Make grocery shopping feel easy again",
         "body": "Scan the fridge or a receipt. KAI turns what is already there into recipes, counts the calories, and shops only for what each meal still needs.",
         "primaryCtaLabel": "Talk to KAI",
         "secondaryCtaLabel": "Scan to recipes",
@@ -116,7 +116,7 @@
       "mobile": {
         "kicker": "KAI in your pocket",
         "heading": "From fridge to recipe to cart,",
-        "accentHeading": "wherever you are.",
+        "accentHeading": "Wherever you are.",
         "items": [
           { "label": "Build a cart", "title": "A live cart with your spend and calorie plan together.", "body": "Ask for an item, compare a real match, and see how price, calories, and quantity change the week." },
           { "label": "Scan the fridge", "title": "Turn a fridge or receipt photo into recipes you can cook.", "body": "KAI identifies what is on hand, estimates the calories, and suggests recipes before building the missing-ingredient list." },
