@@ -40,7 +40,7 @@
     "secondaryCtaLabel": "Scan to recipes",
     "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
     "featureTags": ["Real products and prices", "Review every choice", "Calories planned by household", "Recipes from what you have"],
-    "seoImage": { "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.png", "alt": "KAI, your Grocery Twin, in a sunlit kitchen surrounded by fresh produce and a weekly meal plan" },
+    "seoImage": { "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg", "alt": "KAI, your Grocery Twin, in a sunlit kitchen surrounded by fresh produce and a weekly meal plan" },
     "contact": { "heading": "Start with what you have", "body": "Scan the fridge or a receipt and let KAI prepare the grocery gaps for review." },
     "groceryTwin": {
       "header": {
