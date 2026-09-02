@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "language": "ca",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Producte",
+          "target": "product"
+        },
+        {
+          "label": "Mòbil",
+          "target": "mobile"
+        },
+        {
+          "label": "Històries",
+          "target": "stories"
+        },
+        {
+          "label": "Funcions",
+          "target": "features"
+        },
+        {
+          "label": "Sobre nosaltres",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "Coneix KAI"
+    },
+    "badge": "La teva botiga, receptes i pla de calories—connectats",
+    "headline": "Fes que comprar queviures torni a ser fàcil",
+    "headlineAccent": "torni a ser fàcil",
+    "subheadline": "Escaneja la nevera o un rebut. KAI converteix el que ja hi ha en receptes, compta les calories i compra només el que encara necessita cada àpat.",
+    "ctaLabel": "Parla amb KAI",
+    "secondaryCtaLabel": "Escaneja per a receptes",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "Productes i preus reals",
+      "Revisa cada elecció",
+      "Calories planificades per llar",
+      "Receptes amb el que tens"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "KAI, el teu Bessó de Queviures, en una cuina assolellada envoltat de productes frescos i un pla d'àpats setmanal"
+    },
+    "contact": {
+      "heading": "Comença amb el que tens",
+      "body": "Escaneja la nevera o un rebut i deixa que KAI prepari els buits de queviures per revisar."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Inici",
+        "subtitle": "El teu Bessó de Queviures",
+        "secondaryEditionLabel": "Venda al detall",
+        "navItems": [
+          {
+            "label": "Producte",
+            "target": "product"
+          },
+          {
+            "label": "Mòbil",
+            "target": "mobile"
+          },
+          {
+            "label": "Històries",
+            "target": "stories"
+          },
+          {
+            "label": "Funcions",
+            "target": "features"
+          },
+          {
+            "label": "Sobre nosaltres",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "Coneix KAI",
+        "primaryCtaLabel": "Comença una cistella"
+      },
+      "hero": {
+        "ratingLabel": "La teva botiga, receptes i pla de calories—connectats",
+        "heading": "Fes que comprar queviures torni a ser fàcil",
+        "body": "Escaneja la nevera o un rebut. KAI converteix el que ja hi ha en receptes, compta les calories i compra només el que encara necessita cada àpat.",
+        "primaryCtaLabel": "Parla amb KAI",
+        "secondaryCtaLabel": "Escaneja per a receptes",
+        "trustItems": [
+          "Productes i preus reals",
+          "Revisa cada elecció",
+          "Calories planificades per llar",
+          "Receptes amb el que tens"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "KAI, la teva persona Bessó de Queviures de cos sencer",
+        "chat": {
+          "statusLabel": "En línia",
+          "subtitle": "Assistent de queviures de nevera a recepta",
+          "openingMessage": "Hola, sóc KAI. Ensenya'm la nevera, el rebost o un rebut recent. Et suggeriré receptes amb el que tens i mantindré visibles la despesa, les calories i els ingredients que falten.",
+          "visitorMessage": "Escaneja la meva nevera i mostra què puc cuinar aquesta nit.",
+          "assistantMessage": "Convertiré el que ja hi ha en opcions de receptes, mostraré les calories per ració i compraré només els ingredients que encara falten.",
+          "inputPlaceholder": "Pregunta per queviures, una recepta o un control de calories…",
+          "suggestions": [
+            "Ofertes de llet de civada",
+            "Equilibra la meva setmana",
+            "Cuina amb la meva nevera"
+          ],
+          "demoNote": "Demostració il·lustrativa de queviures, receptes i nutrició · Comprova ingredients i necessitats dietètiques",
+          "sampleProduct": {
+            "badge": "Oferta trobada · Rebost+",
+            "name": "Oatly Barista Edition",
+            "detail": "1 L · 590 kcal · 20% de descompte",
+            "price": "€2.39",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Tria una imatge de nevera, rebost, rebut o llista de compra",
+          "uploadHint": "JPEG, PNG, WebP o HEIC · fins a 6 imatges i 10 MB cadascuna",
+          "analyzingLabel": "KAI està llegint els queviures visibles…",
+          "inventoryHeading": "Revisa l'inventari extret",
+          "inventoryBody": "Corregeix quantitats, elimina errors o afegeix qualsevol cosa que KAI hagi omès.",
+          "itemNameLabel": "Article",
+          "quantityLabel": "Quantitat",
+          "unitLabel": "Unitat",
+          "addItemLabel": "Afegeix article",
+          "removeItemLabel": "Elimina",
+          "chatLabel": "Corregeix per xat",
+          "voiceLabel": "Corregeix per veu · 5 min",
+          "reviewLabel": "Revisa l'inventari",
+          "editLabel": "Edita l'inventari",
+          "confirmationHeading": "Inventari llest",
+          "confirmationBody": "KAI tornarà a confirmar aquesta llista abans de proposar una cistella. Res no es demana sense la teva aprovació.",
+          "signInLabel": "Inicia la sessió per continuar",
+          "signInNotice": "Inicia la sessió per moure aquesta captura de queviures a una sessió privada de KAI i continuar el flux de treball de reposició. Res no es demana sense la teva aprovació explícita.",
+          "expiryCopy": "Les previsualitzacions no reclamades expiren després d'una hora",
+          "errorCopy": "KAI no ha pogut llegir una llista de queviures d'aquesta imatge. Prova amb una foto més clara de nevera, rebost, rebut o llista de compra."
+        }
+      },
+      "product": {
+        "kicker": "El teu Bessó de Queviures + Receptes + Calories",
+        "heading": "Què podem cuinar—i què encara cal comprar?",
+        "body": "KAI connecta l'escaneig, les receptes, la cerca de productes, les calories i la cistella perquè cada àpat comenci amb el que ja tens.",
+        "capabilityLabels": [
+          "Cerca de productes",
+          "Pla de calories",
+          "Idees de receptes",
+          "Imatge a llista",
+          "Ajuda per veu",
+          "Concordança d'ofertes"
+        ],
+        "cards": [
+          {
+            "title": "Cistella en directe",
+            "body": "Compara productes reals, quantitats i preus en una cistella revisable.",
+            "metric": "Despesa + calories juntes"
+          },
+          {
+            "title": "Receptes del teu escaneig",
+            "body": "Consulta receptes cuinables classificades pel que ja hi ha a la nevera i pel que falta.",
+            "metric": "Cuina primer, compra després"
+          },
+          {
+            "title": "Radar d'ofertes",
+            "body": "Compara coincidències útils tot preservant la cobertura de receptes i els objectius de la llar.",
+            "metric": "Fonts reals de queviures"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "KAI a la teva butxaca",
+        "heading": "De la nevera a la recepta a la cistella,",
+        "accentHeading": "On siguis.",
+        "items": [
+          {
+            "label": "Crea una cistella",
+            "title": "Una cistella en directe amb la teva despesa i el teu pla de calories junts.",
+            "body": "Demana un article, compara una coincidència real i mira com el preu, les calories i la quantitat canvien la setmana."
+          },
+          {
+            "label": "Escaneja la nevera",
+            "title": "Converteix una foto de nevera o rebut en receptes que pots cuinar.",
+            "body": "KAI identifica què tens a mà, estima les calories i suggereix receptes abans de crear la llista d'ingredients que falten."
+          },
+          {
+            "label": "Tria una recepta",
+            "title": "Tria un àpat i compra només el que falta.",
+            "body": "Compara el temps de cocció, les calories per ració, la cobertura d'ingredients i el petit buit de queviures per a cada recepta."
+          },
+          {
+            "label": "Parla amb KAI",
+            "title": "Parla sobre la compra i el teu objectiu setmanal.",
+            "body": "Digues què s'ha acabat o què vols cuinar. KAI manté la cistella, la despesa i el buit de calories en context."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "La compra setmanal, reconstruïda",
+        "heading": "Gestiona queviures, receptes, despesa i calories amb claredat",
+        "items": [
+          {
+            "number": "01",
+            "title": "Descoberta de receptes, pro ductes i cal ories",
+            "body": "Escaneja el que tens o descriu el àpat que vols. KAI mostra receptes cuinables, cal ories per ració i el buit exacte de queviures per a cada opció.",
+            "tags": [
+              "Escaneig de nevera",
+              "Receptes",
+              "Calories",
+              "Articles que falten"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "Una cistella construïda amb els àpats que tries",
+            "body": "Tria una recepta i KAI elimina els ingredients que ja tens. Només els pro ductes que falten entren a la cistella, amb la despesa i les cal ories de la llar actualitzades juntes.",
+            "tags": [
+              "Cobetura de receptes",
+              "Només el que falta",
+              "kcal setmanal"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "Escaneja un a. Cuina amb el que hi ha.",
+            "body": "KAI converteix un escaneig de nevera, rebost o rebut en tres receptes pràctiques. Compara el tems i les cal ories, tria'n una i revisa només els ingredients que falten.",
+            "tags": [
+              "3 opcions de receptes",
+              "Tem s de cocció",
+              "Calories / ració"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "Com se sent cuinar i comprar amb KAI",
+        "heading": "Petits moments de claredat de la nevera al sopar",
+        "testimonials": [
+          {
+            "quote": "KAI converteix el que ja tenim a la nevera en idees de sopar, i després mostra el cost i les cal ories de la famíia abans de triar.",
+            "name": "Mila",
+            "meta": "Pare ocupat"
+          },
+          {
+            "quote": "Pregunto per ofertes de formatge, comparo les opcions reals i afegeixo exactament la que vull. Sense canviar de pestanya.",
+            "name": "Noè",
+            "meta": "Comprador setmanal"
+          },
+          {
+            "quote": "L'escaneig del rebut em va donar tres receptes, les calories per ració i només els ingredients que encara havia de comprar.",
+            "name": "Sòfia",
+            "meta": "Cuiner casolà"
+          },
+          {
+            "quote": "M'agrada que KAI construeixi la cistella primer i fa les preguntes de planificació només quan importen.",
+            "name": "Lucàs",
+            "meta": "Estudiant"
+          },
+          {
+            "quote": "La veu és perfecta quan tinc les mans plenes a la cuina. Només dic a KAI què s'ha acabat.",
+            "name": "Ema",
+            "meta": "Fanàtic de la preparació d'àpats"
+          },
+          {
+            "quote": "Tot es manté revisable. Puc canviar quantitats i veure com es mouen la despesa i el total de calories amb mi.",
+            "name": "Dan",
+            "meta": "Comprador intel·ligent"
+          }
+        ],
+        "articles": [
+          {
+            "category": "Rutina setmanal",
+            "title": "La compra i el pla d'àpats de set minuts",
+            "body": "Un comprador solitari va convertir una llista dispersa de productes bàsics en una cistella, tres sopars cuinables i 10.850 cal ories planificades."
+          },
+          {
+            "category": "De la nevera a la recepta",
+            "title": "De la foto de la nevera al sopar d'aquesta nit",
+            "body": "KAI va reconèixer els ingredients, va suggerir tres receptes i va separar el que ja hi havia del que encara calia comprar."
+          },
+          {
+            "category": "Cerca intel·ligent de receptes",
+            "title": "Una cerca intel·ligent que veu tota la setmana",
+            "body": "Una cerca va ponderar preu, cal ories, cobetura de receptes i un buit de proteïnes sense perdre el fil de la compra."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "Un lloc, moltes maneres d'entrar",
+        "heading": "Cada entrada es converteix en receptes, una cistella i un pla de cal ories",
+        "body": "Una foto, una nota de veu, un rebut o una llista alimenten la mateixa vista a sota: ingredients dispo nibles, receptes que pots cuinar, pro ductes que encara falten, despesa setmanal i cal ories de la llar.",
+        "capabilities": [
+          "Foto",
+          "Veu",
+          "Ofertes",
+          "Rebut",
+          "Llista",
+          "Entrega",
+          "Calories",
+          "Llar",
+          "Receptes"
+        ]
+      },
+      "closing": {
+        "kicker": "El teu pròxim pla de la nevera al sopar",
+        "heading": "Comença amb el que tens. Compra només el que falta.",
+        "body": "Escaneja la nevera o un rebut. KAI suggereix receptes cuinables, mostra calories per ració i converteix els ingredients que falten en una cistella que pots revisar.",
+        "ctaLabel": "Escaneja per trobar receptes"
+      },
+      "footer": {
+        "tagline": "El teu Bessó de Queviures de la nevera a la cistella. Troba receptes amb el que tens, veu les cal ories i compra només el que falta.",
+        "groups": [
+          {
+            "label": "Producte",
+            "links": [
+              {
+                "label": "Demostració de queviures",
+                "target": "product"
+              },
+              {
+                "label": "Com funciona",
+                "target": "features"
+              },
+              {
+                "label": "Històries",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "KAI",
+            "links": [
+              {
+                "label": "Sobre KAI",
+                "target": "about"
+              },
+              {
+                "label": "Contacte",
+                "target": "contact"
+              },
+              {
+                "label": "Torna a dalt",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 KAI · Bessó de Queviures",
+        "closingStatement": "Bones decisions. Gran setmana."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

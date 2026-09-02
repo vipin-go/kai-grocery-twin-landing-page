@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "language": "fr",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Produit",
+          "target": "product"
+        },
+        {
+          "label": "Mobile",
+          "target": "mobile"
+        },
+        {
+          "label": "Témoignages",
+          "target": "stories"
+        },
+        {
+          "label": "Fonctions",
+          "target": "features"
+        },
+        {
+          "label": "À propos",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "Découvrir KAI"
+    },
+    "badge": "Vos courses, vos recettes et votre plan calorique — connectés",
+    "headline": "Redonnez de la simplicité à vos courses",
+    "subheadline": "Scannez le frigo ou un ticket de caisse. KAI transforme ce que vous avez déjà en recettes, compte les calories et n’achète que ce qui manque pour chaque repas.",
+    "ctaLabel": "Parler à KAI",
+    "secondaryCtaLabel": "Du scan aux recettes",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "Vrais produits et vrais prix",
+      "Vérifiez chaque choix",
+      "Calories planifiées par foyer",
+      "Recettes à partir de ce que vous avez"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "KAI, votre Grocery Twin, dans une cuisine ensoleillée entourée de produits frais et d’un plan de repas hebdomadaire"
+    },
+    "contact": {
+      "heading": "Commencez avec ce que vous avez",
+      "body": "Scannez le frigo ou un ticket de caisse et laissez KAI préparer les manques à valider."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Accueil",
+        "subtitle": "Votre Grocery Twin",
+        "secondaryEditionLabel": "Retail",
+        "navItems": [
+          {
+            "label": "Produit",
+            "target": "product"
+          },
+          {
+            "label": "Mobile",
+            "target": "mobile"
+          },
+          {
+            "label": "Témoignages",
+            "target": "stories"
+          },
+          {
+            "label": "Fonctions",
+            "target": "features"
+          },
+          {
+            "label": "À propos",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "Découvrir KAI",
+        "primaryCtaLabel": "Démarrer un panier"
+      },
+      "hero": {
+        "ratingLabel": "Vos courses, vos recettes et votre plan calorique — connectés",
+        "heading": "Redonnez de la simplicité à vos courses",
+        "body": "Scannez le frigo ou un ticket de caisse. KAI transforme ce que vous avez déjà en recettes, compte les calories et n’achète que ce qui manque pour chaque repas.",
+        "primaryCtaLabel": "Parler à KAI",
+        "secondaryCtaLabel": "Du scan aux recettes",
+        "trustItems": [
+          "Vrais produits et vrais prix",
+          "Vérifiez chaque choix",
+          "Calories planifiées par foyer",
+          "Recettes à partir de ce que vous avez"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "KAI, votre persona Grocery Twin en pied",
+        "chat": {
+          "statusLabel": "En ligne",
+          "subtitle": "Assistant frigo-à-recette",
+          "openingMessage": "Bonjour, je suis KAI. Montrez-moi le frigo, le garde-manger ou un ticket récent. Je suggérerai des recettes à partir de ce que vous avez et garderai visibles les dépenses, les calories et les ingrédients manquants.",
+          "visitorMessage": "Scannez mon frigo et montrez-moi ce que je peux cuisiner ce soir.",
+          "assistantMessage": "Je transformerai ce qui est déjà là en options de recettes, afficherai les calories par portion et n’achèterai que les ingrédients encore manquants.",
+          "inputPlaceholder": "Demandez des courses, une recette ou un contrôle calorique…",
+          "suggestions": [
+            "Promotions sur le lait d’avoine",
+            "Équilibrez ma semaine",
+            "Cuisinez avec ce qu’il y a dans mon frigo"
+          ],
+          "demoNote": "Démo illustrative courses, recettes et nutrition · Vérifiez les ingrédients et les besoins alimentaires",
+          "sampleProduct": {
+            "badge": "Promotion trouvée · Pantry+",
+            "name": "Oatly Barista Edition",
+            "detail": "1 L · 590 kcal · -20 %",
+            "price": "2,39 €",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Choisissez une image de frigo, garde-manger, ticket ou liste de courses",
+          "uploadHint": "JPEG, PNG, WebP ou HEIC · jusqu’à 6 images et 10 Mo chacune",
+          "analyzingLabel": "KAI lit les produits visibles…",
+          "inventoryHeading": "Vérifiez l’inventaire extrait",
+          "inventoryBody": "Corrigez les quantités, supprimez les erreurs ou ajoutez ce que KAI a oublié.",
+          "itemNameLabel": "Article",
+          "quantityLabel": "Quantité",
+          "unitLabel": "Unité",
+          "addItemLabel": "Ajouter un article",
+          "removeItemLabel": "Supprimer",
+          "chatLabel": "Corriger par chat",
+          "voiceLabel": "Corriger par voix · 5 min",
+          "reviewLabel": "Vérifier l’inventaire",
+          "editLabel": "Modifier l’inventaire",
+          "confirmationHeading": "Inventaire prêt",
+          "confirmationBody": "KAI reconfirmera cette liste avant de proposer un panier. Rien n’est commandé sans votre accord.",
+          "signInLabel": "Connectez-vous pour continuer",
+          "signInNotice": "Connectez-vous pour déplacer cette capture de courses dans une session KAI privée et poursuivre le flux de réapprovisionnement. Rien n’est commandé sans votre accord explicite.",
+          "expiryCopy": "Les aperçus non réclamés expirent au bout d’une heure",
+          "errorCopy": "KAI n’a pas pu lire de liste de courses sur cette image. Essayez avec une photo plus nette du frigo, du garde-manger, d’un ticket ou d’une liste de courses."
+        }
+      },
+      "product": {
+        "kicker": "Votre jumeau Courses + Recettes + Calories",
+        "heading": "Que pouvons-nous cuisiner — et qu’est-ce qu’il manque encore ?",
+        "body": "KAI relie le scan, les recettes, la recherche de produits, les calories et le panier pour que chaque repas commence avec ce que vous avez déjà.",
+        "capabilityLabels": [
+          "Recherche de produits",
+          "Plan calorique",
+          "Idées de recettes",
+          "Image vers liste",
+          "Aide vocale",
+          "Correspondance des promos"
+        ],
+        "cards": [
+          {
+            "title": "Panier en direct",
+            "body": "Comparez vrais produits, quantités et prix dans un seul panier à valider.",
+            "metric": "Dépenses + calories ensemble"
+          },
+          {
+            "title": "Recettes à partir de votre scan",
+            "body": "Voyez les recettes réalisables classées selon ce qui est déjà au frigo et ce qui manque.",
+            "metric": "Cuisinez d’abord, achetez ensuite"
+          },
+          {
+            "title": "Radar à promos",
+            "body": "Comparez les correspondances utiles tout en préservant la couverture des recettes et les objectifs du foyer.",
+            "metric": "Sources réelles de courses"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "KAI dans votre poche",
+        "heading": "Du frigo à la recette jusqu’au panier,",
+        "accentHeading": "où que vous soyez.",
+        "items": [
+          {
+            "label": "Construire un panier",
+            "title": "Un panier en direct avec vos dépenses et votre plan calorique réunis.",
+            "body": "Demandez un article, comparez une vraie correspondance et voyez comment le prix, les calories et la quantité évoluent sur la semaine."
+          },
+          {
+            "label": "Scanner le frigo",
+            "title": "Transformez une photo de frigo ou un ticket en recettes que vous pouvez cuisiner.",
+            "body": "KAI identifie ce que vous avez sous la main, estime les calories et suggère des recettes avant de dresser la liste des ingrédients manquants."
+          },
+          {
+            "label": "Choisissez une recette",
+            "title": "Choisissez un repas et n’achetez que ce qui manque.",
+            "body": "Comparez temps de cuisson, calories par portion, couverture des ingrédients et le petit manque de courses pour chaque recette."
+          },
+          {
+            "label": "Parler à KAI",
+            "title": "Discutez des courses et de votre objectif de la semaine.",
+            "body": "Dites ce qui manque ou ce que vous voulez cuisiner. KAI garde le panier, les dépenses et le déficit calorique en contexte."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "Les courses de la semaine, refaites",
+        "heading": "Gérez courses, recettes, dépenses et calories en toute clarté",
+        "items": [
+          {
+            "number": "01",
+            "title": "Découverte de recettes, produits et calories",
+            "body": "Scannez ce que vous avez ou décrivez le repas souhaité. KAI affiche les recettes réalisables, les calories par portion et le manque exact de courses pour chaque option.",
+            "tags": [
+              "Scan du frigo",
+              "Recettes",
+              "Calories",
+              "Articles manquants"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "Un panier bâti à partir des repas que vous choisissez",
+            "body": "Choisissez une recette et KAI retire les ingrédients déjà présents. Seuls les produits manquants entrent dans le panier, avec les dépenses et les calories du foyer mises à jour en même temps.",
+            "tags": [
+              "Couverture de la recette",
+              "Uniquement le manque",
+              "kcal hebdomadaires"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "Scannez une fois. Cuisinez avec ce qu’il y a.",
+            "body": "KAI transforme un scan de frigo, de garde-manger ou de ticket en trois recettes pratiques. Comparez le temps et les calories, choisissez-en une, puis ne validez que les ingrédients manquants.",
+            "tags": [
+              "3 options de recette",
+              "Temps de cuisson",
+              "Calories / portion"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "À quoi ressemble cuisiner et faire ses courses avec KAI",
+        "heading": "Petits moments de clarté frigo-à-dîner",
+        "testimonials": [
+          {
+            "quote": "KAI transforme ce qu’il y a déjà dans notre frigo en idées de dîner, puis m’affiche le coût et les calories familiales avant que je choisisse.",
+            "name": "Mila",
+            "meta": "Parent occupé"
+          },
+          {
+            "quote": "Je demande des promos sur le fromage, je compare les vraies options et j’ajoute exactement celle que je veux. Pas de navigation entre onglets.",
+            "name": "Noah",
+            "meta": "Acheteur hebdomadaire"
+          },
+          {
+            "quote": "Le scan du ticket m’a donné trois recettes, les calories par portion et uniquement les ingrédients qu’il me fallait encore acheter.",
+            "name": "Sofia",
+            "meta": "Cuisinier amateur"
+          },
+          {
+            "quote": "J’aime que KAI construise d’abord le panier et pose les questions de planification uniquement quand c’est utile.",
+            "name": "Lucas",
+            "meta": "Étudiant"
+          },
+          {
+            "quote": "La voix est parfaite quand j’ai les mains prises en cuisine. Je dis juste à KAI ce qui a manqué.",
+            "name": "Emma",
+            "meta": "Fan de meal prep"
+          },
+          {
+            "quote": "Tout reste vérifiable. Je peux modifier les quantités et voir les dépenses et le total calorique bouger en même temps.",
+            "name": "Daan",
+            "meta": "Acheteur malin"
+          }
+        ],
+        "articles": [
+          {
+            "category": "Routine hebdomadaire",
+            "title": "Les courses et le plan de repas en sept minutes",
+            "body": "Un acheteur seul a transformé une liste de produits essentiels éparse en panier, trois dîners faisables et 10 850 calories planifiées."
+          },
+          {
+            "category": "Du frigo à la recette",
+            "title": "De la photo du frigo au dîner de ce soir",
+            "body": "KAI a reconnu les ingrédients, suggéré trois recettes et séparé ce qui était déjà là de ce qu’il fallait encore acheter."
+          },
+          {
+            "category": "Recherche intelligente de recettes",
+            "title": "Recherche intelligente qui voit toute la semaine",
+            "body": "Une recherche qui a pesé prix, calories, couverture des recettes et un déficit en protéines sans perdre le fil des courses."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "Un seul endroit, plusieurs façons d’y arriver",
+        "heading": "Chaque entrée devient recettes, un panier et un plan calorique",
+        "body": "Une photo, un message vocal, un ticket ou une liste alimentent la même vue en dessous : ingrédients sous la main, recettes faisables, produits manquants, dépenses hebdomadaires et calories du foyer.",
+        "capabilities": [
+          "Photo",
+          "Voix",
+          "Promos",
+          "Ticket",
+          "Liste",
+          "Livraison",
+          "Calories",
+          "Foyer",
+          "Recettes"
+        ]
+      },
+      "closing": {
+        "kicker": "Votre prochain plan frigo-à-dîner",
+        "heading": "Commencez avec ce que vous avez. N’achetez que ce qui manque.",
+        "body": "Scannez le frigo ou un ticket de caisse. KAI suggère des recettes faisables, affiche les calories par portion et transforme les ingrédients manquants en panier à valider.",
+        "ctaLabel": "Scanner pour trouver des recettes"
+      },
+      "footer": {
+        "tagline": "Votre Grocery Twin frigo-au-panier. Trouvez des recettes avec ce que vous avez, voyez les calories et n’achetez que ce qui manque.",
+        "groups": [
+          {
+            "label": "Produit",
+            "links": [
+              {
+                "label": "Démo courses",
+                "target": "product"
+              },
+              {
+                "label": "Comment ça marche",
+                "target": "features"
+              },
+              {
+                "label": "Témoignages",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "KAI",
+            "links": [
+              {
+                "label": "À propos de KAI",
+                "target": "about"
+              },
+              {
+                "label": "Contact",
+                "target": "contact"
+              },
+              {
+                "label": "Retour en haut",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 KAI · Grocery Twin",
+        "closingStatement": "De bons choix. Une super semaine."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

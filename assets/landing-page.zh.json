@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "language": "zh",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "产品",
+          "target": "product"
+        },
+        {
+          "label": "移动版",
+          "target": "mobile"
+        },
+        {
+          "label": "故事",
+          "target": "stories"
+        },
+        {
+          "label": "功能",
+          "target": "features"
+        },
+        {
+          "label": "关于",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "认识 KAI"
+    },
+    "badge": "您的商店、食谱和卡路里计划——互联互通",
+    "headline": "让采购 groceries 再次轻松",
+    "headlineAccent": "再次轻松",
+    "subheadline": "扫描冰箱或小票。KAI 把现有食材变成食谱，计算卡路里，只购买每餐仍需要的食材。",
+    "ctaLabel": "与 KAI 对话",
+    "secondaryCtaLabel": "从扫描到食谱",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "真实产品和价格",
+      "审阅每一项选择",
+      "按家庭规划的卡路里",
+      "用您现有的食材做食谱"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "KAI，您的 Grocery Twin，在阳光充足的厨房中，周围是新鲜食材和每周膳食计划"
+    },
+    "contact": {
+      "heading": "从您现有的食材开始",
+      "body": "扫描冰箱或小票，让 KAI 准备缺失的购物清单供您审阅。"
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "首页",
+        "subtitle": "您的 Grocery Twin",
+        "secondaryEditionLabel": "零售",
+        "navItems": [
+          {
+            "label": "产品",
+            "target": "product"
+          },
+          {
+            "label": "移动版",
+            "target": "mobile"
+          },
+          {
+            "label": "故事",
+            "target": "stories"
+          },
+          {
+            "label": "功能",
+            "target": "features"
+          },
+          {
+            "label": "关于",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "认识 KAI",
+        "primaryCtaLabel": "开始购物车"
+      },
+      "hero": {
+        "ratingLabel": "您的商店、食谱和卡路里计划——互联互通",
+        "heading": "让采购 groceries 再次轻松",
+        "body": "扫描冰箱或小票。KAI 把现有食材变成食谱，计算卡路里，只购买每餐仍需要的食材。",
+        "primaryCtaLabel": "与 KAI 对话",
+        "secondaryCtaLabel": "从扫描到食谱",
+        "trustItems": [
+          "真实产品和价格",
+          "审阅每一项选择",
+          "按家庭规划的卡路里",
+          "用您现有的食材做食谱"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "KAI，您的全身 Grocery Twin 角色",
+        "chat": {
+          "statusLabel": "在线",
+          "subtitle": "从冰箱到食谱的购物助手",
+          "openingMessage": "你好，我是 KAI。给我看看冰箱、食品柜或最近的小票。我会用您现有的食材推荐食谱，并让您清楚看到花费、卡路里和缺失的食材。",
+          "visitorMessage": "扫描我的冰箱，看看今晚能做什么。",
+          "assistantMessage": "我会把现有食材变成食谱选项，显示每份卡路里，只购买仍然缺少的食材。",
+          "inputPlaceholder": "询问购物、食谱或卡路里检查…",
+          "suggestions": [
+            "燕麦奶优惠",
+            "平衡我的一周",
+            "用我冰箱里的食材做饭"
+          ],
+          "demoNote": "购物、食谱和营养演示示例·检查食材和饮食需求",
+          "sampleProduct": {
+            "badge": "发现优惠 · Pantry+",
+            "name": "Oatly 咖啡师版",
+            "detail": "1 升 · 590 千卡 · 8 折",
+            "price": "€2.39",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "选择冰箱、食品柜、小票或购物清单的图片",
+          "uploadHint": "JPEG、PNG、WebP 或 HEIC · 最多 6 张图片，每张最大 10 MB",
+          "analyzingLabel": "KAI 正在识别可见的食材…",
+          "inventoryHeading": "审阅提取的库存",
+          "inventoryBody": "更正数量、删除错误或添加 KAI 遗漏的内容。",
+          "itemNameLabel": "商品",
+          "quantityLabel": "数量",
+          "unitLabel": "单位",
+          "addItemLabel": "添加商品",
+          "removeItemLabel": "移除",
+          "chatLabel": "通过聊天更正",
+          "voiceLabel": "语音更正 · 5 分钟",
+          "reviewLabel": "审阅库存",
+          "editLabel": "编辑库存",
+          "confirmationHeading": "库存就绪",
+          "confirmationBody": "KAI 会在推荐购物车前再次确认此清单。没有您的批准，不会下单任何东西。",
+          "signInLabel": "登录以继续",
+          "signInNotice": "登录将此购物清单移入私人 KAI 会话并继续补货流程。没有您的明确批准，不会下单任何东西。",
+          "expiryCopy": "未认领的预览将在 1 小时后过期",
+          "errorCopy": "KAI 无法从该图片中读取购物清单。请尝试更清晰的冰箱、食品柜、小票或购物清单照片。"
+        }
+      },
+      "product": {
+        "kicker": "您的购物、食谱和卡路里 Twin",
+        "heading": "我们可以做什么菜——还需要买什么？",
+        "body": "KAI 将扫描、食谱、产品搜索、卡路里和购物车连接起来，让每餐都从您现有的食材开始。",
+        "capabilityLabels": [
+          "产品搜索",
+          "卡路里计划",
+          "食谱创意",
+          "图片转清单",
+          "语音帮助",
+          "优惠匹配"
+        ],
+        "cards": [
+          {
+            "title": "实时购物车",
+            "body": "在一个可审阅的购物车中比较真实产品、数量和价格。",
+            "metric": "花费与卡路里一起看"
+          },
+          {
+            "title": "根据您的扫描生成食谱",
+            "body": "查看可烹饪的食谱，按冰箱中已有的和缺少的排序。",
+            "metric": "先做饭，再采购"
+          },
+          {
+            "title": "优惠雷达",
+            "body": "比较有用的匹配，同时保留食谱覆盖率和家庭目标。",
+            "metric": "真实购物来源"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "KAI 在您口袋",
+        "heading": "从冰箱到食谱再到购物车，",
+        "accentHeading": "无论您在哪里。",
+        "items": [
+          {
+            "label": "构建购物车",
+            "title": "实时购物车，同时显示您的花费和卡路里计划。",
+            "body": "询问商品、比较真实匹配，看看价格、卡路里和数量如何改变您的一周。"
+          },
+          {
+            "label": "扫描冰箱",
+            "title": "把冰箱或小票照片变成可烹饪的食谱。",
+            "body": "KAI 识别您现有的食材，估算卡路里，并在建立缺失食材清单前推荐食谱。"
+          },
+          {
+            "label": "选择食谱",
+            "title": "选择一道菜，然后只购买缺少的食材。",
+            "body": "比较每个食谱的烹饪时间、每份卡路里、食材覆盖率和少量缺失清单。"
+          },
+          {
+            "label": "与 KAI 对话",
+            "title": "聊聊您的购物和每周目标。",
+            "body": "告诉 KAI 什么用完了或想做什么菜。KAI 会保持购物车、花费和卡路里差距在情境中。"
+          }
+        ]
+      },
+      "features": {
+        "kicker": "每周购物，重建",
+        "heading": "清晰地管理购物、食谱、花费和卡路里",
+        "items": [
+          {
+            "number": "01",
+            "title": "食谱、产品和卡路里探索",
+            "body": "扫描您现有的食材，或描述您想要的餐点。KAI 会显示可烹饪的食谱、每份卡路里以及每个选项的确切缺失清单。",
+            "tags": [
+              "冰箱扫描",
+              "食谱",
+              "卡路里",
+              "缺失商品"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "由您选择的餐点构建的购物车",
+            "body": "选择食谱后，KAI 会移除您已有的食材。只有缺失的产品会进入购物车，花费和家庭卡路里一起更新。",
+            "tags": [
+              "食谱覆盖率",
+              "仅缺失",
+              "每周千卡"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "扫描一次。用现有的食材做饭。",
+            "body": "KAI 把冰箱、食品柜或小票扫描变成三个实用食谱。比较时间和卡路里，选择一个，然后只看其缺失的食材。",
+            "tags": [
+              "3 个食谱选项",
+              "烹饪时间",
+              "卡路里 / 份"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "和 KAI 一起做饭和购物是什么感觉",
+        "heading": "从冰箱到晚餐的小清晰瞬间",
+        "testimonials": [
+          {
+            "quote": "KAI 把我们冰箱里已有的东西变成晚餐创意，在我选择之前显示成本和家庭卡路里。",
+            "name": "Mila",
+            "meta": "忙碌的家长"
+          },
+          {
+            "quote": "我询问奶酪优惠，比较真实选项，添加正好想要的那一款。无需切换标签页。",
+            "name": "Noah",
+            "meta": "每周购物者"
+          },
+          {
+            "quote": "扫描小票给了我三个食谱、每份卡路里，以及我还需要购买的那些食材。",
+            "name": "Sofia",
+            "meta": "家庭厨师"
+          },
+          {
+            "quote": "我喜欢 KAI 先构建购物车，只在重要时才问规划问题。",
+            "name": "Lucas",
+            "meta": "学生"
+          },
+          {
+            "quote": "在厨房里手忙时，语音非常方便。我直接告诉 KAI 什么用完了。",
+            "name": "Emma",
+            "meta": "备餐爱好者"
+          },
+          {
+            "quote": "一切都可以审阅。我可以更改数量，并看到花费和卡路里总额随之变化。",
+            "name": "Daan",
+            "meta": "精明的购物者"
+          }
+        ],
+        "articles": [
+          {
+            "category": "每周例行",
+            "title": "七分钟购物和膳食计划",
+            "body": "一位独自购物者把散乱的常备清单变成了购物车、三顿可做的晚餐和 10,850 千卡的计划。"
+          },
+          {
+            "category": "从冰箱到食谱",
+            "title": "从冰箱照片到今晚晚餐",
+            "body": "KAI 识别了食材，推荐了三个食谱，并把已有的与还需要购买的分开。"
+          },
+          {
+            "category": "智能食谱搜索",
+            "title": "洞察整周的智能搜索",
+            "body": "在保持购物脉络的同时，综合考虑价格、卡路里、食谱覆盖率和蛋白质缺口的搜索。"
+          }
+        ]
+      },
+      "about": {
+        "kicker": "一个地方，多种入口",
+        "heading": "每种输入都变成食谱、一个购物车和一份卡路里计划",
+        "body": "照片、语音备注、小票或清单都将汇入同一个底层视图：现有食材、可烹饪的食谱、仍缺的产品、每周花费和家庭卡路里。",
+        "capabilities": [
+          "照片",
+          "语音",
+          "优惠",
+          "小票",
+          "清单",
+          "配送",
+          "卡路里",
+          "家庭",
+          "食谱"
+        ]
+      },
+      "closing": {
+        "kicker": "您的下一个冰箱到晚餐计划",
+        "heading": "从您现有的食材开始。只购买缺少的东西。",
+        "body": "扫描冰箱或小票。KAI 会推荐可烹饪的食谱，显示每份卡路里，并将缺失的食材转化为可审阅的购物车。",
+        "ctaLabel": "扫描以发现食谱"
+      },
+      "footer": {
+        "tagline": "您的冰箱到购物车 Grocery Twin。从您现有的食材发现食谱，查看卡路里，只购买缺少的东西。",
+        "groups": [
+          {
+            "label": "产品",
+            "links": [
+              {
+                "label": "购物演示",
+                "target": "product"
+              },
+              {
+                "label": "工作原理",
+                "target": "features"
+              },
+              {
+                "label": "故事",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "KAI",
+            "links": [
+              {
+                "label": "关于 KAI",
+                "target": "about"
+              },
+              {
+                "label": "联系",
+                "target": "contact"
+              },
+              {
+                "label": "回到顶部",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 KAI · Grocery Twin",
+        "closingStatement": "明智的选择，美好的一周。"
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

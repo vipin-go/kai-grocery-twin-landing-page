@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "language": "hr",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Proizvod",
+          "target": "product"
+        },
+        {
+          "label": "Mobilan",
+          "target": "mobile"
+        },
+        {
+          "label": "priče",
+          "target": "stories"
+        },
+        {
+          "label": "obilježje",
+          "target": "features"
+        },
+        {
+          "label": "Oko",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "Upoznajte Kaija"
+    },
+    "badge": "Vaša trgovina, recepti i plan kalorija—povezani",
+    "headline": "Neka se kupnja namirnica ponovno osjeća jednostavnom",
+    "subheadline": "Skenirajte hladnjak ili račun. Kai ono što već postoji pretvara u recepte, broji kalorije i kupuje samo ono što je svakom obroku još potrebno.",
+    "ctaLabel": "Razgovaraj s Kaijem",
+    "secondaryCtaLabel": "Skenirajte na recepte",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "pravi proizvodi i cijene",
+      "Pregledajte svaki izbor",
+      "Kalorije planiraju kućanstvo",
+      "Recepti od onoga što imate"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "Kai, vaš trgovački blizanac, u kuhinji obasjanoj suncem okruženom svježim proizvodima i tjednim planom obroka"
+    },
+    "contact": {
+      "heading": "Počnite s onim što imate",
+      "body": "Skenirajte hladnjak ili račun i pustite Kai da pripremi praznine u trgovini na pregled."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Dom",
+        "subtitle": "Your Grocery Twin",
+        "secondaryEditionLabel": "Maloprodaja",
+        "navItems": [
+          {
+            "label": "Proizvod",
+            "target": "product"
+          },
+          {
+            "label": "Mobilan",
+            "target": "mobile"
+          },
+          {
+            "label": "priče",
+            "target": "stories"
+          },
+          {
+            "label": "obilježje",
+            "target": "features"
+          },
+          {
+            "label": "Oko",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "Upoznajte Kaija",
+        "primaryCtaLabel": "paziti na kolica"
+      },
+      "hero": {
+        "ratingLabel": "Vaša trgovina, recepti i plan kalorija—povezani",
+        "heading": "Neka se kupnja namirnica ponovno osjeća jednostavnom",
+        "body": "Skenirajte hladnjak ili račun. Kai ono što već postoji pretvara u recepte, broji kalorije i kupuje samo ono što je svakom obroku još potrebno.",
+        "primaryCtaLabel": "Razgovaraj s Kaijem",
+        "secondaryCtaLabel": "Skenirajte na recepte",
+        "trustItems": [
+          "pravi proizvodi i cijene",
+          "Pregledajte svaki izbor",
+          "Kalorije planiraju kućanstvo",
+          "Recepti od onoga što imate"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "Kai, tvoja persona duplih namirnica u cijelom tijelu",
+        "chat": {
+          "statusLabel": "Na vezi",
+          "subtitle": "pomoćnik u trgovini od hladnjaka do recepta",
+          "openingMessage": "Bok, ja sam Kai. Pokaži mi hladnjak, smočnicu ili nedavnu potvrdu. Predložit ću recepte od onoga što imate i zadržati potrošnju, kalorije i nedostajuće sastojke.",
+          "visitorMessage": "Skenirajte moj hladnjak i pokažite što mogu kuhati večeras.",
+          "assistantMessage": "Pretvorit ću ono što je već tamo u opcije recepata, pokazati kalorije po porciji i kupovati samo sastojke koji još nedostaju.",
+          "inputPlaceholder": "Zatražite namirnice, recept ili provjeru kalorija...",
+          "suggestions": [
+            "zobene ponude",
+            "Uravnoteži moj tjedan",
+            "Kuhajte iz mog hladnjaka"
+          ],
+          "demoNote": "Ilustrativna namirnica, recept i nutricionizam · Provjerite sastojke i prehrambene potrebe",
+          "sampleProduct": {
+            "badge": "Pronađen posao · smočnica+",
+            "name": "Oatly Barista Edition",
+            "detail": "1 l · 590 kcal · 20% popusta",
+            "price": "2,39 €",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Odaberite hladnjak, smočnicu, račun ili sliku popisa za kupovinu",
+          "uploadHint": "JPEG, PNG, WebP ili HEIC · do 6 slika i 10 MB svaka",
+          "analyzingLabel": "Kai čita vidljive namirnice...",
+          "inventoryHeading": "Pregledajte ekstrahirani inventar",
+          "inventoryBody": "Ispravite količine, uklonite pogreške ili dodajte sve što je Kai propustio.",
+          "itemNameLabel": "Artikal",
+          "quantityLabel": "Količina",
+          "unitLabel": "Jedinica",
+          "addItemLabel": "dodati stavku",
+          "removeItemLabel": "Ukloniti",
+          "chatLabel": "Ispravno chatom",
+          "voiceLabel": "Točno glasom · 5 min",
+          "reviewLabel": "pregled inventara",
+          "editLabel": "urediti popis",
+          "confirmationHeading": "spreman za inventur",
+          "confirmationBody": "Kai će ponovno potvrditi ovaj popis prije nego što predloži kolica. Ništa se ne naručuje bez vašeg odobrenja.",
+          "signInLabel": "Prijavite se za nastavak",
+          "signInNotice": "Prijavite se da premjestite ovo hvatanje namirnica u privatnu KAI sesiju i nastavite s radom na obnavljanju zaliha. Ništa nije naručeno bez vašeg izričitog odobrenja.",
+          "expiryCopy": "Nezatraženi pregledi istječu nakon jednog sata",
+          "errorCopy": "Kai nije mogao pročitati popis namirnica s te slike. Isprobajte jasniji hladnjak, smočnicu, račun ili fotografiju s popisa za kupovinu."
+        }
+      },
+      "product": {
+        "kicker": "Vaša namirnica + recept + kalorijski blizanac",
+        "heading": "Što možemo kuhati — i što još treba kupovati?",
+        "body": "Kai povezuje skeniranje, recepte, pretraživanje proizvoda, kalorije i košaricu tako da svaki obrok počinje s onim što već imate.",
+        "capabilityLabels": [
+          "traženje proizvoda",
+          "kalorija",
+          "ideje za recepte",
+          "Slika za popis",
+          "glas",
+          "uparivanje dogovora"
+        ],
+        "cards": [
+          {
+            "title": "kolica za kocku",
+            "body": "Usporedite stvarne proizvode, količine i cijene u jednoj košarici koja se može pregledati.",
+            "metric": "Potrošite + kalorije zajedno"
+          },
+          {
+            "title": "Recepti iz vašeg skeniranja",
+            "body": "Pogledajte recepte za kuhanje rangirane prema onome što je već u hladnjaku i što nedostaje.",
+            "metric": "Prvo kuhajte, kupujte drugo"
+          },
+          {
+            "title": "otklanjanje operacija",
+            "body": "Usporedite korisne utakmice uz očuvanje pokrivenosti recepta i kućanskih ciljeva.",
+            "metric": "Pravi izvori namirnica"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "Kai u džepu",
+        "heading": "Od hladnjaka do recepta do košarice,",
+        "accentHeading": "Gdje god da ste.",
+        "items": [
+          {
+            "label": "sagraditi kolica",
+            "title": "Kolica uživo s vašim zajedničkim planom i planom kalorija.",
+            "body": "Zatražite artikl, usporedite pravi spoj i pogledajte kako cijena, kalorije i količina mijenjaju tjedan."
+          },
+          {
+            "label": "Skenirajte hladnjak",
+            "title": "Pretvorite fotografiju hladnjaka ili računa u recepte koje možete kuhati.",
+            "body": "Kai identificira što je pri ruci, procjenjuje kalorije i predlaže recepte prije izrade popisa nedostajućih sastojaka."
+          },
+          {
+            "label": "Odaberite recept",
+            "title": "Odaberite obrok, a zatim kupite samo ono što nedostaje.",
+            "body": "Usporedite vrijeme kuhanja, kalorije po obroku, pokrivenost sastojaka i mali razmak u trgovini za svaki recept."
+          },
+          {
+            "label": "Razgovaraj s Kaijem",
+            "title": "Razgovarajte kroz trgovinu i svoj tjedni cilj.",
+            "body": "Recite što je ponestalo ili što želite kuhati. Kai drži jaz u kolicima, potrošnji i kalorijama u kontekstu."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "The Weekly Shop, obnovljen",
+        "heading": "Jasno upravljajte namirnicama, receptima, potrošnjom i kalorijama",
+        "items": [
+          {
+            "number": "01",
+            "title": "Recept, otkriće proizvoda i kalorija",
+            "body": "Skenirajte što imate ili opišite obrok koji želite. Kai prikazuje recepte za kuhanje, kalorije po porciji i točan razmak u trgovini za svaku opciju.",
+            "tags": [
+              "skejt",
+              "Recepti",
+              "kalorija",
+              "nedostaju predmeti"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "kolica napravljena od obroka koje odaberete",
+            "body": "Odaberite recept i Kai uklanja sastojke koji su već pri ruci. Samo proizvodi koji nedostaju ulaze u košaricu, a zajedno se ažuriraju potrošnja i kalorije u kućanstvu.",
+            "tags": [
+              "pokriće",
+              "samo",
+              "tjednik kcal"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "Skenirajte jednom. Kuhajte od onoga što je tamo.",
+            "body": "Kai pretvara hladnjak, smočnicu ili skeniranje računa u tri praktična recepta. Usporedite vrijeme i kalorije, odaberite jedan, a zatim pregledajte samo njegove sastojke koji nedostaju.",
+            "tags": [
+              "3 opcije recepta",
+              "vrijeme kuhanja",
+              "Kalorije / serviranje"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "Kakav je osjećaj kuhanja i kupovine s Kaijem",
+        "heading": "Mali trenuci jasnoće od hladnjaka do večere",
+        "testimonials": [
+          {
+            "quote": "Kai pretvara ono što je već u našem hladnjaku u ideje za večeru, a zatim pokazuje cijenu i obiteljske kalorije prije nego što odaberem.",
+            "name": "Mila",
+            "meta": "zaposlen na roditelju"
+          },
+          {
+            "quote": "Tražim ponude za sir, usporedim stvarne opcije i dodam točnu koju želim. Nema skakanja s karticama.",
+            "name": "Noa",
+            "meta": "tjednik"
+          },
+          {
+            "quote": "Skeniranje računa dalo mi je tri recepta, kalorije po porciji i samo sastojke koje sam još trebao kupiti.",
+            "name": "Sofija",
+            "meta": "domaći kuhar"
+          },
+          {
+            "quote": "Sviđa mi se što Kai prvi gradi kolica i postavlja pitanja za planiranje samo kada su važna.",
+            "name": "skakavac",
+            "meta": "Student"
+          },
+          {
+            "quote": "Glas je savršen kad su mi ruke pune u kuhinji. Samo kažem Kaiju što je ponestalo.",
+            "name": "Emma",
+            "meta": "ventilator"
+          },
+          {
+            "quote": "Sve ostaje recenzirano. Mogu promijeniti količine i vidjeti kako se potrošnja i ukupni iznos kalorija kreću sa mnom.",
+            "name": "božji okrug",
+            "meta": "pametnjaković"
+          }
+        ],
+        "articles": [
+          {
+            "category": "tjednik",
+            "title": "sedmominutni plan trgovine i obroka",
+            "body": "Samostalni kupac pretvorio je popis raštrkanih namirnica u kolica, tri večere za kuhanje i 10.850 planiranih kalorija."
+          },
+          {
+            "category": "frižider po receptu",
+            "title": "Od fotografije hladnjaka do večerašnje večere",
+            "body": "Kai je prepoznao sastojke, predložio tri recepta i odvojio ono što je već bilo tamo od onoga što još treba kupiti."
+          },
+          {
+            "category": "pametno pretraživanje recepta",
+            "title": "pametna pretraga koja vidi cijeli tjedan",
+            "body": "Pretraživanje je izmjerilo cijenu, kalorije, pokrivenost receptima i proteinski jaz bez gubitka niti u trgovini."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "Jedno mjesto, mnogo načina",
+        "heading": "Svaki unos postaje recept, jedna košara i jedan plan kalorija",
+        "body": "Fotografija, glasovna bilješka, račun ili popis u nastavku: sastojci pri ruci, recepti koje možete kuhati, proizvodi koji još nedostaju, tjedna potrošnja i kalorije u kućanstvu.",
+        "capabilities": [
+          "Fotografija",
+          "Glas",
+          "dogovor",
+          "Račun",
+          "Popis",
+          "Isporuka",
+          "kalorija",
+          "Domaćinstvo",
+          "Recepti"
+        ]
+      },
+      "closing": {
+        "kicker": "Vaš sljedeći plan od hladnjaka do večere",
+        "heading": "Počnite s onim što imate. Kupujte samo za ono što nedostaje.",
+        "body": "Skenirajte hladnjak ili račun. Kai predlaže recepte za kuhanje, pokazuje kalorije po porciji i pretvara nestale sastojke u kolica koja možete pregledati.",
+        "ctaLabel": "Skenirajte da pronađete recepte"
+      },
+      "footer": {
+        "tagline": "Vaša mješovita roba od hladnjaka do košarice. Pronađite recepte od onoga što imate, pogledajte kalorije i kupujte samo ono što nedostaje.",
+        "groups": [
+          {
+            "label": "Proizvod",
+            "links": [
+              {
+                "label": "namirnica",
+                "target": "product"
+              },
+              {
+                "label": "Kako radi",
+                "target": "features"
+              },
+              {
+                "label": "priče",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "Kai",
+            "links": [
+              {
+                "label": "O KAI",
+                "target": "about"
+              },
+              {
+                "label": "Kontakt",
+                "target": "contact"
+              },
+              {
+                "label": "Natrag na vrh",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 Kai · Grocery Twin",
+        "closingStatement": "Dobar izbor. Sjajan tjedan."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

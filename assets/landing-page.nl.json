@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "language": "nl",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Product",
+          "target": "product"
+        },
+        {
+          "label": "Mobiel",
+          "target": "mobile"
+        },
+        {
+          "label": "Verhalen",
+          "target": "stories"
+        },
+        {
+          "label": "Functies",
+          "target": "features"
+        },
+        {
+          "label": "Over",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "Maak kennis met KAI"
+    },
+    "badge": "Jouw winkel, recepten en calorieplan — verbonden",
+    "headline": "Maak boodschappen doen weer makkelijk",
+    "headlineAccent": "weer makkelijk",
+    "subheadline": "Scan de koelkast of een bon. KAI maakt van wat je al hebt recepten, telt de calorieën en bestelt alleen wat er voor elke maaltijd nog nodig is.",
+    "ctaLabel": "Praat met KAI",
+    "secondaryCtaLabel": "Scannen naar recepten",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "Echte producten en prijzen",
+      "Bekijk elke keuze",
+      "Calorieën gepland per huishouden",
+      "Recepten van wat je hebt"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "KAI, jouw Boodschappen-Tweeling, in een zonnige keuken omringd door verse producten en een weekmenu"
+    },
+    "contact": {
+      "heading": "Begin met wat je hebt",
+      "body": "Scan de koelkast of een bon en laat KAI de ontbrekende boodschappen klaarzetten om te beoordelen."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Home",
+        "subtitle": "Jouw Boodschappen-Tweeling",
+        "secondaryEditionLabel": "Retail",
+        "navItems": [
+          {
+            "label": "Product",
+            "target": "product"
+          },
+          {
+            "label": "Mobiel",
+            "target": "mobile"
+          },
+          {
+            "label": "Verhalen",
+            "target": "stories"
+          },
+          {
+            "label": "Functies",
+            "target": "features"
+          },
+          {
+            "label": "Over",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "Maak kennis met KAI",
+        "primaryCtaLabel": "Start een winkelwagen"
+      },
+      "hero": {
+        "ratingLabel": "Jouw winkel, recepten en calorieplan — verbonden",
+        "heading": "Maak boodschappen doen weer makkelijk",
+        "body": "Scan de koelkast of een bon. KAI maakt van wat je al hebt recepten, telt de calorieën en bestelt alleen wat er voor elke maaltijd nog nodig is.",
+        "primaryCtaLabel": "Praat met KAI",
+        "secondaryCtaLabel": "Scannen naar recepten",
+        "trustItems": [
+          "Echte producten en prijzen",
+          "Bekijk elke keuze",
+          "Calorieën gepland per huishouden",
+          "Recepten van wat je hebt"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "KAI, jouw volledige Boodschappen-Tweeling-persona",
+        "chat": {
+          "statusLabel": "Online",
+          "subtitle": "Boodschappenassistent van koelkast tot recept",
+          "openingMessage": "Hoi, ik ben KAI. Laat me de koelkast, voorraadkast of een recente bon zien. Ik stel recepten voor met wat je hebt en houd uitgaven, calorieën en ontbrekende ingrediënten zichtbaar.",
+          "visitorMessage": "Scan mijn koelkast en laat zien wat ik vanavond kan koken.",
+          "assistantMessage": "Ik maak van wat je al hebt receptopties, toon calorieën per portie en bestel alleen de ingrediënten die nog ontbreken.",
+          "inputPlaceholder": "Vraag om boodschappen, een recept of een caloriecheck…",
+          "suggestions": [
+            "Aanbiedingen havermelk",
+            "Balanceer mijn week",
+            "Koken vanuit mijn koelkast"
+          ],
+          "demoNote": "Illustratieve demo van boodschappen, recepten en voeding · Controleer ingrediënten en dieetbehoeften",
+          "sampleProduct": {
+            "badge": "Aanbieding gevonden · Pantry+",
+            "name": "Oatly Barista Edition",
+            "detail": "1 L · 590 kcal · 20% korting",
+            "price": "€2,39",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Kies een afbeelding van koelkast, voorraadkast, bon of boodschappenlijst",
+          "uploadHint": "JPEG, PNG, WebP of HEIC · tot 6 afbeeldingen en 10 MB elk",
+          "analyzingLabel": "KAI leest de zichtbare producten…",
+          "inventoryHeading": "Bekijk de geëxtraheerde voorraad",
+          "inventoryBody": "Corrigeer hoeveelheden, verwijder fouten of voeg toe wat KAI heeft gemist.",
+          "itemNameLabel": "Item",
+          "quantityLabel": "Hoeveelheid",
+          "unitLabel": "Eenheid",
+          "addItemLabel": "Item toevoegen",
+          "removeItemLabel": "Verwijderen",
+          "chatLabel": "Corrigeren via chat",
+          "voiceLabel": "Corrigeren via spraak · 5 min",
+          "reviewLabel": "Voorraad bekijken",
+          "editLabel": "Voorraad bewerken",
+          "confirmationHeading": "Voorraad klaar",
+          "confirmationBody": "KAI bevestigt deze lijst opnieuw voordat een winkelwagen wordt voorgesteld. Er wordt niets besteld zonder jouw goedkeuring.",
+          "signInLabel": "Log in om door te gaan",
+          "signInNotice": "Log in om deze boodschappencapture naar een privé KAI-sessie te verplaatsen en de aanvulworkflow voort te zetten. Er wordt niets besteld zonder jouw uitdrukkelijke goedkeuring.",
+          "expiryCopy": "Niet-opgeëiste previews verlopen na één uur",
+          "errorCopy": "KAI kon geen boodschappenlijst uit die afbeelding lezen. Probeer een duidelijkere foto van koelkast, voorraadkast, bon of boodschappenlijst."
+        }
+      },
+      "product": {
+        "kicker": "Jouw Boodschappen- + Recept- + Calorie-Tweeling",
+        "heading": "Wat kunnen we koken — en wat moet er nog worden gekocht?",
+        "body": "KAI verbindt scan, recepten, productzoeker, calorieën en winkelwagen zodat elke maaltijd begint met wat je al hebt.",
+        "capabilityLabels": [
+          "Productzoeker",
+          "Calorieplan",
+          "Receptideeën",
+          "Afbeelding naar lijst",
+          "Spraakondersteuning",
+          "Aanbiedingen koppelen"
+        ],
+        "cards": [
+          {
+            "title": "Live winkelwagen",
+            "body": "Vergelijk echte producten, hoeveelheden en prijzen in één te beoordelen winkelwagen.",
+            "metric": "Uitgaven + calorieën samen"
+          },
+          {
+            "title": "Recepten van jouw scan",
+            "body": "Bekijk kookbare recepten gerangschikt op wat al in de koelkast is en wat ontbreekt.",
+            "metric": "Eerst koken, dan kopen"
+          },
+          {
+            "title": "Aanbiedingenradar",
+            "body": "Vergelijk nuttige matches met behoud van receptdekking en huishouddoelen.",
+            "metric": "Echte boodschappenbronnen"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "KAI in je zak",
+        "heading": "Van koelkast naar recept naar winkelwagen,",
+        "accentHeading": "Waar je ook bent.",
+        "items": [
+          {
+            "label": "Stel een winkelwagen samen",
+            "title": "Een live winkelwagen met jouw uitgaven en calorieplan samen.",
+            "body": "Vraag een product, vergelijk een echte match en zie hoe prijs, calorieën en hoeveelheid de week veranderen."
+          },
+          {
+            "label": "Scan de koelkast",
+            "title": "Maak van een foto van koelkast of bon recepten die je kunt koken.",
+            "body": "KAI herkent wat je in huis hebt, schat de calorieën in en stelt recepten voor voordat de lijst met ontbrekende ingrediënten wordt opgesteld."
+          },
+          {
+            "label": "Kies een recept",
+            "title": "Kies een maaltijd en koop alleen wat ontbreekt.",
+            "body": "Vergelijk kooktijd, calorieën per portie, ingrediëntdekking en de kleine boodschappenkloof voor elk recept."
+          },
+          {
+            "label": "Praat met KAI",
+            "title": "Bespreek de boodschappen en jouw weekdoel.",
+            "body": "Zeg wat er op is of wat je wilt koken. KAI houdt winkelwagen, uitgaven en caloriekloof in context."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "De wekelijkse boodschappen, opnieuw opgebouwd",
+        "heading": "Beheer boodschappen, recepten, uitgaven en calorieën met duidelijkheid",
+        "items": [
+          {
+            "number": "01",
+            "title": "Ontdekking van recepten, producten en calorieën",
+            "body": "Scan wat je hebt of beschrijf de maaltijd die je wilt. KAI toont kookbare recepten, calorieën per portie en de exacte boodschappenkloof voor elke optie.",
+            "tags": [
+              "Koelkastscan",
+              "Recepten",
+              "Calorieën",
+              "Ontbrekende items"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "Een winkelwagen gebouwd van de maaltijden die je kiest",
+            "body": "Kies een recept en KAI verwijdert ingrediënten die al in huis zijn. Alleen ontbrekende producten komen in de winkelwagen, met uitgaven en huishoudcalorieën samen bijgewerkt.",
+            "tags": [
+              "Receptdekking",
+              "Alleen wat ontbreekt",
+              "Wekelijkse kcal"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "Scan één keer. Kook met wat je hebt.",
+            "body": "KAI maakt van een scan van koelkast, voorraadkast of bon drie praktische recepten. Vergelijk tijd en calorieën, kies er één en bekijk alleen de ontbrekende ingrediënten.",
+            "tags": [
+              "3 receptopties",
+              "Kooktijd",
+              "Calorieën / portie"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "Hoe koken en boodschappen doen met KAI voelt",
+        "heading": "Kleine momenten van duidelijkheid van koelkast tot diner",
+        "testimonials": [
+          {
+            "quote": "KAI maakt van wat al in onze koelkast staat dinerideeën en toont daarna de kosten en gezinscalorieën voordat ik kies.",
+            "name": "Mila",
+            "meta": "Drukke ouder"
+          },
+          {
+            "quote": "Ik vraag kaasaanbiedingen, vergelijk de echte opties en voeg precies degene toe die ik wil. Geen tabbladen hoppen.",
+            "name": "Noah",
+            "meta": "Wekelijkse shopper"
+          },
+          {
+            "quote": "De scan van de bon gaf me drie recepten, de calorieën per portie en alleen de ingrediënten die ik nog moest kopen.",
+            "name": "Sofia",
+            "meta": "Thuiskok"
+          },
+          {
+            "quote": "Ik vind het fijn dat KAI eerst de winkelwagen opbouwt en de planningsvragen pas stelt als het ertoe doet.",
+            "name": "Lucas",
+            "meta": "Student"
+          },
+          {
+            "quote": "Spraak is perfect als mijn handen vol zijn in de keuken. Ik vertel KAI gewoon wat er op is.",
+            "name": "Emma",
+            "meta": "Mealprep-fan"
+          },
+          {
+            "quote": "Alles blijft te beoordelen. Ik kan hoeveelheden aanpassen en zie zowel uitgaven als calorieën met me meebewegen.",
+            "name": "Daan",
+            "meta": "Slimme shopper"
+          }
+        ],
+        "articles": [
+          {
+            "category": "Wekelijkse routine",
+            "title": "De zevenminuten-shop en maaltijdplanning",
+            "body": "Een solo-shopper toverde een verspreide basislijst om tot een winkelwagen, drie kookbare diners en 10.850 geplande calorieën."
+          },
+          {
+            "category": "Van koelkast tot recept",
+            "title": "Van koelkastfoto tot vanavond diner",
+            "body": "KAI herkende de ingrediënten, stelde drie recepten voor en scheidde wat er al was van wat er nog gekocht moest worden."
+          },
+          {
+            "category": "Slimme receptenzoeker",
+            "title": "Slimme zoekfunctie die de hele week overziet",
+            "body": "Een zoekopdracht die prijs, calorieën, receptdekking en een eiwitkloof afwoog zonder de draad van de boodschappen te verliezen."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "Eén plek, veel ingangen",
+        "heading": "Elke invoer wordt recepten, één winkelwagen en één calorieplan",
+        "body": "Een foto, spraaknotitie, bon of lijst voedt dezelfde weergave eronder: beschikbare ingrediënten, recepten die je kunt koken, nog te kopen producten, wekelijkse uitgaven en huishoudcalorieën.",
+        "capabilities": [
+          "Foto",
+          "Spraak",
+          "Aanbiedingen",
+          "Bon",
+          "Lijst",
+          "Bezorging",
+          "Calorieën",
+          "Huishouden",
+          "Recepten"
+        ]
+      },
+      "closing": {
+        "kicker": "Jouw volgende koelkast-tot-diner plan",
+        "heading": "Begin met wat je hebt. Koop alleen wat ontbreekt.",
+        "body": "Scan de koelkast of een bon. KAI stelt kookbare recepten voor, toont calorieën per portie en maakt van de ontbrekende ingrediënten een winkelwagen die je kunt beoordelen.",
+        "ctaLabel": "Scan om recepten te vinden"
+      },
+      "footer": {
+        "tagline": "Jouw Boodschappen-Tweeling van koelkast tot winkelwagen. Vind recepten van wat je hebt, zie calorieën en koop alleen wat ontbreekt.",
+        "groups": [
+          {
+            "label": "Product",
+            "links": [
+              {
+                "label": "Boodschappendemo",
+                "target": "product"
+              },
+              {
+                "label": "Hoe het werkt",
+                "target": "features"
+              },
+              {
+                "label": "Verhalen",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "KAI",
+            "links": [
+              {
+                "label": "Over KAI",
+                "target": "about"
+              },
+              {
+                "label": "Contact",
+                "target": "contact"
+              },
+              {
+                "label": "Terug naar boven",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 KAI · Grocery Twin",
+        "closingStatement": "Goede keuzes. Geweldige week."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

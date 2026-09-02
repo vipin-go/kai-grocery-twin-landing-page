@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "language": "it",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Prodotto",
+          "target": "product"
+        },
+        {
+          "label": "Mobile",
+          "target": "mobile"
+        },
+        {
+          "label": "Storie",
+          "target": "stories"
+        },
+        {
+          "label": "Funzionalità",
+          "target": "features"
+        },
+        {
+          "label": "Informazioni",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "Scopri KAI"
+    },
+    "badge": "Il tuo negozio, le tue ricette e il tuo piano calorico — collegati",
+    "headline": "Rendi la spesa facile di nuovo",
+    "headlineAccent": "facile di nuovo",
+    "subheadline": "Scansiona il frigorifero o uno scontrino. KAI trasforma ciò che hai già in ricette, conta le calorie e ordina solo ciò che manca per ogni pasto.",
+    "ctaLabel": "Parla con KAI",
+    "secondaryCtaLabel": "Scansione in ricette",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "Prodotti e prezzi reali",
+      "Rivedi ogni scelta",
+      "Calorie pianificate per nucleo familiare",
+      "Ricette da ciò che hai"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "KAI, il tuo Gemello della Spesa, in una cucina soleggiata tra prodotti freschi e un piano pasti settimanale"
+    },
+    "contact": {
+      "heading": "Inizia da ciò che hai",
+      "body": "Scansiona il frigorifero o uno scontrino e lascia che KAI prepari le mancanze della spesa da rivedere."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Home",
+        "subtitle": "Il tuo Gemello della Spesa",
+        "secondaryEditionLabel": "Retail",
+        "navItems": [
+          {
+            "label": "Prodotto",
+            "target": "product"
+          },
+          {
+            "label": "Mobile",
+            "target": "mobile"
+          },
+          {
+            "label": "Storie",
+            "target": "stories"
+          },
+          {
+            "label": "Funzionalità",
+            "target": "features"
+          },
+          {
+            "label": "Informazioni",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "Scopri KAI",
+        "primaryCtaLabel": "Avvia un carrello"
+      },
+      "hero": {
+        "ratingLabel": "Il tuo negozio, le tue ricette e il tuo piano calorico — collegati",
+        "heading": "Rendi la spesa facile di nuovo",
+        "body": "Scansiona il frigorifero o uno scontrino. KAI trasforma ciò che hai già in ricette, conta le calorie e ordina solo ciò che manca per ogni pasto.",
+        "primaryCtaLabel": "Parla con KAI",
+        "secondaryCtaLabel": "Scansione in ricette",
+        "trustItems": [
+          "Prodotti e prezzi reali",
+          "Rivedi ogni scelta",
+          "Calorie pianificate per nucleo familiare",
+          "Ricette da ciò che hai"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "KAI, la tua personaggia completa del Gemello della Spesa",
+        "chat": {
+          "statusLabel": "Online",
+          "subtitle": "Assistente spesa dal frigorifero alla ricetta",
+          "openingMessage": "Ciao, sono KAI. Mostrami il frigorifero, la dispensa o uno scontrino recente. Suggerirò ricette con ciò che hai e terrò visibili spesa, calorie e ingredienti mancanti.",
+          "visitorMessage": "Scansiona il mio frigorifero e mostrami cosa posso cucinare stasera.",
+          "assistantMessage": "Trasformerò ciò che hai già in opzioni di ricetta, mostrerò le calorie per porzione e ordinerò solo gli ingredienti ancora mancanti.",
+          "inputPlaceholder": "Chiedi la spesa, una ricetta o un controllo calorie…",
+          "suggestions": [
+            "Offerte latte d'avena",
+            "Bilancia la mia settimana",
+            "Cucina dal mio frigorifero"
+          ],
+          "demoNote": "Demo illustrativa di spesa, ricette e nutrizione · Verifica ingredienti ed esigenze dietetiche",
+          "sampleProduct": {
+            "badge": "Offerta trovata · Pantry+",
+            "name": "Oatly Barista Edition",
+            "detail": "1 L · 590 kcal · 20% di sconto",
+            "price": "€2,39",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Scegli un'immagine di frigorifero, dispensa, scontrino o lista della spesa",
+          "uploadHint": "JPEG, PNG, WebP o HEIC · fino a 6 immagini e 10 MB ciascuna",
+          "analyzingLabel": "KAI sta leggendo i prodotti visibili…",
+          "inventoryHeading": "Rivedi l'inventario estratto",
+          "inventoryBody": "Correggi le quantità, rimuovi gli errori o aggiungi ciò che KAI ha dimenticato.",
+          "itemNameLabel": "Articolo",
+          "quantityLabel": "Quantità",
+          "unitLabel": "Unità",
+          "addItemLabel": "Aggiungi articolo",
+          "removeItemLabel": "Rimuovi",
+          "chatLabel": "Correggi via chat",
+          "voiceLabel": "Correggi a voce · 5 min",
+          "reviewLabel": "Rivedi inventario",
+          "editLabel": "Modifica inventario",
+          "confirmationHeading": "Inventario pronto",
+          "confirmationBody": "KAI riconfermerà questo elenco prima di proporre un carrello. Nulla viene ordinato senza la tua approvazione.",
+          "signInLabel": "Accedi per continuare",
+          "signInNotice": "Accedi per spostare questa cattura della spesa in una sessione privata di KAI e continuare il flusso di rifornimento. Nulla viene ordinato senza la tua approvazione esplicita.",
+          "expiryCopy": "Le anteprime non rivendicate scadono dopo un'ora",
+          "errorCopy": "KAI non è riuscito a leggere una lista della spesa da quell'immagine. Prova una foto più nitida di frigorifero, dispensa, scontrino o lista della spesa."
+        }
+      },
+      "product": {
+        "kicker": "Il tuo Gemello Spesa + Ricette + Calorie",
+        "heading": "Cosa possiamo cucinare — e cosa manca da comprare?",
+        "body": "KAI collega scansione, ricette, ricerca prodotti, calorie e carrello così ogni pasto inizia da ciò che hai già.",
+        "capabilityLabels": [
+          "Ricerca prodotti",
+          "Piano calorico",
+          "Idee ricette",
+          "Immagine in lista",
+          "Aiuto vocale",
+          "Abbinamento offerte"
+        ],
+        "cards": [
+          {
+            "title": "Carrello in tempo reale",
+            "body": "Confronta prodotti reali, quantità e prezzi in un unico carrello verificabile.",
+            "metric": "Spesa + calorie insieme"
+          },
+          {
+            "title": "Ricette dalla tua scansione",
+            "body": "Scopri ricette realizzabili classificate in base a ciò che è già in frigorifero e a ciò che manca.",
+            "metric": "Cucina prima, compra dopo"
+          },
+          {
+            "title": "Radar offerte",
+            "body": "Confronta le corrispondenze utili mantenendo la copertura delle ricette e gli obiettivi del nucleo familiare.",
+            "metric": "Fonti reali della spesa"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "KAI in tasca",
+        "heading": "Dal frigorifero alla ricetta al carrello,",
+        "accentHeading": "Ovunque tu sia.",
+        "items": [
+          {
+            "label": "Crea un carrello",
+            "title": "Un carrello in tempo reale con spesa e piano calorico insieme.",
+            "body": "Chiedi un articolo, confronta una corrispondenza reale e vedi come prezzo, calorie e quantità cambiano la settimana."
+          },
+          {
+            "label": "Scansiona il frigorifero",
+            "title": "Trasforma una foto del frigorifero o dello scontrino in ricette che puoi cucinare.",
+            "body": "KAI identifica ciò che hai a disposizione, stima le calorie e suggerisce ricette prima di costruire la lista degli ingredienti mancanti."
+          },
+          {
+            "label": "Scegli una ricetta",
+            "title": "Scegli un pasto e acquista solo ciò che manca.",
+            "body": "Confronta tempo di cottura, calorie per porzione, copertura degli ingredienti e la piccola lacuna della spesa per ogni ricetta."
+          },
+          {
+            "label": "Parla con KAI",
+            "title": "Parla della spesa e del tuo obiettivo settimanale.",
+            "body": "Dimmi cosa è finito o cosa vuoi cucinare. KAI mantiene il carrello, la spesa e il gap calorico nel contesto."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "La spesa settimanale, ricostruita",
+        "heading": "Gestisci spesa, ricette, costi e calorie con chiarezza",
+        "items": [
+          {
+            "number": "01",
+            "title": "Scoperta di ricette, prodotti e calorie",
+            "body": "Scansiona ciò che hai o descrivi il pasto che desideri. KAI mostra ricette realizzabili, calorie per porzione e l'esatta lacuna della spesa per ogni opzione.",
+            "tags": [
+              "Scansione frigorifero",
+              "Ricette",
+              "Calorie",
+              "Articoli mancanti"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "Un carrello costruito dai pasti che scegli",
+            "body": "Scegli una ricetta e KAI rimuove gli ingredienti già disponibili. Solo i prodotti mancanti entrano nel carrello, con spesa e calorie del nucleo familiare aggiornate insieme.",
+            "tags": [
+              "Copertura ricette",
+              "Solo ciò che manca",
+              "kcal settimanali"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "Scansiona una volta. Cucina con ciò che hai.",
+            "body": "KAI trasforma una scansione di frigorifero, dispensa o scontrino in tre ricette pratiche. Confronta tempo e calorie, scegline una e rivedi solo gli ingredienti mancanti.",
+            "tags": [
+              "3 opzioni di ricetta",
+              "Tempo di cottura",
+              "Calorie / porzione"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "Com'è cucinare e fare la spesa con KAI",
+        "heading": "Piccoli momenti di chiarezza dal frigorifero alla cena",
+        "testimonials": [
+          {
+            "quote": "KAI trasforma ciò che è già nel nostro frigorifero in idee per la cena e poi mostra costo e calorie della famiglia prima che io scelga.",
+            "name": "Mila",
+            "meta": "Genitore impegnato"
+          },
+          {
+            "quote": "Chiedo offerte sul formaggio, confronto le opzioni reali e aggiungo esattamente quella che voglio. Senza saltare tra schede.",
+            "name": "Noah",
+            "meta": "Acquirente settimanale"
+          },
+          {
+            "quote": "La scansione dello scontrino mi ha dato tre ricette, le calorie per porzione e solo gli ingredienti che dovevo ancora comprare.",
+            "name": "Sofia",
+            "meta": "Cuoco casalingo"
+          },
+          {
+            "quote": "Mi piace che KAI costruisca prima il carrello e faccia le domande di pianificazione solo quando contano.",
+            "name": "Lucas",
+            "meta": "Studente"
+          },
+          {
+            "quote": "La voce è perfetta quando ho le mani occupate in cucina. Dico semplicemente a KAI cosa è finito.",
+            "name": "Emma",
+            "meta": "Appassionata di meal prep"
+          },
+          {
+            "quote": "Tutto resta verificabile. Posso modificare le quantità e vedere sia la spesa sia il totale calorico muoversi con me.",
+            "name": "Daan",
+            "meta": "Acquirente intelligente"
+          }
+        ],
+        "articles": [
+          {
+            "category": "Routine settimanale",
+            "title": "La spesa e il piano pasti di sette minuti",
+            "body": "Un acquirente singolo ha trasformato una lista sparsa di prodotti base in un carrello, tre cene realizzabili e 10.850 calorie pianificate."
+          },
+          {
+            "category": "Dal frigorifero alla ricetta",
+            "title": "Dalla foto del frigorifero alla cena di stasera",
+            "body": "KAI ha riconosciuto gli ingredienti, suggerito tre ricette e separato ciò che era già presente da ciò che serviva ancora acquistare."
+          },
+          {
+            "category": "Ricerca intelligente di ricette",
+            "title": "Ricerca intelligente che vede l'intera settimana",
+            "body": "Una ricerca che ha pesato prezzo, calorie, copertura delle ricette e un gap proteico senza perdere il filo della spesa."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "Un unico posto, molti modi per entrare",
+        "heading": "Ogni input diventa ricette, un carrello e un piano calorico",
+        "body": "Una foto, un messaggio vocale, uno scontrino o una lista alimentano la stessa visione sottostante: ingredienti disponibili, ricette che puoi cucinare, prodotti ancora da acquistare, spesa settimanale e calorie del nucleo familiare.",
+        "capabilities": [
+          "Foto",
+          "Voce",
+          "Offerte",
+          "Scontrino",
+          "Lista",
+          "Consegna",
+          "Calorie",
+          "Nucleo familiare",
+          "Ricette"
+        ]
+      },
+      "closing": {
+        "kicker": "Il tuo prossimo piano dal frigorifero alla cena",
+        "heading": "Inizia da ciò che hai. Acquista solo ciò che manca.",
+        "body": "Scansiona il frigorifero o uno scontrino. KAI suggerisce ricette realizzabili, mostra le calorie per porzione e trasforma gli ingredienti mancanti in un carrello che puoi rivedere.",
+        "ctaLabel": "Scansiona per trovare ricette"
+      },
+      "footer": {
+        "tagline": "Il tuo Gemello della Spesa dal frigorifero al carrello. Trova ricette da ciò che hai, vedi le calorie e acquista solo ciò che manca.",
+        "groups": [
+          {
+            "label": "Prodotto",
+            "links": [
+              {
+                "label": "Demo spesa",
+                "target": "product"
+              },
+              {
+                "label": "Come funziona",
+                "target": "features"
+              },
+              {
+                "label": "Storie",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "KAI",
+            "links": [
+              {
+                "label": "Informazioni su KAI",
+                "target": "about"
+              },
+              {
+                "label": "Contatti",
+                "target": "contact"
+              },
+              {
+                "label": "Torna in cima",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 KAI · Grocery Twin",
+        "closingStatement": "Scelte buone. Grande settimana."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

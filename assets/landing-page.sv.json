@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "language": "sv",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Produkt",
+          "target": "product"
+        },
+        {
+          "label": "Mobil",
+          "target": "mobile"
+        },
+        {
+          "label": "Berättelser",
+          "target": "stories"
+        },
+        {
+          "label": "Funktioner",
+          "target": "features"
+        },
+        {
+          "label": "Om",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "Möt KAI"
+    },
+    "badge": "Din butik, recept och kalorischema – sammanbundna",
+    "headline": "Gör matinköpen enkla igen",
+    "subheadline": "Skanna kylen eller ett kvitto. KAI gör om det som redan finns till recept, räknar kalorierna och köper bara det som varje måltid fortfarande behöver.",
+    "ctaLabel": "Prata med KAI",
+    "secondaryCtaLabel": "Skanna till recept",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "Riktiga produkter och priser",
+      "Granska varje val",
+      "Kalorier planerade per hushåll",
+      "Recept av det du har"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "KAI, din Grocery Twin, i ett solbelyst kök omgiven av färska råvaror och en veckans måltidsplan"
+    },
+    "contact": {
+      "heading": "Börja med det du har",
+      "body": "Skanna kylen eller ett kvitto och låt KAI förbereda inköpslistan för granskning."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Hem",
+        "subtitle": "Din Grocery Twin",
+        "secondaryEditionLabel": "Butik",
+        "navItems": [
+          {
+            "label": "Produkt",
+            "target": "product"
+          },
+          {
+            "label": "Mobil",
+            "target": "mobile"
+          },
+          {
+            "label": "Berättelser",
+            "target": "stories"
+          },
+          {
+            "label": "Funktioner",
+            "target": "features"
+          },
+          {
+            "label": "Om",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "Möt KAI",
+        "primaryCtaLabel": "Starta en kundvagn"
+      },
+      "hero": {
+        "ratingLabel": "Din butik, recept och kalorischema – sammanbundna",
+        "heading": "Gör matinköpen enkla igen",
+        "body": "Skanna kylen eller ett kvitto. KAI gör om det som redan finns till recept, räknar kalorierna och köper bara det som varje måltid fortfarande behöver.",
+        "primaryCtaLabel": "Prata med KAI",
+        "secondaryCtaLabel": "Skanna till recept",
+        "trustItems": [
+          "Riktiga produkter och priser",
+          "Granska varje val",
+          "Kalorier planerade per hushåll",
+          "Recept av det du har"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "KAI, din heltäckande Grocery Twin-persona",
+        "chat": {
+          "statusLabel": "Online",
+          "subtitle": "Kyl-till-recept-assistent",
+          "openingMessage": "Hej, jag är KAI. Visa mig kylen, skafferiet eller ett färskt kvitto. Jag föreslår recept från det du har och håller kostnad, kalorier och saknade ingredienser synliga.",
+          "visitorMessage": "Skanna min kyl och visa vad jag kan laga i kväll.",
+          "assistantMessage": "Jag gör om det som redan finns till receptförslag, visar kalorier per portion och köper bara de ingredienser som fortfarande saknas.",
+          "inputPlaceholder": "Fråga efter matvaror, ett recept eller en kalorikontroll…",
+          "suggestions": [
+            "Erbjudanden på havremjölk",
+            "Balansera min vecka",
+            "Laga mat från min kyl"
+          ],
+          "demoNote": "Illustrativ demo för matvaror, recept och näring · Kontrollera ingredienser och kostbehov",
+          "sampleProduct": {
+            "badge": "Erbjudande hittat · Pantry+",
+            "name": "Oatly Barista Edition",
+            "detail": "1 L · 590 kcal · 20% rabatt",
+            "price": "€2.39",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Välj en bild på kyl, skafferi, kvitto eller inköpslista",
+          "uploadHint": "JPEG, PNG, WebP eller HEIC · upp till 6 bilder och 10 MB vardera",
+          "analyzingLabel": "KAI läser av de synliga varorna…",
+          "inventoryHeading": "Granska den extraherade inventarien",
+          "inventoryBody": "Korrigera mängder, ta bort fel eller lägg till sådant som KAI missade.",
+          "itemNameLabel": "Vara",
+          "quantityLabel": "Mängd",
+          "unitLabel": "Enhet",
+          "addItemLabel": "Lägg till vara",
+          "removeItemLabel": "Ta bort",
+          "chatLabel": "Korrigera via chatt",
+          "voiceLabel": "Korrigera med röst · 5 min",
+          "reviewLabel": "Granska inventarie",
+          "editLabel": "Redigera inventarie",
+          "confirmationHeading": "Inventarie klar",
+          "confirmationBody": "KAI bekräftar listan igen innan ett förslag på kundvagn. Inget beställs utan ditt godkännande.",
+          "signInLabel": "Logga in för att fortsätta",
+          "signInNotice": "Logga in för att flytta den här matvaruinsamlingen till en privat KAI-session och fortsätta påfyllnadsflödet. Inget beställs utan ditt uttryckliga godkännande.",
+          "expiryCopy": "Ej hämtade förhandsvisningar förfaller efter en timme",
+          "errorCopy": "KAI kunde inte läsa en matvarulista från den bilden. Jag försöker med en tydligare bild av kyl, skafferi, kvitto eller inköpslista."
+        }
+      },
+      "product": {
+        "kicker": "Din Grocery + Recept + Kalori-Twin",
+        "heading": "Vad kan vi laga – och vad behöver fortfarande handlas?",
+        "body": "KAI kopplar ihop skanning, recept, produktsökning, kalorier och kundvagn så att varje måltid börjar med det du redan har.",
+        "capabilityLabels": [
+          "Produktsökning",
+          "Kalorischema",
+          "Receptidéer",
+          "Bild till lista",
+          "Rösthjälp",
+          "Erbjudandematchning"
+        ],
+        "cards": [
+          {
+            "title": "Live kundvagn",
+            "body": "Jämför riktiga produkter, mängder och priser i en gränskbar kundvagn.",
+            "metric": "Kostnad + kalorier tillsammans"
+          },
+          {
+            "title": "Recept från din skanning",
+            "body": "Se tillagningsbara recept rangordnade efter vad som redan finns i kylen och vad som saknas.",
+            "metric": "Laga först, handla sedan"
+          },
+          {
+            "title": "Erbjudanderadar",
+            "body": "Jämför användbara matchningar medan recepttäckning och hushållets mål bevaras.",
+            "metric": "Riktiga matvarukällor"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "KAI i din ficka",
+        "heading": "Från kyl till recept till kundvagn,",
+        "accentHeading": "Var du än befinner dig.",
+        "items": [
+          {
+            "label": "Bygg en kundvagn",
+            "title": "En live-kundvagn med kostnad och kalorischema tillsammans.",
+            "body": "Fråga efter en vara, jämför en riktig matchning och se hur pris, kalorier och mängd förändrar veckan."
+          },
+          {
+            "label": "Skanna kylen",
+            "title": "Gör om ett kyl- eller kvittofoto till recept du kan laga.",
+            "body": "KAI identifierar vad som finns, uppskattar kalorierna och föreslår recept innan listan på saknade ingredienser byggs."
+          },
+          {
+            "label": "Välj ett recept",
+            "title": "Välj en måltid och köp bara det som saknas.",
+            "body": "Jämför tillagningstid, kalorier per portion, ingredienstäckning och den lilla inköpsluckan för varje recept."
+          },
+          {
+            "label": "Prata med KAI",
+            "title": "Prata igenom inköpet och ditt veckomål.",
+            "body": "Säg vad som tog slut eller vad du vill laga. KAI håller kundvagn, kostnad och kalorilucka i sammanhanget."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "Veckans handling, omgjord",
+        "heading": "Hantera matvaror, recept, kostnad och kalorier med tydlighet",
+        "items": [
+          {
+            "number": "01",
+            "title": "Upptäck recept, produkter och kalorier",
+            "body": "Skanna vad du har eller beskriv måltiden du vill ha. KAI visar tillagningsbara recept, kalorier per portion och exakt inköpslucka för varje alternativ.",
+            "tags": [
+              "Kylskanning",
+              "Recept",
+              "Kalorier",
+              "Saknade varor"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "En kundvagn byggd av de måltider du väljer",
+            "body": "Välj ett recept så tar KAI bort ingredienser som redan finns. Endast de saknade produkterna hamnar i kundvagnen, och kostnad och hushållets kalorier uppdateras tillsammans.",
+            "tags": [
+              "Recepttäckning",
+              "Endast saknade",
+              "Veckans kcal"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "Skanna en gång. Laga av det som finns.",
+            "body": "KAI gör om en skanning av kyl, skafferi eller kvitto till tre praktiska recept. Jämför tid och kalorier, välj ett, och granska sedan bara dess saknade ingredienser.",
+            "tags": [
+              "3 receptalternativ",
+              "Tillagningstid",
+              "Kalorier / portion"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "Hur det känns att laga mat och handla med KAI",
+        "heading": "Små ögonblick av klarhet från kyl till middag",
+        "testimonials": [
+          {
+            "quote": "KAI gör om det som redan finns i vår kyl till middagsidéer och visar sedan kostnad och familjens kalorier innan jag väljer.",
+            "name": "Mila",
+            "meta": "Upptagen förälder"
+          },
+          {
+            "quote": "Jag frågar efter ost-erbjudanden, jämför de riktiga alternativen och lägger till exakt den jag vill ha. Inget flikhoppande.",
+            "name": "Noah",
+            "meta": "Veckohandlare"
+          },
+          {
+            "quote": "Kvittoskanningen gav mig tre recept, kalorier per portion och bara de ingredienser jag fortfarande behövde köpa.",
+            "name": "Sofia",
+            "meta": "Hemmakock"
+          },
+          {
+            "quote": "Jag gillar att KAI bygger kundvagnen först och ställer planeringsfrågorna bara när de spelar roll.",
+            "name": "Lucas",
+            "meta": "Student"
+          },
+          {
+            "quote": "Rösten är perfekt när händerna är fulla i köket. Jag säger bara till KAI vad som tog slut.",
+            "name": "Emma",
+            "meta": "Meal prep-entusiast"
+          },
+          {
+            "quote": "Allt förblir gränskbart. Jag kan ändra mängder och se hur kostnad och kalorier rör sig tillsammans med mig.",
+            "name": "Daan",
+            "meta": "Smart shoppare"
+          }
+        ],
+        "articles": [
+          {
+            "category": "Veckans rutin",
+            "title": "Den sju minuter långa handlingen och måltidsplanen",
+            "body": "En ensam shoppare gjorde om en splittrad basvarulista till en kundvagn, tre lagbara middagar och 10 850 planerade kalorier."
+          },
+          {
+            "category": "Från kyl till recept",
+            "title": "Från kylfoto till kvällens middag",
+            "body": "KAI identifierade ingredienserna, föreslog tre recept och separerade det som redan fanns från det som fortfarande behövde köpas."
+          },
+          {
+            "category": "Smart receptsökning",
+            "title": "Smart sök som ser hela veckan",
+            "body": "En sökning som väger pris, kalorier, recepttäckning och en proteinlucka utan att tappa tråden i handlingen."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "En plats, många sätt in",
+        "heading": "Varje inmatning blir recept, en kundvagn och ett kalorischema",
+        "body": "Ett foto, röstmeddelande, kvitto eller lista matar samma vy underifrån: tillgängliga ingredienser, recept du kan laga, produkter som fortfarande saknas, veckans kostnad och hushållets kalorier.",
+        "capabilities": [
+          "Foto",
+          "Röst",
+          "Erbjudanden",
+          "Kvitto",
+          "Lista",
+          "Leverans",
+          "Kalorier",
+          "Hushåll",
+          "Recept"
+        ]
+      },
+      "closing": {
+        "kicker": "Din nästa kyl-till-middag-plan",
+        "heading": "Börja med det du har. Handla bara det som saknas.",
+        "body": "Skanna kylen eller ett kvitto. KAI föreslår tillagningsbara recept, visar kalorier per portion och gör om de saknade ingredienserna till en gränskbar kundvagn.",
+        "ctaLabel": "Skanna för att hitta recept"
+      },
+      "footer": {
+        "tagline": "Din kyl-till-kundvagn Grocery Twin. Hitta recept från det du har, se kalorier och handla bara det som saknas.",
+        "groups": [
+          {
+            "label": "Produkt",
+            "links": [
+              {
+                "label": "Matvarudemo",
+                "target": "product"
+              },
+              {
+                "label": "Så fungerar det",
+                "target": "features"
+              },
+              {
+                "label": "Berättelser",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "KAI",
+            "links": [
+              {
+                "label": "Om KAI",
+                "target": "about"
+              },
+              {
+                "label": "Kontakt",
+                "target": "contact"
+              },
+              {
+                "label": "Tillbaka till toppen",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 KAI · Grocery Twin",
+        "closingStatement": "Bra val. Fantastisk vecka."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

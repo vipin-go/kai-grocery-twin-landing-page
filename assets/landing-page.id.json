@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "language": "id",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Produk",
+          "target": "product"
+        },
+        {
+          "label": "Seluler",
+          "target": "mobile"
+        },
+        {
+          "label": "Cerita",
+          "target": "stories"
+        },
+        {
+          "label": "Fitur",
+          "target": "features"
+        },
+        {
+          "label": "Tentang",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "Kenali KAI"
+    },
+    "badge": "Toko, resep, dan rencana kalori Anda—terhubung",
+    "headline": "Buat belanja groceries terasa mudah lagi",
+    "headlineAccent": "terasa mudah lagi",
+    "subheadline": "Pindai kulkas atau struk. KAI mengubah bahan yang sudah ada menjadi resep, menghitung kalorinya, dan hanya membeli bahan yang masih dibutuhkan setiap hidangan.",
+    "ctaLabel": "Bicara dengan KAI",
+    "secondaryCtaLabel": "Pindai untuk mendapatkan resep",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "Produk dan harga nyata",
+      "Tinjau setiap pilihan",
+      "Kalori direncanakan per rumah tangga",
+      "Resep dari bahan yang Anda punya"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "KAI, Grocery Twin Anda, di dapur terang matahari yang dikelilingi hasil bumi segar dan rencana makan mingguan"
+    },
+    "contact": {
+      "heading": "Mulai dari bahan yang Anda punya",
+      "body": "Pindai kulkas atau struk dan biarkan KAI menyiapkan daftar belanja yang kurang untuk ditinjau."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Beranda",
+        "subtitle": "Grocery Twin Anda",
+        "secondaryEditionLabel": "Ritel",
+        "navItems": [
+          {
+            "label": "Produk",
+            "target": "product"
+          },
+          {
+            "label": "Seluler",
+            "target": "mobile"
+          },
+          {
+            "label": "Cerita",
+            "target": "stories"
+          },
+          {
+            "label": "Fitur",
+            "target": "features"
+          },
+          {
+            "label": "Tentang",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "Kenali KAI",
+        "primaryCtaLabel": "Mulai keranjang"
+      },
+      "hero": {
+        "ratingLabel": "Toko, resep, dan rencana kalori Anda—terhubung",
+        "heading": "Buat belanja groceries terasa mudah lagi",
+        "body": "Pindai kulkas atau struk. KAI mengubah bahan yang sudah ada menjadi resep, menghitung kalorinya, dan hanya membeli bahan yang masih dibutuhkan setiap hidangan.",
+        "primaryCtaLabel": "Bicara dengan KAI",
+        "secondaryCtaLabel": "Pindai untuk mendapatkan resep",
+        "trustItems": [
+          "Produk dan harga nyata",
+          "Tinjau setiap pilihan",
+          "Kalori direncanakan per rumah tangga",
+          "Resep dari bahan yang Anda punya"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "KAI, persona Grocery Twin menyeluruh Anda",
+        "chat": {
+          "statusLabel": "Daring",
+          "subtitle": "Asisten belanja dari kulkas ke resep",
+          "openingMessage": "Hai, saya KAI. Tunjukkan kulkas, pantry, atau struk terbaru Anda. Saya akan menyarankan resep dari bahan yang Anda punya dan menjaga pengeluaran, kalori, serta bahan yang kurang tetap terlihat.",
+          "visitorMessage": "Pindai kulkas saya dan tampilkan apa yang bisa saya masak malam ini.",
+          "assistantMessage": "Saya akan mengubah bahan yang sudah ada menjadi pilihan resep, menunjukkan kalori per porsi, dan hanya membeli bahan yang masih kurang.",
+          "inputPlaceholder": "Tanyakan belanja, resep, atau cek kalori…",
+          "suggestions": [
+            "Promo susu oat",
+            "Seimbangkan minggu saya",
+            "Masak dari kulkas saya"
+          ],
+          "demoNote": "Demo ilustratif belanja, resep, dan nutrisi · Periksa bahan dan kebutuhan diet",
+          "sampleProduct": {
+            "badge": "Promo ditemukan · Pantry+",
+            "name": "Oatly Edisi Barista",
+            "detail": "1 L · 590 kkal · diskon 20%",
+            "price": "€2,39",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Pilih gambar kulkas, pantry, struk, atau daftar belanja",
+          "uploadHint": "JPEG, PNG, WebP, atau HEIC · hingga 6 gambar dan 10 MB masing-masing",
+          "analyzingLabel": "KAI sedang membaca bahan yang terlihat…",
+          "inventoryHeading": "Tinjau inventaris yang diekstrak",
+          "inventoryBody": "Koreksi jumlah, hapus kesalahan, atau tambahkan apa pun yang terlewat oleh KAI.",
+          "itemNameLabel": "Item",
+          "quantityLabel": "Jumlah",
+          "unitLabel": "Unit",
+          "addItemLabel": "Tambah item",
+          "removeItemLabel": "Hapus",
+          "chatLabel": "Koreksi lewat chat",
+          "voiceLabel": "Koreksi lewat suara · 5 mnt",
+          "reviewLabel": "Tinjau inventaris",
+          "editLabel": "Sunting inventaris",
+          "confirmationHeading": "Inventaris siap",
+          "confirmationBody": "KAI akan mengonfirmasi ulang daftar ini sebelum mengusulkan keranjang. Tidak ada yang dipesan tanpa persetujuan Anda.",
+          "signInLabel": "Masuk untuk melanjutkan",
+          "signInNotice": "Masuk untuk memindahkan tangkapan belanja ini ke sesi KAI pribadi dan melanjutkan alur kerja restock. Tidak ada yang dipesan tanpa persetujuan tegas Anda.",
+          "expiryCopy": "Pratinjau yang belum diklaim kedaluwarsa setelah satu jam",
+          "errorCopy": "KAI tidak dapat membaca daftar belanja dari gambar itu. Coba foto kulkas, pantry, struk, atau daftar belanja yang lebih jelas."
+        }
+      },
+      "product": {
+        "kicker": "Grocery + Resep + Kalori Twin Anda",
+        "heading": "Apa yang bisa kita masak—dan apa yang masih perlu dibeli?",
+        "body": "KAI menghubungkan pindai, resep, pencarian produk, kalori, dan keranjang agar setiap hidangan dimulai dari bahan yang sudah Anda punya.",
+        "capabilityLabels": [
+          "Pencarian produk",
+          "Rencana kalori",
+          "Ide resep",
+          "Gambar ke daftar",
+          "Bantuan suara",
+          "Pencocokan promo"
+        ],
+        "cards": [
+          {
+            "title": "Keranjang langsung",
+            "body": "Bandingkan produk nyata, jumlah, dan harga dalam satu keranjang yang dapat ditinjau.",
+            "metric": "Pengeluaran + kalori bersamaan"
+          },
+          {
+            "title": "Resep dari pindai Anda",
+            "body": "Lihat resep yang bisa dimasak diurutkan berdasarkan bahan yang sudah ada di kulkas dan yang masih kurang.",
+            "metric": "Masak dulu, belanja kemudian"
+          },
+          {
+            "title": "Radar promo",
+            "body": "Bandingkan kecocokan yang berguna sambil mempertahankan cakupan resep dan tujuan rumah tangga.",
+            "metric": "Sumber belanja nyata"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "KAI di saku Anda",
+        "heading": "Dari kulkas ke resep ke keranjang,",
+        "accentHeading": "Di mana pun Anda berada.",
+        "items": [
+          {
+            "label": "Bangun keranjang",
+            "title": "Keranjang langsung dengan rencana pengeluaran dan kalori Anda bersamaan.",
+            "body": "Minta item, bandingkan kecocokan nyata, dan lihat bagaimana harga, kalori, serta jumlah mengubah minggu ini."
+          },
+          {
+            "label": "Pindai kulkas",
+            "title": "Ubah foto kulkas atau struk menjadi resep yang bisa Anda masak.",
+            "body": "KAI mengidentifikasi bahan yang tersedia, memperkirakan kalori, dan menyarankan resep sebelum menyusun daftar bahan yang kurang."
+          },
+          {
+            "label": "Pilih resep",
+            "title": "Pilih hidangan, lalu beli hanya yang kurang.",
+            "body": "Bandingkan waktu masak, kalori per porsi, cakupan bahan, dan kesenjangan belanja kecil untuk setiap resep."
+          },
+          {
+            "label": "Bicara dengan KAI",
+            "title": "Bicarakan belanja dan target mingguan Anda.",
+            "body": "Sebutkan apa yang habis atau apa yang ingin Anda masak. KAI menjaga keranjang, pengeluaran, dan kesenjangan kalori tetap dalam konteks."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "Belanja mingguan, dibangun ulang",
+        "heading": "Kelola belanja, resep, pengeluaran, dan kalori dengan jelas",
+        "items": [
+          {
+            "number": "01",
+            "title": "Penemuan resep, produk & kalori",
+            "body": "Pindai bahan yang Anda punya atau jelaskan hidangan yang Anda inginkan. KAI menampilkan resep yang bisa dimasak, kalori per porsi, dan kesenjangan belanja yang tepat untuk setiap pilihan.",
+            "tags": [
+              "Pindai kulkas",
+              "Resep",
+              "Kalori",
+              "Item yang kurang"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "Keranjang yang dibangun dari hidangan yang Anda pilih",
+            "body": "Pilih resep dan KAI akan menghapus bahan yang sudah tersedia. Hanya produk yang kurang yang masuk ke keranjang, dengan pengeluaran dan kalori rumah tangga diperbarui bersamaan.",
+            "tags": [
+              "Cakupan resep",
+              "Hanya yang kurang",
+              "Kkal mingguan"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "Pindai sekali. Masak dari bahan yang ada.",
+            "body": "KAI mengubah pindai kulkas, pantry, atau struk menjadi tiga resep praktis. Bandingkan waktu dan kalori, pilih satu, lalu tinjau hanya bahan yang kurang.",
+            "tags": [
+              "3 pilihan resep",
+              "Waktu masak",
+              "Kalori / porsi"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "Seperti apa rasanya memasak dan belanja bersama KAI",
+        "heading": "Momen kecil kejelasan dari kulkas ke meja makan",
+        "testimonials": [
+          {
+            "quote": "KAI mengubah bahan yang sudah ada di kulkas kami menjadi ide makan malam, lalu menunjukkan biaya dan kalori keluarga sebelum saya memilih.",
+            "name": "Mila",
+            "meta": "Orang tua sibuk"
+          },
+          {
+            "quote": "Saya meminta promo keju, membandingkan pilihan nyata, dan menambahkan yang persis saya mau. Tanpa berpindah tab.",
+            "name": "Noah",
+            "meta": "Pembeli mingguan"
+          },
+          {
+            "quote": "Pindai struk memberi saya tiga resep, kalori per porsi, dan hanya bahan yang masih perlu saya beli.",
+            "name": "Sofia",
+            "meta": "Koki rumahan"
+          },
+          {
+            "quote": "Saya suka KAI membangun keranjang dulu dan menanyakan pertanyaan perencanaan hanya saat penting.",
+            "name": "Lucas",
+            "meta": "Pelajar"
+          },
+          {
+            "quote": "Suara sempurna saat tangan saya penuh di kuchynya. Saya cukup memberi tahu KAI apa yang habis.",
+            "name": "Emma",
+            "meta": "Penggemar meal prep"
+          },
+          {
+            "quote": "Semuanya tetap bisa ditinjau. Saya bisa mengubah jumlah dan melihat total pengeluaran serta kalori bergerak bersama saya.",
+            "name": "Daan",
+            "meta": "Pembeli pintar"
+          }
+        ],
+        "articles": [
+          {
+            "category": "Rutinitas mingguan",
+            "title": "Belanja dan rencana makan tujuh menit",
+            "body": "Pembeli tunggal mengubah daftar kebutuhan pokok yang tersebar menjadi keranjang, tiga hidangan malam yang bisa dimasak, dan 10.850 kalori yang direncanakan."
+          },
+          {
+            "category": "Dari kulkas ke resep",
+            "title": "Dari foto kulkas ke makan malam malam ini",
+            "body": "KAI mengenali bahan, menyarankan tiga resep, dan memisahkan apa yang sudah ada dari yang masih perlu dibeli."
+          },
+          {
+            "category": "Pencarian resep pintar",
+            "title": "Pencarian pintar yang melihat seluruh minggu",
+            "body": "Pencarian mempertimbangkan harga, kalori, cakupan resep, dan kesenjangan protein tanpa kehilangan alur belanja."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "Satu tempat, banyak cara masuk",
+        "heading": "Setiap input menjadi resep, satu keranjang, dan satu rencana kalori",
+        "body": "Foto, catatan suara, struk, atau daftar memberi makan tampilan yang sama di bawahnya: bahan yang tersedia, resep yang bisa Anda masak, produk yang masih kurang, pengeluaran mingguan, dan kalori rumah tangga.",
+        "capabilities": [
+          "Foto",
+          "Suara",
+          "Promo",
+          "Struk",
+          "Daftar",
+          "Pengiriman",
+          "Kalori",
+          "Rumah tangga",
+          "Resep"
+        ]
+      },
+      "closing": {
+        "kicker": "Rencana dari kulkas ke makan malam Anda berikutnya",
+        "heading": "Mulai dari bahan yang Anda punya. Belanja hanya yang kurang.",
+        "body": "Pindai kulkas atau struk. KAI menyarankan resep yang bisa dimasak, menunjukkan kalori per porsi, dan mengubah bahan yang kurang menjadi keranjang yang bisa Anda tinjau.",
+        "ctaLabel": "Pindai untuk menemukan resep"
+      },
+      "footer": {
+        "tagline": "Grocery Twin dari kulkas ke keranjang Anda. Temukan resep dari bahan yang Anda punya, lihat kalori, dan belanja hanya yang kurang.",
+        "groups": [
+          {
+            "label": "Produk",
+            "links": [
+              {
+                "label": "Demo belanja",
+                "target": "product"
+              },
+              {
+                "label": "Cara kerjanya",
+                "target": "features"
+              },
+              {
+                "label": "Cerita",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "KAI",
+            "links": [
+              {
+                "label": "Tentang KAI",
+                "target": "about"
+              },
+              {
+                "label": "Kontak",
+                "target": "contact"
+              },
+              {
+                "label": "Kembali ke atas",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 KAI · Grocery Twin",
+        "closingStatement": "Pilihan tepat. Minggu luar biasa."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

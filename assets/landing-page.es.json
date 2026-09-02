@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "language": "es",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Producto",
+          "target": "product"
+        },
+        {
+          "label": "Móvil",
+          "target": "mobile"
+        },
+        {
+          "label": "Historias",
+          "target": "stories"
+        },
+        {
+          "label": "Funciones",
+          "target": "features"
+        },
+        {
+          "label": "Acerca de",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "Conoce a KAI"
+    },
+    "badge": "Tu tienda, recetas y plan de calorías—conectados",
+    "headline": "Haz que comprar groceries vuelva a ser fácil",
+    "headlineAccent": "vuelva a ser fácil",
+    "subheadline": "Escanea la nevera o un ticket. KAI convierte lo que ya tienes en recetas, cuenta las calorías y compra solo lo que aún falta para cada comida.",
+    "ctaLabel": "Habla con KAI",
+    "secondaryCtaLabel": "Del escaneo a las recetas",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "Productos y precios reales",
+      "Revisa cada elección",
+      "Calorías planificadas por hogar",
+      "Recetas con lo que tienes"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "KAI, tu Grocery Twin, en una cocina soleada rodeada de productos frescos y un plan semanal de comidas"
+    },
+    "contact": {
+      "heading": "Empieza con lo que tienes",
+      "body": "Escanea la nevera o un ticket y deja que KAI prepare los huecos de la compra para revisarlos."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Inicio",
+        "subtitle": "Tu Grocery Twin",
+        "secondaryEditionLabel": "Minorista",
+        "navItems": [
+          {
+            "label": "Producto",
+            "target": "product"
+          },
+          {
+            "label": "Móvil",
+            "target": "mobile"
+          },
+          {
+            "label": "Historias",
+            "target": "stories"
+          },
+          {
+            "label": "Funciones",
+            "target": "features"
+          },
+          {
+            "label": "Acerca de",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "Conoce a KAI",
+        "primaryCtaLabel": "Crear un carrito"
+      },
+      "hero": {
+        "ratingLabel": "Tu tienda, recetas y plan de calorías—conectados",
+        "heading": "Haz que comprar groceries vuelva a ser fácil",
+        "body": "Escanea la nevera o un ticket. KAI convierte lo que ya tienes en recetas, cuenta las calorías y compra solo lo que aún falta para cada comida.",
+        "primaryCtaLabel": "Habla con KAI",
+        "secondaryCtaLabel": "Del escaneo a las recetas",
+        "trustItems": [
+          "Productos y precios reales",
+          "Revisa cada elección",
+          "Calorías planificadas por hogar",
+          "Recetas con lo que tienes"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "KAI, tu persona Grocery Twin de cuerpo completo",
+        "chat": {
+          "statusLabel": "En línea",
+          "subtitle": "Asistente de nevera a receta",
+          "openingMessage": "Hola, soy KAI. Enséñame la nevera, la despensa o un ticket reciente. Te sugeriré recetas con lo que tienes y mantendré visibles el gasto, las calorías y los ingredientes que faltan.",
+          "visitorMessage": "Escanea mi nevera y muéstrame qué puedo cocinar esta noche.",
+          "assistantMessage": "Convertiré lo que ya hay en opciones de recetas, mostraré las calorías por ración y compraré solo los ingredientes que aún faltan.",
+          "inputPlaceholder": "Pide groceries, una receta o un control de calorías…",
+          "suggestions": [
+            "Ofertas de leche de avena",
+            "Equilibra mi semana",
+            "Cocina con lo que hay en mi nevera"
+          ],
+          "demoNote": "Demostración ilustrativa de compras, recetas y nutrición · Revisa ingredientes y necesidades dietéticas",
+          "sampleProduct": {
+            "badge": "Oferta encontrada · Pantry+",
+            "name": "Oatly Barista Edition",
+            "detail": "1 L · 590 kcal · 20% de descuento",
+            "price": "2,39 €",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Elige una imagen de nevera, despensa, ticket o lista de la compra",
+          "uploadHint": "JPEG, PNG, WebP o HEIC · hasta 6 imágenes y 10 MB cada una",
+          "analyzingLabel": "KAI está leyendo los groceries visibles…",
+          "inventoryHeading": "Revisa el inventario extraído",
+          "inventoryBody": "Corrige cantidades, elimina errores o añade lo que KAI haya pasado por alto.",
+          "itemNameLabel": "Artículo",
+          "quantityLabel": "Cantidad",
+          "unitLabel": "Unidad",
+          "addItemLabel": "Añadir artículo",
+          "removeItemLabel": "Eliminar",
+          "chatLabel": "Corregir por chat",
+          "voiceLabel": "Corregir por voz · 5 min",
+          "reviewLabel": "Revisar inventario",
+          "editLabel": "Editar inventario",
+          "confirmationHeading": "Inventario listo",
+          "confirmationBody": "KAI reconfirmará esta lista antes de proponer un carrito. Nada se pide sin tu aprobación.",
+          "signInLabel": "Inicia sesión para continuar",
+          "signInNotice": "Inicia sesión para mover esta captura de groceries a una sesión privada de KAI y continuar el flujo de reposición. Nada se pide sin tu aprobación explícita.",
+          "expiryCopy": "Las previsualizaciones no reclamadas caducan en una hora",
+          "errorCopy": "KAI no pudo leer una lista de groceries en esa imagen. Prueba con una foto más clara de la nevera, la despensa, un ticket o una lista de la compra."
+        }
+      },
+      "product": {
+        "kicker": "Tu gemelo de Compras + Recetas + Calorías",
+        "heading": "¿Qué podemos cocinar y qué aún falta por comprar?",
+        "body": "KAI conecta el escaneo, las recetas, la búsqueda de productos, las calorías y el carrito para que cada comida empiece con lo que ya tienes.",
+        "capabilityLabels": [
+          "Búsqueda de productos",
+          "Plan de calorías",
+          "Ideas de recetas",
+          "Imagen a lista",
+          "Ayuda por voz",
+          "Coincidencia de ofertas"
+        ],
+        "cards": [
+          {
+            "title": "Carrito en vivo",
+            "body": "Compara productos, cantidades y precios reales en un solo carrito revisable.",
+            "metric": "Gasto + calorías juntos"
+          },
+          {
+            "title": "Recetas a partir de tu escaneo",
+            "body": "Ve recetas cocinables clasificadas según lo que ya hay en la nevera y lo que falta.",
+            "metric": "Cocina primero, compra después"
+          },
+          {
+            "title": "Radar de ofertas",
+            "body": "Compara coincidencias útiles manteniendo la cobertura de recetas y los objetivos del hogar.",
+            "metric": "Fuentes reales de groceries"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "KAI en tu bolsillo",
+        "heading": "De la nevera a la receta y al carrito,",
+        "accentHeading": "estés donde estés.",
+        "items": [
+          {
+            "label": "Crear un carrito",
+            "title": "Un carrito en vivo con tu gasto y plan de calorías juntos.",
+            "body": "Pide un artículo, compara una coincidencia real y observa cómo cambian el precio, las calorías y la cantidad durante la semana."
+          },
+          {
+            "label": "Escanea la nevera",
+            "title": "Convierte una foto de nevera o ticket en recetas que puedes cocinar.",
+            "body": "KAI identifica lo que tienes a mano, estima las calorías y sugiere recetas antes de armar la lista de ingredientes faltantes."
+          },
+          {
+            "label": "Elige una receta",
+            "title": "Elige una comida y compra solo lo que falta.",
+            "body": "Compara tiempo de cocción, calorías por ración, cobertura de ingredientes y el pequeño hueco de groceries de cada receta."
+          },
+          {
+            "label": "Habla con KAI",
+            "title": "Conversa sobre la compra y tu objetivo semanal.",
+            "body": "Di qué se acabó o qué quieres cocinar. KAI mantiene el carrito, el gasto y el hueco de calorías en contexto."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "La compra semanal, reconstruida",
+        "heading": "Gestiona groceries, recetas, gasto y calorías con claridad",
+        "items": [
+          {
+            "number": "01",
+            "title": "Descubrimiento de recetas, productos y calorías",
+            "body": "Escanea lo que tienes o describe la comida que quieres. KAI muestra recetas cocinables, calorías por ración y el hueco exacto de groceries para cada opción.",
+            "tags": [
+              "Escaneo de nevera",
+              "Recetas",
+              "Calorías",
+              "Artículos faltantes"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "Un carrito creado a partir de las comidas que eliges",
+            "body": "Elige una receta y KAI eliminará los ingredientes que ya tienes en casa. Solo los productos faltantes entran en el carrito, con el gasto y las calorías del hogar actualizados a la vez.",
+            "tags": [
+              "Cobertura de receta",
+              "Solo lo que falta",
+              "kcal semanales"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "Escanea una vez. Cocina con lo que hay.",
+            "body": "KAI convierte un escaneo de nevera, despensa o ticket en tres recetas prácticas. Compara tiempo y calories, elige uno y revisa solo los ingredientes que faltan.",
+            "tags": [
+              "3 opciones de receta",
+              "Tiempo de cocción",
+              "Calorías / ración"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "Cómo se siente cocinar y comprar con KAI",
+        "heading": "Pequeños momentos de claridad de nevera a cena",
+        "testimonials": [
+          {
+            "quote": "KAI convierte lo que ya está en nuestra nevera en ideas para cenar y luego muestra el costo y las calorías familiares antes de que yo elija.",
+            "name": "Mila",
+            "meta": "Madre o padre ocupado"
+          },
+          {
+            "quote": "Pido ofertas de queso, comparo las opciones reales y añado exactamente la que quiero. Sin saltar de pestaña en pestaña.",
+            "name": "Noah",
+            "meta": "Comprador semanal"
+          },
+          {
+            "quote": "El escaneo del ticket me dio tres recetas, las calorías por ración y solo los ingredientes que aún necesitaba comprar.",
+            "name": "Sofía",
+            "meta": "Cocinero casero"
+          },
+          {
+            "quote": "Me gusta que KAI primero arme el carrito y haga las preguntas de planificación solo cuando importan.",
+            "name": "Lucas",
+            "meta": "Estudiante"
+          },
+          {
+            "quote": "La voz es perfecta cuando tengo las manos ocupadas en la cocina. Solo le digo a KAI qué se acabó.",
+            "name": "Emma",
+            "meta": "Fan de la meal prep"
+          },
+          {
+            "quote": "Todo se puede revisar. Puedo cambiar cantidades y ver cómo se mueven el gasto y el total de calorías a la vez.",
+            "name": "Daan",
+            "meta": "Comprador inteligente"
+          }
+        ],
+        "articles": [
+          {
+            "category": "Rutina semanal",
+            "title": "La compra y plan de comidas de siete minutos",
+            "body": "Una persona que compra sola convirtió una lista dispersa de básicos en un carrito, tres cenas cocinables y 10.850 calorías planificadas."
+          },
+          {
+            "category": "De nevera a receta",
+            "title": "De la foto de la nevera a la cena de esta noche",
+            "body": "KAI reconoció los ingredientes, sugirió tres recetas y separó lo que ya estaba de lo que aún había que comprar."
+          },
+          {
+            "category": "Búsqueda inteligente de recetas",
+            "title": "Búsqueda inteligente que ve toda la semana",
+            "body": "Una búsqueda que sopesó precio, calorías, cobertura de recetas y un hueco de proteína sin perder el hilo de la compra."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "Un lugar, muchas formas de entrar",
+        "heading": "Cada entrada se convierte en recetas, un carrito y un plan de calorías",
+        "body": "Una foto, una nota de voz, un ticket o una lista alimenta la misma vista por debajo: ingredientes a mano, recetas que puedes cocinar, productos aún faltantes, gasto semanal y calorías del hogar.",
+        "capabilities": [
+          "Foto",
+          "Voz",
+          "Ofertas",
+          "Ticket",
+          "Lista",
+          "Entrega",
+          "Calorías",
+          "Hogar",
+          "Recetas"
+        ]
+      },
+      "closing": {
+        "kicker": "Tu próximo plan de nevera a cena",
+        "heading": "Empieza con lo que tienes. Compra solo lo que falta.",
+        "body": "Escanea la nevera o un ticket. KAI sugiere recetas cocinables, muestra las calorías por ración y convierte los ingredientes faltantes en un carrito que puedes revisar.",
+        "ctaLabel": "Escanea para encontrar recetas"
+      },
+      "footer": {
+        "tagline": "Tu Grocery Twin de nevera a carrito. Encuentra recetas con lo que tienes, ve las calorías y compra solo lo que falta.",
+        "groups": [
+          {
+            "label": "Producto",
+            "links": [
+              {
+                "label": "Demo de groceries",
+                "target": "product"
+              },
+              {
+                "label": "Cómo funciona",
+                "target": "features"
+              },
+              {
+                "label": "Historias",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "KAI",
+            "links": [
+              {
+                "label": "Sobre KAI",
+                "target": "about"
+              },
+              {
+                "label": "Contacto",
+                "target": "contact"
+              },
+              {
+                "label": "Volver arriba",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 KAI · Grocery Twin",
+        "closingStatement": "Buenas decisiones. Gran semana."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "language": "et",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Toode",
+          "target": "product"
+        },
+        {
+          "label": "Mobiil",
+          "target": "mobile"
+        },
+        {
+          "label": "Lood",
+          "target": "stories"
+        },
+        {
+          "label": "Funktsioonid",
+          "target": "features"
+        },
+        {
+          "label": "Meist",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "Tutvu KAI-ga"
+    },
+    "badge": "Teie pood, retseptid ja kaloriplaan—ühendatud",
+    "headline": "Muuda toidupoes käimine jälle lihtsaks",
+    "headlineAccent": "jälle lihtsaks",
+    "subheadline": "Skaneerige külmikut või kviitungit. KAI muudab selle, mis juba olemas on, retseptideks, loeb kaloreid ja ostab ainult selle, mida iga toidukord veel vajab.",
+    "ctaLabel": "Räägi KAI-ga",
+    "secondaryCtaLabel": "Skaneeri retseptide jaoks",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "Päris tooted ja hinnad",
+      "Vaata üle iga valik",
+      "Kalorid planeeritud leibkonna kaupa",
+      "Retseptid sellest, mis sul on"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "KAI, teie toidupoe Kaksik, päikesepaistelises köögis, ümbritsetud värskete toodetega ja nädala toiduplaaniga"
+    },
+    "contact": {
+      "heading": "Alusta sellest, mis sul on",
+      "body": "Skaneeri külmik või kviitung ja lase KAI-l valmistada toidupoe puudujäägid ülevaatamiseks."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Avaleht",
+        "subtitle": "Teie toidupoe Kaksik",
+        "secondaryEditionLabel": "Jaemüük",
+        "navItems": [
+          {
+            "label": "Toode",
+            "target": "product"
+          },
+          {
+            "label": "Mobiil",
+            "target": "mobile"
+          },
+          {
+            "label": "Lood",
+            "target": "stories"
+          },
+          {
+            "label": "Funktsioonid",
+            "target": "features"
+          },
+          {
+            "label": "Meist",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "Tutvu KAI-ga",
+        "primaryCtaLabel": "Alusta ostukorvi"
+      },
+      "hero": {
+        "ratingLabel": "Teie pood, retseptid ja kaloriplaan—ühendatud",
+        "heading": "Muuda toidupoes käimine jälle lihtsaks",
+        "body": "Skaneerige külmikut või kviitungit. KAI muudab selle, mis juba olemas on, retseptideks, loeb kaloreid ja ostab ainult selle, mida iga toidukord veel vajab.",
+        "primaryCtaLabel": "Räägi KAI-ga",
+        "secondaryCtaLabel": "Skaneeri retseptide jaoks",
+        "trustItems": [
+          "Päris tooted ja hinnad",
+          "Vaata üle iga valik",
+          "Kalorid planeeritud leibkonna kaupa",
+          "Retseptid sellest, mis sul on"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "KAI, teie täiskogu toidupoe Kaksiku persona",
+        "chat": {
+          "statusLabel": "Veebis",
+          "subtitle": "Külmikust retseptini toidupoe assistent",
+          "openingMessage": "Tere, mina olen KAI. Näita mulle külmikut, sahvrit või hiljutist kviitungit. Soovitan retsepte sellest, mis sul on, ja hoian kulud, kalorid ja puuduvad koostisosad nähtavad.",
+          "visitorMessage": "Skaneeri mu külmik ja näita, mida ma täna õhtul süüa saan.",
+          "assistantMessage": "Muudan selle, mis juba olemas on, retseptivalikuteks, näitan kaloreid portsjoni kohta ja ostan ainult puuduvad koostisosad.",
+          "inputPlaceholder": "Küsi toidupoe, retsepti või kalorite kontrolli kohta…",
+          "suggestions": [
+            "Kaerapiima pakkumised",
+            "Tasakaalusta mu nädal",
+            "Küpseta mu külmikust"
+          ],
+          "demoNote": "Illustreeriv toidupoe, retsepti ja toitumise demo · Kontrolli koostisosi ja toitumisvajadusi",
+          "sampleProduct": {
+            "badge": "Pakkumine leitud · Sahver+",
+            "name": "Oatly Barista Edition",
+            "detail": "1 L · 590 kcal · 20% allahindlus",
+            "price": "€2.39",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Vali külmiku, sahvri, kviitungi või ostunimekirja pilt",
+          "uploadHint": "JPEG, PNG, WebP või HEIC · kuni 6 pilti ja 10 MB igaüks",
+          "analyzingLabel": "KAI loeb nähtavaid toiduaineid…",
+          "inventoryHeading": "Vaata üle väljavõetud inventar",
+          "inventoryBody": "Paranda koguseid, eemalda vead või lisa kõik, mis KAI-l kahe silma vahele jäi.",
+          "itemNameLabel": "Artikkel",
+          "quantityLabel": "Kogus",
+          "unitLabel": "Ühik",
+          "addItemLabel": "Lisa artikkel",
+          "removeItemLabel": "Eemalda",
+          "chatLabel": "Paranda vestluse kaudu",
+          "voiceLabel": "Paranda häälega · 5 min",
+          "reviewLabel": "Vaata inventari üle",
+          "editLabel": "Muuda inventari",
+          "confirmationHeading": "Inventar on valmis",
+          "confirmationBody": "KAI kinnitab selle nimekirja uuesti enne ostukorvi soovitamist. Midagi ei tellita ilma teie heakskiiduta.",
+          "signInLabel": "Jätkamiseks logi sisse",
+          "signInNotice": "Logige sisse, et viia see toidupoe püüdis privaatsesse KAI seanssi ja jätkata täiendamise töövoogu. Midagi ei tellita ilma teie sõnaselge heakskiiduta.",
+          "expiryCopy": "Taotlemata eelvaated aeguvad ühe tunni pärast",
+          "errorCopy": "KAI ei suutnud sellelt pildilt toidupoe nimekirja lugeda. Proovi selgemat külmiku, sahvri, kviitungi või ostunimekirja fotot."
+        }
+      },
+      "product": {
+        "kicker": "Teie toidupoe + retsepti + kalorite Kaksik",
+        "heading": "Mida me saame küpsetada—ja mida veel on vaja osta?",
+        "body": "KAI ühendab skaneerimise, retseptid, tooteotsingu, kalorid ja ostukorvi, nii et iga toidukord algab sellega, mis sul juba on.",
+        "capabilityLabels": [
+          "Tooteotsing",
+          "Kaloriplaan",
+          "Retseptiideed",
+          "Pilt nimekirjaks",
+          "Hääleabi",
+          "Pakkumiste sobitamine"
+        ],
+        "cards": [
+          {
+            "title": "Reaalajas ostukorv",
+            "body": "Võrdle päris tooteid, koguseid ja hindu ühes ülevaatatavas ostukorvis.",
+            "metric": "Kulud + kalorid koos"
+          },
+          {
+            "title": "Retseptid teie skaneeringust",
+            "body": "Vaata küpsetatavaid retsepte, mis on järjestatud selle järgi, mis külmikus juba on ja mis puudub.",
+            "metric": "Kõigepealt küpseta, siis osta"
+          },
+          {
+            "title": "Pakkumiste radar",
+            "body": "Võrdle kasulikke sobivusi, säilitades retseptide katvuse ja leibkonna eesmärgid.",
+            "metric": "Päris toidupoe allikad"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "KAI teie taskus",
+        "heading": "Külmikust retseptini ostukorvini,",
+        "accentHeading": "Ükskõik kus sa oled.",
+        "items": [
+          {
+            "label": "Koosta ostukorv",
+            "title": "Reaalajas ostukorv koos teie kulude ja kaloriplaaniga.",
+            "body": "Küsi artiklit, võrdle päris sobivust ja vaata, kuidas hind, kalorid ja kogus nädalat muudavad."
+          },
+          {
+            "label": "Skaneeri külmik",
+            "title": "Muuda külmiku või kviitungi foto retseptideks, mida saad küpsetada.",
+            "body": "KAI tuvastab, mis on käepärast, hindab kaloreid ja soovitab retsepte enne puuduvate koostisosade nimekirja koostamist."
+          },
+          {
+            "label": "Vali retsept",
+            "title": "Vali toidukord ja osta ainult see, mis puudub.",
+            "body": "Võrdle küpsetusaega, kaloreid portsjoni kohta, koostisosade katvust ja väikest toidupoe lünka iga retsepti jaoks."
+          },
+          {
+            "label": "Räägi KAI-ga",
+            "title": "Räägi poest ja oma nädala eesmärgist.",
+            "body": "Ütle, mis sai otsa või mida sa küpsetada tahad. KAI hoiab ostukorvi, kulud ja kalorilünga kontekstis."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "Nädala poeost, ümber ehitatud",
+        "heading": "Halda toiduaineid, retsepte, kulusid ja kaloreid selgelt",
+        "items": [
+          {
+            "number": "01",
+            "title": "Retsepti, toote ja kalorite avastus",
+            "body": "Skaneeri, mis sul on, või kirjelda soovitud toidukorda. KAI näitab küpsetatavaid retsepte, kaloreid portsjoni kohta ja täpse toidupoe lünga iga valiku jaoks.",
+            "tags": [
+              "Külmiku skaneerimine",
+              "Retseptid",
+              "Kalorid",
+              "Puuduvad artikli"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "Ostukorv, mis on koostatud teie valitud toidukordadest",
+            "body": "Vali retsept ja KAI eemaldab koostisosad, mis sul juba on. Ostukorvi lähevad ainult puuduvad tooted, kus koos uuendatakse leibkonna kulud ja kalorid.",
+            "tags": [
+              "Retsepti katvus",
+              "Ainult puuduv",
+              "Nädala kcal"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "Skaneeri üks kord. Küpseta sellest, mis on olemas.",
+            "body": "KAI muudab külmiku, sahvri või kviitungi skaneerimise kolmeks praktiliseks retseptiks. Võrdle aega ja kaloreid, vali üks ja vaata üle ainult selle puuduvad koostisosad.",
+            "tags": [
+              "3 retsepti valikut",
+              "Küpsetusaeg",
+              "Kalorid / portsjon"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "Kuidas tundub KAI-ga küpsetamine ja ostlemine",
+        "heading": "Väiksed selguse hetked külmikust õhtusöögini",
+        "testimonials": [
+          {
+            "quote": "KAI muudab selle, mis meil juba külmikus on, õhtusöögi ideedeks ja näitab seejärel kulud ja pere kalorid enne kui ma valin.",
+            "name": "Mila",
+            "meta": "Hõivatud lapsevanem"
+          },
+          {
+            "quote": "Küsin juustu pakkumisi, võrdlen päris variante ja lisan täpselt selle, mida tahan. Ei mingit vahelehte vahetamist.",
+            "name": "Noa",
+            "meta": "Nädalaostleja"
+          },
+          {
+            "quote": "Kviitungi skaneerimine andis mulle kolm retsepti, kalorid portsjoni kohta ja ainult koostisosad, mida ma veel ostma pidin.",
+            "name": "Sofia",
+            "meta": "Kodusüpsetaja"
+          },
+          {
+            "quote": "Mulle meeldib, et KAI koostab kõigepealt ostukorvi ja küsib planeerimisküsimusi ainult siis, kui need olulised on.",
+            "name": "Lukas",
+            "meta": "Üliõpilane"
+          },
+          {
+            "quote": "Hää on täiuslik, kui mu käed on köögis hõivatud. Ma lihtsalt ütlen KAI-le, mis otsa sai.",
+            "name": "Ema",
+            "meta": "Toiduvalmistamise fänn"
+          },
+          {
+            "quote": "Kõik jääb ülevaatavaks. Ma saan koguseid muuta ja näen, kuidas kulud ja kalorite kogusumm koos minuga liiguvad.",
+            "name": "Dan",
+            "meta": "Tark ostja"
+          }
+        ],
+        "articles": [
+          {
+            "category": "Nädala rutiin",
+            "title": "Seitsme minuti poeost ja toiduplaan",
+            "body": "Üksikostleja muutis hajusa põhitoitude nimekirja ostukorviks, kolmeks küpsetatavaks õhtusöögiks ja 10 850 planeeritud kaloriks."
+          },
+          {
+            "category": "Külmikust retseptini",
+            "title": "Külmiku fotost tänase õhtusöögini",
+            "body": "KAI tundis koostisosad ära, soovitas kolm retsepti ja eraldas selle, mis juba oli, selle, mida veel ostma pidi."
+          },
+          {
+            "category": "Tark retseptiotsing",
+            "title": "Tark otsing, mis näeb tervet nädalat",
+            "body": "Otsing kaalus hinda, kaloreid, retsepti katvust ja valgulünka, kaotamata ostu lõnga."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "Üks koht, palju sisenemise viise",
+        "heading": "Iga sisend muutub retseptideks, üheks ostukorviks ja üheks kaloriplaaniks",
+        "body": "Foto, häälesalvestus, kviitung või nimekiri toidavad sama vaadet all: olemasolevad koostisosad, retseptid, mida saad küpsetada, puuduvad tooted, nädala kulud ja leibkonna kalorid.",
+        "capabilities": [
+          "Foto",
+          "Hää",
+          "Pakkumised",
+          "Kviitung",
+          "Nimekiri",
+          "Tarne",
+          "Kalorid",
+          "Leibkond",
+          "Retseptid"
+        ]
+      },
+      "closing": {
+        "kicker": "Teie järgmine külmikust õhtusöögini plaan",
+        "heading": "Alusta sellega, mis sul on. Osta ainult seda, mis puudub.",
+        "body": "Skaneeri külmik või kviitung. KAI soovitab küpsetatavaid retsepte, näitab kaloreid portsjoni kohta ja muudab puuduvad koostisosad ülevaatavaks ostukorviks.",
+        "ctaLabel": "Skaneeri, et leida retsepte"
+      },
+      "footer": {
+        "tagline": "Teie toidupoe Kaksik külmikust ostukorvini. Leia retsepte selle, mis sul on, näe kaloreid ja osta ainult seda, mis puudub.",
+        "groups": [
+          {
+            "label": "Toode",
+            "links": [
+              {
+                "label": "Toidupoe demo",
+                "target": "product"
+              },
+              {
+                "label": "Kuidas see tōōtab",
+                "target": "features"
+              },
+              {
+                "label": "Lood",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "KAI",
+            "links": [
+              {
+                "label": "KAI-st",
+                "target": "about"
+              },
+              {
+                "label": "Kontakt",
+                "target": "contact"
+              },
+              {
+                "label": "Tagasi üles",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 KAI · Toidupoe Kaksik",
+        "closingStatement": "Head valikud. Suurepärane nädal."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

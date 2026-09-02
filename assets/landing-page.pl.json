@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "language": "pl",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Produkt",
+          "target": "product"
+        },
+        {
+          "label": "Mobile",
+          "target": "mobile"
+        },
+        {
+          "label": "Historie",
+          "target": "stories"
+        },
+        {
+          "label": "Funkcje",
+          "target": "features"
+        },
+        {
+          "label": "O nas",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "Poznaj KAI"
+    },
+    "badge": "Twój sklep, przepisy i plan kalorii — połączone",
+    "headline": "Zakupy spożywcze znów mogą być proste",
+    "headlineAccent": "znów mogą być proste",
+    "subheadline": "Zeskanuj lodówkę lub paragon. KAI zamienia to, co już masz, w przepisy, liczy kalorie i zamawia tylko to, czego brakuje do każdego posiłku.",
+    "ctaLabel": "Porozmawiaj z KAI",
+    "secondaryCtaLabel": "Od skanu do przepisów",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "Prawdziwe produkty i ceny",
+      "Przejrzyj każdy wybór",
+      "Kalorie planowane według gospodarstwa domowego",
+      "Przepisy z tego, co masz"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "KAI, Twój Grocery Twin, w słonecznej kuchni otoczonej świeżymi produktami i tygodniowym planem posiłków"
+    },
+    "contact": {
+      "heading": "Zacznij od tego, co masz",
+      "body": "Zeskanuj lodówkę lub paragon i pozwól KAI przygotować listę braków do sprawdzenia."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Strona główna",
+        "subtitle": "Twój Grocery Twin",
+        "secondaryEditionLabel": "Sprzedaż",
+        "navItems": [
+          {
+            "label": "Produkt",
+            "target": "product"
+          },
+          {
+            "label": "Mobile",
+            "target": "mobile"
+          },
+          {
+            "label": "Historie",
+            "target": "stories"
+          },
+          {
+            "label": "Funkcje",
+            "target": "features"
+          },
+          {
+            "label": "O nas",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "Poznaj KAI",
+        "primaryCtaLabel": "Utwórz koszyk"
+      },
+      "hero": {
+        "ratingLabel": "Twój sklep, przepisy i plan kalorii — połączone",
+        "heading": "Zakupy spożywcze znów mogą być proste",
+        "body": "Zeskanuj lodówkę lub paragon. KAI zamienia to, co już masz, w przepisy, liczy kalorie i zamawia tylko to, czego brakuje do każdego posiłku.",
+        "primaryCtaLabel": "Porozmawiaj z KAI",
+        "secondaryCtaLabel": "Od skanu do przepisów",
+        "trustItems": [
+          "Prawdziwe produkty i ceny",
+          "Przejrzyj każdy wybór",
+          "Kalorie planowane według gospodarstwa domowego",
+          "Przepisy z tego, co masz"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "KAI, Twoja pełna postać Grocery Twin",
+        "chat": {
+          "statusLabel": "Online",
+          "subtitle": "Asystent zakupów od lodówki do przepisu",
+          "openingMessage": "Cześć, jestem KAI. Pokaż mi lodówkę, spiżarnię lub ostatni paragon. Zaproponuję przepisy z tego, co masz, i pokażę wydatki, kalorie oraz brakujące składniki.",
+          "visitorMessage": "Zeskanuj moją lodówkę i pokaż, co mogę dziś ugotować.",
+          "assistantMessage": "Zamienię to, co już jest, w opcje przepisów, pokażę kalorie na porcję i zamówię tylko brakujące składniki.",
+          "inputPlaceholder": "Zapytaj o zakupy, przepis lub sprawdzenie kalorii…",
+          "suggestions": [
+            "Oferty na mleko owsiane",
+            "Zbilansuj mój tydzień",
+            "Gotuj z mojej lodówki"
+          ],
+          "demoNote": "Poglądowe demo zakupów, przepisów i żywienia · Sprawdź składniki i potrzeby dietetyczne",
+          "sampleProduct": {
+            "badge": "Znaleziono ofertę · Pantry+",
+            "name": "Oatly Barista Edition",
+            "detail": "1 L · 590 kcal · 20% taniej",
+            "price": "€2,39",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Wybierz zdjęcie lodówki, spiżarni, paragonu lub listy zakupów",
+          "uploadHint": "JPEG, PNG, WebP lub HEIC · do 6 zdjęć, każde do 10 MB",
+          "analyzingLabel": "KAI odczytuje widoczne produkty…",
+          "inventoryHeading": "Sprawdź odczytaną listę",
+          "inventoryBody": "Popraw ilości, usuń błędy lub dodaj to, co KAI pominął.",
+          "itemNameLabel": "Pozycja",
+          "quantityLabel": "Ilość",
+          "unitLabel": "Jednostka",
+          "addItemLabel": "Dodaj pozycję",
+          "removeItemLabel": "Usuń",
+          "chatLabel": "Popraw przez czat",
+          "voiceLabel": "Popraw głosowo · 5 min",
+          "reviewLabel": "Sprawdź stan",
+          "editLabel": "Edytuj stan",
+          "confirmationHeading": "Stan gotowy",
+          "confirmationBody": "KAI potwierdzi tę listę przed zaproponowaniem koszyka. Nic nie zostanie zamówione bez Twojej zgody.",
+          "signInLabel": "Zaloguj się, aby kontynuować",
+          "signInNotice": "Zaloguj się, aby przenieść tę listę zakupów do prywatnej sesji KAI i kontynuować proces uzupełniania. Nic nie zostanie zamówione bez Twojej wyraźnej zgody.",
+          "expiryCopy": "Niezarejestrowane podglądy wygasają po godzinie",
+          "errorCopy": "KAI nie mógł odczytać listy zakupów z tego obrazu. Spróbuj wyraźniejszego zdjęcia lodówki, spiżarni, paragonu lub listy zakupów."
+        }
+      },
+      "product": {
+        "kicker": "Twój bliźniak zakupów, przepisów i kalorii",
+        "heading": "Co możemy ugotować — a co jeszcze trzeba kupić?",
+        "body": "KAI łączy skan, przepisy, wyszukiwanie produktów, kalorie i koszyk, dzięki czemu każdy posiłek zaczyna się od tego, co już masz.",
+        "capabilityLabels": [
+          "Wyszukiwanie produktów",
+          "Plan kalorii",
+          "Pomysły na przepisy",
+          "Obraz do listy",
+          "Pomoc głosowa",
+          "Dopasowywanie ofert"
+        ],
+        "cards": [
+          {
+            "title": "Koszyk na żywo",
+            "body": "Porównuj prawdziwe produkty, ilości i ceny w jednym koszyku do sprawdzenia.",
+            "metric": "Wydatki i kalorie razem"
+          },
+          {
+            "title": "Przepisy z Twojego skanu",
+            "body": "Zobacz przepisy do ugotowania, uszeregowane według tego, co jest w lodówce i czego brakuje.",
+            "metric": "Najpierw gotuj, potem kupuj"
+          },
+          {
+            "title": "Radar ofert",
+            "body": "Porównuj przydatne oferty, zachowując pokrycie przepisów i cele gospodarstwa domowego.",
+            "metric": "Prawdziwe źródła zakupów"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "KAI w Twojej kieszeni",
+        "heading": "Od lodówki do przepisu do koszyka,",
+        "accentHeading": "Gdziekolwiek jesteś.",
+        "items": [
+          {
+            "label": "Zbuduj koszyk",
+            "title": "Koszyk na żywo z wydatkami i planem kalorii razem.",
+            "body": "Poproś o produkt, porównaj prawdziwe dopasowanie i zobacz, jak cena, kalorie i ilość zmieniają tydzień."
+          },
+          {
+            "label": "Zeskanuj lodówkę",
+            "title": "Zamień zdjęcie lodówki lub paragonu w przepisy, które możesz ugotować.",
+            "body": "KAI rozpoznaje to, co masz, szacuje kalorie i sugeruje przepisy przed sporządzeniem listy brakujących składników."
+          },
+          {
+            "label": "Wybierz przepis",
+            "title": "Wybierz danie, a potem kup tylko to, czego brakuje.",
+            "body": "Porównaj czas gotowania, kalorie na porcję, pokrycie składnikami i małą listę braków dla każdego przepisu."
+          },
+          {
+            "label": "Porozmawiaj z KAI",
+            "title": "Porozmawiaj o zakupach i swoim tygodniowym celu.",
+            "body": "Powiedz, co się skończyło lub co chcesz ugotować. KAI utrzymuje kontekst koszyka, wydatków i różnicy kalorii."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "Tygodniowe zakupy, od nowa",
+        "heading": "Zarządzaj zakupami, przepisami, wydatkami i kaloriami z przejrzystością",
+        "items": [
+          {
+            "number": "01",
+            "title": "Odkrywanie przepisów, produktów i kalorii",
+            "body": "Zeskanuj to, co masz, lub opisz posiłek, który chcesz. KAI pokaże przepisy do ugotowania, kalorie na porcję i dokładną listę braków dla każdej opcji.",
+            "tags": [
+              "Skan lodówki",
+              "Przepisy",
+              "Kalorie",
+              "Brakujące pozycje"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "Koszyk zbudowany z wybranych przez Ciebie posiłków",
+            "body": "Wybierz przepis, a KAI usunie składniki, które już masz. Tylko brakujące produkty trafią do koszyka, a wydatki i kalorie dla gospodarstwa aktualizują się razem.",
+            "tags": [
+              "Pokrycie przepisów",
+              "Tylko brakujące",
+              "Tygodniowe kcal"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "Zeskanuj raz. Gotuj z tego, co jest.",
+            "body": "KAI zamienia skan lodówki, spiżarni lub paragonu w trzy praktyczne przepisy. Porównaj czas i kalorie, wybierz jeden, a potem sprawdź tylko brakujące składniki.",
+            "tags": [
+              "3 opcje przepisów",
+              "Czas gotowania",
+              "Kalorie / porcję"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "Jak to jest gotować i robić zakupy z KAI",
+        "heading": "Małe chwile jasności od lodówki do obiadu",
+        "testimonials": [
+          {
+            "quote": "KAI zamienia to, co już jest w naszej lodówce, w pomysły na obiad, a potem pokazuje koszt i kalorie dla rodziny, zanim wybiorę.",
+            "name": "Mila",
+            "meta": "Zajęty rodzic"
+          },
+          {
+            "quote": "Pytam o oferty sera, porównuję prawdziwe opcje i dodaję dokładnie tę, którą chcę. Bez przeskakiwania między kartami.",
+            "name": "Noah",
+            "meta": "Tygodniowy kupujący"
+          },
+          {
+            "quote": "Skan paragonu dał mi trzy przepisy, kalorie na porcję i tylko te składniki, które musiałam jeszcze kupić.",
+            "name": "Sofia",
+            "meta": "Domowa kucharka"
+          },
+          {
+            "quote": "Podoba mi się, że KAI najpierw buduje koszyk, a pytania o planowanie zadaje tylko wtedy, gdy to ważne.",
+            "name": "Lucas",
+            "meta": "Student"
+          },
+          {
+            "quote": "Głos jest idealny, gdy moje ręce są zajęte w kuchni. Po prostu mówię KAI, co się skończyło.",
+            "name": "Emma",
+            "meta": "Fanatyk przygotowywania posiłków"
+          },
+          {
+            "quote": "Wszystko pozostaje do sprawdzenia. Mogę zmieniać ilości i widzieć, jak wydatki i suma kalorii zmieniają się razem ze mną.",
+            "name": "Daan",
+            "meta": "Sprytny kupujący"
+          }
+        ],
+        "articles": [
+          {
+            "category": "Cotygodniowa rutyna",
+            "title": "Siedmiominutowe zakupy i plan posiłków",
+            "body": "Samotny kupujący zamienił rozrzuconą listę podstawowych produktów w koszyk, trzy gotowe obiady i 10 850 zaplanowanych kalorii."
+          },
+          {
+            "category": "Od lodówki do przepisu",
+            "title": "Od zdjęcia lodówki do dzisiejszej kolacji",
+            "body": "KAI rozpoznał składniki, zasugerował trzy przepisy i oddzielił to, co już było, od tego, co trzeba kupić."
+          },
+          {
+            "category": "Inteligentne wyszukiwanie przepisów",
+            "title": "Inteligentne wyszukiwanie, które widzi cały tydzień",
+            "body": "Wyszukiwanie, które uwzględnia cenę, kalorie, pokrycie przepisów i lukę białkową, nie tracąc wątku zakupów."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "Jedno miejsce, wiele wejść",
+        "heading": "Każde wejście staje się przepisami, jednym koszykiem i jednym planem kalorii",
+        "body": "Zdjęcie, notatka głosowa, paragon lub lista zasila to samo widok od spodu: składniki pod ręką, przepisy, które możesz ugotować, produkty, których brakuje, tygodniowe wydatki i kalorie dla gospodarstwa.",
+        "capabilities": [
+          "Zdjęcie",
+          "Głos",
+          "Oferty",
+          "Paragon",
+          "Lista",
+          "Dostawa",
+          "Kalorie",
+          "Gospodarstwo domowe",
+          "Przepisy"
+        ]
+      },
+      "closing": {
+        "kicker": "Twój następny plan od lodówki do obiadu",
+        "heading": "Zacznij od tego, co masz. Kupuj tylko to, czego brakuje.",
+        "body": "Zeskanuj lodówkę lub paragon. KAI zasugeruje przepisy do ugotowania, pokaże kalorie na porcję i zamieni brakujące składniki w koszyk do sprawdzenia.",
+        "ctaLabel": "Zeskanuj, aby znaleźć przepisy"
+      },
+      "footer": {
+        "tagline": "Twój Grocery Twin od lodówki do koszyka. Znajduj przepisy z tego, co masz, sprawdź kalorie i kupuj tylko to, czego brakuje.",
+        "groups": [
+          {
+            "label": "Produkt",
+            "links": [
+              {
+                "label": "Demo zakupów",
+                "target": "product"
+              },
+              {
+                "label": "Jak to działa",
+                "target": "features"
+              },
+              {
+                "label": "Historie",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "KAI",
+            "links": [
+              {
+                "label": "O KAI",
+                "target": "about"
+              },
+              {
+                "label": "Kontakt",
+                "target": "contact"
+              },
+              {
+                "label": "Powrót do góry",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 KAI · Grocery Twin",
+        "closingStatement": "Dobre wybory. Wspaniały tydzień."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

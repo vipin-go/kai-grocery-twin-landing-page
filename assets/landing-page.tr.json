@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "language": "tr",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Ürün",
+          "target": "product"
+        },
+        {
+          "label": "Mobil",
+          "target": "mobile"
+        },
+        {
+          "label": "Hikayeler",
+          "target": "stories"
+        },
+        {
+          "label": "Özellikler",
+          "target": "features"
+        },
+        {
+          "label": "Hakkında",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "KAI ile Tanışın"
+    },
+    "badge": "Mağazanız, tarifleriniz ve kalori planınız — bağlantılı",
+    "headline": "Market alışverişi yine kolay hissettirsin",
+    "headlineAccent": "yine kolay hissettirsin",
+    "subheadline": "Buzdolabını veya fişi tarayın. KAI, elinizde olan malzemeleri tariflere dönüştürür, kalorileri hesaplar ve her öğün için yalnızca eksik olanları satın alır.",
+    "ctaLabel": "KAI ile konuşun",
+    "secondaryCtaLabel": "Tareden tariflere",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "Gerçek ürünler ve fiyatlar",
+      "Her seçimi inceleyin",
+      "Hane halkına göre planlanan kaloriler",
+      "Elinizdeki malzemelerden tarifler"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "Güneşli bir mutfakta, taze ürünler ve haftalık yemek planıyla çevrili Grocery Twin'ınız KAI"
+    },
+    "contact": {
+      "heading": "Elinizdekinden başlayın",
+      "body": "Buzdolabını veya fişi tarayın ve KAI'nın eksik market listesini incelemeniz için hazırlamasına izin verin."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Ana sayfa",
+        "subtitle": "Grocery Twin'ınız",
+        "secondaryEditionLabel": "Perakende",
+        "navItems": [
+          {
+            "label": "Ürün",
+            "target": "product"
+          },
+          {
+            "label": "Mobil",
+            "target": "mobile"
+          },
+          {
+            "label": "Hikayeler",
+            "target": "stories"
+          },
+          {
+            "label": "Özellikler",
+            "target": "features"
+          },
+          {
+            "label": "Hakkında",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "KAI ile Tanışın",
+        "primaryCtaLabel": "Sepet oluştur"
+      },
+      "hero": {
+        "ratingLabel": "Mağazanız, tarifleriniz ve kalori planınız — bağlantılı",
+        "heading": "Market alışverişi yine kolay hissettirsin",
+        "body": "Buzdolabını veya fişi tarayın. KAI, elinizde olan malzemeleri tariflere dönüştürür, kalorileri hesaplar ve her öğün için yalnızca eksik olanları satın alır.",
+        "primaryCtaLabel": "KAI ile konuşun",
+        "secondaryCtaLabel": "Tareden tariflere",
+        "trustItems": [
+          "Gerçek ürünler ve fiyatlar",
+          "Her seçimi inceleyin",
+          "Hane halkına göre planlanan kaloriler",
+          "Elinizdeki malzemelerden tarifler"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "KAI, tam vücut Grocery Twin karakteriniz",
+        "chat": {
+          "statusLabel": "Çevrimiçi",
+          "subtitle": "Buzdolabından tarife market asistanı",
+          "openingMessage": "Merhaba, ben KAI. Bana buzdolabını, kileri veya son fişi gösterin. Elinizdeki malzemelerden tarifler önereceğim ve harcama, kalori ve eksik malzemeleri görünür tutacağım.",
+          "visitorMessage": "Buzdolabımı tarayın ve bu akşam ne pişirebileceğimi gösterin.",
+          "assistantMessage": "Elinizde olanı tarif seçeneklerine dönüştüreceğim, porsiyon başına kalorileri göstereceğim ve yalnızca eksik malzemeleri satın alacağım.",
+          "inputPlaceholder": "Market alışverişi, tarif veya kalori kontrolü isteyin…",
+          "suggestions": [
+            "Yulaf sütü fırsatları",
+            "Haftamı dengeleyin",
+            "Buzdolabımdakilerle pişir"
+          ],
+          "demoNote": "Örnek market, tarif ve beslenme demosu · Malzemeleri ve diyet ihtiyaçlarını kontrol edin",
+          "sampleProduct": {
+            "badge": "Fırsat bulundu · Pantry+",
+            "name": "Oatly Barista Edition",
+            "detail": "1 L · 590 kcal · %20 indirim",
+            "price": "€2,39",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Bir buzdolabı, kiler, fiş veya alışveriş listesi görseli seçin",
+          "uploadHint": "JPEG, PNG, WebP veya HEIC · en fazla 6 görsel ve her biri 10 MB'a kadar",
+          "analyzingLabel": "KAI görünen market ürünlerini okuyor…",
+          "inventoryHeading": "Çıkarılan envanteri inceleyin",
+          "inventoryBody": "Miktarları düzeltin, hataları kaldırın veya KAI'nın kaçırdıklarını ekleyin.",
+          "itemNameLabel": "Ürün",
+          "quantityLabel": "Miktar",
+          "unitLabel": "Birim",
+          "addItemLabel": "Ürün ekle",
+          "removeItemLabel": "Kaldır",
+          "chatLabel": "Sohbetle düzelt",
+          "voiceLabel": "Sesle düzelt · 5 dk",
+          "reviewLabel": "Envanteri incele",
+          "editLabel": "Envanteri düzenle",
+          "confirmationHeading": "Envanter hazır",
+          "confirmationBody": "KAI, bir sepet önermeden önce bu listeyi yeniden onaylayacak. Sizin onayınız olmadan hiçbir şey sipariş edilmez.",
+          "signInLabel": "Devam etmek için giriş yapın",
+          "signInNotice": "Bu market kaydını özel bir KAI oturumuna taşımak ve stok yenileme iş akışına devam etmek için giriş yapın. Açık onayınız olmadan hiçbir şey sipariş edilmez.",
+          "expiryCopy": "Sahipsiz önizlemeler bir saat sonra sona erer",
+          "errorCopy": "KAI bu görselden bir market listesi okuyamadı. Daha net bir buzdolabı, kiler, fiş veya alışveriş listesi fotoğrafı deneyin."
+        }
+      },
+      "product": {
+        "kicker": "Market + Tarif + Kalori Twin'ınız",
+        "heading": "Ne pişirebiliriz — ve neyi hâlâ almamız gerekir?",
+        "body": "KAI; tarama, tarifler, ürün arama, kaloriler ve sepeti birbirine bağlayarak her öğünün elinizdeki malzemelerle başlamasını sağlar.",
+        "capabilityLabels": [
+          "Ürün arama",
+          "Kalori planı",
+          "Tarif fikirleri",
+          "Görselden listeye",
+          "Sesli yardım",
+          "Fırsat eşleştirme"
+        ],
+        "cards": [
+          {
+            "title": "Canlı sepet",
+            "body": "Gerçek ürünleri, miktarları ve fiyatları incelenebilir tek bir sepette karşılaştırın.",
+            "metric": "Harcama + kaloriler birlikte"
+          },
+          {
+            "title": "Taramanızdan tarifler",
+            "body": "Buzdolabında olanlara ve eksik olanlara göre sıralanmış pişirilebilir tarifleri görün.",
+            "metric": "Önce pişir, sonra satın al"
+          },
+          {
+            "title": "Fırsat radarı",
+            "body": "Tarif kapsamını ve hane hedeflerini koruyarak faydalı eşleşmeleri karşılaştırın.",
+            "metric": "Gerçek market kaynakları"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "KAI cebinizde",
+        "heading": "Buzdolabından tarife, oradan sepete,",
+        "accentHeading": "Nerede olursanız olun.",
+        "items": [
+          {
+            "label": "Sepet oluşturun",
+            "title": "Harcamanız ve kalori planınız bir arada olan canlı bir sepet.",
+            "body": "Bir ürün isteyin, gerçek bir eşleşmeyi karşılaştırın ve fiyatın, kalorilerin ve miktarın haftayı nasıl değiştirdiğini görün."
+          },
+          {
+            "label": "Buzdolabını tarayın",
+            "title": "Bir buzdolabı veya fiş fotoğrafını pişirebileceğiniz tariflere dönüştürün.",
+            "body": "KAI, elinizde olanları tanımlar, kalorileri tahmin eder ve eksik malzeme listesini oluşturmadan önce tarifler önerir."
+          },
+          {
+            "label": "Bir tarif seçin",
+            "title": "Bir yemek seçin, ardından yalnızca eksik olanı satın alın.",
+            "body": "Pişirme süresini, porsiyon başına kalorileri, malzeme kapsamını ve her tarif için küçük market eksiklerini karşılaştırın."
+          },
+          {
+            "label": "KAI ile konuşun",
+            "title": "Alışverişinizi ve haftalık hedefinizi konuşun.",
+            "body": "Ne bittiğini ya da ne pişirmek istediğinizi söyleyin. KAI; sepeti, harcamayı ve kalori farkını bağlamda tutar."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "Haftalık market, yeniden inşa edildi",
+        "heading": "Market, tarif, harcama ve kalorileri açık bir şekilde yönetin",
+        "items": [
+          {
+            "number": "01",
+            "title": "Tarif, ürün ve kalori keşfi",
+            "body": "Elinizdekini tarayın veya istediğiniz yemeği tarif edin. KAI; pişirilebilir tarifleri, porsiyon başına kalorileri ve her seçenek için tam eksik market listesini gösterir.",
+            "tags": [
+              "Buzdolabı taraması",
+              "Tarifler",
+              "Kaloriler",
+              "Eksik ürünler"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "Seçtiğiniz yemeklerden oluşturulmuş bir sepet",
+            "body": "Bir tarif seçin, KAI elinizde olan malzemeleri çıkarır. Sepete yalnızca eksik ürünler girer; harcama ve hane kalorileri birlikte güncellenir.",
+            "tags": [
+              "Tarif kapsamı",
+              "Yalnızca eksik",
+              "Haftalık kcal"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "Bir kez tarayın. Elinizdekinden pişirin.",
+            "body": "KAI, bir buzdolabı, kiler veya fiş taramasını üç pratik tarife dönüştürür. Süreyi ve kalorileri karşılaştırın, birini seçin, ardından yalnızca eksik malzemelerini inceleyin.",
+            "tags": [
+              "3 tarif seçeneği",
+              "Pişirme süresi",
+              "Porsiyon başına kalori"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "KAI ile pişirmek ve alışveriş yapmak nasıl hissettiriyor",
+        "heading": "Buzdolabından akşam yemeğine kadar küçük netlik anları",
+        "testimonials": [
+          {
+            "quote": "KAI, buzdolabımızda zaten olanları akşam yemeği fikirlerine dönüştürür ve ben seçmeden önce maliyeti ile aile kalorilerini gösterir.",
+            "name": "Mila",
+            "meta": "Yoğun ebeveyn"
+          },
+          {
+            "quote": "Peynir fırsatlarını soruyorum, gerçek seçenekleri karşılaştırıyorum ve istediğim tam ürünü ekliyorum. Sekme atlama yok.",
+            "name": "Noah",
+            "meta": "Haftalık alışverişçi"
+          },
+          {
+            "quote": "Fiş taraması bana üç tarif, porsiyon başına kalorileri ve hâlâ almam gereken malzemeleri verdi.",
+            "name": "Sofia",
+            "meta": "Ev aşçısı"
+          },
+          {
+            "quote": "KAI'nın önce sepeti oluşturmasını ve planlama sorularını yalnızca önemli olduklarında sormasını seviyorum.",
+            "name": "Lucas",
+            "meta": "Öğrenci"
+          },
+          {
+            "quote": "Mutfakta ellerim doluyken ses mükemmel oluyor. KAI'ya neyin bittiğini söylüyorum.",
+            "name": "Emma",
+            "meta": "Yemek hazırlığı tutkunu"
+          },
+          {
+            "quote": "Her şey incelenebilir kalıyor. Miktarları değiştirebilir ve hem harcamaların hem de toplam kalorilerin benimle birlikte hareket ettiğini görebilirim.",
+            "name": "Daan",
+            "meta": "Akıllı alışverişçi"
+          }
+        ],
+        "articles": [
+          {
+            "category": "Haftalık rutin",
+            "title": "Yedi dakikalık market ve yemek planı",
+            "body": "Yalnız bir alışverişçi, dağınık temel gıda listesini bir sepete, üç pişirilebilir akşam yemeğine ve 10.850 planlanmış kalorilik öğüne dönüştürdü."
+          },
+          {
+            "category": "Buzdolabından tarife",
+            "title": "Buzdolabı fotoğrafından bu akşamın yemeğine",
+            "body": "KAI malzemeleri tanıdı, üç tarif önerdi ve elde olanları hâlâ alınması gerekenlerden ayırdı."
+          },
+          {
+            "category": "Akıllı tarif araması",
+            "title": "Tüm haftayı gören akıllı arama",
+            "body": "Alışverişin akışını kaybetmeden fiyat, kalori, tarif kapsamı ve protein açığını dengeleyen bir arama."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "Tek yer, birçok giriş yolu",
+        "heading": "Her girdi tariflere, tek bir sepete ve tek bir kalori planına dönüşür",
+        "body": "Bir fotoğraf, sesli not, fiş veya liste alttaki aynı görünümü besler: eldeki malzemeler, pişirebileceğiniz tarifler, hâlâ eksik ürünler, haftalık harcama ve hane kalorileri.",
+        "capabilities": [
+          "Fotoğraf",
+          "Ses",
+          "Fırsatlar",
+          "Fiş",
+          "Liste",
+          "Teslimat",
+          "Kaloriler",
+          "Hane",
+          "Tarifler"
+        ]
+      },
+      "closing": {
+        "kicker": "Bir sonraki buzdolabından akşam yemeğine planınız",
+        "heading": "Elinizdekinden başlayın. Yalnızca eksik olanı satın alın.",
+        "body": "Buzdolabını veya fişi tarayın. KAI; pişirilebilir tarifler önerir, porsiyon başına kalorileri gösterir ve eksik malzemeleri incelenebilir bir sepete dönüştürür.",
+        "ctaLabel": "Tarif bulmak için tarayın"
+      },
+      "footer": {
+        "tagline": "Buzdolabından sepete Grocery Twin'ınız. Elinizdeki malzemelerden tarifler bulun, kalorileri görün ve yalnızca eksik olanı satın alın.",
+        "groups": [
+          {
+            "label": "Ürün",
+            "links": [
+              {
+                "label": "Market demosu",
+                "target": "product"
+              },
+              {
+                "label": "Nasıl çalışır",
+                "target": "features"
+              },
+              {
+                "label": "Hikayeler",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "KAI",
+            "links": [
+              {
+                "label": "KAI hakkında",
+                "target": "about"
+              },
+              {
+                "label": "İletişim",
+                "target": "contact"
+              },
+              {
+                "label": "Başa dön",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 KAI · Grocery Twin",
+        "closingStatement": "İyi seçimler. Harika bir hafta."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "language": "lt",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Produktas",
+          "target": "product"
+        },
+        {
+          "label": "Mobilus",
+          "target": "mobile"
+        },
+        {
+          "label": "Istorijos",
+          "target": "stories"
+        },
+        {
+          "label": "Funkcijos",
+          "target": "features"
+        },
+        {
+          "label": "Apie",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "Susipažinkite su Kai"
+    },
+    "badge": "Jūsų parduotuvė, receptai ir kalorijų planas – prijungtas",
+    "headline": "Apsipirkti bakalėjos parduotuvėse vėl jaustis lengvai",
+    "subheadline": "Nuskaitykite šaldytuvą arba kvitą. Kai tai, kas jau yra, paverčia receptais, skaičiuoja kalorijas ir apsiperka tik pagal tai, ko dar reikia kiekvienam patiekalui.",
+    "ctaLabel": "Pasikalbėk su Kai",
+    "secondaryCtaLabel": "Nuskaitykite receptus",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "Tikri produktai ir kainos",
+      "Peržiūrėkite kiekvieną pasirinkimą",
+      "Calories planned by household",
+      "Receptai iš to, ką turite"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "Kai, jūsų bakalėjos dvynys, saulės apšviestoje virtuvėje, apsuptoje šviežių produktų ir savaitės maitinimo plano"
+    },
+    "contact": {
+      "heading": "Pradėkite nuo to, ką turite",
+      "body": "Nuskaitykite šaldytuvą arba kvitą ir leiskite Kai paruošti bakalėjos tarpus peržiūrai."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Vidaus",
+        "subtitle": "Jūsų bakalėjos dvynys",
+        "secondaryEditionLabel": "Mažmeninė prekyba",
+        "navItems": [
+          {
+            "label": "Produktas",
+            "target": "product"
+          },
+          {
+            "label": "Mobilus",
+            "target": "mobile"
+          },
+          {
+            "label": "Istorijos",
+            "target": "stories"
+          },
+          {
+            "label": "Funkcijos",
+            "target": "features"
+          },
+          {
+            "label": "Apie",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "Susipažinkite su Kai",
+        "primaryCtaLabel": "Paleiskite vežimėlį"
+      },
+      "hero": {
+        "ratingLabel": "Jūsų parduotuvė, receptai ir kalorijų planas – prijungtas",
+        "heading": "Apsipirkti bakalėjos parduotuvėse vėl jaustis lengvai",
+        "body": "Nuskaitykite šaldytuvą arba kvitą. Kai tai, kas jau yra, paverčia receptais, skaičiuoja kalorijas ir apsiperka tik pagal tai, ko dar reikia kiekvienam patiekalui.",
+        "primaryCtaLabel": "Pasikalbėk su Kai",
+        "secondaryCtaLabel": "Nuskaitykite receptus",
+        "trustItems": [
+          "Tikri produktai ir kainos",
+          "Peržiūrėkite kiekvieną pasirinkimą",
+          "Calories planned by household",
+          "Receptai iš to, ką turite"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "Kai, jūsų viso kūno bakalėjos dvynių asmenybė",
+        "chat": {
+          "statusLabel": "Internete",
+          "subtitle": "Šaldytuvo iki recepto bakalėjos asistentas",
+          "openingMessage": "Sveiki, aš Kai. Parodykite man šaldytuvą, sandėliuką arba naujausią kvitą. Pasiūlysiu receptus iš to, ką turite, ir matysiu išlaidas, kalorijas ir trūkstamus ingredientus.",
+          "visitorMessage": "Nuskaitykite mano šaldytuvą ir parodykite, ką galiu gaminti šį vakarą.",
+          "assistantMessage": "Tai, kas jau yra, paversiu receptų variantais, parodysiu kalorijas vienoje porcijoje ir pirksiu tik tų ingredientų, kurių vis dar trūksta.",
+          "inputPlaceholder": "Paprašykite bakalėjos prekių, recepto ar kalorijų čekio…",
+          "suggestions": [
+            "Avižų pieno pasiūlymai",
+            "Subalansuokite mano savaitę",
+            "Virkite iš mano šaldytuvo"
+          ],
+          "demoNote": "Iliustracinė bakalėjos, receptų ir mitybos demonstracija · Patikrinkite ingredientus ir mitybos poreikius",
+          "sampleProduct": {
+            "badge": "Surastas pasiūlymas · Pantry+",
+            "name": "Oatly Barista leidimas",
+            "detail": "1 l · 590 kcal · 20% nuolaida",
+            "price": "2,39 €",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Pasirinkite šaldytuvo, sandėliuko, kvito arba pirkinių sąrašo vaizdą",
+          "uploadHint": "JPEG, PNG, WebP arba HEIC · Iki 6 vaizdų ir 10 MB kiekvienas",
+          "analyzingLabel": "Kai skaito matomus bakalėjos produktus…",
+          "inventoryHeading": "Peržiūrėkite ištrauktą inventorių",
+          "inventoryBody": "Teisingai nustatykite kiekius, pašalinkite klaidas arba pridėkite ką nors praleisto.",
+          "itemNameLabel": "Punktas",
+          "quantityLabel": "Kiekis",
+          "unitLabel": "Vienetas",
+          "addItemLabel": "Pridėti elementą",
+          "removeItemLabel": "Pašalinti",
+          "chatLabel": "Pataisykite per pokalbį",
+          "voiceLabel": "Teisingai balsu · 5 min",
+          "reviewLabel": "Peržiūrėkite inventorių",
+          "editLabel": "Redaguoti inventorių",
+          "confirmationHeading": "Inventorius paruoštas",
+          "confirmationBody": "Kai dar kartą patvirtins šį sąrašą prieš pasiūlydamas vežimėlį. Nieko neužsakoma be jūsų sutikimo.",
+          "signInLabel": "Prisijunkite norėdami tęsti",
+          "signInNotice": "Prisijunkite, kad perkeltumėte šį bakalėjos fiksavimą į privačią Kai sesiją ir tęstumėte atsargų papildymo eigą. Niekas nėra užsakytas be aiškaus jūsų sutikimo.",
+          "expiryCopy": "Nepateisintos peržiūros baigiasi po vienos valandos",
+          "errorCopy": "Kai negalėjo perskaityti bakalėjos prekių sąrašo iš to vaizdo. Išbandykite aiškesnę šaldytuvo, sandėliuko, kvito ar pirkinių sąrašo nuotrauką."
+        }
+      },
+      "product": {
+        "kicker": "Jūsų bakalėjos parduotuvė + receptas + kalorijų dvynys",
+        "heading": "Ką galime gaminti ir ką dar reikia apsipirkti?",
+        "body": "Kai sujungia nuskaitymą, receptus, produktų paiešką, kalorijas ir krepšelį, todėl kiekvienas valgis prasideda nuo to, ką jau turite.",
+        "capabilityLabels": [
+          "Produktų paieška",
+          "Kalorijų planas",
+          "Receptų idėjos",
+          "Vaizdas į sąrašą",
+          "Balso pagalba",
+          "Sandorio atitikimas"
+        ],
+        "cards": [
+          {
+            "title": "Gyvas krepšelis",
+            "body": "Palyginkite tikrus produktus, kiekius ir kainas viename peržiūrimame krepšelyje.",
+            "metric": "išleisti + kalorijų kartu"
+          },
+          {
+            "title": "Receptai iš jūsų nuskaitymo",
+            "body": "Žiūrėkite kepamus receptus, suskirstytus pagal tai, kas jau yra šaldytuve ir ko trūksta.",
+            "metric": "Pirmiausia gaminkite, antroje parduotuvėje"
+          },
+          {
+            "title": "Sandorio radaras",
+            "body": "Palyginkite naudingus atitikmenis išsaugodami receptų aprėptį ir namų ūkio tikslus.",
+            "metric": "Tikri bakalėjos šaltiniai"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "Kai kišenėje",
+        "heading": "Nuo šaldytuvo iki recepto iki krepšelio,",
+        "accentHeading": "Kad ir kur būtumėte.",
+        "items": [
+          {
+            "label": "Sukurkite vežimėlį",
+            "title": "Tiesioginis vežimėlis su jūsų išlaidų ir kalorijų planu kartu.",
+            "body": "Paprašykite prekės, palyginkite tikrą atitikmenį ir pažiūrėkite, kaip keičiasi kaina, kalorijos ir kiekis per savaitę."
+          },
+          {
+            "label": "Nuskaitykite šaldytuvą",
+            "title": "Paverskite šaldytuvą arba kvito nuotrauką receptais, kuriuos galite gaminti.",
+            "body": "Kai nustato, kas yra po ranka, įvertina kalorijas ir siūlo receptus prieš sudarydamas trūkstamų ingredientų sąrašą."
+          },
+          {
+            "label": "Pasirinkite receptą",
+            "title": "Pasirinkite patiekalą, tada pirkite tik tai, ko trūksta.",
+            "body": "Palyginkite gaminimo laiką, kalorijas porcijoje, ingredientų padengimą ir nedidelį kiekvieno recepto bakalėjos tarpą."
+          },
+          {
+            "label": "Pasikalbėk su Kai",
+            "title": "Pasikalbėkite per parduotuvę ir savo savaitės tikslą.",
+            "body": "Pasakykite, kas baigėsi arba ką norite gaminti. Kai išlaiko vežimėlį, išlaidas ir kalorijų skirtumą kontekste."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "savaitinė parduotuvė, atkurta",
+        "heading": "Aiškiai tvarkykite bakalėjos prekes, receptus, išlaidas ir kalorijas",
+        "items": [
+          {
+            "number": "01",
+            "title": "Receptas, produktas ir kalorijų atradimas",
+            "body": "Nuskaitykite, ką valgote, arba apibūdinkite norimą patiekalą. Kai rodo virtus receptus, kalorijas vienoje porcijoje ir tikslų bakalėjos prekių skirtumą kiekvienam variantui.",
+            "tags": [
+              "Šaldytuvo nuskaitymas",
+              "Receptai",
+              "Kalorijos",
+              "Trūksta daiktų"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "Vežimėlis, pagamintas iš jūsų pasirinktų patiekalų",
+            "body": "Pasirinkite receptą ir Kai pašalins jau po ranka esančius ingredientus. Į krepšelį patenka tik trūkstami produktai, kartu atnaujinamos išlaidos ir namų kalorijos.",
+            "tags": [
+              "Recepto aprėptis",
+              "trūksta tik",
+              "Savaitinė KCAL"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "Nuskaitykite vieną kartą. Virkite iš to, kas ten yra.",
+            "body": "Kai šaldytuvą, sandėliuką ar kvitų nuskaitymą paverčia trimis praktiniais receptais. Palyginkite laiką ir kalorijas, pasirinkite vieną, tada peržiūrėkite tik trūkstamus ingredientus.",
+            "tags": [
+              "3 receptų parinktys",
+              "Virimo laikas",
+              "kalorijos / porcija"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "Kaip atrodo maisto gaminimas ir apsipirkimas su Kai",
+        "heading": "Mažos šaldytuvo ir vakarienės akimirkos",
+        "testimonials": [
+          {
+            "quote": "Kai tai, kas jau yra mūsų šaldytuve, paverčia vakarienės idėjomis, tada parodo kainą ir šeimos kalorijas prieš man pasirinkus.",
+            "name": "Mila",
+            "meta": "Užimtas tėvas"
+          },
+          {
+            "quote": "Prašau sūrio pasiūlymų, palyginu realias galimybes ir pridedu būtent tai, ko noriu. Jokio skirtuko peršokimo.",
+            "name": "Nojus",
+            "meta": "Savaitinis pirkėjas"
+          },
+          {
+            "quote": "Kvito nuskaitymo metu man buvo pateikti trys receptai, kalorijos vienoje porcijoje ir tik ingredientai, kuriuos dar reikėjo nusipirkti.",
+            "name": "Sofija",
+            "meta": "Namų virėjas"
+          },
+          {
+            "quote": "Man patinka, kad Kai pirmiausia sukuria vežimėlį ir užduoda planavimo klausimus tik tada, kai jie svarbūs.",
+            "name": "Lukas",
+            "meta": "Studentas"
+          },
+          {
+            "quote": "Balsas tobulas, kai virtuvėje pilnos rankos. Tiesiog sakau Kai, kas baigėsi.",
+            "name": "Ema",
+            "meta": "Maisto ruošimo ventiliatorius"
+          },
+          {
+            "quote": "Viskas lieka peržiūrima. Galiu keisti kiekius ir matyti, kad kartu su manimi juda išlaidos ir kalorijų kiekis.",
+            "name": "Daanas",
+            "meta": "Išmanusis pirkėjas"
+          }
+        ],
+        "articles": [
+          {
+            "category": "Savaitės rutina",
+            "title": "Septynių minučių parduotuvė ir maitinimo planas",
+            "body": "Vienas pirkėjas išsklaidytą kabės sąrašą pavertė vežimėliu, trimis ruošiamomis vakarienėmis ir 10 850 planuojamų kalorijų."
+          },
+          {
+            "category": "Šaldytuvas pagal receptą",
+            "title": "Nuo šaldytuvo nuotraukos iki šio vakaro vakarienės",
+            "body": "Kai atpažino ingredientus, pasiūlė tris receptus ir atskyrė tai, kas jau buvo, nuo to, ką dar reikia pirkti."
+          },
+          {
+            "category": "Protingų receptų paieška",
+            "title": "Išmani paieška, kuri mato visą savaitę",
+            "body": "Paieška įvertino kainą, kalorijas, receptų aprėptį ir baltymų skirtumą, neprarandant parduotuvės gijos."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "Viena vieta, daug būdų",
+        "heading": "Kiekviena įvestis tampa receptais, vienas krepšelis ir vienas kalorijų planas",
+        "body": "Nuotrauka, balso užrašas, kvitas arba sąrašas pateikia tą patį vaizdą apačioje: ingredientai po ranka, receptai, kuriuos galite gaminti, vis dar trūksta produktų, savaitės išlaidos ir namų ūkio kalorijos.",
+        "capabilities": [
+          "Nuotrauka",
+          "Balsas",
+          "Pasiūlymai",
+          "Gavimas",
+          "Sąrašas",
+          "Pristatymas",
+          "Kalorijos",
+          "Namų",
+          "Receptai"
+        ]
+      },
+      "closing": {
+        "kicker": "Kitas jūsų planas nuo šaldytuvo iki vakarienės",
+        "heading": "Pradėkite nuo to, ką turite. Pirkite tik tai, ko trūksta.",
+        "body": "Nuskaitykite šaldytuvą arba kvitą. Kai siūlo virtus receptus, parodo kalorijas porcijoje ir paverčia trūkstamus ingredientus į krepšelį, kurį galite peržiūrėti.",
+        "ctaLabel": "Nuskaitykite, kad surastumėte receptus"
+      },
+      "footer": {
+        "tagline": "Jūsų bakalėjos dvynys nuo šaldytuvo iki krepšelio. Raskite receptų iš to, ką turite, peržiūrėkite kalorijas ir apsipirkite tik dėl to, ko trūksta.",
+        "groups": [
+          {
+            "label": "Produktas",
+            "links": [
+              {
+                "label": "Bakalėjos demonstracinė versija",
+                "target": "product"
+              },
+              {
+                "label": "Kaip tai veikia",
+                "target": "features"
+              },
+              {
+                "label": "Istorijos",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "Kai",
+            "links": [
+              {
+                "label": "Apie Kai",
+                "target": "about"
+              },
+              {
+                "label": "Susisiekti",
+                "target": "contact"
+              },
+              {
+                "label": "Atgal į viršų",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 Kai · Grocery Twin",
+        "closingStatement": "Geri pasirinkimai. Puiki savaitė."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

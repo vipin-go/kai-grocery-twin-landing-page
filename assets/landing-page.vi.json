@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "language": "vi",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Sản phẩm",
+          "target": "product"
+        },
+        {
+          "label": "Di động",
+          "target": "mobile"
+        },
+        {
+          "label": "Câu chuyện",
+          "target": "stories"
+        },
+        {
+          "label": "Tính năng",
+          "target": "features"
+        },
+        {
+          "label": "Giới thiệu",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "Gặp gỡ KAI"
+    },
+    "badge": "Cửa hàng, công thức nấu ăn và kế hoạch calo của bạn—kết nối liền mạch",
+    "headline": "Mua sắm tạp hóa trở nên dễ dàng trở lại",
+    "headlineAccent": "trở nên dễ dàng trở lại",
+    "subheadline": "Quét tủ lạnh hoặc hóa đơn. KAI biến những gì đã có sẵn thành công thức nấu ăn, tính calo và chỉ mua những gì mỗi bữa ăn còn thiếu.",
+    "ctaLabel": "Trò chuyện với KAI",
+    "secondaryCtaLabel": "Quét để có công thức",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "Sản phẩm và giá thực tế",
+      "Xem xét mọi lựa chọn",
+      "Calo được tính theo hộ gia đình",
+      "Công thức nấu ăn từ những gì bạn có"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "KAI, Cửa hàng Song sinh của bạn, trong một căn bếp ngập nắng với rau củ tươi và thực đơn tuần"
+    },
+    "contact": {
+      "heading": "Bắt đầu từ những gì bạn có",
+      "body": "Quét tủ lạnh hoặc hóa đơn và để KAI chuẩn bị danh sách thực phẩm còn thiếu để bạn xem xét."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Trang chủ",
+        "subtitle": "Cửa hàng Song sinh của bạn",
+        "secondaryEditionLabel": "Bán lẻ",
+        "navItems": [
+          {
+            "label": "Sản phẩm",
+            "target": "product"
+          },
+          {
+            "label": "Di động",
+            "target": "mobile"
+          },
+          {
+            "label": "Câu chuyện",
+            "target": "stories"
+          },
+          {
+            "label": "Tính năng",
+            "target": "features"
+          },
+          {
+            "label": "Giới thiệu",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "Gặp gỡ KAI",
+        "primaryCtaLabel": "Bắt đầu giỏ hàng"
+      },
+      "hero": {
+        "ratingLabel": "Cửa hàng, công thức nấu ăn và kế hoạch calo của bạn—kết nối liền mạch",
+        "heading": "Mua sắm tạp hóa trở nên dễ dàng trở lại",
+        "body": "Quét tủ lạnh hoặc hóa đơn. KAI biến những gì đã có sẵn thành công thức nấu ăn, tính calo và chỉ mua những gì mỗi bữa ăn còn thiếu.",
+        "primaryCtaLabel": "Trò chuyện với KAI",
+        "secondaryCtaLabel": "Quét để có công thức",
+        "trustItems": [
+          "Sản phẩm và giá thực tế",
+          "Xem xét mọi lựa chọn",
+          "Calo được tính theo hộ gia đình",
+          "Công thức nấu ăn từ những gì bạn có"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "KAI, hình tượng Cửa hàng Song sinh toàn diện của bạn",
+        "chat": {
+          "statusLabel": "Trực tuyến",
+          "subtitle": "Trợ lý tạp hóa từ tủ lạnh đến công thức",
+          "openingMessage": "Chào, tôi là KAI. Cho tôi xem tủ lạnh, tủ đựng thực phẩm hoặc hóa đơn gần đây. Tôi sẽ gợi ý công thức từ những gì bạn có và hiển thị rõ chi tiêu, calo và nguyên liệu còn thiếu.",
+          "visitorMessage": "Quét tủ lạnh của tôi và cho tôi biết tối nay có thể nấu gì.",
+          "assistantMessage": "Tôi sẽ biến những gì đã có sẵn thành các lựa chọn công thức, hiển thị calo mỗi khẩu phần và chỉ mua những nguyên liệu còn thiếu.",
+          "inputPlaceholder": "Hỏi về tạp hóa, công thức nấu ăn hoặc kiểm tra calo…",
+          "suggestions": [
+            "Ưu đãi sữa yến mạch",
+            "Cân bằng tuần của tôi",
+            "Nấu từ tủ lạnh của tôi"
+          ],
+          "demoNote": "Demo minh họa về tạp hóa, công thức và dinh dưỡng · Kiểm tra nguyên liệu và nhu cầu ăn kiêng",
+          "sampleProduct": {
+            "badge": "Đã tìm thấy ưu đãi · Pantry+",
+            "name": "Oatly Phiên bản Barista",
+            "detail": "1 L · 590 kcal · giảm 20%",
+            "price": "€2,39",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Chọn hình ảnh tủ lạnh, tủ đựng thực phẩm, hóa đơn hoặc danh sách mua sắm",
+          "uploadHint": "JPEG, PNG, WebP hoặc HEIC · tối đa 6 hình ảnh và 10 MB mỗi ảnh",
+          "analyzingLabel": "KAI đang đọc các thực phẩm có thể nhìn thấy…",
+          "inventoryHeading": "Xem xét danh sách đã trích xuất",
+          "inventoryBody": "Sửa số lượng, xóa lỗi hoặc thêm bất cứ gì KAI đã bỏ sót.",
+          "itemNameLabel": "Mặt hàng",
+          "quantityLabel": "Số lượng",
+          "unitLabel": "Đơn vị",
+          "addItemLabel": "Thêm mặt hàng",
+          "removeItemLabel": "Xóa",
+          "chatLabel": "Sửa qua chat",
+          "voiceLabel": "Sửa bằng giọng nói · 5 phút",
+          "reviewLabel": "Xem xét danh sách",
+          "editLabel": "Chỉnh sửa danh sách",
+          "confirmationHeading": "Danh sách đã sẵn sàng",
+          "confirmationBody": "KAI sẽ xác nhận lại danh sách này trước khi đề xuất giỏ hàng. Không có gì được đặt hàng nếu không có sự chấp thuận của bạn.",
+          "signInLabel": "Đăng nhập để tiếp tục",
+          "signInNotice": "Đăng nhập để chuyển bản chụp tạp hóa này vào phiên KAI riêng tư và tiếp tục quy trình bổ sung hàng. Không có gì được đặt hàng nếu không có sự chấp thuận rõ ràng của bạn.",
+          "expiryCopy": "Bản xem trước chưa xác nhận sẽ hết hạn sau một giờ",
+          "errorCopy": "KAI không thể đọc danh sách tạp hóa từ hình ảnh đó. Hãy thử ảnh rõ hơn về tủ lạnh, tủ đựng thực phẩm, hóa đơn hoặc danh sách mua sắm."
+        }
+      },
+      "product": {
+        "kicker": "Cửa hàng Song sinh Công thức + Calo của bạn",
+        "heading": "Chúng ta có thể nấu gì—và cần mua thêm những gì?",
+        "body": "KAI kết nối quét, công thức, tìm kiếm sản phẩm, calo và giỏ hàng để mỗi bữa ăn đều bắt đầu từ những gì bạn đã có.",
+        "capabilityLabels": [
+          "Tìm kiếm sản phẩm",
+          "Kế hoạch calo",
+          "Ý tưởng công thức",
+          "Hình ảnh thành danh sách",
+          "Hỗ trợ bằng giọng nói",
+          "Ghép ưu đãi"
+        ],
+        "cards": [
+          {
+            "title": "Giỏ hàng trực tiếp",
+            "body": "So sánh sản phẩm thực tế, số lượng và giá cả trong một giỏ hàng có thể xem xét.",
+            "metric": "Chi tiêu + calo cùng nhau"
+          },
+          {
+            "title": "Công thức từ bản quét của bạn",
+            "body": "Xem các công thức có thể nấu được xếp hạng theo những gì đã có trong tủ lạnh và những gì còn thiếu.",
+            "metric": "Nấu trước, mua sau"
+          },
+          {
+            "title": "Radar ưu đãi",
+            "body": "So sánh các lựa chọn phù hợp trong khi vẫn duy trì độ phủ công thức và mục tiêu của hộ gia đình.",
+            "metric": "Nguồn tạp hóa thực tế"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "KAI trong túi của bạn",
+        "heading": "Từ tủ lạnh đến công thức đến giỏ hàng,",
+        "accentHeading": "Dù bạn ở đâu.",
+        "items": [
+          {
+            "label": "Xây dựng giỏ hàng",
+            "title": "Một giỏ hàng trực tiếp với chi tiêu và kế hoạch calo của bạn cùng nhau.",
+            "body": "Yêu cầu một mặt hàng, so sánh với lựa chọn thực tế và xem cách giá, calo và số lượng thay đổi cả tuần."
+          },
+          {
+            "label": "Quét tủ lạnh",
+            "title": "Biến ảnh tủ lạnh hoặc hóa đơn thành công thức bạn có thể nấu.",
+            "body": "KAI xác định những gì có sẵn, ước tính calo và gợi ý công thức trước khi tạo danh sách nguyên liệu còn thiếu."
+          },
+          {
+            "label": "Chọn công thức",
+            "title": "Chọn một bữa ăn, sau đó chỉ mua những gì còn thiếu.",
+            "body": "So sánh thời gian nấu, calo mỗi khẩu phần, độ phủ nguyên liệu và khoảng thiếu tạp hóa nhỏ cho mỗi công thức."
+          },
+          {
+            "label": "Trò chuyện với KAI",
+            "title": "Trò chuyện về cửa hàng và mục tiêu hàng tuần của bạn.",
+            "body": "Nói những gì đã hết hoặc bạn muốn nấu gì. KAI giữ giỏ hàng, chi tiêu và khoảng cách calo trong bối cảnh."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "Mua sắm hàng tuần, được xây dựng lại",
+        "heading": "Quản lý tạp hóa, công thức, chi tiêu và calo một cách rõ ràng",
+        "items": [
+          {
+            "number": "01",
+            "title": "Khám phá công thức, sản phẩm và calo",
+            "body": "Quét những gì bạn có hoặc mô tả bữa ăn bạn muốn. KAI hiển thị công thức có thể nấu, calo mỗi khẩu phần và khoảng thiếu tạp hóa chính xác cho mỗi lựa chọn.",
+            "tags": [
+              "Quét tủ lạnh",
+              "Công thức",
+              "Calo",
+              "Mặt hàng còn thiếu"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "Giỏ hàng được xây dựng từ các bữa ăn bạn chọn",
+            "body": "Chọn một công thức và KAI sẽ loại bỏ những nguyên liệu đã có sẵn. Chỉ những sản phẩm còn thiếu mới được thêm vào giỏ hàng, đồng thời cập nhật chi tiêu và calo của hộ gia đình.",
+            "tags": [
+              "Độ phủ công thức",
+              "Chỉ còn thiếu",
+              "Kcal hàng tuần"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "Quét một lần. Nấu từ những gì đang có.",
+            "body": "KAI biến bản quét tủ lạnh, tủ đựng thực phẩm hoặc hóa đơn thành ba công thức thực tế. So sánh thời gian và calo, chọn một công thức, sau đó chỉ xem xét các nguyên liệu còn thiếu của nó.",
+            "tags": [
+              "3 lựa chọn công thức",
+              "Thời gian nấu",
+              "Calo / khẩu phần"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "Cảm giác khi nấu ăn và mua sắm với KAI",
+        "heading": "Những khoảnh khắc nhỏ của sự rõ ràng từ tủ lạnh đến bàn ăn",
+        "testimonials": [
+          {
+            "quote": "KAI biến những gì đã có trong tủ lạnh của chúng tôi thành ý tưởng bữa tối, sau đó hiển thị chi phí và calo cho cả gia đình trước khi tôi chọn.",
+            "name": "Mila",
+            "meta": "Phụ huynh bận rộn"
+          },
+          {
+            "quote": "Tôi hỏi về ưu đãi phô mai, so sánh các lựa chọn thực tế và thêm chính xác loại tôi muốn. Không cần chuyển tab.",
+            "name": "Noah",
+            "meta": "Người mua sắm hàng tuần"
+          },
+          {
+            "quote": "Bản quét hóa đơn cho tôi ba công thức, calo mỗi khẩu phần và chỉ những nguyên liệu tôi vẫn cần mua.",
+            "name": "Sofia",
+            "meta": "Đầu bếp gia đình"
+          },
+          {
+            "quote": "Tôi thích rằng KAI xây dựng giỏ hàng trước và chỉ hỏi các câu hỏi lập kế hoạch khi thực sự cần.",
+            "name": "Lucas",
+            "meta": "Sinh viên"
+          },
+          {
+            "quote": "Giọng nói rất tuyệt khi tay tôi đang bận trong bếp. Tôi chỉ cần nói với KAI những gì đã hết.",
+            "name": "Emma",
+            "meta": "Người yêu thích chuẩn bị bữa ăn"
+          },
+          {
+            "quote": "Mọi thứ đều có thể xem xét được. Tôi có thể thay đổi số lượng và xem cả tổng chi tiêu và calo thay đổi theo.",
+            "name": "Daan",
+            "meta": "Người mua sắm thông minh"
+          }
+        ],
+        "articles": [
+          {
+            "category": "Thói quen hàng tuần",
+            "title": "Mua sắm và kế hoạch bữa ăn bảy phút",
+            "body": "Một người mua sắm đơn lẻ đã biến danh sách nhu yếu phẩm rời rạc thành giỏ hàng, ba bữa tối có thể nấu và 10.850 calo được lên kế hoạch."
+          },
+          {
+            "category": "Từ tủ lạnh đến công thức",
+            "title": "Từ ảnh tủ lạnh đến bữa tối nay",
+            "body": "KAI nhận diện các nguyên liệu, gợi ý ba công thức và phân tách những gì đã có với những gì vẫn cần mua."
+          },
+          {
+            "category": "Tìm kiếm công thức thông minh",
+            "title": "Tìm kiếm thông minh nhìn thấy cả tuần",
+            "body": "Một tìm kiếm cân nhắc giá, calo, độ phủ công thức và khoảng thiếu protein mà không mất mạch mua sắm."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "Một nơi, nhiều cách vào",
+        "heading": "Mọi đầu vào đều trở thành công thức, một giỏ hàng và một kế hoạch calo",
+        "body": "Ảnh, ghi chú giọng nói, hóa đơn hoặc danh sách đều cung cấp cùng một chế độ xem bên dưới: nguyên liệu có sẵn, công thức bạn có thể nấu, sản phẩm còn thiếu, chi tiêu hàng tuần và calo của hộ gia đình.",
+        "capabilities": [
+          "Ảnh",
+          "Giọng nói",
+          "Ưu đãi",
+          "Hóa đơn",
+          "Danh sách",
+          "Giao hàng",
+          "Calo",
+          "Hộ gia đình",
+          "Công thức"
+        ]
+      },
+      "closing": {
+        "kicker": "Kế hoạch từ tủ lạnh đến bữa tối tiếp theo của bạn",
+        "heading": "Bắt đầu với những gì bạn có. Chỉ mua những gì còn thiếu.",
+        "body": "Quét tủ lạnh hoặc hóa đơn. KAI gợi ý công thức có thể nấu, hiển thị calo mỗi khẩu phần và biến các nguyên liệu còn thiếu thành giỏ hàng bạn có thể xem xét.",
+        "ctaLabel": "Quét để tìm công thức"
+      },
+      "footer": {
+        "tagline": "Cửa hàng Song sinh từ tủ lạnh đến giỏ hàng của bạn. Tìm công thức từ những gì bạn có, xem calo và chỉ mua những gì còn thiếu.",
+        "groups": [
+          {
+            "label": "Sản phẩm",
+            "links": [
+              {
+                "label": "Demo tạp hóa",
+                "target": "product"
+              },
+              {
+                "label": "Cách hoạt động",
+                "target": "features"
+              },
+              {
+                "label": "Câu chuyện",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "KAI",
+            "links": [
+              {
+                "label": "Về KAI",
+                "target": "about"
+              },
+              {
+                "label": "Liên hệ",
+                "target": "contact"
+              },
+              {
+                "label": "Về đầu trang",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 KAI · Grocery Twin",
+        "closingStatement": "Lựa chọn tốt. Tuần tuyệt vời."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

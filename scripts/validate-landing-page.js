@@ -1,18 +1,22 @@
 #!/usr/bin/env node
 const fs = require('fs');
+const nodePath = require('path');
 
 const ALLOWED_ICONS = new Set([
   'heart', 'shield-check', 'sparkles', 'chat', 'users', 'lock', 'check', 'star',
   'search', 'lightbulb', 'user-plus', 'calendar', 'question-mark', 'envelope',
 ]);
 const ALLOWED_ROLES = new Set(['user', 'assistant']);
-const ALLOWED_DESIGN_VARIANTS = new Set(['default', 'signature', 'banking', 'form-operations', 'cinematic-campaigns', 'recruiting-operations', 'grocery-twin']);
+const ALLOWED_DESIGN_VARIANTS = new Set(['default', 'signature', 'banking', 'form-operations', 'logistics-portal', 'cinematic-campaigns', 'recruiting-operations', 'grocery-twin', 'event-introductions', 'home-introductions']);
 const ALLOWED_BRAND_MARKS = new Set(['heart', 'image', 'initial']);
 const ALLOWED_NAV_TARGETS = new Set([
   'meet', 'about', 'capabilities', 'use-cases', 'trust',
   'how-it-works', 'stories', 'faq', 'contact',
 ]);
 const GROCERY_TARGETS = new Set(['top', 'product', 'mobile', 'stories', 'features', 'about', 'contact', 'hero-chat']);
+const EVENT_INTRODUCTION_TARGETS = new Set(['top', 'about', 'how-it-works', 'pairings', 'faqs', 'waitlist', 'closing', 'hero-chat']);
+const HOME_INTRODUCTION_TARGETS = new Set(['top', 'audience', 'privacy', 'how-it-works', 'proposals', 'meet', 'hero-chat']);
+const LOGISTICS_PORTAL_TARGETS = new Set(['top', 'edge', 'control', 'workflows', 'pilot', 'simulation']);
 const ALLOWED_PALETTES = new Set(['coral', 'ocean', 'forest', 'purple', 'slate', 'research', 'maroon', 'stone', 'emerald', 'custom']);
 const ALLOWED_THEME_COLORS = new Set(['purple', 'indigo', 'blue', 'green', 'orange', 'pink', 'red', 'teal', 'gray', 'slate', 'maroon', 'stone', 'emerald']);
 const ALLOWED_THEME_MODES = new Set(['light', 'dark']);
@@ -21,9 +25,21 @@ const NORMALIZED_HEX = /^#[0-9a-f]{6}$/;
 const SAFE_GOOGLE_FONT = /^[A-Za-z0-9][A-Za-z0-9 .'-]{0,79}$/;
 const BRAND_COLOR_KEYS = ['canvas', 'surface', 'sidebar', 'text', 'accent', 'userBubble'];
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const IMAGE_EXTENSION = /\.(?:avif|gif|jpe?g|png|svg|webp)(?:[?#]|$)/i;
+const SAFE_APP_IMAGE_PATH = /^\/(?:assets|landing-pages)\/[a-z0-9][a-z0-9/_-]*\.(?:avif|gif|jpe?g|png|svg|webp)(?:[?#]|$)/i;
+const REGION_KEY = /^[a-z0-9][a-z0-9-]{0,63}$/;
+const COUNTRY_CODE = /^[A-Z]{2}$/;
+const SOURCE_REVISION = /^[a-f0-9]{64}$/;
+const LANGUAGE_CODES = new Set('aa ab ae af ak am an ar as av ay az ba be bg bh bi bm bn bo br bs ca ce ch co cr cs cu cv cy da de dv dz ee el en eo es et eu fa ff fi fj fo fr fy ga gd gl gn gu gv ha he hi ho hr ht hu hy hz ia id ie ig ii ik io is it iu ja jv ka kg ki kj kk kl km kn ko kr ks ku kv kw ky la lb lg li ln lo lt lu lv mg mh mi mk ml mn mr ms mt my na nb nd ne ng nl nn no nr nv ny oc oj om or os pa pi pl ps pt qu rm rn ro ru rw sa sc sd se sg sh si sk sl sm sn so sq sr ss st su sv sw ta te tg th ti tk tl tn to tr ts tt tw ty ug uk ur uz ve vi vo wa wo xh yi yo za zh zu'.split(' '));
 
 function fail(message) {
   throw new Error(message);
+}
+
+function isDirectImageSource(value) {
+  return typeof value === 'string'
+    && IMAGE_EXTENSION.test(value)
+    && (/^https:\/\//i.test(value) || SAFE_APP_IMAGE_PATH.test(value));
 }
 
 function validateIcon(icon, label, required = false) {
@@ -49,7 +65,7 @@ function contrastRatio(first, second) {
 
 function assertNoEmoji(value, path = 'landingPage') {
   if (typeof value === 'string') {
-    if (/\p{Extended_Pictographic}/u.test(value) && !path.endsWith('.footer.copyright')) {
+    if (/\p{Extended_Pictographic}/u.test(value.replace(/↔/g, '')) && !path.endsWith('.footer.copyright')) {
       fail(`${path} must not contain emoji; use a supported icon key instead`);
     }
     return;
@@ -169,6 +185,67 @@ function validateFormOperations(landingPage) {
       fail(`${path} must be a direct HTTPS image URL with a supported image extension`);
     }
   }
+}
+
+function validateLogisticsPortal(landingPage) {
+  const root = landingPage.logisticsPortal;
+  if (!root || typeof root !== 'object' || Array.isArray(root)) fail('landingPage.logisticsPortal is required when design.variant is "logistics-portal"');
+  const get = (path) => path.split('.').reduce((value, key) => value && typeof value === 'object' ? value[key] : undefined, root);
+  const requireString = (path) => { const value = get(path); if (typeof value !== 'string' || !value.trim()) fail(`landingPage.logisticsPortal.${path} is required`); };
+  [
+    'header.brandLabel', 'header.brandSuffix', 'header.logoImage', 'header.ctaLabel', 'hero.eyebrow', 'hero.heading',
+    'hero.accentHeading', 'hero.body', 'hero.primaryCtaLabel', 'hero.secondaryCtaLabel', 'hero.characterImage',
+    'hero.characterAlt', 'hero.chat.roleLabel', 'hero.chat.statusLabel', 'hero.chat.openingMessage', 'hero.chat.inputPlaceholder',
+    'hero.rehearsal.commandTrigger', 'hero.rehearsal.sandboxLabel', 'hero.rehearsal.restartLabel', 'hero.rehearsal.demoNote',
+    'hero.rehearsal.reviewHeading', 'hero.rehearsal.reviewBody', 'hero.rehearsal.reviewLabel', 'hero.rehearsal.approveLabel',
+    'hero.rehearsal.escalateLabel', 'hero.rehearsal.approvedKicker', 'hero.rehearsal.approvedBody',
+    'hero.rehearsal.escalatedKicker', 'hero.rehearsal.escalatedTitle', 'hero.rehearsal.escalatedBody',
+    'hero.rehearsal.continueLabel', 'hero.rehearsal.loginNotice', 'edge.number', 'edge.kicker', 'edge.heading',
+    'edge.accentHeading', 'edge.body', 'edge.governedLabel', 'edge.boundaryLabel', 'edge.operatorTitle',
+    'edge.operatorBody', 'edge.externalLabel', 'platform.eyebrow', 'platform.heading', 'platform.accentHeading',
+    'platform.body', 'platform.portalLabel', 'platform.checkpointLabel', 'process.number', 'process.eyebrow',
+    'process.heading', 'process.body', 'process.failClosedTitle', 'process.failClosedBody', 'process.failClosedLabel',
+    'workflows.number', 'workflows.kicker', 'workflows.heading', 'workflows.accentHeading', 'workflows.body',
+    'workflows.moreLabel', 'pilot.eyebrow', 'pilot.heading', 'pilot.body', 'pilot.ctaLabel', 'pilot.email',
+    'pilot.emailSubject', 'footer.brandLabel', 'footer.brandSuffix', 'footer.tagline', 'footer.copyright',
+  ].forEach(requireString);
+  const exact = {
+    'header.navItems': 3, 'hero.proofItems': 3, 'hero.chat.suggestions': 3, 'hero.rehearsal.workflowTabs': 2,
+    'hero.rehearsal.samples': 2, 'hero.rehearsal.intakeSteps': 4, 'hero.rehearsal.approvedChecks': 3,
+    'edge.governedSystems': 4, 'edge.portals': 2, 'edge.comparison': 2, 'edge.capabilities': 4,
+    'platform.fields': 3, 'platform.points': 4, 'process.steps': 6, 'workflows.primary': 2,
+    'workflows.more': 4, 'pilot.steps': 3,
+  };
+  Object.entries(exact).forEach(([path, count]) => { if (!Array.isArray(get(path)) || get(path).length !== count) fail(`landingPage.logisticsPortal.${path} must contain exactly ${count} items`); });
+  get('header.navItems').forEach((item, index) => { if (!LOGISTICS_PORTAL_TARGETS.has(item?.target)) fail(`landingPage.logisticsPortal.header.navItems[${index}].target must be a registered Logistics Portal target`); });
+  if (get('hero.rehearsal.enabled') !== true) fail('landingPage.logisticsPortal.hero.rehearsal.enabled must be true');
+  if (!/^\/?[a-z0-9][a-z0-9-]{0,63}$/.test(get('hero.rehearsal.commandTrigger'))) fail('landingPage.logisticsPortal.hero.rehearsal.commandTrigger must be a registered slash command trigger');
+  [['header.logoImage', get('header.logoImage')], ['hero.characterImage', get('hero.characterImage')], ['hero.portraitImage', get('hero.portraitImage')]].forEach(([path, value]) => { if (path === 'hero.portraitImage' && value === undefined) return; if (!isDirectImageSource(value)) fail(`landingPage.logisticsPortal.${path} must be a direct HTTPS or bundled application image URL`); });
+  get('hero.rehearsal.workflowTabs').forEach((item, index) => { if (!['customs', 'carrier'].includes(item?.id)) fail(`landingPage.logisticsPortal.hero.rehearsal.workflowTabs[${index}].id must be customs or carrier`); });
+  get('hero.rehearsal.samples').forEach((item, index) => {
+    if (!['customs', 'carrier'].includes(item?.id)) fail(`landingPage.logisticsPortal.hero.rehearsal.samples[${index}].id must be customs or carrier`);
+    if (!Array.isArray(item?.exceptions) || item.exceptions.length !== 3) fail(`landingPage.logisticsPortal.hero.rehearsal.samples[${index}].exceptions must contain exactly 3 items`);
+    if (item?.fields !== undefined) {
+      if (!Array.isArray(item.fields) || item.fields.length !== 5) fail(`landingPage.logisticsPortal.hero.rehearsal.samples[${index}].fields must contain exactly 5 items`);
+      item.fields.forEach((field, fieldIndex) => {
+        if (typeof field?.label !== 'string' || !field.label.trim() || typeof field?.value !== 'string' || !field.value.trim()) fail(`landingPage.logisticsPortal.hero.rehearsal.samples[${index}].fields[${fieldIndex}] requires label and value`);
+        if (!['verified', 'review'].includes(field?.state)) fail(`landingPage.logisticsPortal.hero.rehearsal.samples[${index}].fields[${fieldIndex}].state must be verified or review`);
+      });
+    }
+    ['runReference', 'title', 'lane', 'source', 'destination', 'mapped', 'receipt'].forEach((key) => {
+      if (typeof item?.[key] !== 'string' || !item[key].trim()) fail(`landingPage.logisticsPortal.hero.rehearsal.samples[${index}].${key} is required`);
+    });
+  });
+  get('hero.rehearsal.intakeSteps').forEach((item, index) => { if (!['done', 'warning', 'pending'].includes(item?.state)) fail(`landingPage.logisticsPortal.hero.rehearsal.intakeSteps[${index}].state is unsupported`); });
+  get('platform.fields').forEach((item, index) => { if (!['verified', 'review'].includes(item?.status)) fail(`landingPage.logisticsPortal.platform.fields[${index}].status is unsupported`); });
+  if (!EMAIL.test(get('pilot.email'))) fail('landingPage.logisticsPortal.pilot.email must be valid');
+  const forbidden = new Set(['component', 'componentName', 'javascript', 'script', 'css', 'tailwind', 'route', 'query', 'html']);
+  const inspect = (value, path) => {
+    if (Array.isArray(value)) return value.forEach((item, index) => inspect(item, `${path}[${index}]`));
+    if (!value || typeof value !== 'object') return;
+    Object.entries(value).forEach(([key, item]) => { if (forbidden.has(key)) fail(`${path}.${key} is executable or presentation code and is not allowed`); inspect(item, `${path}.${key}`); });
+  };
+  inspect(root, 'landingPage.logisticsPortal');
 }
 
 function validateGroceryTwin(landingPage) {
@@ -356,6 +433,160 @@ function validateRecruitingOperations(landingPage) {
   inspect(root, 'landingPage.recruitingOperations');
 }
 
+function validateEventIntroductions(landingPage) {
+  const root = landingPage.eventIntroductions;
+  if (!root || typeof root !== 'object' || Array.isArray(root)) fail('landingPage.eventIntroductions is required when design.variant is "event-introductions"');
+  const get = (path) => path.split('.').reduce((value, key) => value && typeof value === 'object' ? value[key] : undefined, root);
+  const requireString = (path) => { const value = get(path); if (typeof value !== 'string' || !value.trim()) fail(`landingPage.eventIntroductions.${path} is required`); };
+  const requireExact = (path, count) => { const value = get(path); if (!Array.isArray(value) || value.length !== count) fail(`landingPage.eventIntroductions.${path} must contain exactly ${count} items`); return value; };
+  [
+    'header.brandLabel', 'header.brandTagline', 'header.ctaLabel', 'event.name', 'event.shortName',
+    'event.city', 'event.venue', 'event.neighborhood', 'event.dateRange', 'event.shortDateRange',
+    'event.cardDate', 'event.availabilityLabel', 'event.confirmedLocation', 'event.disclaimer',
+    'hero.eyebrow', 'hero.heading', 'hero.accentText', 'hero.body', 'hero.primaryCtaLabel',
+    'hero.secondaryCtaLabel', 'hero.characterImage', 'hero.characterAlt', 'hero.chat.statusLabel',
+    'hero.chat.operatorBadge', 'hero.chat.openingMessage', 'hero.chat.inputPlaceholder',
+    'hero.briefDemo.commandTrigger', 'hero.briefDemo.introHeading', 'hero.briefDemo.introBody',
+    'hero.briefDemo.trackLabel', 'hero.briefDemo.sideLabel', 'hero.briefDemo.voiceLabel',
+    'hero.briefDemo.reviewLabel', 'hero.briefDemo.editLabel', 'hero.briefDemo.reviewHeading',
+    'hero.briefDemo.reviewBody', 'hero.briefDemo.submitLabel', 'hero.briefDemo.loginNotice',
+    'hero.briefDemo.expiryCopy', 'hero.briefDemo.privacyCopy', 'hero.briefDemo.errorCopy',
+    'about.kicker', 'about.heading', 'about.body', 'about.scopeNote', 'process.kicker',
+    'process.heading', 'process.body', 'pairing.kicker', 'pairing.heading', 'pairing.body',
+    'pairing.fitLabel', 'pairing.statusHeading', 'pairing.statusBody', 'faq.kicker', 'faq.heading',
+    'faq.characterImage', 'waitlist.kicker', 'waitlist.heading', 'waitlist.body', 'waitlist.nameLabel',
+    'waitlist.emailLabel', 'waitlist.eventLabel', 'waitlist.cityLabel', 'waitlist.ctaLabel',
+    'waitlist.loginNotice', 'closing.kicker', 'closing.heading', 'closing.body', 'closing.ctaLabel',
+    'closing.note', 'closing.characterImage', 'closing.characterAlt', 'footer.tagline',
+    'footer.disclaimer', 'footer.copyright',
+  ].forEach(requireString);
+  [
+    ['header.navItems', 4], ['tracks', 3], ['hero.chat.suggestedPrompts', 3], ['hero.briefDemo.fields', 9],
+    ['about.images', 3], ['about.principles', 3], ['process.steps', 4], ['pairing.images', 2],
+    ['pairing.criteria', 3], ['pairing.cards', 3], ['faq.items', 6], ['footer.groups', 2],
+  ].forEach(([path, count]) => requireExact(path, count));
+  if (get('hero.briefDemo.enabled') !== true) fail('landingPage.eventIntroductions.hero.briefDemo.enabled must be true');
+  if (!get('hero.heading').includes(get('hero.accentText'))) fail('landingPage.eventIntroductions.hero.accentText must be a substring of hero.heading');
+  if (!/^\/?[a-z0-9][a-z0-9-]{0,63}$/.test(get('hero.briefDemo.commandTrigger'))) fail('landingPage.eventIntroductions.hero.briefDemo.commandTrigger must be a registered slash command trigger');
+  const expectedTracks = new Set(['founder-investor', 'founder-cofounder', 'startup-startup']);
+  const seenTracks = new Set();
+  get('tracks').forEach((track, index) => {
+    if (!expectedTracks.has(track?.id) || seenTracks.has(track.id)) fail(`landingPage.eventIntroductions.tracks[${index}].id must be a unique registered Lane track`);
+    seenTracks.add(track.id);
+    if (!Array.isArray(track?.sides) || track.sides.length !== 2 || track.sides.some((side) => typeof side !== 'string' || !side.trim())) fail(`landingPage.eventIntroductions.tracks[${index}].sides must contain exactly two non-empty sides`);
+  });
+  if (get('event.availability') !== null && !['available', 'limited', 'closed', 'unverified'].includes(get('event.availability'))) fail('landingPage.eventIntroductions.event.availability is not supported');
+  const expectedFields = new Set(['organization', 'role', 'currentEvent', 'goal', 'offer', 'need', 'fitCriteria', 'availability', 'privateConstraints']);
+  const seenFields = new Set();
+  get('hero.briefDemo.fields').forEach((field, index) => {
+    if (!expectedFields.has(field?.key) || seenFields.has(field.key)) fail(`landingPage.eventIntroductions.hero.briefDemo.fields[${index}].key must be a unique registered field`);
+    seenFields.add(field.key);
+    if (!['text', 'textarea'].includes(field?.type)) fail(`landingPage.eventIntroductions.hero.briefDemo.fields[${index}].type must be text or textarea`);
+  });
+  get('about.principles').forEach((item, index) => {
+    validateIcon(item?.icon, `landingPage.eventIntroductions.about.principles[${index}].icon`, true);
+    if (!['signal', 'iris', 'mint'].includes(item?.tone)) fail(`landingPage.eventIntroductions.about.principles[${index}].tone is not supported`);
+  });
+  get('pairing.cards').forEach((item, index) => { if (!['proposed', 'accepted', 'confirmed'].includes(item?.status)) fail(`landingPage.eventIntroductions.pairing.cards[${index}].status is not supported`); });
+  [...get('header.navItems'), ...get('footer.groups').flatMap((group) => group?.links || [])].forEach((item, index) => { if (!EVENT_INTRODUCTION_TARGETS.has(item?.target)) fail(`landingPage.eventIntroductions navigation item ${index} has an unsupported target`); });
+  const media = [
+    ['hero.characterImage', get('hero.characterImage')], ['faq.characterImage', get('faq.characterImage')],
+    ['closing.characterImage', get('closing.characterImage')],
+    ...get('about.images').map((item, index) => [`about.images[${index}].image`, item?.image]),
+    ...get('process.steps').map((item, index) => [`process.steps[${index}].image`, item?.image]),
+    ...get('pairing.images').map((item, index) => [`pairing.images[${index}].image`, item?.image]),
+  ];
+  media.forEach(([path, value]) => { if (typeof value !== 'string' || !/^https:\/\//i.test(value) || !/\.(?:avif|gif|jpe?g|png|svg|webp)(?:[?#]|$)/i.test(value)) fail(`landingPage.eventIntroductions.${path} must be a direct HTTPS image URL`); });
+  const forbiddenKeys = new Set(['component', 'componentName', 'javascript', 'script', 'css', 'tailwind', 'route', 'query', 'html']);
+  const inspect = (value, path) => {
+    if (Array.isArray(value)) return value.forEach((item, index) => inspect(item, `${path}[${index}]`));
+    if (!value || typeof value !== 'object') return;
+    Object.entries(value).forEach(([key, item]) => { if (forbiddenKeys.has(key)) fail(`${path}.${key} is executable or presentation code and is not allowed`); inspect(item, `${path}.${key}`); });
+  };
+  inspect(root, 'landingPage.eventIntroductions');
+}
+
+function validateHomeIntroductions(landingPage) {
+  const root = landingPage.homeIntroductions;
+  if (!root || typeof root !== 'object' || Array.isArray(root)) fail('landingPage.homeIntroductions is required when design.variant is "home-introductions"');
+  const get = (path) => path.split('.').reduce((value, key) => value && typeof value === 'object' ? value[key] : undefined, root);
+  const requireString = (path) => { const value = get(path); if (typeof value !== 'string' || !value.trim()) fail(`landingPage.homeIntroductions.${path} is required`); };
+  const requireExact = (path, count) => { const value = get(path); if (!Array.isArray(value) || value.length !== count) fail(`landingPage.homeIntroductions.${path} must contain exactly ${count} items`); return value; };
+  [
+    'header.brandLabel', 'header.brandTagline', 'header.ctaLabel', 'header.mobileCtaLabel',
+    'service.announcement', 'service.feeCopy', 'service.disclaimer', 'hero.eyebrow', 'hero.body',
+    'hero.backgroundImage', 'hero.backgroundAlt', 'hero.primaryCtaLabel', 'hero.secondaryCtaLabel',
+    'hero.privacyLine', 'hero.characterImage', 'hero.characterAlt', 'hero.chat.statusLabel',
+    'hero.chat.privacyBadge', 'hero.chat.openingMessage', 'hero.chat.visitorMessage',
+    'hero.chat.assistantMessage', 'hero.chat.inputPlaceholder', 'hero.briefDemo.commandTrigger',
+    'hero.briefDemo.introHeading', 'hero.briefDemo.introBody', 'hero.briefDemo.chatLabel', 'hero.briefDemo.voiceLabel',
+    'hero.briefDemo.reviewLabel', 'hero.briefDemo.editLabel', 'hero.briefDemo.reviewHeading',
+    'hero.briefDemo.reviewBody', 'hero.briefDemo.submitLabel', 'hero.briefDemo.loginNotice',
+    'hero.briefDemo.expiryCopy', 'hero.briefDemo.privacyCopy', 'hero.briefDemo.errorCopy',
+    'audience.kicker', 'audience.heading', 'audience.body', 'audience.forHeading', 'audience.notForHeading',
+    'privacy.kicker', 'privacy.heading', 'privacy.body', 'privacy.proposalLabel', 'privacy.proposalAreaLabel',
+    'privacy.proposalArea', 'privacy.proposalNote', 'process.kicker', 'process.heading',
+    'process.licensedAgentNote', 'proposals.kicker', 'proposals.heading', 'proposals.body',
+    'meet.kicker', 'meet.heading', 'meet.body', 'meet.characterImage', 'meet.characterAlt',
+    'meet.primaryCtaLabel', 'meet.secondaryCtaLabel', 'footer.brandLabel', 'footer.tagline',
+    'footer.disclaimer', 'footer.eventDisclaimer', 'footer.copyright',
+  ].forEach(requireString);
+  [
+    ['header.navItems', 3], ['service.configurations', 2], ['tracks', 2], ['hero.headingLines', 3],
+    ['audience.forItems', 2], ['audience.notForItems', 3], ['privacy.stages', 3],
+    ['proposals.cards', 2], ['meet.principles', 3], ['footer.groups', 2],
+  ].forEach(([path, count]) => requireExact(path, count));
+  if (get('hero.briefDemo.enabled') !== true) fail('landingPage.homeIntroductions.hero.briefDemo.enabled must be true');
+  if (!/^\/?[a-z0-9][a-z0-9-]{0,63}$/.test(get('hero.briefDemo.commandTrigger'))) fail('landingPage.homeIntroductions.hero.briefDemo.commandTrigger must be a registered slash command trigger');
+  if (!['event', 'city'].includes(get('service.activeMode'))) fail('landingPage.homeIntroductions.service.activeMode must be event or city');
+  const configuredModes = new Set();
+  get('service.configurations').forEach((item, index) => {
+    if (!['event', 'city'].includes(item?.mode) || configuredModes.has(item.mode)) fail(`landingPage.homeIntroductions.service.configurations[${index}].mode must define event and city exactly once`);
+    configuredModes.add(item.mode);
+  });
+  const allowedFields = new Set(['serviceMode', 'area', 'propertyType', 'propertyBrief', 'budgetOrPrice', 'mustHavesOrHighlights', 'dealbreakersOrBuyerCriteria', 'timing', 'readiness', 'privateConstraints']);
+  const seenTracks = new Set();
+  get('tracks').forEach((track, trackIndex) => {
+    if (!['buying', 'selling'].includes(track?.id) || seenTracks.has(track.id)) fail(`landingPage.homeIntroductions.tracks[${trackIndex}].id must define buying and selling exactly once`);
+    seenTracks.add(track.id);
+    if (typeof track?.responseMessage !== 'string' || !track.responseMessage.trim()) fail(`landingPage.homeIntroductions.tracks[${trackIndex}].responseMessage is required`);
+    if (!Array.isArray(track.processSteps) || track.processSteps.length !== 3) fail(`landingPage.homeIntroductions.tracks[${trackIndex}].processSteps must contain exactly 3 items`);
+    track.processSteps.forEach((step, stepIndex) => {
+      ['number', 'title', 'body', 'alt'].forEach((key) => {
+        if (typeof step?.[key] !== 'string' || !step[key].trim()) fail(`landingPage.homeIntroductions.tracks[${trackIndex}].processSteps[${stepIndex}].${key} is required`);
+      });
+      if (!isDirectImageSource(step?.image)) fail(`landingPage.homeIntroductions.tracks[${trackIndex}].processSteps[${stepIndex}].image must be a direct HTTPS or bundled application image URL`);
+    });
+    if (!Array.isArray(track.briefFields) || track.briefFields.length < 5 || track.briefFields.length > 9) fail(`landingPage.homeIntroductions.tracks[${trackIndex}].briefFields must contain 5 to 9 fields`);
+    const seenFields = new Set();
+    track.briefFields.forEach((field, fieldIndex) => {
+      if (!allowedFields.has(field?.key) || seenFields.has(field.key)) fail(`landingPage.homeIntroductions.tracks[${trackIndex}].briefFields[${fieldIndex}].key must be a unique registered field`);
+      seenFields.add(field.key);
+      if (!['text', 'textarea', 'select'].includes(field?.type)) fail(`landingPage.homeIntroductions.tracks[${trackIndex}].briefFields[${fieldIndex}].type is not supported`);
+    });
+  });
+  [...get('privacy.stages'), ...get('proposals.cards')].forEach((item, index) => { if (!['proposed', 'accepted', 'confirmed'].includes(item?.status)) fail(`landingPage.homeIntroductions proposal status ${index} is not supported`); });
+  get('proposals.cards').forEach((item, index) => { if (!['cream', 'terracotta'].includes(item?.tone)) fail(`landingPage.homeIntroductions.proposals.cards[${index}].tone is not supported`); });
+  [...get('header.navItems'), ...get('footer.groups').flatMap((group) => group?.links || [])].forEach((item, index) => { if (!HOME_INTRODUCTION_TARGETS.has(item?.target)) fail(`landingPage.homeIntroductions navigation item ${index} has an unsupported target`); });
+  [['hero.backgroundImage', get('hero.backgroundImage')], ['hero.characterImage', get('hero.characterImage')], ['meet.characterImage', get('meet.characterImage')]].forEach(([path, value]) => {
+    if (!isDirectImageSource(value)) fail(`landingPage.homeIntroductions.${path} must be a direct HTTPS or bundled application image URL`);
+  });
+  const legal = `${get('service.disclaimer')} ${get('footer.disclaimer')}`.toLowerCase();
+  [
+    ['brokerage boundary', ['not a broker', 'not a licensed brokerage']],
+    ['representation boundary', ['not a real estate agent', 'does not represent']],
+    ['valuation boundary', ['not a valuer', 'does not value', 'does not provide valuation', 'value your home']],
+    ['negotiation boundary', ['not a negotiator', 'does not negotiate', ', negotiate']],
+  ].forEach(([label, alternatives]) => { if (!alternatives.some((copy) => legal.includes(copy))) fail(`landingPage.homeIntroductions must include the required real-estate ${label}`); });
+  const forbiddenKeys = new Set(['component', 'componentName', 'javascript', 'script', 'css', 'tailwind', 'route', 'query', 'html']);
+  const inspect = (value, path) => {
+    if (Array.isArray(value)) return value.forEach((item, index) => inspect(item, `${path}[${index}]`));
+    if (!value || typeof value !== 'object') return;
+    Object.entries(value).forEach(([key, item]) => { if (forbiddenKeys.has(key)) fail(`${path}.${key} is executable or presentation code and is not allowed`); inspect(item, `${path}.${key}`); });
+  };
+  inspect(root, 'landingPage.homeIntroductions');
+}
+
 function validateCaptureCommand(landingPage, chatConfigPath) {
   const capture = landingPage?.formOperations?.heroDemo?.captureAndFill;
   if (capture?.enabled !== true || !chatConfigPath) return;
@@ -378,6 +609,19 @@ function validateCaptureCommand(landingPage, chatConfigPath) {
   ) {
     fail(`landingPage.formOperations.heroDemo.captureAndFill.commandTrigger must reference an enabled image-attachment operator command in ${chatConfigPath}`);
   }
+}
+
+function validateLogisticsPortalCommand(landingPage, chatConfigPath) {
+  const demo = landingPage?.logisticsPortal?.hero?.rehearsal;
+  if (demo?.enabled !== true || !chatConfigPath) return;
+  const chatConfig = JSON.parse(fs.readFileSync(chatConfigPath, 'utf8'));
+  const commands = chatConfig?.publishedConfig?.agentTopology?.slashCommands;
+  if (!Array.isArray(commands)) fail(`${chatConfigPath} must define publishedConfig.agentTopology.slashCommands for Logistics Portal`);
+  const trigger = String(demo.commandTrigger || '').trim().replace(/^\/+/, '').toLowerCase();
+  const command = commands.find((item) => item?.enabled !== false && String(item?.trigger || '').trim().replace(/^\/+/, '').toLowerCase() === trigger);
+  if (!command || command.execution?.type !== 'operator_action') fail(`landingPage.logisticsPortal.hero.rehearsal.commandTrigger must reference an enabled operator_action command in ${chatConfigPath}`);
+  const workflowKey = String(command.execution?.workflowRef?.resourceKey || command.execution?.resourceKey || '');
+  if (workflowKey && workflowKey !== 'workflow.emil.rehearse-filing') fail('The Emil rehearsal command must reference workflow.emil.rehearse-filing');
 }
 
 function validateCinematicCommand(landingPage, chatConfigPath) {
@@ -431,17 +675,107 @@ function validateGroceryCommand(landingPage, chatConfigPath) {
   }
 }
 
-function validate(filePath, chatConfigPath) {
-  const parsed = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+function validateEventIntroductionCommand(landingPage, chatConfigPath) {
+  const demo = landingPage?.eventIntroductions?.hero?.briefDemo;
+  if (demo?.enabled !== true || !chatConfigPath) return;
+  const chatConfig = JSON.parse(fs.readFileSync(chatConfigPath, 'utf8'));
+  const commands = chatConfig?.publishedConfig?.agentTopology?.slashCommands;
+  if (!Array.isArray(commands)) fail(`${chatConfigPath} must define publishedConfig.agentTopology.slashCommands for Event Introductions`);
+  const trigger = String(demo.commandTrigger || '').trim().replace(/^\/+/, '').toLowerCase();
+  const command = commands.find((item) => item?.enabled !== false && String(item?.trigger || '').trim().replace(/^\/+/, '').toLowerCase() === trigger);
+  if (!command || command.execution?.type !== 'operator_action') fail(`landingPage.eventIntroductions.hero.briefDemo.commandTrigger must reference an enabled operator_action command in ${chatConfigPath}`);
+}
 
-  if (parsed.schemaVersion !== 2) fail('schemaVersion must be 2');
-  if (!parsed.resourceKey || !String(parsed.resourceKey).trim()) fail('resourceKey is required');
-  if (parsed.runtimeDataPolicy !== 'definitions_only') fail('runtimeDataPolicy must be "definitions_only"');
+function validateHomeIntroductionCommand(landingPage, chatConfigPath) {
+  const demo = landingPage?.homeIntroductions?.hero?.briefDemo;
+  if (demo?.enabled !== true || !chatConfigPath) return;
+  const chatConfig = JSON.parse(fs.readFileSync(chatConfigPath, 'utf8'));
+  const commands = chatConfig?.publishedConfig?.agentTopology?.slashCommands;
+  if (!Array.isArray(commands)) fail(`${chatConfigPath} must define publishedConfig.agentTopology.slashCommands for Home Introductions`);
+  const trigger = String(demo.commandTrigger || '').trim().replace(/^\/+/, '').toLowerCase();
+  const command = commands.find((item) => item?.enabled !== false && String(item?.trigger || '').trim().replace(/^\/+/, '').toLowerCase() === trigger);
+  if (!command || command.execution?.type !== 'operator_action') fail(`landingPage.homeIntroductions.hero.briefDemo.commandTrigger must reference an enabled operator_action command in ${chatConfigPath}`);
+}
 
-  const landingPage = parsed.landingPage;
+function validateLandingPageModel(landingPage, chatConfigPath, definitionFilePath) {
   if (!landingPage || typeof landingPage !== 'object') fail('landingPage object is required');
   if (!landingPage.headline || !String(landingPage.headline).trim()) fail('landingPage.headline is required');
   assertNoEmoji(landingPage);
+
+  if (landingPage.localization !== undefined) {
+    const localization = landingPage.localization;
+    if (!localization || typeof localization !== 'object' || Array.isArray(localization)) fail('landingPage.localization must be an object');
+    if (localization.translation !== undefined) {
+      const translation = localization.translation;
+      if (!translation || typeof translation !== 'object' || Array.isArray(translation)) fail('landingPage.localization.translation must be an object');
+      if (typeof translation.enabled !== 'boolean') fail('landingPage.localization.translation.enabled must be a boolean');
+      if (!LANGUAGE_CODES.has(translation.sourceLanguage || '')) fail('landingPage.localization.translation.sourceLanguage must come from the shared language catalogue');
+      if (!LANGUAGE_CODES.has(translation.defaultLanguage || '')) fail('landingPage.localization.translation.defaultLanguage must come from the shared language catalogue');
+      if (translation.autoDetectCountryLanguage !== undefined && typeof translation.autoDetectCountryLanguage !== 'boolean') fail('landingPage.localization.translation.autoDetectCountryLanguage must be a boolean');
+      if (translation.generatedTranslations !== undefined) {
+        if (!Array.isArray(translation.generatedTranslations)) fail('landingPage.localization.translation.generatedTranslations must be an array');
+        const generatedKeys = new Set();
+        const configuredRegionKeys = new Set(Array.isArray(localization.regionalPages) ? localization.regionalPages.map((region) => region?.key).filter(Boolean) : []);
+        translation.generatedTranslations.forEach((generated, generatedIndex) => {
+          const path = `landingPage.localization.translation.generatedTranslations[${generatedIndex}]`;
+          if (!generated || typeof generated !== 'object' || Array.isArray(generated)) fail(`${path} must be an object`);
+          if (!LANGUAGE_CODES.has(generated.language || '')) fail(`${path}.language must come from the shared language catalogue`);
+          if (generated.regionKey !== undefined && generated.regionKey !== null && !REGION_KEY.test(generated.regionKey)) fail(`${path}.regionKey must be a regional key or null`);
+          if (generated.regionKey && !configuredRegionKeys.has(generated.regionKey)) fail(`${path}.regionKey must reference an existing regional page`);
+          const generatedKey = `${generated.regionKey || ''}:${generated.language}`;
+          if (generatedKeys.has(generatedKey)) fail(`${path} duplicates a generated region/language pair`);
+          generatedKeys.add(generatedKey);
+          if (!SOURCE_REVISION.test(generated.sourceRevision || '')) fail(`${path}.sourceRevision must be a SHA-256 revision`);
+          const hasInlinePage = Boolean(generated.page && typeof generated.page === 'object' && !Array.isArray(generated.page));
+          const hasAssetPath = generated.assetPath !== undefined;
+          const expectedAssetPath = `assets/landing-page${generated.regionKey ? `.${generated.regionKey}` : ''}.${String(generated.language || '').toLowerCase()}.json`;
+          if (hasInlinePage && hasAssetPath) fail(`${path} must use either an inline legacy page or one language asset, not both`);
+          if (hasAssetPath && generated.assetPath !== expectedAssetPath) fail(`${path}.assetPath must be ${expectedAssetPath}`);
+          if (!hasInlinePage && !hasAssetPath) fail(`${path} must include a language asset path`);
+          if (hasInlinePage && generated.page.localization !== undefined) fail(`${path}.page.localization is not allowed`);
+          if (hasInlinePage && generated.chatEmbedConfig !== undefined && (!generated.chatEmbedConfig || typeof generated.chatEmbedConfig !== 'object' || Array.isArray(generated.chatEmbedConfig))) fail(`${path}.chatEmbedConfig must be an object`);
+          if (generated.generatedAt !== undefined && (typeof generated.generatedAt !== 'string' || Number.isNaN(Date.parse(generated.generatedAt)))) fail(`${path}.generatedAt must be an ISO date string`);
+          if (hasInlinePage) validateLandingPageModel(generated.page, chatConfigPath, definitionFilePath);
+          if (hasAssetPath && definitionFilePath) {
+            const assetFilePath = nodePath.join(nodePath.resolve(nodePath.dirname(definitionFilePath), '..'), generated.assetPath);
+            if (!fs.existsSync(assetFilePath)) fail(`${path}.assetPath does not exist: ${generated.assetPath}`);
+            const asset = JSON.parse(fs.readFileSync(assetFilePath, 'utf8'));
+            if (asset.schemaVersion !== 1) fail(`${generated.assetPath}.schemaVersion must be 1`);
+            if (asset.language !== generated.language || (asset.regionKey || null) !== (generated.regionKey || null) || asset.sourceRevision !== generated.sourceRevision) {
+              fail(`${generated.assetPath} metadata must match ${path}`);
+            }
+            if (!asset.landingPage || typeof asset.landingPage !== 'object' || Array.isArray(asset.landingPage)) fail(`${generated.assetPath}.landingPage must be a complete page object`);
+            if (asset.landingPage.localization !== undefined) fail(`${generated.assetPath}.landingPage.localization is not allowed`);
+            if (asset.chatEmbedConfig !== undefined && (!asset.chatEmbedConfig || typeof asset.chatEmbedConfig !== 'object' || Array.isArray(asset.chatEmbedConfig))) fail(`${generated.assetPath}.chatEmbedConfig must be an object`);
+            validateLandingPageModel(asset.landingPage, chatConfigPath, definitionFilePath);
+          }
+        });
+      }
+    }
+    if (localization.regionalPages !== undefined) {
+      if (!Array.isArray(localization.regionalPages)) fail('landingPage.localization.regionalPages must be an array');
+      const regionKeys = new Set();
+      const countryCodes = new Set();
+      localization.regionalPages.forEach((region, regionIndex) => {
+        const path = `landingPage.localization.regionalPages[${regionIndex}]`;
+        if (!region || typeof region !== 'object' || Array.isArray(region)) fail(`${path} must be an object`);
+        if (!REGION_KEY.test(region.key || '') || regionKeys.has(region.key)) fail(`${path}.key must be a unique lowercase key containing letters, numbers, and hyphens`);
+        regionKeys.add(region.key);
+        if (!region.label || !String(region.label).trim()) fail(`${path}.label is required`);
+        if (!Array.isArray(region.countryCodes) || region.countryCodes.length === 0) fail(`${path}.countryCodes must contain at least one country`);
+        const localCountries = new Set();
+        region.countryCodes.forEach((countryCode, countryIndex) => {
+          if (!COUNTRY_CODE.test(countryCode) || localCountries.has(countryCode) || countryCodes.has(countryCode)) fail(`${path}.countryCodes[${countryIndex}] must be a unique uppercase ISO country code`);
+          localCountries.add(countryCode);
+          countryCodes.add(countryCode);
+        });
+        if (!LANGUAGE_CODES.has(region.defaultLanguage || '')) fail(`${path}.defaultLanguage must come from the shared language catalogue`);
+        if (!region.page || typeof region.page !== 'object' || Array.isArray(region.page)) fail(`${path}.page must be a complete landing page object`);
+        if (region.page.localization !== undefined) fail(`${path}.page.localization is not allowed; regional pages cannot recursively localize`);
+        validateLandingPageModel(region.page, chatConfigPath, definitionFilePath);
+      });
+    }
+  }
 
   if (landingPage.design !== undefined) {
     const design = landingPage.design;
@@ -519,9 +853,12 @@ function validate(filePath, chatConfigPath) {
     }
   }
   if (landingPage.design?.variant === 'form-operations') validateFormOperations(landingPage);
+  if (landingPage.design?.variant === 'logistics-portal') validateLogisticsPortal(landingPage);
   if (landingPage.design?.variant === 'cinematic-campaigns') validateCinematicCampaigns(landingPage);
   if (landingPage.design?.variant === 'recruiting-operations') validateRecruitingOperations(landingPage);
   if (landingPage.design?.variant === 'grocery-twin') validateGroceryTwin(landingPage);
+  if (landingPage.design?.variant === 'event-introductions') validateEventIntroductions(landingPage);
+  if (landingPage.design?.variant === 'home-introductions') validateHomeIntroductions(landingPage);
 
   if (landingPage.header !== undefined) {
     const header = landingPage.header;
@@ -934,9 +1271,21 @@ function validate(filePath, chatConfigPath) {
     }
   }
   validateCaptureCommand(landingPage, chatConfigPath);
+  validateLogisticsPortalCommand(landingPage, chatConfigPath);
   validateCinematicCommand(landingPage, chatConfigPath);
   validateRecruitingCommand(landingPage, chatConfigPath);
   validateGroceryCommand(landingPage, chatConfigPath);
+  validateEventIntroductionCommand(landingPage, chatConfigPath);
+  validateHomeIntroductionCommand(landingPage, chatConfigPath);
+}
+
+function validate(filePath, chatConfigPath) {
+  const parsed = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+
+  if (parsed.schemaVersion !== 2) fail('schemaVersion must be 2');
+  if (!parsed.resourceKey || !String(parsed.resourceKey).trim()) fail('resourceKey is required');
+  if (parsed.runtimeDataPolicy !== 'definitions_only') fail('runtimeDataPolicy must be "definitions_only"');
+  validateLandingPageModel(parsed.landingPage, chatConfigPath, filePath);
 }
 
 const filePath = process.argv[2] || 'assets/landing-page.json';

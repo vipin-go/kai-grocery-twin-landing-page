@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "language": "fi",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Tuote",
+          "target": "product"
+        },
+        {
+          "label": "Mobile",
+          "target": "mobile"
+        },
+        {
+          "label": "tarinoita",
+          "target": "stories"
+        },
+        {
+          "label": "Piirteet",
+          "target": "features"
+        },
+        {
+          "label": "Noin",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "tavata Kai"
+    },
+    "badge": "kauppasi, reseptisi ja kalorisuunnitelmasi – yhdistetty",
+    "headline": "saada ruokaostokset taas tuntumaan helpolta",
+    "subheadline": "Skannaa jääkaappi tai kuitti. Kai muuttaa jo olemassa olevan resepteiksi, laskee kalorit ja tekee ostoksia vain sen mukaan, mitä kukin ateria vielä tarvitsee.",
+    "ctaLabel": "Puhu Kaille",
+    "secondaryCtaLabel": "Skannaa resepteihin",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "Oikeat tuotteet ja hinnat",
+      "Tarkista jokainen vaihtoehto",
+      "Kotitalouden suunnittelemat kalorit",
+      "Reseptejä siitä, mitä sinulla on"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "Kai, ruokakaksosi, auringonpaisteessa keittiössä, jota ympäröivät tuoretuotteet ja viikoittainen ateriasuunnitelma"
+    },
+    "contact": {
+      "heading": "Aloita siitä, mitä sinulla on",
+      "body": "Skannaa jääkaappi tai kuitti ja anna Kain valmistella päivittäistavarakaupan aukot tarkistettavaksi."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Kotiin",
+        "subtitle": "Sinun ruokakauppakaksosi",
+        "secondaryEditionLabel": "Vähittäiskauppa",
+        "navItems": [
+          {
+            "label": "Tuote",
+            "target": "product"
+          },
+          {
+            "label": "Mobile",
+            "target": "mobile"
+          },
+          {
+            "label": "tarinoita",
+            "target": "stories"
+          },
+          {
+            "label": "Piirteet",
+            "target": "features"
+          },
+          {
+            "label": "Noin",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "tavata Kai",
+        "primaryCtaLabel": "Aloita kärry"
+      },
+      "hero": {
+        "ratingLabel": "kauppasi, reseptisi ja kalorisuunnitelmasi – yhdistetty",
+        "heading": "saada ruokaostokset taas tuntumaan helpolta",
+        "body": "Skannaa jääkaappi tai kuitti. Kai muuttaa jo olemassa olevan resepteiksi, laskee kalorit ja tekee ostoksia vain sen mukaan, mitä kukin ateria vielä tarvitsee.",
+        "primaryCtaLabel": "Puhu Kaille",
+        "secondaryCtaLabel": "Skannaa resepteihin",
+        "trustItems": [
+          "Oikeat tuotteet ja hinnat",
+          "Tarkista jokainen vaihtoehto",
+          "Kotitalouden suunnittelemat kalorit",
+          "Reseptejä siitä, mitä sinulla on"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "Kai, koko kehon päivittäistavarakaupan kaksospersoona",
+        "chat": {
+          "statusLabel": "Suora",
+          "subtitle": "jääkaapista reseptiin -assistentti",
+          "openingMessage": "Hei, olen Kai. Näytä minulle jääkaappi, ruokakomero tai äskettäinen kuitti. Suosittelen reseptejä siitä, mitä sinulla on, ja pidä kulutus, kalorit ja puuttuvat ainesosat näkyvissä.",
+          "visitorMessage": "Skannaa jääkaappini ja näytä, mitä voin kokata tänä iltana.",
+          "assistantMessage": "Muutan jo olemassa olevan reseptivaihtoehdoiksi, näytän kaloreita annosta kohden ja ostan vain puuttuvat ainekset.",
+          "inputPlaceholder": "Pyydä päivittäistavaroita, reseptiä tai kalorisekkiä…",
+          "suggestions": [
+            "Kauramaitotarjoukset",
+            "Tasapainota viikkoni",
+            "Kypsennä jääkaapistani"
+          ],
+          "demoNote": "Havainnollistava päivittäistavarakauppa, resepti ja ravitsemusdemo · Tarkista ainesosat ja ruokavalion tarpeet",
+          "sampleProduct": {
+            "badge": "Tarjous löytyi · ruokakomero+",
+            "name": "Oatly Barista Edition",
+            "detail": "1 l · 590 kcal · 20% alennus",
+            "price": "2,39 €",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Valitse jääkaappi, ruokakomero, kuitti tai ostoslistakuva",
+          "uploadHint": "JPEG, PNG, WebP tai HEIC · Jopa 6 kuvaa ja 10 Mt kukin",
+          "analyzingLabel": "Kai lukee näkyviä päivittäistavaroita…",
+          "inventoryHeading": "Tarkista poimittu inventaario",
+          "inventoryBody": "Korjaa määrät, poista virheet tai lisää mitä tahansa, mitä Kailta jäi paitsi.",
+          "itemNameLabel": "Kohta",
+          "quantityLabel": "Määrä",
+          "unitLabel": "Yksikkö",
+          "addItemLabel": "Lisää tavara",
+          "removeItemLabel": "Poistaa",
+          "chatLabel": "Oikein chatilla",
+          "voiceLabel": "oikein äänellä · 5 min",
+          "reviewLabel": "Tarkista luettelo",
+          "editLabel": "Edit inventory",
+          "confirmationHeading": "varasto valmis",
+          "confirmationBody": "Kai vahvistaa tämän luettelon ennen kärryn ehdottamista. Mitään ei tilata ilman lupaasi.",
+          "signInLabel": "Kirjaudu sisään jatkaaksesi",
+          "signInNotice": "Kirjaudu sisään siirtääksesi tämän päivittäistavarakaupan kaappauksen yksityiseen KAI-istuntoon ja jatka varaston työnkulkua. Mitään ei tilata ilman nimenomaista hyväksyntääsi.",
+          "expiryCopy": "Lunastamattomat esikatselut vanhenevat tunnin kuluttua",
+          "errorCopy": "Kai ei osannut lukea päivittäistavarakauppaa tuosta kuvasta. Kokeile selkeämpää jääkaappi-, ruokakomero-, kuitti- tai ostoslistakuvaa."
+        }
+      },
+      "product": {
+        "kicker": "ruokakauppasi + resepti + kalori kaksoset",
+        "heading": "Mitä voimme kokata – ja mikä vielä tarvitsee ostoksia?",
+        "body": "Kai yhdistää skannauksen, reseptit, tuotehaun, kalorit ja kärryn, joten jokainen ateria alkaa siitä, mitä sinulla jo on.",
+        "capabilityLabels": [
+          "tuotehaku",
+          "kalori",
+          "reseptiideoita",
+          "kuva listalle",
+          "ääniapu",
+          "sopimusten sovitus"
+        ],
+        "cards": [
+          {
+            "title": "Live Cart",
+            "body": "Vertaa todellisia tuotteita, määriä ja hintoja yhdessä tarkastettavassa ostoskorissa.",
+            "metric": "kuluttaa + kaloreita yhdessä"
+          },
+          {
+            "title": "Reseptejä skannauksestasi",
+            "body": "Katso kypsennettävät reseptit sen mukaan, mikä on jo jääkaapissa ja mikä puuttuu.",
+            "metric": "kokki ensin, shoppaile toiseksi"
+          },
+          {
+            "title": "kaukopuhe",
+            "body": "Vertaa hyödyllisiä otteluita säilyttäen reseptikattavuuden ja kotitalouden tavoitteet.",
+            "metric": "Real grocery sources"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "Kai taskussasi",
+        "heading": "jääkaapista reseptiin kärryihin,",
+        "accentHeading": "Missä tahansa oletkin.",
+        "items": [
+          {
+            "label": "rakentaa kärry",
+            "title": "Live-kärry, jossa on kulutus- ja kalorisuunnitelmasi yhdessä.",
+            "body": "Pyydä tuotetta, vertaa todellista osumaa ja katso, kuinka hinta, kalorit ja määrä muuttavat viikkoa."
+          },
+          {
+            "label": "skannata jääkaappi",
+            "title": "Muuta jääkaappi tai kuittikuva resepteiksi, joita voit valmistaa.",
+            "body": "Kai tunnistaa, mitä on käsillä, arvioi kalorit ja ehdottaa reseptejä ennen puuttuvien ainesosien luettelon luomista."
+          },
+          {
+            "label": "Valitse resepti",
+            "title": "Valitse ateria ja osta sitten vain se, mikä puuttuu.",
+            "body": "Vertaa kypsennysaikaa, kaloreita annosta kohti, ainesosien peittävyyttä ja pientä päivittäistavarakauppaa kussakin reseptissä."
+          },
+          {
+            "label": "Puhu Kaille",
+            "title": "Keskustele myymälän ja viikoittaisen tavoitteesi kautta.",
+            "body": "Sano, mikä loppui tai mitä haluat kokata. Kai pitää kärryn, kulutuksen ja kalorien kuilun kontekstissa."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "Viikkokauppa, uudelleen rakennettu",
+        "heading": "Hallitse päivittäistavaroita, reseptejä, kulutusta ja kaloreita selkeästi",
+        "items": [
+          {
+            "number": "01",
+            "title": "Resepti, tuote ja kalorien löytö",
+            "body": "Skannaa mitä sinulla on tai kuvaile haluamaasi ateriaa. Kai näyttää kypsennettävät reseptit, kalorit annosta kohti ja tarkan päivittäistavarakaupan eron jokaiselle vaihtoehdolle.",
+            "tags": [
+              "jääkaappi",
+              "reseptit",
+              "Calories",
+              "puuttuvat tavarat"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "valitsemistasi aterioista rakennettu kärry",
+            "body": "Valitse resepti ja Kai poistaa jo käsillä olevat ainekset. Vain puuttuvat tuotteet tulevat ostoskoriin, ja kulutus ja kotitalouksien kalorit päivitetään yhdessä.",
+            "tags": [
+              "reseptin peitto",
+              "Vain kadonnut",
+              "Viikoittainen KCAL"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "Skannaa kerran. kokata mistä siellä on.",
+            "body": "Kai muuttaa jääkaapin, ruokakomero tai kuittiskannauksen kolmeksi käytännölliseksi reseptiksi. Vertaa aikaa ja kaloreita, valitse yksi ja tarkista sitten vain sen puuttuvat ainesosat.",
+            "tags": [
+              "3 reseptivaihtoehtoa",
+              "keitinaika",
+              "Kalorit / tarjoilu"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "Miltä ruoanlaitto ja shoppailu Kain kanssa tuntuu",
+        "heading": "pieniä hetkiä jääkaapin ja illallisen selkeyttä",
+        "testimonials": [
+          {
+            "quote": "Kai muuttaa jääkaapissamme olevan illallisideoita ja näyttää sitten kustannukset ja perheen kalorit ennen kuin valitsen.",
+            "name": "Mila",
+            "meta": "kiireinen vanhempi"
+          },
+          {
+            "quote": "Pyydän juustotarjouksia, vertaan todellisia vaihtoehtoja ja lisään juuri haluamani. Ei välilehtihyppelyä.",
+            "name": "Nooa",
+            "meta": "viikoittainen ostos"
+          },
+          {
+            "quote": "Kuittiskannaus antoi minulle kolme reseptiä, kalorit annosta kohti ja vain ainekset, jotka minun piti vielä ostaa.",
+            "name": "Sofia",
+            "meta": "kotitekoinen"
+          },
+          {
+            "quote": "Pidän siitä, että Kai rakentaa kärryn ensin ja kysyy suunnittelukysymyksiä vain silloin, kun niillä on merkitystä.",
+            "name": "Lucas",
+            "meta": "Opiskelija-"
+          },
+          {
+            "quote": "Ääni on täydellinen, kun käteni ovat täynnä keittiössä. Kerron vain, mikä loppui.",
+            "name": "Emma",
+            "meta": "aterianvalmistusfani"
+          },
+          {
+            "quote": "Kaikki pysyy tarkastettavissa. Voin muuttaa määriä ja nähdä sekä kulutuksen että kalorien kokonaisliikkeen mukanani.",
+            "name": "maallikko",
+            "meta": "älypää"
+          }
+        ],
+        "articles": [
+          {
+            "category": "viikkorutiini",
+            "title": "seitsemän minuutin kauppa ja ateriasuunnitelma",
+            "body": "Yksin ostaja muutti hajallaan olevan peruslistan kärryksi, kolmeksi kypsennettäväksi illalliseksi ja 10 850 suunniteltua kaloria."
+          },
+          {
+            "category": "jääkaapista reseptiin",
+            "title": "jääkaappikuvasta tämän illan illalliseen",
+            "body": "Kai tunnisti ainesosat, ehdotti kolmea reseptiä ja erotti sen, mikä oli jo olemassa, mitä oli vielä ostamassa."
+          },
+          {
+            "category": "Älykäs reseptihaku",
+            "title": "älykäs haku, joka näkee koko viikon",
+            "body": "Haku painoi hintaa, kaloreita, reseptien kattavuutta ja proteiinivajetta menettämättä kaupan lankaa."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "yksi paikka, monta tapaa",
+        "heading": "Jokaisesta syötteestä tulee reseptejä, yksi kärry ja yksi kalorisuunnitelma",
+        "body": "Valokuva, äänimuistiinpano, kuitti tai luettelo syöttää saman näkymän alla: ainekset käsillä, reseptit, joita voit valmistaa, tuotteet puuttuvat edelleen, viikoittainen kulutus ja kotitalouksien kaloreita.",
+        "capabilities": [
+          "Kuva",
+          "Ääni",
+          "kaupat",
+          "Vastaanotto",
+          "Lista",
+          "Toimitus",
+          "Calories",
+          "Talous",
+          "reseptit"
+        ]
+      },
+      "closing": {
+        "kicker": "Seuraava jääkaapin päivällinen -suunnitelmasi",
+        "heading": "Aloita siitä, mitä sinulla on. Osta vain sitä, mikä puuttuu.",
+        "body": "Skannaa jääkaappi tai kuitti. Kai ehdottaa kypsennettäviä reseptejä, näyttää kaloreita annosta kohti ja muuttaa puuttuvat ainekset kärryiksi, jonka voit tarkistaa.",
+        "ctaLabel": "Skannaa löytääksesi reseptejä"
+      },
+      "footer": {
+        "tagline": "jääkaapista ostoskoriin ruokakaksosi. Etsi reseptejä siitä, mitä sinulla on, katso kaloreita ja osta vain sitä, mikä puuttuu.",
+        "groups": [
+          {
+            "label": "Tuote",
+            "links": [
+              {
+                "label": "ruokakaupan esittely",
+                "target": "product"
+              },
+              {
+                "label": "Kuinka se toimii",
+                "target": "features"
+              },
+              {
+                "label": "tarinoita",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "kai",
+            "links": [
+              {
+                "label": "Tietoja KAI",
+                "target": "about"
+              },
+              {
+                "label": "Yhteyshenkilö",
+                "target": "contact"
+              },
+              {
+                "label": "Takaisin alkuun",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 Kai · Grocery Twin",
+        "closingStatement": "hyviä valintoja. Hieno viikko."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

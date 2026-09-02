@@ -8,6 +8,50 @@
       { "key": "subheadline", "type": "text", "required": false },
       { "key": "ctaLabel", "type": "text", "required": false }
     ],
+    "localization": {
+      "optional": true,
+      "optionalForBackwardCompatibility": true,
+      "requiredForNewLandingPages": true,
+      "schemaVersion": 2,
+      "translation": {
+        "createDefault": {
+          "enabled": true,
+          "sourceLanguage": "en",
+          "defaultLanguage": "en",
+          "autoDetectCountryLanguage": true,
+          "generatedTranslations": []
+        },
+        "fields": ["enabled", "sourceLanguage", "defaultLanguage", "autoDetectCountryLanguage", "generatedTranslations"],
+        "languageCatalogue": "shared",
+        "countryLanguageSource": "cldr_likely_subtags",
+        "autoDetectCountryLanguageDefault": true,
+        "generatedTranslationStorage": {
+          "mode": "source_revisioned_per_language_git_json",
+          "servedBeforeGeneration": true,
+          "consumesVisitorQuota": false,
+          "manifestFields": ["language", "regionKey", "sourceRevision", "assetPath", "generatedAt"],
+          "assetSchemaVersion": 1,
+          "assetFields": ["schemaVersion", "language", "regionKey", "sourceRevision", "landingPage", "chatEmbedConfig", "generatedAt"],
+          "defaultAssetPattern": "assets/landing-page.<language>.json",
+          "regionalAssetPattern": "assets/landing-page.<regionKey>.<language>.json",
+          "legacyInlinePageReadCompatible": true,
+          "lazyLoadSelectedAssetOnly": true
+        },
+        "publicDistinctTargetLimit": 3,
+        "windowHours": 24,
+        "quotaAuthorConfigurable": false
+      },
+      "regionalPages": {
+        "fields": ["key", "label", "countryCodes", "defaultLanguage", "page"],
+        "countryCodeFormat": "uppercase_iso_3166_1_alpha_2",
+        "uniqueRegionKeys": true,
+        "uniqueCountryAssignments": true,
+        "pageMode": "complete_clone",
+        "allowDifferentRegisteredTheme": true,
+        "nestedLocalization": false,
+        "routingSource": "server_request_ip_country"
+      }
+    },
     "featureItem": {
       "fields": [
         { "key": "icon", "type": "text", "required": false, "description": "One of the allowed icon tokens — see SKILL.md" },
@@ -40,6 +84,31 @@
           "runtimeLimits": "platform_controlled"
         },
         "optionalFooterFields": ["poweredBy", "closingStatement", "copyright"]
+      }
+    },
+    "logisticsPortal": {
+      "requiredWhen": { "design.variant": "logistics-portal" },
+      "sections": ["header", "hero", "ticker", "edge", "platform", "process", "workflows", "pilot", "footer"],
+      "constraints": {
+        "navigationItems": 3,
+        "proofItems": 3,
+        "heroSuggestions": 3,
+        "workflowTabs": ["customs", "carrier"],
+        "simulationSamples": 2,
+        "intakeSteps": 4,
+        "reviewExceptionsPerSample": 3,
+        "capabilityCards": 4,
+        "processSteps": 6,
+        "primaryWorkflows": 2,
+        "secondaryWorkflows": 4,
+        "pilotSteps": 3,
+        "rehearsal": {
+          "requires": ["enabled", "commandTrigger"],
+          "commandExecutionType": "operator_action",
+          "workflowResourceKey": "workflow.emil.rehearse-filing",
+          "anonymousRuntime": "illustrative_only"
+        },
+        "runtimeDataPolicy": "definitions_only"
       }
     },
     "cinematicCampaigns": {
@@ -109,6 +178,51 @@
           "requires": ["enabled", "commandTrigger"],
           "commandExecutionType": "operator_action",
           "attachmentInputKey": "inventory_photos",
+          "runtimeLimits": "platform_controlled"
+        },
+        "runtimeDataPolicy": "definitions_only"
+      }
+    },
+    "eventIntroductions": {
+      "requiredWhen": { "design.variant": "event-introductions" },
+      "sections": ["header", "event", "tracks", "hero", "about", "process", "pairing", "faq", "waitlist", "closing", "footer"],
+      "constraints": {
+        "navigationItems": 5,
+        "tracks": ["founder-investor", "founder-cofounder", "startup-startup"],
+        "briefFields": ["organization", "role", "currentEvent", "goal", "offer", "need", "fitCriteria", "availability", "privateConstraints"],
+        "aboutImages": 3,
+        "principles": 3,
+        "processSteps": 4,
+        "pairingImages": 2,
+        "pairingCards": 3,
+        "faqItems": 6,
+        "heroDemo": {
+          "requires": ["enabled", "commandTrigger"],
+          "commandExecutionType": "operator_action",
+          "anonymousRuntime": "brief_only",
+          "runtimeLimits": "platform_controlled"
+        },
+        "runtimeDataPolicy": "definitions_only"
+      }
+    },
+    "homeIntroductions": {
+      "requiredWhen": { "design.variant": "home-introductions" },
+      "sections": ["header", "service", "tracks", "hero", "audience", "privacy", "process", "proposals", "meet", "footer"],
+      "constraints": {
+        "navigationItems": 3,
+        "serviceModes": ["event", "city"],
+        "tracks": ["buying", "selling"],
+        "trackFields": ["id", "label", "responseMessage", "composerPlaceholder", "processSteps", "briefFields"],
+        "briefFields": ["serviceMode", "area", "propertyType", "propertyBrief", "budgetOrPrice", "mustHavesOrHighlights", "dealbreakersOrBuyerCriteria", "timing", "readiness", "privateConstraints"],
+        "privacyStages": ["proposed", "accepted", "confirmed"],
+        "processStepsPerTrack": 3,
+        "processStepMedia": ["image", "alt"],
+        "proposalCards": 3,
+        "requiredDisclaimers": ["not a broker", "not a real estate agent", "not a valuer", "not a negotiator"],
+        "heroDemo": {
+          "requires": ["enabled", "commandTrigger"],
+          "commandExecutionType": "operator_action",
+          "anonymousRuntime": "brief_only",
           "runtimeLimits": "platform_controlled"
         },
         "runtimeDataPolicy": "definitions_only"

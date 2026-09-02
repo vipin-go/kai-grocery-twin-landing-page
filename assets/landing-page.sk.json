@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "language": "sk",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Produkt",
+          "target": "product"
+        },
+        {
+          "label": "Mobil",
+          "target": "mobile"
+        },
+        {
+          "label": "Príbehy",
+          "target": "stories"
+        },
+        {
+          "label": "Funkcie",
+          "target": "features"
+        },
+        {
+          "label": "O nás",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "Zoznámte sa s KAI"
+    },
+    "badge": "Váš obchod, recepty a kalorický plán — prepojené",
+    "headline": "Nákup potravín bude opäť jednoduchý",
+    "subheadline": "Naskenujte chladničku alebo bloček. KAI premení to, čo už máte, na recepty, spočíta kalórie a nakúpi len to, čo každému jedlu ešte chýba.",
+    "ctaLabel": "Hovorte s KAI",
+    "secondaryCtaLabel": "Sken do receptov",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "Skutočné produkty a ceny",
+      "Skontrolujte každý výber",
+      "Kalórie plánované pre domácnosť",
+      "Recepty z toho, čo máte"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "KAI, váš Grocery Twin, v slnečnej kuchyni obklopenej čerstvými potravinami a týždenným plánom jedál"
+    },
+    "contact": {
+      "heading": "Začnite s tým, čo máte",
+      "body": "Naskenujte chladničku alebo bloček a nechajte KAI pripraviť medzery v nákupnom zozname na kontrolu."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Domov",
+        "subtitle": "Váš Grocery Twin",
+        "secondaryEditionLabel": "Maloobchod",
+        "navItems": [
+          {
+            "label": "Produkt",
+            "target": "product"
+          },
+          {
+            "label": "Mobil",
+            "target": "mobile"
+          },
+          {
+            "label": "Príbehy",
+            "target": "stories"
+          },
+          {
+            "label": "Funkcie",
+            "target": "features"
+          },
+          {
+            "label": "O nás",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "Zoznámte sa s KAI",
+        "primaryCtaLabel": "Začať nákupný vozík"
+      },
+      "hero": {
+        "ratingLabel": "Váš obchod, recepty a kalorický plán — prepojené",
+        "heading": "Nákup potravín bude opäť jednoduchý",
+        "body": "Naskenujte chladničku alebo bloček. KAI premení to, čo už máte, na recepty, spočíta kalórie a nakúpi len to, čo každému jedlu ešte chýba.",
+        "primaryCtaLabel": "Hovorte s KAI",
+        "secondaryCtaLabel": "Sken do receptov",
+        "trustItems": [
+          "Skutočné produkty a ceny",
+          "Skontrolujte každý výber",
+          "Kalórie plánované pre domácnosť",
+          "Recepty z toho, čo máte"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "KAI, vaša kompletná Grocery Twin osobnosť",
+        "chat": {
+          "statusLabel": "Online",
+          "subtitle": "Asistent od chladničky k receptu",
+          "openingMessage": "Ahoj, som KAI. Ukážte mi chladničku, špajzu alebo nedávny bloček. Navrhnem recepty z toho, čo máte, a nechám výdavky, kalórie a chýbajúce suroviny viditeľné.",
+          "visitorMessage": "Naskenuj mi chladničku a ukáž, čo môžem dnes večer uvariť.",
+          "assistantMessage": "Premením to, čo tam už je, na možnosti receptov, ukážem kalórie na porciu a nakúpim len suroviny, ktoré stále chýbajú.",
+          "inputPlaceholder": "Požiadajte o potraviny, recept alebo kontrolu kalórií…",
+          "suggestions": [
+            "Zľavy na ovsené mlieko",
+            "Vyvaž mi týždeň",
+            "Var z mojej chladničky"
+          ],
+          "demoNote": "Ilustratívna ukážka nákupov, receptov a výživy · Skontrolujte suroviny a diétne potreby",
+          "sampleProduct": {
+            "badge": "Nájdená ponuka · Pantry+",
+            "name": "Oatly Barista Edition",
+            "detail": "1 L · 590 kcal · zľava 20 %",
+            "price": "2,39 €",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Vyberte obrázok chladničky, špajze, bločku alebo nákupného zoznamu",
+          "uploadHint": "JPEG, PNG, WebP alebo HEIC · až 6 obrázkov a 10 MB každý",
+          "analyzingLabel": "KAI číta viditeľné potraviny…",
+          "inventoryHeading": "Skontrolujte extrahovaný inventár",
+          "inventoryBody": "Opravte množstvá, odstráňte chyby alebo pridajte čokoľvek, čo KAI zmeškal.",
+          "itemNameLabel": "Položka",
+          "quantityLabel": "Množstvo",
+          "unitLabel": "Jednotka",
+          "addItemLabel": "Pridať položku",
+          "removeItemLabel": "Odstrániť",
+          "chatLabel": "Opraviť cez chat",
+          "voiceLabel": "Opraviť hlasom · 5 min",
+          "reviewLabel": "Skontrolovať inventár",
+          "editLabel": "Upraviť inventár",
+          "confirmationHeading": "Inventár je pripravený",
+          "confirmationBody": "KAI pred navrhnutím vozíka znova potvrdí tento zoznam. Nič sa neobjedná bez vášho súhlasu.",
+          "signInLabel": "Prihláste sa a pokračujte",
+          "signInNotice": "Prihláste sa, aby ste tento záznam nákupu presunuli do súkromnej relácie KAI a pokračovali v toku doplňovania. Nič sa neobjedná bez vášho výslovného súhlasu.",
+          "expiryCopy": "Neprihlásené náhľady vypršia po jednej hodine",
+          "errorCopy": "KAI nedokázal z tohto obrázka prečítať nákupný zoznam. Skúste jasnejšiu fotografiu chladničky, špajze, bločku alebo nákupného zoznamu."
+        }
+      },
+      "product": {
+        "kicker": "Váš Grocery + Recipe + Calorie Twin",
+        "heading": "Čo môžeme uvariť — a čo ešte treba dokúpiť?",
+        "body": "KAI prepája skenovanie, recepty, vyhľadávanie produktov, kalórie a nákupný vozík, aby každé jedlo začínalo tým, čo už máte.",
+        "capabilityLabels": [
+          "Vyhľadávanie produktov",
+          "Kalorický plán",
+          "Nápady na recepty",
+          "Obrázok na zoznam",
+          "Hlasová pomoc",
+          "Párovanie ponúk"
+        ],
+        "cards": [
+          {
+            "title": "Živý vozík",
+            "body": "Porovnajte skutočné produkty, množstvá a ceny v jednom kontrolovateľnom vozíku.",
+            "metric": "Výdavky + kalórie spolu"
+          },
+          {
+            "title": "Recepty z vášho skenu",
+            "body": "Pozrite si recepty, ktoré sa dajú uvariť, zoradené podľa toho, čo už je v chladničke a čo chýba.",
+            "metric": "Najprv varte, potom nakupujte"
+          },
+          {
+            "title": "Radar ponúk",
+            "body": "Porovnávajte užitočné zhody pri zachovaní pokrytia receptov a cieľov domácnosti.",
+            "metric": "Skutočné zdroje potravín"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "KAI vo vrecku",
+        "heading": "Od chladničky k receptu k vozíku,",
+        "accentHeading": "Kdekoľvek ste.",
+        "items": [
+          {
+            "label": "Zostavte vozík",
+            "title": "Živý vozík s vaším plánom výdavkov a kalórií spolu.",
+            "body": "Požiadajte o položku, porovnajte skutočnú zhodu a sledujte, ako cena, kalórie a množstvo menia týždeň."
+          },
+          {
+            "label": "Naskenujte chladničku",
+            "title": "Premeníte fotografiu chladničky alebo bločku na recepty, ktoré môžete uvariť.",
+            "body": "KAI identifikuje, čo je k dispozícii, odhadne kalórie a navrhne recepty pred zostavením zoznamu chýbajúcich surovín."
+          },
+          {
+            "label": "Vyberte recept",
+            "title": "Vyberte si jedlo a potom kúpte len to, čo chýba.",
+            "body": "Porovnajte čas varenia, kalórie na porciu, pokrytie surovín a malý nákupný rozdiel pre každý recept."
+          },
+          {
+            "label": "Hovorte s KAI",
+            "title": "Prediskutujte nákup a váš týždenný cieľ.",
+            "body": "Povedzte, čo sa minulo alebo čo chcete variť. KAI udrží vozík, výdavky a kalorický rozdiel v kontexte."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "Týždenný nákup, prestavaný",
+        "heading": "Spravujte potraviny, recepty, výdavky a kalórie s prehľadnosťou",
+        "items": [
+          {
+            "number": "01",
+            "title": "Objavovanie receptov, produktov a kalórií",
+            "body": "Naskenujte, čo máte, alebo opíšte jedlo, ktoré chcete. KAI zobrazí recepty, ktoré sa dajú uvariť, kalórie na porciu a presný nákupný rozdiel pre každú možnosť.",
+            "tags": [
+              "Sken chladničky",
+              "Recepty",
+              "Kalórie",
+              "Chýbajúce položky"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "Vozík postavený z jedál, ktoré si vyberiete",
+            "body": "Vyberte si recept a KAI odstráni suroviny, ktoré už máte. Do vozíka sa dostanú len chýbajúce produkty, pričom výdavky a kalórie pre domácnosť sa aktualizujú spolu.",
+            "tags": [
+              "Pokrytie receptov",
+              "Len chýbajúce",
+              "Týždenné kcal"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "Naskenujte raz. Varte z toho, čo tam je.",
+            "body": "KAI premení sken chladničky, špajze alebo bločku na tri praktické recepty. Porovnajte čas a kalórie, vyberte si jeden a potom skontrolujte len jeho chýbajúce suroviny.",
+            "tags": [
+              "3 možnosti receptov",
+              "Čas varenia",
+              "Kalórie / porcia"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "Ako sa cíti varenie a nakupovanie s KAI",
+        "heading": "Malé momenty jasnosti od chladničky po večeru",
+        "testimonials": [
+          {
+            "quote": "KAI premení to, čo už máme v chladničke, na nápady na večeru a potom mi pred výberom ukáže cenu a kalórie pre rodinu.",
+            "name": "Mila",
+            "meta": "Zaneprázdnený rodič"
+          },
+          {
+            "quote": "Pýtam sa na ponuky syra, porovnávam skutočné možnosti a pridám presne ten, ktorý chcem. Žiadne prepínanie kariet.",
+            "name": "Noah",
+            "meta": "Týždenný nakupujúci"
+          },
+          {
+            "quote": "Sken bločku mi dal tri recepty, kalórie na porciu a len suroviny, ktoré som ešte potreboval kúpiť.",
+            "name": "Sofia",
+            "meta": "Domáci kuchár"
+          },
+          {
+            "quote": "Páči sa mi, že KAI najprv zostaví vozík a otázky plánovania kladie len vtedy, keď na tom záleží.",
+            "name": "Lucas",
+            "meta": "Študent"
+          },
+          {
+            "quote": "Hlas je ideálny, keď mám v kuchyni plné ruky. KAI len poviem, čo sa minulo.",
+            "name": "Emma",
+            "meta": "Fanúšik meal prepu"
+          },
+          {
+            "quote": "Všetko zostáva kontrolovateľné. Môžem meniť množstvá a vidieť, ako sa výdavky aj celkové kalórie hýbu so mnou.",
+            "name": "Daan",
+            "meta": "Šikovný nakupujúci"
+          }
+        ],
+        "articles": [
+          {
+            "category": "Týždenná rutina",
+            "title": "Sedemminútový nákup a plán jedál",
+            "body": "Samostatný nakupujúci premenil rozptýlený zoznam základných potravín na vozík, tri uvariteľné večere a 10 850 naplánovaných kalórií."
+          },
+          {
+            "category": "Od chladničky k receptu",
+            "title": "Od fotky chladničky k dnešnej večeri",
+            "body": "KAI rozpoznal suroviny, navrhol tri recepty a oddelil to, čo už tam bolo, od toho, čo sa ešte muselo kúpiť."
+          },
+          {
+            "category": "Inteligentné vyhľadávanie receptov",
+            "title": "Inteligentné vyhľadávanie, ktoré vidí celý týždeň",
+            "body": "Vyhľadávanie, ktoré zvážilo cenu, kalórie, pokrytie receptov a bielkovinový rozdiel bez straty kontextu nákupu."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "Jedno miesto, veľa vstupov",
+        "heading": "Každý vstup sa stane receptmi, jedným vozíkom a jedným kalorickým plánom",
+        "body": "Fotka, hlasová poznámka, bloček alebo zoznam napájajú rovnaký pohľad: suroviny poruke, recepty, ktoré môžete uvariť, chýbajúce produkty, týždenné výdavky a kalórie pre domácnosť.",
+        "capabilities": [
+          "Fotka",
+          "Hlas",
+          "Ponuky",
+          "Bloček",
+          "Zoznam",
+          "Doručenie",
+          "Kalórie",
+          "Domácnosť",
+          "Recepty"
+        ]
+      },
+      "closing": {
+        "kicker": "Váš ďalší plán od chladničky k večeri",
+        "heading": "Začnite s tým, čo máte. Nakupujte len to, čo chýba.",
+        "body": "Naskenujte chladničku alebo bloček. KAI navrhne recepty, ktoré sa dajú uvariť, ukáže kalórie na porciu a premení chýbajúce suroviny na kontrolovateľný vozík.",
+        "ctaLabel": "Skenom nájdite recepty"
+      },
+      "footer": {
+        "tagline": "Váš Grocery Twin od chladničky k vozíku. Nájdite recepty z toho, čo máte, uvidíte kalórie a nakúpite len to, čo chýba.",
+        "groups": [
+          {
+            "label": "Produkt",
+            "links": [
+              {
+                "label": "Ukážka nákupu potravín",
+                "target": "product"
+              },
+              {
+                "label": "Ako to funguje",
+                "target": "features"
+              },
+              {
+                "label": "Príbehy",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "KAI",
+            "links": [
+              {
+                "label": "O KAI",
+                "target": "about"
+              },
+              {
+                "label": "Kontakt",
+                "target": "contact"
+              },
+              {
+                "label": "Späť hore",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 KAI · Grocery Twin",
+        "closingStatement": "Dobré voľby. Skvelý týždeň."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

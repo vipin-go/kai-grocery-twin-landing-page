@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "language": "de",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Produkt",
+          "target": "product"
+        },
+        {
+          "label": "Mobil",
+          "target": "mobile"
+        },
+        {
+          "label": "Geschichten",
+          "target": "stories"
+        },
+        {
+          "label": "Funktionen",
+          "target": "features"
+        },
+        {
+          "label": "Über",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "Lerne KAI kennen"
+    },
+    "badge": "Dein Shop, deine Rezepte und dein Kalorienplan – alles verbunden",
+    "headline": "Mach den Wocheneinkauf wieder einfach",
+    "headlineAccent": "wieder einfach",
+    "subheadline": "Scanne den Kühlschrank oder einen Kassenbon. KAI verwandelt das, was schon da ist, in Rezepte, zählt die Kalorien und kauft nur das, was für jede Mahlzeit noch fehlt.",
+    "ctaLabel": "Sprich mit KAI",
+    "secondaryCtaLabel": "Vom Scan zu Rezepten",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "Echte Produkte und echte Preise",
+      "Überprüfe jede Auswahl",
+      "Kalorienplanung pro Haushalt",
+      "Rezepte aus dem, was du hast"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "KAI, dein Grocery Twin, in einer sonnigen Küche umgeben von frischen Produkten und einem Wochenplan"
+    },
+    "contact": {
+      "heading": "Starte mit dem, was du hast",
+      "body": "Scanne den Kühlschrank oder einen Kassenbon und lass KAI die Einkaufslücken zur Überprüfung vorbereiten."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Start",
+        "subtitle": "Dein Grocery Twin",
+        "secondaryEditionLabel": "Einzelhandel",
+        "navItems": [
+          {
+            "label": "Produkt",
+            "target": "product"
+          },
+          {
+            "label": "Mobil",
+            "target": "mobile"
+          },
+          {
+            "label": "Geschichten",
+            "target": "stories"
+          },
+          {
+            "label": "Funktionen",
+            "target": "features"
+          },
+          {
+            "label": "Über",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "Lerne KAI kennen",
+        "primaryCtaLabel": "Warenkorb starten"
+      },
+      "hero": {
+        "ratingLabel": "Dein Shop, deine Rezepte und dein Kalorienplan – alles verbunden",
+        "heading": "Mach den Wocheneinkauf wieder einfach",
+        "body": "Scanne den Kühlschrank oder einen Kassenbon. KAI verwandelt das, was schon da ist, in Rezepte, zählt die Kalorien und kauft nur das, was für jede Mahlzeit noch fehlt.",
+        "primaryCtaLabel": "Sprich mit KAI",
+        "secondaryCtaLabel": "Vom Scan zu Rezepten",
+        "trustItems": [
+          "Echte Produkte und echte Preise",
+          "Überprüfe jede Auswahl",
+          "Kalorienplanung pro Haushalt",
+          "Rezepte aus dem, was du hast"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "KAI, deine vollständige Grocery-Twin-Persona",
+        "chat": {
+          "statusLabel": "Online",
+          "subtitle": "Kühlschrank-zu-Rezept-Assistent",
+          "openingMessage": "Hi, ich bin KAI. Zeig mir den Kühlschrank, die Vorratskammer oder einen aktuellen Kassenbon. Ich schlage dir Rezepte mit dem vor, was du hast, und halte Ausgaben, Kalorien und fehlende Zutaten im Blick.",
+          "visitorMessage": "Scanne meinen Kühlschrank und zeig mir, was ich heute Abend kochen kann.",
+          "assistantMessage": "Ich verwandle das, was schon da ist, in Rezeptoptionen, zeige die Kalorien pro Portion und kaufe nur die Zutaten, die noch fehlen.",
+          "inputPlaceholder": "Frag nach Lebensmitteln, einem Rezept oder einem Kaloriencheck …",
+          "suggestions": [
+            "Angebote für Hafermilch",
+            "Bring meine Woche ins Gleichgewicht",
+            "Koche mit dem, was mein Kühlschrank hergibt"
+          ],
+          "demoNote": "Illustrative Demo für Einkauf, Rezepte und Ernährung · Zutaten und Ernährungsbedürfnisse prüfen",
+          "sampleProduct": {
+            "badge": "Angebot gefunden · Pantry+",
+            "name": "Oatly Barista Edition",
+            "detail": "1 L · 590 kcal · 20 % Rabatt",
+            "price": "2,39 €",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Wähle ein Bild von Kühlschrank, Vorratskammer, Kassenbon oder Einkaufsliste",
+          "uploadHint": "JPEG, PNG, WebP oder HEIC · bis zu 6 Bilder und je 10 MB",
+          "analyzingLabel": "KAI liest die sichtbaren Lebensmittel …",
+          "inventoryHeading": "Überprüfe den erfassten Bestand",
+          "inventoryBody": "Korrigiere Mengen, entferne Fehler oder füge hinzu, was KAI übersehen hat.",
+          "itemNameLabel": "Artikel",
+          "quantityLabel": "Menge",
+          "unitLabel": "Einheit",
+          "addItemLabel": "Artikel hinzufügen",
+          "removeItemLabel": "Entfernen",
+          "chatLabel": "Per Chat korrigieren",
+          "voiceLabel": "Per Sprache korrigieren · 5 Min",
+          "reviewLabel": "Bestand prüfen",
+          "editLabel": "Bestand bearbeiten",
+          "confirmationHeading": "Bestand bereit",
+          "confirmationBody": "KAI bestätigt diese Liste erneut, bevor ein Warenkorb vorgeschlagen wird. Ohne deine Zustunft wird nichts bestellt.",
+          "signInLabel": "Anmelden, um fortzufahren",
+          "signInNotice": "Melde dich an, um diesen Lebensmittel-Scan in eine private KAI-Sitzung zu übernehmen und den Nachschub-Workflow fortzusetzen. Ohne deine ausdrückliche Zustimmung wird nichts bestellt.",
+          "expiryCopy": "Nicht beanspruchte Vorschauen verfallen nach einer Stunde",
+          "errorCopy": "KAI konnte aus diesem Bild keine Einkaufsliste lesen. Versuche es mit einem deutlicheren Foto von Kühlschrank, Vorratskammer, Kassenbon oder Einkaufsliste."
+        }
+      },
+      "product": {
+        "kicker": "Dein Einkauf + Rezept + Kalorien Twin",
+        "heading": "Was können wir kochen – und was muss noch eingekauft werden?",
+        "body": "KAI verbindet Scan, Rezepte, Produktsuche, Kalorien und Warenkorb – damit jede Mahlzeit mit dem beginnt, was du schon hast.",
+        "capabilityLabels": [
+          "Produktsuche",
+          "Kalorienplan",
+          "Rezeptideen",
+          "Bild zu Liste",
+          "Sprachhilfe",
+          "Angebotsabgleich"
+        ],
+        "cards": [
+          {
+            "title": "Live-Warenkorb",
+            "body": "Vergleiche echte Produkte, Mengen und Preise in einem prüfbaren Warenkorb.",
+            "metric": "Ausgaben + Kalorien zusammen"
+          },
+          {
+            "title": "Rezepte aus deinem Scan",
+            "body": "Sieh kochbare Rezepte, sortiert danach, was schon im Kühlschrank ist und was fehlt.",
+            "metric": "Erst kochen, dann einkaufen"
+          },
+          {
+            "title": "Angebotsradar",
+            "body": "Vergleiche passende Angebote, ohne Rezeptabdeckung und Haushaltsziele aus den Augen zu verlieren.",
+            "metric": "Echte Lebensmittelquellen"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "KAI in deiner Tasche",
+        "heading": "Vom Kühlschrank über das Rezept bis zum Warenkorb,",
+        "accentHeading": "wo auch immer du bist.",
+        "items": [
+          {
+            "label": "Warenkorb erstellen",
+            "title": "Ein Live-Warenkorb, der deine Ausgaben und deinen Kalorienplan zusammenführt.",
+            "body": "Frag nach einem Artikel, vergleiche einen echten Treffer und sieh, wie sich Preis, Kalorien und Menge im Wochenverlauf verändern."
+          },
+          {
+            "label": "Kühlschrank scannen",
+            "title": "Verwandle ein Foto vom Kühlschrank oder einen Kassenbon in Rezepte, die du kochen kannst.",
+            "body": "KAI erkennt, was vorhanden ist, schätzt die Kalorien und schlägt Rezepte vor, bevor die Liste der fehlenden Zutaten erstellt wird."
+          },
+          {
+            "label": "Wähle ein Rezept",
+            "title": "Wähle ein Gericht und kaufe nur, was fehlt.",
+            "body": "Vergleiche Kochzeit, Kalorien pro Portion, Zutatenabdeckung und die kleine Einkaufslücke jeder Rezeptur."
+          },
+          {
+            "label": "Sprich mit KAI",
+            "title": "Sprich über den Einkauf und dein Wochenziel.",
+            "body": "Sag, was ausgegangen ist oder was du kochen willst. KAI behält Warenkorb, Ausgaben und Kalorienlücke im Kontext."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "Der Wocheneinkauf, neu gedacht",
+        "heading": "Verwalte Lebensmittel, Rezepte, Ausgaben und Kalorien mit Klarheit",
+        "items": [
+          {
+            "number": "01",
+            "title": "Rezept-, Produkt- und Kalorien-Entdeckung",
+            "body": "Scanne, was du hast, oder beschreibe das Gericht, das du möchtest. KAI zeigt kochbare Rezepte, Kalorien pro Portion und die genaue Einkaufslücke für jede Option.",
+            "tags": [
+              "Kühlschrank-Scan",
+              "Rezepte",
+              "Kalorien",
+              "Fehlende Artikel"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "Ein Warenkorb, der aus deinen Mahlzeiten entsteht",
+            "body": "Wähle ein Rezept und KAI entfernt die Zutaten, die schon da sind. Nur die fehlenden Produkte landen im Warenkorb – Ausgaben und Haushaltskalorien werden gemeinsam aktualisiert.",
+            "tags": [
+              "Rezeptabdeckung",
+              "Nur Fehlendes",
+              "Wöchentliche kcal"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "Einmal scannen. Kochen, was da ist.",
+            "body": "KAI verwandelt einen Kühlschrank-, Vorrats- oder Kassenbon-Scan in drei praktische Rezepte. Vergleiche Zeit und Kalorien, wähle eins und prüfe nur die fehlenden Zutaten.",
+            "tags": [
+              "3 Rezeptoptionen",
+              "Kochzeit",
+              "Kalorien / Portion"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "Wie sich Kochen und Einkaufen mit KAI anfühlen",
+        "heading": "Kleine Momente der Klarheit vom Kühlschrank bis zum Abendessen",
+        "testimonials": [
+          {
+            "quote": "KAI verwandelt das, was schon in unserem Kühlschrank ist, in Abendessen-Ideen und zeigt mir dann vor der Auswahl die Kosten und Familienkalorien.",
+            "name": "Mila",
+            "meta": "Beschäftigter Elternteil"
+          },
+          {
+            "quote": "Ich frage nach Käseangeboten, vergleiche die echten Optionen und füge genau das hinzu, was ich will. Kein Tab-Hopping.",
+            "name": "Noah",
+            "meta": "Wöchentlicher Einkäufer"
+          },
+          {
+            "quote": "Der Kassenbon-Scan lieferte mir drei Rezepte, die Kalorien pro Portion und nur die Zutaten, die ich noch kaufen musste.",
+            "name": "Sofia",
+            "meta": "Hobbykoch"
+          },
+          {
+            "quote": "Mir gefällt, dass KAI zuerst den Warenkorb baut und Planungsfragen nur stellt, wenn sie wirklich zählen.",
+            "name": "Lucas",
+            "meta": "Student"
+          },
+          {
+            "quote": "Spracheingabe ist perfekt, wenn ich in der Küche die Hände voll habe. Ich sage KAI einfach, was ausgegangen ist.",
+            "name": "Emma",
+            "meta": "Meal-Prep-Fan"
+          },
+          {
+            "quote": "Alles bleibt prüfbar. Ich kann Mengen ändern und sehe, wie sich Ausgaben und Kaloriensumme gemeinsam bewegen.",
+            "name": "Daan",
+            "meta": "Smarter Einkäufer"
+          }
+        ],
+        "articles": [
+          {
+            "category": "Wochenroutine",
+            "title": "Der Sieben-Minuten-Einkauf und Meal-Plan",
+            "body": "Ein Single-Einkäufer hat aus einer verstreuten Vorratsliste einen Warenkorb, drei kochbare Abendessen und 10.850 geplante Kalorien gemacht."
+          },
+          {
+            "category": "Vom Kühlschrank zum Rezept",
+            "title": "Vom Kühlschrankfoto zum Abendessen heute",
+            "body": "KAI erkannte die Zutaten, schlug drei Rezepte vor und trennte das Vorhandene vom noch zu Kaufenden."
+          },
+          {
+            "category": "Intelligente Rezeptsuche",
+            "title": "Intelligente Suche, die die ganze Woche sieht",
+            "body": "Eine Suche, die Preis, Kalorien, Rezeptabdeckung und eine Proteinlücke abwog – ohne den roten Faden des Einkaufs zu verlieren."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "Ein Ort, viele Wege hinein",
+        "heading": "Jeder Input wird zu Rezepten, einem Warenkorb und einem Kalorienplan",
+        "body": "Ein Foto, eine Sprachnotiz, ein Kassenbon oder eine Liste speist dieselbe Ansicht darunter: vorhandene Zutaten, kochbare Rezepte, noch fehlende Produkte, Wochenausgaben und Haushaltskalorien.",
+        "capabilities": [
+          "Foto",
+          "Sprache",
+          "Angebote",
+          "Kassenbon",
+          "Liste",
+          "Lieferung",
+          "Kalorien",
+          "Haushalt",
+          "Rezepte"
+        ]
+      },
+      "closing": {
+        "kicker": "Dein nächster Kühlschrank-bis-Abendessen-Plan",
+        "heading": "Starte mit dem, was du hast. Kauf nur, was fehlt.",
+        "body": "Scanne den Kühlschrank oder einen Kassenbon. KAI schlägt kochbare Rezepte vor, zeigt Kalorien pro Portion und macht aus den fehlenden Zutaten einen prüfbaren Warenkorb.",
+        "ctaLabel": "Scannen, um Rezepte zu finden"
+      },
+      "footer": {
+        "tagline": "Dein Grocery Twin vom Kühlschrank bis zum Warenkorb. Finde Rezepte mit dem, was du hast, sieh Kalorien und kauf nur, was fehlt.",
+        "groups": [
+          {
+            "label": "Produkt",
+            "links": [
+              {
+                "label": "Lebensmittel-Demo",
+                "target": "product"
+              },
+              {
+                "label": "So funktioniert es",
+                "target": "features"
+              },
+              {
+                "label": "Geschichten",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "KAI",
+            "links": [
+              {
+                "label": "Über KAI",
+                "target": "about"
+              },
+              {
+                "label": "Kontakt",
+                "target": "contact"
+              },
+              {
+                "label": "Nach oben",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 KAI · Grocery Twin",
+        "closingStatement": "Gute Entscheidungen. Großartige Woche."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

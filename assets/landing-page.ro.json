@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "language": "ro",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "Produs",
+          "target": "product"
+        },
+        {
+          "label": "Mobil",
+          "target": "mobile"
+        },
+        {
+          "label": "Povești",
+          "target": "stories"
+        },
+        {
+          "label": "Caracteristici",
+          "target": "features"
+        },
+        {
+          "label": "Despre",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "Faceți cunoștință cu Kai"
+    },
+    "badge": "Magazinul dvs., rețetele și planul de calorii - conectat",
+    "headline": "face cumpărăturile să se simtă ușor din nou",
+    "subheadline": "scanați frigiderul sau o chitanță. Kai transformă ceea ce este deja acolo în rețete, numără caloriile și face cumpărături doar pentru ceea ce mai are nevoie fiecare masă.",
+    "ctaLabel": "Vorbește cu Kai",
+    "secondaryCtaLabel": "Scanați la rețete",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "Produse și prețuri reale",
+      "Examinați fiecare alegere",
+      "Caloriile planificate pe gospodărie",
+      "rețete din ceea ce ai"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "Kai, geamănul tău de la băcănie, într-o bucătărie luminată de soare, înconjurat de produse proaspete și un plan de masă săptămânal"
+    },
+    "contact": {
+      "heading": "Începe cu ceea ce ai",
+      "body": "Scanați frigiderul sau o chitanță și lăsați-l pe Kai să pregătească golurile de băcănie pentru revizuire."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "Acasă",
+        "subtitle": "Your Grocery Twin",
+        "secondaryEditionLabel": "Cu amănuntul",
+        "navItems": [
+          {
+            "label": "Produs",
+            "target": "product"
+          },
+          {
+            "label": "Mobil",
+            "target": "mobile"
+          },
+          {
+            "label": "Povești",
+            "target": "stories"
+          },
+          {
+            "label": "Caracteristici",
+            "target": "features"
+          },
+          {
+            "label": "Despre",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "Faceți cunoștință cu Kai",
+        "primaryCtaLabel": "începe un cărucior"
+      },
+      "hero": {
+        "ratingLabel": "Magazinul dvs., rețetele și planul de calorii - conectat",
+        "heading": "face cumpărăturile să se simtă ușor din nou",
+        "body": "scanați frigiderul sau o chitanță. Kai transformă ceea ce este deja acolo în rețete, numără caloriile și face cumpărături doar pentru ceea ce mai are nevoie fiecare masă.",
+        "primaryCtaLabel": "Vorbește cu Kai",
+        "secondaryCtaLabel": "Scanați la rețete",
+        "trustItems": [
+          "Produse și prețuri reale",
+          "Examinați fiecare alegere",
+          "Caloriile planificate pe gospodărie",
+          "rețete din ceea ce ai"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "Kai, persoana ta geamănă de la băcănie pe tot corpul",
+        "chat": {
+          "statusLabel": "Pe net",
+          "subtitle": "Asistent de băcănie de la frigider la rețetă",
+          "openingMessage": "Bună, sunt Kai. Arată-mi frigiderul, cămară sau o chitanță recentă. Vă voi sugera rețete din ceea ce aveți și păstrați vizibile cheltuielile, caloriile și ingredientele lipsă.",
+          "visitorMessage": "Scanează-mi frigiderul și arată ce pot găti în seara asta.",
+          "assistantMessage": "Voi transforma ceea ce există deja în opțiuni de rețetă, voi arăta calorii pe porție și voi cumpăra doar ingredientele care încă lipsesc.",
+          "inputPlaceholder": "Cereți alimente, o rețetă sau un cec de calorii...",
+          "suggestions": [
+            "Oferte de lapte de ovăz",
+            "Echilibrează-mi săptămâna",
+            "Gătește din frigiderul meu"
+          ],
+          "demoNote": "Demo ilustrativă pentru băcănie, rețetă și nutriție · Verificați ingredientele și nevoile dietetice",
+          "sampleProduct": {
+            "badge": "Ofertă găsită · Cămară+",
+            "name": "Oatly Barista Edition",
+            "detail": "1 L · 590 kcal · 20% reducere",
+            "price": "2,39 €",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "Alegeți o imagine de frigider, cămară, chitanță sau listă de cumpărături",
+          "uploadHint": "JPEG, PNG, WEBP sau HEIC · până la 6 imagini și 10 MB fiecare",
+          "analyzingLabel": "Kai citește alimentele vizibile...",
+          "inventoryHeading": "Examinați inventarul extras",
+          "inventoryBody": "corectați cantitățile, eliminați greșelile sau adăugați orice a ratat kai.",
+          "itemNameLabel": "Articol",
+          "quantityLabel": "Cantitate",
+          "unitLabel": "Unitate",
+          "addItemLabel": "Adăugați articol",
+          "removeItemLabel": "Elimina",
+          "chatLabel": "Corect prin chat",
+          "voiceLabel": "Corect prin voce · 5 min",
+          "reviewLabel": "Inventar de revizuire",
+          "editLabel": "Editați inventarul",
+          "confirmationHeading": "Inventar gata",
+          "confirmationBody": "Kai va reconfirma această listă înainte de a propune un cărucior. Nimic nu se comandă fără aprobarea ta.",
+          "signInLabel": "Conectați-vă pentru a continua",
+          "signInNotice": "Conectați-vă pentru a muta această captură de băcănie într-o sesiune privată KAI și continuați fluxul de lucru de reaprovizionare. Nimic nu se comandă fără aprobarea ta explicită.",
+          "expiryCopy": "Previzualizările nerevendicate expiră după o oră",
+          "errorCopy": "Kai nu putea citi o listă de cumpărături din acea imagine. Încercați un frigider, cămară, chitanță sau o fotografie din lista de cumpărături mai clare."
+        }
+      },
+      "product": {
+        "kicker": "băcănie + rețetă + geamăn de calorii",
+        "heading": "Ce putem găti – și ce mai are nevoie de cumpărături?",
+        "body": "KAI conectează scanarea, rețetele, căutarea de produse, calorii și căruciorul, astfel încât fiecare masă să înceapă cu ceea ce aveți deja.",
+        "capabilityLabels": [
+          "Căutare de produse",
+          "Planul de calorii",
+          "Idei de retete",
+          "imagine de listat",
+          "Ajutor vocal",
+          "Potrivirea ofertelor"
+        ],
+        "cards": [
+          {
+            "title": "cărucior live",
+            "body": "Comparați produsele reale, cantitățile și prețurile într-un singur coș care poate fi revizuit.",
+            "metric": "Cheltuiește + calorii împreună"
+          },
+          {
+            "title": "Rețete din scanarea dvs",
+            "body": "Vedeți rețete de gătit după ceea ce este deja în frigider și ceea ce lipsește.",
+            "metric": "Gătește mai întâi, cumpără al doilea"
+          },
+          {
+            "title": "Radar Deal",
+            "body": "Comparați potrivirile utile, păstrând în același timp acoperirea rețetei și obiectivele casnice.",
+            "metric": "Surse adevărate de alimente"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "Kai în buzunar",
+        "heading": "De la frigider la rețetă la cărucior,",
+        "accentHeading": "oriunde te-ai afla.",
+        "items": [
+          {
+            "label": "Construiți un cărucior",
+            "title": "Un cărucior live cu cheltuielile și planul de calorii împreună.",
+            "body": "Solicitați un articol, comparați o potrivire reală și vedeți cum se schimbă prețul, caloriile și cantitatea săptămâna."
+          },
+          {
+            "label": "Scanează frigiderul",
+            "title": "Transformă un frigider sau o fotografie de chitanță în rețete pe care le poți găti.",
+            "body": "Kai identifică ceea ce este la îndemână, estimează caloriile și sugerează rețete înainte de a construi lista de ingrediente lipsă."
+          },
+          {
+            "label": "Alegeți o rețetă",
+            "title": "Alegeți o masă, apoi cumpărați doar ceea ce lipsește.",
+            "body": "Comparați timpul de gătire, caloriile pe porție, acoperirea ingredientelor și decalajul mic de băcănie pentru fiecare rețetă."
+          },
+          {
+            "label": "Vorbește cu Kai",
+            "title": "Discutați prin magazin și ținta dvs. săptămânală.",
+            "body": "Spune ce s-a terminat sau ce vrei să gătești. KAI păstrează căruciorul, cheltuielile și decalajul de calorii în context."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "magazinul săptămânal, reconstruit",
+        "heading": "Gestionați alimentele, rețetele, cheltuielile și caloriile cu claritate",
+        "items": [
+          {
+            "number": "01",
+            "title": "Descoperirea rețetei, a produselor și a caloriilor",
+            "body": "Scanați ceea ce aveți sau descrieți masa dorită. KAI arată rețete de gătit, calorii per porție și decalajul exact la băcănie pentru fiecare opțiune.",
+            "tags": [
+              "Scanare frigider",
+              "Rețete",
+              "calorii",
+              "Elemente lipsă"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "un cărucior construit din mesele pe care le alegeți",
+            "body": "Alegeți o rețetă și Kai elimină ingredientele deja la îndemână. Doar produsele lipsă intră în cărucior, cu cheltuielile și caloriile casnice actualizate împreună.",
+            "tags": [
+              "Acoperirea rețetei",
+              "Lipsește doar",
+              "Kcal săptămânal"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "scanează o dată. gătește din ceea ce este acolo.",
+            "body": "Kai transformă un frigider, o cămară sau o scanare a chitanței în trei rețete practice. Comparați timpul și caloriile, alegeți unul, apoi revizuiți doar ingredientele lipsă.",
+            "tags": [
+              "3 opțiuni de rețetă",
+              "Timp de gătire",
+              "calorii / servire"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "Cum se simte gătitul și cumpărăturile cu Kai",
+        "heading": "Momente mici de claritate de la frigider la cină",
+        "testimonials": [
+          {
+            "quote": "Kai transformă ceea ce este deja în frigiderul nostru în idei de cină, apoi arată costul și caloriile familiei înainte de a alege.",
+            "name": "Mila",
+            "meta": "părinte ocupat"
+          },
+          {
+            "quote": "Cer oferte de brânză, compar opțiunile reale și adaug exact pe cea pe care o doresc. Fără sărituri cu file.",
+            "name": "NOAH",
+            "meta": "Cumpărător săptămânal"
+          },
+          {
+            "quote": "Scanarea chitanței mi-a dat trei rețete, caloriile pe porție și doar ingredientele pe care mai aveam nevoie să le cumpăr.",
+            "name": "Sofia",
+            "meta": "bucătar acasă"
+          },
+          {
+            "quote": "Îmi place că Kai construiește mai întâi căruciorul și pune întrebările de planificare doar atunci când contează.",
+            "name": "Lucas",
+            "meta": "Student"
+          },
+          {
+            "quote": "Vocea este perfectă atunci când mâinile mele sunt pline în bucătărie. Îi spun doar lui Kai ce s-a terminat.",
+            "name": "Emma",
+            "meta": "Fan de pregătire a mesei"
+          },
+          {
+            "quote": "Totul rămâne revizuibil. Pot să schimb cantitățile și să văd atât cheltuielile, cât și caloriile totale care se mișcă cu mine.",
+            "name": "daan",
+            "meta": "Cumpărător inteligent"
+          }
+        ],
+        "articles": [
+          {
+            "category": "Rutina săptămânală",
+            "title": "magazinul de șapte minute și planul de masă",
+            "body": "Un cumpărător singur a transformat o listă de produse de bază împrăștiate într-un cărucior, trei mese de gătit și 10.850 de calorii planificate."
+          },
+          {
+            "category": "Frigider la rețetă",
+            "title": "De la fotografia frigiderului până la cina de diseară",
+            "body": "Kai a recunoscut ingredientele, a sugerat trei rețete și a separat ceea ce era deja acolo de ceea ce mai trebuia cumpărat."
+          },
+          {
+            "category": "Căutare inteligentă de rețete",
+            "title": "Căutare inteligentă care vede întreaga săptămână",
+            "body": "O căutare a cântărit prețul, caloriile, acoperirea rețetei și un decalaj de proteine fără a pierde firul magazinului."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "un loc, multe moduri în",
+        "heading": "Fiecare intrare devine rețete, un cărucior și un plan de calorii",
+        "body": "O fotografie, o notă vocală, o chitanță sau o listă oferă aceeași vedere dedesubt: ingrediente la îndemână, rețete pe care le puteți găti, produse încă lipsă, cheltuieli săptămânale și caloriile casnice.",
+        "capabilities": [
+          "Fotografie",
+          "Voce",
+          "Tranzacție",
+          "Primire",
+          "Listă",
+          "Livrare",
+          "calorii",
+          "Gospodărie",
+          "Rețete"
+        ]
+      },
+      "closing": {
+        "kicker": "Următorul tău plan de la frigider la cină",
+        "heading": "Începe cu ceea ce ai. Cumpărați numai pentru ceea ce lipsește.",
+        "body": "scanați frigiderul sau o chitanță. Kai sugerează rețete de gătit, arată calorii per porție și transformă ingredientele lipsă într-un cărucior pe care îl poți revizui.",
+        "ctaLabel": "Scanați pentru a găsi rețete"
+      },
+      "footer": {
+        "tagline": "Geamănul tău de la frigider la cărucior. Găsiți rețete din ceea ce aveți, vedeți calorii și cumpărați numai pentru ceea ce lipsește.",
+        "groups": [
+          {
+            "label": "Produs",
+            "links": [
+              {
+                "label": "Demo de băcănie",
+                "target": "product"
+              },
+              {
+                "label": "Cum functioneaza",
+                "target": "features"
+              },
+              {
+                "label": "Povești",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "kai",
+            "links": [
+              {
+                "label": "despre kai",
+                "target": "about"
+              },
+              {
+                "label": "Contact",
+                "target": "contact"
+              },
+              {
+                "label": "Inapoi sus",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 Kai · Grocery Twin",
+        "closingStatement": "alegeri bune. saptamana grozava."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}

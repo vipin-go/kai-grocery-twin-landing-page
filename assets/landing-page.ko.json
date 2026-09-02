@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "language": "ko",
+  "regionKey": null,
+  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "landingPage": {
+    "design": {
+      "variant": "grocery-twin",
+      "defaultThemeMode": "light",
+      "theme": {
+        "palette": "emerald",
+        "primaryColor": "green",
+        "secondaryColor": "green",
+        "accentColor": "purple",
+        "fontFamily": "inter"
+      },
+      "brand": {
+        "presetRevision": 1,
+        "colors": {
+          "light": {
+            "canvas": "#fafaf9",
+            "surface": "#ffffff",
+            "sidebar": "#1a1a1a",
+            "text": "#1a1a1a",
+            "accent": "#c9fa54",
+            "userBubble": "#1f5f32"
+          },
+          "dark": {
+            "canvas": "#111210",
+            "surface": "#1a1c18",
+            "sidebar": "#0c0d0b",
+            "text": "#fafaf9",
+            "accent": "#c9fa54",
+            "userBubble": "#2f7d45"
+          }
+        },
+        "typography": {
+          "body": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "display": {
+            "source": "google",
+            "family": "Urbanist"
+          },
+          "label": {
+            "source": "google",
+            "family": "Urbanist"
+          }
+        }
+      }
+    },
+    "header": {
+      "brandMark": "image",
+      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "navItems": [
+        {
+          "label": "제품",
+          "target": "product"
+        },
+        {
+          "label": "모바일",
+          "target": "mobile"
+        },
+        {
+          "label": "스토리",
+          "target": "stories"
+        },
+        {
+          "label": "기능",
+          "target": "features"
+        },
+        {
+          "label": "소개",
+          "target": "about"
+        }
+      ],
+      "ctaLabel": "KAI 만나기"
+    },
+    "badge": "쇼핑, 레시피, 칼로리 계획이 하나로 연결됩니다",
+    "headline": "장 보기를 다시 쉽게 만들어 보세요",
+    "headlineAccent": "다시 쉽게",
+    "subheadline": "냉장고나 영수증을 스캔하세요. KAI가 이미 있는 재료로 레시피를 만들고 칼로리를 계산하며 각 식사에 부족한 재료만 장을 봅니다.",
+    "ctaLabel": "KAI와 대화하기",
+    "secondaryCtaLabel": "스캔하여 레시피 받기",
+    "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+    "featureTags": [
+      "실제 상품과 가격",
+      "모든 선택 검토하기",
+      "가계 단위로 계획된 칼로리",
+      "있는 재료로 만드는 레시피"
+    ],
+    "seoImage": {
+      "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
+      "alt": "햇살 가득한 주방에서 신선한 농산물과 한 주의 식단과 함께하는 KAI, 당신의 Grocery Twin"
+    },
+    "contact": {
+      "heading": "있는 것으로 시작하기",
+      "body": "냉장고나 영수증을 스캔하면 KAI가 검토할 부족한 식료품 목록을 준비합니다."
+    },
+    "groceryTwin": {
+      "header": {
+        "editionLabel": "홈",
+        "subtitle": "당신의 Grocery Twin",
+        "secondaryEditionLabel": "소매",
+        "navItems": [
+          {
+            "label": "제품",
+            "target": "product"
+          },
+          {
+            "label": "모바일",
+            "target": "mobile"
+          },
+          {
+            "label": "스토리",
+            "target": "stories"
+          },
+          {
+            "label": "기능",
+            "target": "features"
+          },
+          {
+            "label": "소개",
+            "target": "about"
+          }
+        ],
+        "secondaryCtaLabel": "KAI 만나기",
+        "primaryCtaLabel": "장바구니 시작하기"
+      },
+      "hero": {
+        "ratingLabel": "쇼핑, 레시피, 칼로리 계획이 하나로 연결됩니다",
+        "heading": "장 보기를 다시 쉽게 만들어 보세요",
+        "body": "냉장고나 영수증을 스캔하세요. KAI가 이미 있는 재료로 레시피를 만들고 칼로리를 계산하며 각 식사에 부족한 재료만 장을 봅니다.",
+        "primaryCtaLabel": "KAI와 대화하기",
+        "secondaryCtaLabel": "스캔하여 레시피 받기",
+        "trustItems": [
+          "실제 상품과 가격",
+          "모든 선택 검토하기",
+          "가계 단위로 계획된 칼로리",
+          "있는 재료로 만드는 레시피"
+        ],
+        "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
+        "characterAlt": "KAI, 당신의 풀바디 Grocery Twin 페르소나",
+        "chat": {
+          "statusLabel": "온라인",
+          "subtitle": "냉장고에서 레시피까지 돕는 식료품 어시스턴트",
+          "openingMessage": "안녕하세요, KAI입니다. 냉장고, 식료품 저장실 또는 최근 영수증을 보여주세요. 있는 재료로 레시피를 추천하고 지출, 칼로리, 부족한 재료를 한눈에 보여드릴게요.",
+          "visitorMessage": "제 냉장고를 스캔해서 오늘 밤에 무엇을 요리할 수 있는지 보여주세요.",
+          "assistantMessage": "이미 있는 재료로 레시피 옵션을 만들고, 1인분당 칼로리를 보여주며, 부족한 재료만 구매합니다.",
+          "inputPlaceholder": "식료품, 레시피, 칼로리 확인을 요청하세요…",
+          "suggestions": [
+            "귀리 우유 할인",
+            "내 일주기 균형 맞추기",
+            "내 냉장고로 요리하기"
+          ],
+          "demoNote": "식료품, 레시피, 영양 데모 예시 · 재료 및 식이 요구사항 확인",
+          "sampleProduct": {
+            "badge": "할인 발견 · Pantry+",
+            "name": "Oatly 바리스타 에디션",
+            "detail": "1 L · 590 kcal · 20% 할인",
+            "price": "€2.39",
+            "actionLabel": "Try /restock"
+          }
+        },
+        "restockDemo": {
+          "enabled": true,
+          "commandTrigger": "restock",
+          "uploadLabel": "냉장고, 식료품 저장실, 영수증 또는 장보기 목록 이미지 선택",
+          "uploadHint": "JPEG, PNG, WebP 또는 HEIC · 최대 6장, 각 10MB",
+          "analyzingLabel": "KAI가 보이는 식료품을 읽는 중…",
+          "inventoryHeading": "추출된 재고 검토하기",
+          "inventoryBody": "수량을 수정하고, 실수를 제거하거나, KAI가 놓친 항목을 추가하세요.",
+          "itemNameLabel": "항목",
+          "quantityLabel": "수량",
+          "unitLabel": "단위",
+          "addItemLabel": "항목 추가",
+          "removeItemLabel": "제거",
+          "chatLabel": "채팅으로 수정",
+          "voiceLabel": "음성으로 수정 · 5분",
+          "reviewLabel": "재고 검토",
+          "editLabel": "재고 편집",
+          "confirmationHeading": "재고 준비 완료",
+          "confirmationBody": "KAI는 장바구니를 제안하기 전에 이 목록을 다시 확인합니다. 귀하의 승인 없이는 주문되지 않습니다.",
+          "signInLabel": "계속하려면 로그인",
+          "signInNotice": "이 장보기 캡처를 비공개 KAI 세션으로 옮기고 재입고 워크플로를 계속하려면 로그인하세요. 귀하의 명시적 승인 없이는 주문되지 않습니다.",
+          "expiryCopy": "청구되지 않은 미리보기는 1시간 후에 만료됩니다",
+          "errorCopy": "KAI가 해당 이미지에서 장보기 목록을 읽을 수 없습니다. 냉장고, 식료품 저장실, 영수증 또는 장보기 목록의 더 선명한 사진을 시도해 보세요."
+        }
+      },
+      "product": {
+        "kicker": "당신의 식료품 + 레시피 + 칼로리 트윈",
+        "heading": "우리가 요리할 수 있는 것과 아직 사야 할 것은 무엇인가요?",
+        "body": "KAI는 스캔, 레시피, 제품 검색, 칼로리, 장바구니를 연결하여 모든 식사가 이미 있는 재료로 시작하도록 합니다.",
+        "capabilityLabels": [
+          "제품 검색",
+          "칼로리 계획",
+          "레시피 아이디어",
+          "이미지를 목록으로",
+          "음성 도움",
+          "할인 매칭"
+        ],
+        "cards": [
+          {
+            "title": "실시간 장바구니",
+            "body": "하나의 검토 가능한 장바구니에서 실제 제품, 수량, 가격을 비교하세요.",
+            "metric": "지출과 칼로리를 함께"
+          },
+          {
+            "title": "스캔으로 만드는 레시피",
+            "body": "냉장고에 있는 것과 없는 것을 기준으로 요리 가능한 레시피를 확인하세요.",
+            "metric": "먼저 요리, 그다음 장보기"
+          },
+          {
+            "title": "할인 레이더",
+            "body": "레시피 범위와 가구 목표를 유지하면서 유용한 매치를 비교하세요.",
+            "metric": "실제 식료품 출처"
+          }
+        ]
+      },
+      "mobile": {
+        "kicker": "주머니 속 KAI",
+        "heading": "냉장고에서 레시피, 장바구니까지,",
+        "accentHeading": "어디에 있든.",
+        "items": [
+          {
+            "label": "장바구니 만들기",
+            "title": "지출과 칼로리 계획을 함께 보여주는 실시간 장바구니.",
+            "body": "항목을 요청하고, 실제 매치를 비교하며, 가격, 칼로리, 수량이 한 주를 어떻게 바꾸는지 확인하세요."
+          },
+          {
+            "label": "냉장고 스캔하기",
+            "title": "냉장고 또는 영수증 사진을 요리할 수 있는 레시피로 바꾸세요.",
+            "body": "KAI는 있는 재료를 파악하고, 칼로리를 추정하며, 부족한 재료 목록을 만들기 전에 레시피를 제안합니다."
+          },
+          {
+            "label": "레시피 선택",
+            "title": "식사를 고른 다음, 부족한 것만 사세요.",
+            "body": "각 레시피의 조리 시간, 1인분 칼로리, 재료 범위, 작은 식료품 격차를 비교하세요."
+          },
+          {
+            "label": "KAI와 대화하기",
+            "title": "장보기와 주간 목표에 대해 이야기하세요.",
+            "body": "뭐가 떨어졌는지 또는 무엇을 요리하고 싶은지 말하세요. KAI가 장바구니, 지출, 칼로리 격차를 맥락에 맞춰 유지합니다."
+          }
+        ]
+      },
+      "features": {
+        "kicker": "재구성된 주간 장보기",
+        "heading": "식료품, 레시피, 지출, 칼로리를 명확하게 관리하세요",
+        "items": [
+          {
+            "number": "01",
+            "title": "레시피, 제품, 칼로리 탐색",
+            "body": "있는 것을 스캔하거나 원하는 식사를 설명하세요. KAI가 요리 가능한 레시피, 1인분 칼로리, 각 선택의 정확한 식료품 격차를 보여줍니다.",
+            "tags": [
+              "냉장고 스캔",
+              "레시피",
+              "칼로리",
+              "부족한 항목"
+            ],
+            "accent": "purple"
+          },
+          {
+            "number": "02",
+            "title": "선택한 식사로 만든 장바구니",
+            "body": "레시피를 선택하면 KAI가 이미 있는 재료를 제거합니다. 부족한 제품만 장바구니에 들어가고, 지출과 가구 칼로리가 함께 업데이트됩니다.",
+            "tags": [
+              "레시피 범위",
+              "부족한 것만",
+              "주간 kcal"
+            ],
+            "accent": "blue"
+          },
+          {
+            "number": "03",
+            "title": "한 번 스캔하세요. 있는 것으로 요리하세요.",
+            "body": "KAI는 냉장고, 식료품 저장실 또는 영수증 스캔을 세 가지 실용적인 레시피로 바꿉니다. 시간과 칼로리를 비교하고, 하나를 골라, 부족한 재료만 검토하세요.",
+            "tags": [
+              "레시피 옵션 3개",
+              "조리 시간",
+              "1인분 칼로리"
+            ],
+            "accent": "lime"
+          }
+        ]
+      },
+      "stories": {
+        "kicker": "KAI와 함께 요리하고 장을 보는 느낌",
+        "heading": "냉장고에서 식탁까지의 작은 명확함",
+        "testimonials": [
+          {
+            "quote": "KAI는 냉장고에 있는 재료로 저녁 아이디어를 만들고, 제가 선택하기 전에 비용과 가족 칼로리를 보여줍니다.",
+            "name": "Mila",
+            "meta": "바쁜 부모"
+          },
+          {
+            "quote": "치즈 할인을 요청하고, 실제 옵션을 비교하고, 원하는 정확한 제품을 추가합니다. 탭 전환 없이.",
+            "name": "Noah",
+            "meta": "주간 쇼핑객"
+          },
+          {
+            "quote": "영수증 스캔은 세 가지 레시피, 1인분 칼로리, 아직 사야 할 재료만 알려주었습니다.",
+            "name": "Sofia",
+            "meta": "가정 요리사"
+          },
+          {
+            "quote": "KAI가 먼저 장바구니를 만들고 정말 필요할 때만 계획 질문을 하는 점이 마음에 듭니다.",
+            "name": "Lucas",
+            "meta": "학생"
+          },
+          {
+            "quote": "부엌에서 손이 가득 찰 때 음성이 완벽합니다. 떨어진 것을 KAI에게 알려주기만 하면 됩니다.",
+            "name": "Emma",
+            "meta": "밀프렙 팬"
+          },
+          {
+            "quote": "모든 것이 검토 가능합니다. 수량을 변경하면 지출과 칼로리 합계가 함께 움직이는 것을 볼 수 있습니다.",
+            "name": "Daan",
+            "meta": "똑똑한 쇼핑객"
+          }
+        ],
+        "articles": [
+          {
+            "category": "주간 루틴",
+            "title": "7분 장보기와 식사 계획",
+            "body": "혼자 장을 보던 사람이 흩어진 필수품 목록을 장바구니, 요리 가능한 저녁 3끼, 계획된 10,850칼로리로 바꿨습니다."
+          },
+          {
+            "category": "냉장고에서 레시피로",
+            "title": "냉장고 사진에서 오늘 저녁 식사까지",
+            "body": "KAI는 재료를 인식하고, 세 가지 레시피를 제안했으며, 이미 있는 것과 아직 사야 할 것을 분리했습니다."
+          },
+          {
+            "category": "스마트 레시피 검색",
+            "title": "한 주 전체를 보는 스마트 검색",
+            "body": "검색이 가격, 칼로리, 레시피 범위, 단백질 격차를 저울질하면서 장보기 흐름을 놓치지 않았습니다."
+          }
+        ]
+      },
+      "about": {
+        "kicker": "한 곳에서 다양한 방식으로 입력",
+        "heading": "모든 입력이 레시피, 하나의 장바구니, 하나의 칼로리 계획이 됩니다",
+        "body": "사진, 음성 메모, 영수증 또는 목록은 같은 보기를 공급합니다: 있는 재료, 요리할 수 있는 레시피, 아직 부족한 제품, 주간 지출, 가구 칼로리.",
+        "capabilities": [
+          "사진",
+          "음성",
+          "할인",
+          "영수증",
+          "목록",
+          "배송",
+          "칼로리",
+          "가구",
+          "레시피"
+        ]
+      },
+      "closing": {
+        "kicker": "다음 냉장고에서 식탁까지의 계획",
+        "heading": "있는 것으로 시작하세요. 부족한 것만 사세요.",
+        "body": "냉장고나 영수증을 스캔하세요. KAI가 요리 가능한 레시피를 제안하고, 1인분 칼로리를 보여주며, 부족한 재료를 검토 가능한 장바구니로 바꿉니다.",
+        "ctaLabel": "스캔하여 레시피 찾기"
+      },
+      "footer": {
+        "tagline": "냉장고에서 장바구니까지의 Grocery Twin. 있는 재료로 레시피를 찾고, 칼로리를 확인하고, 부족한 것만 사세요.",
+        "groups": [
+          {
+            "label": "제품",
+            "links": [
+              {
+                "label": "식료품 데모",
+                "target": "product"
+              },
+              {
+                "label": "작동 방식",
+                "target": "features"
+              },
+              {
+                "label": "스토리",
+                "target": "stories"
+              }
+            ]
+          },
+          {
+            "label": "KAI",
+            "links": [
+              {
+                "label": "KAI 소개",
+                "target": "about"
+              },
+              {
+                "label": "연락처",
+                "target": "contact"
+              },
+              {
+                "label": "맨 위로",
+                "target": "top"
+              }
+            ]
+          }
+        ],
+        "copyright": "© 2026 KAI · Grocery Twin",
+        "closingStatement": "좋은 선택. 멋진 한 주."
+      }
+    }
+  },
+  "generatedAt": "2026-09-01T19:15:50.031Z"
+}
