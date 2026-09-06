@@ -3,6 +3,21 @@
   "target": "landing_page_definition",
   "definitionFile": "assets/landing-page.json",
   "landingPage": {
+    "capabilityPreview": {
+      "optional": true,
+      "fields": ["enabled", "commandTrigger"],
+      "additionalProperties": false,
+      "commandType": "operator_action",
+      "requiresWorkflowRef": true,
+      "requiresWorkflowSkill": true,
+      "journeyPackageSchemaVersion": 2,
+      "journeyOwner": "committed_workflow_repository",
+      "copyOwner": "workflow_package_generated_locale_catalogue",
+      "supportedPlacements": ["default_hero", "cinematic-campaigns", "form-operations", "grocery-twin", "recruiting-operations"],
+      "preserveLandingPageSchemaVersion": 2,
+      "noExecutableOrProviderFields": true,
+      "activationRequiresCompatibleBackendAndAcceptance": true
+    },
     "fields": [
       { "key": "headline", "type": "text", "required": true },
       { "key": "subheadline", "type": "text", "required": false },
@@ -60,7 +75,7 @@
     },
     "featureItem": {
       "fields": [
-        { "key": "icon", "type": "text", "required": false, "description": "One of the allowed icon tokens: see SKILL.md" },
+        { "key": "icon", "type": "text", "required": false, "description": "One of the allowed icon tokens — see SKILL.md" },
         { "key": "title", "type": "text", "required": true },
         { "key": "body", "type": "text", "required": true }
       ]
@@ -150,7 +165,7 @@
           "path": "hero.instagramCampaign",
           "requires": ["enabled", "commandTrigger", "localizedUiCopy"],
           "localizedUiCopyIncludes": ["welcomeMessage", "urlRequestMessage", "brandAndTypographyLabels", "imageFormatLabels", "errorGroups", "claimTranscriptMessages", "sourceReview"],
-          "sourceReview": { "optionalForLegacy": true, "copyOnly": true, "maxStringLength": 600, "permissionRequired": true, "limitationCodes": ["login_wall", "private_content", "captcha", "thumbnails_only", "captions_unavailable", "media_unavailable", "time_limit"] },
+          "sourceReview": { "optionalForLegacy": true, "copyOnly": true, "maxStringLength": 600, "permissionRequired": true, "permissionQuestionToken": "{accountName}", "changeAccountLabel": "localized copy", "limitationCodes": ["login_wall", "private_content", "captcha", "thumbnails_only", "captions_unavailable", "media_unavailable", "time_limit"] },
           "commandTrigger": "instagram-campaign",
           "commandExecutionType": "operator_action",
           "workflowResourceKey": "workflow.archer.instagram-campaign-v2",
@@ -215,6 +230,14 @@
     },
     "groceryTwin": {
       "requiredWhen": { "design.variant": "grocery-twin" },
+      "homeRoiCalculator": {
+        "optional": true,
+        "contract": "roiCalculator",
+        "recommendedMethodologyVersion": 2,
+        "placement": "home_only",
+        "retailCalculatorPath": "landingPage.roiCalculator",
+        "fallbackToRetail": false
+      },
       "sections": ["header", "hero", "product", "mobile", "features", "stories", "about", "closing", "footer"],
       "constraints": {
         "navigationItems": 5,
@@ -287,6 +310,28 @@
       "sectionId": "persona-landing-roi-calculator",
       "navTarget": "roi-calculator",
       "navLabel": "ROI Calculator",
+      "guidedMethodology": {
+        "methodologyVersion": 2,
+        "reference": "references/business-impact.md",
+        "navLabelSource": "businessImpact.copy.navLabel",
+        "presentation": "three_steps_live_summary",
+        "steps": ["workload", "operating_cost", "capacity_use"],
+        "requiredFields": ["heading", "disclaimer", "currency", "inputs", "metrics", "businessImpact"],
+        "businessImpactFields": ["defaults", "copy", "fields", "outcomes", "burden", "opportunity"],
+        "workloadDefaultFields": ["volume", "minutes", "automation", "review"],
+        "outcomeIds": ["cash", "higher_value", "throughput", "hiring", "error", "risk", "cycle_time"],
+        "financialDefaults": false,
+        "authoredFormulas": false,
+        "compatibilityArrays": { "inputs": [], "metrics": [] },
+        "unsetIsNotZero": true,
+        "allocationsCannotExceedCapacity": true,
+        "existingTeamReviewReducesCapacity": true,
+        "paidReviewInCostOnce": true,
+        "annualGrowth": false,
+        "hiringDurationMonths": [1, 12],
+        "validator": "scripts/business-impact.cjs",
+        "scaffold": "scripts/create-business-impact.cjs"
+      },
       "navInjection": "renderer_owned_when_enabled",
       "methodology": {
         "layers": ["economics", "operations", "value"],
@@ -301,7 +346,7 @@
       "requiredFields": ["heading", "disclaimer", "currency", "inputs", "metrics"],
       "nonTranslatableFields": [
         "formula", "currency", "locale", "format", "kind", "defaultPeriod", "defaultScenarioId",
-        "costMetricId", "benefitMetricId", "primaryTarget", "min", "max", "step", "defaultValue",
+        "costMetricId", "benefitMetricId", "primaryTarget", "secondaryTarget", "methodologyVersion", "min", "max", "step", "defaultValue",
         "multiplier", "months", "scalesWithPeriod", "scalesWithScenario", "enabled", "periodToggle",
         "profile", "profileIcon", "id", "type", "group", "layer", "valueClass", "productivity"
       ],

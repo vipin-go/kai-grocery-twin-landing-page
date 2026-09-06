@@ -399,283 +399,243 @@
         ],
         "copyright": "© 2026 KAI · Grocery Twin",
         "closingStatement": "Good choices. Great week."
-      }
-    },
-    "localization": {
-      "translation": {
-        "enabled": true,
-        "sourceLanguage": "en",
-        "defaultLanguage": "en",
-        "autoDetectCountryLanguage": true,
-        "generatedTranslations": [
-          {
-            "language": "es",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.es.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "de",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.de.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "ja",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.ja.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "fr",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.fr.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "pt",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.pt.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "ru",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.ru.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "it",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.it.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "nl",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.nl.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "pl",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.pl.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "tr",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.tr.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "zh",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.zh.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "fa",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.fa.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "vi",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.vi.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "cs",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.cs.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "id",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.id.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "ko",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.ko.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "uk",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.uk.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "hu",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.hu.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "ar",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.ar.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "sv",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.sv.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "ro",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.ro.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "el",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.el.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "da",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.da.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "fi",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.fi.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "he",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.he.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "sk",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.sk.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "th",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.th.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "bg",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.bg.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "hr",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.hr.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "nb",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.nb.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "lt",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.lt.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "sr",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.sr.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "sl",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.sl.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "ca",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.ca.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "et",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.et.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "no",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.no.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          },
-          {
-            "language": "lv",
-            "regionKey": null,
-            "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
-            "assetPath": "assets/landing-page.lv.json",
-            "generatedAt": "2026-09-02T10:21:16.000Z"
-          }
-        ]
       },
-      "regionalPages": []
+      "homeRoiCalculator": {
+        "methodologyVersion": 2,
+        "enabled": true,
+        "kicker": "Home impact",
+        "heading": "ROI Calculator",
+        "subheading": "Estimate time back for your household. Add food-waste and cost assumptions only if you want a money estimate.",
+        "disclaimer": "Illustrative household estimates, not guaranteed savings. Your time is not priced as a salary. Food value counts only if it replaces spending you would otherwise make; check prices, portions and dietary needs yourself.",
+        "currency": "EUR",
+        "locale": "en-GB",
+        "inputs": [],
+        "metrics": [],
+        "businessImpact": {
+          "defaults": {
+            "volume": 4,
+            "minutes": 45,
+            "automation": 50,
+            "review": 5
+          },
+          "copy": {
+            "navLabel": "ROI",
+            "workloadStep": "Your routine",
+            "costStep": "Your KAI budget",
+            "valueStep": "Less food waste",
+            "workloadIntro": "Count time spent checking food, choosing recipes and preparing your grocery list—not cooking, travel or time in the shop.",
+            "costIntro": "Use your own monthly budget for KAI and any extra services. Leave it blank to focus on time, or enter zero if no cost applies.",
+            "valueIntro": "Time back is yours to enjoy. Optionally estimate food you could use instead of wasting, without counting the same purchase twice.",
+            "sampleNotice": "Illustrative routine · adjust these numbers to your household",
+            "monthly": "Monthly",
+            "yearly": "Yearly",
+            "next": "Continue",
+            "back": "Back",
+            "reset": "Reset assumptions",
+            "summary": "Your household estimate",
+            "volume": "Planning sessions",
+            "grossHours": "Planning time reduced",
+            "capacity": "Time back for you",
+            "retained": "Personal time, not priced in money",
+            "hours": "hours",
+            "days": "days",
+            "percent": "%",
+            "minutes": "minutes",
+            "reviewMode": "Who checks the suggestions?",
+            "teamReview": "Me or my household",
+            "paidReview": "Someone I pay extra",
+            "reviewNote": "Checking portions, allergies, ingredients and the cart takes time. Household review is subtracted from time back. Extra paid help belongs in your KAI budget instead.",
+            "totalMode": "Monthly budget",
+            "itemizedMode": "Optional cost details",
+            "budgetNote": "Include KAI access, extra services and any extra paid help once. Do not include your usual grocery bill or put a price on your own time.",
+            "itemizedNote": "Use zero for anything that does not apply. Extra paid checking is counted at the rate you enter; do not also include it in another cost line.",
+            "paidReviewCost": "Extra paid checking",
+            "allInCost": "Your KAI running cost",
+            "missing": "Add your assumptions",
+            "cashValue": "Cash spending avoided",
+            "contribution": "Expected contribution",
+            "expectedLoss": "Estimated food value retained",
+            "riskValue": "Uncertain risk value included",
+            "economicValue": "Modeled food value",
+            "netBenefit": "Food value minus KAI cost",
+            "multiple": "Food value / KAI cost",
+            "notApplicable": "Not applicable",
+            "annual": "Annual view",
+            "annualNote": "Twelve months using the same routine and food-waste assumptions. No growth, compounding or guaranteed savings.",
+            "method": "How this is calculated",
+            "burdenHeading": "Less grocery admin",
+            "opportunityHeading": "More room for everyday life",
+            "methodBody": "Time back equals planning sessions × minutes per session × the share KAI could reduce, minus your checking time. Personal time stays separate from money. Optional food value equals portions you expect to stop wasting × their ingredient cost, only where using that food replaces a future purchase.",
+            "formulaLabel": "Food value minus KAI running cost = modeled net benefit. Food value divided by KAI running cost = the multiple; zero cost has no defined multiple.",
+            "allocationNote": "All returned time remains personal time. It is never converted into wages, business revenue or cash savings.",
+            "overlapLabel": "These portions would otherwise be wasted, replace a future purchase, and are not also counted as a discount or another saving.",
+            "overlapNote": "Count only edible food you would safely use. Ingredient cost excludes your time and KAI fees. Do not count the same food as both a duplicate purchase avoided and waste prevented.",
+            "hiringLabel": "This hire was genuinely planned and the allocated capacity can cover the work.",
+            "reviewedLabel": "I have reviewed my assumptions. If I leave food waste unselected, only my time estimate counts as a benefit.",
+            "cycleResult": "Cycle-time improvement",
+            "throughputResult": "Additional work supported by capacity and demand",
+            "assumptionsIncomplete": "You can keep this as a time estimate. Add a KAI budget and review optional food-waste assumptions to see the money comparison.",
+            "allocationError": "Allocated hours exceed the net capacity available. Reduce the allocations.",
+            "reviewError": "Checking takes longer than the planning time reduced. These assumptions do not return positive time.",
+            "cashError": "Avoided spending cannot exceed current spending or have positive value with no hours allocated.",
+            "hiringError": "Allocated capacity must cover the planned hire hours. Confirm the planned hire and its duration.",
+            "riskError": "The after probability cannot exceed the before probability for a loss-reduction estimate.",
+            "overlapError": "Confirm the food value replaces spending and is not counted twice before including it.",
+            "boundsError": "Use values within the displayed limits.",
+            "rangeLabel": "Adjust value",
+            "noCurrencyChange": "Language changes formatting, not your currency or assumptions."
+          },
+          "fields": {
+            "volume": {
+              "label": "Grocery-planning sessions each month",
+              "help": "For example, four weekly plans. Count your whole household once, not once per person."
+            },
+            "minutes": {
+              "label": "Planning minutes per session today",
+              "help": "Include fridge checks, recipe decisions, product comparison and list preparation. Exclude cooking and shopping travel."
+            },
+            "automation": {
+              "label": "Share KAI could help reduce",
+              "help": "Your estimate, not a promised performance level. Start modestly and check against your actual routine."
+            },
+            "review": {
+              "label": "Minutes to check each plan",
+              "help": "Allow time to verify ingredients, portions, allergies, current prices and the final shopping list."
+            },
+            "budget": {
+              "label": "Your monthly KAI budget",
+              "help": "Your own estimate for access and extra services, not a price quote. Exclude the usual grocery bill."
+            },
+            "model_cost": {
+              "label": "Extra AI usage",
+              "help": "Only usage charged separately from your subscription; otherwise enter zero."
+            },
+            "tools_cost": {
+              "label": "Extra connected services",
+              "help": "Only additional service charges needed for KAI, not ordinary food purchases."
+            },
+            "infrastructure_cost": {
+              "label": "Extra hosting or storage",
+              "help": "Enter zero unless you pay for this separately."
+            },
+            "platform_cost": {
+              "label": "KAI / Gabriel access",
+              "help": "Your actual subscription or planned budget; do not assume a price from this calculator."
+            },
+            "review_rate": {
+              "label": "Extra paid checking per hour",
+              "help": "Use actual additional spending on help, never an hourly value for your own time."
+            },
+            "cash_hours": {
+              "label": "Hours that remove paid work",
+              "help": "Allocate only work whose overtime, contractor or processing spend will actually stop."
+            },
+            "cash_baseline": {
+              "label": "Current monthly spending on that work",
+              "help": "The cash budget from which the reduction will come."
+            },
+            "cash_avoided": {
+              "label": "Monthly spending you would stop",
+              "help": "One explicit amount, not hours multiplied by salary; exclude any planned-hire saving entered separately."
+            },
+            "higher_value_hours": {
+              "label": "Hours used for higher-value work",
+              "help": "Hours you can realistically redirect, not the entire capacity by default."
+            },
+            "contribution_rate": {
+              "label": "Incremental contribution per hour",
+              "help": "Revenue less incremental delivery costs, excluding AI costs counted separately. Not salary or gross revenue."
+            },
+            "throughput_hours": {
+              "label": "Hours used for additional volume",
+              "help": "This allocation cannot also be used for advisory work or spending reductions."
+            },
+            "extra_minutes": {
+              "label": "Team minutes per additional unit",
+              "help": "The remaining human effort, including review, needed to deliver one more unit."
+            },
+            "demand": {
+              "label": "Additional units with expected demand",
+              "help": "Capacity alone is not demand. Enter the extra monthly work you expect to take on."
+            },
+            "unit_margin": {
+              "label": "Contribution per additional unit",
+              "help": "Incremental revenue less delivery costs; AI operating costs are deducted separately."
+            },
+            "hiring_hours": {
+              "label": "Hours covering the planned hire",
+              "help": "Allocate capacity to specific planned work, not a generic full-time-equivalent estimate."
+            },
+            "planned_hours": {
+              "label": "Monthly hours the planned hire would cover",
+              "help": "The allocated capacity must cover this entire workload."
+            },
+            "hire_cost": {
+              "label": "Monthly hire cost actually deferred",
+              "help": "Use the cost of a genuinely planned hire, not the salary of someone already employed."
+            },
+            "hire_months": {
+              "label": "Months that hire is deferred",
+              "help": "One to twelve months; the annual estimate stops counting savings after this period."
+            },
+            "incidents": {
+              "label": "Food portions you could stop wasting each month",
+              "help": "Enter a realistic reduction from what you currently throw away. Count only food you would safely use instead of buying a replacement."
+            },
+            "incident_cost": {
+              "label": "Ingredient cost per avoided wasted portion",
+              "help": "Use the average cost of the ingredients, not a restaurant price or the value of your cooking time."
+            },
+            "probability_before": {
+              "label": "Monthly loss probability before",
+              "help": "Your estimate, not a guaranteed risk assessment."
+            },
+            "probability_after": {
+              "label": "Monthly loss probability after",
+              "help": "Use the same event and monthly time horizon as the baseline."
+            },
+            "loss": {
+              "label": "Loss exposure for that event",
+              "help": "Exclude error incidents and spending already counted. This is uncertain expected value, not cash saved."
+            },
+            "days_before": {
+              "label": "Cycle time before, in days",
+              "help": "Elapsed time from start to completion, separate from hands-on effort."
+            },
+            "days_after": {
+              "label": "Cycle time after, in days",
+              "help": "Shown as an operational change only, without an assumed euro value."
+            }
+          },
+          "burden": [
+            "Checking the fridge and pantry",
+            "Finding recipes and missing ingredients",
+            "Comparing products and preparing a grocery list"
+          ],
+          "opportunity": [
+            "More time for yourself and your household",
+            "Meals built around food you already have",
+            "A reviewed shopping list, with fewer duplicate purchases"
+          ],
+          "outcomes": [
+            {
+              "id": "error",
+              "label": "Use more of the food I buy",
+              "help": "Optional: estimate fewer wasted portions. KAI does not guarantee lower grocery spending."
+            }
+          ]
+        },
+        "cta": {
+          "primaryLabel": "Try a grocery scan with KAI",
+          "primaryTarget": "hero-chat",
+          "privacyNote": "Your estimates stay in this calculator. Nothing is ordered or saved from these inputs."
+        }
+      }
     },
     "roiCalculator": {
       "enabled": true,
       "kicker": "AI economics",
-      "heading": "Model the inventory economics of KAI",
-      "headingAccent": "economics",
+      "heading": "ROI Calculator",
       "subheading": "Counting, invoice re-keying, and stock chasing are operating burden. Returned hours are capacity for availability work, not an automatic payroll saving.",
       "disclaimer": "Figures are modeled estimates from your assumptions. Returned hours are capacity, not an automatic payroll saving, and are not observed customer results.",
       "currency": "EUR",
@@ -1122,6 +1082,313 @@
         "primaryTarget": "contact",
         "privacyNote": "Your data stays private. Hours are capacity. Euros are classified modeled value, not observed results."
       }
+    },
+    "localization": {
+      "translation": {
+        "enabled": true,
+        "sourceLanguage": "en",
+        "defaultLanguage": "en",
+        "autoDetectCountryLanguage": true,
+        "generatedTranslations": [
+          {
+            "language": "es",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.es.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "de",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.de.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "ja",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.ja.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "fr",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.fr.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "pt",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.pt.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "ru",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.ru.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "it",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.it.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "nl",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.nl.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "pl",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.pl.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "tr",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.tr.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "zh",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.zh.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "fa",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.fa.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "vi",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.vi.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "cs",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.cs.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "id",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.id.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "ko",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.ko.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "uk",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.uk.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "hu",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.hu.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "ar",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.ar.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "sv",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.sv.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "ro",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.ro.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "el",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.el.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "da",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.da.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "fi",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.fi.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "he",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.he.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "sk",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.sk.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "th",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.th.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "bg",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.bg.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "hr",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.hr.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "nb",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.nb.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "lt",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.lt.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "sr",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.sr.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "sl",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.sl.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "ca",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.ca.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "et",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.et.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "no",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.no.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          },
+          {
+            "language": "lv",
+            "regionKey": null,
+            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "assetPath": "assets/landing-page.lv.json",
+            "assetSchemaVersion": 2,
+            "generatedAt": "2026-09-06T16:36:03.163Z"
+          }
+        ]
+      },
+      "regionalPages": []
     }
   }
 }

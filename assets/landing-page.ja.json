@@ -1,8 +1,8 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "language": "ja",
   "regionKey": null,
-  "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
+  "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -75,33 +75,33 @@
           "target": "about"
         }
       ],
-      "ctaLabel": "KAIを紹介"
+      "ctaLabel": "KAIをご紹介します"
     },
-    "badge": "あなたのショップ、レシピ、カロリー計画がつながります",
-    "headline": "食料品の買い物を再び簡単に",
-    "headlineAccent": "再び簡単に",
-    "subheadline": "冷蔵庫またはレシートをスキャン。KAIはすでにあるものからレシピを作り、カロリーを計算し、各食事に足りないものだけを注文します。",
+    "badge": "店舗、レシピ、カロリー計画が一元管理",
+    "headline": "食料品ショッピングをもう一度簡単に",
+    "headlineAccent": "もう一度簡単に",
+    "subheadline": "冷蔵庫またはレシートをスキャン。KAIが持っている食材をレシピに変換し、カロリーを計算し、各食事でまだ必要なものだけを買い物します。",
     "ctaLabel": "KAIと話す",
-    "secondaryCtaLabel": "スキャンからレシピへ",
+    "secondaryCtaLabel": "スキャンしてレシピへ",
     "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
     "featureTags": [
-      "実在する商品と価格",
+      "実際の商品と価格",
       "すべての選択を確認",
-      "世帯別カロリー計画",
-      "手持ちの食材からレシピ"
+      "世帯別のカロリー計画",
+      "持っている食材からのレシピ"
     ],
     "seoImage": {
       "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
-      "alt": "新鮮な食材と一週間の meal plan に囲まれた日当たりの良いキッチンにいる、あなたの Grocery Twin である KAI"
+      "alt": "日光の当たるキッチンで、新鮮な農産物と週間食事プランに囲まれたKAI、Grocery Twin"
     },
     "contact": {
-      "heading": "手元にあるものから始める",
-      "body": "冷蔵庫またはレシートをスキャンし、KAIに買い物ギャップを確認用に準備させましょう。"
+      "heading": "持っているものから始める",
+      "body": "冷蔵庫またはレシートをスキャンして、KAIに不足している食料品を用意してもらい、確認してください。"
     },
     "groceryTwin": {
       "header": {
         "editionLabel": "ホーム",
-        "subtitle": "あなたの Grocery Twin",
+        "subtitle": "あなたのGrocery Twin",
         "secondaryEditionLabel": "小売",
         "navItems": [
           {
@@ -125,40 +125,40 @@
             "target": "about"
           }
         ],
-        "secondaryCtaLabel": "KAIを紹介",
-        "primaryCtaLabel": "KAIを紹介"
+        "secondaryCtaLabel": "KAIをご紹介します",
+        "primaryCtaLabel": "KAIをご紹介します"
       },
       "hero": {
-        "ratingLabel": "あなたのショップ、レシピ、カロリー計画がつながります",
-        "heading": "食料品の買い物を再び簡単に",
-        "body": "冷蔵庫またはレシートをスキャン。KAIはすでにあるものからレシピを作り、カロリーを計算し、各食事に足りないものだけを注文します。",
+        "ratingLabel": "店舗、レシピ、カロリー計画が一元管理",
+        "heading": "食料品ショッピングをもう一度簡単に",
+        "body": "冷蔵庫またはレシートをスキャン。KAIが持っている食材をレシピに変換し、カロリーを計算し、各食事でまだ必要なものだけを買い物します。",
         "primaryCtaLabel": "KAIと話す",
-        "secondaryCtaLabel": "スキャンからレシピへ",
+        "secondaryCtaLabel": "スキャンしてレシピへ",
         "trustItems": [
-          "実在する商品と価格",
+          "実際の商品と価格",
           "すべての選択を確認",
-          "世帯別カロリー計画",
-          "手持ちの食材からレシピ"
+          "世帯別のカロリー計画",
+          "持っている食材からのレシピ"
         ],
         "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
-        "characterAlt": "KAI、あなたの全身 Grocery Twin ペルソナ",
+        "characterAlt": "全身のGrocery TwinペルソナであるKAI",
         "chat": {
           "statusLabel": "オンライン",
-          "subtitle": "冷蔵庫からレシピまでアシスタント",
-          "openingMessage": "こんにちは、KAI です。冷蔵庫、パントリー、最近のレシートを見せてください。手元にあるものからレシピを提案し、支出、カロリー、足りない食材を見えるようにします。",
-          "visitorMessage": "冷蔵庫をスキャンして、今夜作れる料理を教えて。",
-          "assistantMessage": "すでにあるものからレシピ案を作り、1 人前のカロリーを表示し、まだ足りない食材だけを注文します。",
-          "inputPlaceholder": "食料品、レシピ、カロリー確認をリクエスト…",
+          "subtitle": "冷蔵庫からレシピへの食料品アシスタント",
+          "openingMessage": "はじめまして、KAIです。冷蔵庫、パントリー、または最近のレシートを見せてください。持っている食材からレシピを提案し、支出、カロリー、不足している食材を見えるようにします。",
+          "visitorMessage": "冷蔵庫をスキャンして、今夜作れるものを表示して。",
+          "assistantMessage": "そこにある食材をレシピの選択肢に変換し、1人分のカロリーを表示し、まだ不足している材料だけを買い物します。",
+          "inputPlaceholder": "食料品、レシピ、カロリーチェックをリクエストしてください…",
           "suggestions": [
-            "オーツミルクのお得情報",
-            "一週間をバランス良く",
-            "冷蔵庫にあるもので料理"
+            "オーツミルクのお買い得情報",
+            "週間バランスを調整",
+            "冷蔵庫から料理する"
           ],
-          "demoNote": "食料品・レシピ・栄養のデモ · 食材と食事ニーズを確認",
+          "demoNote": "Illustrative grocery, recipe, and nutrition demo · Check ingredients and dietary needs",
           "sampleProduct": {
-            "badge": "お得発見 · Pantry+",
+            "badge": "Deal found · Pantry+",
             "name": "Oatly Barista Edition",
-            "detail": "1 L · 590 kcal · 20%オフ",
+            "detail": "1 L · 590 kcal · 20% off",
             "price": "€2.39",
             "actionLabel": "Try /restock"
           }
@@ -166,182 +166,182 @@
         "restockDemo": {
           "enabled": true,
           "commandTrigger": "restock",
-          "uploadLabel": "冷蔵庫・パントリー・レシート・買い物リストの画像を選んでください",
-          "uploadHint": "JPEG、PNG、WebP、または HEIC · 最大 6 枚、各 10 MB まで",
-          "analyzingLabel": "KAI が見えている食料品を読み取っています…",
+          "uploadLabel": "冷蔵庫、パントリー、レシート、または買い物リスト画像を選択してください",
+          "uploadHint": "JPEG、PNG、WebP、またはHEIC · 最大6画像、各10MBまで",
+          "analyzingLabel": "KAIは表示されている食料品を読み取っています…",
           "inventoryHeading": "抽出された在庫を確認",
-          "inventoryBody": "数量を修正し、誤りを削除し、KAI が見落としたものを追加してください。",
-          "itemNameLabel": "商品",
+          "inventoryBody": "数量を修正、問題点を削除、KAIが見落としたものを追加してください。",
+          "itemNameLabel": "品目",
           "quantityLabel": "数量",
           "unitLabel": "単位",
-          "addItemLabel": "商品を追加",
+          "addItemLabel": "品目を追加",
           "removeItemLabel": "削除",
           "chatLabel": "チャットで修正",
-          "voiceLabel": "音声で修正 · 5 分",
+          "voiceLabel": "音声で修正 · 5分",
           "reviewLabel": "在庫を確認",
           "editLabel": "在庫を編集",
           "confirmationHeading": "在庫準備完了",
-          "confirmationBody": "KAI はカートを提案する前にこのリストを再度確認します。あなたが承認しなければ何も注文されません。",
-          "signInLabel": "続行するにはサインイン",
-          "signInNotice": "サインインして、この食料品キャプチャをプライベートな KAI セッションに移し、補充ワークフローを続行してください。明示的な承認なしに注文されることはありません。",
-          "expiryCopy": "未確定のプレビューは 1 時間後に失効します",
-          "errorCopy": "KAI はその画像から買い物リストを読み取れませんでした。冷蔵庫、パントリー、レシート、買い物リストのより鮮明な写真で試してください。"
+          "confirmationBody": "KAIはカートを提案する前にこのリストを再確認します。お客様の承認なしに注文されるものはありません。",
+          "signInLabel": "サインインして続行",
+          "signInNotice": "サインインして、この食料品キャプチャをプライベートなKAIセッションに移動し、補充ワークフローを続行してください。お客様の明示的な承認なしに注文されるものはありません。",
+          "expiryCopy": "未請求のプレビューは1時間後に期限切れになります",
+          "errorCopy": "KAIはその画像から食料品リストを読み取ることができませんでした。より鮮明な冷蔵庫、パントリー、レシート、または買い物リストの写真を試してください。"
         }
       },
       "product": {
-        "kicker": "あなたの買い物 + レシピ + カロリーの双子",
-        "heading": "何が作れて、まだ何を買う必要がある？",
-        "body": "KAI はスキャン、レシピ、商品検索、カロリー、カートをつなぎ、すべての食事がすでにあるものから始まるようにします。",
+        "kicker": "あなたのGrocery + Recipe + Calorie Twin",
+        "heading": "何が料理できるか、まだ買い物は何が必要ですか？",
+        "body": "KAIはスキャン、レシピ、商品検索、カロリー、カートを連携させ、すべての食事を開始食材から始められるようにします。",
         "capabilityLabels": [
           "商品検索",
           "カロリー計画",
-          "レシピのアイデア",
+          "レシピアイデア",
           "画像からリストへ",
           "音声ヘルプ",
-          "お得マッチング"
+          "お得情報マッチング"
         ],
         "cards": [
           {
             "title": "ライブカート",
-            "body": "実際 products、qty、price を 1 つの reviewable cart で比較。",
-            "metric": "支出とカロリーを一緒に"
+            "body": "1つの確認可能なカートで、実際の商品、数量、価格を比較します。",
+            "metric": "支出とカロリーを一緒に管理"
           },
           {
-            "title": "スキャンからレシピ",
-            "body": "冷蔵庫にあるものと足りないもので並べた、作れるレシピを確認。",
+            "title": "スキャンからのレシピ",
+            "body": "冷蔵庫に既に 있는食材と不足している食材で料理可能なレシピをランキング表示します。",
             "metric": "まず料理、それから買い物"
           },
           {
-            "title": "お得レーダー",
-            "body": "レシピの網羅性と世帯の目標を維持しながら、有用な候補を比較。",
-            "metric": "実在する食料品ソース"
+            "title": "お得情報レーダー",
+            "body": "レシピの範囲と世帯の目標を維持しながら、便利なマッチを比較します。",
+            "metric": "実際の食料品ソース"
           }
         ]
       },
       "mobile": {
-        "kicker": "ポケットの中の KAI",
-        "heading": "冷蔵庫からレシピ、カートへ、",
-        "accentHeading": "どこにいても。",
+        "kicker": "ポケットの中のKAI",
+        "heading": "冷蔵庫からレシピへ、カートへ、",
+        "accentHeading": "どこでもあなたのそばに。",
         "items": [
           {
-            "label": "カートを作成",
-            "title": "支出とカロリー計画をまとめたライブカート。",
-            "body": "商品をリクエストし、実際の一致候補を比較して、価格、カロリー、数量が週を通じてどう変わるかを確認。"
+            "label": "カートを構築",
+            "title": "支出とカロリー計画が一緒に見られるライブカート。",
+            "body": "食材について質問し、実際の一致商品を比較して、価格、カロリー、数量が週ごとにどう変わるかを確認できます。"
           },
           {
             "label": "冷蔵庫をスキャン",
-            "title": "冷蔵庫やレシートの写真を、作れるレシピに変換。",
-            "body": "KAI は手元の食材を特定し、カロリーを見積もり、不足食材リストを作る前にレシピを提案します。"
+            "title": "冷蔵庫やレシートの写真を、作れるレシピへと変換します。",
+            "body": "KAIは手元にある食材を特定し、カロリーを見積もり、不足する食材リストを作る前にレシピを提案します。"
           },
           {
-            "label": "レシピを選択",
-            "title": "料理を選び、足りないものだけを買う。",
-            "body": "調理時間、1 人前のカロリー、食材の網羅性、各レシピの小さな買い物ギャップを比較。"
+            "label": "レシピを選ぶ",
+            "title": "mealを選び、足りない食材だけを購入します。",
+            "body": "各レシピの調理時間、1食あたりのカロリー、材料の充足率、そして少額の不足食材を比較します。"
           },
           {
             "label": "KAIと話す",
-            "title": "買い物と一週間の目標について話す。",
-            "body": "何がなくなったか、何を作りたいかを伝えてください。KAI はカート、支出、カロリーギャップを文脈に沿って把握します。"
+            "title": "買い物と週の目標について話します。",
+            "body": "何がなくなったか、何を作りたいかを伝えてください。KAIがカート、支出、カロリーの差を文脈に沿って管理します。"
           }
         ]
       },
       "features": {
-        "kicker": "再構築された週の買い物",
-        "heading": "食料品、レシピ、支出、カロリーを明確に管理",
+        "kicker": "再建された週間買い物",
+        "heading": "食料品の購入、レシピ、支出、カロリーを明確 manage に管理します",
         "items": [
           {
             "number": "01",
-            "title": "レシピ・商品・カロリーの発見",
-            "body": "手元のものをスキャンするか、欲しい料理を入力してください。KAI は作れるレシピ、1 人前のカロリー、各オプションの正確な買い物ギャップを表示します。",
+            "title": "レシピ、商品、カロリーの探索",
+            "body": "手元にある物をスキャンするか、作りたい meal を説明してください。KAIが調理可能なレシピ、1食あたりのカロリー、そして各選択肢の正確な不足食材を表示します。",
             "tags": [
               "冷蔵庫スキャン",
               "レシピ",
               "カロリー",
-              "不足商品"
+              "不足している食材"
             ],
             "accent": "purple"
           },
           {
             "number": "02",
-            "title": "選んだ料理から作られるカート",
-            "body": "レシピを選ぶと、KAI はすでにある食材を取り除きます。カートに入るのは不足している商品だけで、支出と世帯カロリーが同時に更新されます。",
+            "title": "選んだ meal から構築されたカート",
+            "body": "レシピを選ぶと、KAIはすでにある食材を取り除きます。不足している商品だけがカートに入り、支出と世帯のカロリーが同時に更新されます。",
             "tags": [
-              "レシピ網羅性",
+              "レシピの充足率",
               "不足分のみ",
-              "週間 kcal"
+              "週間kcal"
             ],
             "accent": "blue"
           },
           {
             "number": "03",
-            "title": "一度スキャンすれば、あるもので料理できる。",
-            "body": "KAI は冷蔵庫、パントリー、レシートのスキャンを 3 つの実用的なレシピに変換します。時間とカロリーを比較し、1 つを選んで、不足食材だけを確認。",
+            "title": "一度スキャン。 手元の物から調理。",
+            "body": "KAIは冷蔵庫、パントリー、またはレシートのスキャンを3つの実用的なレシピに変換します。時間とカロリーを比較し、1つを選び、その不足食材のみを確認します。",
             "tags": [
-              "レシピ 3 案",
+              "3つのレシピ候補",
               "調理時間",
-              "カロリー / 1 人前"
+              "1食あたりのカロリー"
             ],
             "accent": "lime"
           }
         ]
       },
       "stories": {
-        "kicker": "KAI での料理と買い物はこんな感じ",
-        "heading": "冷蔵庫から dinner までの小さな clarity の瞬間",
+        "kicker": "KAIでの料理と買い物はどのような体験か",
+        "heading": "冷蔵庫から dinner までの小さな明確さの瞬間",
         "testimonials": [
           {
-            "quote": "KAI は冷蔵庫にあるものを dinner のアイデアに変換し、私が選ぶ前にコストと家族のカロリーを表示します。",
-            "name": "Mila",
-            "meta": "忙しい親"
+            "quote": "KAIは私たちの冷蔵庫にある物から dinner のアイデアに変換し、私が選ぶ前にコストと家族のカロリーを表示します。",
+            "name": "ミラ",
+            "meta": "忙しい parent"
           },
           {
-            "quote": "チーズのお得情報をリクエストし、実際 options を比較して、欲しいものをそのまま追加。タブの切り替えは不要。",
-            "name": "Noah",
-            "meta": "週間 shopper"
+            "quote": "チーズのお得な情報を尋ね、実際 options を比較し、希望どおりのものを正確に追加します。タブの切り替えは不要です。",
+            "name": "ノア",
+            "meta": "週間の買い物客"
           },
           {
-            "quote": "レシートスキャンから、3 つのレシピ、1 人前のカロリー、そしてまだ買う必要のある食材だけが得られました。",
-            "name": "Sofia",
-            "meta": "家庭料理人"
+            "quote": "レシートスキャンが3つのレシピ、1食あたりのカロリー、そしてまだ購入が必要な ingredients だけを提供してくれました。",
+            "name": "ソフィア",
+            "meta": "家庭の料理人"
           },
           {
-            "quote": "KAI がまずカートを作り、プランニングの質問は重要なときにだけ聞いてくれるのが好きです。",
-            "name": "Lucas",
+            "quote": "KAIが最初にカートを構築し、必要なときにだけ planning の質問をしてくることが気に入っています。",
+            "name": "ルーカス",
             "meta": "学生"
           },
           {
-            "quote": "キッチンで手がふさがっているとき、音声入力は完璧です。KAI に何がなくなったか伝えるだけ。",
-            "name": "Emma",
-            "meta": "meal prep 好き"
+            "quote": "キッチンで手がふさがっているときに音声は最適です。なくなった物をKAIに伝えるだけです。",
+            "name": "エマ",
+            "meta": "meal prep のファン"
           },
           {
-            "quote": "すべて確認可能。数量を変更すると、支出とカロリー合計が一緒に動くのが見えます。",
-            "name": "Daan",
-            "meta": "賢い shopper"
+            "quote": "すべてが確認可能な状態のままです。数量を変更でき、支出とカロリーの合計が一緒に動くのを確認できます。",
+            "name": "ダーン",
+            "meta": "賢い買い物客"
           }
         ],
         "articles": [
           {
-            "category": "週間ルーティン",
-            "title": "7 分で終わる買い物と meal plan",
-            "body": "一人で買う人が、バラバラの staples リストをカートと 3 つの作れる dinner、そして 10,850 kcal の計画に変えました。"
+            "category": "週間の routine",
+            "title": "7分の買い物と meal プラン",
+            "body": "一人暮らしの買い物客が散らかった staple のリストをカート、3つの調理可能な dinner、10,850の計画カロリーに変換しました。"
           },
           {
             "category": "冷蔵庫からレシピへ",
-            "title": "冷蔵庫の写真から今夜 dinner へ",
-            "body": "KAI は食材を認識し、3 つのレシピを提案し、すでにあるものとまだ買う必要があるものを分けました。"
+            "title": "冷蔵庫の写真から今夜 dinner まで",
+            "body": "KAIが食材を認識し、3つのレシピを提案し、すでにある物とまだ購入が必要な物を区別しました。"
           },
           {
             "category": "スマートレシピ検索",
-            "title": "一週間全体を見渡すスマート検索",
-            "body": "価格、カロリー、レシピ網羅性、そしてタンパク質のギャップを考慮した検索が、買い物全体の一貫性を失いませんでした。"
+            "title": "週全体を見渡すスマート検索",
+            "body": "買い物の流れを失うことなく、価格、カロリー、レシピの充足率、タンパク質の不足を考慮した検索。"
           }
         ]
       },
       "about": {
-        "kicker": "1 か所、多くの入り口",
-        "heading": "あらゆる入力が、レシピ、1 つのカート、1 つのカロリー計画になります",
-        "body": "写真、音声メモ、レシート、リストのいずれも同じ下層のビューを動かします。手元にある食材、作れるレシピ、まだ足りない商品、週間の支出、世帯のカロリー。",
+        "kicker": "1か所、多くの入り口",
+        "heading": "すべての入力がレシピ、1つのカート、1つのカロリープランになります",
+        "body": "写真、音声メモ、レシート、またはリストが同じ view に供給します：手元にある食材、調理可能なレシピ、まだ不足している商品、週の支出、世帯のカロリー。",
         "capabilities": [
           "写真",
           "音声",
@@ -355,23 +355,23 @@
         ]
       },
       "closing": {
-        "kicker": "次の冷蔵庫から dinner までの計画",
-        "heading": "手元にあるものから始めて、足りないものだけを買う。",
-        "body": "冷蔵庫またはレシートをスキャン。KAI が作れるレシピを提案し、1 人前のカロリーを表示し、足りない食材を確認可能なカートに変換します。",
+        "kicker": "次の冷蔵庫から dinner までのプラン",
+        "heading": "手元にある物から始めましょう。不足分のみを購入します。",
+        "body": "冷蔵庫またはレシートをスキャンしてください。KAIが調理可能なレシピを提案し、1食あたりのカロリーを表示し、不足している食材を確認可能なカートに変換します。",
         "ctaLabel": "スキャンしてレシピを見つける"
       },
       "footer": {
-        "tagline": "あなたの冷蔵庫からカートまでの Grocery Twin。手元にあるものからレシピを見つけ、カロリーを確認し、足りないものだけを買う。",
+        "tagline": "冷蔵庫からカートまでのGrocery Twin。手元の物からレシピを見つけ、カロリーを確認し、不足分のみを購入します。",
         "groups": [
           {
             "label": "製品",
             "links": [
               {
-                "label": "食料品デモ",
+                "label": " grocery のデモ",
                 "target": "product"
               },
               {
-                "label": "使い方",
+                "label": "仕組み",
                 "target": "features"
               },
               {
@@ -384,7 +384,7 @@
             "label": "KAI",
             "links": [
               {
-                "label": "KAI について",
+                "label": "KAIについて",
                 "target": "about"
               },
               {
@@ -399,9 +399,4918 @@
           }
         ],
         "copyright": "© 2026 KAI · Grocery Twin",
-        "closingStatement": "良い選択。素晴らしい一週間。"
+        "closingStatement": "良い選択。素晴らしい1週間。"
+      },
+      "homeRoiCalculator": {
+        "methodologyVersion": 2,
+        "enabled": true,
+        "kicker": "家庭への影響",
+        "heading": "ROI計算機",
+        "subheading": "ご家庭での時間の節約を見積もります。金額を見積もりたい場合のみ、食品ロスの削減量と費用の前提を追加してください。",
+        "disclaimer": "ご家庭における目安の試算であり、実際の節約を保証するものではありません。あなたのお時間は時給として換算されません。食品の価値は、それが本来発生する支出の代わりになる場合にのみ計上されます。価格、分量、食事制限の必要性はご自身でご確認ください。",
+        "currency": "EUR",
+        "locale": "en-GB",
+        "inputs": [],
+        "metrics": [],
+        "businessImpact": {
+          "defaults": {
+            "volume": 4,
+            "minutes": 45,
+            "automation": 50,
+            "review": 5
+          },
+          "copy": {
+            "navLabel": "ROI",
+            "workloadStep": "あなたの日課",
+            "costStep": "あなたの KAI 予算",
+            "valueStep": "食品ロスの削減",
+            "workloadIntro": "食品の確認、献立の選択、购物リスト作成に費やす時間を計上してください。調理、移動、店舗での時間は含めないでください。",
+            "costIntro": "KAI および追加サービスには、あなた自身の月額予算を入力してください。時間に焦点を当てたい場合は空欄にし、費用が発生しない場合はゼロと入力してください。",
+            "valueIntro": "節約できた時間は、あなたが楽しむためのものです。食品の価値は、ロスせずに使える分を任意で見積もってください。同じ購入を二重で計上しないでください。",
+            "sampleNotice": "日課の目安 · 数値はご家庭に合わせて調整してください",
+            "monthly": "毎月",
+            "yearly": "毎年",
+            "next": "続ける",
+            "back": "戻る",
+            "reset": "前提条件をリセットする",
+            "summary": "ご家庭での試算",
+            "volume": "プランニングの回数",
+            "grossHours": "削減できたプランニング時間",
+            "capacity": "あなたに戻る時間",
+            "retained": "個人的な時間であり、金銭換算はありません",
+            "hours": "時間",
+            "days": "日",
+            "percent": "%",
+            "minutes": "分",
+            "reviewMode": "提案を確認する人は？",
+            "teamReview": "自分自身または家族",
+            "paidReview": "追加で依頼する人",
+            "reviewNote": "分量、アレルギー、食材、カートの確認には時間がかかります。家族による確認時間は「戻る時間」から差し引かれます。追加で有料の依頼を行う費用は、代わりに KAI 予算に含めてください。",
+            "totalMode": "月々の予算",
+            "itemizedMode": "任意で入力する費用の詳細",
+            "budgetNote": "KAI 利用料、追加サービス、追加の有料依頼はそれぞれ 1 回だけ含めてください。通常の食料品の費用や、あなた自身の時間の対価は含めないでください。",
+            "itemizedNote": "該当しない項目はゼロと入力してください。有料の確認費用は入力した単価で計上されるため、他の費用項目には重複して含めないでください。",
+            "paidReviewCost": "追加の有料確認",
+            "allInCost": "あなたの KAI ランニングコスト",
+            "missing": "仮定を追加します",
+            "cashValue": "現金支出の回避",
+            "contribution": "期待される貢献",
+            "expectedLoss": "保持されると試算される食品の価値",
+            "riskValue": "不確実なリスク値を含む",
+            "economicValue": "試算された食品の価値",
+            "netBenefit": "食品の価値 − KAI の費用",
+            "multiple": "食品の価値 ÷ KAI の費用",
+            "notApplicable": "該当なし",
+            "annual": "年間ビュー",
+            "annualNote": "同じ日課と食品ロス削減の前提で 12 か月間試算しています。成長率や複利計算、節約の保証はありません。",
+            "method": "これはどのように計算されるか",
+            "burdenHeading": "食料品の管理時間を削減",
+            "opportunityHeading": "日常生活にもっとゆとりを",
+            "methodBody": "戻る時間 ＝ プランニング回数 × 1 回あたりの時間 × KAI が削減できる割合 − 確認に要する時間。あなた個人の時間は金額とは別です。食品の価値（任意）＝ ロスを防げると見込む分量 × その材料費。将来の購入を置き換える範囲で有効です。",
+            "formulaLabel": "食品の価値 − KAI ランニングコスト ＝ 試算上の正味便益。食品の価値 ÷ KAI ランニングコスト ＝ 倍率であり、費用がゼロの場合は倍率は定義されません。",
+            "allocationNote": "戻ってくる時間はすべて、あなた個人の時間です。賃金、事業収益、現金の節約には一切換算されません。",
+            "overlapLabel": "これらの分量は、本来ならロスとなるものであり、将来の購入を置き換えるもので、かつ割引や別の節約として二重に計上されません。",
+            "overlapNote": "安全に食べられる食品のみを計上してください。材料費にはあなたの時間と KAI 費用は含みません。同じ食品を「重複購入の回避」と「ロス防止」の両方に計上しないでください。",
+            "hiringLabel": "この雇用は本当に計画されたものであり、割り当てられたキャパシティーで業務をカバーできます。",
+            "reviewedLabel": "前提を見直しました。食品ロスを選択しない場合、便益として計上されるのは時間の試算のみです。",
+            "cycleResult": "サイクルタイムの改善",
+            "throughputResult": "能力と需要に応じて追加作業がサポートされる",
+            "assumptionsIncomplete": "時間の試算としてそのままご利用いただけます。金額による比較を表示するには、KAI 予算を入力し、食品ロスの前提を見直してください。",
+            "allocationError": "割り当てられた時間が、利用可能な正味容量を超えています。割り当てを減らします。",
+            "reviewError": "確認にかかる時間が、削減されるプランニング時間よりも長くなっています。これらの前提では、プラスの時間は得られません。",
+            "cashError": "回避された支出は、現在の支出を超えることはできません。また、割り当てられた時間なしで正の値を持つことはできません。",
+            "hiringError": "割り当てられた容量は、計画されたレンタル時間をカバーする必要があります。雇用予定とその期間を確認します。",
+            "riskError": "損失削減推定では、後の確率が前の確率を超えることはできません。",
+            "overlapError": "食品の価値が支出を置き換えるものであり、二重計上されていないことを必ず確認してから入力してください。",
+            "boundsError": "表示された制限内の値を使用してください。",
+            "rangeLabel": "値を調整する",
+            "noCurrencyChange": "言語は、通貨や前提条件ではなく、書式を変更します。"
+          },
+          "fields": {
+            "volume": {
+              "label": "毎月の食料品のプランニング回数",
+              "help": "例：週 1 回のプランニングを 4 回。ご家庭全体を 1 回と数え、1 人ずつ数えないでください。"
+            },
+            "minutes": {
+              "label": "現在の 1 回あたりのプランニング時間（分）",
+              "help": "冷蔵庫の確認、レシピの検討、商品比較、リスト作成を含めてください。調理と買い物への移動は除いてください。"
+            },
+            "automation": {
+              "label": "KAI が削減に貢献できる割合",
+              "help": "これは目安であり、性能を約束するものではありません。控えめに始め、実際の日課と照らし合わせて確認してください。"
+            },
+            "review": {
+              "label": "1 回のプランを確認する時間（分）",
+              "help": "食材、分量、アレルギー、最新の価格、最終的な购物リストの確認時間を確保してください。"
+            },
+            "budget": {
+              "label": "あなたの月額 KAI 予算",
+              "help": "利用料および追加サービスに対するあなた自身の見積もりを入力してください。価格見積もりではありません。通常の食料品の費用は含めないでください。"
+            },
+            "model_cost": {
+              "label": "追加の AI 利用",
+              "help": "サブスクリプションとは別課金される利用分のみを入力してください。該当しない場合はゼロと入力してください。"
+            },
+            "tools_cost": {
+              "label": "追加の連携サービス",
+              "help": "KAI のために必要な追加のサービス料金のみを入力してください。通常の食品購入費用は含めないでください。"
+            },
+            "infrastructure_cost": {
+              "label": "追加のホスティングまたはストレージ",
+              "help": "別途支払っている場合を除き、ゼロと入力してください。"
+            },
+            "platform_cost": {
+              "label": "KAI / Gabriel 利用料",
+              "help": "実際のサブスクリプション料または計画中の予算を入力してください。この計算機から価格を推測しないでください。"
+            },
+            "review_rate": {
+              "label": "追加の有料確認（時給）",
+              "help": "実際に追加で支払う依頼費用を入力してください。あなた自身の時間を時給換算しないでください。"
+            },
+            "cash_hours": {
+              "label": "有給労働を取り除く時間",
+              "help": "時間外労働、請負業者、または処理支出が実際に停止する作業のみを割り当てます。"
+            },
+            "cash_baseline": {
+              "label": "その仕事に対する現在の月々の支出",
+              "help": "削減の元となる現金予算。"
+            },
+            "cash_avoided": {
+              "label": "やめたい月々の出費",
+              "help": "給与に時間をかけたものではなく、明確な金額。個別に入力された雇用計画による節約は除外されます。"
+            },
+            "higher_value_hours": {
+              "label": "より価値の高い仕事に費やされる時間",
+              "help": "デフォルトで容量全体ではなく、現実的にリダイレクトできる時間。"
+            },
+            "contribution_rate": {
+              "label": "1時間あたりの貢献度の増加",
+              "help": "収益から配信コストの増分を差し引いたもの。別途カウントされる AI コストは含まれません。給与や総収入ではありません。"
+            },
+            "throughput_hours": {
+              "label": "追加ボリュームに使用される時間",
+              "help": "この割り当ては、助言業務や支出削減にも使用できません。"
+            },
+            "extra_minutes": {
+              "label": "追加ユニットあたりのチーム時間",
+              "help": "もう 1 ユニットを納品するには、レビューを含む残りの人的努力が必要でした。"
+            },
+            "demand": {
+              "label": "需要が見込まれる追加ユニット",
+              "help": "容量だけでは需要はありません。引き受けると予想される追加の月次作業を入力します。"
+            },
+            "unit_margin": {
+              "label": "追加単位当たりの拠出金",
+              "help": "増分収益から配送コストを差し引いたもの。 AIの運用コストは別途控除されます。"
+            },
+            "hiring_hours": {
+              "label": "計画された雇用をカバーする時間",
+              "help": "一般的なフルタイム相当の見積もりではなく、特定の計画された作業にキャパシティを割り当てます。"
+            },
+            "planned_hours": {
+              "label": "計画された雇用でカバーされる月間の時間数",
+              "help": "割り当てられた容量は、このワークロード全体をカバーする必要があります。"
+            },
+            "hire_cost": {
+              "label": "毎月の雇用コストは実際に繰延される",
+              "help": "すでに雇用されている人の給与ではなく、真に計画された雇用のコストを使用します。"
+            },
+            "hire_months": {
+              "label": "雇用が延期される月数",
+              "help": "1～12か月。年間見積もりでは、この期間を過ぎると節約のカウントが停止されます。"
+            },
+            "incidents": {
+              "label": "毎月、ロスを防げる食品の分量",
+              "help": "現在廃棄している量から、現実的に削減できる見込みを入力してください。代わりの購入の代わりに、安全に使える食品のみを計上してください。"
+            },
+            "incident_cost": {
+              "label": "ロス回避 1 食分あたりの材料費",
+              "help": "外食時の価格やあなたの調理時間ではなく、材料の平均的な費用を使用してください。"
+            },
+            "probability_before": {
+              "label": "以前の月間損失確率",
+              "help": "あなたの推定値であり、保証されたリスク評価ではありません。"
+            },
+            "probability_after": {
+              "label": "その後の月間損失確率",
+              "help": "同じイベントと毎月の期間をベースラインとして使用します。"
+            },
+            "loss": {
+              "label": "そのイベントの損失エクスポージャ",
+              "help": "エラー インシデントやすでにカウントされている支出は除外します。これは不確実な期待値であり、節約された現金ではありません。"
+            },
+            "days_before": {
+              "label": "以前のサイクル時間 (日数)",
+              "help": "実践的な作業とは別に、開始から完了までの経過時間。"
+            },
+            "days_after": {
+              "label": "後のサイクル時間 (日数)",
+              "help": "想定されるユーロ価値を含まず、運用上の変更のみとして表示されます。"
+            }
+          },
+          "burden": [
+            "冷蔵庫とパントリーの確認",
+            "レシピと足りない食材の検討",
+            "商品の比較と Grocery リストの作成"
+          ],
+          "opportunity": [
+            "あなた自身とご家族のための時間を増やす",
+            "すでにある食材を活かした献立",
+            "重複購入の少ない、確認済みの购物リスト"
+          ],
+          "outcomes": [
+            {
+              "id": "error",
+              "label": "買った食品をもっと使い切る",
+              "help": "任意：廃棄量の削減を見積もります。KAI は食料品の支出削減を保証するものではありません。"
+            }
+          ]
+        },
+        "cta": {
+          "primaryLabel": "KAI で Grocery スキャンを試す",
+          "primaryTarget": "hero-chat",
+          "privacyNote": "入力内容はこの計算機内のみに保持されます。注文されたり保存されたりすることはありません。"
+        }
+      }
+    },
+    "roiCalculator": {
+      "enabled": true,
+      "kicker": "AI の経済性",
+      "heading": "ROI計算機",
+      "subheading": "在庫計上、請求書再入力、補充追跡は運用負担です。削減できた時間は対応業務に充てるキャパシティであり、人件費の自動削減ではありません。",
+      "disclaimer": "数値はあなたの前提に基づく試算です。削減時間はキャパシティであり、人件費の自動削減ではありません。また、実際の顧客結果でもありません。",
+      "currency": "EUR",
+      "locale": "en-GB",
+      "periodToggle": true,
+      "defaultPeriod": "monthly",
+      "settingsHeading": "利用と費用の設定",
+      "resultsHeading": "業務へのインパクトと経済的価値",
+      "profileHeading": "企業プロファイル",
+      "workloadHeading": "作業量",
+      "economicsHeading": "AI の経済性",
+      "economicsNote": "総運行コストはモデルのトークン、ツール、プラットフォームライセンスであり、給与比較ではありません。",
+      "allocationHeading": "返還されたキャパシティの行く先",
+      "allocationHelp": "削減された時間はキャパシティです。コスト削減、追加 volumes、または高価値作業に割り当てた割合のみにユーロ価値が付与されます。",
+      "unusedAllocationLabel": "未使用キャパシティとして保持",
+      "operationsHeading": "物理的な変化",
+      "valueHeading": "その変化の価値",
+      "frameworkHeading": "価値の作成方法",
+      "negativeProductivity": {
+        "heading": "削除される負の生産性",
+        "body": "棚番数、請求書の再入力、ギャップ追跡（それだけでは可用性を改善しないもの）",
+        "items": [
+          "手動棚卸し",
+          "請求書と注文の再入力",
+          "欠落行の追跡"
+        ]
+      },
+      "positiveProductivity": {
+        "heading": "潜在的な正の生産性",
+        "body": "返還された時間でより多くの拠点に対応可能、またはオーバーフローカウンターへの支払いを停止できます。",
+        "items": [
+          "担当者あたりの拠点数増加",
+          "より 빠른 공급업체 주문 처리",
+          "緊急補充の削減"
+        ]
+      },
+      "producesHeading": "KAIが生み出すもの",
+      "produces": [
+        "リアルタイム在庫",
+        "ベンダー対応注文",
+        "例外トレイル"
+      ],
+      "breakdownHeading": "分類済み経済的価値",
+      "projectionHeading": "予測12ヶ月経済的価値",
+      "yearOneCostLabel": "元年AIコスト",
+      "yearOneValueLabel": "元年経済的価値",
+      "yearOneReturnLabel": "元年経済的リターン",
+      "scenarios": [
+        {
+          "id": "conservative",
+          "label": "保守的",
+          "multiplier": 0.7
+        },
+        {
+          "id": "base",
+          "label": "ベース",
+          "multiplier": 1
+        },
+        {
+          "id": "optimistic",
+          "label": "楽観的",
+          "multiplier": 1.3
+        }
+      ],
+      "defaultScenarioId": "base",
+      "inputs": [
+        {
+          "id": "locations",
+          "label": "対象拠点",
+          "type": "slider",
+          "min": 1,
+          "max": 80,
+          "step": 1,
+          "defaultValue": 6,
+          "format": "integer",
+          "group": "profile",
+          "profile": true,
+          "profileIcon": "check"
+        },
+        {
+          "id": "capacity_rate",
+          "label": "店舗運営キャパシティの時給影子価格",
+          "type": "slider",
+          "min": 15,
+          "max": 120,
+          "step": 5,
+          "defaultValue": 35,
+          "format": "currency",
+          "group": "profile",
+          "profile": true
+        },
+        {
+          "id": "hours_per_location_per_week",
+          "label": "拠点あたりの在庫・注文作業時間/週",
+          "type": "slider",
+          "min": 1,
+          "max": 40,
+          "step": 1,
+          "defaultValue": 8,
+          "format": "hours",
+          "group": "workload"
+        },
+        {
+          "id": "automation_share",
+          "label": "自動化されるこの作業の割合",
+          "type": "slider",
+          "min": 10,
+          "max": 90,
+          "step": 5,
+          "defaultValue": 50,
+          "format": "percent",
+          "group": "workload"
+        },
+        {
+          "id": "tokens_per_unit",
+          "label": "自動化時間あたりの推定トークン数",
+          "type": "slider",
+          "min": 10000,
+          "max": 250000,
+          "step": 5000,
+          "defaultValue": 40000,
+          "format": "tokens",
+          "group": "economics"
+        },
+        {
+          "id": "input_price",
+          "label": "モデル入力価格/100万トークン",
+          "type": "number",
+          "min": 0,
+          "max": 50,
+          "step": 0.25,
+          "defaultValue": 2,
+          "format": "currency",
+          "group": "economics"
+        },
+        {
+          "id": "output_price",
+          "label": "モデル出力価格/100万トークン",
+          "type": "number",
+          "min": 0,
+          "max": 80,
+          "step": 0.25,
+          "defaultValue": 10,
+          "format": "currency",
+          "group": "economics"
+        },
+        {
+          "id": "output_share",
+          "label": "出力を占めるトークンの割合",
+          "type": "slider",
+          "min": 5,
+          "max": 50,
+          "step": 1,
+          "defaultValue": 20,
+          "format": "percent",
+          "group": "economics"
+        },
+        {
+          "id": "license",
+          "label": "月額プラットフォームライセンス",
+          "type": "slider",
+          "min": 0,
+          "max": 6000,
+          "step": 50,
+          "defaultValue": 1500,
+          "format": "currency",
+          "group": "economics"
+        },
+        {
+          "id": "allocation_volume",
+          "label": "追加 volumes 吸収に使用する割合",
+          "help": "スループット：同じチームでこなせる追加作業。給与から現金が出るのではなく、キャパシティ創出として価値評価されます。",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 50,
+          "format": "percent",
+          "group": "allocation"
+        },
+        {
+          "id": "allocation_billable",
+          "label": "高価値/請求可能な作業に使用する割合",
+          "help": "正の生産性：アドバイザリー、販売、またはその他の限界貢献作業。",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 25,
+          "format": "percent",
+          "group": "allocation"
+        },
+        {
+          "id": "allocation_cost_reduction",
+          "label": "純粋なコスト削減となる割合",
+          "help": "現金として削除される負の生産性：残業、契約社員、または別途支払うことになる作業。",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 17,
+          "format": "percent",
+          "group": "allocation"
+        },
+        {
+          "id": "contribution_rate",
+          "label": "高価値作業の1時間あたりの限界貢献",
+          "help": "請求可能/アドバイザリー分にのみ使用。これは時給給与ではありません。",
+          "type": "slider",
+          "min": 20,
+          "max": 400,
+          "step": 5,
+          "defaultValue": 150,
+          "format": "currency",
+          "group": "allocation"
+        },
+        {
+          "id": "expected_error_cost",
+          "label": "現在の月次エラー/手直しコスト見込",
+          "type": "slider",
+          "min": 0,
+          "max": 20000,
+          "step": 50,
+          "defaultValue": 800,
+          "format": "currency",
+          "group": "workload"
+        },
+        {
+          "id": "error_reduction_share",
+          "label": "そのエラーコストの回避割合",
+          "type": "slider",
+          "min": 0,
+          "max": 90,
+          "step": 5,
+          "defaultValue": 35,
+          "format": "percent",
+          "group": "workload"
+        }
+      ],
+      "metrics": [
+        {
+          "id": "hours_removed",
+          "label": "自動化される反復作業",
+          "formula": "locations * hours_per_location_per_week * weeks_per_month * (automation_share / 100)",
+          "format": "hours",
+          "kind": "card",
+          "layer": "operations",
+          "productivity": "negative",
+          "scalesWithPeriod": true,
+          "scalesWithScenario": false,
+          "note": "負の生産性：削除される運営負担。"
+        },
+        {
+          "id": "hours_returned",
+          "label": "チームに返還されるキャパシティ",
+          "formula": "hours_removed",
+          "format": "hours",
+          "kind": "card",
+          "layer": "operations",
+          "productivity": "positive",
+          "scalesWithPeriod": true,
+          "scalesWithScenario": false,
+          "note": "正の生産性：より良い作業に使用可能となった時間。"
+        },
+        {
+          "id": "work_units",
+          "label": "モデル化された拠点",
+          "formula": "locations",
+          "format": "integer",
+          "kind": "card",
+          "layer": "operations",
+          "scalesWithPeriod": true,
+          "scalesWithScenario": false
+        },
+        {
+          "id": "unused_share",
+          "label": "未使用キャパシティの割合",
+          "formula": "100 - allocation_volume - allocation_billable - allocation_cost_reduction",
+          "format": "percent",
+          "kind": "hidden",
+          "layer": "operations",
+          "scalesWithPeriod": false,
+          "scalesWithScenario": false
+        },
+        {
+          "id": "volume_hours",
+          "label": "追加 volumes に配分された時間",
+          "formula": "hours_returned * (allocation_volume / 100)",
+          "format": "hours",
+          "kind": "hidden",
+          "layer": "operations",
+          "scalesWithPeriod": true,
+          "scalesWithScenario": false
+        },
+        {
+          "id": "billable_hours",
+          "label": "高価値作業に配分された時間",
+          "formula": "hours_returned * (allocation_billable / 100)",
+          "format": "hours",
+          "kind": "hidden",
+          "layer": "operations",
+          "scalesWithPeriod": true,
+          "scalesWithScenario": false
+        },
+        {
+          "id": "cost_hours",
+          "label": "純粋なコスト削減となる時間",
+          "formula": "hours_returned * (allocation_cost_reduction / 100)",
+          "format": "hours",
+          "kind": "hidden",
+          "layer": "operations",
+          "scalesWithPeriod": true,
+          "scalesWithScenario": false
+        },
+        {
+          "id": "unused_hours",
+          "label": "未使用キャパシティとして保持される時間",
+          "formula": "hours_returned * (unused_share / 100)",
+          "format": "hours",
+          "kind": "hidden",
+          "layer": "operations",
+          "scalesWithPeriod": true,
+          "scalesWithScenario": false
+        },
+        {
+          "id": "monthly_tokens",
+          "label": "月次トークン数",
+          "formula": "hours_removed * tokens_per_unit",
+          "format": "tokens",
+          "kind": "hidden",
+          "layer": "economics",
+          "scalesWithPeriod": true,
+          "scalesWithScenario": false
+        },
+        {
+          "id": "model_cost",
+          "label": "AIモデルコスト（推定）",
+          "formula": "(monthly_tokens * (1 - output_share / 100) / 1000000) * input_price + (monthly_tokens * (output_share / 100) / 1000000) * output_price",
+          "format": "currency",
+          "kind": "breakdown-cost",
+          "layer": "economics",
+          "scalesWithPeriod": true,
+          "scalesWithScenario": false
+        },
+        {
+          "id": "all_in_cost",
+          "label": "総AIコスト",
+          "formula": "model_cost + license",
+          "format": "currency",
+          "kind": "summary-cost",
+          "layer": "economics",
+          "scalesWithPeriod": true,
+          "scalesWithScenario": false
+        },
+        {
+          "id": "cost_elimination",
+          "label": "純粋なコスト削減",
+          "formula": "cost_hours * capacity_rate",
+          "format": "currency",
+          "kind": "breakdown-benefit",
+          "layer": "value",
+          "valueClass": "cost-elimination",
+          "scalesWithPeriod": true,
+          "scalesWithScenario": false,
+          "note": "実際停止する残業、契約社員、またはその他の支出。"
+        },
+        {
+          "id": "revenue_productivity",
+          "label": "高価値作業からの貢献",
+          "formula": "billable_hours * contribution_rate",
+          "format": "currency",
+          "kind": "breakdown-benefit",
+          "layer": "value",
+          "valueClass": "revenue-productivity",
+          "scalesWithPeriod": true,
+          "scalesWithScenario": true,
+          "note": "給与ではなく限界貢献で評価。"
+        },
+        {
+          "id": "throughput_value",
+          "label": "追加 volumes を処理するキャパシティ",
+          "formula": "volume_hours * capacity_rate",
+          "format": "currency",
+          "kind": "breakdown-benefit",
+          "layer": "value",
+          "valueClass": "throughput",
+          "scalesWithPeriod": true,
+          "scalesWithScenario": true,
+          "note": "追加スループットの影子価格。給与節約ではありません。"
+        },
+        {
+          "id": "error_value",
+          "label": "期待されるエラーと手直しの回避",
+          "formula": "expected_error_cost * (error_reduction_share / 100)",
+          "format": "currency",
+          "kind": "breakdown-benefit",
+          "layer": "value",
+          "valueClass": "error-avoidance",
+          "scalesWithPeriod": true,
+          "scalesWithScenario": false
+        },
+        {
+          "id": "economic_value",
+          "label": "モデル化された経済価値",
+          "formula": "cost_elimination + revenue_productivity + throughput_value + error_value",
+          "format": "currency",
+          "kind": "summary-benefit",
+          "layer": "value",
+          "scalesWithPeriod": true,
+          "scalesWithScenario": false
+        },
+        {
+          "id": "net_value",
+          "label": "AIコストを差し引いた経済的価値",
+          "formula": "economic_value - all_in_cost",
+          "format": "currency",
+          "kind": "card",
+          "layer": "value",
+          "scalesWithPeriod": true,
+          "scalesWithScenario": false
+        },
+        {
+          "id": "return_multiple",
+          "label": "総AIコストに対する経済的リターン",
+          "formula": "economic_value / all_in_cost",
+          "format": "multiplier",
+          "kind": "summary-roi",
+          "layer": "value",
+          "scalesWithPeriod": false,
+          "scalesWithScenario": false
+        }
+      ],
+      "projection": {
+        "months": 12,
+        "costMetricId": "all_in_cost",
+        "benefitMetricId": "net_value",
+        "yearOneLabel": "元年AIコストを差し引いた経済的価値",
+        "costLabel": "AIコスト（総）",
+        "benefitLabel": "コストを差し引いた経済的価値"
+      },
+      "cta": {
+        "primaryLabel": "KAIに相談する",
+        "secondaryLabel": "どのように機能するか見てみましょう",
+        "primaryTarget": "contact",
+        "privacyNote": "データはプライベートのままです。時間は定員です。ユーロは分類されたモデル値であり、観察された結果ではありません。"
       }
     }
   },
-  "generatedAt": "2026-09-02T10:21:16.000Z"
+  "translationIndex": [
+    {
+      "path": [
+        "landingPage",
+        "header",
+        "ctaLabel"
+      ],
+      "sourceHash": "f6f2913c3ee65c4e5fa410960649ae928ee8a5cd7f384972c7275007686b7ac2"
+    },
+    {
+      "path": [
+        "landingPage",
+        "badge"
+      ],
+      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "headline"
+      ],
+      "sourceHash": "75bc26f611b67875058132bc4fc333f665d2218eca4a9a4730395836996fb5b9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "headlineAccent"
+      ],
+      "sourceHash": "3d54c5d4b44f2c7df90f9de6ec14e323a7732b970d65373d802513c49985b5e4"
+    },
+    {
+      "path": [
+        "landingPage",
+        "subheadline"
+      ],
+      "sourceHash": "87172148adc2d1bb34f3b1c124679333bc29dd2a83d9e69a43d55c3fefb234be"
+    },
+    {
+      "path": [
+        "landingPage",
+        "ctaLabel"
+      ],
+      "sourceHash": "a37d417d5887e472e2f50c24a97e06eec51764c17caed7fec8844c233090138f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "secondaryCtaLabel"
+      ],
+      "sourceHash": "0025d718cda8439dcb183fd7d13b93646c8f8bb670c5e6cda3490ced8baed371"
+    },
+    {
+      "path": [
+        "landingPage",
+        "featureTags",
+        0
+      ],
+      "sourceHash": "0d8fc0f3eef4fc62c75d211b91dfa43e5d30892d665137a0ea640974aeb967e3"
+    },
+    {
+      "path": [
+        "landingPage",
+        "featureTags",
+        1
+      ],
+      "sourceHash": "edf4f38e76dae0912f455fbe86ca034df089b68575d89682ecde9be5f0d5f459"
+    },
+    {
+      "path": [
+        "landingPage",
+        "featureTags",
+        2
+      ],
+      "sourceHash": "ef26cb86433a3fda479c7155afa9ec0590fe57e05de348841c7188505725744f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "featureTags",
+        3
+      ],
+      "sourceHash": "4d80e29caf0cdffd10c6ead7693a30894ffdb90458aab3e32b0bbbc0b8c59354"
+    },
+    {
+      "path": [
+        "landingPage",
+        "seoImage",
+        "alt"
+      ],
+      "sourceHash": "be9118594bd92014669a2768824b3a58d4dc162a8e19dd4d61a235a48c89d5e3"
+    },
+    {
+      "path": [
+        "landingPage",
+        "contact",
+        "heading"
+      ],
+      "sourceHash": "763918ef854e5898f324c49157c8af8e05e9706d086faba3a67f8876314e7b6f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "contact",
+        "body"
+      ],
+      "sourceHash": "17b37f1ef06a16ef07abc1e6c5ebe1bcafc3fab0d8c65bc93aa231f42b8d0ccb"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "header",
+        "editionLabel"
+      ],
+      "sourceHash": "3a78695388b38b5cceefaf6796b0137877514593543b91af2752d5a17e3d736c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "header",
+        "subtitle"
+      ],
+      "sourceHash": "9c7feee8da55e8201c68308d58b3e768e7bc4f443a9312ca72d73e6d7e38a884"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "header",
+        "secondaryEditionLabel"
+      ],
+      "sourceHash": "cdb38c8dc89ad6b4a0b85eb3137345720b0fb6ca7b1e6407d09af3b47c77495c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "header",
+        "secondaryCtaLabel"
+      ],
+      "sourceHash": "f6f2913c3ee65c4e5fa410960649ae928ee8a5cd7f384972c7275007686b7ac2"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "header",
+        "primaryCtaLabel"
+      ],
+      "sourceHash": "f6f2913c3ee65c4e5fa410960649ae928ee8a5cd7f384972c7275007686b7ac2"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "ratingLabel"
+      ],
+      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "heading"
+      ],
+      "sourceHash": "75bc26f611b67875058132bc4fc333f665d2218eca4a9a4730395836996fb5b9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "body"
+      ],
+      "sourceHash": "87172148adc2d1bb34f3b1c124679333bc29dd2a83d9e69a43d55c3fefb234be"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "primaryCtaLabel"
+      ],
+      "sourceHash": "a37d417d5887e472e2f50c24a97e06eec51764c17caed7fec8844c233090138f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "secondaryCtaLabel"
+      ],
+      "sourceHash": "0025d718cda8439dcb183fd7d13b93646c8f8bb670c5e6cda3490ced8baed371"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "trustItems",
+        0
+      ],
+      "sourceHash": "0d8fc0f3eef4fc62c75d211b91dfa43e5d30892d665137a0ea640974aeb967e3"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "trustItems",
+        1
+      ],
+      "sourceHash": "edf4f38e76dae0912f455fbe86ca034df089b68575d89682ecde9be5f0d5f459"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "trustItems",
+        2
+      ],
+      "sourceHash": "ef26cb86433a3fda479c7155afa9ec0590fe57e05de348841c7188505725744f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "trustItems",
+        3
+      ],
+      "sourceHash": "4d80e29caf0cdffd10c6ead7693a30894ffdb90458aab3e32b0bbbc0b8c59354"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "characterAlt"
+      ],
+      "sourceHash": "f15dcb8e1455d4d4e93fbe604198483a00e42e19ccb9312428b3476a9127833c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "chat",
+        "statusLabel"
+      ],
+      "sourceHash": "0d21bd52022ca7f7e97109d28d327da1e68cc0bedd9713b2dc2b49d3aa104392"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "chat",
+        "subtitle"
+      ],
+      "sourceHash": "8f259e8b598f72c8589cbf7bd9222b07552dddd74bbbdfafd17913edf50c39b4"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "chat",
+        "openingMessage"
+      ],
+      "sourceHash": "6098e66e6fdd83a0b39ff00b5f0c8135ab7981353c8e1845d9c1bd7595e1e67f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "chat",
+        "visitorMessage"
+      ],
+      "sourceHash": "c08299e6ed13ac515ed9778f4179016818f75dcddce6944a0a6d676a514c0d18"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "chat",
+        "assistantMessage"
+      ],
+      "sourceHash": "f370bbdcedfe9499d45902674c0e9a1474a8e967fb8d6865475a85f5baa9701f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "chat",
+        "inputPlaceholder"
+      ],
+      "sourceHash": "a85f2495ff8b96e5470af14f0701e9098f7fbeea1fb8a9f25a352bc591a324fd"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "chat",
+        "suggestions",
+        0
+      ],
+      "sourceHash": "2e489bc41155c178c776e051309f5a5ccf24d0acf3fdc9a4f2fb3af6646e0158"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "chat",
+        "suggestions",
+        1
+      ],
+      "sourceHash": "75f5ee6cda60ef3557a8a449eaaf4e7fe6f68246157fd42f688d0a2d84c1d2ee"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "chat",
+        "suggestions",
+        2
+      ],
+      "sourceHash": "5942fe6703a9a7b7d0d6833bff6a2fea8b4f33e4b2dac78dbdbc4d483d2bcdab"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "chat",
+        "demoNote"
+      ],
+      "sourceHash": "2430746e8367f24f2f9d035f39398fd06f3959b2256dc7b0a49b9180ff163556"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "chat",
+        "sampleProduct",
+        "badge"
+      ],
+      "sourceHash": "64e8e1db7a15d39b596c2017f7caaba408dd95e531bf2ab40ba2ad1113720e27"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "chat",
+        "sampleProduct",
+        "name"
+      ],
+      "sourceHash": "40105a1f0eb58693d85ca6195a9048d5c23fcb471deb2b553e55d4cd72a84527"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "chat",
+        "sampleProduct",
+        "detail"
+      ],
+      "sourceHash": "2902fe7ef2954ff8ca6dc6cd928a8d30f2dd5b2a496c734563f0c1b3519ace5d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "chat",
+        "sampleProduct",
+        "price"
+      ],
+      "sourceHash": "27482c904ee547f0063b00fe4b734fe3b4f002fdd73ac82e770e13be4cc1d8a8"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "uploadLabel"
+      ],
+      "sourceHash": "7852bcaa3c5f5576f7cf61d3cf20e1b6ad1849a51df7d8c99eee4708fae03758"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "uploadHint"
+      ],
+      "sourceHash": "e4da4977991673a999d13c0b50960211f1569e5cdcd01faa712c6d91264feca2"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "analyzingLabel"
+      ],
+      "sourceHash": "2affa4370f6f6268384983aea555e75724b9d4a093c71b5f6faf231158e2a3ee"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "inventoryHeading"
+      ],
+      "sourceHash": "df3b8fda0277210035c18b263988762dc3844a89f79e589125620943b6b8d894"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "inventoryBody"
+      ],
+      "sourceHash": "9699f1c47368d9ac51118cd933fa90360356f1641622ae1dcc99d9d831783538"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "itemNameLabel"
+      ],
+      "sourceHash": "652bcc3a478428893cc505ae19f847b49be52f861bedc64bb192ceed409fa733"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "quantityLabel"
+      ],
+      "sourceHash": "822bab8d41bca8d7976cd69963d93a335ee21fa46160c4b866e0df7ea4b33196"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "unitLabel"
+      ],
+      "sourceHash": "4e545960f1bffc134026127ef92963e136ec84b24bb2a6103c0731a64843a40b"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "addItemLabel"
+      ],
+      "sourceHash": "d1a0b329a72b8f16ab138cee622d18ab7ead8b870b0202439d2699cb5348711c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "removeItemLabel"
+      ],
+      "sourceHash": "c3812fc4acb861d5182fc2b8155f327f736fbe5e5eb86a7bd7afcb6dc5497282"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "chatLabel"
+      ],
+      "sourceHash": "b5a9e972c2669adb349bbb3d512f1417a6deda1f5356ef20e9014d127f3ab9ca"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "voiceLabel"
+      ],
+      "sourceHash": "23d798a159ace8813b0080284467928dd7b5aeb35f458f5a77f685379f9e0dd9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "reviewLabel"
+      ],
+      "sourceHash": "9c013164b3d9caf28470e13015b35a6f4ba8d12f50ab51182072c0eefefb13c9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "editLabel"
+      ],
+      "sourceHash": "552b8f1c1d49624ef51d2706aa8d154d047d3775d083c28f46ba1454174c6f4a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "confirmationHeading"
+      ],
+      "sourceHash": "6cc19e659cecdb231d83ef1268f3e7d5b84bd96f40c9a4028ed33b34ded57083"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "confirmationBody"
+      ],
+      "sourceHash": "52d9f9ef8483c24c7185a727bf2211244f85030367da02ddf14eb5d6e6011ba0"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "signInLabel"
+      ],
+      "sourceHash": "607a80121c655651dc14cbb057e035943bed91077283e9c6b8d709db1e25ef7f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "signInNotice"
+      ],
+      "sourceHash": "7ee6641bab06f804b91bb13e538d9da870890f703c1d8fa24098515f5129a011"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "expiryCopy"
+      ],
+      "sourceHash": "9f6f7a54407c288b3a373f57b8477394716e1f8030c6c31e77c7905e5f9a59f6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "errorCopy"
+      ],
+      "sourceHash": "85d69cefbb139d59c9f6b48535faaa29d18648a1d0e4d18fb2065ce3bf36c736"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "kicker"
+      ],
+      "sourceHash": "2c488307caaf0b38f69adafca03b22d8dd3f06775ffe169f2505e9f4a5c05c16"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "heading"
+      ],
+      "sourceHash": "c172cd2a53e02e6d2763843e2a4f04c33b97f43ddaa3d1af868a01a8d445d7e1"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "body"
+      ],
+      "sourceHash": "3f64f190cf864b266d1604bc9c4bfe194357bee833062c34ad21a8c93c7a9837"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "capabilityLabels",
+        0
+      ],
+      "sourceHash": "ef89a14fcdcc3ce9a8c168b5da36567811963b220bcfdb46f3b25c3c25e34552"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "capabilityLabels",
+        1
+      ],
+      "sourceHash": "621cdc46426a159f17884865d21b0a7d94fd0cffe43ccc6f3368c153acc75ca8"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "capabilityLabels",
+        2
+      ],
+      "sourceHash": "c3c932dfd21f595639c4318528750bc6d9815e0afb9de3c8fe7cf93c84edf60e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "capabilityLabels",
+        3
+      ],
+      "sourceHash": "1a8314cf8e34a5366c054d10a60a52de014ae4b06b258c35939ba9c78d91cc8b"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "capabilityLabels",
+        4
+      ],
+      "sourceHash": "9ffb6c3839efbd757d833f6d9dacf319ad238fb13735a28c6228355c5ec42229"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "capabilityLabels",
+        5
+      ],
+      "sourceHash": "ecc3abb5e6e52654145cb79f44df42160626546c0a8c7be988b03a123d021283"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "cards",
+        0,
+        "title"
+      ],
+      "sourceHash": "d4dc7e08c60b336eabe864d8de521a43d9717da12f2611a072497f998ce1d9ab"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "cards",
+        0,
+        "body"
+      ],
+      "sourceHash": "2bb4d97595288f8fa3e64a4ee5594ca59dde6c05dcfd8f7386b87fb17eb12c38"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "cards",
+        0,
+        "metric"
+      ],
+      "sourceHash": "26c7728934acab82b3d65a0427b32eff6e1d12a6a4127e3f210f7ea4590d7701"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "cards",
+        1,
+        "title"
+      ],
+      "sourceHash": "e962e87ad5cc84ece20b68fc11dd4ca9b15602519e700e11cd4e968e655815ef"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "cards",
+        1,
+        "body"
+      ],
+      "sourceHash": "067d1270c4c13bf9c799e220cc22710ec7bfe707648be25bee50273c803ea59e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "cards",
+        1,
+        "metric"
+      ],
+      "sourceHash": "85b5a850f40d5d56ca471de16f91664c2a9cd46eb06fefb870f43f97df75cb2a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "cards",
+        2,
+        "title"
+      ],
+      "sourceHash": "367e2efe75e48a1f2e68dcc021266347c64beab8ab31214cdc1154a5a26a26df"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "cards",
+        2,
+        "body"
+      ],
+      "sourceHash": "46676d38400d982d0c39094a1732bafcdc071e088aa1b552212b08fdce807bf6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "product",
+        "cards",
+        2,
+        "metric"
+      ],
+      "sourceHash": "89e954836f2e72435e1bc45ec51b6c7f1f0c9010f8365f28c62a20c6279d7f61"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "mobile",
+        "kicker"
+      ],
+      "sourceHash": "a4314c7577d89e3b6395fbed887b28cd0cc47f9437bdebd3b84e219d04723ea6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "mobile",
+        "heading"
+      ],
+      "sourceHash": "c90cd66660b2be59ac342def04f2331590674fb6dc0da1e2071ddceeba94c669"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "mobile",
+        "accentHeading"
+      ],
+      "sourceHash": "18fbdc9c5cdfcca323e10d6510dd37e78d261f7443255b41894d07a846104039"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "mobile",
+        "items",
+        0,
+        "label"
+      ],
+      "sourceHash": "6869779e74f1eac20e124918457309b057fd3d69d237b8ecf36e81f822467133"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "mobile",
+        "items",
+        0,
+        "title"
+      ],
+      "sourceHash": "f623d5b9809daf41dee0e0685d2e68120d8dc4ed249c0005978df0c9dafdff84"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "mobile",
+        "items",
+        0,
+        "body"
+      ],
+      "sourceHash": "4290547cf129a242eda059f09850f45c30775cdafe081f1e4aacd3fe2f13a6eb"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "mobile",
+        "items",
+        1,
+        "label"
+      ],
+      "sourceHash": "f4c8c29322a322a90c1505e5134ed61618393c022f38f995852a0416ee142ba1"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "mobile",
+        "items",
+        1,
+        "title"
+      ],
+      "sourceHash": "5bd00416dfb65fd8afbcc9adc08a9acb7302b2c99793f22ab6cde0ccdd02dd13"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "mobile",
+        "items",
+        1,
+        "body"
+      ],
+      "sourceHash": "c3d1e0024f9068ba849e41612832193788aef33bd2f2b203d2bef162e5921033"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "mobile",
+        "items",
+        2,
+        "label"
+      ],
+      "sourceHash": "b05047fb305437e15a44bf6f35ec70af4f1e64fe8d33518f0482b0eddaed3a08"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "mobile",
+        "items",
+        2,
+        "title"
+      ],
+      "sourceHash": "9f12713f19c4fb8b9d255f367ddf251652aaa64b107d8b61f44206fa20bfc601"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "mobile",
+        "items",
+        2,
+        "body"
+      ],
+      "sourceHash": "ef39535608dd43bc6c8b1c75abe3d731c2c2bb9f1f9667e80e4594d1db41118f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "mobile",
+        "items",
+        3,
+        "label"
+      ],
+      "sourceHash": "a37d417d5887e472e2f50c24a97e06eec51764c17caed7fec8844c233090138f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "mobile",
+        "items",
+        3,
+        "title"
+      ],
+      "sourceHash": "d229e0c1ddf74c8a62cb409dc46330ecec733fcf6d89dd488aca4b6236cbbda3"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "mobile",
+        "items",
+        3,
+        "body"
+      ],
+      "sourceHash": "3cb3214bf5af72a632fc4e893fd75024dead839cf203d7cab4407c9e59ea3d53"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "kicker"
+      ],
+      "sourceHash": "9131a41e967a59056484ca6040708ea42b43e1f6d8235695a0efeceda8b907b4"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "heading"
+      ],
+      "sourceHash": "37ba690428c28e18a1c4cd32c1647161991bd58de0f68ffec6666cd844e54d20"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "items",
+        0,
+        "title"
+      ],
+      "sourceHash": "7d95696836f2405cf38abc31af67d33f76362f049a95926f82190078bd1ec6b8"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "items",
+        0,
+        "body"
+      ],
+      "sourceHash": "c9b59c325055b851f913a3588add7dc3b80f339a3f33c600605b7f8cd7881963"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "items",
+        0,
+        "tags",
+        0
+      ],
+      "sourceHash": "54d8e2f5ba053df5cc4af134cbd6c52a143addd8bf5bd6554be0b1803f3e0d56"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "items",
+        0,
+        "tags",
+        1
+      ],
+      "sourceHash": "d664282e62e41a19c7da870c34eb840886fd0bbeb3aa36e96ac8b9aafce25d97"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "items",
+        0,
+        "tags",
+        2
+      ],
+      "sourceHash": "42b7dd56746d191b4dc50bc72c8efd6e1fb603468665911be66df3b436248c63"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "items",
+        0,
+        "tags",
+        3
+      ],
+      "sourceHash": "aa49990cda9c6bdce9dc1e4c34f70e0d8e312d48ec9d8b98fdb8fbdf7be9778a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "items",
+        1,
+        "title"
+      ],
+      "sourceHash": "0a4d43d9a9b96cd9cab2d39e89de1f4c822610aed8b00051db577007c4b446cd"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "items",
+        1,
+        "body"
+      ],
+      "sourceHash": "575a5fc67a3601ab0bfcb45c3a3d5d7da288a6969d27122b7a51645c207d7e69"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "items",
+        1,
+        "tags",
+        0
+      ],
+      "sourceHash": "c8e70b612b15482129e1721001c29cde37ebf30e46ff3d861d6c17d648cb7bcf"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "items",
+        1,
+        "tags",
+        1
+      ],
+      "sourceHash": "274b2e050602e8ee4b0a33fe028b3791ab374f977d8b893e4b83c885f4e49c72"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "items",
+        1,
+        "tags",
+        2
+      ],
+      "sourceHash": "c8f1e713782209cc3b6441cc443e92f9964aeaeea1d2d3db1950c2cee004675e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "items",
+        2,
+        "title"
+      ],
+      "sourceHash": "5bc31491c236358b77df22f797bdc8b4f9799c988d9fda94b771f99cf42a2e6f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "items",
+        2,
+        "body"
+      ],
+      "sourceHash": "fae9ae6ed510ec578aadddf3dce1d4e694b41342e47db64ecad4e01da1c19c6a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "items",
+        2,
+        "tags",
+        0
+      ],
+      "sourceHash": "8cf6131c750c5fc80ae1cde42a53f93b7f19d2f455eb42536a75832366fc502d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "items",
+        2,
+        "tags",
+        1
+      ],
+      "sourceHash": "8ec95fef84dcd30d7574590c631ca073eac68ff89ec440127b46d75378063340"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "features",
+        "items",
+        2,
+        "tags",
+        2
+      ],
+      "sourceHash": "51a5bf6b18cd1a99961737b13e985052ec5e2a26e6a6408b1bddc0a933ad330c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "kicker"
+      ],
+      "sourceHash": "2ba0e43d869bbbff965d4dec39dbe628ad7a16dde49927b1da5411259f2a5688"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "heading"
+      ],
+      "sourceHash": "4606c7b73cb4ef3cfaa37ce68019b048ff0b86922347943c2531bd7f5e18caf8"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        0,
+        "quote"
+      ],
+      "sourceHash": "28a349f565c9bdf6bd90469c761b5f6d315af0c43316707846a8d07428b913db"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        0,
+        "name"
+      ],
+      "sourceHash": "9e18f9c9f910841b5d708749f600a3ea272a2438b5b54a561277c2bc35b95820"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        0,
+        "meta"
+      ],
+      "sourceHash": "00afbd20fdb5b614172b3d9c39db2ca70a6991580f4cf257a8690be0728f31f8"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        1,
+        "quote"
+      ],
+      "sourceHash": "c164b086bf357b59b21fdf9dbd84e866868a40a4dae3764023a56f8a4d988281"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        1,
+        "name"
+      ],
+      "sourceHash": "678202b3c0c345ef8e5ce5451dcd3b7b33d657bd9a1ff73b29ea20988bf5acb8"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        1,
+        "meta"
+      ],
+      "sourceHash": "d1cb7824f84ce16ecbb7300ec461cfd759906a9c778deafb291b5f0743f64063"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        2,
+        "quote"
+      ],
+      "sourceHash": "b5d88777a6097702580d0b21ccc25a4282f48795fbf7bb95cf186966997e0c9b"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        2,
+        "name"
+      ],
+      "sourceHash": "bb866952a8675f537773e9854cc9c5b3be33b22bee2e11dbb71fd07f3317c335"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        2,
+        "meta"
+      ],
+      "sourceHash": "0ae937a04765638fd01fc0996a7cf3bf025b2bd39df1661b2a17f6cc359fce81"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        3,
+        "quote"
+      ],
+      "sourceHash": "e295e8332591f5ed9317d0baa7491ae9e5a06eeefa56500503ce1bf9f2201aa9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        3,
+        "name"
+      ],
+      "sourceHash": "52d7d8604bf71e968bf07d468c7d394bff7cb0bb142fd4da7a85dd6f8056a940"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        3,
+        "meta"
+      ],
+      "sourceHash": "2a164d5415787b6e0e8d8d937c708a6f4c856e293022d24bde016e8549fb86b5"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        4,
+        "quote"
+      ],
+      "sourceHash": "e4c554d173095216b3da28d36d460fdc10b26a612c427b5d9a12aea88d838413"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        4,
+        "name"
+      ],
+      "sourceHash": "d9dacb3ee168be4dbc39386975b6964d353c438d8f57a68914a3228b5385fe69"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        4,
+        "meta"
+      ],
+      "sourceHash": "61b2b7829a73b4908c7fcf6bfe498579e98117bfb57ad2c0b118dae98d64f8b0"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        5,
+        "quote"
+      ],
+      "sourceHash": "825efcf054d60d7e815d25f8c2e85c6cb1918d82efdde60695222fdce0a3bf96"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        5,
+        "name"
+      ],
+      "sourceHash": "fff5672f689e69fe78a3c1615a55c5df698d85e93760124e14722a3029cacf29"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "testimonials",
+        5,
+        "meta"
+      ],
+      "sourceHash": "d8142d9b925ff684a10d024451e904e0c95c160ec148715447f04bfc8636c28d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "articles",
+        0,
+        "category"
+      ],
+      "sourceHash": "9b7058ae92b8a9bba4ec4584720f3d0cfc2e1c95ac6715fb35395cc498dbe95d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "articles",
+        0,
+        "title"
+      ],
+      "sourceHash": "16db91a3aea1d0fc95760f770c8190b8f7e12d44fe821cd33065f9424f67a8f2"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "articles",
+        0,
+        "body"
+      ],
+      "sourceHash": "c8cb05a0f9c382f115760704fc1728e25edb8cfb0776a8c8353407c254536f4e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "articles",
+        1,
+        "category"
+      ],
+      "sourceHash": "f431357d251058be936d34848f517822c61f9decc24c3f77e3c25db9f84637e5"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "articles",
+        1,
+        "title"
+      ],
+      "sourceHash": "92f0dca33f2fa32518aaf405196f3776a5f711736281a8129c30fd53583ff05c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "articles",
+        1,
+        "body"
+      ],
+      "sourceHash": "2d432090eb3177a69744697f1d22813759c9857474a3f8c750077f750c525ba9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "articles",
+        2,
+        "category"
+      ],
+      "sourceHash": "7817467c1f35f920f324a6d3d8e23bdc412b441e7937fa97b104f8f84bd3a950"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "articles",
+        2,
+        "title"
+      ],
+      "sourceHash": "19aa38120f07d5571aa892ee93822f29d0e9a9295f13945ed72b5e5e709e1384"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "stories",
+        "articles",
+        2,
+        "body"
+      ],
+      "sourceHash": "b18fb369324b695738d32aead70d9feb0a5ccb06df757bdcf480adcedfc401ff"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "about",
+        "kicker"
+      ],
+      "sourceHash": "236418f5c77f63427a07a1d55ead4999bdb59f205378b279d791212d4ea1633e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "about",
+        "heading"
+      ],
+      "sourceHash": "d5e79cde4206fce802fae0cc767e4462f7314d5d5df662742c0eebbced509f3e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "about",
+        "body"
+      ],
+      "sourceHash": "2472ea2b09275176f04fca3650bf973869bd8306a3a8c3ecf4b30734357d16d0"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "about",
+        "capabilities",
+        0
+      ],
+      "sourceHash": "d84eebada93efee12b029e5b61e4df3270f0356886ceaa44a78eb52166a8f312"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "about",
+        "capabilities",
+        1
+      ],
+      "sourceHash": "87bf2bc08589f0bd4a078db145c34ad5e14b8fda53c3ae65b78601294913df95"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "about",
+        "capabilities",
+        2
+      ],
+      "sourceHash": "145603eb8a0bfa982c6f7b0070767b37b863523439e90e02203123a805c59181"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "about",
+        "capabilities",
+        3
+      ],
+      "sourceHash": "dad5a969231390f5dc1ddc79ae2582f4c305dc8c2971e6a9d16f501c710c33df"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "about",
+        "capabilities",
+        4
+      ],
+      "sourceHash": "6f202f54a7b2d8fe42aa804eabe48ef900cdf73a74c570a47fd1b1a4920a051d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "about",
+        "capabilities",
+        5
+      ],
+      "sourceHash": "52bfe584a5fc450539e2aa651b990fa2415060492a243816ab2994292089c6fd"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "about",
+        "capabilities",
+        6
+      ],
+      "sourceHash": "42b7dd56746d191b4dc50bc72c8efd6e1fb603468665911be66df3b436248c63"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "about",
+        "capabilities",
+        7
+      ],
+      "sourceHash": "a1c6c97f415f0e0ed832ad848ece331256522164843d45f0106601a7dda737a9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "about",
+        "capabilities",
+        8
+      ],
+      "sourceHash": "d664282e62e41a19c7da870c34eb840886fd0bbeb3aa36e96ac8b9aafce25d97"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "closing",
+        "kicker"
+      ],
+      "sourceHash": "c406ca57d45afef55646d19a9a334813a99cd508daacaa51d7ef12e065811a2f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "closing",
+        "heading"
+      ],
+      "sourceHash": "7fd4792af52aa2f2378cf8747bae68bbe1156313c79145e8abc9a1bf8a612ab1"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "closing",
+        "body"
+      ],
+      "sourceHash": "25a7187a2f232c982c05fd14a4ec01c4ce4e0a254794ea31113f52f040367c4e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "closing",
+        "ctaLabel"
+      ],
+      "sourceHash": "4e3273cc810a9cb3c5771c710956020c5e69d8cc4f9b33debc6bc8cd9bef4e75"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "footer",
+        "tagline"
+      ],
+      "sourceHash": "c3af683cb5bb8bb5064d55ad7ea560687324ee237eda10ccebadf82fb44357df"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "footer",
+        "groups",
+        0,
+        "label"
+      ],
+      "sourceHash": "fb9ef894175c327470f768d95ca7bee65e19853a0eaace3805f8a7b8a12270da"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "footer",
+        "groups",
+        0,
+        "links",
+        0,
+        "label"
+      ],
+      "sourceHash": "8d7af2b4dc7fe44e4dc202221b1f571f950bdbb5f97ae3bdd6718c576e823ab6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "footer",
+        "groups",
+        0,
+        "links",
+        1,
+        "label"
+      ],
+      "sourceHash": "9c870aa6e5e93270170d5a81277ad3e623afe8d4efd186d3e28f3d2b646d52e6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "footer",
+        "groups",
+        0,
+        "links",
+        2,
+        "label"
+      ],
+      "sourceHash": "6d09cf5748829bd23a36d4de1e81b3a5cf103b3902ef494f0fe66541b5d89bab"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "footer",
+        "groups",
+        1,
+        "label"
+      ],
+      "sourceHash": "7c4f01b9770663e38975ccb451cd12daeb296a57a4ae302e06351905d80234bf"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "footer",
+        "groups",
+        1,
+        "links",
+        0,
+        "label"
+      ],
+      "sourceHash": "b1aceabee6811924a2ea15f8ef8a3a4ebf0c92ecfb2066c21d639f28f904f90a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "footer",
+        "groups",
+        1,
+        "links",
+        1,
+        "label"
+      ],
+      "sourceHash": "2b5c3d26721ae9c350cf3009318b626f0fc8a90b4a2ac0ca8099c05aa849282e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "footer",
+        "groups",
+        1,
+        "links",
+        2,
+        "label"
+      ],
+      "sourceHash": "b05d95c62372213f56757332ef42e74f20cbf3b186d1a6cd37eab373d09c3b97"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "footer",
+        "copyright"
+      ],
+      "sourceHash": "fa15d470a975ad2428e9ce3bdc96c14ac3280f8e555052cf89029abda0ab076a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "footer",
+        "closingStatement"
+      ],
+      "sourceHash": "2805bfe06da660e2440c314b1062d754c63c71dacef44310f68a62f908357f19"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "kicker"
+      ],
+      "sourceHash": "329ceaab7622815be18eeeea15b5ed0bc3df9092a4d03f89f9f4bdb073afc57f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "subheading"
+      ],
+      "sourceHash": "9e7aa1d0d39e5de82a17e5b699b21b633ba5842e5c00d4fc14a60ff452c88a5c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "disclaimer"
+      ],
+      "sourceHash": "84aee899c2da10ef533fce4826d2c0040036e8eb3e04499f83b746d1e974bf43"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "workloadStep"
+      ],
+      "sourceHash": "5c9383122007a6735dcfb6cb62b40aa4974437020bc3035cb8a72b2ce0c41f0c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "costStep"
+      ],
+      "sourceHash": "feb2fb9a5b9e4ab69a7f0cdc2afb1412354159eb7c057b20ee9ebb4c9f1a2fb2"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "valueStep"
+      ],
+      "sourceHash": "ade59e0832ef710786cc6ab74bf8ec1937ba0ab27f8139c2e44fc6fd369e49ae"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "workloadIntro"
+      ],
+      "sourceHash": "d295bd6d346e51e247e2a109bbce6087e8e5df51136a71ca28cf99ff02196595"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "costIntro"
+      ],
+      "sourceHash": "372faabd06691c4a1b9401a24dcff5f06df8a4145c914befb71e34066708a931"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "valueIntro"
+      ],
+      "sourceHash": "cf184a63788589cf6b432ab9bcf866bb193fbb9f21baf69518522edf7314d0ee"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "sampleNotice"
+      ],
+      "sourceHash": "b0088cbd1b324d11e0bcb27c8f720c98dc888e32f5a0d4352dee8a27871f8602"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "monthly"
+      ],
+      "sourceHash": "9b11f6b707d2a03e0265465f32520bc1bc213de121de958539662d0ec1453fcb"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "yearly"
+      ],
+      "sourceHash": "6e69b59ed34d42ef337ccc1910152d2cfa4b6ff831c21c5af5ef0f3bc84cbe89"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "next"
+      ],
+      "sourceHash": "31fbef162594de01bab0cd525c51f74de7bcb15063029fa1a54b2cf5944c80d8"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "back"
+      ],
+      "sourceHash": "76900f1bfd16c8d4dd3d25e6f46638d7165aee23883ccea6bfe071c514421769"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "reset"
+      ],
+      "sourceHash": "572170aaf9f9de388d504ae8c4c0ba5459e9848a218ed747a8b8aa949ba74e26"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "summary"
+      ],
+      "sourceHash": "6f394b7b2061c22547c0ab57f32e7ad5f0f3d9243ee8af322c71f48f99ccf276"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "volume"
+      ],
+      "sourceHash": "e05596440b0b68d592cabd105ef7f2acd9c34e92eb9c4fbde665b8a1d070e3b7"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "grossHours"
+      ],
+      "sourceHash": "6993db808521d792d1aebaa8240ec93682ad12c62216a385d686eb82b80dbb60"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "capacity"
+      ],
+      "sourceHash": "eaeed2070ba1235570f89d7ce1c213ae1a3e08d1b61d85fb014a638fcb368d2f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "retained"
+      ],
+      "sourceHash": "b36bb5bf3506d6af0bcc57b1376c0618eef5cddb8ea1c86d0363859b5dac5194"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "hours"
+      ],
+      "sourceHash": "404314b1f4bd8fa2ff42a84cd851ddc011c76fb64e12dfe3748101b03ed8ce7c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "days"
+      ],
+      "sourceHash": "ab51004e9d71a485f160f655fb9e72bcdef8f5ca4178b26938b49471456fd11c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "percent"
+      ],
+      "sourceHash": "bbf3f11cb5b43e700273a78d12de55e4a7eab741ed2abf13787a4d2dc832b8ec"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "minutes"
+      ],
+      "sourceHash": "90e63d85fa1ab2c8ed65222f3ebd794b1e524b4b7cf84bec451542d0451b2985"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "reviewMode"
+      ],
+      "sourceHash": "4a4c23e1a308c1b29ee9d7626d79cf55483ee1bcb6ffeb959066da7932d888a2"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "teamReview"
+      ],
+      "sourceHash": "0bb582b305172b219ebc0727cff93029b15311f14b1389e3012acace59807d54"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "paidReview"
+      ],
+      "sourceHash": "a77c4e70e49a9b2994dbde146d30bd991cd84d34e081041ba2155b1255477f12"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "reviewNote"
+      ],
+      "sourceHash": "a438fe002ae56bc237d402496748e1f49f1d4a2dda6d9715522b4ea9a7bb3282"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "totalMode"
+      ],
+      "sourceHash": "c247593b2c0fd33f1b6683d844315ea3a82086a3e073e82240f117f22107b2c1"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "itemizedMode"
+      ],
+      "sourceHash": "152f5f8be90b1e02e6d0536bdcadfd07230ccc862ea86114aaec3450a17a36be"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "budgetNote"
+      ],
+      "sourceHash": "349cbf9eb5c69ba6c75dfcd26b7feb77639fc2d0436a03472610528c6a3df42b"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "itemizedNote"
+      ],
+      "sourceHash": "d334d77fc72b3a433a82ac9a0f1ed167689e9624adc46199a8b2939a207ae2f8"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "paidReviewCost"
+      ],
+      "sourceHash": "25d31285d8f395b71eb0c6266f9b74c9a2a833411b41d631cc45a044af024a69"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "allInCost"
+      ],
+      "sourceHash": "3f7749a7d27c307accc7af1e96abe6d2c756c38cbb1353d8b0b891cb1754191c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "missing"
+      ],
+      "sourceHash": "f90eaf5b4ffc23794c7394dbd71f6867a4c55aae9987d14e9a90305c0d214fd6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "cashValue"
+      ],
+      "sourceHash": "d84eff4e53e66ed9f0b1e000b9bfd7d0373396e60322d621b13d4ac700eee452"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "contribution"
+      ],
+      "sourceHash": "39fd9ad63d982a6a012ff80940a0d7f5afed18ac3d0e97c035631bc8fd49e9d3"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "expectedLoss"
+      ],
+      "sourceHash": "7bc7f6f1863be45c146f470f2b658e104a49eb5ff005c195ba099d58d2668c85"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "riskValue"
+      ],
+      "sourceHash": "d11e9d222c278b03765522a7191472a9fc475f6abde9a848bb9a7bc106910fff"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "economicValue"
+      ],
+      "sourceHash": "53a6f9a333b9ad222698bd01943627acb758b09eb211ed96c09449063f164b72"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "netBenefit"
+      ],
+      "sourceHash": "72ae9f851e2b8fcb218c096d9ee7e0bac8d822620794ff332a8d62b3a06bab2b"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "multiple"
+      ],
+      "sourceHash": "f7f34c071e649600815630c8b8daeb82c780c582be3ba058d45ec1818ab14b5d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "notApplicable"
+      ],
+      "sourceHash": "5237c96ac1a23b98eb13770503afe986b088acd6627fa7649a5afdcbc4bb8e99"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "annual"
+      ],
+      "sourceHash": "27a71ffa6d2dc222fb222398cb2a68e1f438ee040d53c5afa6950529bccdd6a6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "annualNote"
+      ],
+      "sourceHash": "4467af0a251b275b83efc167dcb2dd1da73c38c96b466cecd9c4fe0f1a298fe8"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "method"
+      ],
+      "sourceHash": "3cc38432b1cca7a464c888d205c1741e7366d8a5c3a2262612a1c86029a304d3"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "burdenHeading"
+      ],
+      "sourceHash": "d6882094e3a626e60f5838b03fe1436047ca96c067d2fe219fe0b58cca06b86a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "opportunityHeading"
+      ],
+      "sourceHash": "64a4a0fd257deaf6c09b0bac062c5351aa6161d288fab23f2e9a3e7f09eaf087"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "methodBody"
+      ],
+      "sourceHash": "1bfd0892640eb11e35706860dc4aac5217634d2c735f74fd86dc0b5921bc9c45"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "formulaLabel"
+      ],
+      "sourceHash": "f8420ff58a0e7f22ac02a5ce4f8f31569dc4aadd301668c47433e631205a9c81"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "allocationNote"
+      ],
+      "sourceHash": "4c442df07dde7c71844e78a544dee118a21623058110dad3f5b9df6ef4832b47"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "overlapLabel"
+      ],
+      "sourceHash": "9a138ebd2a970fdd6c6c6d32a923c4e764f9015b432370460397d8ed70fd616c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "overlapNote"
+      ],
+      "sourceHash": "15caebd2f664eb4214a7fba7925d99f2cc6efd1f116ff0bacb0a133976db3bf0"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "hiringLabel"
+      ],
+      "sourceHash": "8e697d71c68c12162983e6105a76358494b1fef63b02c4c75dca576474ec4c76"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "reviewedLabel"
+      ],
+      "sourceHash": "f9cff42e6e6a5ccda0f5e8c2c0be1ffa43dd11e7562fc37b1790ab71a2182e0f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "cycleResult"
+      ],
+      "sourceHash": "8a5c490194c791e95d4c07b2fc5179bb4054c4875ebdd25d362822fa71417a1c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "throughputResult"
+      ],
+      "sourceHash": "2e6f9ff30cdc92aba739d38ec0b8d50c442939c87132e01ae3a54ab2ff3d00a6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "assumptionsIncomplete"
+      ],
+      "sourceHash": "2698493b145f5551250d0cea5f35bb3298a525e1b5d9cef99bf3aa65c150fe28"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "allocationError"
+      ],
+      "sourceHash": "1a61000ef111e7f177dec1d908b3326d1687328f0570470c4ce6e2776ee7d534"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "reviewError"
+      ],
+      "sourceHash": "9d3391bc74cb1a8b34c0eab71e0110f9f2a3d45b976d8d78d60b904c17b0da3c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "cashError"
+      ],
+      "sourceHash": "d1f75b7a18a292f3a4f4d90c0e37a4a995934751bd3db2829cf65193ede2bb07"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "hiringError"
+      ],
+      "sourceHash": "e46252d17ea9d27bc4f574dd7c5914d1969f15f60613034d80044189f1d40609"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "riskError"
+      ],
+      "sourceHash": "1b6b0288e34ec1765706eb6f7adb30dfc56915516cb790e3e066ee4560cfd357"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "overlapError"
+      ],
+      "sourceHash": "0b8ab978e596f1944ef20c812830600fbd289d83f381dd64aaaf87ec9fc812d6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "boundsError"
+      ],
+      "sourceHash": "385d69f28c1479e4e86a907ecce8d541c3d5c0fe91fd29c3f29e1ed511e6df42"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "rangeLabel"
+      ],
+      "sourceHash": "3dcf5c38a5ca7fcc4a9c5edcda7958ef584b0054cdc048cd7c76972439c0ef1e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "noCurrencyChange"
+      ],
+      "sourceHash": "718220721cfbe482039fc6bb6d52481ed1384fad16ff119ca5d0dc4c3ae718d0"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "volume",
+        "label"
+      ],
+      "sourceHash": "a45620b6891937e797bfe595d7df81cff5152ff40bbb861d86a5290ba07e63eb"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "volume",
+        "help"
+      ],
+      "sourceHash": "321673a0e4a649dd323c05bd24084b2c573572fb04c58636ce3c385e34250340"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "minutes",
+        "label"
+      ],
+      "sourceHash": "ba1ce333055039047262b9e177f724beb998b939e73efbb698ceb4900d8eecbb"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "minutes",
+        "help"
+      ],
+      "sourceHash": "6c9f65c27493f6e2cd13803c5ab91880a56a4687344be51f54afbf356fdb17b8"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "automation",
+        "label"
+      ],
+      "sourceHash": "528ee302836bce69d9eafed7c0428a1b8d7ea5374e81966ec9a9c83c589d6ef9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "automation",
+        "help"
+      ],
+      "sourceHash": "ff272b5624a860ceaf3d979f6845bfb45001512858324e4ab6610a0c3b7e3888"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "review",
+        "label"
+      ],
+      "sourceHash": "5ef81b7e4d56f1cf4413e3db0814168d0175b2efb9b6fb5c6706cc47bfc9a5bf"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "review",
+        "help"
+      ],
+      "sourceHash": "e49d658f1e9c2d2fe88c3dd0b78ba4c4173e879cbdd0d824bd4a45c3f21886fe"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "budget",
+        "label"
+      ],
+      "sourceHash": "667f98d523f4e38ca96c3da16804557eda4beab461d5d76f6805f06a30267a8b"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "budget",
+        "help"
+      ],
+      "sourceHash": "ad4e27130e711f853c905c7d78dd1c7860b63dc396d7e0c09545cd1e675151bb"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "model_cost",
+        "label"
+      ],
+      "sourceHash": "5ea3105112637ff2080a11087de79dc0af72e9b030faddfc277c021146472e9c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "model_cost",
+        "help"
+      ],
+      "sourceHash": "f51b1774d026c88f51d38639ac254d6bb4d8396178f36d92ae1c215db861d08c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "tools_cost",
+        "label"
+      ],
+      "sourceHash": "e883966760c11d5af8effe11b4bb2472c06a5357f6549ae989f60d033cd69eb4"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "tools_cost",
+        "help"
+      ],
+      "sourceHash": "129543308f86c15b617929ed5e9f66243c29e802e278a22a9efc7b44dd442c16"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "infrastructure_cost",
+        "label"
+      ],
+      "sourceHash": "2716822547983ee2086b86d489a1bb9646fa36a6b96385c88c188693f51eb125"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "infrastructure_cost",
+        "help"
+      ],
+      "sourceHash": "70aac95a433f268a4d91b430ea4b21273fd09b0d03c02bf373154f46c38b17dc"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "platform_cost",
+        "label"
+      ],
+      "sourceHash": "7da005cd3f3aee95b142efb9bab8fd9a3a220a716bfedea3a4c33d5d3453663b"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "platform_cost",
+        "help"
+      ],
+      "sourceHash": "72a3fd44fb55347ad4ed34b1c385a76cc12f5cb5cf2794585e7b75acaf8f7a96"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "review_rate",
+        "label"
+      ],
+      "sourceHash": "428a8a7370ea4dd639f6a60bc73d4abd176ddd171569b4b960baf19cb183db4a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "review_rate",
+        "help"
+      ],
+      "sourceHash": "99f31b64115b6c1817c3fd3395f5f5dc4c9eae91786a72b24fbf07c0c5585222"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "cash_hours",
+        "label"
+      ],
+      "sourceHash": "ab221066c4f04ad1a6b2a59c7693b3ff6d6bd360c65a63d87d338f3eba227755"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "cash_hours",
+        "help"
+      ],
+      "sourceHash": "c9b7bfa0d9acaa2e41bcc75ab22dfbbc15b72bda449c7089d2adb77c430e1f7a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "cash_baseline",
+        "label"
+      ],
+      "sourceHash": "662c3f43ead66c852189cff9fa6bf8bf52cc1ab9a6323f9694924d9d19274340"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "cash_baseline",
+        "help"
+      ],
+      "sourceHash": "04c6b54c40cc8edd44cab7c7d4abda646556b7b6d4473789ad4a952dac037b09"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "cash_avoided",
+        "label"
+      ],
+      "sourceHash": "21e4a2901a4a079b9a5612eb7f2afec39c612df9d63dbdb2a5541144bf890e09"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "cash_avoided",
+        "help"
+      ],
+      "sourceHash": "14e141ec711044dbfc07c757f44678f36ecad568d96735cf13e08b0b28bfc472"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "higher_value_hours",
+        "label"
+      ],
+      "sourceHash": "6b0aeebdbeeaaba7a52a3194724f219de19b34233859fc267716db3c77cbaee6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "higher_value_hours",
+        "help"
+      ],
+      "sourceHash": "35f545987cb05f88586866712c3e7afe61f23538e0970e3c251ed6d6bd6495e5"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "contribution_rate",
+        "label"
+      ],
+      "sourceHash": "3c3273494c357b1e8411e3a2a550fa85ac4dcfa4f9b4c37c9e21b7dfc89d270a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "contribution_rate",
+        "help"
+      ],
+      "sourceHash": "de0758a20af28301aa9cbbf3013592cade2590c3915c8d7dace3d54c33c169d4"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "throughput_hours",
+        "label"
+      ],
+      "sourceHash": "7730265263cd055358e746488b765e6744998ceb2706f6717b3666da49717dfe"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "throughput_hours",
+        "help"
+      ],
+      "sourceHash": "9d23fd06036ecd8efefa6a28acaa5cdd86a071818c61fafb10a2715d3ae299a9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "extra_minutes",
+        "label"
+      ],
+      "sourceHash": "706c62b8f9ae8dd54c593f83930314b90dfce2acbebcdfcabbf29868e326d4b4"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "extra_minutes",
+        "help"
+      ],
+      "sourceHash": "6f4c9d431d58d95d61e318d4ad752a091df40a60d9a44eace897ce9fd42e4902"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "demand",
+        "label"
+      ],
+      "sourceHash": "03622d3be321851e6a7ce1ddd7416819d5385704667069dc6c2be00df41e9439"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "demand",
+        "help"
+      ],
+      "sourceHash": "fcd2556847baf0c0948e4697eda93583561c544a52651b9f0b81600ef291d1c2"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "unit_margin",
+        "label"
+      ],
+      "sourceHash": "04dad41e5a97c9047b2d843d3a70ee2e8ac9b13e8d795cb60f97d27331e48263"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "unit_margin",
+        "help"
+      ],
+      "sourceHash": "87910ad3c2f54752a99c72187b23cffb7376f4cddace051db7e3d1b1fb7a38d7"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "hiring_hours",
+        "label"
+      ],
+      "sourceHash": "58d15b9621f8a8f731215b7384a95b449c08ac83a8188e2a06679844b4e14ee1"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "hiring_hours",
+        "help"
+      ],
+      "sourceHash": "75adbb1cd5fe08585c685ae698441e2e4737749f4c0af552759593831b54ccbc"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "planned_hours",
+        "label"
+      ],
+      "sourceHash": "4559ae46c5075191b281e6b89c6d4935d9e17a197cbb6079d937598c07266313"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "planned_hours",
+        "help"
+      ],
+      "sourceHash": "7334bf3e0d6203ba052311c28b39b7c3afab921b1c3d39598da9f44c4fa86789"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "hire_cost",
+        "label"
+      ],
+      "sourceHash": "40df014bf9a827d84b815d389a66e6895ab1630fceca3f8e9ce4a2d6adc76fd3"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "hire_cost",
+        "help"
+      ],
+      "sourceHash": "3de2e8f84a7876f6a21bd60990be0fe982973c66aecb9469901a65af42a3ed18"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "hire_months",
+        "label"
+      ],
+      "sourceHash": "b756055b56b1c2e8f9dd030e9b34af1900ba91f11db56b6ba29e4b1bde04eb4d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "hire_months",
+        "help"
+      ],
+      "sourceHash": "8ac13a412ac7b6af8f8e745c317c43b93ee197722462600c781e0ae217c005c6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "incidents",
+        "label"
+      ],
+      "sourceHash": "e144933e1405c8a4058f96013e79bd56fb43ec175f406a2992a26fa80a57c4de"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "incidents",
+        "help"
+      ],
+      "sourceHash": "63cd200ac8dd6bc82ebc170cbdaf25bdd61c343ece9997218880c91a96a5c94e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "incident_cost",
+        "label"
+      ],
+      "sourceHash": "693d411fb18e2d0e87f64380336d74d3f77ca6bce5a9cc57631f12b435e8fd7e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "incident_cost",
+        "help"
+      ],
+      "sourceHash": "8ba4668f812920b628133a09bb1ced589d70d120679505bed37aac6252abe6b0"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "probability_before",
+        "label"
+      ],
+      "sourceHash": "b4e1f99ac577c75d08a1799727c2b95647b7dc7fbc7d7d37292ea42dc246af42"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "probability_before",
+        "help"
+      ],
+      "sourceHash": "8ef7064976643882f29b6d238811397c6f70e7d0bdfe182d5603e78551997f9b"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "probability_after",
+        "label"
+      ],
+      "sourceHash": "170edabb700d6109e3efdcab8ffe09b0bb714b599e4b6de6d7b1dc05f19221a6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "probability_after",
+        "help"
+      ],
+      "sourceHash": "7a1100a12ea8fa3fd4159d8abefa190de74d61a6b6dc356306221d7c04394f0b"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "loss",
+        "label"
+      ],
+      "sourceHash": "ed479775695c8dc2ea9f62010ea9c66c956e0bd3fa44b0ec156da5b2d36fd354"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "loss",
+        "help"
+      ],
+      "sourceHash": "d6b5af6fbc5df66023de57372f415dca992c706129e33e50d0005c54695fa433"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "days_before",
+        "label"
+      ],
+      "sourceHash": "18494731211d571cec5c2226a6a03d088656afc6d5b67c865ffebde1c3c046f0"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "days_before",
+        "help"
+      ],
+      "sourceHash": "9893973ad0872e71ce660423f50dffb503731b2d38e02bed9a1f4bc0e6f00fc5"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "days_after",
+        "label"
+      ],
+      "sourceHash": "97aa69ee7c561042dd0ea7b80d87fe7bbfbc9a5d3d9234ae2a1849a6bf96a2ea"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "days_after",
+        "help"
+      ],
+      "sourceHash": "d46692acf40b8b52f94dfc507a0be12b871122339edb2bdd753d894d78171f3b"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "burden",
+        0
+      ],
+      "sourceHash": "7fd4e29ef13ea07bbd030a0220a9f8463a9efcb38747d472989214c3c191c004"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "burden",
+        1
+      ],
+      "sourceHash": "c6aa40305f9ff2fd6d253e5dc40702edaa7f78917acc185df6006e1ea2ae7b80"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "burden",
+        2
+      ],
+      "sourceHash": "713e5b35610964f9ecb5c8245eab3a19413e29c7eda13eeca45c1893b9b51271"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "opportunity",
+        0
+      ],
+      "sourceHash": "0f820116163c674f0443a3195086c1690f9760c5a9e87a785a118e041f6196b7"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "opportunity",
+        1
+      ],
+      "sourceHash": "13f8beb7bbaa6c5d89a3232c7f85c74add2895846a86a15a0bd0ab40d8ccf893"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "opportunity",
+        2
+      ],
+      "sourceHash": "158c44e3b3323a9205e386a85a99315c3eb15b1b9ecfcd3551a28c8f41fb74be"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "outcomes",
+        0,
+        "label"
+      ],
+      "sourceHash": "268ff299dfa72692bfd8e923a70b2104c30ba1a33595c31d4158ab165b993bbd"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "outcomes",
+        0,
+        "help"
+      ],
+      "sourceHash": "e58456a61dc968630aa38b8320233a15bc81a9395316a3518211382023539fad"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "cta",
+        "primaryLabel"
+      ],
+      "sourceHash": "30f169397f834a64f6db362594cf5e6b98fc46d76619b1d977460ab20eefd59c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "cta",
+        "privacyNote"
+      ],
+      "sourceHash": "36339d6a632dfaf44daf8c31dfee01408a3db158d594f04edfc075e51ba0703c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "kicker"
+      ],
+      "sourceHash": "9d6eadd1d536884a92a56633ef62b918675469f35a3d07c72ba7a9f01baeb369"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "subheading"
+      ],
+      "sourceHash": "ee470d6d681891ec94fbcef4dd782242684615eccdef9f3cc1c5283c84b15ab2"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "disclaimer"
+      ],
+      "sourceHash": "f1b7a204e614929cbb7f8667c3c9118c8d3863ecc3811e16bdce472da9103857"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "settingsHeading"
+      ],
+      "sourceHash": "2db81a4f36b58b92bd835befc97710814f206401d94781ad907fa28a4cd09e4c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "resultsHeading"
+      ],
+      "sourceHash": "e0afda1f9c30def3d10367c47f1e52469dcc178ba838d177e4cc6a0012a22108"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "profileHeading"
+      ],
+      "sourceHash": "5dbbdc5e51f3a95fb5e74c396f6d26d87cd37b4f67c2f1910700eb4d40397a22"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "workloadHeading"
+      ],
+      "sourceHash": "ba3c74c1a18f50a10faac9c24d17c3e1b771657c8fc238e0de390089a747bc2a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "economicsHeading"
+      ],
+      "sourceHash": "9d6eadd1d536884a92a56633ef62b918675469f35a3d07c72ba7a9f01baeb369"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "economicsNote"
+      ],
+      "sourceHash": "944dffd5e7087c63512f2882626641d6f5a1ab6c3806779b93a3516dab997014"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "allocationHeading"
+      ],
+      "sourceHash": "0d7858d9e1a82da02aaeaaa9ad5458fcf94ec713ce8f1f773164ebce4345694d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "allocationHelp"
+      ],
+      "sourceHash": "2d17e37e3acc2484995642626458185d38f464ef39f261ea2de1842636581730"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "unusedAllocationLabel"
+      ],
+      "sourceHash": "a215a74c968b1d40803325f825cac5925678cf58df6f5d3d8776f6b872852e4e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "operationsHeading"
+      ],
+      "sourceHash": "b00997599a474bada4f6e309fb79d92ab6f501fb5f30817727a7707775784e8a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "valueHeading"
+      ],
+      "sourceHash": "ba76a4a8aebdd12f0e7d843d4098e5f366729eb79dcc6267236204ef91dd94da"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "frameworkHeading"
+      ],
+      "sourceHash": "4cd85ae64e04e029db2db81a1fea50766fd3219653f489c1b82a368bfff7e545"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "negativeProductivity",
+        "heading"
+      ],
+      "sourceHash": "b8c4164dcf6e3ef5d8bf49487237315a0de40b518c74b3ea0bc2d04bf08bc57a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "negativeProductivity",
+        "body"
+      ],
+      "sourceHash": "a48d3924b7f8f7e155b673a8f47dd30ca2154945b74e6985627bf6bc399eeb42"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "negativeProductivity",
+        "items",
+        0
+      ],
+      "sourceHash": "a2d921a93fd3fb4c081998eb689c1a96ffd4334c7271ff78eb1a80456ffa21b7"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "negativeProductivity",
+        "items",
+        1
+      ],
+      "sourceHash": "00076b0b0eaf45a3ecc6c1aee774b90b5206695cca2c9f767a09b6b8f37ca671"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "negativeProductivity",
+        "items",
+        2
+      ],
+      "sourceHash": "70412c9a4f51a5edeb0835eea0aa19a7464238f8e505827b6f130302e661657e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "positiveProductivity",
+        "heading"
+      ],
+      "sourceHash": "9424b432947bafd2b005fcb83f7c9101e955f2ec0c3810a3c0e26a2d53a89847"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "positiveProductivity",
+        "body"
+      ],
+      "sourceHash": "998422feef714f47823acfa24e01995e0c04e4ff53e9e6f9ca2a79a6abf44c5f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "positiveProductivity",
+        "items",
+        0
+      ],
+      "sourceHash": "34b4ffb05d1572dd97e49b3c6d2b5ba9a109f5055139a71cbdbe03681eafb09d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "positiveProductivity",
+        "items",
+        1
+      ],
+      "sourceHash": "cbd7eb4e515b92810f32ffa1b4d8694d9d0489b77c25d7244f84d311817031b3"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "positiveProductivity",
+        "items",
+        2
+      ],
+      "sourceHash": "52356e90fdcbe86e8a1b5cee54017801ec4c7e7304a1fb7e7868d8f11f2af3eb"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "producesHeading"
+      ],
+      "sourceHash": "e0dc1b9a4c27a7bb40138896cce0830b9ec2915602b4c63ee8f4b9561ae5fbb8"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "produces",
+        0
+      ],
+      "sourceHash": "45d633d034e096f98685ee994c5ec87a78079f5f469ca54d6ec84e0362d4af62"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "produces",
+        1
+      ],
+      "sourceHash": "b1b50f3065e3cbad78d27cc7d78a37ae0ece4c82035f22b8d4cc6f79b9d0f684"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "produces",
+        2
+      ],
+      "sourceHash": "5d89e3dbd3749e8873c216a2b91eb4970d6a654357ea7a550dbe00cf2ee70b6f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "breakdownHeading"
+      ],
+      "sourceHash": "42d035b930c7b854c88b9f450a68ce16d399fde725960b47abb32c73b9cdecda"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "projectionHeading"
+      ],
+      "sourceHash": "50d53ffb8b6ba2e987c83a8f63a3eb6d8e9d886c47950a835e7595989d33d0eb"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "yearOneCostLabel"
+      ],
+      "sourceHash": "547618fd9bc08782dc81cee26028648b537876d2e955d2cb7be559e964f56b08"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "yearOneValueLabel"
+      ],
+      "sourceHash": "fa9735cf1f9895c43aae556f97d1a24b2418741528ad130412ece4a745a85915"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "yearOneReturnLabel"
+      ],
+      "sourceHash": "85beefa364209014605e15d36bb6f9fa5ee45ffcc2b7126ce391fe1a683818ef"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "scenarios",
+        0,
+        "label"
+      ],
+      "sourceHash": "75e1783e4e517e5459062db056ec2d886889cf94fc62c3b7e01f10ae3505a2f5"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "scenarios",
+        1,
+        "label"
+      ],
+      "sourceHash": "7b47361aad19bb483aeab081a7df0a55f7cb0fdb3327efe6dd016e6353a17880"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "scenarios",
+        2,
+        "label"
+      ],
+      "sourceHash": "d343fb299e0c833e79beab8dbd238e17c84bd7e9cfc828955609dddb1cd3fcf6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        0,
+        "label"
+      ],
+      "sourceHash": "3063751e6f4ac7c99793f0b040b49013722077a7114011ad2c594e5a2f4c5793"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        1,
+        "label"
+      ],
+      "sourceHash": "98f1dc328aa30cfb42ef6f0b3a29d45b82a71b2b62b41818e56d9ad3bbc0a225"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        2,
+        "label"
+      ],
+      "sourceHash": "b5eb3013a90921ffcd60eaf14a2d61cfe038aa76214984e1df7faa27f4c431f0"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        3,
+        "label"
+      ],
+      "sourceHash": "533a38e43dbed16920de1a3f26eb70e11c276e410ceda3db929bfcadecf5bea4"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        4,
+        "label"
+      ],
+      "sourceHash": "222d3732468ff5e8de6e140197a726437d4f3fa70c7e4ebd29aeead30160ec41"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        5,
+        "label"
+      ],
+      "sourceHash": "b9f335d754aa66d4f8dbcea05a8ce6b636ffca996a845af7afd62ca72e7a48a9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        6,
+        "label"
+      ],
+      "sourceHash": "2e73572adb42f5f277c8de8cec9f3960ea4fd41f307ec9bd1d143b55219159e6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        7,
+        "label"
+      ],
+      "sourceHash": "b8e8c8ae12aa13afcf84abd1a49e5e7bf6169679099ef035b94dfbff37349ac6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        8,
+        "label"
+      ],
+      "sourceHash": "fe869422e4aff1869b3e076c0051b15e53020153712ac4a44f9f43ff1ff00f9c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        9,
+        "label"
+      ],
+      "sourceHash": "07cb449fc4bd46e5c72cd7dcd3c24ff1d8a0e8ff9c574573568d702f62fb084e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        9,
+        "help"
+      ],
+      "sourceHash": "77599042a260d644dd40ea04cd7f7d119e05570156025a10ac2805a19d988f11"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        10,
+        "label"
+      ],
+      "sourceHash": "6cdb8b23c54613e261287a244257ec534d0261b11b9310ea8908f38806c7075d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        10,
+        "help"
+      ],
+      "sourceHash": "7878ca522b4592e2322777a01902b5a09c88e11c2ee72bd242c156966947300c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        11,
+        "label"
+      ],
+      "sourceHash": "804eee4764a8430f43825b3d10636f96f61cb28dddb24014c26b0cea2de6cecf"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        11,
+        "help"
+      ],
+      "sourceHash": "661d3c1a695472ec8bb0eae669898d9deb0a2ef677c8d801defda9a6d9b26068"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        12,
+        "label"
+      ],
+      "sourceHash": "8cc287b9a48ef60e7835df9da590f890c2a00f22404ba3d514cdf5b9654be2a0"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        12,
+        "help"
+      ],
+      "sourceHash": "f57cfb07fd94ff0cd4c9078b18a34ec98069156a07ede77fd06a743549e84f27"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        13,
+        "label"
+      ],
+      "sourceHash": "15b2073bf237121ecc43a933ad40bd883c9154ef1af11e0a1142e9342dcf73d6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "inputs",
+        14,
+        "label"
+      ],
+      "sourceHash": "2c7b96d00325ca2722eb47c35eacf1db07266255127387fd752fb881ee01bc4e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        0,
+        "label"
+      ],
+      "sourceHash": "320af1fedd0ec2a0919af231f9c8c0676f08105c235ac8f33af795d1c9b6700b"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        0,
+        "note"
+      ],
+      "sourceHash": "9291a98029f2e03a5487bfc64a7f87172c36cb5fbd8eb926c9b7496aa39b2ea9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        1,
+        "label"
+      ],
+      "sourceHash": "cc212326bc6ad9090c67c1a8fecdfac472bc89fb61669b61f6d8bc7b7cf61f9c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        1,
+        "note"
+      ],
+      "sourceHash": "796eed9c43a15e279bb60308065138650b3e5367d08928762caa168ae31d2d11"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        2,
+        "label"
+      ],
+      "sourceHash": "4d60a78b44938635d4536f94c559902bf6156cda402cff140cf93a336e3e6058"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        3,
+        "label"
+      ],
+      "sourceHash": "cc2bd56d7ec11d0473066569c56b9c35ce19b9997f7cb72ff30a273617ee7abf"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        4,
+        "label"
+      ],
+      "sourceHash": "954d7b197e9cdda34fc69544aa0cf281fae006ef0e538906d3109ceaad9e7e3d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        5,
+        "label"
+      ],
+      "sourceHash": "36c196ee3a45d40f859adf642af7686fbf7923892a3166e7c23259aed4fcceb0"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        6,
+        "label"
+      ],
+      "sourceHash": "2e0dca1786cdb30958e949de32f5ac00c33124c2fe4a023247784495c9482cea"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        7,
+        "label"
+      ],
+      "sourceHash": "fba0838ca9b3525b716453915fd98f77df1cec34ec2975034dbe89ff9a1fc8d9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        8,
+        "label"
+      ],
+      "sourceHash": "1ec141d886a19fcb577c86afb98ebf0449ed936cece7a8e7a96b44b3281df16a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        9,
+        "label"
+      ],
+      "sourceHash": "580db459a5f5c8285cc4714e8781496cc5a23504ef174275fa84aca80d8d1a3e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        10,
+        "label"
+      ],
+      "sourceHash": "ee598ac63eeea97fa1b3173940e9163f61187d1603fa155aee4cc636f1b609f1"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        11,
+        "label"
+      ],
+      "sourceHash": "2de06c88f5be573b35f9b7fa846a573cbb12bf0b71af522107a5606b6f3f77a1"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        11,
+        "note"
+      ],
+      "sourceHash": "afca482645ce1d04982a97a94dc4471c1bf830f5022fe8ac5078399b4ecfa4f5"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        12,
+        "label"
+      ],
+      "sourceHash": "12e5a482d5479cf75c2186a4048973faf705bc380857785e64a29866477bbab2"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        12,
+        "note"
+      ],
+      "sourceHash": "f6b90007ff624521b1fa314bc405fd65c487fe566c37142b83d4ab0eeba0832c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        13,
+        "label"
+      ],
+      "sourceHash": "a17b57b2c7d83589ab5b13af7bb2a05288ec0f7151e087318b0c3bed72f1061d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        13,
+        "note"
+      ],
+      "sourceHash": "18c0ea45a319205bb4ff80ffba97bdd06c26003478696daa6f4a32d6aee2a4c1"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        14,
+        "label"
+      ],
+      "sourceHash": "6a2326aa5856c99a78a1c9c45997cf6557a953f3efec8c1fc8e2165a96818750"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        15,
+        "label"
+      ],
+      "sourceHash": "c4402679b0bd01837904090e68038db886c05ed3b1402e58296074c1cb135a57"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        16,
+        "label"
+      ],
+      "sourceHash": "0545b989a2eae9237d62263aa70478a274be429a5b20f3052113d1e04010fec9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "metrics",
+        17,
+        "label"
+      ],
+      "sourceHash": "d95c7f4a7273275110970c4a53e16a41c9c370c81575f123ec4e77e51490efb0"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "projection",
+        "yearOneLabel"
+      ],
+      "sourceHash": "e07d177a87fc88f707c1fe6ee3c36863ee433fea74956837d91554e22fdb2068"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "projection",
+        "costLabel"
+      ],
+      "sourceHash": "44fa8317e3e6e15538edaae74059a6a56a2ea52c32b62a01355fd10abeeb30bc"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "projection",
+        "benefitLabel"
+      ],
+      "sourceHash": "56998e38ef5d41206aeb6ec35af43abe60c9df7bf8d88d7f3f1c2a8db0d63734"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "cta",
+        "primaryLabel"
+      ],
+      "sourceHash": "d15dff1f02872b5a86fe94913f2db1b4928c5840b83dde7a4064da877b668a28"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "cta",
+        "secondaryLabel"
+      ],
+      "sourceHash": "a105ad29235aa71ee321d02ba00ee1cf7e9273406367343fdf9a721daa38419e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "cta",
+        "privacyNote"
+      ],
+      "sourceHash": "dc23cdf650359e6260ca6494e4d765555cdf24afc9b176195d9abb9f154cd47a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "header",
+        "navItems",
+        0,
+        "label"
+      ],
+      "sourceHash": "fb9ef894175c327470f768d95ca7bee65e19853a0eaace3805f8a7b8a12270da"
+    },
+    {
+      "path": [
+        "landingPage",
+        "header",
+        "navItems",
+        1,
+        "label"
+      ],
+      "sourceHash": "cbaad3cf4a6507e5d6f98157fa255ca964588c8c30ecf198fb9c98ed97413f59"
+    },
+    {
+      "path": [
+        "landingPage",
+        "header",
+        "navItems",
+        2,
+        "label"
+      ],
+      "sourceHash": "6d09cf5748829bd23a36d4de1e81b3a5cf103b3902ef494f0fe66541b5d89bab"
+    },
+    {
+      "path": [
+        "landingPage",
+        "header",
+        "navItems",
+        3,
+        "label"
+      ],
+      "sourceHash": "5697d03daef4de9cf8db7cb11755f71358a32b4acca94909a9d449f71040d2dd"
+    },
+    {
+      "path": [
+        "landingPage",
+        "header",
+        "navItems",
+        4,
+        "label"
+      ],
+      "sourceHash": "4efca0d10c5feb8e9b35eb1d994f2905bb71714e6a271f511d713b539ea5faa1"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "header",
+        "navItems",
+        0,
+        "label"
+      ],
+      "sourceHash": "fb9ef894175c327470f768d95ca7bee65e19853a0eaace3805f8a7b8a12270da"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "header",
+        "navItems",
+        1,
+        "label"
+      ],
+      "sourceHash": "cbaad3cf4a6507e5d6f98157fa255ca964588c8c30ecf198fb9c98ed97413f59"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "header",
+        "navItems",
+        2,
+        "label"
+      ],
+      "sourceHash": "6d09cf5748829bd23a36d4de1e81b3a5cf103b3902ef494f0fe66541b5d89bab"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "header",
+        "navItems",
+        3,
+        "label"
+      ],
+      "sourceHash": "5697d03daef4de9cf8db7cb11755f71358a32b4acca94909a9d449f71040d2dd"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "header",
+        "navItems",
+        4,
+        "label"
+      ],
+      "sourceHash": "4efca0d10c5feb8e9b35eb1d994f2905bb71714e6a271f511d713b539ea5faa1"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "heading"
+      ],
+      "sourceHash": "c63420eca3f95b8917c99f3a5cf72f000ab237bc6c658765b2176ebdd7b311be"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "navLabel"
+      ],
+      "sourceHash": "5bb1092e45d12cf344ec810103fd96adc18943f70e30d02a092a40f74fe906b0"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "heading"
+      ],
+      "sourceHash": "c63420eca3f95b8917c99f3a5cf72f000ab237bc6c658765b2176ebdd7b311be"
+    }
+  ],
+  "generatedAt": "2026-09-06T16:36:03.163Z"
 }

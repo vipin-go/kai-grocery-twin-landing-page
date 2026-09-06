@@ -431,7 +431,7 @@ function validateCinematicCampaigns(landingPage) {
   if (get('hero.instagramCampaign.enabled') !== true) fail('landingPage.cinematicCampaigns.hero.instagramCampaign.enabled must be true');
   const sourceReview = get('hero.instagramCampaign.sourceReview');
   if (sourceReview !== undefined) {
-    const keys = ["heading","body","identityLabel","permissionLabel","selectionLabel","logoLabel","thumbnailLabel","originalLabel","profileLabel","captionLabel","altTextLabel","limitedHeading","noOfferLabel","languageNotice"];
+    const keys = ["heading","body","identityLabel","permissionLabel","permissionQuestion","changeAccountLabel","selectionLabel","logoLabel","thumbnailLabel","originalLabel","profileLabel","captionLabel","altTextLabel","limitedHeading","noOfferLabel","languageNotice"];
     const codes = ["login_wall","private_content","captcha","thumbnails_only","captions_unavailable","media_unavailable","time_limit"];
     if (!sourceReview || typeof sourceReview !== 'object' || Array.isArray(sourceReview) || Object.keys(sourceReview).some(key => ![...keys, 'limitations'].includes(key))) fail('Use copy-only sourceReview fields');
     for (const key of keys) {
@@ -439,6 +439,7 @@ function validateCinematicCampaigns(landingPage) {
       if (sourceReview[key].length > 600) fail('Source-review copy exceeds 600 characters');
     }
     if (!sourceReview.limitations || Object.keys(sourceReview.limitations).some(code => !codes.includes(code))) fail('Invalid source-review limitation code');
+    if (sourceReview.permissionQuestion.split('{accountName}').length !== 2 || /[{}]/.test(sourceReview.permissionQuestion.replace('{accountName}', ''))) fail('Permission question needs exactly one literal {accountName} token');
     for (const code of codes) {
       requireString(`hero.instagramCampaign.sourceReview.limitations.${code}`);
       if (sourceReview.limitations[code].length > 600) fail('Limitation copy exceeds 600 characters');
@@ -856,8 +857,19 @@ function validateHomeIntroductionCommand(landingPage, chatConfigPath) {
 
 function validateLandingPageModel(landingPage, chatConfigPath, definitionFilePath) {
   if (!landingPage || typeof landingPage !== 'object') fail('landingPage object is required');
+  if (landingPage.capabilityPreview !== undefined) {
+    const binding = landingPage.capabilityPreview;
+    if (!binding || typeof binding !== 'object' || Array.isArray(binding) || Object.keys(binding).some(key => !['enabled', 'commandTrigger'].includes(key)) || typeof binding.enabled !== 'boolean' || !/^\/?[a-z0-9][a-z0-9-]{0,63}$/.test(binding.commandTrigger || '')) fail('landingPage.capabilityPreview accepts only enabled and a registered commandTrigger');
+    if (binding.enabled && chatConfigPath) {
+      const config = JSON.parse(fs.readFileSync(chatConfigPath, 'utf8'));
+      const trigger = binding.commandTrigger.replace(/^\/+/, '').toLowerCase();
+      const command = config.publishedConfig?.agentTopology?.slashCommands?.find(item => item.enabled !== false && String(item.trigger || '').replace(/^\/+/, '').toLowerCase() === trigger);
+      if (command?.execution?.type !== 'operator_action' || command.execution.workflowRef?.kind !== 'workflow' || !command.execution.workflowRef.resourceKey || !/^skills\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(command.execution.workflowSkill?.path || '') || !['legacy', 'shadow', 'skill'].includes(command.execution.workflowSkill?.mode)) fail('Shared capability preview requires an enabled, workflow-bound operator_action with a workflowSkill package');
+    }
+  }
   if (!landingPage.headline || !String(landingPage.headline).trim()) fail('landingPage.headline is required');
   validateRoiCalculator({ roiCalculator: landingPage.roiCalculator }).forEach((issue) => fail(`${issue.path}: ${issue.message}`));
+  validateRoiCalculator({ roiCalculator: landingPage.groceryTwin?.homeRoiCalculator, pathPrefix: 'landingPage.groceryTwin.homeRoiCalculator' }).forEach((issue) => fail(`${issue.path}: ${issue.message}`));
   assertNoEmoji(landingPage);
 
   if (landingPage.localization !== undefined) {

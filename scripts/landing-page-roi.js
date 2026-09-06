@@ -1,4 +1,5 @@
 const ROI_CALCULATOR_NAV_TARGET = 'roi-calculator';
+const { validateBusinessImpact } = require('./business-impact.cjs');
 const ROI_CALCULATOR_NAV_LABEL = 'ROI Calculator';
 const ROI_CALCULATOR_SECTION_ID = 'persona-landing-roi-calculator';
 const ROI_IDENTIFIER_PATTERN = /^[a-z][a-z0-9_]{0,47}$/;
@@ -163,6 +164,7 @@ function validateIdentifier({ value, path, issues, used }) {
 
 function validateRoiCalculator({ roiCalculator, pathPrefix = 'landingPage.roiCalculator' }) {
   if (roiCalculator === undefined) return [];
+  if (isRecord(roiCalculator) && roiCalculator.methodologyVersion !== undefined) return validateBusinessImpact(roiCalculator, pathPrefix);
   if (!isRecord(roiCalculator)) return [{ path: pathPrefix, message: 'ROI calculator must be an object.' }];
   const issues = [];
   ['heading', 'disclaimer', 'currency'].forEach((key) => {
