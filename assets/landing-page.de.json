@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "language": "de",
   "regionKey": null,
-  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -126,7 +126,7 @@
           }
         ],
         "secondaryCtaLabel": "Lerne KAI kennen",
-        "primaryCtaLabel": "Warenkorb starten"
+        "primaryCtaLabel": "Lerne KAI kennen"
       },
       "hero": {
         "ratingLabel": "Dein Shop, deine Rezepte und dein Kalorienplan – alles verbunden",
@@ -403,5 +403,5 @@
       }
     }
   },
-  "generatedAt": "2026-09-01T19:15:50.031Z"
+  "generatedAt": "2026-09-02T10:21:16.000Z"
 }

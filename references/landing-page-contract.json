@@ -29,12 +29,18 @@
           "mode": "source_revisioned_per_language_git_json",
           "servedBeforeGeneration": true,
           "consumesVisitorQuota": false,
-          "manifestFields": ["language", "regionKey", "sourceRevision", "assetPath", "generatedAt"],
-          "assetSchemaVersion": 1,
-          "assetFields": ["schemaVersion", "language", "regionKey", "sourceRevision", "landingPage", "chatEmbedConfig", "generatedAt"],
+          "manifestFields": ["language", "regionKey", "sourceRevision", "assetPath", "assetSchemaVersion", "generatedAt"],
+          "assetSchemaVersion": 2,
+          "assetFields": ["schemaVersion", "language", "regionKey", "sourceRevision", "landingPage", "chatEmbedConfig", "translationIndex", "generatedAt"],
+          "translationIndexFields": ["path", "sourceHash"],
+          "staleAssetPolicy": "rebase_matching_path_and_source_hash_then_translate_delta",
           "defaultAssetPattern": "assets/landing-page.<language>.json",
           "regionalAssetPattern": "assets/landing-page.<regionKey>.<language>.json",
           "legacyInlinePageReadCompatible": true,
+          "newWritesRequireAssetPath": true,
+          "newWritesAllowInlinePage": false,
+          "aggregateTranslationFileAllowed": false,
+          "sourceLanguageAssetAllowed": false,
           "lazyLoadSelectedAssetOnly": true
         },
         "publicDistinctTargetLimit": 3,
@@ -54,7 +60,7 @@
     },
     "featureItem": {
       "fields": [
-        { "key": "icon", "type": "text", "required": false, "description": "One of the allowed icon tokens — see SKILL.md" },
+        { "key": "icon", "type": "text", "required": false, "description": "One of the allowed icon tokens: see SKILL.md" },
         { "key": "title", "type": "text", "required": true },
         { "key": "body", "type": "text", "required": true }
       ]
@@ -99,6 +105,7 @@
         "reviewExceptionsPerSample": 3,
         "capabilityCards": 4,
         "processSteps": 6,
+        "processStepMedia": ["image", "alt"],
         "primaryWorkflows": 2,
         "secondaryWorkflows": 4,
         "pilotSteps": 3,
@@ -116,28 +123,74 @@
       "sections": [
         "hero",
         "workflow",
-        "capabilities",
+        "delivery",
         "showcase",
         "features",
-        "workspace",
+        "tracker",
         "meetArcher",
-        "journal",
-        "closing",
+        "fit",
+        "pilot",
         "footer"
       ],
       "constraints": {
-        "workflowActs": 3,
-        "capabilityItems": 8,
-        "showcaseItems": 4,
-        "featureItems": 7,
-        "workspaceProjects": 3,
-        "directorPrinciples": 3,
-        "journalItems": 2,
-        "filmstripItems": 5,
-        "guidedDemo": {
-          "requires": ["enabled", "commandTrigger"],
+        "navigationItems": 5,
+        "heroHeadingLines": 2,
+        "intakeSuggestions": 3,
+        "workflowSteps": 3,
+        "workflowKinds": ["send", "brand", "approve"],
+        "deliveryPlatforms": ["instagram-reels", "tiktok", "youtube-shorts", "snapchat"],
+        "deliveryAspectRatio": "9:16",
+        "showcasePlaceholders": 3,
+        "featureItems": 6,
+        "trackerStatuses": ["footage-received", "in-production", "pending-approval", "approved", "delivered"],
+        "trackerBenefits": 3,
+        "meetArcherPoints": 3,
+        "meetArcherVoiceCtaLabel": { "optional": true, "type": "string", "minLength": 1, "maxLength": 80, "action": "confirm_public_voice_demo" },
+        "instagramCampaign": {
+          "path": "hero.instagramCampaign",
+          "requires": ["enabled", "commandTrigger", "localizedUiCopy"],
+          "localizedUiCopyIncludes": ["welcomeMessage", "urlRequestMessage", "brandAndTypographyLabels", "imageFormatLabels", "errorGroups", "claimTranscriptMessages", "sourceReview"],
+          "sourceReview": { "optionalForLegacy": true, "copyOnly": true, "maxStringLength": 600, "permissionRequired": true, "limitationCodes": ["login_wall", "private_content", "captcha", "thumbnails_only", "captions_unavailable", "media_unavailable", "time_limit"] },
+          "commandTrigger": "instagram-campaign",
           "commandExecutionType": "operator_action",
-          "anonymousRuntime": "illustrative_only"
+          "workflowResourceKey": "workflow.archer.instagram-campaign-v2",
+          "publicStages": ["brand_review", "event_brief", "image_review", "confirmed"],
+          "anonymousRuntime": "three_images_then_authentication",
+          "limitsOwnedBy": "platform"
+        },
+        "accessibilityCopy": {
+          "path": "accessibility",
+          "requires": ["mainNavigationLabel", "previousPreviewLabel", "nextPreviewLabel", "pausePreviewsLabel", "resumePreviewsLabel"]
+        },
+        "headerCta": { "labelField": "header.ctaLabel", "target": "meet-archer" },
+        "fitItems": 3,
+        "pilotSteps": 3,
+        "optionalSectionVisibility": {
+          "fields": ["fit.showSection", "pilot.showSection"],
+          "type": "boolean",
+          "default": true,
+          "hiddenNavigation": "filtered",
+          "hiddenPilotCtas": "booking_url"
+        },
+        "bookingUrlProtocol": "https",
+        "generatedMediaRequired": false,
+        "optionalPresentationMedia": {
+          "noticeRequired": true,
+          "purpose": "decorative cinematic presentation, never client proof",
+          "urlProtocol": "https",
+          "heroVideo": 1,
+          "videoPostersRequired": true,
+          "workflowThumbnails": 3,
+          "workflowImage": 1,
+          "showcaseVideos": 3,
+          "showcaseMediaKinds": ["image", "video"],
+          "showcaseImagePurpose": "clearly labelled static start-frame placeholder until a matching motion clip is supplied",
+          "featureMedia": 7,
+          "featureMediaKinds": ["image", "video"],
+          "workspaceBackground": 1,
+          "workspaceProjects": 3,
+          "filmstrip": 5,
+          "fitImages": 2
         },
         "runtimeDataPolicy": "definitions_only"
       }
@@ -227,6 +280,43 @@
         },
         "runtimeDataPolicy": "definitions_only"
       }
+    },
+    "roiCalculator": {
+      "optional": true,
+      "optionalForBackwardCompatibility": true,
+      "sectionId": "persona-landing-roi-calculator",
+      "navTarget": "roi-calculator",
+      "navLabel": "ROI Calculator",
+      "navInjection": "renderer_owned_when_enabled",
+      "methodology": {
+        "layers": ["economics", "operations", "value"],
+        "productivity": ["negative", "positive"],
+        "valueClasses": [
+          "cost-elimination", "capacity-creation", "revenue-productivity", "error-avoidance",
+          "risk-reduction", "throughput", "hiring-avoidance", "cycle-time"
+        ],
+        "return": "economic_value / all_in_ai_cost",
+        "hoursAreCapacity": true
+      },
+      "requiredFields": ["heading", "disclaimer", "currency", "inputs", "metrics"],
+      "nonTranslatableFields": [
+        "formula", "currency", "locale", "format", "kind", "defaultPeriod", "defaultScenarioId",
+        "costMetricId", "benefitMetricId", "primaryTarget", "min", "max", "step", "defaultValue",
+        "multiplier", "months", "scalesWithPeriod", "scalesWithScenario", "enabled", "periodToggle",
+        "profile", "profileIcon", "id", "type", "group", "layer", "valueClass", "productivity"
+      ],
+      "formulaDsl": {
+        "operators": ["+", "-", "*", "/", "(", ")"],
+        "builtins": ["scenario", "period_months", "weeks_per_month"],
+        "identifierPattern": "^[a-z][a-z0-9_]{0,47}$",
+        "eval": false
+      },
+      "inputTypes": ["slider", "number", "select"],
+      "inputGroups": ["profile", "workload", "economics", "allocation"],
+      "formats": ["number", "integer", "currency", "hours", "percent", "multiplier", "tokens"],
+      "metricKinds": ["card", "breakdown-benefit", "breakdown-cost", "summary-cost", "summary-roi", "summary-benefit", "hidden"],
+      "metricLayers": ["economics", "operations", "value"],
+      "periods": ["monthly", "yearly"]
     }
   }
 }

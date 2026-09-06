@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "language": "tr",
   "regionKey": null,
-  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -77,7 +77,7 @@
       ],
       "ctaLabel": "KAI ile Tanışın"
     },
-    "badge": "Mağazanız, tarifleriniz ve kalori planınız — bağlantılı",
+    "badge": "Mağazanız, tarifleriniz ve kalori planınız: bağlantılı",
     "headline": "Market alışverişi yine kolay hissettirsin",
     "headlineAccent": "yine kolay hissettirsin",
     "subheadline": "Buzdolabını veya fişi tarayın. KAI, elinizde olan malzemeleri tariflere dönüştürür, kalorileri hesaplar ve her öğün için yalnızca eksik olanları satın alır.",
@@ -126,10 +126,10 @@
           }
         ],
         "secondaryCtaLabel": "KAI ile Tanışın",
-        "primaryCtaLabel": "Sepet oluştur"
+        "primaryCtaLabel": "KAI ile Tanışın"
       },
       "hero": {
-        "ratingLabel": "Mağazanız, tarifleriniz ve kalori planınız — bağlantılı",
+        "ratingLabel": "Mağazanız, tarifleriniz ve kalori planınız: bağlantılı",
         "heading": "Market alışverişi yine kolay hissettirsin",
         "body": "Buzdolabını veya fişi tarayın. KAI, elinizde olan malzemeleri tariflere dönüştürür, kalorileri hesaplar ve her öğün için yalnızca eksik olanları satın alır.",
         "primaryCtaLabel": "KAI ile konuşun",
@@ -190,7 +190,7 @@
       },
       "product": {
         "kicker": "Market + Tarif + Kalori Twin'ınız",
-        "heading": "Ne pişirebiliriz — ve neyi hâlâ almamız gerekir?",
+        "heading": "Ne pişirebiliriz: ve neyi hâlâ almamız gerekir?",
         "body": "KAI; tarama, tarifler, ürün arama, kaloriler ve sepeti birbirine bağlayarak her öğünün elinizdeki malzemelerle başlamasını sağlar.",
         "capabilityLabels": [
           "Ürün arama",
@@ -403,5 +403,5 @@
       }
     }
   },
-  "generatedAt": "2026-09-01T19:15:50.031Z"
+  "generatedAt": "2026-09-02T10:21:16.000Z"
 }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "language": "es",
   "regionKey": null,
-  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -77,7 +77,7 @@
       ],
       "ctaLabel": "Conoce a KAI"
     },
-    "badge": "Tu tienda, recetas y plan de calorías—conectados",
+    "badge": "Tu tienda, recetas y plan de calorías: conectados",
     "headline": "Haz que comprar groceries vuelva a ser fácil",
     "headlineAccent": "vuelva a ser fácil",
     "subheadline": "Escanea la nevera o un ticket. KAI convierte lo que ya tienes en recetas, cuenta las calorías y compra solo lo que aún falta para cada comida.",
@@ -126,10 +126,10 @@
           }
         ],
         "secondaryCtaLabel": "Conoce a KAI",
-        "primaryCtaLabel": "Crear un carrito"
+        "primaryCtaLabel": "Conoce a KAI"
       },
       "hero": {
-        "ratingLabel": "Tu tienda, recetas y plan de calorías—conectados",
+        "ratingLabel": "Tu tienda, recetas y plan de calorías: conectados",
         "heading": "Haz que comprar groceries vuelva a ser fácil",
         "body": "Escanea la nevera o un ticket. KAI convierte lo que ya tienes en recetas, cuenta las calorías y compra solo lo que aún falta para cada comida.",
         "primaryCtaLabel": "Habla con KAI",
@@ -403,5 +403,5 @@
       }
     }
   },
-  "generatedAt": "2026-09-01T19:15:50.031Z"
+  "generatedAt": "2026-09-02T10:21:16.000Z"
 }

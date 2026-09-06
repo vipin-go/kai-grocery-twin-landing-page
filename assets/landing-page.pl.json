@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "language": "pl",
   "regionKey": null,
-  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -77,7 +77,7 @@
       ],
       "ctaLabel": "Poznaj KAI"
     },
-    "badge": "Twój sklep, przepisy i plan kalorii — połączone",
+    "badge": "Twój sklep, przepisy i plan kalorii: połączone",
     "headline": "Zakupy spożywcze znów mogą być proste",
     "headlineAccent": "znów mogą być proste",
     "subheadline": "Zeskanuj lodówkę lub paragon. KAI zamienia to, co już masz, w przepisy, liczy kalorie i zamawia tylko to, czego brakuje do każdego posiłku.",
@@ -126,10 +126,10 @@
           }
         ],
         "secondaryCtaLabel": "Poznaj KAI",
-        "primaryCtaLabel": "Utwórz koszyk"
+        "primaryCtaLabel": "Poznaj KAI"
       },
       "hero": {
-        "ratingLabel": "Twój sklep, przepisy i plan kalorii — połączone",
+        "ratingLabel": "Twój sklep, przepisy i plan kalorii: połączone",
         "heading": "Zakupy spożywcze znów mogą być proste",
         "body": "Zeskanuj lodówkę lub paragon. KAI zamienia to, co już masz, w przepisy, liczy kalorie i zamawia tylko to, czego brakuje do każdego posiłku.",
         "primaryCtaLabel": "Porozmawiaj z KAI",
@@ -190,7 +190,7 @@
       },
       "product": {
         "kicker": "Twój bliźniak zakupów, przepisów i kalorii",
-        "heading": "Co możemy ugotować — a co jeszcze trzeba kupić?",
+        "heading": "Co możemy ugotować: a co jeszcze trzeba kupić?",
         "body": "KAI łączy skan, przepisy, wyszukiwanie produktów, kalorie i koszyk, dzięki czemu każdy posiłek zaczyna się od tego, co już masz.",
         "capabilityLabels": [
           "Wyszukiwanie produktów",
@@ -403,5 +403,5 @@
       }
     }
   },
-  "generatedAt": "2026-09-01T19:15:50.031Z"
+  "generatedAt": "2026-09-02T10:21:16.000Z"
 }

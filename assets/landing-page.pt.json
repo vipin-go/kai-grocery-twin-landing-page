@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "language": "pt",
   "regionKey": null,
-  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -77,7 +77,7 @@
       ],
       "ctaLabel": "Conheça o KAI"
     },
-    "badge": "A sua loja, receitas e plano calórico—ligados",
+    "badge": "A sua loja, receitas e plano calórico: ligados",
     "headline": "Torne as compras de supermercado fáceis de novo",
     "headlineAccent": "fáceis de novo",
     "subheadline": "Digitalize o frigorífico ou um recibo. O KAI transforma o que já tem em receitas, conta as calorias e compra apenas o que cada refeição ainda precisa.",
@@ -126,10 +126,10 @@
           }
         ],
         "secondaryCtaLabel": "Conheça o KAI",
-        "primaryCtaLabel": "Iniciar um carrinho"
+        "primaryCtaLabel": "Conheça o KAI"
       },
       "hero": {
-        "ratingLabel": "A sua loja, receitas e plano calórico—ligados",
+        "ratingLabel": "A sua loja, receitas e plano calórico: ligados",
         "heading": "Torne as compras de supermercado fáceis de novo",
         "body": "Digitalize o frigorífico ou um recibo. O KAI transforma o que já tem em receitas, conta as calorias e compra apenas o que cada refeição ainda precisa.",
         "primaryCtaLabel": "Fale com o KAI",
@@ -190,7 +190,7 @@
       },
       "product": {
         "kicker": "O seu Gémeo de Mercearia + Receitas + Calorias",
-        "heading": "O que podemos cozinhar — e o que ainda precisamos comprar?",
+        "heading": "O que podemos cozinhar: e o que ainda precisamos comprar?",
         "body": "O KAI liga o scan, as receitas, a pesquisa de produtos, as calorias e o carrinho para que cada refeição comece com o que já tem.",
         "capabilityLabels": [
           "Pesquisa de produtos",
@@ -403,5 +403,5 @@
       }
     }
   },
-  "generatedAt": "2026-09-01T19:15:50.031Z"
+  "generatedAt": "2026-09-02T10:21:16.000Z"
 }

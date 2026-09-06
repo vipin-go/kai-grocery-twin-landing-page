@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "language": "lv",
   "regionKey": null,
-  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -77,7 +77,7 @@
       ],
       "ctaLabel": "Iepazīstiet KAI"
     },
-    "badge": "Jūsu veikals, receptes un kaloriju plāns—savienoti",
+    "badge": "Jūsu veikals, receptes un kaloriju plāns: savienoti",
     "headline": "Padariet pārtikas iepirkšanos atkal vieglu",
     "headlineAccent": "atkal vieglu",
     "subheadline": "Skenējiet ledusskapi vai čeku. KAI pārvērš to, kas jau ir, receptēs, skaita kalorijas un iepērkas tikai par to, kas vēl nepieciešams katrai maltītei.",
@@ -126,10 +126,10 @@
           }
         ],
         "secondaryCtaLabel": "Iepazīstiet KAI",
-        "primaryCtaLabel": "Sāciet grozu"
+        "primaryCtaLabel": "Iepazīstiet KAI"
       },
       "hero": {
-        "ratingLabel": "Jūsu veikals, receptes un kaloriju plāns—savienoti",
+        "ratingLabel": "Jūsu veikals, receptes un kaloriju plāns: savienoti",
         "heading": "Padariet pārtikas iepirkšanos atkal vieglu",
         "body": "Skenējiet ledusskapi vai čeku. KAI pārvērš to, kas jau ir, receptēs, skaita kalorijas un iepērkas tikai par to, kas vēl nepieciešams katrai maltītei.",
         "primaryCtaLabel": "Runājiet ar KAI",
@@ -190,7 +190,7 @@
       },
       "product": {
         "kicker": "Jūsu pārtikas + recepšu + kaloriju Dvīnis",
-        "heading": "Ko mēs varam pagatavot—un kas vēl jāiepērkas?",
+        "heading": "Ko mēs varam pagatavot: un kas vēl jāiepērkas?",
         "body": "KAI savieno skenēšanu, receptes, produktu meklēšanu, kalorijas un grozu, lai katra maltīte sāktos ar to, kas jums jau ir.",
         "capabilityLabels": [
           "Produktu meklēšana",
@@ -403,5 +403,5 @@
       }
     }
   },
-  "generatedAt": "2026-09-01T19:15:50.031Z"
+  "generatedAt": "2026-09-02T10:21:16.000Z"
 }

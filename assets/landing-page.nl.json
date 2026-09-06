@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "language": "nl",
   "regionKey": null,
-  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -77,7 +77,7 @@
       ],
       "ctaLabel": "Maak kennis met KAI"
     },
-    "badge": "Jouw winkel, recepten en calorieplan — verbonden",
+    "badge": "Jouw winkel, recepten en calorieplan: verbonden",
     "headline": "Maak boodschappen doen weer makkelijk",
     "headlineAccent": "weer makkelijk",
     "subheadline": "Scan de koelkast of een bon. KAI maakt van wat je al hebt recepten, telt de calorieën en bestelt alleen wat er voor elke maaltijd nog nodig is.",
@@ -126,10 +126,10 @@
           }
         ],
         "secondaryCtaLabel": "Maak kennis met KAI",
-        "primaryCtaLabel": "Start een winkelwagen"
+        "primaryCtaLabel": "Maak kennis met KAI"
       },
       "hero": {
-        "ratingLabel": "Jouw winkel, recepten en calorieplan — verbonden",
+        "ratingLabel": "Jouw winkel, recepten en calorieplan: verbonden",
         "heading": "Maak boodschappen doen weer makkelijk",
         "body": "Scan de koelkast of een bon. KAI maakt van wat je al hebt recepten, telt de calorieën en bestelt alleen wat er voor elke maaltijd nog nodig is.",
         "primaryCtaLabel": "Praat met KAI",
@@ -190,7 +190,7 @@
       },
       "product": {
         "kicker": "Jouw Boodschappen- + Recept- + Calorie-Tweeling",
-        "heading": "Wat kunnen we koken — en wat moet er nog worden gekocht?",
+        "heading": "Wat kunnen we koken: en wat moet er nog worden gekocht?",
         "body": "KAI verbindt scan, recepten, productzoeker, calorieën en winkelwagen zodat elke maaltijd begint met wat je al hebt.",
         "capabilityLabels": [
           "Productzoeker",
@@ -403,5 +403,5 @@
       }
     }
   },
-  "generatedAt": "2026-09-01T19:15:50.031Z"
+  "generatedAt": "2026-09-02T10:21:16.000Z"
 }

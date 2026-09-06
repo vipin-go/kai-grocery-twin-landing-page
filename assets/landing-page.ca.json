@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "language": "ca",
   "regionKey": null,
-  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -77,7 +77,7 @@
       ],
       "ctaLabel": "Coneix KAI"
     },
-    "badge": "La teva botiga, receptes i pla de calories—connectats",
+    "badge": "La teva botiga, receptes i pla de calories: connectats",
     "headline": "Fes que comprar queviures torni a ser fàcil",
     "headlineAccent": "torni a ser fàcil",
     "subheadline": "Escaneja la nevera o un rebut. KAI converteix el que ja hi ha en receptes, compta les calories i compra només el que encara necessita cada àpat.",
@@ -126,10 +126,10 @@
           }
         ],
         "secondaryCtaLabel": "Coneix KAI",
-        "primaryCtaLabel": "Comença una cistella"
+        "primaryCtaLabel": "Coneix KAI"
       },
       "hero": {
-        "ratingLabel": "La teva botiga, receptes i pla de calories—connectats",
+        "ratingLabel": "La teva botiga, receptes i pla de calories: connectats",
         "heading": "Fes que comprar queviures torni a ser fàcil",
         "body": "Escaneja la nevera o un rebut. KAI converteix el que ja hi ha en receptes, compta les calories i compra només el que encara necessita cada àpat.",
         "primaryCtaLabel": "Parla amb KAI",
@@ -190,7 +190,7 @@
       },
       "product": {
         "kicker": "El teu Bessó de Queviures + Receptes + Calories",
-        "heading": "Què podem cuinar—i què encara cal comprar?",
+        "heading": "Què podem cuinar: i què encara cal comprar?",
         "body": "KAI connecta l'escaneig, les receptes, la cerca de productes, les calories i la cistella perquè cada àpat comenci amb el que ja tens.",
         "capabilityLabels": [
           "Cerca de productes",
@@ -403,5 +403,5 @@
       }
     }
   },
-  "generatedAt": "2026-09-01T19:15:50.031Z"
+  "generatedAt": "2026-09-02T10:21:16.000Z"
 }

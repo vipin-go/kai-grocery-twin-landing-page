@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "language": "sr",
   "regionKey": null,
-  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -77,7 +77,7 @@
       ],
       "ctaLabel": "Upoznajte KAI"
     },
-    "badge": "Vaša prodavnica, recepti i plan kalorija—povezani",
+    "badge": "Vaša prodavnica, recepti i plan kalorija: povezani",
     "headline": "Neka kupovina namirnica ponovo bude laka",
     "headlineAccent": "ponovo bude laka",
     "subheadline": "Skenirajte frižider ili račun. KAI pretvara ono što već postoji u recepte, broji kalorije i kupuje samo ono što je još potrebno za svaki obrok.",
@@ -126,10 +126,10 @@
           }
         ],
         "secondaryCtaLabel": "Upoznajte KAI",
-        "primaryCtaLabel": "Započnite korpu"
+        "primaryCtaLabel": "Upoznajte KAI"
       },
       "hero": {
-        "ratingLabel": "Vaša prodavnica, recepti i plan kalorija—povezani",
+        "ratingLabel": "Vaša prodavnica, recepti i plan kalorija: povezani",
         "heading": "Neka kupovina namirnica ponovo bude laka",
         "body": "Skenirajte frižider ili račun. KAI pretvara ono što već postoji u recepte, broji kalorije i kupuje samo ono što je još potrebno za svaki obrok.",
         "primaryCtaLabel": "Razgovarajte sa KAI",
@@ -190,7 +190,7 @@
       },
       "product": {
         "kicker": "Vaš Blizanac za namirnice + recepte + kalorije",
-        "heading": "Šta možemo da skuvamo—i šta još treba kupiti?",
+        "heading": "Šta možemo da skuvamo: i šta još treba kupiti?",
         "body": "KAI povezuje skeniranje, recepte, pretragu proizvoda, kalorije i korpu tako da svaki obrok počinje sa onim što već imate.",
         "capabilityLabels": [
           "Pretraga proizvoda",
@@ -403,5 +403,5 @@
       }
     }
   },
-  "generatedAt": "2026-09-01T19:15:50.031Z"
+  "generatedAt": "2026-09-02T10:21:16.000Z"
 }

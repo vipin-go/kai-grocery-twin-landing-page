@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "language": "zh",
   "regionKey": null,
-  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -77,7 +77,7 @@
       ],
       "ctaLabel": "认识 KAI"
     },
-    "badge": "您的商店、食谱和卡路里计划——互联互通",
+    "badge": "您的商店、食谱和卡路里计划，互联互通",
     "headline": "让采购 groceries 再次轻松",
     "headlineAccent": "再次轻松",
     "subheadline": "扫描冰箱或小票。KAI 把现有食材变成食谱，计算卡路里，只购买每餐仍需要的食材。",
@@ -126,10 +126,10 @@
           }
         ],
         "secondaryCtaLabel": "认识 KAI",
-        "primaryCtaLabel": "开始购物车"
+        "primaryCtaLabel": "认识 KAI"
       },
       "hero": {
-        "ratingLabel": "您的商店、食谱和卡路里计划——互联互通",
+        "ratingLabel": "您的商店、食谱和卡路里计划，互联互通",
         "heading": "让采购 groceries 再次轻松",
         "body": "扫描冰箱或小票。KAI 把现有食材变成食谱，计算卡路里，只购买每餐仍需要的食材。",
         "primaryCtaLabel": "与 KAI 对话",
@@ -190,7 +190,7 @@
       },
       "product": {
         "kicker": "您的购物、食谱和卡路里 Twin",
-        "heading": "我们可以做什么菜——还需要买什么？",
+        "heading": "我们可以做什么菜，还需要买什么？",
         "body": "KAI 将扫描、食谱、产品搜索、卡路里和购物车连接起来，让每餐都从您现有的食材开始。",
         "capabilityLabels": [
           "产品搜索",
@@ -403,5 +403,5 @@
       }
     }
   },
-  "generatedAt": "2026-09-01T19:15:50.031Z"
+  "generatedAt": "2026-09-02T10:21:16.000Z"
 }

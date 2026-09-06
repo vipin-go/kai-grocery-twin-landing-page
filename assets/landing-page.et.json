@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "language": "et",
   "regionKey": null,
-  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -77,7 +77,7 @@
       ],
       "ctaLabel": "Tutvu KAI-ga"
     },
-    "badge": "Teie pood, retseptid ja kaloriplaan—ühendatud",
+    "badge": "Teie pood, retseptid ja kaloriplaan: ühendatud",
     "headline": "Muuda toidupoes käimine jälle lihtsaks",
     "headlineAccent": "jälle lihtsaks",
     "subheadline": "Skaneerige külmikut või kviitungit. KAI muudab selle, mis juba olemas on, retseptideks, loeb kaloreid ja ostab ainult selle, mida iga toidukord veel vajab.",
@@ -126,10 +126,10 @@
           }
         ],
         "secondaryCtaLabel": "Tutvu KAI-ga",
-        "primaryCtaLabel": "Alusta ostukorvi"
+        "primaryCtaLabel": "Tutvu KAI-ga"
       },
       "hero": {
-        "ratingLabel": "Teie pood, retseptid ja kaloriplaan—ühendatud",
+        "ratingLabel": "Teie pood, retseptid ja kaloriplaan: ühendatud",
         "heading": "Muuda toidupoes käimine jälle lihtsaks",
         "body": "Skaneerige külmikut või kviitungit. KAI muudab selle, mis juba olemas on, retseptideks, loeb kaloreid ja ostab ainult selle, mida iga toidukord veel vajab.",
         "primaryCtaLabel": "Räägi KAI-ga",
@@ -190,7 +190,7 @@
       },
       "product": {
         "kicker": "Teie toidupoe + retsepti + kalorite Kaksik",
-        "heading": "Mida me saame küpsetada—ja mida veel on vaja osta?",
+        "heading": "Mida me saame küpsetada: ja mida veel on vaja osta?",
         "body": "KAI ühendab skaneerimise, retseptid, tooteotsingu, kalorid ja ostukorvi, nii et iga toidukord algab sellega, mis sul juba on.",
         "capabilityLabels": [
           "Tooteotsing",
@@ -403,5 +403,5 @@
       }
     }
   },
-  "generatedAt": "2026-09-01T19:15:50.031Z"
+  "generatedAt": "2026-09-02T10:21:16.000Z"
 }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "language": "vi",
   "regionKey": null,
-  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -77,7 +77,7 @@
       ],
       "ctaLabel": "Gặp gỡ KAI"
     },
-    "badge": "Cửa hàng, công thức nấu ăn và kế hoạch calo của bạn—kết nối liền mạch",
+    "badge": "Cửa hàng, công thức nấu ăn và kế hoạch calo của bạn, kết nối liền mạch",
     "headline": "Mua sắm tạp hóa trở nên dễ dàng trở lại",
     "headlineAccent": "trở nên dễ dàng trở lại",
     "subheadline": "Quét tủ lạnh hoặc hóa đơn. KAI biến những gì đã có sẵn thành công thức nấu ăn, tính calo và chỉ mua những gì mỗi bữa ăn còn thiếu.",
@@ -126,10 +126,10 @@
           }
         ],
         "secondaryCtaLabel": "Gặp gỡ KAI",
-        "primaryCtaLabel": "Bắt đầu giỏ hàng"
+        "primaryCtaLabel": "Gặp gỡ KAI"
       },
       "hero": {
-        "ratingLabel": "Cửa hàng, công thức nấu ăn và kế hoạch calo của bạn—kết nối liền mạch",
+        "ratingLabel": "Cửa hàng, công thức nấu ăn và kế hoạch calo của bạn, kết nối liền mạch",
         "heading": "Mua sắm tạp hóa trở nên dễ dàng trở lại",
         "body": "Quét tủ lạnh hoặc hóa đơn. KAI biến những gì đã có sẵn thành công thức nấu ăn, tính calo và chỉ mua những gì mỗi bữa ăn còn thiếu.",
         "primaryCtaLabel": "Trò chuyện với KAI",
@@ -190,7 +190,7 @@
       },
       "product": {
         "kicker": "Cửa hàng Song sinh Công thức + Calo của bạn",
-        "heading": "Chúng ta có thể nấu gì—và cần mua thêm những gì?",
+        "heading": "Chúng ta có thể nấu gì: và cần mua thêm những gì?",
         "body": "KAI kết nối quét, công thức, tìm kiếm sản phẩm, calo và giỏ hàng để mỗi bữa ăn đều bắt đầu từ những gì bạn đã có.",
         "capabilityLabels": [
           "Tìm kiếm sản phẩm",
@@ -403,5 +403,5 @@
       }
     }
   },
-  "generatedAt": "2026-09-01T19:15:50.031Z"
+  "generatedAt": "2026-09-02T10:21:16.000Z"
 }

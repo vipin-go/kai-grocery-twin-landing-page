@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "language": "it",
   "regionKey": null,
-  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -77,7 +77,7 @@
       ],
       "ctaLabel": "Scopri KAI"
     },
-    "badge": "Il tuo negozio, le tue ricette e il tuo piano calorico — collegati",
+    "badge": "Il tuo negozio, le tue ricette e il tuo piano calorico, collegati",
     "headline": "Rendi la spesa facile di nuovo",
     "headlineAccent": "facile di nuovo",
     "subheadline": "Scansiona il frigorifero o uno scontrino. KAI trasforma ciò che hai già in ricette, conta le calorie e ordina solo ciò che manca per ogni pasto.",
@@ -126,10 +126,10 @@
           }
         ],
         "secondaryCtaLabel": "Scopri KAI",
-        "primaryCtaLabel": "Avvia un carrello"
+        "primaryCtaLabel": "Scopri KAI"
       },
       "hero": {
-        "ratingLabel": "Il tuo negozio, le tue ricette e il tuo piano calorico — collegati",
+        "ratingLabel": "Il tuo negozio, le tue ricette e il tuo piano calorico, collegati",
         "heading": "Rendi la spesa facile di nuovo",
         "body": "Scansiona il frigorifero o uno scontrino. KAI trasforma ciò che hai già in ricette, conta le calorie e ordina solo ciò che manca per ogni pasto.",
         "primaryCtaLabel": "Parla con KAI",
@@ -190,7 +190,7 @@
       },
       "product": {
         "kicker": "Il tuo Gemello Spesa + Ricette + Calorie",
-        "heading": "Cosa possiamo cucinare — e cosa manca da comprare?",
+        "heading": "Cosa possiamo cucinare: e cosa manca da comprare?",
         "body": "KAI collega scansione, ricette, ricerca prodotti, calorie e carrello così ogni pasto inizia da ciò che hai già.",
         "capabilityLabels": [
           "Ricerca prodotti",
@@ -403,5 +403,5 @@
       }
     }
   },
-  "generatedAt": "2026-09-01T19:15:50.031Z"
+  "generatedAt": "2026-09-02T10:21:16.000Z"
 }

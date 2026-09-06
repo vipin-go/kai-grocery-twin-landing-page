@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "language": "id",
   "regionKey": null,
-  "sourceRevision": "0e47ba354ea676d65e9f6a44ab26b56e8af5c3ba6257a32d81d2e298f74fd319",
+  "sourceRevision": "30a11d1546fd51ec58bbc923f5ebb552cec2409dedec22ed26f6cbae6b594749",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -77,7 +77,7 @@
       ],
       "ctaLabel": "Kenali KAI"
     },
-    "badge": "Toko, resep, dan rencana kalori Anda—terhubung",
+    "badge": "Toko, resep, dan rencana kalori Anda: terhubung",
     "headline": "Buat belanja groceries terasa mudah lagi",
     "headlineAccent": "terasa mudah lagi",
     "subheadline": "Pindai kulkas atau struk. KAI mengubah bahan yang sudah ada menjadi resep, menghitung kalorinya, dan hanya membeli bahan yang masih dibutuhkan setiap hidangan.",
@@ -126,10 +126,10 @@
           }
         ],
         "secondaryCtaLabel": "Kenali KAI",
-        "primaryCtaLabel": "Mulai keranjang"
+        "primaryCtaLabel": "Kenali KAI"
       },
       "hero": {
-        "ratingLabel": "Toko, resep, dan rencana kalori Anda—terhubung",
+        "ratingLabel": "Toko, resep, dan rencana kalori Anda: terhubung",
         "heading": "Buat belanja groceries terasa mudah lagi",
         "body": "Pindai kulkas atau struk. KAI mengubah bahan yang sudah ada menjadi resep, menghitung kalorinya, dan hanya membeli bahan yang masih dibutuhkan setiap hidangan.",
         "primaryCtaLabel": "Bicara dengan KAI",
@@ -190,7 +190,7 @@
       },
       "product": {
         "kicker": "Grocery + Resep + Kalori Twin Anda",
-        "heading": "Apa yang bisa kita masak—dan apa yang masih perlu dibeli?",
+        "heading": "Apa yang bisa kita masak: dan apa yang masih perlu dibeli?",
         "body": "KAI menghubungkan pindai, resep, pencarian produk, kalori, dan keranjang agar setiap hidangan dimulai dari bahan yang sudah Anda punya.",
         "capabilityLabels": [
           "Pencarian produk",
@@ -403,5 +403,5 @@
       }
     }
   },
-  "generatedAt": "2026-09-01T19:15:50.031Z"
+  "generatedAt": "2026-09-02T10:21:16.000Z"
 }
