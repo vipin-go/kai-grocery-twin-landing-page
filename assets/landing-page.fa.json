@@ -746,6 +746,19 @@
           "primaryTarget": "hero-chat",
           "privacyNote": "Your data stays private. Hours are capacity. Financial amounts are modeled estimates, not observed results."
         }
+      },
+      "retail": {
+        "media": {
+          "inventoryCount": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/inventory-count.webp",
+          "painStockSpreadsheet": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/pain-stock-spreadsheet.webp",
+          "painVendorLate": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/pain-vendor-late.webp",
+          "painMultiShop": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/pain-multi-shop.webp",
+          "vendorOrder": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/vendor-order.webp",
+          "vendorDelivery": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/vendor-delivery.webp",
+          "homeCook": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/home-cook.webp",
+          "mealPlanning": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/meal-planning.webp",
+          "consumerDelivery": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/consumer-delivery.webp"
+        }
       }
     },
     "roiCalculator": {
