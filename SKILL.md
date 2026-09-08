@@ -51,6 +51,14 @@ landing-page child owns the bounded workload defaults, outcome selection, and al
 translated labels and explanations. Start financial assumptions unset. Do not
 invent savings, prices, conversion rates, risk reductions, or customer outcomes.
 
+Keep this as a live, slider-driven calculator: input tabs and auto-updating results,
+not a form-submit/results replacement. Use direct numeric entry alongside sliders.
+Author localized `currencyCopy` notices from the seed. Country selects currency;
+language only changes copy/formatting. Dated FX conversion is platform-owned, not
+LLM translation or proof of local costs. Read the country-currency rules in
+`references/business-impact.md`, including unavailable-rate fallback and the
+requirement to deploy compatible platform support before publishing new fields.
+
 Use **ROI** for the short header link and **ROI Calculator** for the section
 heading (localized in translated pages). Keep the persona-specific supporting copy
 and methodology; the naming does not turn returned capacity into monetary savings.
@@ -473,3 +481,7 @@ the binding is absent or the target backend has not activated the package.
 Do not enable a binding merely because its JSON validates. Check backend handler
 and continuation support, configured locale catalogues, and the domain's live
 guest/login acceptance first. Never treat a local test as production deployment.
+
+## Business impact methodology v2
+
+For new calculators, read [references/business-impact.md](references/business-impact.md) before authoring. Use methodologyVersion: 2 with persona-specific tabs, Base/Medium packages, and typical usage already filled. Tokens per output drive operating cost. Monetary defaults are allowed. Never equate returned hours with payroll savings. The localized navigation label is ROI, using the unchanged roi-calculator target. This supersedes older ROI calculator guidance in this file. Do not migrate unrelated personas without authorization.

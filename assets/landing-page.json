@@ -405,9 +405,24 @@
         "enabled": true,
         "kicker": "Home impact",
         "heading": "ROI Calculator",
-        "subheading": "Estimate time back for your household. Add food-waste and cost assumptions only if you want a money estimate.",
+        "subheading": "A typical household month is already filled. Change the package if you plan more or less often.",
         "disclaimer": "Illustrative household estimates, not guaranteed savings. Your time is not priced as a salary. Food value counts only if it replaces spending you would otherwise make; check prices, portions and dietary needs yourself.",
         "currency": "EUR",
+        "currencyCopy": {
+          "native": "Amounts in {currency}.",
+          "loading": "Checking the local currency. Amounts remain in {currency} until a rate is available.",
+          "unavailable": "A current local exchange rate is unavailable. Amounts remain in {currency}.",
+          "converted": "Amounts converted from {base} to {currency} using the reference rate dated {date}.",
+          "basis": "Currency conversion is not local cost research. Enter your own local costs and contribution assumptions. Language changes do not change amounts."
+        },
+        "costCopy": {
+          "breakdown": "How the all-in AI cost is built",
+          "perUnit": "{amount} per work unit (average)",
+          "budgetOnly": "This is your total budget. Switch to Cost breakdown to itemize it; no split has been assumed.",
+          "benefitNotice": "Modeled benefits, not charges. Crossed-out amounts are spending you expect to avoid, not discounts on the AI bill.",
+          "remainder": "Other included operating costs",
+          "allocation": "Returned hours are capacity, not automatic savings. Only the portions you assign to actual spending reductions or additional contribution receive a monetary value."
+        },
         "locale": "en-GB",
         "inputs": [],
         "metrics": [],
@@ -416,17 +431,26 @@
             "volume": 4,
             "minutes": 45,
             "automation": 50,
-            "review": 5
+            "review": 5,
+            "tokens_per_output": 15000,
+            "model_cost": 0,
+            "tools_cost": 0,
+            "infrastructure_cost": 0,
+            "platform_cost": 39,
+            "higher_value_hours": 0,
+            "contribution_rate": 0,
+            "incidents": 8,
+            "incident_cost": 3.8
           },
           "copy": {
             "navLabel": "ROI",
             "workloadStep": "Your routine",
-            "costStep": "Your KAI budget",
-            "valueStep": "Less food waste",
+            "costStep": "Your KAI usage",
+            "valueStep": "Food you keep",
             "workloadIntro": "Count time spent checking food, choosing recipes and preparing your grocery list—not cooking, travel or time in the shop.",
-            "costIntro": "Use your own monthly budget for KAI and any extra services. Leave it blank to focus on time, or enter zero if no cost applies.",
-            "valueIntro": "Time back is yours to enjoy. Optionally estimate food you could use instead of wasting, without counting the same purchase twice.",
-            "sampleNotice": "Illustrative routine · adjust these numbers to your household",
+            "costIntro": "Typical KAI access and token usage for this household package. This is a modeled assumption, not a price quote.",
+            "valueIntro": "Time back is yours to enjoy. A small food-waste estimate is included so the money comparison is not empty.",
+            "sampleNotice": "Typical household usage · adjust these numbers to your kitchen",
             "monthly": "Monthly",
             "yearly": "Yearly",
             "next": "Continue",
@@ -441,6 +465,13 @@
             "days": "days",
             "percent": "%",
             "minutes": "minutes",
+            "tokens": "tokens",
+            "monthlyTokens": "Monthly tokens",
+            "tokenCost": "Token usage",
+            "packageLabel": "Usage package",
+            "packageBase": "Base",
+            "packageMedium": "Medium",
+            "packageCustom": "Custom",
             "reviewMode": "Who checks the suggestions?",
             "teamReview": "Me or my household",
             "paidReview": "Someone I pay extra",
@@ -448,7 +479,7 @@
             "totalMode": "Monthly budget",
             "itemizedMode": "Optional cost details",
             "budgetNote": "Include KAI access, extra services and any extra paid help once. Do not include your usual grocery bill or put a price on your own time.",
-            "itemizedNote": "Use zero for anything that does not apply. Extra paid checking is counted at the rate you enter; do not also include it in another cost line.",
+            "itemizedNote": "Token usage is calculated from your plans. Extra services stay at zero unless you pay for them separately.",
             "paidReviewCost": "Extra paid checking",
             "allInCost": "Your KAI running cost",
             "missing": "Add your assumptions",
@@ -502,13 +533,17 @@
               "label": "Minutes to check each plan",
               "help": "Allow time to verify ingredients, portions, allergies, current prices and the final shopping list."
             },
+            "tokens_per_output": {
+              "label": "Tokens to build one plan",
+              "help": "Modeled tokens to turn a fridge or receipt scan into a checked plan. Shown so you can see usage; you do not need a provider price."
+            },
             "budget": {
               "label": "Your monthly KAI budget",
               "help": "Your own estimate for access and extra services, not a price quote. Exclude the usual grocery bill."
             },
             "model_cost": {
               "label": "Extra AI usage",
-              "help": "Only usage charged separately from your subscription; otherwise enter zero."
+              "help": "Only usage charged separately from your plan; otherwise enter zero."
             },
             "tools_cost": {
               "label": "Extra connected services",
@@ -520,7 +555,7 @@
             },
             "platform_cost": {
               "label": "KAI / Gabriel access",
-              "help": "Your actual subscription or planned budget; do not assume a price from this calculator."
+              "help": "Typical household access for this package; not a quoted subscription price."
             },
             "review_rate": {
               "label": "Extra paid checking per hour",
@@ -604,7 +639,7 @@
             },
             "days_after": {
               "label": "Cycle time after, in days",
-              "help": "Shown as an operational change only, without an assumed euro value."
+              "help": "Shown as an operational change only, without an assumed monetary value."
             }
           },
           "burden": [
@@ -617,470 +652,443 @@
             "Meals built around food you already have",
             "A reviewed shopping list, with fewer duplicate purchases"
           ],
+          "usagePackages": {
+            "medium": {
+              "volume": 4,
+              "tokensPerOutput": 15000,
+              "platform_cost": 39,
+              "minutes": 45,
+              "automation": 50,
+              "review": 5,
+              "model_cost": 0,
+              "tools_cost": 0,
+              "infrastructure_cost": 0,
+              "higher_value_hours": 1.1,
+              "contribution_rate": 0,
+              "incidents": 8,
+              "incident_cost": 3.8
+            },
+            "base": {
+              "volume": 2,
+              "tokensPerOutput": 15000,
+              "platform_cost": 19,
+              "minutes": 45,
+              "automation": 50,
+              "review": 5,
+              "model_cost": 0,
+              "tools_cost": 0,
+              "infrastructure_cost": 0,
+              "higher_value_hours": 0.5,
+              "contribution_rate": 0,
+              "incidents": 4,
+              "incident_cost": 3.8
+            }
+          },
+          "defaultPackage": "medium",
+          "costMode": "itemized",
+          "reviewMode": "team",
+          "selected": [
+            "error"
+          ],
+          "confirmations": {
+            "overlap": true,
+            "hiring": true,
+            "outcomes": true,
+            "hide": true
+          },
+          "hero": {
+            "kind": "volume",
+            "label": "Checked plans / shopping lists"
+          },
           "outcomes": [
             {
               "id": "error",
               "label": "Use more of the food I buy",
               "help": "Optional: estimate fewer wasted portions. KAI does not guarantee lower grocery spending."
             }
+          ],
+          "tabs": [
+            {
+              "id": "routine",
+              "label": "Your routine",
+              "intro": "Count time spent checking food, choosing recipes and preparing your grocery list—not cooking, travel or time in the shop.",
+              "fields": [
+                "volume",
+                "minutes",
+                "automation",
+                "review"
+              ],
+              "showReview": true,
+              "showPackage": true
+            },
+            {
+              "id": "usage",
+              "label": "Your KAI usage",
+              "intro": "A typical household token envelope and KAI access fee. Tokens stay in the cost breakdown; you do not need provider prices.",
+              "fields": [
+                "tokens_per_output",
+                "platform_cost",
+                "model_cost"
+              ],
+              "showPackage": true
+            },
+            {
+              "id": "food",
+              "label": "Food you keep",
+              "intro": "Time back is yours to enjoy. A small food-waste estimate is prefilled so you can see a money comparison; set portions to zero to keep this as time only.",
+              "fields": [],
+              "showOutcomes": true
+            }
           ]
         },
         "cta": {
           "primaryLabel": "Try a grocery scan with KAI",
           "primaryTarget": "hero-chat",
-          "privacyNote": "Your estimates stay in this calculator. Nothing is ordered or saved from these inputs."
+          "privacyNote": "Your data stays private. Hours are capacity. Financial amounts are modeled estimates, not observed results."
         }
       }
     },
     "roiCalculator": {
+      "methodologyVersion": 2,
       "enabled": true,
-      "kicker": "AI economics",
+      "kicker": "Store impact",
       "heading": "ROI Calculator",
-      "subheading": "Counting, invoice re-keying, and stock chasing are operating burden. Returned hours are capacity for availability work, not an automatic payroll saving.",
-      "disclaimer": "Figures are modeled estimates from your assumptions. Returned hours are capacity, not an automatic payroll saving, and are not observed customer results.",
+      "subheading": "A typical retail month: six stores, vendor-ready orders and live inventory. This is not a household plan.",
+      "disclaimer": "A scenario built from typical store-ops usage, not observed shrink results. Floor hours are capacity, not an automatic payroll reduction.",
       "currency": "EUR",
+      "currencyCopy": {
+        "native": "Amounts in {currency}.",
+        "loading": "Checking the local currency. Amounts remain in {currency} until a rate is available.",
+        "unavailable": "A current local exchange rate is unavailable. Amounts remain in {currency}.",
+        "converted": "Amounts converted from {base} to {currency} using the reference rate dated {date}.",
+        "basis": "Currency conversion is not local cost research. Enter your own local costs and contribution assumptions. Language changes do not change amounts."
+      },
+      "costCopy": {
+        "breakdown": "How the all-in AI cost is built",
+        "perUnit": "{amount} per work unit (average)",
+        "budgetOnly": "This is your total budget. Switch to Cost breakdown to itemize it; no split has been assumed.",
+        "benefitNotice": "Modeled benefits, not charges. Crossed-out amounts are spending you expect to avoid, not discounts on the AI bill.",
+        "remainder": "Other included operating costs",
+        "allocation": "Returned hours are capacity, not automatic savings. Only the portions you assign to actual spending reductions or additional contribution receive a monetary value."
+      },
       "locale": "en-GB",
-      "periodToggle": true,
-      "defaultPeriod": "monthly",
-      "settingsHeading": "Usage & cost settings",
-      "resultsHeading": "Operational impact & economic value",
-      "profileHeading": "Firm profile",
-      "workloadHeading": "Workload",
-      "economicsHeading": "AI economics",
-      "economicsNote": "All-in operating cost is model tokens, tools, and the platform licence, not a salary comparison.",
-      "allocationHeading": "Where returned capacity goes",
-      "allocationHelp": "Hours removed are capacity. Only the shares you assign to cost reduction, extra volume, or higher-value work are given a euro value.",
-      "unusedAllocationLabel": "Held as unused capacity",
-      "operationsHeading": "What physically changes",
-      "valueHeading": "What that change is worth",
-      "frameworkHeading": "How the value is created",
-      "negativeProductivity": {
-        "heading": "Negative productivity removed",
-        "body": "Shelf counts, invoice re-keying, and gap chasing that do not improve availability by themselves.",
-        "items": [
-          "Manual stock counts",
-          "Invoice and order re-keying",
-          "Chasing missing lines"
+      "inputs": [],
+      "metrics": [],
+      "businessImpact": {
+        "defaults": {
+          "volume": 6,
+          "minutes": 1920,
+          "automation": 50,
+          "review": 30,
+          "tokens_per_output": 40000,
+          "model_cost": 0,
+          "tools_cost": 0,
+          "infrastructure_cost": 0,
+          "platform_cost": 1500,
+          "higher_value_hours": 93,
+          "contribution_rate": 35
+        },
+        "copy": {
+          "navLabel": "ROI",
+          "workloadStep": "Stores in scope",
+          "costStep": "Token usage",
+          "valueStep": "Floor time",
+          "workloadIntro": "Model live inventory and vendor-ready orders—not household meal planning and not a shrink guarantee.",
+          "costIntro": "Typical token consumption and the platform fee are prefilled for an average user. Edit them if your usage differs.",
+          "valueIntro": "This is the modeled output and capacity for that typical usage. Edit the assumptions if they do not match your work.",
+          "sampleNotice": "Typical usage · not observed results",
+          "monthly": "Monthly",
+          "yearly": "Yearly",
+          "next": "Continue",
+          "back": "Back",
+          "reset": "Reset assumptions",
+          "summary": "Your modeled impact",
+          "volume": "Stores modeled",
+          "grossHours": "Repetitive work reduced",
+          "capacity": "Floor hours returned",
+          "retained": "Capacity kept available",
+          "hours": "hours",
+          "days": "days",
+          "percent": "%",
+          "minutes": "minutes",
+          "tokens": "tokens",
+          "monthlyTokens": "Monthly tokens",
+          "tokenCost": "Token usage",
+          "packageLabel": "Usage package",
+          "packageBase": "Base",
+          "packageMedium": "Medium",
+          "packageCustom": "Custom",
+          "reviewMode": "Who handles the review?",
+          "teamReview": "Existing team",
+          "paidReview": "Additional paid reviewer",
+          "reviewNote": "Existing-team review uses returned capacity. Additional paid review is included in operating cost, not deducted again from team capacity.",
+          "totalMode": "Monthly budget",
+          "itemizedMode": "Cost breakdown",
+          "budgetNote": "The budget must include models/media, tools, infrastructure, Gabriel fees and additional paid review. Do not include unchanged payroll as new spending.",
+          "itemizedNote": "Token usage is calculated from volume × tokens per output. Extra media, tools and infrastructure stay at zero unless they apply. Additional paid review is calculated from review hours and its rate.",
+          "paidReviewCost": "Additional paid review cost",
+          "allInCost": "Operating cost",
+          "missing": "Add your assumptions",
+          "cashValue": "Cash spending avoided",
+          "contribution": "Expected contribution",
+          "expectedLoss": "Expected loss reduction",
+          "riskValue": "Uncertain risk value included",
+          "economicValue": "Modeled economic value",
+          "netBenefit": "Net modeled benefit",
+          "multiple": "Economic return multiple",
+          "notApplicable": "Not applicable",
+          "annual": "Annual view",
+          "annualNote": "The same monthly assumptions, without growth or compounding. Hiring savings last only for the entered period.",
+          "method": "How this is calculated",
+          "burdenHeading": "Repetitive work reduced",
+          "opportunityHeading": "Capacity for higher-value work",
+          "methodBody": "Operating burden removed (negative productivity) returns capacity. Higher-value work (potential positive productivity) creates economic value only if that capacity is used. Hours alone are not cash savings. Token cost uses a modeled input/output mix, not a provider quote.",
+          "formulaLabel": "Economic value ÷ operating cost = economic return multiple. Net benefit subtracts operating cost once.",
+          "allocationNote": "Each hour can be allocated once. Unallocated hours remain capacity, with no monetary value.",
+          "overlapLabel": "These benefits are distinct; I have excluded costs and losses already counted elsewhere.",
+          "overlapNote": "Error and risk estimates exclude labor savings and the same incident must not appear in both categories. Contribution excludes AI costs, which are deducted separately.",
+          "hiringLabel": "This hire was genuinely planned and the allocated capacity can cover the work.",
+          "reviewedLabel": "I have reviewed my outcomes; unselected outcomes have no financial value in this estimate.",
+          "cycleResult": "Cycle-time improvement",
+          "throughputResult": "Additional work supported by capacity and demand",
+          "assumptionsIncomplete": "Complete the selected assumptions to calculate financial value.",
+          "allocationError": "Allocated hours exceed the net capacity available. Reduce the allocations.",
+          "reviewError": "Review takes more time than the work reduced. No positive capacity is available at these assumptions.",
+          "cashError": "Avoided spending cannot exceed current spending or have positive value with no hours allocated.",
+          "hiringError": "Allocated capacity must cover the planned hire hours. Confirm the planned hire and its duration.",
+          "riskError": "The after probability cannot exceed the before probability for a loss-reduction estimate.",
+          "overlapError": "Confirm the benefits do not overlap before including them in the financial result.",
+          "boundsError": "Use values within the displayed limits.",
+          "rangeLabel": "Adjust value",
+          "noCurrencyChange": "Language changes formatting, not your currency or assumptions."
+        },
+        "fields": {
+          "volume": {
+            "label": "Stores in scope",
+            "help": "Count locations that would actually run this inventory loop, not every banner in the group."
+          },
+          "minutes": {
+            "label": "Floor minutes per store each month",
+            "help": "Hands-on inventory and ordering time per store in a typical month. 1920 minutes is eight hours a week."
+          },
+          "automation": {
+            "label": "Share of that loop KAI handles",
+            "help": "Illustrative share of inventory and order prep, not a shrink guarantee."
+          },
+          "review": {
+            "label": "Minutes to check each store order",
+            "help": "Human confirmation still required before a vendor-ready order goes out."
+          },
+          "tokens_per_output": {
+            "label": "Tokens per store-month",
+            "help": "Modeled tokens to keep one store’s inventory and orders current."
+          },
+          "budget": {
+            "label": "Estimated monthly operating budget",
+            "help": "Include token usage, models/media, tools, infrastructure, Gabriel fees and additional paid review."
+          },
+          "model_cost": {
+            "label": "Extra models and media",
+            "help": "Only image, video or other generation charged separately from token usage. Enter zero if none."
+          },
+          "tools_cost": {
+            "label": "Tools and integrations",
+            "help": "Browser sessions, connectors and other metered services. Enter zero if none."
+          },
+          "infrastructure_cost": {
+            "label": "Infrastructure",
+            "help": "Incremental hosting, storage and compute for this workload. Enter zero if none."
+          },
+          "platform_cost": {
+            "label": "Gabriel platform fee",
+            "help": "Typical monthly access for this usage package. This is a modeled assumption, not a price quote."
+          },
+          "review_rate": {
+            "label": "Additional paid review per hour",
+            "help": "Actual extra reviewer spending, not the salary of an unchanged employee."
+          },
+          "cash_hours": {
+            "label": "Hours that remove paid work",
+            "help": "Allocate only work whose overtime, contractor or processing spend will actually stop."
+          },
+          "cash_baseline": {
+            "label": "Current monthly spending on that work",
+            "help": "The cash budget from which the reduction will come."
+          },
+          "cash_avoided": {
+            "label": "Monthly spending you would stop",
+            "help": "One explicit amount, not hours multiplied by salary; exclude any planned-hire saving entered separately."
+          },
+          "higher_value_hours": {
+            "label": "Hours kept on the floor",
+            "help": "Time redirected from spreadsheets to exceptions."
+          },
+          "contribution_rate": {
+            "label": "Shadow price of store capacity / hr",
+            "help": "Your estimate of a floor hour, not a wage saved automatically."
+          },
+          "throughput_hours": {
+            "label": "Hours used for additional volume",
+            "help": "This allocation cannot also be used for advisory work or spending reductions."
+          },
+          "extra_minutes": {
+            "label": "Team minutes per additional unit",
+            "help": "The remaining human effort, including review, needed to deliver one more unit."
+          },
+          "demand": {
+            "label": "Additional units with expected demand",
+            "help": "Capacity alone is not demand. Enter the extra monthly work you expect to take on."
+          },
+          "unit_margin": {
+            "label": "Contribution per additional unit",
+            "help": "Incremental revenue less delivery costs; AI operating costs are deducted separately."
+          },
+          "hiring_hours": {
+            "label": "Hours covering the planned hire",
+            "help": "Allocate capacity to specific planned work, not a generic full-time-equivalent estimate."
+          },
+          "planned_hours": {
+            "label": "Monthly hours the planned hire would cover",
+            "help": "The allocated capacity must cover this entire workload."
+          },
+          "hire_cost": {
+            "label": "Monthly hire cost actually deferred",
+            "help": "Use the cost of a genuinely planned hire, not the salary of someone already employed."
+          },
+          "hire_months": {
+            "label": "Months that hire is deferred",
+            "help": "One to twelve months; the annual estimate stops counting savings after this period."
+          },
+          "incidents": {
+            "label": "Expected avoided errors per month",
+            "help": "Use your baseline and expected reduction. Exclude incidents also counted as risk reduction."
+          },
+          "incident_cost": {
+            "label": "Incremental cost per error",
+            "help": "Exclude labor, refunds or other losses already included elsewhere."
+          },
+          "probability_before": {
+            "label": "Monthly loss probability before",
+            "help": "Your estimate, not a guaranteed risk assessment."
+          },
+          "probability_after": {
+            "label": "Monthly loss probability after",
+            "help": "Use the same event and monthly time horizon as the baseline."
+          },
+          "loss": {
+            "label": "Loss exposure for that event",
+            "help": "Exclude error incidents and spending already counted. This is uncertain expected value, not cash saved."
+          },
+          "days_before": {
+            "label": "Cycle time before, in days",
+            "help": "Elapsed time from start to completion, separate from hands-on effort."
+          },
+          "days_after": {
+            "label": "Cycle time after, in days",
+            "help": "Shown as an operational change only, without an assumed monetary value."
+          }
+        },
+        "burden": [
+          "Checking live inventory across stores",
+          "Building vendor-ready orders by hand"
+        ],
+        "opportunity": [
+          "Floor time for exceptions",
+          "Vendor-ready orders without a night of spreadsheets"
+        ],
+        "usagePackages": {
+          "base": {
+            "volume": 3,
+            "tokensPerOutput": 40000,
+            "platform_cost": 990,
+            "minutes": 1920,
+            "automation": 50,
+            "review": 30,
+            "model_cost": 0,
+            "tools_cost": 0,
+            "infrastructure_cost": 0,
+            "higher_value_hours": 46.5,
+            "contribution_rate": 35
+          },
+          "medium": {
+            "volume": 6,
+            "tokensPerOutput": 40000,
+            "platform_cost": 1500,
+            "minutes": 1920,
+            "automation": 50,
+            "review": 30,
+            "model_cost": 0,
+            "tools_cost": 0,
+            "infrastructure_cost": 0,
+            "higher_value_hours": 93,
+            "contribution_rate": 35
+          }
+        },
+        "defaultPackage": "medium",
+        "costMode": "itemized",
+        "reviewMode": "team",
+        "selected": [
+          "higher_value"
+        ],
+        "confirmations": {
+          "overlap": true,
+          "hiring": true,
+          "outcomes": true,
+          "hide": true
+        },
+        "hero": {
+          "kind": "volume",
+          "label": "Stores with live inventory and vendor-ready orders"
+        },
+        "outcomes": [
+          {
+            "id": "higher_value",
+            "label": "Keep floor teams on exceptions",
+            "help": "Use returned hours on the cases that still need a person, not on rebuilding the order book."
+          }
+        ],
+        "tabs": [
+          {
+            "id": "stores",
+            "label": "Stores in scope",
+            "intro": "How many locations you run this inventory loop for, and the monthly floor time you still spend today.",
+            "fields": [
+              "volume",
+              "minutes",
+              "automation",
+              "review"
+            ],
+            "showPackage": true,
+            "showReview": true
+          },
+          {
+            "id": "tokens",
+            "label": "Token usage",
+            "intro": "Tokens per store-month to keep inventory and orders current, plus the operator Gabriel fee.",
+            "fields": [
+              "tokens_per_output",
+              "platform_cost",
+              "tools_cost",
+              "infrastructure_cost"
+            ],
+            "showPackage": true
+          },
+          {
+            "id": "floor",
+            "label": "Floor time",
+            "intro": "Hours returned to the floor at a store-capacity shadow price. This is not household grocery planning.",
+            "fields": [],
+            "showPackage": true,
+            "showOutcomes": true
+          }
         ]
-      },
-      "positiveProductivity": {
-        "heading": "Potential positive productivity",
-        "body": "Returned time can cover more locations, or stop paying overflow counters.",
-        "items": [
-          "More locations per operator",
-          "Faster vendor orders",
-          "Fewer emergency restocks"
-        ]
-      },
-      "producesHeading": "What KAI produces",
-      "produces": [
-        "Live inventory",
-        "Vendor-ready orders",
-        "Exception trail"
-      ],
-      "breakdownHeading": "Classified economic value",
-      "projectionHeading": "Projected 12-month economic value",
-      "yearOneCostLabel": "Year one AI cost",
-      "yearOneValueLabel": "Year one economic value",
-      "yearOneReturnLabel": "Year one economic return",
-      "scenarios": [
-        {
-          "id": "conservative",
-          "label": "Conservative",
-          "multiplier": 0.7
-        },
-        {
-          "id": "base",
-          "label": "Base",
-          "multiplier": 1
-        },
-        {
-          "id": "optimistic",
-          "label": "Optimistic",
-          "multiplier": 1.3
-        }
-      ],
-      "defaultScenarioId": "base",
-      "inputs": [
-        {
-          "id": "locations",
-          "label": "Locations in scope",
-          "type": "slider",
-          "min": 1,
-          "max": 80,
-          "step": 1,
-          "defaultValue": 6,
-          "format": "integer",
-          "group": "profile",
-          "profile": true,
-          "profileIcon": "check"
-        },
-        {
-          "id": "capacity_rate",
-          "label": "Shadow price of store-ops capacity / hr",
-          "type": "slider",
-          "min": 15,
-          "max": 120,
-          "step": 5,
-          "defaultValue": 35,
-          "format": "currency",
-          "group": "profile",
-          "profile": true
-        },
-        {
-          "id": "hours_per_location_per_week",
-          "label": "Inventory and ordering hours per location / week",
-          "type": "slider",
-          "min": 1,
-          "max": 40,
-          "step": 1,
-          "defaultValue": 8,
-          "format": "hours",
-          "group": "workload"
-        },
-        {
-          "id": "automation_share",
-          "label": "Share of this work automated",
-          "type": "slider",
-          "min": 10,
-          "max": 90,
-          "step": 5,
-          "defaultValue": 50,
-          "format": "percent",
-          "group": "workload"
-        },
-        {
-          "id": "tokens_per_unit",
-          "label": "Estimated tokens per automated hour",
-          "type": "slider",
-          "min": 10000,
-          "max": 250000,
-          "step": 5000,
-          "defaultValue": 40000,
-          "format": "tokens",
-          "group": "economics"
-        },
-        {
-          "id": "input_price",
-          "label": "Model input price / 1M tokens",
-          "type": "number",
-          "min": 0,
-          "max": 50,
-          "step": 0.25,
-          "defaultValue": 2,
-          "format": "currency",
-          "group": "economics"
-        },
-        {
-          "id": "output_price",
-          "label": "Model output price / 1M tokens",
-          "type": "number",
-          "min": 0,
-          "max": 80,
-          "step": 0.25,
-          "defaultValue": 10,
-          "format": "currency",
-          "group": "economics"
-        },
-        {
-          "id": "output_share",
-          "label": "Share of tokens that are output",
-          "type": "slider",
-          "min": 5,
-          "max": 50,
-          "step": 1,
-          "defaultValue": 20,
-          "format": "percent",
-          "group": "economics"
-        },
-        {
-          "id": "license",
-          "label": "Platform licence per month",
-          "type": "slider",
-          "min": 0,
-          "max": 6000,
-          "step": 50,
-          "defaultValue": 1500,
-          "format": "currency",
-          "group": "economics"
-        },
-        {
-          "id": "allocation_volume",
-          "label": "Share used to absorb more volume",
-          "help": "Throughput: extra work the same team can take. Valued as capacity creation, not cash leaving payroll.",
-          "type": "slider",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "defaultValue": 50,
-          "format": "percent",
-          "group": "allocation"
-        },
-        {
-          "id": "allocation_billable",
-          "label": "Share used for higher-value / billable work",
-          "help": "Positive productivity: advisory, selling, or other contribution-margin work.",
-          "type": "slider",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "defaultValue": 25,
-          "format": "percent",
-          "group": "allocation"
-        },
-        {
-          "id": "allocation_cost_reduction",
-          "label": "Share that is genuine cost reduction",
-          "help": "Negative productivity removed as cash: overtime, contractors, or work you would otherwise pay for.",
-          "type": "slider",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "defaultValue": 17,
-          "format": "percent",
-          "group": "allocation"
-        },
-        {
-          "id": "contribution_rate",
-          "label": "Contribution margin / hour of higher-value work",
-          "help": "Used only for the billable/advisory share. This is not an hourly salary.",
-          "type": "slider",
-          "min": 20,
-          "max": 400,
-          "step": 5,
-          "defaultValue": 150,
-          "format": "currency",
-          "group": "allocation"
-        },
-        {
-          "id": "expected_error_cost",
-          "label": "Expected monthly error / rework cost today",
-          "type": "slider",
-          "min": 0,
-          "max": 20000,
-          "step": 50,
-          "defaultValue": 800,
-          "format": "currency",
-          "group": "workload"
-        },
-        {
-          "id": "error_reduction_share",
-          "label": "Share of that error cost avoided",
-          "type": "slider",
-          "min": 0,
-          "max": 90,
-          "step": 5,
-          "defaultValue": 35,
-          "format": "percent",
-          "group": "workload"
-        }
-      ],
-      "metrics": [
-        {
-          "id": "hours_removed",
-          "label": "Repetitive work automated",
-          "formula": "locations * hours_per_location_per_week * weeks_per_month * (automation_share / 100)",
-          "format": "hours",
-          "kind": "card",
-          "layer": "operations",
-          "productivity": "negative",
-          "scalesWithPeriod": true,
-          "scalesWithScenario": false,
-          "note": "Negative productivity: operating burden removed."
-        },
-        {
-          "id": "hours_returned",
-          "label": "Capacity returned to the team",
-          "formula": "hours_removed",
-          "format": "hours",
-          "kind": "card",
-          "layer": "operations",
-          "productivity": "positive",
-          "scalesWithPeriod": true,
-          "scalesWithScenario": false,
-          "note": "Positive productivity: hours now available for better work."
-        },
-        {
-          "id": "work_units",
-          "label": "Locations modeled",
-          "formula": "locations",
-          "format": "integer",
-          "kind": "card",
-          "layer": "operations",
-          "scalesWithPeriod": true,
-          "scalesWithScenario": false
-        },
-        {
-          "id": "unused_share",
-          "label": "Unused capacity share",
-          "formula": "100 - allocation_volume - allocation_billable - allocation_cost_reduction",
-          "format": "percent",
-          "kind": "hidden",
-          "layer": "operations",
-          "scalesWithPeriod": false,
-          "scalesWithScenario": false
-        },
-        {
-          "id": "volume_hours",
-          "label": "Hours allocated to more volume",
-          "formula": "hours_returned * (allocation_volume / 100)",
-          "format": "hours",
-          "kind": "hidden",
-          "layer": "operations",
-          "scalesWithPeriod": true,
-          "scalesWithScenario": false
-        },
-        {
-          "id": "billable_hours",
-          "label": "Hours allocated to higher-value work",
-          "formula": "hours_returned * (allocation_billable / 100)",
-          "format": "hours",
-          "kind": "hidden",
-          "layer": "operations",
-          "scalesWithPeriod": true,
-          "scalesWithScenario": false
-        },
-        {
-          "id": "cost_hours",
-          "label": "Hours that become genuine cost reduction",
-          "formula": "hours_returned * (allocation_cost_reduction / 100)",
-          "format": "hours",
-          "kind": "hidden",
-          "layer": "operations",
-          "scalesWithPeriod": true,
-          "scalesWithScenario": false
-        },
-        {
-          "id": "unused_hours",
-          "label": "Hours held as unused capacity",
-          "formula": "hours_returned * (unused_share / 100)",
-          "format": "hours",
-          "kind": "hidden",
-          "layer": "operations",
-          "scalesWithPeriod": true,
-          "scalesWithScenario": false
-        },
-        {
-          "id": "monthly_tokens",
-          "label": "Tokens per month",
-          "formula": "hours_removed * tokens_per_unit",
-          "format": "tokens",
-          "kind": "hidden",
-          "layer": "economics",
-          "scalesWithPeriod": true,
-          "scalesWithScenario": false
-        },
-        {
-          "id": "model_cost",
-          "label": "AI model cost (est.)",
-          "formula": "(monthly_tokens * (1 - output_share / 100) / 1000000) * input_price + (monthly_tokens * (output_share / 100) / 1000000) * output_price",
-          "format": "currency",
-          "kind": "breakdown-cost",
-          "layer": "economics",
-          "scalesWithPeriod": true,
-          "scalesWithScenario": false
-        },
-        {
-          "id": "all_in_cost",
-          "label": "All-in AI cost",
-          "formula": "model_cost + license",
-          "format": "currency",
-          "kind": "summary-cost",
-          "layer": "economics",
-          "scalesWithPeriod": true,
-          "scalesWithScenario": false
-        },
-        {
-          "id": "cost_elimination",
-          "label": "Genuine cost eliminated",
-          "formula": "cost_hours * capacity_rate",
-          "format": "currency",
-          "kind": "breakdown-benefit",
-          "layer": "value",
-          "valueClass": "cost-elimination",
-          "scalesWithPeriod": true,
-          "scalesWithScenario": false,
-          "note": "Overtime, contractors, or other spend you would actually stop."
-        },
-        {
-          "id": "revenue_productivity",
-          "label": "Contribution from higher-value work",
-          "formula": "billable_hours * contribution_rate",
-          "format": "currency",
-          "kind": "breakdown-benefit",
-          "layer": "value",
-          "valueClass": "revenue-productivity",
-          "scalesWithPeriod": true,
-          "scalesWithScenario": true,
-          "note": "Valued at contribution margin, not salary."
-        },
-        {
-          "id": "throughput_value",
-          "label": "Capacity to take more volume",
-          "formula": "volume_hours * capacity_rate",
-          "format": "currency",
-          "kind": "breakdown-benefit",
-          "layer": "value",
-          "valueClass": "throughput",
-          "scalesWithPeriod": true,
-          "scalesWithScenario": true,
-          "note": "Shadow price of extra throughput, not a payroll saving."
-        },
-        {
-          "id": "error_value",
-          "label": "Expected error and rework avoided",
-          "formula": "expected_error_cost * (error_reduction_share / 100)",
-          "format": "currency",
-          "kind": "breakdown-benefit",
-          "layer": "value",
-          "valueClass": "error-avoidance",
-          "scalesWithPeriod": true,
-          "scalesWithScenario": false
-        },
-        {
-          "id": "economic_value",
-          "label": "Modeled economic value",
-          "formula": "cost_elimination + revenue_productivity + throughput_value + error_value",
-          "format": "currency",
-          "kind": "summary-benefit",
-          "layer": "value",
-          "scalesWithPeriod": true,
-          "scalesWithScenario": false
-        },
-        {
-          "id": "net_value",
-          "label": "Economic value after AI cost",
-          "formula": "economic_value - all_in_cost",
-          "format": "currency",
-          "kind": "card",
-          "layer": "value",
-          "scalesWithPeriod": true,
-          "scalesWithScenario": false
-        },
-        {
-          "id": "return_multiple",
-          "label": "Economic return on all-in AI cost",
-          "formula": "economic_value / all_in_cost",
-          "format": "multiplier",
-          "kind": "summary-roi",
-          "layer": "value",
-          "scalesWithPeriod": false,
-          "scalesWithScenario": false
-        }
-      ],
-      "projection": {
-        "months": 12,
-        "costMetricId": "all_in_cost",
-        "benefitMetricId": "net_value",
-        "yearOneLabel": "Year one economic value after AI cost",
-        "costLabel": "AI cost (all-in)",
-        "benefitLabel": "Economic value after cost"
       },
       "cta": {
         "primaryLabel": "Talk with KAI",
-        "secondaryLabel": "See how it works",
         "primaryTarget": "contact",
-        "privacyNote": "Your data stays private. Hours are capacity. Euros are classified modeled value, not observed results."
+        "secondaryLabel": "See how it works",
+        "secondaryTarget": "how-it-works",
+        "privacyNote": "Your data stays private. Hours are capacity. Financial amounts are modeled estimates, not observed results."
       }
     },
     "localization": {
@@ -1093,7 +1101,7 @@
           {
             "language": "es",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.es.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1101,7 +1109,7 @@
           {
             "language": "de",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.de.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1109,7 +1117,7 @@
           {
             "language": "ja",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.ja.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1117,7 +1125,7 @@
           {
             "language": "fr",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.fr.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1125,7 +1133,7 @@
           {
             "language": "pt",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.pt.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1133,7 +1141,7 @@
           {
             "language": "ru",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.ru.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1141,7 +1149,7 @@
           {
             "language": "it",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.it.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1149,7 +1157,7 @@
           {
             "language": "nl",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.nl.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1157,7 +1165,7 @@
           {
             "language": "pl",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.pl.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1165,7 +1173,7 @@
           {
             "language": "tr",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.tr.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1173,7 +1181,7 @@
           {
             "language": "zh",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.zh.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1181,7 +1189,7 @@
           {
             "language": "fa",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.fa.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1189,7 +1197,7 @@
           {
             "language": "vi",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.vi.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1197,7 +1205,7 @@
           {
             "language": "cs",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.cs.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1205,7 +1213,7 @@
           {
             "language": "id",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.id.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1213,7 +1221,7 @@
           {
             "language": "ko",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.ko.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1221,7 +1229,7 @@
           {
             "language": "uk",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.uk.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1229,7 +1237,7 @@
           {
             "language": "hu",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.hu.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1237,7 +1245,7 @@
           {
             "language": "ar",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.ar.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1245,7 +1253,7 @@
           {
             "language": "sv",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.sv.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1253,7 +1261,7 @@
           {
             "language": "ro",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.ro.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1261,7 +1269,7 @@
           {
             "language": "el",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.el.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1269,7 +1277,7 @@
           {
             "language": "da",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.da.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1277,7 +1285,7 @@
           {
             "language": "fi",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.fi.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1285,7 +1293,7 @@
           {
             "language": "he",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.he.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1293,7 +1301,7 @@
           {
             "language": "sk",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.sk.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1301,7 +1309,7 @@
           {
             "language": "th",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.th.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1309,7 +1317,7 @@
           {
             "language": "bg",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.bg.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1317,7 +1325,7 @@
           {
             "language": "hr",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.hr.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1325,7 +1333,7 @@
           {
             "language": "nb",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.nb.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1333,7 +1341,7 @@
           {
             "language": "lt",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.lt.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1341,7 +1349,7 @@
           {
             "language": "sr",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.sr.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1349,7 +1357,7 @@
           {
             "language": "sl",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.sl.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1357,7 +1365,7 @@
           {
             "language": "ca",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.ca.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1365,7 +1373,7 @@
           {
             "language": "et",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.et.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1373,7 +1381,7 @@
           {
             "language": "no",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.no.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1381,7 +1389,7 @@
           {
             "language": "lv",
             "regionKey": null,
-            "sourceRevision": "66069b18fa0587bac29a31e807e7ca99f29d9cdcc2712749a802cd3c22de1874",
+            "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
             "assetPath": "assets/landing-page.lv.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"

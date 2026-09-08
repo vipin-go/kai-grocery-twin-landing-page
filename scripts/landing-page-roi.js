@@ -1,6 +1,6 @@
 const ROI_CALCULATOR_NAV_TARGET = 'roi-calculator';
-const { validateBusinessImpact } = require('./business-impact.cjs');
-const ROI_CALCULATOR_NAV_LABEL = 'ROI Calculator';
+const { validateBusinessImpact, validateRoiCurrencyCopy, validateRoiCostCopy } = require('./business-impact.cjs');
+const ROI_CALCULATOR_NAV_LABEL = 'ROI';
 const ROI_CALCULATOR_SECTION_ID = 'persona-landing-roi-calculator';
 const ROI_IDENTIFIER_PATTERN = /^[a-z][a-z0-9_]{0,47}$/;
 const ROI_CURRENCY_PATTERN = /^[A-Z]{3}$/;
@@ -166,7 +166,8 @@ function validateRoiCalculator({ roiCalculator, pathPrefix = 'landingPage.roiCal
   if (roiCalculator === undefined) return [];
   if (isRecord(roiCalculator) && roiCalculator.methodologyVersion !== undefined) return validateBusinessImpact(roiCalculator, pathPrefix);
   if (!isRecord(roiCalculator)) return [{ path: pathPrefix, message: 'ROI calculator must be an object.' }];
-  const issues = [];
+  const issues = validateRoiCurrencyCopy(roiCalculator.currencyCopy, `${pathPrefix}.currencyCopy`);
+  issues.push(...validateRoiCostCopy(roiCalculator.costCopy, `${pathPrefix}.costCopy`));
   ['heading', 'disclaimer', 'currency'].forEach((key) => {
     if (typeof roiCalculator[key] !== 'string' || !roiCalculator[key].trim()) {
       issues.push({ path: `${pathPrefix}.${key}`, message: 'This ROI field is required.' });
