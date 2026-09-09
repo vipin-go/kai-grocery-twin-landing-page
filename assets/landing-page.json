@@ -405,7 +405,7 @@
         "enabled": true,
         "kicker": "Home impact",
         "heading": "Time & Friction Estimator",
-        "subheading": "Estimate planning time and household decisions removed from a typical month. The starting values are modelled hypotheses, not observed results.",
+        "subheading": "Estimate your planning time and KAI price from how often you use it. Adjust the starting values to match your household.",
         "disclaimer": "Modelled household estimates, not guaranteed savings. Personal time is not treated as salary. Food value counts only if it replaces spending you would otherwise make; check prices, portions and dietary needs yourself.",
         "currency": "EUR",
         "currencyCopy": {
@@ -416,8 +416,8 @@
           "basis": "Currency conversion is not local cost research. Enter your own local costs and contribution assumptions. Language changes do not change amounts."
         },
         "costCopy": {
-          "breakdown": "How the all-in AI cost is built",
-          "perUnit": "{amount} per work unit (average)",
+          "breakdown": "Pricing details",
+          "perUnit": "{amount} per planning session (average)",
           "budgetOnly": "This is your total budget. Switch to Cost breakdown to itemize it; no split has been assumed.",
           "benefitNotice": "Modeled benefits, not charges. Crossed-out amounts are spending you expect to avoid, not discounts on the AI bill.",
           "remainder": "Other included operating costs",
@@ -450,7 +450,7 @@
             "costStep": "Your KAI usage",
             "valueStep": "Optional money comparison",
             "workloadIntro": "Count time spent checking food, choosing recipes and preparing your grocery list—not cooking, travel or time in the shop.",
-            "costIntro": "Tokens and delivery cost describe what it costs KAI to provide the service. Customer price and household value are separate hypotheses.",
+            "costIntro": "Your estimated KAI price follows your planning sessions, with a base price for light usage and an increase for additional usage.",
             "valueIntro": "Time back is yours to enjoy. Add an explicit food-waste or personal-value assumption if you want a money comparison.",
             "sampleNotice": "Typical household usage · adjust these numbers to your kitchen",
             "monthly": "Monthly",
@@ -477,20 +477,20 @@
             "reviewMode": "Who checks the suggestions?",
             "teamReview": "Me or my household",
             "paidReview": "Someone I pay extra",
-            "reviewNote": "Checking portions, allergies, ingredients and the cart takes time. Household review is subtracted from time back. Extra paid help belongs in your KAI budget instead.",
+            "reviewNote": "Checking portions, allergies, ingredients and the cart takes time. Household review is subtracted from time back. Help you pay for separately is an extra expense in the optional money comparison; it is not part of the KAI price.",
             "totalMode": "Monthly budget",
             "itemizedMode": "Optional cost details",
             "budgetNote": "Include KAI access, extra services and any extra paid help once. Do not include your usual grocery bill or put a price on your own time.",
             "itemizedNote": "Token usage is calculated from your plans. Extra services stay at zero unless you pay for them separately.",
             "paidReviewCost": "Extra paid checking",
-            "allInCost": "Estimated KAI delivery cost",
+            "allInCost": "Pricing",
             "missing": "Add your assumptions",
             "cashValue": "Cash spending avoided",
             "contribution": "Expected contribution",
             "expectedLoss": "Estimated food value retained",
             "riskValue": "Uncertain risk value included",
             "economicValue": "Modeled optional value",
-            "netBenefit": "Modeled value minus KAI cost",
+            "netBenefit": "Estimated value minus your costs",
             "multiple": "Food value / KAI cost",
             "customerBenefit": "Modelled customer benefit",
             "customerRoi": "Customer ROI",
@@ -502,7 +502,7 @@
             "burdenHeading": "Less grocery admin",
             "opportunityHeading": "More room for everyday life",
             "methodBody": "Hours back equals planning sessions × minutes per session × the share KAI could reduce, minus your checking time. Personal time stays separate from money unless you explicitly enter a comparison value. Optional food value equals portions you expect to stop wasting × their ingredient cost, only where using that food replaces a future purchase.",
-            "formulaLabel": "Food value minus KAI running cost = modeled net benefit. Food value divided by KAI running cost = the multiple; zero cost has no defined multiple.",
+            "formulaLabel": "Estimated net benefit subtracts your KAI price and any separately paid checking from the optional value you enter. Unpriced personal time is shown in hours only.",
             "allocationNote": "All returned time remains personal time. It is never converted into wages, business revenue or cash savings.",
             "overlapLabel": "These portions would otherwise be wasted, replace a future purchase, and are not also counted as a discount or another saving.",
             "overlapNote": "Count only edible food you would safely use. Ingredient cost excludes your time and KAI fees. Do not count the same food as both a duplicate purchase avoided and waste prevented.",
@@ -510,7 +510,7 @@
             "reviewedLabel": "I have reviewed my assumptions. If I leave food waste unselected, only my time estimate counts as a benefit.",
             "cycleResult": "Cycle-time improvement",
             "throughputResult": "Additional work supported by capacity and demand",
-            "assumptionsIncomplete": "You can keep this as a time estimate. Add a KAI budget and review optional food-waste assumptions to see the money comparison.",
+            "assumptionsIncomplete": "You can keep this as a time estimate. Add and review optional value assumptions to compare them with your KAI price.",
             "allocationError": "Allocated hours exceed the net capacity available. Reduce the allocations.",
             "reviewError": "Checking takes longer than the planning time reduced. These assumptions do not return positive time.",
             "cashError": "Avoided spending cannot exceed current spending or have positive value with no hours allocated.",
@@ -525,6 +525,10 @@
             "volume": {
               "label": "Grocery-planning sessions each month",
               "help": "For example, four weekly plans. Count your whole household once, not once per person."
+            },
+            "accepted_rate": {
+              "label": "Expected acceptance rate",
+              "help": "Optional modeled share of prepared outputs accepted by the recipient. This is not a guarantee or observed result."
             },
             "minutes": {
               "label": "Planning minutes per session today",
@@ -551,8 +555,8 @@
               "help": "Your own estimate for access and extra services, not a price quote. Exclude the usual grocery bill."
             },
             "model_cost": {
-              "label": "Extra AI usage",
-              "help": "Only usage charged separately from your plan; otherwise enter zero."
+              "label": "Additional usage",
+              "help": "The amount above the base price needed to cover your estimated usage."
             },
             "tools_cost": {
               "label": "Extra connected services",
@@ -563,12 +567,12 @@
               "help": "Enter zero unless you pay for this separately."
             },
             "platform_cost": {
-              "label": "Other delivery and support cost",
-              "help": "Modeled hosting, storage, monitoring and support cost. It is not the household price."
+              "label": "Modelled service cost",
+              "help": "Internal token, model, hosting, storage and support cost used to estimate the displayed KAI price."
             },
             "customer_price": {
-              "label": "KAI household price hypothesis",
-              "help": "The proposed customer price, separate from estimated delivery cost. Change it to test a different offer."
+              "label": "Base price",
+              "help": "The minimum price for the selected period. Your estimated total increases when usage exceeds the included allowance."
             },
             "personal_value_per_hour": {
               "label": "Optional value you assign to one hour",
@@ -669,41 +673,6 @@
             "Meals built around food you already have",
             "A reviewed shopping list, with fewer duplicate purchases"
           ],
-          "usagePackages": {
-            "medium": {
-              "volume": 4,
-              "tokensPerOutput": 15000,
-              "platform_cost": 0.75,
-              "minutes": 45,
-              "automation": 50,
-              "review": 5,
-              "model_cost": 0,
-              "tools_cost": 0,
-              "infrastructure_cost": 0,
-              "higher_value_hours": 1.1,
-              "contribution_rate": 0,
-              "incidents": 8,
-              "incident_cost": 3.8,
-              "customer_price": 6.99
-            },
-            "base": {
-              "volume": 2,
-              "tokensPerOutput": 15000,
-              "platform_cost": 0.5,
-              "minutes": 45,
-              "automation": 50,
-              "review": 5,
-              "model_cost": 0,
-              "tools_cost": 0,
-              "infrastructure_cost": 0,
-              "higher_value_hours": 0.5,
-              "contribution_rate": 0,
-              "incidents": 4,
-              "incident_cost": 3.8,
-              "customer_price": 6.99
-            }
-          },
-          "defaultPackage": "medium",
           "costMode": "itemized",
           "reviewMode": "team",
           "selected": [],
@@ -725,14 +694,16 @@
             }
           ],
           "pricing": {
-            "basis": "fixed",
+            "basis": "usage",
             "annualPrice": 59,
-            "label": "KAI price hypothesis",
-            "help": "€6.99 per household per month or €59 per year. This is an editable hypothesis until paid household evidence exists."
+            "minimumMargin": 0,
+            "label": "Pricing",
+            "help": "Light usage stays at the base price. When the modelled service cost exceeds that base, the estimated price increases with usage. Switch Monthly or Yearly to see one total for that period."
           },
           "presentation": {
             "financial": "optional",
-            "showCustomerEconomics": true
+            "showCustomerEconomics": true,
+            "hideEconomicMultiple": true
           },
           "tabs": [
             {
@@ -745,25 +716,12 @@
                 "automation",
                 "review"
               ],
-              "showReview": true,
-              "showPackage": true
-            },
-            {
-              "id": "usage",
-              "label": "Your KAI usage",
-              "intro": "Review the modelled token envelope, delivery cost and customer price separately. Provider rates are not a claim about your household value.",
-              "fields": [
-                "tokens_per_output",
-                "customer_price",
-                "platform_cost",
-                "model_cost"
-              ],
-              "showPackage": true
+              "showReview": true
             },
             {
               "id": "food",
               "label": "Optional money comparison",
-              "intro": "Time back is yours to enjoy. Add food-waste value or an optional personal hourly value only when it replaces spending or helps you compare the hypothesis.",
+              "intro": "Time back is yours to enjoy. Add food-waste value or a personal hourly value if you want to compare it with your KAI price.",
               "fields": [
                 "personal_value_per_hour"
               ],
@@ -914,6 +872,10 @@
           "volume": {
             "label": "Stores in scope",
             "help": "Count locations that would actually run this inventory loop, not every banner in the group."
+          },
+          "accepted_rate": {
+            "label": "Expected acceptance rate",
+            "help": "Optional modeled share of prepared outputs accepted by the recipient. This is not a guarantee or observed result."
           },
           "minutes": {
             "label": "Preparation minutes per store per cycle",
@@ -1179,7 +1141,7 @@
           {
             "language": "es",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.es.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1187,7 +1149,7 @@
           {
             "language": "de",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.de.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1195,7 +1157,7 @@
           {
             "language": "ja",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.ja.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1203,7 +1165,7 @@
           {
             "language": "fr",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.fr.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1211,7 +1173,7 @@
           {
             "language": "pt",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.pt.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1219,7 +1181,7 @@
           {
             "language": "ru",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.ru.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1227,7 +1189,7 @@
           {
             "language": "it",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.it.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1235,7 +1197,7 @@
           {
             "language": "nl",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.nl.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1243,7 +1205,7 @@
           {
             "language": "pl",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.pl.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1251,7 +1213,7 @@
           {
             "language": "tr",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.tr.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1259,7 +1221,7 @@
           {
             "language": "zh",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.zh.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1267,7 +1229,7 @@
           {
             "language": "fa",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.fa.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1275,7 +1237,7 @@
           {
             "language": "vi",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.vi.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1283,7 +1245,7 @@
           {
             "language": "cs",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.cs.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1291,7 +1253,7 @@
           {
             "language": "id",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.id.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1299,7 +1261,7 @@
           {
             "language": "ko",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.ko.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1307,7 +1269,7 @@
           {
             "language": "uk",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.uk.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1315,7 +1277,7 @@
           {
             "language": "hu",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.hu.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1323,7 +1285,7 @@
           {
             "language": "ar",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.ar.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1331,7 +1293,7 @@
           {
             "language": "sv",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.sv.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1339,7 +1301,7 @@
           {
             "language": "ro",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.ro.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1347,7 +1309,7 @@
           {
             "language": "el",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.el.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1355,7 +1317,7 @@
           {
             "language": "da",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.da.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1363,7 +1325,7 @@
           {
             "language": "fi",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.fi.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1371,7 +1333,7 @@
           {
             "language": "he",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.he.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1379,7 +1341,7 @@
           {
             "language": "sk",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.sk.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1387,7 +1349,7 @@
           {
             "language": "th",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.th.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1395,7 +1357,7 @@
           {
             "language": "bg",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.bg.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1403,7 +1365,7 @@
           {
             "language": "hr",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.hr.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1411,7 +1373,7 @@
           {
             "language": "nb",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.nb.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1419,7 +1381,7 @@
           {
             "language": "lt",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.lt.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1427,7 +1389,7 @@
           {
             "language": "sr",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.sr.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1435,7 +1397,7 @@
           {
             "language": "sl",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.sl.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1443,7 +1405,7 @@
           {
             "language": "ca",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.ca.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1451,7 +1413,7 @@
           {
             "language": "et",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.et.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1459,7 +1421,7 @@
           {
             "language": "no",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.no.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"
@@ -1467,7 +1429,7 @@
           {
             "language": "lv",
             "regionKey": null,
-            "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+            "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
             "assetPath": "assets/landing-page.lv.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-09-06T16:36:03.163Z"

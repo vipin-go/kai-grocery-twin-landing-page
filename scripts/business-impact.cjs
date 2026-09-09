@@ -47,6 +47,7 @@ module.exports = __toCommonJS(business_impact_exports);
 var IMPACT_OUTCOMES = ["cash", "higher_value", "throughput", "hiring", "error", "risk", "cycle_time"];
 var IMPACT_FIELDS = {
   volume: [0, 1e6, 1],
+  accepted_rate: [0, 100, 1],
   minutes: [0, 1e4, 1],
   automation: [0, 100, 1],
   review: [0, 1e4, 1],
@@ -271,6 +272,8 @@ function initialImpactState(config) {
     usagePackage: packageId === "custom" ? "custom" : packageId,
     workloadMultiplierField: config.workloadMultiplierField,
     pricingBasis: config.pricing?.basis,
+    annualBasePrice: config.pricing?.annualPrice,
+    minimumMargin: config.pricing?.minimumMargin,
     financialPresentation: config.presentation?.financial
   };
 }
@@ -282,12 +285,15 @@ function evaluateBusinessImpact(state) {
   const errors = [];
   const usesTokens = has("tokens_per_output");
   const used = /* @__PURE__ */ new Set(["volume", "minutes", "automation", "review"]);
+  if (v.accepted_rate != null) used.add("accepted_rate");
   if (state.workloadMultiplierField) used.add(state.workloadMultiplierField);
   if (state.pricingBasis && v.customer_price != null) used.add("customer_price");
   if (v.personal_value_per_hour != null) used.add("personal_value_per_hour");
   selected.forEach((id) => IMPACT_OUTCOME_FIELDS[id]?.forEach((k) => used.add(k)));
   const workloadMultiplier = state.workloadMultiplierField ? n(state.workloadMultiplierField) : 1;
-  const workUnits = n("volume") * workloadMultiplier;
+  const generatedUnits = n("volume") * workloadMultiplier;
+  const acceptanceRate = has("accepted_rate") ? n("accepted_rate") : 100;
+  const workUnits = generatedUnits * acceptanceRate / 100;
   const grossHours = workUnits * n("minutes") / 60 * n("automation") / 100;
   const reviewHours = workUnits * n("review") / 60;
   const capacity = Math.max(0, grossHours - (state.reviewMode === "team" ? reviewHours : 0));
@@ -297,11 +303,11 @@ function evaluateBusinessImpact(state) {
   const costFields = state.costMode === "total" ? ["budget"] : usesTokens ? ["tokens_per_output", "model_cost", "tools_cost", "infrastructure_cost", "platform_cost", ...state.reviewMode === "paid" ? ["review_rate"] : []] : ["model_cost", "tools_cost", "infrastructure_cost", "platform_cost", ...state.reviewMode === "paid" ? ["review_rate"] : []];
   costFields.forEach((k) => used.add(k));
   if ([...used].some((k) => v[k] != null && !has(k))) errors.push("boundsError");
-  const workloadReady = has("volume", "minutes", "automation", "review") && (!state.workloadMultiplierField || has(state.workloadMultiplierField));
+  const workloadReady = has("volume", "minutes", "automation", "review") && (v.accepted_rate == null || has("accepted_rate")) && (!state.workloadMultiplierField || has(state.workloadMultiplierField));
   const costReady = has(...costFields) && (state.costMode !== "itemized" || state.reviewMode !== "paid" || has("volume", "review"));
   const reviewCost = state.reviewMode === "paid" ? reviewHours * n("review_rate") : 0;
-  const monthlyTokens = usesTokens ? workUnits * n("tokens_per_output") : 0;
-  const tokenCost = usesTokens ? tokenCostFromUsage({ volume: workUnits, tokensPerOutput: n("tokens_per_output") }) : 0;
+  const monthlyTokens = usesTokens ? generatedUnits * n("tokens_per_output") : 0;
+  const tokenCost = usesTokens ? tokenCostFromUsage({ volume: generatedUnits, tokensPerOutput: n("tokens_per_output") }) : 0;
   const cost = state.costMode === "total" ? n("budget") : tokenCost + n("model_cost") + n("tools_cost") + n("infrastructure_cost") + n("platform_cost") + reviewCost;
   const cash = selected.includes("cash") ? n("cash_avoided") : 0;
   if (selected.includes("cash") && (cash > n("cash_baseline") || cash > 0 && n("cash_hours") === 0)) errors.push("cashError");
@@ -318,15 +324,32 @@ function evaluateBusinessImpact(state) {
   const economicValue = cash + hire + contribution + errorValue + riskValue;
   const personalTimeValue = has("personal_value_per_hour") ? capacity * n("personal_value_per_hour") : 0;
   const customerBenefit = economicValue + personalTimeValue;
-  const customerPrice = has("customer_price") ? state.pricingBasis === "per_volume" ? n("customer_price") * n("volume") : n("customer_price") : null;
-  const customerBenefitReady = workloadReady && costReady && (valueReady || personalTimeValue > 0);
-  const customerRoi = customerBenefitReady && customerPrice !== null && customerPrice > 0 ? (customerBenefit - customerPrice) / customerPrice : null;
+  const baseCustomerPrice = has("customer_price") ? state.pricingBasis === "per_volume" ? n("customer_price") * n("volume") : n("customer_price") : null;
+  const usagePricing = state.pricingBasis === "usage";
+  const serviceCost = cost - reviewCost;
+  const marginReady = typeof state.minimumMargin === "number" && Number.isFinite(state.minimumMargin) && state.minimumMargin >= 0 && state.minimumMargin < 1;
+  const pricingReady = !usagePricing || costReady && has("volume", "tokens_per_output") && (!state.workloadMultiplierField || has(state.workloadMultiplierField)) && marginReady;
+  const annualBasePrice = typeof state.annualBasePrice === "number" && Number.isFinite(state.annualBasePrice) && state.annualBasePrice >= 0 ? state.annualBasePrice * (state.pricingBasis === "per_volume" ? n("volume") : 1) : baseCustomerPrice === null ? null : baseCustomerPrice * 12;
+  const roundPriceUp = (amount) => Math.ceil((amount - 1e-9) * 100) / 100;
+  const usagePrice = usagePricing && pricingReady ? serviceCost / (1 - state.minimumMargin) : 0;
+  const customerPrice = baseCustomerPrice === null || !pricingReady ? null : usagePricing ? roundPriceUp(Math.max(baseCustomerPrice, usagePrice)) : baseCustomerPrice;
+  const annualCustomerPrice = annualBasePrice === null || !pricingReady ? null : usagePricing ? roundPriceUp(Math.max(annualBasePrice, usagePrice * 12)) : annualBasePrice;
+  const customerBenefitReady = workloadReady && costReady && errors.length === 0 && (valueReady || selected.length === 0 && personalTimeValue > 0);
+  const customerExpense = customerPrice === null ? null : customerPrice + (usagePricing ? reviewCost : 0);
+  const customerNet = customerBenefitReady && customerExpense !== null ? customerBenefit - customerExpense : null;
+  const customerRoi = customerBenefitReady && customerPrice !== null && customerPrice > 0 ? (customerBenefit - customerExpense) / customerExpense : null;
   const paybackMonths = customerBenefitReady && customerBenefit > 0 && customerPrice !== null ? customerPrice / customerBenefit : null;
-  const contributionMargin = customerPrice !== null ? customerPrice - cost : null;
+  const contributionMargin = customerPrice !== null && costReady ? customerPrice - (usagePricing ? serviceCost : cost) : null;
   const annualValue = (economicValue - hire) * 12 + hire * n("hire_months");
+  const annualCustomerBenefit = annualValue + personalTimeValue * 12;
+  const annualCustomerExpense = annualCustomerPrice === null ? null : annualCustomerPrice + (usagePricing ? reviewCost * 12 : 0);
+  const annualCustomerNet = customerBenefitReady && annualCustomerExpense !== null ? annualCustomerBenefit - annualCustomerExpense : null;
+  const annualCustomerRoi = annualCustomerNet !== null && annualCustomerExpense > 0 ? annualCustomerNet / annualCustomerExpense : null;
   return {
     volume: n("volume"),
+    generatedUnits,
     workUnits,
+    acceptedUnits: workUnits,
     grossHours,
     reviewHours,
     reviewCost,
@@ -343,6 +366,7 @@ function evaluateBusinessImpact(state) {
     expectedLoss: errorValue + riskValue,
     riskValue,
     cost,
+    serviceCost,
     tokenCost,
     monthlyTokens,
     economicValue,
@@ -351,8 +375,13 @@ function evaluateBusinessImpact(state) {
     customerBenefitReady,
     customerPrice,
     customerRoi,
+    customerNet,
     paybackMonths,
     contributionMargin,
+    annualCustomerPrice,
+    annualCustomerBenefit,
+    annualCustomerNet,
+    annualCustomerRoi,
     net: ready ? economicValue - cost : null,
     multiple: ready && cost > 0 ? economicValue / cost : null,
     annualCost: cost * 12,
@@ -519,11 +548,14 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
   if (b.pricing !== void 0) {
     if (!record(b.pricing)) fail(`${bp}.pricing`, "Expected pricing metadata.");
     else {
-      keys(b.pricing, ["basis", "annualPrice", "label", "help"], `${bp}.pricing`);
-      if (b.pricing.basis !== "fixed" && b.pricing.basis !== "per_volume") fail(`${bp}.pricing.basis`, "Use fixed or per_volume.");
+      keys(b.pricing, ["basis", "annualPrice", "minimumMargin", "label", "help"], `${bp}.pricing`);
+      if (!["fixed", "per_volume", "usage"].includes(b.pricing.basis)) fail(`${bp}.pricing.basis`, "Use fixed, per_volume or usage.");
       text(b.pricing.label, `${bp}.pricing.label`, 160);
       text(b.pricing.help, `${bp}.pricing.help`);
       if (b.pricing.annualPrice !== void 0) numberInRange(b.pricing.annualPrice, "customer_price", `${bp}.pricing.annualPrice`);
+      if (b.pricing.basis === "usage" || b.pricing.minimumMargin !== void 0) {
+        if (typeof b.pricing.minimumMargin !== "number" || !Number.isFinite(b.pricing.minimumMargin) || b.pricing.minimumMargin < 0 || b.pricing.minimumMargin >= 1) fail(`${bp}.pricing.minimumMargin`, "Use a margin from 0 (inclusive) to 1 (exclusive).");
+      }
     }
   }
   if (b.presentation !== void 0) {

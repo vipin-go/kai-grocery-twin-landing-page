@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "language": "ar",
   "regionKey": null,
-  "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
+  "sourceRevision": "ea5d0e9f8564438708ca9fe7f6d6f92352401f31130ace80598a175da85f81c4",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -406,7 +406,7 @@
         "enabled": true,
         "kicker": "Home impact",
         "heading": "Time & Friction Estimator",
-        "subheading": "Estimate planning time and household decisions removed from a typical month. The starting values are modelled hypotheses, not observed results.",
+        "subheading": "Estimate your planning time and KAI price from how often you use it. Adjust the starting values to match your household.",
         "disclaimer": "Modelled household estimates, not guaranteed savings. Personal time is not treated as salary. Food value counts only if it replaces spending you would otherwise make; check prices, portions and dietary needs yourself.",
         "currency": "EUR",
         "currencyCopy": {
@@ -417,8 +417,8 @@
           "basis": "Currency conversion is not local cost research. Enter your own local costs and contribution assumptions. Language changes do not change amounts."
         },
         "costCopy": {
-          "breakdown": "How the all-in AI cost is built",
-          "perUnit": "{amount} per work unit (average)",
+          "breakdown": "Pricing details",
+          "perUnit": "{amount} per planning session (average)",
           "budgetOnly": "This is your total budget. Switch to Cost breakdown to itemize it; no split has been assumed.",
           "benefitNotice": "Modeled benefits, not charges. Crossed-out amounts are spending you expect to avoid, not discounts on the AI bill.",
           "remainder": "Other included operating costs",
@@ -451,7 +451,7 @@
             "costStep": "Your KAI usage",
             "valueStep": "Optional money comparison",
             "workloadIntro": "Count time spent checking food, choosing recipes and preparing your grocery list—not cooking, travel or time in the shop.",
-            "costIntro": "Tokens and delivery cost describe what it costs KAI to provide the service. Customer price and household value are separate hypotheses.",
+            "costIntro": "Your estimated KAI price follows your planning sessions, with a base price for light usage and an increase for additional usage.",
             "valueIntro": "Time back is yours to enjoy. Add an explicit food-waste or personal-value assumption if you want a money comparison.",
             "sampleNotice": "Typical household usage · adjust these numbers to your kitchen",
             "monthly": "Monthly",
@@ -478,20 +478,20 @@
             "reviewMode": "Who checks the suggestions?",
             "teamReview": "Me or my household",
             "paidReview": "Someone I pay extra",
-            "reviewNote": "Checking portions, allergies, ingredients and the cart takes time. Household review is subtracted from time back. Extra paid help belongs in your KAI budget instead.",
+            "reviewNote": "Checking portions, allergies, ingredients and the cart takes time. Household review is subtracted from time back. Help you pay for separately is an extra expense in the optional money comparison; it is not part of the KAI price.",
             "totalMode": "Monthly budget",
             "itemizedMode": "Optional cost details",
             "budgetNote": "Include KAI access, extra services and any extra paid help once. Do not include your usual grocery bill or put a price on your own time.",
             "itemizedNote": "Token usage is calculated from your plans. Extra services stay at zero unless you pay for them separately.",
             "paidReviewCost": "Extra paid checking",
-            "allInCost": "Estimated KAI delivery cost",
+            "allInCost": "Pricing",
             "missing": "Add your assumptions",
             "cashValue": "إنفاق نقدي يمكن تجنبه",
             "contribution": "هامش المساهمة المتوقع",
             "expectedLoss": "Estimated food value retained",
             "riskValue": "Uncertain risk value included",
             "economicValue": "Modeled optional value",
-            "netBenefit": "Modeled value minus KAI cost",
+            "netBenefit": "Estimated value minus your costs",
             "multiple": "Food value / KAI cost",
             "customerBenefit": "Modelled customer benefit",
             "customerRoi": "Customer ROI",
@@ -503,7 +503,7 @@
             "burdenHeading": "Less grocery admin",
             "opportunityHeading": "More room for everyday life",
             "methodBody": "Hours back equals planning sessions × minutes per session × the share KAI could reduce, minus your checking time. Personal time stays separate from money unless you explicitly enter a comparison value. Optional food value equals portions you expect to stop wasting × their ingredient cost, only where using that food replaces a future purchase.",
-            "formulaLabel": "Food value minus KAI running cost = modeled net benefit. Food value divided by KAI running cost = the multiple; zero cost has no defined multiple.",
+            "formulaLabel": "Estimated net benefit subtracts your KAI price and any separately paid checking from the optional value you enter. Unpriced personal time is shown in hours only.",
             "allocationNote": "All returned time remains personal time. It is never converted into wages, business revenue or cash savings.",
             "overlapLabel": "These portions would otherwise be wasted, replace a future purchase, and are not also counted as a discount or another saving.",
             "overlapNote": "Count only edible food you would safely use. Ingredient cost excludes your time and KAI fees. Do not count the same food as both a duplicate purchase avoided and waste prevented.",
@@ -511,7 +511,7 @@
             "reviewedLabel": "I have reviewed my assumptions. If I leave food waste unselected, only my time estimate counts as a benefit.",
             "cycleResult": "Cycle-time improvement",
             "throughputResult": "Additional work supported by capacity and demand",
-            "assumptionsIncomplete": "You can keep this as a time estimate. Add a KAI budget and review optional food-waste assumptions to see the money comparison.",
+            "assumptionsIncomplete": "You can keep this as a time estimate. Add and review optional value assumptions to compare them with your KAI price.",
             "allocationError": "Allocated hours exceed the net capacity available. Reduce the allocations.",
             "reviewError": "Checking takes longer than the planning time reduced. These assumptions do not return positive time.",
             "cashError": "Avoided spending cannot exceed current spending or have positive value with no hours allocated.",
@@ -526,6 +526,10 @@
             "volume": {
               "label": "Grocery-planning sessions each month",
               "help": "For example, four weekly plans. Count your whole household once, not once per person."
+            },
+            "accepted_rate": {
+              "label": "Expected acceptance rate",
+              "help": "Optional modeled share of prepared outputs accepted by the recipient. This is not a guarantee or observed result."
             },
             "minutes": {
               "label": "Planning minutes per session today",
@@ -552,8 +556,8 @@
               "help": "Your own estimate for access and extra services, not a price quote. Exclude the usual grocery bill."
             },
             "model_cost": {
-              "label": "Extra AI usage",
-              "help": "Only usage charged separately from your plan; otherwise enter zero."
+              "label": "Additional usage",
+              "help": "The amount above the base price needed to cover your estimated usage."
             },
             "tools_cost": {
               "label": "Extra connected services",
@@ -564,12 +568,12 @@
               "help": "Enter zero unless you pay for this separately."
             },
             "platform_cost": {
-              "label": "Other delivery and support cost",
-              "help": "Modeled hosting, storage, monitoring and support cost. It is not the household price."
+              "label": "Modelled service cost",
+              "help": "Internal token, model, hosting, storage and support cost used to estimate the displayed KAI price."
             },
             "customer_price": {
-              "label": "KAI household price hypothesis",
-              "help": "The proposed customer price, separate from estimated delivery cost. Change it to test a different offer."
+              "label": "Base price",
+              "help": "The minimum price for the selected period. Your estimated total increases when usage exceeds the included allowance."
             },
             "personal_value_per_hour": {
               "label": "Optional value you assign to one hour",
@@ -670,41 +674,6 @@
             "Meals built around food you already have",
             "A reviewed shopping list, with fewer duplicate purchases"
           ],
-          "usagePackages": {
-            "medium": {
-              "volume": 4,
-              "tokensPerOutput": 15000,
-              "platform_cost": 0.75,
-              "minutes": 45,
-              "automation": 50,
-              "review": 5,
-              "model_cost": 0,
-              "tools_cost": 0,
-              "infrastructure_cost": 0,
-              "higher_value_hours": 1.1,
-              "contribution_rate": 0,
-              "incidents": 8,
-              "incident_cost": 3.8,
-              "customer_price": 6.99
-            },
-            "base": {
-              "volume": 2,
-              "tokensPerOutput": 15000,
-              "platform_cost": 0.5,
-              "minutes": 45,
-              "automation": 50,
-              "review": 5,
-              "model_cost": 0,
-              "tools_cost": 0,
-              "infrastructure_cost": 0,
-              "higher_value_hours": 0.5,
-              "contribution_rate": 0,
-              "incidents": 4,
-              "incident_cost": 3.8,
-              "customer_price": 6.99
-            }
-          },
-          "defaultPackage": "medium",
           "costMode": "itemized",
           "reviewMode": "team",
           "selected": [],
@@ -726,14 +695,16 @@
             }
           ],
           "pricing": {
-            "basis": "fixed",
+            "basis": "usage",
             "annualPrice": 59,
-            "label": "KAI price hypothesis",
-            "help": "€6.99 per household per month or €59 per year. This is an editable hypothesis until paid household evidence exists."
+            "minimumMargin": 0,
+            "label": "Pricing",
+            "help": "Light usage stays at the base price. When the modelled service cost exceeds that base, the estimated price increases with usage. Switch Monthly or Yearly to see one total for that period."
           },
           "presentation": {
             "financial": "optional",
-            "showCustomerEconomics": true
+            "showCustomerEconomics": true,
+            "hideEconomicMultiple": true
           },
           "tabs": [
             {
@@ -746,25 +717,12 @@
                 "automation",
                 "review"
               ],
-              "showReview": true,
-              "showPackage": true
-            },
-            {
-              "id": "usage",
-              "label": "Your KAI usage",
-              "intro": "Review the modelled token envelope, delivery cost and customer price separately. Provider rates are not a claim about your household value.",
-              "fields": [
-                "tokens_per_output",
-                "customer_price",
-                "platform_cost",
-                "model_cost"
-              ],
-              "showPackage": true
+              "showReview": true
             },
             {
               "id": "food",
               "label": "Optional money comparison",
-              "intro": "Time back is yours to enjoy. Add food-waste value or an optional personal hourly value only when it replaces spending or helps you compare the hypothesis.",
+              "intro": "Time back is yours to enjoy. Add food-waste value or a personal hourly value if you want to compare it with your KAI price.",
               "fields": [
                 "personal_value_per_hour"
               ],
@@ -915,6 +873,10 @@
           "volume": {
             "label": "Stores in scope",
             "help": "Count locations that would actually run this inventory loop, not every banner in the group."
+          },
+          "accepted_rate": {
+            "label": "Expected acceptance rate",
+            "help": "Optional modeled share of prepared outputs accepted by the recipient. This is not a guarantee or observed result."
           },
           "minutes": {
             "label": "Preparation minutes per store per cycle",
@@ -2185,6 +2147,28 @@
         "help"
       ],
       "sourceHash": "106c3d48f5a965fabc60d2e5d940bf0bb4fe29dc8dbba288787c4b612c4a32b0"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "fields",
+        "accepted_rate",
+        "label"
+      ],
+      "sourceHash": "4f18eadc75d14eb74855873509015b808c65f203c106bb0b930b259c91a4cd90"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "fields",
+        "accepted_rate",
+        "help"
+      ],
+      "sourceHash": "53c784692d4624ff93d2536a2758a75697784ab0bd514fd49cf0bfe137ff8b63"
     },
     {
       "path": [
@@ -4996,7 +4980,7 @@
         "homeRoiCalculator",
         "subheading"
       ],
-      "sourceHash": "56bd5b9c7d913a17c9cd2fd751047f46fcfd7a16f28aaeba15582ed202e44fda"
+      "sourceHash": "46f433c08b327800216c598e8ab583afb0247918050a58a5fdfb41acf53e478d"
     },
     {
       "path": [
@@ -5025,7 +5009,7 @@
         "costCopy",
         "breakdown"
       ],
-      "sourceHash": "895373aa73d1d5e90f508f353e090c0f393107e6048b39988897eb9bfbbe1bb1"
+      "sourceHash": "b59b637a4f66ac888c96594d3253d2413558ea45b685c15158a6594efc734dc5"
     },
     {
       "path": [
@@ -5131,7 +5115,7 @@
         "copy",
         "costIntro"
       ],
-      "sourceHash": "45d9f10e049015ccf731cf9816d685a3e60f3a4b9f07e85f7f204b4107a8ed9a"
+      "sourceHash": "04d2c82756e1501233891a99b01db85dd92a12459e67507cc1154b4b4f8d4702"
     },
     {
       "path": [
@@ -5428,7 +5412,7 @@
         "copy",
         "reviewNote"
       ],
-      "sourceHash": "a438fe002ae56bc237d402496748e1f49f1d4a2dda6d9715522b4ea9a7bb3282"
+      "sourceHash": "c4d1ac4148e9af9c6a2ce9c1979e7852003730986f114aed3092682b08cfae03"
     },
     {
       "path": [
@@ -5494,7 +5478,7 @@
         "copy",
         "allInCost"
       ],
-      "sourceHash": "5f18c2098625ad6c88439547440c92a69e4cd7c4a4e679ee7b00050b82cd07d3"
+      "sourceHash": "dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040"
     },
     {
       "path": [
@@ -5571,7 +5555,7 @@
         "copy",
         "netBenefit"
       ],
-      "sourceHash": "3a3a15c836170bc8050ce6b643e472eab5cc77f4b319d897b2a1f785165c5dac"
+      "sourceHash": "35167e04d3d2e855d067a85b8b7bde7aef925fe4e6c2dbf3c1a3507f060cb424"
     },
     {
       "path": [
@@ -5703,7 +5687,7 @@
         "copy",
         "formulaLabel"
       ],
-      "sourceHash": "f8420ff58a0e7f22ac02a5ce4f8f31569dc4aadd301668c47433e631205a9c81"
+      "sourceHash": "7ef2f0f7ebaf6ade3f03968fa9f30d056ed9c12897bb777028afeb9b15f0617a"
     },
     {
       "path": [
@@ -5791,7 +5775,7 @@
         "copy",
         "assumptionsIncomplete"
       ],
-      "sourceHash": "2698493b145f5551250d0cea5f35bb3298a525e1b5d9cef99bf3aa65c150fe28"
+      "sourceHash": "58ceb3c41ba6303dabeb2c47fb0ee154c31e852f6a503eb236880211b27d605d"
     },
     {
       "path": [
@@ -5915,6 +5899,30 @@
         "help"
       ],
       "sourceHash": "321673a0e4a649dd323c05bd24084b2c573572fb04c58636ce3c385e34250340"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "accepted_rate",
+        "label"
+      ],
+      "sourceHash": "4f18eadc75d14eb74855873509015b808c65f203c106bb0b930b259c91a4cd90"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "accepted_rate",
+        "help"
+      ],
+      "sourceHash": "53c784692d4624ff93d2536a2758a75697784ab0bd514fd49cf0bfe137ff8b63"
     },
     {
       "path": [
@@ -6070,7 +6078,7 @@
         "model_cost",
         "label"
       ],
-      "sourceHash": "5ea3105112637ff2080a11087de79dc0af72e9b030faddfc277c021146472e9c"
+      "sourceHash": "da8e3db7f955745e522bd03bbb6c9e4501a8eea4f145c60662f34191f5382fd5"
     },
     {
       "path": [
@@ -6082,7 +6090,7 @@
         "model_cost",
         "help"
       ],
-      "sourceHash": "f372b04373506d683eb65048d41864ca0fff51256d2e0760fbf1881ac2d72a7f"
+      "sourceHash": "ca326913700f51e3d9bc5474d1b0c7c7cefc0b8adf0e97d88236df3b3f8f707d"
     },
     {
       "path": [
@@ -6142,7 +6150,7 @@
         "platform_cost",
         "label"
       ],
-      "sourceHash": "879bc5433e23785c45e1fa0a349f108a6ad79fb35677603499c5a2b476e716fa"
+      "sourceHash": "b0fe0af458b99d8db3a65012b7ce215518abeb0fc4c9445023520ef6f5ac8699"
     },
     {
       "path": [
@@ -6154,7 +6162,7 @@
         "platform_cost",
         "help"
       ],
-      "sourceHash": "7ffdca6cada0f94e72d9d1ea24ea25978838790e0be1dc63d719d487961f79fa"
+      "sourceHash": "6ec86c23903def369b96cffbf54b798ce25dc53050700b0e5b08756452a844b3"
     },
     {
       "path": [
@@ -6166,7 +6174,7 @@
         "customer_price",
         "label"
       ],
-      "sourceHash": "fa3b49124fe85d779c93465945ab41136c1b3584983aa907bf3748627651bacd"
+      "sourceHash": "29a6d6be381145135343f80db0fae5a5078a867d63add6dff5e89b29edbe82bf"
     },
     {
       "path": [
@@ -6178,7 +6186,7 @@
         "customer_price",
         "help"
       ],
-      "sourceHash": "556476457f8a6b4de0cac2e02b45eeb6efc13d8471b11ededcc3bad28d5589a5"
+      "sourceHash": "f65bf31d7758095e996a8b87a7a51bf3edd72784d1fc76f67035b7908fbb6528"
     },
     {
       "path": [
@@ -6780,16 +6788,6 @@
         "groceryTwin",
         "homeRoiCalculator",
         "businessImpact",
-        "defaultPackage"
-      ],
-      "sourceHash": "c082456a7766e23a18db084cd34b6ff510baef506548b897cc80e9b7d3e121c8"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
         "costMode"
       ],
       "sourceHash": "0257609b2e009aa6c788941fbcaeee13877465889a94aaf0444c7d4159ee616c"
@@ -6848,7 +6846,7 @@
         "pricing",
         "basis"
       ],
-      "sourceHash": "992a93455c71fedd36ac9bbc439952c041cf61445958472af479269b8d873513"
+      "sourceHash": "0a4e4c29432ecb01b95f87d87ffaff9cb4f36ce4b89ff1a1a136ad1c7392ae07"
     },
     {
       "path": [
@@ -6859,7 +6857,7 @@
         "pricing",
         "label"
       ],
-      "sourceHash": "ccfbb6a68922661bee2708d35e1b9086c70194fb8875c998e65fd58958ef0143"
+      "sourceHash": "dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040"
     },
     {
       "path": [
@@ -6870,7 +6868,7 @@
         "pricing",
         "help"
       ],
-      "sourceHash": "def2ac72edaf1aa66e9ad530a57bc9d6bcaa19303ed38885ee5fc98731d50d9c"
+      "sourceHash": "c2f36c59192dbed7e6057154da9778ee10ce61791753912eb193ba36e06b86c0"
     },
     {
       "path": [
@@ -6969,82 +6967,6 @@
         1,
         "label"
       ],
-      "sourceHash": "62189957927e6deb9abf7e7053da00b3428a0e695d57746a8ea7976e19c67938"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
-        "tabs",
-        1,
-        "intro"
-      ],
-      "sourceHash": "cfd17680a356f7d985dbf3116d1b2afc2a1bbfdf1a2ed1d79dce27e24a56f483"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
-        "tabs",
-        1,
-        "fields",
-        0
-      ],
-      "sourceHash": "252b07fa1db64f9ca920817ce39dec8523f46fca171a3dfd2721f7406ad524b3"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
-        "tabs",
-        1,
-        "fields",
-        1
-      ],
-      "sourceHash": "b90c7599f77434bcd2d32958a8557417fb5333b4dbd169ff8c5ee65bbb5008ef"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
-        "tabs",
-        1,
-        "fields",
-        2
-      ],
-      "sourceHash": "ddb2485b111f5d7373d804bdb4010b2590b72ba7b899fd5e11c4e0d5e00fb524"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
-        "tabs",
-        1,
-        "fields",
-        3
-      ],
-      "sourceHash": "d1bedf986ff719c3697d5349d0a881f26ca60c944250a6b9d841dbfdd75ec256"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
-        "tabs",
-        2,
-        "label"
-      ],
       "sourceHash": "5d623d42a6706a479ea5ed6962fc4dd6fb6c46c622fa864bb6a394347c7f4ae2"
     },
     {
@@ -7054,10 +6976,10 @@
         "homeRoiCalculator",
         "businessImpact",
         "tabs",
-        2,
+        1,
         "intro"
       ],
-      "sourceHash": "c751c904f9ab54862c258287b0e72e9e4d530d25182c2f8cfe40ce512e71f220"
+      "sourceHash": "175747c38ebd19131315e6634cf16e81ae2014535a5b3023c497da24e225236b"
     },
     {
       "path": [
@@ -7066,7 +6988,7 @@
         "homeRoiCalculator",
         "businessImpact",
         "tabs",
-        2,
+        1,
         "fields",
         0
       ],
