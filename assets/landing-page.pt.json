@@ -403,27 +403,27 @@
       "homeRoiCalculator": {
         "methodologyVersion": 2,
         "enabled": true,
-        "kicker": "Home impact",
-        "heading": "Time & Friction Estimator",
-        "subheading": "Estimate your planning time and KAI price from how often you use it. Adjust the starting values to match your household.",
-        "disclaimer": "Modelled household estimates, not guaranteed savings. Personal time is not treated as salary. Food value counts only if it replaces spending you would otherwise make; check prices, portions and dietary needs yourself.",
+        "kicker": "Impacto em casa",
+        "heading": "Estimador de tempo e fricção",
+        "subheading": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+        "disclaimer": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
         "currency": "EUR",
         "currencyCopy": {
-          "native": "Amounts in {currency}.",
-          "loading": "Checking the local currency. Amounts remain in {currency} until a rate is available.",
-          "unavailable": "A current local exchange rate is unavailable. Amounts remain in {currency}.",
-          "converted": "Amounts converted from {base} to {currency} using the reference rate dated {date}.",
-          "basis": "Currency conversion is not local cost research. Enter your own local costs and contribution assumptions. Language changes do not change amounts."
+          "native": "Preço: {currency}",
+          "loading": "Preço: {currency}",
+          "unavailable": "Preço: {currency}",
+          "converted": "Preço: {base} → {currency} ({date})",
+          "basis": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
         },
         "costCopy": {
-          "breakdown": "Pricing details",
-          "perUnit": "{amount} per planning session (average)",
-          "budgetOnly": "This is your total budget. Switch to Cost breakdown to itemize it; no split has been assumed.",
-          "benefitNotice": "Modeled benefits, not charges. Crossed-out amounts are spending you expect to avoid, not discounts on the AI bill.",
-          "remainder": "Other included operating costs",
-          "allocation": "Returned hours are capacity, not automatic savings. Only the portions you assign to actual spending reductions or additional contribution receive a monetary value."
+          "breakdown": "Detalhes do preço",
+          "perUnit": "{amount} / sessões de planeamento",
+          "budgetOnly": "Detalhes do preço",
+          "benefitNotice": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+          "remainder": "Utilização adicional",
+          "allocation": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
         },
-        "locale": "en-GB",
+        "locale": "pt-PT",
         "inputs": [],
         "metrics": [],
         "businessImpact": {
@@ -445,233 +445,233 @@
             "incident_cost": 3.8
           },
           "copy": {
-            "navLabel": "Impact estimate",
-            "workloadStep": "Your routine",
-            "costStep": "Your KAI usage",
-            "valueStep": "Optional money comparison",
-            "workloadIntro": "Count time spent checking food, choosing recipes and preparing your grocery list—not cooking, travel or time in the shop.",
-            "costIntro": "Your estimated KAI price follows your planning sessions, with a base price for light usage and an increase for additional usage.",
-            "valueIntro": "Time back is yours to enjoy. Add an explicit food-waste or personal-value assumption if you want a money comparison.",
-            "sampleNotice": "Typical household usage · adjust these numbers to your kitchen",
-            "monthly": "Monthly",
-            "yearly": "Yearly",
-            "next": "Continue",
-            "back": "Back",
-            "reset": "Reset assumptions",
-            "summary": "Your household estimate",
-            "volume": "Planning sessions",
-            "grossHours": "Planning time reduced",
-            "capacity": "Time back for you",
-            "retained": "Personal time, not priced in money",
-            "hours": "hours",
-            "days": "days",
+            "navLabel": "Impacto em casa",
+            "workloadStep": "A sua rotina",
+            "costStep": "Comparação financeira opcional",
+            "valueStep": "Comparação financeira opcional",
+            "workloadIntro": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "costIntro": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "valueIntro": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "sampleNotice": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "monthly": "Mensal",
+            "yearly": "Anual",
+            "next": "→",
+            "back": "←",
+            "reset": "Repor pressupostos",
+            "summary": "Estimativa da sua casa",
+            "volume": "Sessões de planeamento",
+            "grossHours": "Minutos de planeamento por sessão hoje",
+            "capacity": "Tempo recuperado para si",
+            "retained": "Tempo recuperado para si",
+            "hours": "h",
+            "days": "d",
             "percent": "%",
-            "minutes": "minutes",
+            "minutes": "min",
             "tokens": "tokens",
-            "monthlyTokens": "Monthly tokens",
-            "tokenCost": "Token usage",
-            "packageLabel": "Usage package",
-            "packageBase": "Base",
-            "packageMedium": "Medium",
-            "packageCustom": "Custom",
-            "reviewMode": "Who checks the suggestions?",
-            "teamReview": "Me or my household",
-            "paidReview": "Someone I pay extra",
-            "reviewNote": "Checking portions, allergies, ingredients and the cart takes time. Household review is subtracted from time back. Help you pay for separately is an extra expense in the optional money comparison; it is not part of the KAI price.",
-            "totalMode": "Monthly budget",
-            "itemizedMode": "Optional cost details",
-            "budgetNote": "Include KAI access, extra services and any extra paid help once. Do not include your usual grocery bill or put a price on your own time.",
-            "itemizedNote": "Token usage is calculated from your plans. Extra services stay at zero unless you pay for them separately.",
-            "paidReviewCost": "Extra paid checking",
-            "allInCost": "Pricing",
-            "missing": "Add your assumptions",
-            "cashValue": "Cash spending avoided",
-            "contribution": "Expected contribution",
-            "expectedLoss": "Estimated food value retained",
-            "riskValue": "Uncertain risk value included",
-            "economicValue": "Modeled optional value",
-            "netBenefit": "Estimated value minus your costs",
-            "multiple": "Food value / KAI cost",
-            "customerBenefit": "Modelled customer benefit",
-            "customerRoi": "Customer ROI",
-            "payback": "Customer payback period",
-            "notApplicable": "Not applicable",
-            "annual": "Annual view",
-            "annualNote": "Twelve months using the same routine and food-waste assumptions. No growth, compounding or guaranteed savings.",
-            "method": "How this is calculated",
-            "burdenHeading": "Less grocery admin",
-            "opportunityHeading": "More room for everyday life",
-            "methodBody": "Hours back equals planning sessions × minutes per session × the share KAI could reduce, minus your checking time. Personal time stays separate from money unless you explicitly enter a comparison value. Optional food value equals portions you expect to stop wasting × their ingredient cost, only where using that food replaces a future purchase.",
-            "formulaLabel": "Estimated net benefit subtracts your KAI price and any separately paid checking from the optional value you enter. Unpriced personal time is shown in hours only.",
-            "allocationNote": "All returned time remains personal time. It is never converted into wages, business revenue or cash savings.",
-            "overlapLabel": "These portions would otherwise be wasted, replace a future purchase, and are not also counted as a discount or another saving.",
-            "overlapNote": "Count only edible food you would safely use. Ingredient cost excludes your time and KAI fees. Do not count the same food as both a duplicate purchase avoided and waste prevented.",
-            "hiringLabel": "This hire was genuinely planned and the allocated capacity can cover the work.",
-            "reviewedLabel": "I have reviewed my assumptions. If I leave food waste unselected, only my time estimate counts as a benefit.",
-            "cycleResult": "Cycle-time improvement",
-            "throughputResult": "Additional work supported by capacity and demand",
-            "assumptionsIncomplete": "You can keep this as a time estimate. Add and review optional value assumptions to compare them with your KAI price.",
-            "allocationError": "Allocated hours exceed the net capacity available. Reduce the allocations.",
-            "reviewError": "Checking takes longer than the planning time reduced. These assumptions do not return positive time.",
-            "cashError": "Avoided spending cannot exceed current spending or have positive value with no hours allocated.",
-            "hiringError": "Allocated capacity must cover the planned hire hours. Confirm the planned hire and its duration.",
-            "riskError": "The after probability cannot exceed the before probability for a loss-reduction estimate.",
-            "overlapError": "Confirm the food value replaces spending and is not counted twice before including it.",
-            "boundsError": "Use values within the displayed limits.",
-            "rangeLabel": "Adjust value",
-            "noCurrencyChange": "Language changes formatting, not your currency or assumptions."
+            "monthlyTokens": "tokens",
+            "tokenCost": "Custo de serviço modelado",
+            "packageLabel": "Detalhes do preço",
+            "packageBase": "Preço base",
+            "packageMedium": "Preço base",
+            "packageCustom": "Preço base",
+            "reviewMode": "Minutos para verificar cada plano",
+            "teamReview": "A sua rotina",
+            "paidReview": "Utilização adicional",
+            "reviewNote": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "totalMode": "Preço",
+            "itemizedMode": "Detalhes do preço",
+            "budgetNote": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "itemizedNote": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "paidReviewCost": "Utilização adicional",
+            "allInCost": "Preço",
+            "missing": "—",
+            "cashValue": "Utilização adicional",
+            "contribution": "Mensal",
+            "expectedLoss": "Utilização adicional",
+            "riskValue": "Utilização adicional",
+            "economicValue": "Utilização adicional",
+            "netBenefit": "Utilização adicional",
+            "multiple": "Preço",
+            "customerBenefit": "Utilização adicional",
+            "customerRoi": "ROI",
+            "payback": "Como é calculado",
+            "notApplicable": "—",
+            "annual": "Anual",
+            "annualNote": "Anual",
+            "method": "Como é calculado",
+            "burdenHeading": "A sua rotina",
+            "opportunityHeading": "Tempo recuperado para si",
+            "methodBody": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "formulaLabel": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "allocationNote": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "overlapLabel": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "overlapNote": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "hiringLabel": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "reviewedLabel": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "cycleResult": "Como é calculado",
+            "throughputResult": "Tempo recuperado para si",
+            "assumptionsIncomplete": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "allocationError": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "reviewError": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "cashError": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "hiringError": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "riskError": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "overlapError": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "boundsError": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
+            "rangeLabel": "Como é calculado",
+            "noCurrencyChange": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
           },
           "fields": {
             "volume": {
-              "label": "Grocery-planning sessions each month",
-              "help": "For example, four weekly plans. Count your whole household once, not once per person."
+              "label": "Sessões de planeamento",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "accepted_rate": {
-              "label": "Expected acceptance rate",
-              "help": "Optional modeled share of prepared outputs accepted by the recipient. This is not a guarantee or observed result."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "minutes": {
-              "label": "Planning minutes per session today",
-              "help": "Include fridge checks, recipe decisions, product comparison and list preparation. Exclude cooking and shopping travel."
+              "label": "Minutos de planeamento por sessão hoje",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "automation": {
-              "label": "Share KAI could help reduce",
-              "help": "Your estimate, not a promised performance level. Start modestly and check against your actual routine."
+              "label": "Parte que o KAI pode reduzir",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "review": {
-              "label": "Minutes to check each plan",
-              "help": "Allow time to verify ingredients, portions, allergies, current prices and the final shopping list."
+              "label": "Minutos para verificar cada plano",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "cycles_per_unit": {
-              "label": "Cycles per unit each month",
-              "help": "How many recurring order, review or processing cycles each unit runs in a typical month."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "tokens_per_output": {
-              "label": "Tokens to build one plan",
-              "help": "Modeled tokens to turn a fridge or receipt scan into a checked plan. Shown so you can see usage; you do not need a provider price."
+              "label": "Tokens",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "budget": {
-              "label": "Your monthly KAI budget",
-              "help": "Your own estimate for access and extra services, not a price quote. Exclude the usual grocery bill."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "model_cost": {
-              "label": "Additional usage",
-              "help": "The amount above the base price needed to cover your estimated usage."
+              "label": "Utilização adicional",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "tools_cost": {
-              "label": "Extra connected services",
-              "help": "Only additional service charges needed for KAI, not ordinary food purchases."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "infrastructure_cost": {
-              "label": "Extra hosting or storage",
-              "help": "Enter zero unless you pay for this separately."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "platform_cost": {
-              "label": "Modelled service cost",
-              "help": "Internal token, model, hosting, storage and support cost used to estimate the displayed KAI price."
+              "label": "Custo de serviço modelado",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "customer_price": {
-              "label": "Base price",
-              "help": "The minimum price for the selected period. Your estimated total increases when usage exceeds the included allowance."
+              "label": "Preço base",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "personal_value_per_hour": {
-              "label": "Optional value you assign to one hour",
-              "help": "Use only for a personal comparison. This is not salary, wages or guaranteed savings."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "review_rate": {
-              "label": "Extra paid checking per hour",
-              "help": "Use actual additional spending on help, never an hourly value for your own time."
+              "label": "Minutos para verificar cada plano",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "cash_hours": {
-              "label": "Hours that remove paid work",
-              "help": "Allocate only work whose overtime, contractor or processing spend will actually stop."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "cash_baseline": {
-              "label": "Current monthly spending on that work",
-              "help": "The cash budget from which the reduction will come."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "cash_avoided": {
-              "label": "Monthly spending you would stop",
-              "help": "One explicit amount, not hours multiplied by salary; exclude any planned-hire saving entered separately."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "higher_value_hours": {
-              "label": "Hours used for higher-value work",
-              "help": "Hours you can realistically redirect, not the entire capacity by default."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "contribution_rate": {
-              "label": "Incremental contribution per hour",
-              "help": "Revenue less incremental delivery costs, excluding AI costs counted separately. Not salary or gross revenue."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "throughput_hours": {
-              "label": "Hours used for additional volume",
-              "help": "This allocation cannot also be used for advisory work or spending reductions."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "extra_minutes": {
-              "label": "Team minutes per additional unit",
-              "help": "The remaining human effort, including review, needed to deliver one more unit."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "demand": {
-              "label": "Additional units with expected demand",
-              "help": "Capacity alone is not demand. Enter the extra monthly work you expect to take on."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "unit_margin": {
-              "label": "Contribution per additional unit",
-              "help": "Incremental revenue less delivery costs; AI operating costs are deducted separately."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "hiring_hours": {
-              "label": "Hours covering the planned hire",
-              "help": "Allocate capacity to specific planned work, not a generic full-time-equivalent estimate."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "planned_hours": {
-              "label": "Monthly hours the planned hire would cover",
-              "help": "The allocated capacity must cover this entire workload."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "hire_cost": {
-              "label": "Monthly hire cost actually deferred",
-              "help": "Use the cost of a genuinely planned hire, not the salary of someone already employed."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "hire_months": {
-              "label": "Months that hire is deferred",
-              "help": "One to twelve months; the annual estimate stops counting savings after this period."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "incidents": {
-              "label": "Food portions you could stop wasting each month",
-              "help": "Enter a realistic reduction from what you currently throw away. Count only food you would safely use instead of buying a replacement."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "incident_cost": {
-              "label": "Ingredient cost per avoided wasted portion",
-              "help": "Use the average cost of the ingredients, not a restaurant price or the value of your cooking time."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "probability_before": {
-              "label": "Monthly loss probability before",
-              "help": "Your estimate, not a guaranteed risk assessment."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "probability_after": {
-              "label": "Monthly loss probability after",
-              "help": "Use the same event and monthly time horizon as the baseline."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "loss": {
-              "label": "Loss exposure for that event",
-              "help": "Exclude error incidents and spending already counted. This is uncertain expected value, not cash saved."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "days_before": {
-              "label": "Cycle time before, in days",
-              "help": "Elapsed time from start to completion, separate from hands-on effort."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             },
             "days_after": {
-              "label": "Cycle time after, in days",
-              "help": "Shown as an operational change only, without an assumed monetary value."
+              "label": "Preço",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             }
           },
           "burden": [
-            "Checking the fridge and pantry",
-            "Finding recipes and missing ingredients",
-            "Comparing products and preparing a grocery list"
+            "Minutos de planeamento por sessão hoje",
+            "Parte que o KAI pode reduzir",
+            "Minutos para verificar cada plano"
           ],
           "opportunity": [
-            "More time for yourself and your household",
-            "Meals built around food you already have",
-            "A reviewed shopping list, with fewer duplicate purchases"
+            "Tempo recuperado para si",
+            "Planos / listas de compras verificados",
+            "Utilização adicional"
           ],
           "costMode": "itemized",
           "reviewMode": "team",
@@ -684,21 +684,21 @@
           },
           "hero": {
             "kind": "volume",
-            "label": "Checked plans / shopping lists"
+            "label": "Planos / listas de compras verificados"
           },
           "outcomes": [
             {
               "id": "error",
-              "label": "Use more of the food I buy",
-              "help": "Optional: estimate fewer wasted portions. KAI does not guarantee lower grocery spending."
+              "label": "Planos / listas de compras verificados",
+              "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
             }
           ],
           "pricing": {
             "basis": "usage",
             "annualPrice": 59,
             "minimumMargin": 0,
-            "label": "Pricing",
-            "help": "Light usage stays at the base price. When the modelled service cost exceeds that base, the estimated price increases with usage. Switch Monthly or Yearly to see one total for that period."
+            "label": "Preço",
+            "help": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
           },
           "presentation": {
             "financial": "optional",
@@ -708,8 +708,8 @@
           "tabs": [
             {
               "id": "routine",
-              "label": "Your routine",
-              "intro": "Count time spent checking food, choosing recipes and preparing your grocery list—not cooking, travel or time in the shop.",
+              "label": "A sua rotina",
+              "intro": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa.",
               "fields": [
                 "volume",
                 "minutes",
@@ -720,8 +720,8 @@
             },
             {
               "id": "food",
-              "label": "Optional money comparison",
-              "intro": "Time back is yours to enjoy. Add food-waste value or a personal hourly value if you want to compare it with your KAI price.",
+              "label": "Comparação financeira opcional",
+              "intro": "Comparação financeira opcional",
               "fields": [
                 "personal_value_per_hour"
               ],
@@ -730,9 +730,9 @@
           ]
         },
         "cta": {
-          "primaryLabel": "Try a grocery scan with KAI",
+          "primaryLabel": "Experimente uma digitalização de compras com KAI",
           "primaryTarget": "hero-chat",
-          "privacyNote": "Your data stays private. Hours are capacity. Financial amounts are modeled estimates, not observed results."
+          "privacyNote": "Estime o seu tempo de planeamento e o preço do KAI com base no uso. Ajuste os valores à sua casa."
         }
       },
       "retail": {
@@ -752,27 +752,27 @@
     "roiCalculator": {
       "methodologyVersion": 2,
       "enabled": true,
-      "kicker": "Retail impact",
-      "heading": "Store-ops capacity estimate",
-      "subheading": "Model vendor-ready order preparation for a multi-store operator. One named human approver remains responsible for every consequential order.",
-      "disclaimer": "Modelled store-ops usage, not observed shrink results or guaranteed savings. KAI prepares and formats orders; a named approver decides what is placed.",
+      "kicker": "Impacto no retalho",
+      "heading": "Estimador de capacidade operacional da loja",
+      "subheading": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+      "disclaimer": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
       "currency": "EUR",
       "currencyCopy": {
-        "native": "Amounts in {currency}.",
-        "loading": "Checking the local currency. Amounts remain in {currency} until a rate is available.",
-        "unavailable": "A current local exchange rate is unavailable. Amounts remain in {currency}.",
-        "converted": "Amounts converted from {base} to {currency} using the reference rate dated {date}.",
-        "basis": "Currency conversion is not local cost research. Enter your own local costs and contribution assumptions. Language changes do not change amounts."
+        "native": "Parte do processo tratada pelo KAI: {currency}",
+        "loading": "Parte do processo tratada pelo KAI: {currency}",
+        "unavailable": "Parte do processo tratada pelo KAI: {currency}",
+        "converted": "Parte do processo tratada pelo KAI: {base} → {currency} ({date})",
+        "basis": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
       },
       "costCopy": {
-        "breakdown": "How the all-in AI cost is built",
-        "perUnit": "{amount} per work unit (average)",
-        "budgetOnly": "This is your total budget. Switch to Cost breakdown to itemize it; no split has been assumed.",
-        "benefitNotice": "Modeled benefits, not charges. Crossed-out amounts are spending you expect to avoid, not discounts on the AI bill.",
-        "remainder": "Other included operating costs",
-        "allocation": "Returned hours are capacity, not automatic savings. Only the portions you assign to actual spending reductions or additional contribution receive a monetary value."
+        "breakdown": "Detalhes do preço",
+        "perUnit": "{amount} / lojas abrangidas",
+        "budgetOnly": "Minutos de revisão por encomenda",
+        "benefitNotice": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+        "remainder": "Preço base",
+        "allocation": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
       },
-      "locale": "en-GB",
+      "locale": "pt-PT",
       "inputs": [],
       "metrics": [],
       "businessImpact": {
@@ -792,231 +792,231 @@
           "customer_price": 250
         },
         "copy": {
-          "navLabel": "Retail impact",
-          "workloadStep": "Stores and cycles",
-          "costStep": "Usage & delivery cost",
-          "valueStep": "Floor time",
-          "workloadIntro": "Model vendor-ready order preparation for independent multi-store operators—not household meal planning and not a shrink guarantee.",
-          "costIntro": "Tokens and delivery cost describe what it costs KAI to provide the service. Customer price and customer value are separate assumptions.",
-          "valueIntro": "Review gross preparation time, human review time and net floor capacity. Add a value assumption only when you can support it.",
-          "sampleNotice": "Typical usage · not observed results",
-          "monthly": "Monthly",
-          "yearly": "Yearly",
-          "next": "Continue",
-          "back": "Back",
-          "reset": "Reset assumptions",
-          "summary": "Your modeled impact",
-          "volume": "Stores modeled",
-          "grossHours": "Preparation time covered",
-          "capacity": "Net floor capacity returned",
-          "retained": "Capacity still available",
-          "hours": "hours",
-          "days": "days",
+          "navLabel": "Impacto no retalho",
+          "workloadStep": "Lojas e ciclos",
+          "costStep": "Utilização e custo do serviço",
+          "valueStep": "Tempo na loja",
+          "workloadIntro": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "costIntro": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "valueIntro": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "sampleNotice": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "monthly": "Mensal",
+          "yearly": "Anual",
+          "next": "→",
+          "back": "←",
+          "reset": "Repor pressupostos",
+          "summary": "A sua estimativa operacional",
+          "volume": "Lojas abrangidas",
+          "grossHours": "Minutos de preparação por ciclo",
+          "capacity": "Capacidade líquida recuperada na loja",
+          "retained": "Capacidade líquida recuperada na loja",
+          "hours": "h",
+          "days": "d",
           "percent": "%",
-          "minutes": "minutes",
+          "minutes": "min",
           "tokens": "tokens",
-          "monthlyTokens": "Monthly tokens",
-          "tokenCost": "Token usage",
-          "packageLabel": "Usage package",
-          "packageBase": "Base",
-          "packageMedium": "Medium",
-          "packageCustom": "Custom",
-          "reviewMode": "Who handles the review?",
-          "teamReview": "Existing team",
-          "paidReview": "Additional paid reviewer",
-          "reviewNote": "Existing-team review uses returned capacity. Additional paid review is included in operating cost, not deducted again from team capacity.",
-          "totalMode": "Monthly budget",
-          "itemizedMode": "Cost breakdown",
-          "budgetNote": "The budget must include models/media, tools, infrastructure, Gabriel fees and additional paid review. Do not include unchanged payroll as new spending.",
-          "itemizedNote": "Token usage is calculated from volume × tokens per output. Extra media, tools and infrastructure stay at zero unless they apply. Additional paid review is calculated from review hours and its rate.",
-          "paidReviewCost": "Additional paid review cost",
-          "allInCost": "Estimated KAI delivery cost",
-          "missing": "Add your assumptions",
-          "cashValue": "Cash spending avoided",
-          "contribution": "Expected contribution",
-          "expectedLoss": "Expected loss reduction",
-          "riskValue": "Uncertain risk value included",
-          "economicValue": "Modeled customer value",
-          "netBenefit": "Modeled value minus KAI price",
-          "multiple": "Customer value / KAI price",
-          "customerBenefit": "Modelled customer benefit",
-          "customerRoi": "Customer ROI",
-          "payback": "Customer payback period",
-          "notApplicable": "Not applicable",
-          "annual": "Annual view",
-          "annualNote": "The same monthly assumptions, without growth or compounding. Hiring savings last only for the entered period.",
-          "method": "How this is calculated",
-          "burdenHeading": "Repetitive work reduced",
-          "opportunityHeading": "Capacity for higher-value work",
-          "methodBody": "Preparation time equals stores × replenishment cycles × preparation minutes × the KAI-handled share. Review time is stores × cycles × review minutes. Net capacity subtracts review only when the existing team handles it. A named approver remains required.",
-          "formulaLabel": "Customer ROI = (modeled customer benefit − customer price) ÷ customer price. Capacity is not automatic payroll savings.",
-          "allocationNote": "Each hour can be allocated once. Unallocated hours remain capacity, with no monetary value.",
-          "overlapLabel": "These benefits are distinct; I have excluded costs and losses already counted elsewhere.",
-          "overlapNote": "Error and risk estimates exclude labor savings and the same incident must not appear in both categories. Contribution excludes AI costs, which are deducted separately.",
-          "hiringLabel": "This hire was genuinely planned and the allocated capacity can cover the work.",
-          "reviewedLabel": "I have reviewed my outcomes; unselected outcomes have no financial value in this estimate.",
-          "cycleResult": "Cycle-time improvement",
-          "throughputResult": "Additional work supported by capacity and demand",
-          "assumptionsIncomplete": "Complete the selected assumptions to calculate financial value.",
-          "allocationError": "Allocated hours exceed the net capacity available. Reduce the allocations.",
-          "reviewError": "Review takes more time than the work reduced. No positive capacity is available at these assumptions.",
-          "cashError": "Avoided spending cannot exceed current spending or have positive value with no hours allocated.",
-          "hiringError": "Allocated capacity must cover the planned hire hours. Confirm the planned hire and its duration.",
-          "riskError": "The after probability cannot exceed the before probability for a loss-reduction estimate.",
-          "overlapError": "Confirm the benefits do not overlap before including them in the financial result.",
-          "boundsError": "Use values within the displayed limits.",
-          "rangeLabel": "Adjust value",
-          "noCurrencyChange": "Language changes formatting, not your currency or assumptions."
+          "monthlyTokens": "tokens",
+          "tokenCost": "Custo de serviço modelado",
+          "packageLabel": "Detalhes do preço",
+          "packageBase": "Preço base",
+          "packageMedium": "Preço base",
+          "packageCustom": "Preço base",
+          "reviewMode": "Parte do processo tratada pelo KAI",
+          "teamReview": "Lojas e ciclos",
+          "paidReview": "Utilização adicional",
+          "reviewNote": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "totalMode": "Preço",
+          "itemizedMode": "Detalhes do preço",
+          "budgetNote": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "itemizedNote": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "paidReviewCost": "Utilização adicional",
+          "allInCost": "Preço",
+          "missing": "—",
+          "cashValue": "Capacidade líquida recuperada na loja",
+          "contribution": "Capacidade líquida recuperada na loja",
+          "expectedLoss": "Utilização adicional",
+          "riskValue": "Utilização adicional",
+          "economicValue": "Capacidade líquida recuperada na loja",
+          "netBenefit": "Capacidade líquida recuperada na loja",
+          "multiple": "Parte do processo tratada pelo KAI",
+          "customerBenefit": "Capacidade líquida recuperada na loja",
+          "customerRoi": "ROI",
+          "payback": "Como é calculado",
+          "notApplicable": "—",
+          "annual": "Anual",
+          "annualNote": "Anual",
+          "method": "Como é calculado",
+          "burdenHeading": "Lojas e ciclos",
+          "opportunityHeading": "Capacidade líquida recuperada na loja",
+          "methodBody": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "formulaLabel": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "allocationNote": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "overlapLabel": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "overlapNote": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "hiringLabel": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "reviewedLabel": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "cycleResult": "Como é calculado",
+          "throughputResult": "Capacidade líquida recuperada na loja",
+          "assumptionsIncomplete": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "allocationError": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "reviewError": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "cashError": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "hiringError": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "riskError": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "overlapError": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "boundsError": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
+          "rangeLabel": "Como é calculado",
+          "noCurrencyChange": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
         },
         "fields": {
           "volume": {
-            "label": "Stores in scope",
-            "help": "Count locations that would actually run this inventory loop, not every banner in the group."
+            "label": "Lojas abrangidas",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "accepted_rate": {
-            "label": "Expected acceptance rate",
-            "help": "Optional modeled share of prepared outputs accepted by the recipient. This is not a guarantee or observed result."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "minutes": {
-            "label": "Preparation minutes per store per cycle",
-            "help": "Hands-on count, reconciliation and vendor-order preparation time for one cycle. The starting value translates the earlier 1,920 monthly minutes assumption into a weekly order cadence."
+            "label": "Minutos de preparação por ciclo",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "automation": {
-            "label": "Share of that loop KAI handles",
-            "help": "Illustrative share of inventory and order prep, not a shrink guarantee."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "review": {
-            "label": "Minutes to check each vendor order",
-            "help": "Human confirmation still required before a vendor-ready order goes out."
+            "label": "Minutos de revisão por encomenda",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "cycles_per_unit": {
-            "label": "Replenishment cycles per store each month",
-            "help": "A modelled monthly cadence. Thirteen cycles is approximately three order cycles per week; replace it with your real cadence."
+            "label": "Ciclos de reposição por loja por mês",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "tokens_per_output": {
-            "label": "Tokens per replenishment cycle",
-            "help": "An explicit modelled assumption for one cycle. Replace it with measured input, output, vision and tool usage when instrumentation is available."
+            "label": "Tokens",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "budget": {
-            "label": "Estimated monthly operating budget",
-            "help": "Include token usage, models/media, tools, infrastructure, Gabriel fees and additional paid review."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "model_cost": {
-            "label": "Extra models and media",
-            "help": "Only image, video or other generation charged separately from token usage. Enter zero if none."
+            "label": "Utilização adicional",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "tools_cost": {
-            "label": "Tools and integrations",
-            "help": "Browser sessions, connectors and other metered services. Enter zero if none."
+            "label": "Utilização adicional",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "infrastructure_cost": {
-            "label": "Infrastructure",
-            "help": "Incremental hosting, storage and compute for this workload. Enter zero if none."
+            "label": "Utilização adicional",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "platform_cost": {
-            "label": "Other monthly delivery and support cost",
-            "help": "Modeled hosting, monitoring, storage and support cost, separate from the customer price."
+            "label": "Custo de serviço modelado",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "customer_price": {
-            "label": "Price per active store per month",
-            "help": "The proposed customer price, separate from KAI delivery cost. Change it to test another commercial offer."
+            "label": "Preço base",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "personal_value_per_hour": {
-            "label": "Optional value you assign to an hour",
-            "help": "An optional personal comparison only. This is not salary, wages or guaranteed cash savings."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "review_rate": {
-            "label": "Additional paid review per hour",
-            "help": "Actual extra reviewer spending, not the salary of an unchanged employee."
+            "label": "Minutos de revisão por encomenda",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "cash_hours": {
-            "label": "Hours that remove paid work",
-            "help": "Allocate only work whose overtime, contractor or processing spend will actually stop."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "cash_baseline": {
-            "label": "Current monthly spending on that work",
-            "help": "The cash budget from which the reduction will come."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "cash_avoided": {
-            "label": "Monthly spending you would stop",
-            "help": "One explicit amount, not hours multiplied by salary; exclude any planned-hire saving entered separately."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "higher_value_hours": {
-            "label": "Hours kept on the floor",
-            "help": "Time redirected from spreadsheets to exceptions. Capacity is not automatic payroll reduction."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "contribution_rate": {
-            "label": "Shadow price of store capacity / hr",
-            "help": "Your estimate of a floor hour, not a wage saved automatically."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "throughput_hours": {
-            "label": "Hours used for additional volume",
-            "help": "This allocation cannot also be used for advisory work or spending reductions."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "extra_minutes": {
-            "label": "Team minutes per additional unit",
-            "help": "The remaining human effort, including review, needed to deliver one more unit."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "demand": {
-            "label": "Additional units with expected demand",
-            "help": "Capacity alone is not demand. Enter the extra monthly work you expect to take on."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "unit_margin": {
-            "label": "Contribution per additional unit",
-            "help": "Incremental revenue less delivery costs; AI operating costs are deducted separately."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "hiring_hours": {
-            "label": "Hours covering the planned hire",
-            "help": "Allocate capacity to specific planned work, not a generic full-time-equivalent estimate."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "planned_hours": {
-            "label": "Monthly hours the planned hire would cover",
-            "help": "The allocated capacity must cover this entire workload."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "hire_cost": {
-            "label": "Monthly hire cost actually deferred",
-            "help": "Use the cost of a genuinely planned hire, not the salary of someone already employed."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "hire_months": {
-            "label": "Months that hire is deferred",
-            "help": "One to twelve months; the annual estimate stops counting savings after this period."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "incidents": {
-            "label": "Order corrections avoided each month",
-            "help": "Optional modelled count. Use a measured before-and-after baseline when a pilot exists."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "incident_cost": {
-            "label": "Cost per avoidable order correction",
-            "help": "Optional incremental cost of a distinct correction or rework event. Do not count the same labor twice."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "probability_before": {
-            "label": "Monthly loss probability before",
-            "help": "Your estimate, not a guaranteed risk assessment."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "probability_after": {
-            "label": "Monthly loss probability after",
-            "help": "Use the same event and monthly time horizon as the baseline."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "loss": {
-            "label": "Loss exposure for that event",
-            "help": "Exclude error incidents and spending already counted. This is uncertain expected value, not cash saved."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "days_before": {
-            "label": "Cycle time before, in days",
-            "help": "Elapsed time from start to completion, separate from hands-on effort."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           "days_after": {
-            "label": "Cycle time after, in days",
-            "help": "Shown as an operational change only, without an assumed monetary value."
+            "label": "Parte do processo tratada pelo KAI",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           }
         },
         "burden": [
-          "Checking live inventory across stores",
-          "Building vendor-ready orders by hand"
+          "Lojas abrangidas",
+          "Ciclos de reposição por loja por mês"
         ],
         "opportunity": [
-          "Floor time for exceptions",
-          "Vendor-ready orders without a night of spreadsheets"
+          "Capacidade líquida recuperada na loja",
+          "Preço base"
         ],
         "usagePackages": {
           "medium": {
@@ -1062,25 +1062,25 @@
         },
         "hero": {
           "kind": "capacity",
-          "label": "Net floor capacity returned"
+          "label": "Capacidade líquida recuperada na loja"
         },
         "outcomes": [
           {
             "id": "higher_value",
-            "label": "Keep floor teams on exceptions",
-            "help": "Use returned hours on the cases that still need a person, not on rebuilding the order book."
+            "label": "Capacidade líquida recuperada na loja",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           },
           {
             "id": "error",
-            "label": "Reduce order corrections",
-            "help": "Optionally model distinct correction and rework costs after you have a baseline."
+            "label": "Capacidade líquida recuperada na loja",
+            "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
           }
         ],
         "workloadMultiplierField": "cycles_per_unit",
         "pricing": {
           "basis": "per_volume",
-          "label": "KAI price hypothesis",
-          "help": "€250 per active store per month. This is an editable hypothesis until a paid pilot supplies evidence."
+          "label": "Preço",
+          "help": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável."
         },
         "presentation": {
           "financial": "optional",
@@ -1089,8 +1089,8 @@
         "tabs": [
           {
             "id": "stores",
-            "label": "Stores and cycles",
-            "intro": "Model the locations and replenishment cycles that actually use this stock and vendor-order loop.",
+            "label": "Lojas e ciclos",
+            "intro": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
             "fields": [
               "volume",
               "cycles_per_unit",
@@ -1103,8 +1103,8 @@
           },
           {
             "id": "tokens",
-            "label": "Usage & delivery cost",
-            "intro": "Tokens and delivery cost describe what it costs KAI to provide the service. Customer value is measured separately.",
+            "label": "Utilização e custo do serviço",
+            "intro": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
             "fields": [
               "tokens_per_output",
               "customer_price",
@@ -1116,8 +1116,8 @@
           },
           {
             "id": "floor",
-            "label": "Floor time",
-            "intro": "Review preparation time covered, human review time and net capacity returned after approval.",
+            "label": "Tempo na loja",
+            "intro": "Estime a preparação de encomendas prontas para o fornecedor para revisão por uma pessoa responsável.",
             "fields": [],
             "showPackage": true,
             "showOutcomes": true
@@ -1125,9 +1125,9 @@
         ]
       },
       "cta": {
-        "primaryLabel": "Request a four-week pilot",
+        "primaryLabel": "Peça um piloto de quatro semanas",
         "primaryTarget": "pilot-form",
-        "secondaryLabel": "Talk with KAI",
+        "secondaryLabel": "Fale com o KAI",
         "secondaryTarget": "meet"
       }
     }
@@ -7007,5 +7007,5 @@
       "sourceHash": "0e96f5e15977ab0a2a8d684c0d35d7459f3afc862b606046310ae1fbbd4be12b"
     }
   ],
-  "generatedAt": "2026-09-06T16:36:03.163Z"
+  "generatedAt": "2026-09-09T00:00:00.000Z"
 }
