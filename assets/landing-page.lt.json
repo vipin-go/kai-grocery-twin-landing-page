@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "language": "lt",
   "regionKey": null,
-  "sourceRevision": "c2aa50214e0c1cc769cc3cd1943e802ca3d3e616049ec0874c4360dab12c041e",
+  "sourceRevision": "95323770174a4f409490fec920a2b42209d3de358981c28c791c40e4d59dda4c",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -404,9 +404,9 @@
         "methodologyVersion": 2,
         "enabled": true,
         "kicker": "Home impact",
-        "heading": "ROI Calculator",
-        "subheading": "A typical household month is already filled. Change the package if you plan more or less often.",
-        "disclaimer": "Illustrative household estimates, not guaranteed savings. Your time is not priced as a salary. Food value counts only if it replaces spending you would otherwise make; check prices, portions and dietary needs yourself.",
+        "heading": "Time & Friction Estimator",
+        "subheading": "Estimate planning time and household decisions removed from a typical month. The starting values are modelled hypotheses, not observed results.",
+        "disclaimer": "Modelled household estimates, not guaranteed savings. Personal time is not treated as salary. Food value counts only if it replaces spending you would otherwise make; check prices, portions and dietary needs yourself.",
         "currency": "EUR",
         "currencyCopy": {
           "native": "Amounts in {currency}.",
@@ -436,20 +436,22 @@
             "model_cost": 0,
             "tools_cost": 0,
             "infrastructure_cost": 0,
-            "platform_cost": 39,
+            "platform_cost": 0.75,
+            "customer_price": 6.99,
+            "personal_value_per_hour": null,
             "higher_value_hours": 0,
             "contribution_rate": 0,
             "incidents": 8,
             "incident_cost": 3.8
           },
           "copy": {
-            "navLabel": "ROI",
+            "navLabel": "Impact estimate",
             "workloadStep": "Your routine",
             "costStep": "Your KAI usage",
-            "valueStep": "Food you keep",
+            "valueStep": "Optional money comparison",
             "workloadIntro": "Count time spent checking food, choosing recipes and preparing your grocery list—not cooking, travel or time in the shop.",
-            "costIntro": "Typical KAI access and token usage for this household package. This is a modeled assumption, not a price quote.",
-            "valueIntro": "Time back is yours to enjoy. A small food-waste estimate is included so the money comparison is not empty.",
+            "costIntro": "Tokens and delivery cost describe what it costs KAI to provide the service. Customer price and household value are separate hypotheses.",
+            "valueIntro": "Time back is yours to enjoy. Add an explicit food-waste or personal-value assumption if you want a money comparison.",
             "sampleNotice": "Typical household usage · adjust these numbers to your kitchen",
             "monthly": "Monthly",
             "yearly": "Yearly",
@@ -481,22 +483,25 @@
             "budgetNote": "Include KAI access, extra services and any extra paid help once. Do not include your usual grocery bill or put a price on your own time.",
             "itemizedNote": "Token usage is calculated from your plans. Extra services stay at zero unless you pay for them separately.",
             "paidReviewCost": "Extra paid checking",
-            "allInCost": "Your KAI running cost",
+            "allInCost": "Estimated KAI delivery cost",
             "missing": "Add your assumptions",
             "cashValue": "Cash spending avoided",
             "contribution": "Expected contribution",
             "expectedLoss": "Estimated food value retained",
             "riskValue": "Uncertain risk value included",
-            "economicValue": "Modeled food value",
-            "netBenefit": "Food value minus KAI cost",
+            "economicValue": "Modeled optional value",
+            "netBenefit": "Modeled value minus KAI cost",
             "multiple": "Food value / KAI cost",
+            "customerBenefit": "Modelled customer benefit",
+            "customerRoi": "Customer ROI",
+            "payback": "Customer payback period",
             "notApplicable": "Not applicable",
             "annual": "Annual view",
             "annualNote": "Twelve months using the same routine and food-waste assumptions. No growth, compounding or guaranteed savings.",
             "method": "How this is calculated",
             "burdenHeading": "Less grocery admin",
             "opportunityHeading": "More room for everyday life",
-            "methodBody": "Time back equals planning sessions × minutes per session × the share KAI could reduce, minus your checking time. Personal time stays separate from money. Optional food value equals portions you expect to stop wasting × their ingredient cost, only where using that food replaces a future purchase.",
+            "methodBody": "Hours back equals planning sessions × minutes per session × the share KAI could reduce, minus your checking time. Personal time stays separate from money unless you explicitly enter a comparison value. Optional food value equals portions you expect to stop wasting × their ingredient cost, only where using that food replaces a future purchase.",
             "formulaLabel": "Food value minus KAI running cost = modeled net benefit. Food value divided by KAI running cost = the multiple; zero cost has no defined multiple.",
             "allocationNote": "All returned time remains personal time. It is never converted into wages, business revenue or cash savings.",
             "overlapLabel": "These portions would otherwise be wasted, replace a future purchase, and are not also counted as a discount or another saving.",
@@ -533,6 +538,10 @@
               "label": "Minutes to check each plan",
               "help": "Allow time to verify ingredients, portions, allergies, current prices and the final shopping list."
             },
+            "cycles_per_unit": {
+              "label": "Cycles per unit each month",
+              "help": "How many recurring order, review or processing cycles each unit runs in a typical month."
+            },
             "tokens_per_output": {
               "label": "Tokens to build one plan",
               "help": "Modeled tokens to turn a fridge or receipt scan into a checked plan. Shown so you can see usage; you do not need a provider price."
@@ -554,8 +563,16 @@
               "help": "Enter zero unless you pay for this separately."
             },
             "platform_cost": {
-              "label": "KAI / Gabriel access",
-              "help": "Typical household access for this package; not a quoted subscription price."
+              "label": "Other delivery and support cost",
+              "help": "Modeled hosting, storage, monitoring and support cost. It is not the household price."
+            },
+            "customer_price": {
+              "label": "KAI household price hypothesis",
+              "help": "The proposed customer price, separate from estimated delivery cost. Change it to test a different offer."
+            },
+            "personal_value_per_hour": {
+              "label": "Optional value you assign to one hour",
+              "help": "Use only for a personal comparison. This is not salary, wages or guaranteed savings."
             },
             "review_rate": {
               "label": "Extra paid checking per hour",
@@ -656,7 +673,7 @@
             "medium": {
               "volume": 4,
               "tokensPerOutput": 15000,
-              "platform_cost": 39,
+              "platform_cost": 0.75,
               "minutes": 45,
               "automation": 50,
               "review": 5,
@@ -666,12 +683,13 @@
               "higher_value_hours": 1.1,
               "contribution_rate": 0,
               "incidents": 8,
-              "incident_cost": 3.8
+              "incident_cost": 3.8,
+              "customer_price": 6.99
             },
             "base": {
               "volume": 2,
               "tokensPerOutput": 15000,
-              "platform_cost": 19,
+              "platform_cost": 0.5,
               "minutes": 45,
               "automation": 50,
               "review": 5,
@@ -681,20 +699,19 @@
               "higher_value_hours": 0.5,
               "contribution_rate": 0,
               "incidents": 4,
-              "incident_cost": 3.8
+              "incident_cost": 3.8,
+              "customer_price": 6.99
             }
           },
           "defaultPackage": "medium",
           "costMode": "itemized",
           "reviewMode": "team",
-          "selected": [
-            "error"
-          ],
+          "selected": [],
           "confirmations": {
-            "overlap": true,
-            "hiring": true,
-            "outcomes": true,
-            "hide": true
+            "overlap": false,
+            "hiring": false,
+            "outcomes": false,
+            "hide": false
           },
           "hero": {
             "kind": "volume",
@@ -707,6 +724,16 @@
               "help": "Optional: estimate fewer wasted portions. KAI does not guarantee lower grocery spending."
             }
           ],
+          "pricing": {
+            "basis": "fixed",
+            "annualPrice": 59,
+            "label": "KAI price hypothesis",
+            "help": "€6.99 per household per month or €59 per year. This is an editable hypothesis until paid household evidence exists."
+          },
+          "presentation": {
+            "financial": "optional",
+            "showCustomerEconomics": true
+          },
           "tabs": [
             {
               "id": "routine",
@@ -724,9 +751,10 @@
             {
               "id": "usage",
               "label": "Your KAI usage",
-              "intro": "A typical household token envelope and KAI access fee. Tokens stay in the cost breakdown; you do not need provider prices.",
+              "intro": "Review the modelled token envelope, delivery cost and customer price separately. Provider rates are not a claim about your household value.",
               "fields": [
                 "tokens_per_output",
+                "customer_price",
                 "platform_cost",
                 "model_cost"
               ],
@@ -734,9 +762,11 @@
             },
             {
               "id": "food",
-              "label": "Food you keep",
-              "intro": "Time back is yours to enjoy. A small food-waste estimate is prefilled so you can see a money comparison; set portions to zero to keep this as time only.",
-              "fields": [],
+              "label": "Optional money comparison",
+              "intro": "Time back is yours to enjoy. Add food-waste value or an optional personal hourly value only when it replaces spending or helps you compare the hypothesis.",
+              "fields": [
+                "personal_value_per_hour"
+              ],
               "showOutcomes": true
             }
           ]
@@ -764,10 +794,10 @@
     "roiCalculator": {
       "methodologyVersion": 2,
       "enabled": true,
-      "kicker": "Store impact",
-      "heading": "ROI Calculator",
-      "subheading": "A typical retail month: six stores, vendor-ready orders and live inventory. This is not a household plan.",
-      "disclaimer": "A scenario built from typical store-ops usage, not observed shrink results. Floor hours are capacity, not an automatic payroll reduction.",
+      "kicker": "Retail impact",
+      "heading": "Store-ops capacity estimate",
+      "subheading": "Model vendor-ready order preparation for a multi-store operator. One named human approver remains responsible for every consequential order.",
+      "disclaimer": "Modelled store-ops usage, not observed shrink results or guaranteed savings. KAI prepares and formats orders; a named approver decides what is placed.",
       "currency": "EUR",
       "currencyCopy": {
         "native": "Amounts in {currency}.",
@@ -790,25 +820,27 @@
       "businessImpact": {
         "defaults": {
           "volume": 6,
-          "minutes": 1920,
+          "minutes": 148,
           "automation": 50,
           "review": 30,
-          "tokens_per_output": 40000,
+          "tokens_per_output": 100000,
           "model_cost": 0,
           "tools_cost": 0,
           "infrastructure_cost": 0,
-          "platform_cost": 1500,
-          "higher_value_hours": 93,
-          "contribution_rate": 35
+          "platform_cost": 120,
+          "higher_value_hours": 4.4,
+          "contribution_rate": 35,
+          "cycles_per_unit": 13,
+          "customer_price": 250
         },
         "copy": {
-          "navLabel": "ROI",
-          "workloadStep": "Stores in scope",
-          "costStep": "Token usage",
+          "navLabel": "Retail impact",
+          "workloadStep": "Stores and cycles",
+          "costStep": "Usage & delivery cost",
           "valueStep": "Floor time",
-          "workloadIntro": "Model live inventory and vendor-ready orders—not household meal planning and not a shrink guarantee.",
-          "costIntro": "Typical token consumption and the platform fee are prefilled for an average user. Edit them if your usage differs.",
-          "valueIntro": "This is the modeled output and capacity for that typical usage. Edit the assumptions if they do not match your work.",
+          "workloadIntro": "Model vendor-ready order preparation for independent multi-store operators—not household meal planning and not a shrink guarantee.",
+          "costIntro": "Tokens and delivery cost describe what it costs KAI to provide the service. Customer price and customer value are separate assumptions.",
+          "valueIntro": "Review gross preparation time, human review time and net floor capacity. Add a value assumption only when you can support it.",
           "sampleNotice": "Typical usage · not observed results",
           "monthly": "Monthly",
           "yearly": "Yearly",
@@ -817,9 +849,9 @@
           "reset": "Reset assumptions",
           "summary": "Your modeled impact",
           "volume": "Stores modeled",
-          "grossHours": "Repetitive work reduced",
-          "capacity": "Floor hours returned",
-          "retained": "Capacity kept available",
+          "grossHours": "Preparation time covered",
+          "capacity": "Net floor capacity returned",
+          "retained": "Capacity still available",
           "hours": "hours",
           "days": "days",
           "percent": "%",
@@ -840,23 +872,26 @@
           "budgetNote": "The budget must include models/media, tools, infrastructure, Gabriel fees and additional paid review. Do not include unchanged payroll as new spending.",
           "itemizedNote": "Token usage is calculated from volume × tokens per output. Extra media, tools and infrastructure stay at zero unless they apply. Additional paid review is calculated from review hours and its rate.",
           "paidReviewCost": "Additional paid review cost",
-          "allInCost": "Operating cost",
+          "allInCost": "Estimated KAI delivery cost",
           "missing": "Add your assumptions",
           "cashValue": "Cash spending avoided",
           "contribution": "Expected contribution",
           "expectedLoss": "Expected loss reduction",
           "riskValue": "Uncertain risk value included",
-          "economicValue": "Modeled economic value",
-          "netBenefit": "Net modeled benefit",
-          "multiple": "Economic return multiple",
+          "economicValue": "Modeled customer value",
+          "netBenefit": "Modeled value minus KAI price",
+          "multiple": "Customer value / KAI price",
+          "customerBenefit": "Modelled customer benefit",
+          "customerRoi": "Customer ROI",
+          "payback": "Customer payback period",
           "notApplicable": "Not applicable",
           "annual": "Annual view",
           "annualNote": "The same monthly assumptions, without growth or compounding. Hiring savings last only for the entered period.",
           "method": "How this is calculated",
           "burdenHeading": "Repetitive work reduced",
           "opportunityHeading": "Capacity for higher-value work",
-          "methodBody": "Operating burden removed (negative productivity) returns capacity. Higher-value work (potential positive productivity) creates economic value only if that capacity is used. Hours alone are not cash savings. Token cost uses a modeled input/output mix, not a provider quote.",
-          "formulaLabel": "Economic value ÷ operating cost = economic return multiple. Net benefit subtracts operating cost once.",
+          "methodBody": "Preparation time equals stores × replenishment cycles × preparation minutes × the KAI-handled share. Review time is stores × cycles × review minutes. Net capacity subtracts review only when the existing team handles it. A named approver remains required.",
+          "formulaLabel": "Customer ROI = (modeled customer benefit − customer price) ÷ customer price. Capacity is not automatic payroll savings.",
           "allocationNote": "Each hour can be allocated once. Unallocated hours remain capacity, with no monetary value.",
           "overlapLabel": "These benefits are distinct; I have excluded costs and losses already counted elsewhere.",
           "overlapNote": "Error and risk estimates exclude labor savings and the same incident must not appear in both categories. Contribution excludes AI costs, which are deducted separately.",
@@ -881,20 +916,24 @@
             "help": "Count locations that would actually run this inventory loop, not every banner in the group."
           },
           "minutes": {
-            "label": "Floor minutes per store each month",
-            "help": "Hands-on inventory and ordering time per store in a typical month. 1920 minutes is eight hours a week."
+            "label": "Preparation minutes per store per cycle",
+            "help": "Hands-on count, reconciliation and vendor-order preparation time for one cycle. The starting value translates the earlier 1,920 monthly minutes assumption into a weekly order cadence."
           },
           "automation": {
             "label": "Share of that loop KAI handles",
             "help": "Illustrative share of inventory and order prep, not a shrink guarantee."
           },
           "review": {
-            "label": "Minutes to check each store order",
+            "label": "Minutes to check each vendor order",
             "help": "Human confirmation still required before a vendor-ready order goes out."
           },
+          "cycles_per_unit": {
+            "label": "Replenishment cycles per store each month",
+            "help": "A modelled monthly cadence. Thirteen cycles is approximately three order cycles per week; replace it with your real cadence."
+          },
           "tokens_per_output": {
-            "label": "Tokens per store-month",
-            "help": "Modeled tokens to keep one store’s inventory and orders current."
+            "label": "Tokens per replenishment cycle",
+            "help": "An explicit modelled assumption for one cycle. Replace it with measured input, output, vision and tool usage when instrumentation is available."
           },
           "budget": {
             "label": "Estimated monthly operating budget",
@@ -913,8 +952,16 @@
             "help": "Incremental hosting, storage and compute for this workload. Enter zero if none."
           },
           "platform_cost": {
-            "label": "Gabriel platform fee",
-            "help": "Typical monthly access for this usage package. This is a modeled assumption, not a price quote."
+            "label": "Other monthly delivery and support cost",
+            "help": "Modeled hosting, monitoring, storage and support cost, separate from the customer price."
+          },
+          "customer_price": {
+            "label": "Price per active store per month",
+            "help": "The proposed customer price, separate from KAI delivery cost. Change it to test another commercial offer."
+          },
+          "personal_value_per_hour": {
+            "label": "Optional value you assign to an hour",
+            "help": "An optional personal comparison only. This is not salary, wages or guaranteed cash savings."
           },
           "review_rate": {
             "label": "Additional paid review per hour",
@@ -934,7 +981,7 @@
           },
           "higher_value_hours": {
             "label": "Hours kept on the floor",
-            "help": "Time redirected from spreadsheets to exceptions."
+            "help": "Time redirected from spreadsheets to exceptions. Capacity is not automatic payroll reduction."
           },
           "contribution_rate": {
             "label": "Shadow price of store capacity / hr",
@@ -973,12 +1020,12 @@
             "help": "One to twelve months; the annual estimate stops counting savings after this period."
           },
           "incidents": {
-            "label": "Expected avoided errors per month",
-            "help": "Use your baseline and expected reduction. Exclude incidents also counted as risk reduction."
+            "label": "Order corrections avoided each month",
+            "help": "Optional modelled count. Use a measured before-and-after baseline when a pilot exists."
           },
           "incident_cost": {
-            "label": "Incremental cost per error",
-            "help": "Exclude labor, refunds or other losses already included elsewhere."
+            "label": "Cost per avoidable order correction",
+            "help": "Optional incremental cost of a distinct correction or rework event. Do not count the same labor twice."
           },
           "probability_before": {
             "label": "Monthly loss probability before",
@@ -1010,63 +1057,81 @@
           "Vendor-ready orders without a night of spreadsheets"
         ],
         "usagePackages": {
-          "base": {
-            "volume": 3,
-            "tokensPerOutput": 40000,
-            "platform_cost": 990,
-            "minutes": 1920,
-            "automation": 50,
-            "review": 30,
-            "model_cost": 0,
-            "tools_cost": 0,
-            "infrastructure_cost": 0,
-            "higher_value_hours": 46.5,
-            "contribution_rate": 35
-          },
           "medium": {
             "volume": 6,
-            "tokensPerOutput": 40000,
-            "platform_cost": 1500,
-            "minutes": 1920,
+            "tokensPerOutput": 100000,
+            "platform_cost": 120,
+            "minutes": 148,
             "automation": 50,
             "review": 30,
             "model_cost": 0,
             "tools_cost": 0,
             "infrastructure_cost": 0,
-            "higher_value_hours": 93,
-            "contribution_rate": 35
+            "higher_value_hours": 57.2,
+            "contribution_rate": 35,
+            "cycles_per_unit": 13,
+            "customer_price": 250
+          },
+          "base": {
+            "volume": 3,
+            "tokensPerOutput": 100000,
+            "platform_cost": 60,
+            "minutes": 148,
+            "automation": 50,
+            "review": 30,
+            "model_cost": 0,
+            "tools_cost": 0,
+            "infrastructure_cost": 0,
+            "higher_value_hours": 28.6,
+            "contribution_rate": 35,
+            "cycles_per_unit": 13,
+            "customer_price": 250
           }
         },
         "defaultPackage": "medium",
         "costMode": "itemized",
         "reviewMode": "team",
-        "selected": [
-          "higher_value"
-        ],
+        "selected": [],
         "confirmations": {
-          "overlap": true,
-          "hiring": true,
-          "outcomes": true,
-          "hide": true
+          "overlap": false,
+          "hiring": false,
+          "outcomes": false,
+          "hide": false
         },
         "hero": {
-          "kind": "volume",
-          "label": "Stores with live inventory and vendor-ready orders"
+          "kind": "capacity",
+          "label": "Net floor capacity returned"
         },
         "outcomes": [
           {
             "id": "higher_value",
             "label": "Keep floor teams on exceptions",
             "help": "Use returned hours on the cases that still need a person, not on rebuilding the order book."
+          },
+          {
+            "id": "error",
+            "label": "Reduce order corrections",
+            "help": "Optionally model distinct correction and rework costs after you have a baseline."
           }
         ],
+        "workloadMultiplierField": "cycles_per_unit",
+        "pricing": {
+          "basis": "per_volume",
+          "label": "KAI price hypothesis",
+          "help": "€250 per active store per month. This is an editable hypothesis until a paid pilot supplies evidence."
+        },
+        "presentation": {
+          "financial": "optional",
+          "showCustomerEconomics": true
+        },
         "tabs": [
           {
             "id": "stores",
-            "label": "Stores in scope",
-            "intro": "How many locations you run this inventory loop for, and the monthly floor time you still spend today.",
+            "label": "Stores and cycles",
+            "intro": "Model the locations and replenishment cycles that actually use this stock and vendor-order loop.",
             "fields": [
               "volume",
+              "cycles_per_unit",
               "minutes",
               "automation",
               "review"
@@ -1076,10 +1141,11 @@
           },
           {
             "id": "tokens",
-            "label": "Token usage",
-            "intro": "Tokens per store-month to keep inventory and orders current, plus the operator Gabriel fee.",
+            "label": "Usage & delivery cost",
+            "intro": "Tokens and delivery cost describe what it costs KAI to provide the service. Customer value is measured separately.",
             "fields": [
               "tokens_per_output",
+              "customer_price",
               "platform_cost",
               "tools_cost",
               "infrastructure_cost"
@@ -1089,7 +1155,7 @@
           {
             "id": "floor",
             "label": "Floor time",
-            "intro": "Hours returned to the floor at a store-capacity shadow price. This is not household grocery planning.",
+            "intro": "Review preparation time covered, human review time and net capacity returned after approval.",
             "fields": [],
             "showPackage": true,
             "showOutcomes": true
@@ -1097,11 +1163,10 @@
         ]
       },
       "cta": {
-        "primaryLabel": "Talk with KAI",
-        "primaryTarget": "contact",
-        "secondaryLabel": "See how it works",
-        "secondaryTarget": "how-it-works",
-        "privacyNote": "Your data stays private. Hours are capacity. Financial amounts are modeled estimates, not observed results."
+        "primaryLabel": "Request a four-week pilot",
+        "primaryTarget": "pilot-form",
+        "secondaryLabel": "Talk with KAI",
+        "secondaryTarget": "meet"
       }
     }
   },
@@ -1261,7 +1326,7 @@
         "roiCalculator",
         "kicker"
       ],
-      "sourceHash": "ebe2cd4f75352d44eb3360c76202b9dfbf849c08ff34a0b758b1db600a276afd"
+      "sourceHash": "5243e7bba9e479767adc2f397ecc1758ae9346ea8ecb8e80ee11d09131887594"
     },
     {
       "path": [
@@ -1269,7 +1334,7 @@
         "roiCalculator",
         "heading"
       ],
-      "sourceHash": "c63420eca3f95b8917c99f3a5cf72f000ab237bc6c658765b2176ebdd7b311be"
+      "sourceHash": "19fd5f80006ba77ec550bd8c7697b954987113b65afd508594b4396a9a8af0ea"
     },
     {
       "path": [
@@ -1277,7 +1342,7 @@
         "roiCalculator",
         "subheading"
       ],
-      "sourceHash": "670ab8cef4ceb0d0d95476ec957df64004cd63622603cf8f1c4c8773d8981d18"
+      "sourceHash": "d1409afee4701a1dd8db8e6c0712518678482cb1efc7e9f0ed266f87ecc4ad24"
     },
     {
       "path": [
@@ -1285,7 +1350,7 @@
         "roiCalculator",
         "disclaimer"
       ],
-      "sourceHash": "c0f585d538235bafa42b2115dd5335c8fe65f74d9e4b075338dd9001b8e6f9d8"
+      "sourceHash": "ddf60035d630005fa06849dfec50544df606ca6737e613a898b15e5458962eb9"
     },
     {
       "path": [
@@ -1349,7 +1414,7 @@
         "copy",
         "navLabel"
       ],
-      "sourceHash": "5bb1092e45d12cf344ec810103fd96adc18943f70e30d02a092a40f74fe906b0"
+      "sourceHash": "5243e7bba9e479767adc2f397ecc1758ae9346ea8ecb8e80ee11d09131887594"
     },
     {
       "path": [
@@ -1359,7 +1424,7 @@
         "copy",
         "workloadStep"
       ],
-      "sourceHash": "b7ec0f7323ce5ff9e24d1c271b6d60667254d5306dbda36ffe197570ca6b0d69"
+      "sourceHash": "14f62aade83a177ad1d2bdaa1b3d0efd407787c3a52676b7f1277488d826b200"
     },
     {
       "path": [
@@ -1369,7 +1434,7 @@
         "copy",
         "costStep"
       ],
-      "sourceHash": "67908a8d41024d69be93738c7d7eea6068b329355ab9c2d374f189f2bb5da700"
+      "sourceHash": "cb2c025ce645e374a0dcfc31167b28ff61e1b809e0677b30cc88ff526802b216"
     },
     {
       "path": [
@@ -1389,7 +1454,7 @@
         "copy",
         "workloadIntro"
       ],
-      "sourceHash": "aa8c4e78ef295b4ab73e221637eff180ea4458bcc1b13cb93e5c0e96174d028f"
+      "sourceHash": "1cf6ae07ff8309a40c82a3bcd0fe0d9f1e4993a7a6506b142810d9f726b6c29b"
     },
     {
       "path": [
@@ -1399,7 +1464,7 @@
         "copy",
         "costIntro"
       ],
-      "sourceHash": "99519bb6804fac080a4d66e5d56dbf3cf8ced07705ab1e9d902b3d98d456e6ad"
+      "sourceHash": "ccf83a8e9b2a5897db5f72ed504f36e6cabe5c52c0c21929d23d69efb5125e7c"
     },
     {
       "path": [
@@ -1409,7 +1474,7 @@
         "copy",
         "valueIntro"
       ],
-      "sourceHash": "6ff02073ccdf04b3e5de1dae681d73a69f2ff43a4d298ded9bb897fb2aa1867a"
+      "sourceHash": "bc29a2b399e2cee250051dc19b39f7f44a8034d9c14b51d67948e6fec2183fa7"
     },
     {
       "path": [
@@ -1499,7 +1564,7 @@
         "copy",
         "grossHours"
       ],
-      "sourceHash": "e0658dd800c6876a51b8ed6c3f6e26858e13bee233efe93b9e1fb61e5d3881b5"
+      "sourceHash": "24e9aab8fe0248c8c932d4b7de84fd443c616784c0fc56c819dac418067e19e6"
     },
     {
       "path": [
@@ -1509,7 +1574,7 @@
         "copy",
         "capacity"
       ],
-      "sourceHash": "8ecbbec20b58ed4bfec28f3842512c5be9c0a3b52b58816145d53f517d2a4b14"
+      "sourceHash": "67f0beec415db92f409fd7f75f2c0779deb5011df740969737e6b263523d03f5"
     },
     {
       "path": [
@@ -1519,7 +1584,7 @@
         "copy",
         "retained"
       ],
-      "sourceHash": "9819dd6a211c7416ea481b22bac402061626e4f7d914908a88d74781b5f9dd77"
+      "sourceHash": "6542df7ffed3e07ce671df955eb9af7b5269e82980f7d9706b664542b76e05d2"
     },
     {
       "path": [
@@ -1729,7 +1794,7 @@
         "copy",
         "allInCost"
       ],
-      "sourceHash": "1d4afe96bef061b581adde6612949328a8a6a1b00343c56b9c94a806c17d0dba"
+      "sourceHash": "5f18c2098625ad6c88439547440c92a69e4cd7c4a4e679ee7b00050b82cd07d3"
     },
     {
       "path": [
@@ -1789,7 +1854,7 @@
         "copy",
         "economicValue"
       ],
-      "sourceHash": "c4402679b0bd01837904090e68038db886c05ed3b1402e58296074c1cb135a57"
+      "sourceHash": "12dbd6af04431a013f30824c08d37edf8422cecec91a6face6d91e921cc7f672"
     },
     {
       "path": [
@@ -1799,7 +1864,7 @@
         "copy",
         "netBenefit"
       ],
-      "sourceHash": "387e61fb69f9bca35408f8250768560fe3d9db172de2af927403575107cc892c"
+      "sourceHash": "262cf90698719c9469e2f6722388b88b525365744b0e5013bd225a5bd1a6184d"
     },
     {
       "path": [
@@ -1809,7 +1874,37 @@
         "copy",
         "multiple"
       ],
-      "sourceHash": "10006b13cdfc279e8c6ce0e3d277d084ff911a5d6f8e8c191c738e90c286f6d3"
+      "sourceHash": "991651f35c0576e18af2f128612c8ac3d945ac3392af6646cf7714a24dcda722"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "copy",
+        "customerBenefit"
+      ],
+      "sourceHash": "e3c232c892c1e441bc54def591f80e50887ffc6fb040649a4ad93defecd59d84"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "copy",
+        "customerRoi"
+      ],
+      "sourceHash": "a420556d962cbcc1bae82fe6eba87a854de6f4211884db490e529f6ba7b43722"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "copy",
+        "payback"
+      ],
+      "sourceHash": "e96093c891d1c1698f3d590dcb3936c4435412404ddfa3952b6d76469e5cd3c2"
     },
     {
       "path": [
@@ -1879,7 +1974,7 @@
         "copy",
         "methodBody"
       ],
-      "sourceHash": "5c830e651ca8b5bf011287bfd4da0ac6b0611116c401f961f7f1bc55c50cdfe2"
+      "sourceHash": "101b488ae0ee2cc6c99938443681ca199ac03ef6bdd0a0b3a2efa94cfbade977"
     },
     {
       "path": [
@@ -1889,7 +1984,7 @@
         "copy",
         "formulaLabel"
       ],
-      "sourceHash": "056d3a33de02c97f5733e1f2589835715f6915396b6ee9e44e0ed9a6a465c4c5"
+      "sourceHash": "343bc8801a498f107b60a11826c237f583d5eb35bfb5e6abb268c6ce2377c3b3"
     },
     {
       "path": [
@@ -2092,7 +2187,7 @@
         "minutes",
         "label"
       ],
-      "sourceHash": "ad9aa7ca0b84affbe7daccfd086e7d4fdbfa7cec842d35861e08b062b8f530bb"
+      "sourceHash": "24d43771161e8efd3cd24946ac81566e5e3c4e02379b331483e494865406a48a"
     },
     {
       "path": [
@@ -2103,7 +2198,7 @@
         "minutes",
         "help"
       ],
-      "sourceHash": "179822f023bb3f41b525f38dbbd443de0a8c31b174950b5908a0306a9bc40283"
+      "sourceHash": "76f98bd2ba1ea1a808a294491f3f1af9447f9809c3069a0822a1e895a82643b3"
     },
     {
       "path": [
@@ -2136,7 +2231,7 @@
         "review",
         "label"
       ],
-      "sourceHash": "c57a168be27f06b4fcaa1123f97dc92c91fdfe0ddce5283ae29c9713271366dd"
+      "sourceHash": "4812c646123b748faa7a57f4beaee253d3e0e626dee687ace0df9ffdd2e2f7a4"
     },
     {
       "path": [
@@ -2155,10 +2250,32 @@
         "roiCalculator",
         "businessImpact",
         "fields",
+        "cycles_per_unit",
+        "label"
+      ],
+      "sourceHash": "68a89a2505d354148ee6b6df65ec543f7bd97f8d8e057fe3d31d592cb4121079"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "fields",
+        "cycles_per_unit",
+        "help"
+      ],
+      "sourceHash": "a60e306ee95a0e6d2b22340b44d963cd6c60ca5e9f8b45c9b2d0a03b0c7961db"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "fields",
         "tokens_per_output",
         "label"
       ],
-      "sourceHash": "5e9694463fe8884589c5313116b5eeae830634da6b1448ca9f6fbd18f883adc4"
+      "sourceHash": "d1cd74a687e795de23fa77fa662873adc726edca45631d1f7f775a1488e0e139"
     },
     {
       "path": [
@@ -2169,7 +2286,7 @@
         "tokens_per_output",
         "help"
       ],
-      "sourceHash": "e97bce843b1d42c517e7e0afb02f5ee3ec94f08b824c49f3a197b7b7377b735b"
+      "sourceHash": "72111de14c832780bd3d889e556ea5a86242ecaaf7eebd2c9d74b250596aedf7"
     },
     {
       "path": [
@@ -2268,7 +2385,7 @@
         "platform_cost",
         "label"
       ],
-      "sourceHash": "a6fcdd0b18bc1948c3d24b297f450e4a3e2c5067229cdd3e11bc43d89f8867b9"
+      "sourceHash": "e3f0932db9c3c85a0c427c253b85e16ae69291d43017a2175aec579bc729f27f"
     },
     {
       "path": [
@@ -2279,7 +2396,51 @@
         "platform_cost",
         "help"
       ],
-      "sourceHash": "6e9cc2bd308b9760c3e8c2fe9e311a11d6e100bd3c60f5c4763640168e8a1422"
+      "sourceHash": "808c954b196a7ecf51b18d03eae6f26646f0fac82f3268c1448514bca4bad24a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "fields",
+        "customer_price",
+        "label"
+      ],
+      "sourceHash": "e00b3a93cadb0f04269d167eac2f38528d8a07150e76f8596a06b90526231b2c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "fields",
+        "customer_price",
+        "help"
+      ],
+      "sourceHash": "c460a3555207414cb852ad46789cebfe27454ed404f5b02eda17acb5b6f91144"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "fields",
+        "personal_value_per_hour",
+        "label"
+      ],
+      "sourceHash": "201c99a96bf2891da28703d1cdbd1fce65358f8fabd2e4516307e3712b2b3049"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "fields",
+        "personal_value_per_hour",
+        "help"
+      ],
+      "sourceHash": "b48b72c5bcda4125000fc27e552c7de5c9f1d93ee39f88ff6e29a7e83081a8f7"
     },
     {
       "path": [
@@ -2389,7 +2550,7 @@
         "higher_value_hours",
         "help"
       ],
-      "sourceHash": "5acb58ac8ab5977f0b68552e39b9aaf2a3e67e8f4375d44290688f84654e2723"
+      "sourceHash": "af54c31713e9167c85005bffffecfa472a574a5954e52217c64b5e7fecb560ee"
     },
     {
       "path": [
@@ -2598,7 +2759,7 @@
         "incidents",
         "label"
       ],
-      "sourceHash": "8aaff313f31b8c58a5f56e385e877b29d536f3cba95e35212358647ee24abc98"
+      "sourceHash": "ef6ec28c5cb29697bc94c52d56ff2e03412bd41a5e13275283b5caaa48968972"
     },
     {
       "path": [
@@ -2609,7 +2770,7 @@
         "incidents",
         "help"
       ],
-      "sourceHash": "b55f19311cbed123955d757e231c7fb8466602a1b6d41a1cc181f88c1ba8db2b"
+      "sourceHash": "80ee6c64ff2a31fba372409dc91d03d74de97700c0dec72dc17e37c1574d6d1e"
     },
     {
       "path": [
@@ -2620,7 +2781,7 @@
         "incident_cost",
         "label"
       ],
-      "sourceHash": "091759b3dcf9693f366f5e4101c9270e859910d41058971e670957adc642b92b"
+      "sourceHash": "fee74c8619c4db96e47a5c94f90b4168256fe7db56a1da7adcb9a20edbbec61f"
     },
     {
       "path": [
@@ -2631,7 +2792,7 @@
         "incident_cost",
         "help"
       ],
-      "sourceHash": "3b63dfd0733b79e597701d5fb5a506e933b71e8be16e00af6776b9564b1aba41"
+      "sourceHash": "d57a8c14cbb3d605cfd9372a4d7afbd41a27f983f6749f2c9491f1bd0de81f5f"
     },
     {
       "path": [
@@ -2815,20 +2976,10 @@
         "landingPage",
         "roiCalculator",
         "businessImpact",
-        "selected",
-        0
-      ],
-      "sourceHash": "c8333158bd18b91a71842cfd38c2d6ddab471bda158b19286d96d4a4ed973ac4"
-    },
-    {
-      "path": [
-        "landingPage",
-        "roiCalculator",
-        "businessImpact",
         "hero",
         "label"
       ],
-      "sourceHash": "7d1df5fddb3d5bd1e1217c402a4d2bd14008c81d2a98a13c60a9447b345584fe"
+      "sourceHash": "67f0beec415db92f409fd7f75f2c0779deb5011df740969737e6b263523d03f5"
     },
     {
       "path": [
@@ -2857,11 +3008,82 @@
         "landingPage",
         "roiCalculator",
         "businessImpact",
+        "outcomes",
+        1,
+        "label"
+      ],
+      "sourceHash": "33d92bd17f4c56e1da0e97b254d433896a7462007a192de292ffc536b622fe5f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "outcomes",
+        1,
+        "help"
+      ],
+      "sourceHash": "e14bb0a65e0438d03968a3b852dc2fbe30c19493360cd80c6940cac440401e04"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "workloadMultiplierField"
+      ],
+      "sourceHash": "3ffffc1bd4fa2a6db2f87ccc2f13f473cc9f0c040a96c2f721f46525991d85f5"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "pricing",
+        "basis"
+      ],
+      "sourceHash": "3e00156520a1c350f2a7fceb3baff96817dc9cd576e428cd6aa6d659e6eba528"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "pricing",
+        "label"
+      ],
+      "sourceHash": "ccfbb6a68922661bee2708d35e1b9086c70194fb8875c998e65fd58958ef0143"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "pricing",
+        "help"
+      ],
+      "sourceHash": "e497dc377b6f41462f50fa4699eb1b51729330c099e6d3f33f1e4c0951348f2c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "presentation",
+        "financial"
+      ],
+      "sourceHash": "ec91fdd9256cb75ae611249b50cb7eb16533f0fa91b86239ec1d439a1ea033b8"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
         "tabs",
         0,
         "label"
       ],
-      "sourceHash": "b7ec0f7323ce5ff9e24d1c271b6d60667254d5306dbda36ffe197570ca6b0d69"
+      "sourceHash": "14f62aade83a177ad1d2bdaa1b3d0efd407787c3a52676b7f1277488d826b200"
     },
     {
       "path": [
@@ -2872,7 +3094,7 @@
         0,
         "intro"
       ],
-      "sourceHash": "49eea2122e815c5f5fc4332b697831ed78971714efc29984c50115d93535a5da"
+      "sourceHash": "d60dba4a5fc9bac9e13da64e8c27655c8111cc5a31f91711268478718abda5c9"
     },
     {
       "path": [
@@ -2896,7 +3118,7 @@
         "fields",
         1
       ],
-      "sourceHash": "90e63d85fa1ab2c8ed65222f3ebd794b1e524b4b7cf84bec451542d0451b2985"
+      "sourceHash": "3ffffc1bd4fa2a6db2f87ccc2f13f473cc9f0c040a96c2f721f46525991d85f5"
     },
     {
       "path": [
@@ -2908,7 +3130,7 @@
         "fields",
         2
       ],
-      "sourceHash": "6d65ed5c750019a199c61a33ea9202fb727c05e257560f38f014e6b1520e50ed"
+      "sourceHash": "90e63d85fa1ab2c8ed65222f3ebd794b1e524b4b7cf84bec451542d0451b2985"
     },
     {
       "path": [
@@ -2919,6 +3141,18 @@
         0,
         "fields",
         3
+      ],
+      "sourceHash": "6d65ed5c750019a199c61a33ea9202fb727c05e257560f38f014e6b1520e50ed"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "tabs",
+        0,
+        "fields",
+        4
       ],
       "sourceHash": "c97ace4c8fef2cee8fa0f3c9f52aab18dbd4f42438afe362ffb8f75ce4c04b84"
     },
@@ -2931,7 +3165,7 @@
         1,
         "label"
       ],
-      "sourceHash": "67908a8d41024d69be93738c7d7eea6068b329355ab9c2d374f189f2bb5da700"
+      "sourceHash": "cb2c025ce645e374a0dcfc31167b28ff61e1b809e0677b30cc88ff526802b216"
     },
     {
       "path": [
@@ -2942,7 +3176,7 @@
         1,
         "intro"
       ],
-      "sourceHash": "d5e6fb65dd30c726de7bf237f651df6bc43f3606bc379632f580dffac75e5cff"
+      "sourceHash": "771cb302bdf3a7b03b83890b9173d8fcddd6ba838d4123f28ea65ab62ee555f9"
     },
     {
       "path": [
@@ -2966,7 +3200,7 @@
         "fields",
         1
       ],
-      "sourceHash": "ddb2485b111f5d7373d804bdb4010b2590b72ba7b899fd5e11c4e0d5e00fb524"
+      "sourceHash": "b90c7599f77434bcd2d32958a8557417fb5333b4dbd169ff8c5ee65bbb5008ef"
     },
     {
       "path": [
@@ -2978,7 +3212,7 @@
         "fields",
         2
       ],
-      "sourceHash": "d36f8ed71fe4f06ad33653f5b2a02efb6b90532b03694d27b25f01211ee64df5"
+      "sourceHash": "ddb2485b111f5d7373d804bdb4010b2590b72ba7b899fd5e11c4e0d5e00fb524"
     },
     {
       "path": [
@@ -2989,6 +3223,18 @@
         1,
         "fields",
         3
+      ],
+      "sourceHash": "d36f8ed71fe4f06ad33653f5b2a02efb6b90532b03694d27b25f01211ee64df5"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
+        "tabs",
+        1,
+        "fields",
+        4
       ],
       "sourceHash": "5ef2621e3c47a6ca8fc7990c6ffa19b229e742540611b01e0f1d253b33808503"
     },
@@ -3012,7 +3258,7 @@
         2,
         "intro"
       ],
-      "sourceHash": "4fb034a7e521b05c6fc68d5963999221e8d869035d5d7b995ef90cb20e1a4b0e"
+      "sourceHash": "6c8af686eefe8c268c6f25ef27423d5048c20893541db9b735f5543cfe8466f2"
     },
     {
       "path": [
@@ -3021,7 +3267,7 @@
         "cta",
         "primaryLabel"
       ],
-      "sourceHash": "d15dff1f02872b5a86fe94913f2db1b4928c5840b83dde7a4064da877b668a28"
+      "sourceHash": "b7b6916c52b85ab872fee294ad35b023c5655e4ee52f7a2b8a22ba6ec54b6400"
     },
     {
       "path": [
@@ -3030,16 +3276,7 @@
         "cta",
         "secondaryLabel"
       ],
-      "sourceHash": "a105ad29235aa71ee321d02ba00ee1cf7e9273406367343fdf9a721daa38419e"
-    },
-    {
-      "path": [
-        "landingPage",
-        "roiCalculator",
-        "cta",
-        "privacyNote"
-      ],
-      "sourceHash": "0e96f5e15977ab0a2a8d684c0d35d7459f3afc862b606046310ae1fbbd4be12b"
+      "sourceHash": "d15dff1f02872b5a86fe94913f2db1b4928c5840b83dde7a4064da877b668a28"
     },
     {
       "path": [
@@ -4742,7 +4979,7 @@
         "homeRoiCalculator",
         "heading"
       ],
-      "sourceHash": "c63420eca3f95b8917c99f3a5cf72f000ab237bc6c658765b2176ebdd7b311be"
+      "sourceHash": "00d09691ae36347896a16a14f9cf186036ab9b217749a0e7c3a89ececa07da77"
     },
     {
       "path": [
@@ -4751,7 +4988,7 @@
         "homeRoiCalculator",
         "subheading"
       ],
-      "sourceHash": "2c98a799c522d7fe02b99b871e64b3f10b2c1328502df976ad2b61dabea754be"
+      "sourceHash": "56bd5b9c7d913a17c9cd2fd751047f46fcfd7a16f28aaeba15582ed202e44fda"
     },
     {
       "path": [
@@ -4760,7 +4997,7 @@
         "homeRoiCalculator",
         "disclaimer"
       ],
-      "sourceHash": "84aee899c2da10ef533fce4826d2c0040036e8eb3e04499f83b746d1e974bf43"
+      "sourceHash": "e30ca35756264cda161ac34e05db07b8f3e279367ab77fd832c5a95484a930a4"
     },
     {
       "path": [
@@ -4831,7 +5068,7 @@
         "copy",
         "navLabel"
       ],
-      "sourceHash": "5bb1092e45d12cf344ec810103fd96adc18943f70e30d02a092a40f74fe906b0"
+      "sourceHash": "b3774bb88c0a9bb05b45ae90c0dc4ad9e11d7819aca7d11d3cb24bdc387ba3a1"
     },
     {
       "path": [
@@ -4864,7 +5101,7 @@
         "copy",
         "valueStep"
       ],
-      "sourceHash": "d98620dca903fe20bb46d940e3d732e124c7bdbb76262763b6ba966d05c2b0d3"
+      "sourceHash": "5d623d42a6706a479ea5ed6962fc4dd6fb6c46c622fa864bb6a394347c7f4ae2"
     },
     {
       "path": [
@@ -4886,7 +5123,7 @@
         "copy",
         "costIntro"
       ],
-      "sourceHash": "3b52ed540ced746a05233c1d21b7237890284b3e8f46c2777dd8c55318d2a0c9"
+      "sourceHash": "45d9f10e049015ccf731cf9816d685a3e60f3a4b9f07e85f7f204b4107a8ed9a"
     },
     {
       "path": [
@@ -4897,7 +5134,7 @@
         "copy",
         "valueIntro"
       ],
-      "sourceHash": "6714eae6de796d0e5a37f993a07868b59acfc0d71317847ea25c112fbd78e53e"
+      "sourceHash": "134f84dff63a4ff7567890936a1b4f3d954068fa7396953822fc64719368ff70"
     },
     {
       "path": [
@@ -5249,7 +5486,7 @@
         "copy",
         "allInCost"
       ],
-      "sourceHash": "3f7749a7d27c307accc7af1e96abe6d2c756c38cbb1353d8b0b891cb1754191c"
+      "sourceHash": "5f18c2098625ad6c88439547440c92a69e4cd7c4a4e679ee7b00050b82cd07d3"
     },
     {
       "path": [
@@ -5315,7 +5552,7 @@
         "copy",
         "economicValue"
       ],
-      "sourceHash": "53a6f9a333b9ad222698bd01943627acb758b09eb211ed96c09449063f164b72"
+      "sourceHash": "6e3bfa3a20c81d7404ece4478f9b9c8161d846983b0d90932340c136d5eb117c"
     },
     {
       "path": [
@@ -5326,7 +5563,7 @@
         "copy",
         "netBenefit"
       ],
-      "sourceHash": "72ae9f851e2b8fcb218c096d9ee7e0bac8d822620794ff332a8d62b3a06bab2b"
+      "sourceHash": "3a3a15c836170bc8050ce6b643e472eab5cc77f4b319d897b2a1f785165c5dac"
     },
     {
       "path": [
@@ -5338,6 +5575,39 @@
         "multiple"
       ],
       "sourceHash": "f7f34c071e649600815630c8b8daeb82c780c582be3ba058d45ec1818ab14b5d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "customerBenefit"
+      ],
+      "sourceHash": "e3c232c892c1e441bc54def591f80e50887ffc6fb040649a4ad93defecd59d84"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "customerRoi"
+      ],
+      "sourceHash": "a420556d962cbcc1bae82fe6eba87a854de6f4211884db490e529f6ba7b43722"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "copy",
+        "payback"
+      ],
+      "sourceHash": "e96093c891d1c1698f3d590dcb3936c4435412404ddfa3952b6d76469e5cd3c2"
     },
     {
       "path": [
@@ -5414,7 +5684,7 @@
         "copy",
         "methodBody"
       ],
-      "sourceHash": "1bfd0892640eb11e35706860dc4aac5217634d2c735f74fd86dc0b5921bc9c45"
+      "sourceHash": "ded1864ca6c0101074f97bbc25378ee34febd108a628e0ea3e1bbcbf6f29e831"
     },
     {
       "path": [
@@ -5717,6 +5987,30 @@
         "homeRoiCalculator",
         "businessImpact",
         "fields",
+        "cycles_per_unit",
+        "label"
+      ],
+      "sourceHash": "50ae3179cff21cf825b3980719fd56953da321da210f2ece4a4e260d8f452259"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "cycles_per_unit",
+        "help"
+      ],
+      "sourceHash": "10da77417bec885daf5ad209507c2316d7049ed357fc4298c267d8aa4fcbc585"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
         "tokens_per_output",
         "label"
       ],
@@ -5840,7 +6134,7 @@
         "platform_cost",
         "label"
       ],
-      "sourceHash": "7da005cd3f3aee95b142efb9bab8fd9a3a220a716bfedea3a4c33d5d3453663b"
+      "sourceHash": "879bc5433e23785c45e1fa0a349f108a6ad79fb35677603499c5a2b476e716fa"
     },
     {
       "path": [
@@ -5852,7 +6146,55 @@
         "platform_cost",
         "help"
       ],
-      "sourceHash": "f7cc06b625fa514e8ea0e9318d4e4b7aa31aa44ada2b20f45f642e8fc8840f94"
+      "sourceHash": "7ffdca6cada0f94e72d9d1ea24ea25978838790e0be1dc63d719d487961f79fa"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "customer_price",
+        "label"
+      ],
+      "sourceHash": "fa3b49124fe85d779c93465945ab41136c1b3584983aa907bf3748627651bacd"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "customer_price",
+        "help"
+      ],
+      "sourceHash": "556476457f8a6b4de0cac2e02b45eeb6efc13d8471b11ededcc3bad28d5589a5"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "personal_value_per_hour",
+        "label"
+      ],
+      "sourceHash": "f248fa22eeb195c69fe63fcacdc7e40ef96c8865ab2d31167d32012676014f42"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fields",
+        "personal_value_per_hour",
+        "help"
+      ],
+      "sourceHash": "0ef8431d28648808f27c28c06bec629c8eeb43cd76afdb284838f3966b4ee99a"
     },
     {
       "path": [
@@ -6460,17 +6802,6 @@
         "groceryTwin",
         "homeRoiCalculator",
         "businessImpact",
-        "selected",
-        0
-      ],
-      "sourceHash": "ca00fccfb408989eddc401062c4d1219a6aceb6b9b55412357f1790862e8f178"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
         "hero",
         "label"
       ],
@@ -6499,6 +6830,50 @@
         "help"
       ],
       "sourceHash": "e58456a61dc968630aa38b8320233a15bc81a9395316a3518211382023539fad"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "pricing",
+        "basis"
+      ],
+      "sourceHash": "992a93455c71fedd36ac9bbc439952c041cf61445958472af479269b8d873513"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "pricing",
+        "label"
+      ],
+      "sourceHash": "ccfbb6a68922661bee2708d35e1b9086c70194fb8875c998e65fd58958ef0143"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "pricing",
+        "help"
+      ],
+      "sourceHash": "def2ac72edaf1aa66e9ad530a57bc9d6bcaa19303ed38885ee5fc98731d50d9c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "presentation",
+        "financial"
+      ],
+      "sourceHash": "ec91fdd9256cb75ae611249b50cb7eb16533f0fa91b86239ec1d439a1ea033b8"
     },
     {
       "path": [
@@ -6598,7 +6973,7 @@
         1,
         "intro"
       ],
-      "sourceHash": "74e32935e94fea015fb684b88bf11790619512e657ff95546601fe4a105acc42"
+      "sourceHash": "cfd17680a356f7d985dbf3116d1b2afc2a1bbfdf1a2ed1d79dce27e24a56f483"
     },
     {
       "path": [
@@ -6624,7 +6999,7 @@
         "fields",
         1
       ],
-      "sourceHash": "ddb2485b111f5d7373d804bdb4010b2590b72ba7b899fd5e11c4e0d5e00fb524"
+      "sourceHash": "b90c7599f77434bcd2d32958a8557417fb5333b4dbd169ff8c5ee65bbb5008ef"
     },
     {
       "path": [
@@ -6636,6 +7011,19 @@
         1,
         "fields",
         2
+      ],
+      "sourceHash": "ddb2485b111f5d7373d804bdb4010b2590b72ba7b899fd5e11c4e0d5e00fb524"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "tabs",
+        1,
+        "fields",
+        3
       ],
       "sourceHash": "d1bedf986ff719c3697d5349d0a881f26ca60c944250a6b9d841dbfdd75ec256"
     },
@@ -6649,7 +7037,7 @@
         2,
         "label"
       ],
-      "sourceHash": "d98620dca903fe20bb46d940e3d732e124c7bdbb76262763b6ba966d05c2b0d3"
+      "sourceHash": "5d623d42a6706a479ea5ed6962fc4dd6fb6c46c622fa864bb6a394347c7f4ae2"
     },
     {
       "path": [
@@ -6661,7 +7049,20 @@
         2,
         "intro"
       ],
-      "sourceHash": "a60a4c91220eb81c48a8f3d9b33591e8ad0e7b31124369cfbe22dbeeb7fb0fa8"
+      "sourceHash": "c751c904f9ab54862c258287b0e72e9e4d530d25182c2f8cfe40ce512e71f220"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "tabs",
+        2,
+        "fields",
+        0
+      ],
+      "sourceHash": "ad666ba2dc1029b00870f1b86c4f056777d7ca1e3b555504812325639a0803ed"
     },
     {
       "path": [

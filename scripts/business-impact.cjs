@@ -50,6 +50,7 @@ var IMPACT_FIELDS = {
   minutes: [0, 1e4, 1],
   automation: [0, 100, 1],
   review: [0, 1e4, 1],
+  cycles_per_unit: [1, 1e3, 1],
   tokens_per_output: [0, 1e7, 100],
   budget: [0, 1e8, 1],
   model_cost: [0, 1e8, 1],
@@ -57,6 +58,8 @@ var IMPACT_FIELDS = {
   infrastructure_cost: [0, 1e8, 1],
   platform_cost: [0, 1e8, 1],
   review_rate: [0, 1e4, 1],
+  customer_price: [0, 1e8, 0.01],
+  personal_value_per_hour: [0, 1e6, 0.01],
   cash_hours: [0, 1e8, 0.5],
   cash_avoided: [0, 1e8, 1],
   cash_baseline: [0, 1e8, 1],
@@ -78,7 +81,7 @@ var IMPACT_FIELDS = {
   days_before: [0, 3650, 0.1],
   days_after: [0, 3650, 0.1]
 };
-var IMPACT_MONEY_FIELDS = ["budget", "model_cost", "tools_cost", "infrastructure_cost", "platform_cost", "review_rate", "cash_baseline", "cash_avoided", "contribution_rate", "unit_margin", "hire_cost", "incident_cost", "loss"];
+var IMPACT_MONEY_FIELDS = ["budget", "model_cost", "tools_cost", "infrastructure_cost", "platform_cost", "review_rate", "customer_price", "personal_value_per_hour", "cash_baseline", "cash_avoided", "contribution_rate", "unit_margin", "hire_cost", "incident_cost", "loss"];
 var IMPACT_TOKEN_FIELDS = ["tokens_per_output"];
 var ROI_CURRENCY_COPY = {
   native: "Amounts in {currency}.",
@@ -182,6 +185,9 @@ var IMPACT_COPY = {
   economicValue: "Modeled economic value",
   netBenefit: "Net modeled benefit",
   multiple: "Economic return multiple",
+  customerBenefit: "Modelled customer benefit",
+  customerRoi: "Customer ROI",
+  payback: "Customer payback period",
   notApplicable: "Not applicable",
   annual: "Annual view",
   annualNote: "The same monthly assumptions, without growth or compounding. Hiring savings last only for the entered period.",
@@ -208,7 +214,7 @@ var IMPACT_COPY = {
   rangeLabel: "Adjust value",
   noCurrencyChange: "Language changes formatting, not your currency or assumptions."
 };
-var PACKAGE_VALUE_KEYS = ["minutes", "automation", "review", "model_cost", "tools_cost", "infrastructure_cost", "higher_value_hours", "contribution_rate", "cash_hours", "cash_baseline", "cash_avoided", "incidents", "incident_cost", "probability_before", "probability_after", "loss"];
+var PACKAGE_VALUE_KEYS = ["cycles_per_unit", "customer_price", "personal_value_per_hour", "minutes", "automation", "review", "model_cost", "tools_cost", "infrastructure_cost", "higher_value_hours", "contribution_rate", "cash_hours", "cash_baseline", "cash_avoided", "incidents", "incident_cost", "probability_before", "probability_after", "loss"];
 function tokenCostFromUsage({ volume, tokensPerOutput }) {
   const monthlyTokens = Math.max(0, volume) * Math.max(0, tokensPerOutput);
   const mix = (1 - TOKEN_ECONOMICS.outputShare) * TOKEN_ECONOMICS.inputPricePerMillion + TOKEN_ECONOMICS.outputShare * TOKEN_ECONOMICS.outputPricePerMillion;
@@ -262,7 +268,10 @@ function initialImpactState(config) {
     overlapConfirmed: config.confirmations?.overlap ?? false,
     hiringConfirmed: config.confirmations?.hiring ?? false,
     outcomesReviewed: config.confirmations?.outcomes ?? false,
-    usagePackage: packageId === "custom" ? "custom" : packageId
+    usagePackage: packageId === "custom" ? "custom" : packageId,
+    workloadMultiplierField: config.workloadMultiplierField,
+    pricingBasis: config.pricing?.basis,
+    financialPresentation: config.presentation?.financial
   };
 }
 function evaluateBusinessImpact(state) {
@@ -273,9 +282,14 @@ function evaluateBusinessImpact(state) {
   const errors = [];
   const usesTokens = has("tokens_per_output");
   const used = /* @__PURE__ */ new Set(["volume", "minutes", "automation", "review"]);
+  if (state.workloadMultiplierField) used.add(state.workloadMultiplierField);
+  if (state.pricingBasis && v.customer_price != null) used.add("customer_price");
+  if (v.personal_value_per_hour != null) used.add("personal_value_per_hour");
   selected.forEach((id) => IMPACT_OUTCOME_FIELDS[id]?.forEach((k) => used.add(k)));
-  const grossHours = n("volume") * n("minutes") / 60 * n("automation") / 100;
-  const reviewHours = n("volume") * n("review") / 60;
+  const workloadMultiplier = state.workloadMultiplierField ? n(state.workloadMultiplierField) : 1;
+  const workUnits = n("volume") * workloadMultiplier;
+  const grossHours = workUnits * n("minutes") / 60 * n("automation") / 100;
+  const reviewHours = workUnits * n("review") / 60;
   const capacity = Math.max(0, grossHours - (state.reviewMode === "team" ? reviewHours : 0));
   if (state.reviewMode === "team" && reviewHours > grossHours) errors.push("reviewError");
   const allocated = selected.reduce((sum, id) => sum + (IMPACT_ALLOCATION_FIELDS.includes(`${id}_hours`) ? n(`${id}_hours`) : 0), 0);
@@ -283,11 +297,11 @@ function evaluateBusinessImpact(state) {
   const costFields = state.costMode === "total" ? ["budget"] : usesTokens ? ["tokens_per_output", "model_cost", "tools_cost", "infrastructure_cost", "platform_cost", ...state.reviewMode === "paid" ? ["review_rate"] : []] : ["model_cost", "tools_cost", "infrastructure_cost", "platform_cost", ...state.reviewMode === "paid" ? ["review_rate"] : []];
   costFields.forEach((k) => used.add(k));
   if ([...used].some((k) => v[k] != null && !has(k))) errors.push("boundsError");
-  const workloadReady = has("volume", "minutes", "automation", "review");
+  const workloadReady = has("volume", "minutes", "automation", "review") && (!state.workloadMultiplierField || has(state.workloadMultiplierField));
   const costReady = has(...costFields) && (state.costMode !== "itemized" || state.reviewMode !== "paid" || has("volume", "review"));
   const reviewCost = state.reviewMode === "paid" ? reviewHours * n("review_rate") : 0;
-  const monthlyTokens = usesTokens ? n("volume") * n("tokens_per_output") : 0;
-  const tokenCost = usesTokens ? tokenCostFromUsage({ volume: n("volume"), tokensPerOutput: n("tokens_per_output") }) : 0;
+  const monthlyTokens = usesTokens ? workUnits * n("tokens_per_output") : 0;
+  const tokenCost = usesTokens ? tokenCostFromUsage({ volume: workUnits, tokensPerOutput: n("tokens_per_output") }) : 0;
   const cost = state.costMode === "total" ? n("budget") : tokenCost + n("model_cost") + n("tools_cost") + n("infrastructure_cost") + n("platform_cost") + reviewCost;
   const cash = selected.includes("cash") ? n("cash_avoided") : 0;
   if (selected.includes("cash") && (cash > n("cash_baseline") || cash > 0 && n("cash_hours") === 0)) errors.push("cashError");
@@ -302,9 +316,17 @@ function evaluateBusinessImpact(state) {
   const valueReady = state.outcomesReviewed && selected.every((id) => has(...IMPACT_OUTCOME_FIELDS[id])) && errors.length === 0 && workloadReady;
   const ready = valueReady && costReady;
   const economicValue = cash + hire + contribution + errorValue + riskValue;
+  const personalTimeValue = has("personal_value_per_hour") ? capacity * n("personal_value_per_hour") : 0;
+  const customerBenefit = economicValue + personalTimeValue;
+  const customerPrice = has("customer_price") ? state.pricingBasis === "per_volume" ? n("customer_price") * n("volume") : n("customer_price") : null;
+  const customerBenefitReady = workloadReady && costReady && (valueReady || personalTimeValue > 0);
+  const customerRoi = customerBenefitReady && customerPrice !== null && customerPrice > 0 ? (customerBenefit - customerPrice) / customerPrice : null;
+  const paybackMonths = customerBenefitReady && customerBenefit > 0 && customerPrice !== null ? customerPrice / customerBenefit : null;
+  const contributionMargin = customerPrice !== null ? customerPrice - cost : null;
   const annualValue = (economicValue - hire) * 12 + hire * n("hire_months");
   return {
     volume: n("volume"),
+    workUnits,
     grossHours,
     reviewHours,
     reviewCost,
@@ -324,6 +346,13 @@ function evaluateBusinessImpact(state) {
     tokenCost,
     monthlyTokens,
     economicValue,
+    personalTimeValue,
+    customerBenefit,
+    customerBenefitReady,
+    customerPrice,
+    customerRoi,
+    paybackMonths,
+    contributionMargin,
     net: ready ? economicValue - cost : null,
     multiple: ready && cost > 0 ? economicValue / cost : null,
     annualCost: cost * 12,
@@ -385,13 +414,14 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
   const b = value.businessImpact;
   if (!record(b)) return [...issues, { path: `${path}.businessImpact`, message: "Business impact content is required." }];
   const bp = `${path}.businessImpact`;
-  keys(b, ["defaults", "copy", "fields", "outcomes", "burden", "opportunity", "usagePackages", "tabs", "hero", "selected", "reviewMode", "costMode", "confirmations", "defaultPackage"], bp);
+  keys(b, ["defaults", "copy", "fields", "outcomes", "burden", "opportunity", "usagePackages", "tabs", "hero", "selected", "reviewMode", "costMode", "confirmations", "defaultPackage", "workloadMultiplierField", "pricing", "presentation"], bp);
   if (!record(b.defaults)) fail(`${bp}.defaults`, "Add workload defaults.");
   else {
-    keys(b.defaults, Object.keys(IMPACT_FIELDS), `${bp}.defaults`);
-    for (const k of ["volume", "minutes", "automation", "review"]) numberInRange(b.defaults[k], k, `${bp}.defaults.${k}`);
-    Object.keys(b.defaults).forEach((k) => {
-      if (IMPACT_FIELDS[k] && !["volume", "minutes", "automation", "review"].includes(k)) numberInRange(b.defaults[k], k, `${bp}.defaults.${k}`);
+    const defaults = b.defaults;
+    keys(defaults, Object.keys(IMPACT_FIELDS), `${bp}.defaults`);
+    for (const k of ["volume", "minutes", "automation", "review"]) numberInRange(defaults[k], k, `${bp}.defaults.${k}`);
+    Object.keys(defaults).forEach((k) => {
+      if (IMPACT_FIELDS[k] && !["volume", "minutes", "automation", "review"].includes(k) && defaults[k] !== null) numberInRange(defaults[k], k, `${bp}.defaults.${k}`);
     });
   }
   if (!record(b.copy)) fail(`${bp}.copy`, "Localized interface copy is required.");
@@ -402,15 +432,16 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
   if (!record(b.fields)) fail(`${bp}.fields`, "Authored input labels and help are required.");
   else {
     keys(b.fields, Object.keys(IMPACT_FIELDS), `${bp}.fields`);
-    Object.keys(IMPACT_FIELDS).forEach((k) => {
+    for (const k of Object.keys(b.fields)) {
       const f = b.fields[k];
-      if (!record(f)) fail(`${bp}.fields.${k}`, "Add label and help.");
+      if (!IMPACT_FIELDS[k]) fail(`${bp}.fields.${k}`, "Use a supported input field.");
+      else if (!record(f)) fail(`${bp}.fields.${k}`, "Add label and help.");
       else {
         keys(f, ["label", "help"], `${bp}.fields.${k}`);
         text(f.label, `${bp}.fields.${k}.label`, 160);
         text(f.help, `${bp}.fields.${k}.help`);
       }
-    });
+    }
   }
   const seen = /* @__PURE__ */ new Set();
   if (!Array.isArray(b.outcomes) || b.outcomes.length > 7 || !b.outcomes.length) fail(`${bp}.outcomes`, "Use one to seven supported outcomes.");
@@ -482,6 +513,26 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
           }
         }
       }
+    }
+  }
+  if (b.workloadMultiplierField !== void 0 && b.workloadMultiplierField !== "cycles_per_unit") fail(`${bp}.workloadMultiplierField`, "Use cycles_per_unit when configuring recurring workload cycles.");
+  if (b.pricing !== void 0) {
+    if (!record(b.pricing)) fail(`${bp}.pricing`, "Expected pricing metadata.");
+    else {
+      keys(b.pricing, ["basis", "annualPrice", "label", "help"], `${bp}.pricing`);
+      if (b.pricing.basis !== "fixed" && b.pricing.basis !== "per_volume") fail(`${bp}.pricing.basis`, "Use fixed or per_volume.");
+      text(b.pricing.label, `${bp}.pricing.label`, 160);
+      text(b.pricing.help, `${bp}.pricing.help`);
+      if (b.pricing.annualPrice !== void 0) numberInRange(b.pricing.annualPrice, "customer_price", `${bp}.pricing.annualPrice`);
+    }
+  }
+  if (b.presentation !== void 0) {
+    if (!record(b.presentation)) fail(`${bp}.presentation`, "Expected presentation metadata.");
+    else {
+      keys(b.presentation, ["financial", "showCustomerEconomics", "hideEconomicMultiple"], `${bp}.presentation`);
+      if (!["capacity_only", "optional", "required"].includes(b.presentation.financial)) fail(`${bp}.presentation.financial`, "Use capacity_only, optional or required.");
+      if (b.presentation.showCustomerEconomics !== void 0 && typeof b.presentation.showCustomerEconomics !== "boolean") fail(`${bp}.presentation.showCustomerEconomics`, "Expected a boolean.");
+      if (b.presentation.hideEconomicMultiple !== void 0 && typeof b.presentation.hideEconomicMultiple !== "boolean") fail(`${bp}.presentation.hideEconomicMultiple`, "Expected a boolean.");
     }
   }
   return issues;
