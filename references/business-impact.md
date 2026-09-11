@@ -160,15 +160,47 @@ same validated calculator contract; never clone retail assumptions into Home.
 runtime fallback. Home renders only its own enabled configuration.
 
 Ground household volume in grocery/meal-planning sessions, not locations, staff,
-orders or SKUs. Subtract time spent checking ingredients, allergies and the cart.
-Never monetize personal time or imply cooking, shopping or travel are automated.
-The optional `error` outcome can model edible food waste avoided as portions ×
-ingredient cost, clearly labeled as a user estimate and counted only where using
-the food replaces future spending. Do not also count the same food as discounts or
-duplicate purchases avoided. Prefill a small household access fee and a modest food-waste
-estimate so the right-hand column is not empty; visitors may zero them. Offer time for
-everyday life, not contribution margin, staffing reductions or guaranteed savings.
-Localize every label and keep this model separate from Retail in every locale.
+orders or SKUs. Never monetize personal time or imply cooking, shopping or travel
+are automated. Offer time for everyday life, not contribution margin, staffing
+reductions or guaranteed savings. Localize every label and keep this model separate
+from Retail in every locale.
+
+### Household estimator (fixed assumptions)
+
+A Home calculator with `businessImpact.fixedAssumptions` is a household estimator.
+Grocery Twin renders it with its own three-input panel, never the generic tabs:
+
+- **Visitor inputs (exactly three, one panel):** `defaults.volume` (planning sessions
+  each month), `defaults.minutes` (planning minutes per session) and `defaults.people`
+  (a whole household size from 1 to 8). `tabs` holds one tab whose `fields` are exactly
+  `["volume", "minutes", "people"]`, with no review, outcome or package panels.
+- **Fixed assumptions (model-owned, never inputs):** `offloadRate` (a 0–1 share, 0.5 =
+  50%), `reviewMinutes`, `foodWastePerPersonYear`, `foodWasteSource`, and
+  `userEditable: false`. Keep `defaults.automation = offloadRate × 100` and
+  `defaults.review = reviewMinutes`. The offload rate is a placeholder: replace it with
+  measured before/after planning time once usage data exists. It is an output, not an input.
+- **Time back** = sessions × minutes × offloadRate − sessions × reviewMinutes, floored
+  at zero and shown as hours and minutes. Sessions and minutes change only this figure.
+- **Food-waste comparison** = round(foodWastePerPersonYear ÷ 12 × people) a month, or
+  foodWastePerPersonYear × people a year. People changes only this figure. Show it
+  beside the price as a comparison: never a strikethrough, "was/now", discount or saving.
+- **Price:** `pricing.basis: "fixed"`, `defaults.customer_price` (monthly) and
+  `pricing.annualPrice` (yearly). No input changes either; usage packages and margins
+  are rejected.
+- **Copy:** `householdCopy` holds every result label. Composed results are whole-sentence
+  templates so every language can reorder them: `timeBackMonthly`/`timeBackYearly` contain
+  exactly one `{duration}`; `wasteMonthly`/`wasteYearly`/`priceMonthly`/`priceYearly` contain
+  exactly one `{amount}`. No other household copy may contain braces. Never split a sentence
+  into fragments such as "About" + "back a month"; translated alone they lose their meaning.
+  `copy` holds only the interface keys the estimator shows. Keep one disclaimer, for example
+  "Estimates from your inputs, not guaranteed savings." `outcomes` stays empty.
+
+Token and service-cost details are internal, per-plan figures in a collapsed
+technical disclosure. They never change with visitor inputs and are never the price
+or a benefit. Older Home assets without `fixedAssumptions` still validate and render
+with safe migration defaults (offload from `defaults.automation`, review from
+`defaults.review`, €100 per person per year, two people) until they are migrated.
+Publish-modal saves write this model through the revision-checked landing-page API.
 
 All labels, help, notices and accessibility copy belong to the model and translate
 with the landing page. IDs, currency, defaults and methodology version do not.

@@ -46,10 +46,11 @@ section, use `methodologyVersion: 2` and read
 [`references/business-impact.md`](references/business-impact.md) **before authoring
 its copy or defaults**. Start from the persona's real work unit, not its employee's
 salary. Separate operational capacity, operating cost, and explicitly modeled value.
-The platform owns the three-step interaction and deterministic calculations; the
-landing-page child owns the bounded workload defaults, outcome selection, and all
-translated labels and explanations. Start financial assumptions unset. Do not
-invent savings, prices, conversion rates, risk reductions, or customer outcomes.
+The platform owns the live calculator tabs, Base/Medium packages, token cost mix and
+deterministic calculations; the landing-page child owns persona-specific tab labels,
+typical usage numbers, outcome selection, and all translated labels and explanations.
+Prefill a typical consumer of this persona. Do not invent observed savings, provider
+quotes, or guaranteed customer outcomes.
 
 Keep this as a live, slider-driven calculator: input tabs and auto-updating results,
 not a form-submit/results replacement. Use direct numeric entry alongside sliders.
@@ -296,10 +297,11 @@ the translation generator before committing. It reuses unchanged strings from hi
 assets and translates only the delta. The validator recomputes source revisions and must
 reject a syntactically valid but stale manifest.
 
-When the region changes jurisdictional content rather than only language, read
-`../landing-page-markets/SKILL.md` and run that skill. It owns canonical market language,
-locale, authoritative glossary/evidence, market context revision, and country-directory
-translations. Do not use direct translation to invent market tax or regulatory terms.
+When the region changes jurisdictional content or ROI assumptions rather than only language,
+read `../landing-page-regions/SKILL.md` and run that skill. It owns region profiles (locale,
+currency, glossary, facts and evidence), per-section companion prompts, and the generated
+region sections and their translations. Do not use direct translation to invent market tax or
+regulatory terms.
 
 When this skill is materialized as a Git repository for one persona's landing
 page, the repo contains this scaffold plus `assets/landing-page.json`. Edit
@@ -481,7 +483,3 @@ the binding is absent or the target backend has not activated the package.
 Do not enable a binding merely because its JSON validates. Check backend handler
 and continuation support, configured locale catalogues, and the domain's live
 guest/login acceptance first. Never treat a local test as production deployment.
-
-## Business impact methodology v2
-
-For new calculators, read [references/business-impact.md](references/business-impact.md) before authoring. Use methodologyVersion: 2 with persona-specific tabs, Base/Medium packages, and typical usage already filled. Tokens per output drive operating cost. Monetary defaults are allowed. Never equate returned hours with payroll savings. The localized navigation label is ROI, using the unchanged roi-calculator target. This supersedes older ROI calculator guidance in this file. Do not migrate unrelated personas without authorization.

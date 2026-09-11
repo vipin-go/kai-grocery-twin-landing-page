@@ -29,6 +29,37 @@ __export(business_impact_presets_exports, {
 module.exports = __toCommonJS(business_impact_presets_exports);
 
 // app/shared/utils/business-impact.ts
+var OFFLOAD_RATE_DEFAULT = 0.5;
+var REVIEW_MINUTES_DEFAULT = 5;
+var FOOD_WASTE_PER_PERSON_YEAR_DEFAULT = 100;
+var FOOD_WASTE_SOURCE_DEFAULT = "Netherlands Nutrition Centre (Voedingscentrum), 2026 report using 2025 data";
+var HOUSEHOLD_PEOPLE_DEFAULT = 2;
+var HOUSEHOLD_INPUT_FIELDS = ["volume", "minutes", "people"];
+var HOUSEHOLD_COPY = {
+  // Whole-sentence templates: translating "About" or "back a month" as separate fragments produced wrong copy.
+  timeBackMonthly: "About {duration} back a month",
+  timeBackYearly: "About {duration} back a year",
+  wasteLabel: "Food a household your size throws away",
+  wasteInfo: "Dutch average from the Netherlands Nutrition Centre (2026), about \u20AC100 per person a year. Your household may waste more or less.",
+  wasteMonthly: "about {amount} a month",
+  wasteYearly: "about {amount} a year",
+  priceLabel: "KAI",
+  priceMonthly: "{amount} a month",
+  priceYearly: "{amount} a year",
+  fixedAssumptionsHeading: "Fixed assumptions, not inputs",
+  offloadRateLabel: "Share of planning time KAI takes on",
+  reviewMinutesLabel: "Minutes to check each plan",
+  foodWasteReferenceLabel: "Food wasted per person each year",
+  sourceLabel: "Source",
+  timeBackFormula: "Time back = sessions \xD7 planning minutes per session \xD7 the share KAI takes on, minus sessions \xD7 minutes to check each plan.",
+  wasteFormula: "Food-waste comparison = food wasted per person each year \xF7 12 \xD7 people in your household, rounded to whole euros.",
+  priceNote: "The KAI price is fixed. None of these inputs change it.",
+  technicalHeading: "Technical usage details",
+  technicalNote: "Internal usage estimates. They are not your price or a benefit, and your inputs do not change them.",
+  tokensPerPlanLabel: "Modelled tokens to build one plan",
+  tokenCostPerPlanLabel: "Modelled token cost per plan",
+  serviceCostLabel: "Modelled monthly service cost"
+};
 var ROI_CURRENCY_COPY = {
   native: "Amounts in {currency}.",
   loading: "Checking the local currency. Amounts remain in {currency} until a rate is available.",
@@ -85,6 +116,13 @@ var IMPACT_COPY = {
   paidReviewCost: "Additional paid review cost",
   allInCost: "Operating cost",
   missing: "Add your assumptions",
+  currentPreparation: "Current preparation hours",
+  reviewHours: "Human review hours",
+  reworkHours: "Avoided or added rework hours",
+  capacityValue: "Modeled capacity value",
+  acceptedUnits: "Accepted units",
+  attendedUnits: "Attended units",
+  costPerAttended: "Cost per attended unit",
   cashValue: "Cash spending avoided",
   contribution: "Expected contribution",
   expectedLoss: "Expected loss reduction",
@@ -92,9 +130,14 @@ var IMPACT_COPY = {
   economicValue: "Modeled economic value",
   netBenefit: "Net modeled benefit",
   multiple: "Economic return multiple",
-  customerBenefit: "Modelled customer benefit",
+  customerBenefit: "Modeled customer benefit",
   customerRoi: "Customer ROI",
-  payback: "Customer payback period",
+  benefitCost: "Benefit-cost multiple",
+  firstYearCost: "First-year cost",
+  firstYearRoi: "First-year ROI",
+  payback: "Setup-fee payback",
+  paybackOutsideTerm: "Not recovered within the modeled term",
+  months: "months",
   notApplicable: "Not applicable",
   annual: "Annual view",
   annualNote: "The same monthly assumptions, without growth or compounding. Hiring savings last only for the entered period.",
@@ -121,6 +164,21 @@ var IMPACT_COPY = {
   rangeLabel: "Adjust value",
   noCurrencyChange: "Language changes formatting, not your currency or assumptions."
 };
+var HOUSEHOLD_IMPACT_COPY_KEYS = [
+  "summary",
+  "reset",
+  "monthly",
+  "yearly",
+  "annual",
+  "rangeLabel",
+  "missing",
+  "method",
+  "methodBody",
+  "burdenHeading",
+  "opportunityHeading",
+  "noCurrencyChange",
+  "reviewError"
+];
 function netCapacityHours({ volume, minutes, automation, review, reviewMode = "team" }) {
   const grossHours = volume * minutes / 60 * automation / 100;
   const reviewHours = volume * review / 60;
@@ -130,10 +188,16 @@ function netCapacityHours({ volume, minutes, automation, review, reviewMode = "t
 // app/shared/utils/business-impact-presets.ts
 var FIELD_COPY = {
   volume: ["Work units each month", "Use a typical month, not a best-case peak."],
+  people: ["People in your household", "Used only for the food-waste comparison."],
   accepted_rate: ["Expected acceptance rate", "Optional modeled share of prepared outputs accepted by the recipient. This is not a guarantee or observed result."],
+  attendance_rate: ["Expected attendance rate", "Modeled share of accepted meetings expected to happen. Replace this with verified event records after a pilot."],
   minutes: ["Hands-on minutes per unit today", "Active work time, excluding waiting and elapsed calendar time."],
   automation: ["Share of that work reduced", "An illustrative assumption to validate in a pilot, not a performance promise."],
   review: ["Review minutes per unit", "Human checking still needed after automation."],
+  correction_rate_before: ["Current correction rate", "Share of work units that currently require a correction or rework cycle."],
+  correction_rate_after: ["Correction rate with assistance", "Expected or observed share requiring correction after assistance. Leave blank until supported."],
+  correction_minutes_before: ["Current minutes per correction", "Hands-on time required for one current correction or rework cycle."],
+  correction_minutes_after: ["Minutes per correction with assistance", "Hands-on time for one correction or abstention after assistance. Leave blank until supported."],
   cycles_per_unit: ["Cycles per unit each month", "How many recurring order, review or processing cycles each unit runs in a typical month."],
   tokens_per_output: ["Tokens to produce one unit", "Modeled tokens consumed to prepare one typical output, not a provider meter reading."],
   budget: ["Estimated monthly operating budget", "Include token usage, models/media, tools, infrastructure, Gabriel fees and additional paid review."],
@@ -143,6 +207,11 @@ var FIELD_COPY = {
   platform_cost: ["Other delivery and support cost", "Modeled hosting, storage, monitoring and support cost, separate from the customer price."],
   customer_price: ["Customer price", "The proposed customer-facing price, separate from KAI delivery cost. Treat it as a hypothesis until paid evidence exists."],
   personal_value_per_hour: ["Optional value you assign to an hour", "An optional personal comparison only. This is not salary, wages or guaranteed cash savings."],
+  capacity_value_per_hour: ["Capacity value per hour", "Customer-supported value for one hour of specialist capacity. This is not automatic payroll savings."],
+  included_volume: ["Included monthly volume", "Work units included in the recurring base price."],
+  overage_price: ["Price per additional unit", "Customer price for each eligible unit above the included monthly volume."],
+  setup_fee: ["One-time setup fee", "One-time mapping and onboarding fee. It is counted once in the contract comparison."],
+  contract_months: ["Contract comparison period", "Number of months used for the contract economics comparison."],
   review_rate: ["Additional paid review per hour", "Actual extra reviewer spending, not the salary of an unchanged employee."],
   cash_hours: ["Hours that remove paid work", "Allocate only work whose overtime, contractor or processing spend will actually stop."],
   cash_baseline: ["Current monthly spending on that work", "The cash budget from which the reduction will come."],
@@ -282,114 +351,69 @@ function createBusinessImpactCalculator({
   };
 }
 function createHouseholdImpactCalculator(pageName = "KAI") {
-  const defaults = { volume: 4, minutes: 45, automation: 50, review: 5 };
-  const result = createBusinessImpactCalculator({
-    pageName,
-    workloadLabel: "Grocery-planning sessions each month",
-    defaults,
-    burden: ["Checking the fridge and pantry", "Finding recipes and missing ingredients", "Comparing products and preparing a grocery list"],
-    opportunity: ["More time for yourself and your household", "Meals built around food you already have", "A reviewed shopping list, with fewer duplicate purchases"],
-    primaryTarget: "hero-chat",
-    primaryLabel: `Try a grocery scan with ${pageName}`,
-    tokensPerOutput: 15e3,
-    contributionRate: 0,
-    mediumPlatform: 0.75,
-    basePlatform: 0.5
-  });
-  Object.assign(result, {
-    kicker: "Home impact",
-    heading: "Time & Friction Estimator",
-    subheading: "Estimate your planning time and KAI price from how often you use it. Adjust the starting values to match your household.",
-    disclaimer: "Modelled household estimates, not guaranteed savings. Personal time is not treated as salary. Food value counts only if it replaces spending you would otherwise make; check prices, portions and dietary needs yourself."
-  });
-  const b = result.businessImpact;
-  const mediumFood = { incidents: 8, incident_cost: 3.8 };
-  delete b.usagePackages;
-  delete b.defaultPackage;
-  b.defaults = {
-    ...defaults,
-    tokens_per_output: 15e3,
-    model_cost: 0,
-    tools_cost: 0,
-    infrastructure_cost: 0,
-    platform_cost: 0.75,
-    customer_price: 6.99,
-    personal_value_per_hour: null,
-    higher_value_hours: 0,
-    contribution_rate: 0,
-    ...mediumFood
-  };
-  b.selected = [];
-  b.confirmations = { overlap: false, hiring: false, outcomes: false, hide: false };
-  b.hero = { kind: "volume", label: "Checked plans / shopping lists" };
-  b.pricing = { basis: "usage", annualPrice: 59, minimumMargin: 0, label: "Pricing", help: "Light usage stays at the base price. When the modelled service cost exceeds that base, the estimated price increases with usage. Switch Monthly or Yearly to see one total for that period." };
-  b.presentation = { financial: "optional", showCustomerEconomics: true, hideEconomicMultiple: true };
-  result.costCopy = { ...result.costCopy, breakdown: "Pricing details", perUnit: "{amount} per planning session (average)" };
-  b.tabs = [
-    { id: "routine", label: "Your routine", intro: "Count time spent checking food, choosing recipes and preparing your grocery list\u2014not cooking, travel or time in the shop.", fields: ["volume", "minutes", "automation", "review"], showReview: true },
-    { id: "food", label: "Optional money comparison", intro: "Time back is yours to enjoy. Add food-waste value or a personal hourly value if you want to compare it with your KAI price.", fields: ["personal_value_per_hour"], showOutcomes: true }
-  ];
-  Object.assign(b.copy, {
-    navLabel: "Impact estimate",
-    workloadStep: "Your routine",
-    costStep: "Your KAI usage",
-    valueStep: "Optional money comparison",
-    workloadIntro: "Count time spent checking food, choosing recipes and preparing your grocery list\u2014not cooking, travel or time in the shop.",
-    costIntro: "Your estimated KAI price follows your planning sessions, with a base price for light usage and an increase for additional usage.",
-    valueIntro: "Time back is yours to enjoy. Add an explicit food-waste or personal-value assumption if you want a money comparison.",
-    sampleNotice: "Typical household usage \xB7 adjust these numbers to your kitchen",
+  const shown = {
+    ...Object.fromEntries(HOUSEHOLD_IMPACT_COPY_KEYS.map((key) => [key, IMPACT_COPY[key]])),
     summary: "Your household estimate",
-    volume: "Planning sessions",
-    grossHours: "Planning time reduced",
-    capacity: "Time back for you",
-    retained: "Personal time, not priced in money",
-    reviewMode: "Who checks the suggestions?",
-    teamReview: "Me or my household",
-    paidReview: "Someone I pay extra",
-    reviewNote: "Checking portions, allergies, ingredients and the cart takes time. Household review is subtracted from time back. Help you pay for separately is an extra expense in the optional money comparison; it is not part of the KAI price.",
-    totalMode: "Monthly budget",
-    itemizedMode: "Optional cost details",
-    budgetNote: "Include KAI access, extra services and any extra paid help once. Do not include your usual grocery bill or put a price on your own time.",
-    itemizedNote: "Token usage is calculated from your plans. Extra services stay at zero unless you pay for them separately.",
-    paidReviewCost: "Extra paid checking",
-    allInCost: "Pricing",
-    expectedLoss: "Estimated food value retained",
-    economicValue: "Modeled optional value",
-    netBenefit: "Estimated value minus your costs",
-    multiple: "Food value / KAI cost",
-    annualNote: "Twelve months using the same routine and food-waste assumptions. No growth, compounding or guaranteed savings.",
-    methodBody: "Hours back equals planning sessions \xD7 minutes per session \xD7 the share KAI could reduce, minus your checking time. Personal time stays separate from money unless you explicitly enter a comparison value. Optional food value equals portions you expect to stop wasting \xD7 their ingredient cost, only where using that food replaces a future purchase.",
-    formulaLabel: "Estimated net benefit subtracts your KAI price and any separately paid checking from the optional value you enter. Unpriced personal time is shown in hours only.",
+    reset: "Reset values",
+    missing: "Enter a value",
+    methodBody: "KAI takes on part of the planning work: checking what is already at home, choosing recipes and preparing the list. Checking each plan still takes some of your time, so it is subtracted. The food-waste figure is a published average shown beside the KAI price for comparison, not a promised saving.",
     burdenHeading: "Less grocery admin",
     opportunityHeading: "More room for everyday life",
-    allocationNote: "All returned time remains personal time. It is never converted into wages, business revenue or cash savings.",
-    overlapLabel: "These portions would otherwise be wasted, replace a future purchase, and are not also counted as a discount or another saving.",
-    overlapNote: "Count only edible food you would safely use. Ingredient cost excludes your time and KAI fees. Do not count the same food as both a duplicate purchase avoided and waste prevented.",
-    reviewedLabel: "I have reviewed my assumptions. If I leave food waste unselected, only my time estimate counts as a benefit.",
-    assumptionsIncomplete: "You can keep this as a time estimate. Add and review optional value assumptions to compare them with your KAI price.",
-    reviewError: "Checking takes longer than the planning time reduced. These assumptions do not return positive time.",
-    overlapError: "Confirm the food value replaces spending and is not counted twice before including it."
-  });
-  Object.assign(b.fields, {
-    volume: { label: "Grocery-planning sessions each month", help: "For example, four weekly plans. Count your whole household once, not once per person." },
-    minutes: { label: "Planning minutes per session today", help: "Include fridge checks, recipe decisions, product comparison and list preparation. Exclude cooking and shopping travel." },
-    automation: { label: "Share KAI could help reduce", help: "Your estimate, not a promised performance level. Start modestly and check against your actual routine." },
-    review: { label: "Minutes to check each plan", help: "Allow time to verify ingredients, portions, allergies, current prices and the final shopping list." },
-    tokens_per_output: { label: "Tokens to build one plan", help: "Modeled tokens to turn a fridge or receipt scan into a checked plan. Shown so you can see usage; you do not need a provider price." },
-    customer_price: { label: "Base price", help: "The minimum price for the selected period. Your estimated total increases when usage exceeds the included allowance." },
-    personal_value_per_hour: { label: "Optional value you assign to one hour", help: "Use only for a personal comparison. This is not salary, wages or guaranteed savings." },
-    budget: { label: "Your monthly KAI budget", help: "Your own estimate for access and extra services, not a price quote. Exclude the usual grocery bill." },
-    platform_cost: { label: "Modelled service cost", help: "Internal token, model, hosting, storage and support cost used to estimate the displayed KAI price." },
-    model_cost: { label: "Additional usage", help: "The amount above the base price needed to cover your estimated usage." },
-    tools_cost: { label: "Extra connected services", help: "Only additional service charges needed for KAI, not ordinary food purchases." },
-    infrastructure_cost: { label: "Extra hosting or storage", help: "Enter zero unless you pay for this separately." },
-    review_rate: { label: "Extra paid checking per hour", help: "Use actual additional spending on help, never an hourly value for your own time." },
-    incidents: { label: "Food portions you could stop wasting each month", help: "Enter a realistic reduction from what you currently throw away. Count only food you would safely use instead of buying a replacement." },
-    incident_cost: { label: "Ingredient cost per avoided wasted portion", help: "Use the average cost of the ingredients, not a restaurant price or the value of your cooking time." }
-  });
-  b.outcomes = [{ id: "error", label: "Use more of the food I buy", help: "Optional: estimate fewer wasted portions. KAI does not guarantee lower grocery spending." }];
-  result.cta.privacyNote = "Your estimates stay in this calculator. Nothing is ordered or saved from these inputs.";
-  return result;
+    reviewError: "Checking takes longer than the planning time KAI takes on. At these values there is no time back."
+  };
+  const intro = "Count time spent checking food, choosing recipes and preparing your grocery list, not cooking, travel or time in the shop.";
+  return {
+    methodologyVersion: 2,
+    enabled: true,
+    kicker: "Home impact",
+    heading: "Time & Friction Estimator",
+    subheading: "See how much planning time KAI could give back. Adjust the three values to match your household.",
+    disclaimer: "Estimates from your inputs, not guaranteed savings.",
+    currency: "EUR",
+    currencyCopy: { ...ROI_CURRENCY_COPY },
+    locale: "en-GB",
+    inputs: [],
+    metrics: [],
+    businessImpact: {
+      defaults: {
+        volume: 4,
+        minutes: 45,
+        people: HOUSEHOLD_PEOPLE_DEFAULT,
+        // Mirrors of the fixed assumptions below; the validator keeps them equal.
+        automation: OFFLOAD_RATE_DEFAULT * 100,
+        review: REVIEW_MINUTES_DEFAULT,
+        tokens_per_output: 15e3,
+        platform_cost: 0.75,
+        customer_price: 6.99
+      },
+      fixedAssumptions: {
+        offloadRate: OFFLOAD_RATE_DEFAULT,
+        reviewMinutes: REVIEW_MINUTES_DEFAULT,
+        foodWastePerPersonYear: FOOD_WASTE_PER_PERSON_YEAR_DEFAULT,
+        foodWasteSource: FOOD_WASTE_SOURCE_DEFAULT,
+        userEditable: false
+      },
+      householdCopy: { ...HOUSEHOLD_COPY },
+      // Household estimators store only the interface copy and input labels they display.
+      copy: shown,
+      fields: {
+        volume: { label: "Grocery-planning sessions each month", help: "For example, four weekly plans. Count your whole household once, not once per person." },
+        minutes: { label: "Planning minutes per session today", help: "Include fridge checks, recipe decisions, product comparison and list preparation. Exclude cooking and shopping travel." },
+        people: { label: "People in your household", help: "Used only for the food-waste comparison. Use a whole number from 1 to 8." }
+      },
+      outcomes: [],
+      burden: ["Checking the fridge and pantry", "Finding recipes and missing ingredients", "Comparing products and preparing a grocery list"],
+      opportunity: ["More time for yourself and your household", "Meals built around food you already have", "A reviewed shopping list, with fewer duplicate purchases"],
+      tabs: [{ id: "routine", label: "Your routine", intro, fields: [...HOUSEHOLD_INPUT_FIELDS] }],
+      pricing: { basis: "fixed", annualPrice: 59, label: "Pricing", help: "The KAI price is fixed. Calculator inputs never change it." },
+      presentation: { financial: "capacity_only", showTokenUsage: true }
+    },
+    cta: {
+      primaryLabel: `Try a grocery scan with ${pageName}`,
+      primaryTarget: "hero-chat",
+      privacyNote: "Your estimates stay in this calculator. Nothing is ordered or saved from these inputs."
+    }
+  };
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
