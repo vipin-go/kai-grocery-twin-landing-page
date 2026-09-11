@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "language": "th",
   "regionKey": null,
-  "sourceRevision": "0fd1fe4718ca512480681930c5cffe0c7821dcf88552d54e067ccd52bc760acd",
+  "sourceRevision": "70c3e29bf7e443617a942b569d2122c0b21d786fb2f307d94d5d2afeab4b0cc6",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -768,7 +768,7 @@
       "metrics": [],
       "businessImpact": {
         "defaults": {
-          "volume": 6,
+          "volume": 1,
           "cycles_per_unit": 13,
           "minutes": 150,
           "purchases_per_store": 100000,
@@ -5818,5 +5818,5 @@
       "sourceHash": "d15dff1f02872b5a86fe94913f2db1b4928c5840b83dde7a4064da877b668a28"
     }
   ],
-  "generatedAt": "2026-09-11T21:50:26.457Z"
+  "generatedAt": "2026-09-11T22:18:52.077Z"
 }

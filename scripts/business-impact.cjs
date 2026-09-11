@@ -214,7 +214,7 @@ var REVIEW_MIN_PER_STORE_CYCLE = 30;
 var LOSS_RATE = 0.0121;
 var PRICE_PER_STORE = 250;
 var LOSS_RATE_SOURCE_DEFAULT = "Wageningen University & Research, supermarket food-loss monitor (2024 data)";
-var STORE_OPS_STARTING_VALUES = { volume: 6, cycles_per_unit: 13, minutes: 150, purchases_per_store: 1e5 };
+var STORE_OPS_STARTING_VALUES = { volume: 1, cycles_per_unit: 13, minutes: 150, purchases_per_store: 1e5 };
 var STORE_OPS_INPUT_FIELDS = ["volume", "cycles_per_unit", "minutes", "purchases_per_store"];
 var STORE_OPS_COPY = {
   lossLabelOne: "Food your {stores} store loses to expiry and spoilage",

@@ -201,8 +201,8 @@ Grocery Twin renders it with its own three-input panel, never the generic tabs:
   helps you cook from what is already in the fridge, so less of it ends up in the bin.").
   The waste figure and the price sit side by side only: no ratio, and the waste figure is
   never called a saving. One footnote: "Estimates from your inputs, not guaranteed savings.
-  Amounts in euros, including VAT." No currency conversion, strikethrough, "was/now" or
-  discount anywhere.
+  Amounts in euros, including VAT." The food-waste amount (value only, never its label)
+  is struck through; nothing else is. No currency conversion, "was/now" or discount anywhere.
 - **Copy:** `householdCopy` holds every result label as whole-sentence templates so every
   language can reorder them: `timeBack*` contain `{duration}`; `waste*`, `smart*` and
   `price*` contain `{amount}`; `householdSize` contains `{people}`; `tierRange` contains
@@ -249,9 +249,9 @@ edition renders it with one four-input panel:
 - **Copy:** `storeOpsCopy` holds whole-sentence templates. `{stores}` appears in the
   `…One`/`…Other` label pairs (singular and plural), `{amount}` in the loss and price
   amounts, `{perStore}` in the price amounts, `{percent}` in `breakEven` and
-  `{duration}` in the hours sentences. KAI Retail strikes through the food-loss row
-  (label and amount) to show the loss KAI works against; the price row is never struck
-  through, and there is no "was/now" or discount percentage. Use British "modelled".
+  `{duration}` in the hours sentences. KAI Retail strikes through the food-loss
+  amount only (never its label) to show the loss KAI works against; the price row is never
+  struck through, and there is no "was/now" or discount percentage. Use British "modelled".
 
 Keep one footnote ("Estimates from your inputs and published averages, not measured
 results…"). Older retail assets without `storeOpsAssumptions` render with the same
