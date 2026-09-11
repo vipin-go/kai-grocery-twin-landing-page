@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "language": "de",
   "regionKey": null,
-  "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
+  "sourceRevision": "0fd1fe4718ca512480681930c5cffe0c7821dcf88552d54e067ccd52bc760acd",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -432,7 +432,6 @@
             "reviewMinutes": 5,
             "foodWastePerPersonYear": 100,
             "foodWasteSource": "Niederländisches Ernährungszentrum (Voedingscentrum), Messung 2025, Bericht Mai 2026: 25,5 kg pro Person und Jahr",
-            "wasteShare": 0.2,
             "smartShopping": false,
             "smartShare": 0.03,
             "spendBySize": {
@@ -451,8 +450,8 @@
           "householdCopy": {
             "timeBackMonthly": "Etwa {duration} Ersparnis pro Monat",
             "timeBackYearly": "Etwa {duration} Ersparnis pro Jahr",
-            "wasteLabel": "Lebensmittelverschwendung, die Sie vermeiden könnten",
-            "wasteNote": "Basierend auf Voedingscentrum-Zahlen für einen Haushalt Ihrer Größe.",
+            "wasteLabel": "Lebensmittel, die Ihr Haushalt wegwirft",
+            "wasteNote": "Niederländischer Durchschnitt für einen Haushalt Ihrer Größe (Voedingscentrum, Messung 2025).",
             "wasteMonthly": "ca. {amount} pro Monat",
             "wasteYearly": "ca. {amount} pro Jahr",
             "smartLabel": "Intelligenteres Einkaufen, wenn Angebote und Preisvergleiche aktiv sind",
@@ -462,16 +461,12 @@
             "priceLabel": "KAI",
             "priceMonthly": "{amount} pro Monat",
             "priceYearly": "{amount} pro Jahr",
-            "ratio": "Das sind etwa {ratio} zurück für jeden {unit}, den Sie für KAI ausgeben.",
-            "timeFirstMonthly": "Aktuell zahlt sich KAI hauptsächlich in Zeit aus, plus etwa {amount} weniger Lebensmittelverschwendung pro Monat.",
-            "timeFirstYearly": "Aktuell zahlt sich KAI hauptsächlich in Zeit aus, plus etwa {amount} weniger Lebensmittelverschwendung pro Jahr.",
+            "kaiNote": "KAI hilft Ihnen, mit dem zu kochen, was bereits im Kühlschrank ist, sodass weniger davon im Müll landet.",
             "fixedAssumptionsHeading": "Feste Annahmen, keine Eingaben",
             "estimatesNote": "Die Anteile und Prüfminuten sind Arbeitsschätzungen, bis KAI sie mit realen Haushalten misst.",
             "offloadRateLabel": "Anteil der Planungszeit, den KAI übernimmt",
             "reviewMinutesLabel": "Minuten, die pro Sitzung noch für die Prüfung aufgewendet werden",
             "foodWasteReferenceLabel": "Pro Person pro Jahr verschwendete Lebensmittel",
-            "wasteShareLabel": "Anteil dieser Verschwendung, den KAI Ihnen helfen könnte zu vermeiden",
-            "wasteShareNote": "Eine vorsichtige Zahl: Studien fanden kurzfristig 24 % bis 46 % weniger Lebensmittelverschwendung, aber der Effekt lässt nach.",
             "smartShareLabel": "Einsparungen bei Lebensmittelausgaben durch Angebote und Preisvergleiche",
             "smartShareNote": "Wird nur verwendet, wenn Angebote und Preisvergleiche live sind und nur, wenn Sie den Vorschlägen von KAI folgen.",
             "smartOffNote": "Intelligenteres Einkaufen ist noch nicht enthalten. Es wird hinzugefügt, sobald Angebote und Preisvergleiche live sind.",
@@ -481,9 +476,8 @@
             "tierRange": "{from} bis {to} Sitzungen",
             "sourceLabel": "Quelle",
             "timeBackFormula": "Zeit zurück = Sitzungen × Planungsminuten × der Anteil, den KAI übernimmt, minus Sitzungen × Prüfminuten, niemals unter Null.",
-            "wasteFormula": "Vermiedene Lebensmittelverschwendung = pro Person pro Jahr verschwendete Lebensmittel ÷ 12 × Personen in Ihrem Haushalt × der Anteil, den KAI Ihnen helfen könnte zu vermeiden.",
+            "wasteFormula": "Lebensmittel, die Ihr Haushalt wegwirft = Lebensmittelverschwendung pro Person und Jahr ÷ 12 × Personen in Ihrem Haushalt, auf eine Dezimalstelle unter 10 € gerundet.",
             "smartFormula": "Intelligenteres Einkaufen = monatliche Lebensmittelausgaben für Ihre Haushaltsgröße × die Angebotseinsparung × Sitzungen ÷ 4.",
-            "ratioFormula": "Geld zurück pro Euro = (vermiedene Lebensmittelverschwendung + intelligenteres Einkaufen) ÷ dem KAI-Preis.",
             "priceNote": "Preise inklusive Mehrwertsteuer. Der KAI-Preis hängt nur davon ab, wie viele Sitzungen Sie pro Monat planen; Minuten und Haushaltsgröße ändern ihn nie.",
             "yearlyNote": "Die Jahresansicht ist das Zwölffache der Monatszahlen."
           },
@@ -496,7 +490,7 @@
             "rangeLabel": "So wird gerechnet",
             "missing": "Wert eingeben",
             "method": "So wird gerechnet",
-            "methodBody": "KAI übernimmt einen Teil der Planungsarbeit: Überprüfen, was bereits zu Hause ist, Rezepte auswählen und die Liste vorbereiten. Das Überprüfen jeder Sitzung nimmt immer noch einen Teil Ihrer Zeit in Anspruch, daher wird es abgezogen. Geld zurück kombiniert vermeidbare Lebensmittelverschwendung und, sobald Angebote und Preisvergleiche live sind, intelligenteres Einkaufen. Beide verwenden veröffentlichte Durchschnittswerte und sind Schätzungen, keine versprochenen Einsparungen.",
+            "methodBody": "KAI übernimmt einen Teil der Planungsarbeit: Überprüfen, was bereits zu Hause ist, Rezepte auswählen und die Liste vorbereiten. Das Überprüfen jeder Sitzung nimmt immer noch etwas Ihrer Zeit in Anspruch, daher wird dies abgezogen. Die Zahl der Lebensmittelverschwendung ist der veröffentlichte niederländische Durchschnitt für einen Haushalt Ihrer Größe, der neben dem KAI-Preis zum Vergleich angezeigt wird und kein von KAI versprochenes Einsparungspotenzial darstellt.",
             "burdenHeading": "Deine Routine",
             "opportunityHeading": "Zeit zurück für dich",
             "noCurrencyChange": "Schätze deine Planungszeit und den KAI-Preis anhand deiner Nutzung. Passe die Werte an deinen Haushalt an.",
@@ -2826,7 +2820,7 @@
         "householdCopy",
         "wasteLabel"
       ],
-      "sourceHash": "a6dd1cdfe0a6fa1bfbbcc5e06a942290f7acaeae8c26375ed698c30c4c93fae3"
+      "sourceHash": "2eec25e4dee6119ba29b450e37385168cf23a4af66139f9fecaa4a68b0cf09a5"
     },
     {
       "path": [
@@ -2837,7 +2831,7 @@
         "householdCopy",
         "wasteNote"
       ],
-      "sourceHash": "a3b8fe9ecf683b2a92c086dceb576939b408e981bc54dcb1054d3b718eb0b8fb"
+      "sourceHash": "389ed94d3505aceef6c0eb250b4b049463528a6c58ba655e81b177f487007fdc"
     },
     {
       "path": [
@@ -2945,31 +2939,9 @@
         "homeRoiCalculator",
         "businessImpact",
         "householdCopy",
-        "ratio"
+        "kaiNote"
       ],
-      "sourceHash": "c1c587794ccc662b65e545a6fda9ee9dc74243a9a7e1cc1b3c88e6f951499d88"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
-        "householdCopy",
-        "timeFirstMonthly"
-      ],
-      "sourceHash": "aab22b7ca9aad9dec91de97f77b6295e2915888f85b69525cc0b0d81a7f6e4cf"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
-        "householdCopy",
-        "timeFirstYearly"
-      ],
-      "sourceHash": "942646f385a742d839e46bbbdceaf8945c5d1ac84429f0a40516b40446ab3577"
+      "sourceHash": "df6683548ca05ad147289e4d9e9db9a6da5d91022870350105d6c8ade95d94fa"
     },
     {
       "path": [
@@ -3025,28 +2997,6 @@
         "foodWasteReferenceLabel"
       ],
       "sourceHash": "820eb2127dfea854ad1841802623ee5790d2aa5e29efbf9fb0701120c29738cd"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
-        "householdCopy",
-        "wasteShareLabel"
-      ],
-      "sourceHash": "bd63bcbd9d881de2a05c94a48571faebfd3944e824e327fb247e3bb509d1adf5"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
-        "householdCopy",
-        "wasteShareNote"
-      ],
-      "sourceHash": "dc233476918e3552cfa55c01f8e23d303b59be0fc9207eca4bf352a6a4aac3d9"
     },
     {
       "path": [
@@ -3156,7 +3106,7 @@
         "householdCopy",
         "wasteFormula"
       ],
-      "sourceHash": "586d7ebdbc25cbdfe602ebc3c5632309662f67335d6e9c6b511df038af5d39c6"
+      "sourceHash": "4436bb4f7db43aaf15b95035f065e6be1e87eb3dd4c79cedd916c79aae5e6288"
     },
     {
       "path": [
@@ -3168,17 +3118,6 @@
         "smartFormula"
       ],
       "sourceHash": "5f56f4bf3bc7eab0a67b0c42ed96a8e6933dc9dd6adf2e89a4ae78b301f380fd"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
-        "householdCopy",
-        "ratioFormula"
-      ],
-      "sourceHash": "0f1eb968f660b3aa78759aa46499f1f52b761daaf13660635d6c171c9cc2b22d"
     },
     {
       "path": [
@@ -3299,7 +3238,7 @@
         "copy",
         "methodBody"
       ],
-      "sourceHash": "49a931fdb7480b4884bdb33bf9211dc0c999f9b8a38953143c29ecb286e9f70d"
+      "sourceHash": "00f1bcd0eb8dbe8dfd501ad7cb88d6da8d8c89ffea65e5c856f3533c82bf424f"
     },
     {
       "path": [
@@ -5879,5 +5818,5 @@
       "sourceHash": "d15dff1f02872b5a86fe94913f2db1b4928c5840b83dde7a4064da877b668a28"
     }
   ],
-  "generatedAt": "2026-09-11T20:39:26.790Z"
+  "generatedAt": "2026-09-11T21:50:26.457Z"
 }

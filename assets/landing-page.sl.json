@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "language": "sl",
   "regionKey": null,
-  "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
+  "sourceRevision": "0fd1fe4718ca512480681930c5cffe0c7821dcf88552d54e067ccd52bc760acd",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -432,7 +432,6 @@
             "reviewMinutes": 5,
             "foodWastePerPersonYear": 100,
             "foodWasteSource": "Nizozemski prehranski center (Voedingscentrum), meritev 2025, poročilo maj 2026: 25,5 kg na osebo letno",
-            "wasteShare": 0.2,
             "smartShopping": false,
             "smartShare": 0.03,
             "spendBySize": {
@@ -451,8 +450,8 @@
           "householdCopy": {
             "timeBackMonthly": "Približno {duration} prihranjenega časa na mesec",
             "timeBackYearly": "Približno {duration} prihranjenega časa na leto",
-            "wasteLabel": "Izguba hrane, ki bi se ji lahko izognili",
-            "wasteNote": "Na podlagi podatkov Voedingscentrum za gospodinjstvo vaše velikosti.",
+            "wasteLabel": "Hrana, ki jo vaše gospodinjstvo zavrže",
+            "wasteNote": "Nizozemsko povprečje za gospodinjstvo vaše velikosti (Voedingscentrum, meritev 2025).",
             "wasteMonthly": "približno {amount} na mesec",
             "wasteYearly": "približno {amount} na leto",
             "smartLabel": "Pametnejše nakupovanje, ko so ponudbe in preverjanje cen vključeni",
@@ -462,16 +461,12 @@
             "priceLabel": "KAI",
             "priceMonthly": "{amount} na mesec",
             "priceYearly": "{amount} na leto",
-            "ratio": "To je približno {ratio} nazaj za vsak {unit}, ki ga porabite za KAI.",
-            "timeFirstMonthly": "Trenutno vam KAI večinoma povrne čas, plus približno {amount} manj izgubljene hrane na mesec.",
-            "timeFirstYearly": "Trenutno vam KAI večinoma povrne čas, plus približno {amount} manj izgubljene hrane na leto.",
+            "kaiNote": "KAI vam pomaga kuhati iz tistega, kar je že v hladilniku, tako da manj tega konča v smeteh.",
             "fixedAssumptionsHeading": "Fiksne predpostavke, ne vnosi",
             "estimatesNote": "Deleži in minute preverjanja so delovne ocene, dokler jih KAI ne izmeri z resničnimi gospodinjstvi.",
             "offloadRateLabel": "Delež časa za načrtovanje, ki ga prevzame KAI",
             "reviewMinutesLabel": "Minute, ki so še vedno porabljene za preverjanje vsake seje",
             "foodWasteReferenceLabel": "Zavržena hrana na osebo letno",
-            "wasteShareLabel": "Delež te izgube, ki bi se ji KAI lahko pomagal izogniti",
-            "wasteShareNote": "Previdna številka: poskusi so kratkoročno pokazali 24 % do 46 % manj izgubljene hrane, vendar učinek zbledi.",
             "smartShareLabel": "Prihranek pri porabi hrane z ponudbami in preverjanjem cen",
             "smartShareNote": "Uporablja se samo, ko so ponudbe in preverjanje cen v živo, in samo, če sledite KAI-jevim predlogom.",
             "smartOffNote": "Pametnejše nakupovanje še ni vključeno. Dodano bo, ko bodo ponudbe in preverjanje cen v živo.",
@@ -481,9 +476,8 @@
             "tierRange": "{from} do {to} sej",
             "sourceLabel": "Vir",
             "timeBackFormula": "Povrnjen čas = seje × minute načrtovanja × delež, ki ga prevzame KAI, minus seje × minute preverjanja, nikoli pod ničlo.",
-            "wasteFormula": "Izognjena izguba hrane = izgubljena hrana na osebo letno ÷ 12 × število oseb v vašem gospodinjstvu × delež, ki bi se mu KAI lahko pomagal izogniti.",
+            "wasteFormula": "Hrana, ki jo vaše gospodinjstvo zavrže = zavržena hrana na osebo letno ÷ 12 × število oseb v vašem gospodinjstvu, prikazano na eno decimalno mesto pod 10 €.",
             "smartFormula": "Pametnejše nakupovanje = mesečna poraba hrane za velikost vašega gospodinjstva × prihranek pri ponudbah × seje ÷ 4.",
-            "ratioFormula": "Denar nazaj za vsak evro = (izognjena izguba hrane + pametnejše nakupovanje) ÷ cena KAI.",
             "priceNote": "Cene vključujejo DDV. Cena KAI je odvisna samo od števila sej, ki jih načrtujete vsak mesec; minute in velikost gospodinjstva je nikoli ne spremenijo.",
             "yearlyNote": "Letni pogled je dvanajstkratnik mesečnih številk."
           },
@@ -496,7 +490,7 @@
             "rangeLabel": "Kako se izračuna",
             "missing": "Vnesite vrednost",
             "method": "Kako se izračuna",
-            "methodBody": "KAI prevzame del načrtovalnega dela: preverjanje, kaj je že doma, izbiranje receptov in pripravo seznama. Preverjanje vsake seje še vedno vzame nekaj vašega časa, zato se odšteje. Povrnjen denar združuje izgubo hrane, ki bi se ji lahko izognili, in, ko so ponudbe in preverjanje cen v živo, pametnejše nakupovanje. Oboje uporablja objavljena povprečja in so ocene, ne obljubljeni prihranki.",
+            "methodBody": "KAI prevzame del načrtovanja: preverjanje, kaj je že doma, izbiranje receptov in pripravo seznama. Preverjanje vsake seje še vedno vzame nekaj vašega časa, zato je to odšteto. Podatek o zavrženi hrani je objavljeno nizozemsko povprečje za gospodinjstvo vaše velikosti, prikazano poleg cene KAI za primerjavo, ne pa prihranek, ki ga KAI obljublja.",
             "burdenHeading": "Vaša rutina",
             "opportunityHeading": "Čas, vrnjen vam",
             "noCurrencyChange": "Ocenite čas načrtovanja in ceno KAI glede na uporabo. Prilagodite vrednosti svojemu gospodinjstvu.",
@@ -2826,7 +2820,7 @@
         "householdCopy",
         "wasteLabel"
       ],
-      "sourceHash": "a6dd1cdfe0a6fa1bfbbcc5e06a942290f7acaeae8c26375ed698c30c4c93fae3"
+      "sourceHash": "2eec25e4dee6119ba29b450e37385168cf23a4af66139f9fecaa4a68b0cf09a5"
     },
     {
       "path": [
@@ -2837,7 +2831,7 @@
         "householdCopy",
         "wasteNote"
       ],
-      "sourceHash": "a3b8fe9ecf683b2a92c086dceb576939b408e981bc54dcb1054d3b718eb0b8fb"
+      "sourceHash": "389ed94d3505aceef6c0eb250b4b049463528a6c58ba655e81b177f487007fdc"
     },
     {
       "path": [
@@ -2945,31 +2939,9 @@
         "homeRoiCalculator",
         "businessImpact",
         "householdCopy",
-        "ratio"
+        "kaiNote"
       ],
-      "sourceHash": "c1c587794ccc662b65e545a6fda9ee9dc74243a9a7e1cc1b3c88e6f951499d88"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
-        "householdCopy",
-        "timeFirstMonthly"
-      ],
-      "sourceHash": "aab22b7ca9aad9dec91de97f77b6295e2915888f85b69525cc0b0d81a7f6e4cf"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
-        "householdCopy",
-        "timeFirstYearly"
-      ],
-      "sourceHash": "942646f385a742d839e46bbbdceaf8945c5d1ac84429f0a40516b40446ab3577"
+      "sourceHash": "df6683548ca05ad147289e4d9e9db9a6da5d91022870350105d6c8ade95d94fa"
     },
     {
       "path": [
@@ -3025,28 +2997,6 @@
         "foodWasteReferenceLabel"
       ],
       "sourceHash": "820eb2127dfea854ad1841802623ee5790d2aa5e29efbf9fb0701120c29738cd"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
-        "householdCopy",
-        "wasteShareLabel"
-      ],
-      "sourceHash": "bd63bcbd9d881de2a05c94a48571faebfd3944e824e327fb247e3bb509d1adf5"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
-        "householdCopy",
-        "wasteShareNote"
-      ],
-      "sourceHash": "dc233476918e3552cfa55c01f8e23d303b59be0fc9207eca4bf352a6a4aac3d9"
     },
     {
       "path": [
@@ -3156,7 +3106,7 @@
         "householdCopy",
         "wasteFormula"
       ],
-      "sourceHash": "586d7ebdbc25cbdfe602ebc3c5632309662f67335d6e9c6b511df038af5d39c6"
+      "sourceHash": "4436bb4f7db43aaf15b95035f065e6be1e87eb3dd4c79cedd916c79aae5e6288"
     },
     {
       "path": [
@@ -3168,17 +3118,6 @@
         "smartFormula"
       ],
       "sourceHash": "5f56f4bf3bc7eab0a67b0c42ed96a8e6933dc9dd6adf2e89a4ae78b301f380fd"
-    },
-    {
-      "path": [
-        "landingPage",
-        "groceryTwin",
-        "homeRoiCalculator",
-        "businessImpact",
-        "householdCopy",
-        "ratioFormula"
-      ],
-      "sourceHash": "0f1eb968f660b3aa78759aa46499f1f52b761daaf13660635d6c171c9cc2b22d"
     },
     {
       "path": [
@@ -3299,7 +3238,7 @@
         "copy",
         "methodBody"
       ],
-      "sourceHash": "49a931fdb7480b4884bdb33bf9211dc0c999f9b8a38953143c29ecb286e9f70d"
+      "sourceHash": "00f1bcd0eb8dbe8dfd501ad7cb88d6da8d8c89ffea65e5c856f3533c82bf424f"
     },
     {
       "path": [
@@ -5879,5 +5818,5 @@
       "sourceHash": "d15dff1f02872b5a86fe94913f2db1b4928c5840b83dde7a4064da877b668a28"
     }
   ],
-  "generatedAt": "2026-09-11T20:39:26.790Z"
+  "generatedAt": "2026-09-11T21:50:26.457Z"
 }

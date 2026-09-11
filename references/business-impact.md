@@ -176,7 +176,7 @@ Grocery Twin renders it with its own three-input panel, never the generic tabs:
   1 to 8). `tabs` holds one tab whose `fields` are exactly `["volume", "minutes", "people"]`,
   with no review, outcome or package panels.
 - **Fixed assumptions (model-owned, never inputs):** `offloadRate` (0.5), `reviewMinutes`
-  (5), `foodWastePerPersonYear` (EUR 100) with `foodWasteSource`, `wasteShare` (0.2),
+  (5), `foodWastePerPersonYear` (EUR 100) with `foodWasteSource`,
   `smartShopping` (false until price comparison and offers are verified live),
   `smartShare` (0.03), `spendBySize` (EUR a month for households `"1"` to `"8"`) with
   `spendSource`, and `userEditable: false`. Keep `defaults.automation = offloadRate × 100`
@@ -189,20 +189,24 @@ Grocery Twin renders it with its own three-input panel, never the generic tabs:
   are rejected, as are usage packages and margins. A real annual price may only be added
   later as a genuine offer, never as a struck-through reference.
 - **Formulas (monthly):** time back = max(0, sessions × minutes × offloadRate − sessions ×
-  reviewMinutes); waste back = foodWastePerPersonYear ÷ 12 × people × wasteShare; smart
-  back = smartShopping ? spendBySize[people] × smartShare × sessions ÷ 4 : 0; money back =
-  waste back + smart back; ratio = money back ÷ price. Money is rounded to whole euros for
-  display only and prices keep their cents. The yearly view multiplies every figure by 12.
-- **Result panel:** the time hero; "Food waste you could avoid" with its Voedingscentrum
-  small print; the smarter-shopping line only while `smartShopping` is true, always with its
-  "A potential estimate. It depends on..." small print; the KAI price; then either the ratio
-  sentence (only when money back is more than the price) or the time-first line. One
-  footnote: "Estimates from your inputs, not guaranteed savings. Amounts in euros, including
-  VAT." No currency conversion, strikethrough, "was/now" or discount anywhere.
+  reviewMinutes); food thrown away = foodWastePerPersonYear ÷ 12 × people (the published
+  average, shown beside the price, never as a saving); smart back = smartShopping ?
+  spendBySize[people] × smartShare × sessions ÷ 4 : 0. There is no combined money back and
+  no ratio. Estimated amounts show one decimal below €10 (one person: €8.3) and whole euros
+  above; prices keep their cents. The yearly view multiplies every figure by 12.
+- **Result panel:** the time hero; "Food your household throws away" with its "Dutch
+  average for a household your size (Voedingscentrum, 2025 measurement)." small print; the
+  smarter-shopping line only while `smartShopping` is true, always with its "A potential
+  estimate. It depends on..." small print; the KAI price; then the `kaiNote` sentence ("KAI
+  helps you cook from what is already in the fridge, so less of it ends up in the bin.").
+  The waste figure and the price sit side by side only: no ratio, and the waste figure is
+  never called a saving. One footnote: "Estimates from your inputs, not guaranteed savings.
+  Amounts in euros, including VAT." No currency conversion, strikethrough, "was/now" or
+  discount anywhere.
 - **Copy:** `householdCopy` holds every result label as whole-sentence templates so every
-  language can reorder them: `timeBack*` contain `{duration}`; `waste*`, `smart*`, `price*`
-  and `timeFirst*` contain `{amount}`; `ratio` contains `{ratio}` and `{unit}`;
-  `householdSize` contains `{people}`; `tierRange` contains `{from}` and `{to}`, each exactly
+  language can reorder them: `timeBack*` contain `{duration}`; `waste*`, `smart*` and
+  `price*` contain `{amount}`; `householdSize` contains `{people}`; `tierRange` contains
+  `{from}` and `{to}`, each exactly
   once. No other household copy may contain braces. Never split a sentence into fragments
   such as "About" + "back a month"; translated alone they lose their meaning. `copy` holds
   only the interface keys the estimator shows. `outcomes` stays empty.
@@ -214,7 +218,7 @@ assumption (such as a per-session cost), because the model is public page data. 
 per-session delivery cost and VAT maths live server-side only, in
 `server/src/services/kai-home-unit-economics.ts`; app code must never import them. Older
 Home assets still render with safe migration defaults (the constants above, session tiers,
-and default result copy when the model predates `wasteShare`) until they are migrated.
+and default result copy whenever the model's copy lacks a current key) until they are migrated.
 Publish-modal saves write this model through the revision-checked landing-page API.
 
 ### Store-ops estimator (fixed assumptions)
@@ -245,8 +249,9 @@ edition renders it with one four-input panel:
 - **Copy:** `storeOpsCopy` holds whole-sentence templates. `{stores}` appears in the
   `…One`/`…Other` label pairs (singular and plural), `{amount}` in the loss and price
   amounts, `{perStore}` in the price amounts, `{percent}` in `breakEven` and
-  `{duration}` in the hours sentences. Loss and price are a comparison: never
-  strike through, "was/now" or a discount percentage. Use British "modelled".
+  `{duration}` in the hours sentences. KAI Retail strikes through the food-loss row
+  (label and amount) to show the loss KAI works against; the price row is never struck
+  through, and there is no "was/now" or discount percentage. Use British "modelled".
 
 Keep one footnote ("Estimates from your inputs and published averages, not measured
 results…"). Older retail assets without `storeOpsAssumptions` render with the same

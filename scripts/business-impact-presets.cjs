@@ -34,7 +34,6 @@ var TIME_SHARE = 0.5;
 var CHECK_MIN = 5;
 var WASTE_PER_PERSON_YEAR = 100;
 var WASTE_SOURCE = "Netherlands Nutrition Centre (Voedingscentrum), 2025 measurement, report May 2026: 25.5 kg per person a year";
-var WASTE_SHARE = 0.2;
 var SMART_SHARE = 0.03;
 var SPEND_BY_SIZE = { "1": 275, "2": 500, "3": 565, "4": 630, "5": 695, "6": 760, "7": 825, "8": 890 };
 var SPEND_SOURCE = "Nibud reference minimums for healthy food (via Knab, 2026); sizes 5 to 8 extrapolated";
@@ -47,8 +46,9 @@ var HOUSEHOLD_COPY = {
   // Whole-sentence templates: translating "About" or "back a month" as separate fragments produced wrong copy.
   timeBackMonthly: "About {duration} back a month",
   timeBackYearly: "About {duration} back a year",
-  wasteLabel: "Food waste you could avoid",
-  wasteNote: "Based on Voedingscentrum figures for a household your size.",
+  // A published average shown beside the price for comparison, never described as a saving.
+  wasteLabel: "Food your household throws away",
+  wasteNote: "Dutch average for a household your size (Voedingscentrum, 2025 measurement).",
   wasteMonthly: "about {amount} a month",
   wasteYearly: "about {amount} a year",
   smartLabel: "Smarter shopping, when offers and price checks are on",
@@ -59,16 +59,12 @@ var HOUSEHOLD_COPY = {
   priceLabel: "KAI",
   priceMonthly: "{amount} a month",
   priceYearly: "{amount} a year",
-  ratio: "That is about {ratio} back for every {unit} you spend on KAI.",
-  timeFirstMonthly: "Right now KAI mostly pays you back in time, plus about {amount} less food waste a month.",
-  timeFirstYearly: "Right now KAI mostly pays you back in time, plus about {amount} less food waste a year.",
+  kaiNote: "KAI helps you cook from what is already in the fridge, so less of it ends up in the bin.",
   fixedAssumptionsHeading: "Fixed assumptions, not inputs",
   estimatesNote: "The shares and checking minutes are working estimates until KAI measures them with real households.",
   offloadRateLabel: "Share of planning time KAI takes on",
   reviewMinutesLabel: "Minutes still spent checking each session",
   foodWasteReferenceLabel: "Food wasted per person each year",
-  wasteShareLabel: "Share of that waste KAI could help you avoid",
-  wasteShareNote: "A cautious figure: trials found 24% to 46% less food waste in the short term, but the effect fades.",
   smartShareLabel: "Saving on food spend with offers and price checks",
   smartShareNote: "Used only when offers and price checks are live, and only if you follow KAI's suggestions.",
   smartOffNote: "Smarter shopping is not included yet. It is added once offers and price checks are live.",
@@ -78,9 +74,8 @@ var HOUSEHOLD_COPY = {
   tierRange: "{from} to {to} sessions",
   sourceLabel: "Source",
   timeBackFormula: "Time back = sessions \xD7 planning minutes \xD7 the share KAI takes on, minus sessions \xD7 checking minutes, never below zero.",
-  wasteFormula: "Food waste avoided = food wasted per person each year \xF7 12 \xD7 people in your household \xD7 the share KAI could help you avoid.",
+  wasteFormula: "Food your household throws away = food wasted per person each year \xF7 12 \xD7 people in your household, shown to one decimal below \u20AC10.",
   smartFormula: "Smarter shopping = monthly food spend for your household size \xD7 the offers saving \xD7 sessions \xF7 4.",
-  ratioFormula: "Money back for every euro = (food waste avoided + smarter shopping) \xF7 the KAI price.",
   priceNote: "Prices include VAT. The KAI price depends only on how many sessions you plan each month; minutes and household size never change it.",
   yearlyNote: "The yearly view is twelve times the monthly figures."
 };
@@ -262,6 +257,7 @@ function netCapacityHours({ volume, minutes, automation, review, reviewMode = "t
 var FIELD_COPY = {
   volume: ["Work units each month", "Use a typical month, not a best-case peak."],
   people: ["People in your household", "Used only for the food-waste comparison."],
+  purchases_per_store: ["Monthly food purchases per store", "Example figure. Use your own supplier spend."],
   accepted_rate: ["Expected acceptance rate", "Optional modeled share of prepared outputs accepted by the recipient. This is not a guarantee or observed result."],
   attendance_rate: ["Expected attendance rate", "Modeled share of accepted meetings expected to happen. Replace this with verified event records after a pilot."],
   minutes: ["Hands-on minutes per unit today", "Active work time, excluding waiting and elapsed calendar time."],
@@ -429,7 +425,7 @@ function createHouseholdImpactCalculator(pageName = "KAI") {
     summary: "Your household estimate",
     reset: "Reset values",
     missing: "Enter a value",
-    methodBody: `${pageName} takes on part of the planning work: checking what is already at home, choosing recipes and preparing the list. Checking each session still takes some of your time, so it is subtracted. Money back combines food waste you could avoid and, once offers and price checks are live, smarter shopping. Both use published averages and are estimates, not promised savings.`,
+    methodBody: `${pageName} takes on part of the planning work: checking what is already at home, choosing recipes and preparing the list. Checking each session still takes some of your time, so it is subtracted. The food-waste figure is the published Dutch average for a household your size, shown beside the ${pageName} price for comparison, not a saving ${pageName} promises.`,
     burdenHeading: "Less grocery admin",
     opportunityHeading: "More room for everyday life",
     reviewError: `Checking takes longer than the planning time ${pageName} takes on. At these values there is no time back.`
@@ -459,7 +455,6 @@ function createHouseholdImpactCalculator(pageName = "KAI") {
         reviewMinutes: CHECK_MIN,
         foodWastePerPersonYear: WASTE_PER_PERSON_YEAR,
         foodWasteSource: WASTE_SOURCE,
-        wasteShare: WASTE_SHARE,
         smartShopping: FEATURE_SMART_SHOPPING,
         smartShare: SMART_SHARE,
         spendBySize: { ...SPEND_BY_SIZE },

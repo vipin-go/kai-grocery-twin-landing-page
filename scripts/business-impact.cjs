@@ -60,12 +60,12 @@ __export(business_impact_exports, {
   TIME_SHARE: () => TIME_SHARE,
   TOKEN_ECONOMICS: () => TOKEN_ECONOMICS,
   WASTE_PER_PERSON_YEAR: () => WASTE_PER_PERSON_YEAR,
-  WASTE_SHARE: () => WASTE_SHARE,
   WASTE_SOURCE: () => WASTE_SOURCE,
   defaultImpactTabs: () => defaultImpactTabs,
   evaluateBusinessImpact: () => evaluateBusinessImpact,
   evaluateHouseholdEstimate: () => evaluateHouseholdEstimate,
   evaluateStoreOpsEstimate: () => evaluateStoreOpsEstimate,
+  hasCurrentHouseholdCopy: () => hasCurrentHouseholdCopy,
   householdStartingValues: () => householdStartingValues,
   householdTierPrice: () => householdTierPrice,
   initialImpactState: () => initialImpactState,
@@ -76,6 +76,7 @@ __export(business_impact_exports, {
   resolveHouseholdCopy: () => resolveHouseholdCopy,
   resolveImpactTabs: () => resolveImpactTabs,
   resolveStoreOpsAssumptions: () => resolveStoreOpsAssumptions,
+  roundHouseholdAmount: () => roundHouseholdAmount,
   storeOpsStartingValues: () => storeOpsStartingValues,
   tokenCostFromUsage: () => tokenCostFromUsage,
   validPriceTiers: () => validPriceTiers,
@@ -140,7 +141,6 @@ var TIME_SHARE = 0.5;
 var CHECK_MIN = 5;
 var WASTE_PER_PERSON_YEAR = 100;
 var WASTE_SOURCE = "Netherlands Nutrition Centre (Voedingscentrum), 2025 measurement, report May 2026: 25.5 kg per person a year";
-var WASTE_SHARE = 0.2;
 var SMART_SHARE = 0.03;
 var SPEND_BY_SIZE = { "1": 275, "2": 500, "3": 565, "4": 630, "5": 695, "6": 760, "7": 825, "8": 890 };
 var SPEND_SOURCE = "Nibud reference minimums for healthy food (via Knab, 2026); sizes 5 to 8 extrapolated";
@@ -164,8 +164,9 @@ var HOUSEHOLD_COPY = {
   // Whole-sentence templates: translating "About" or "back a month" as separate fragments produced wrong copy.
   timeBackMonthly: "About {duration} back a month",
   timeBackYearly: "About {duration} back a year",
-  wasteLabel: "Food waste you could avoid",
-  wasteNote: "Based on Voedingscentrum figures for a household your size.",
+  // A published average shown beside the price for comparison, never described as a saving.
+  wasteLabel: "Food your household throws away",
+  wasteNote: "Dutch average for a household your size (Voedingscentrum, 2025 measurement).",
   wasteMonthly: "about {amount} a month",
   wasteYearly: "about {amount} a year",
   smartLabel: "Smarter shopping, when offers and price checks are on",
@@ -176,16 +177,12 @@ var HOUSEHOLD_COPY = {
   priceLabel: "KAI",
   priceMonthly: "{amount} a month",
   priceYearly: "{amount} a year",
-  ratio: "That is about {ratio} back for every {unit} you spend on KAI.",
-  timeFirstMonthly: "Right now KAI mostly pays you back in time, plus about {amount} less food waste a month.",
-  timeFirstYearly: "Right now KAI mostly pays you back in time, plus about {amount} less food waste a year.",
+  kaiNote: "KAI helps you cook from what is already in the fridge, so less of it ends up in the bin.",
   fixedAssumptionsHeading: "Fixed assumptions, not inputs",
   estimatesNote: "The shares and checking minutes are working estimates until KAI measures them with real households.",
   offloadRateLabel: "Share of planning time KAI takes on",
   reviewMinutesLabel: "Minutes still spent checking each session",
   foodWasteReferenceLabel: "Food wasted per person each year",
-  wasteShareLabel: "Share of that waste KAI could help you avoid",
-  wasteShareNote: "A cautious figure: trials found 24% to 46% less food waste in the short term, but the effect fades.",
   smartShareLabel: "Saving on food spend with offers and price checks",
   smartShareNote: "Used only when offers and price checks are live, and only if you follow KAI's suggestions.",
   smartOffNote: "Smarter shopping is not included yet. It is added once offers and price checks are live.",
@@ -195,9 +192,8 @@ var HOUSEHOLD_COPY = {
   tierRange: "{from} to {to} sessions",
   sourceLabel: "Source",
   timeBackFormula: "Time back = sessions \xD7 planning minutes \xD7 the share KAI takes on, minus sessions \xD7 checking minutes, never below zero.",
-  wasteFormula: "Food waste avoided = food wasted per person each year \xF7 12 \xD7 people in your household \xD7 the share KAI could help you avoid.",
+  wasteFormula: "Food your household throws away = food wasted per person each year \xF7 12 \xD7 people in your household, shown to one decimal below \u20AC10.",
   smartFormula: "Smarter shopping = monthly food spend for your household size \xD7 the offers saving \xD7 sessions \xF7 4.",
-  ratioFormula: "Money back for every euro = (food waste avoided + smarter shopping) \xF7 the KAI price.",
   priceNote: "Prices include VAT. The KAI price depends only on how many sessions you plan each month; minutes and household size never change it.",
   yearlyNote: "The yearly view is twelve times the monthly figures."
 };
@@ -210,9 +206,6 @@ var HOUSEHOLD_COPY_TEMPLATES = {
   smartYearly: ["amount"],
   priceMonthly: ["amount"],
   priceYearly: ["amount"],
-  ratio: ["ratio", "unit"],
-  timeFirstMonthly: ["amount"],
-  timeFirstYearly: ["amount"],
   householdSize: ["people"],
   tierRange: ["from", "to"]
 };
@@ -682,6 +675,10 @@ function validPriceTiers(tiers) {
 function householdTierPrice(tiers, sessions) {
   return tiers.find((tier) => sessions <= tier.upTo)?.price ?? null;
 }
+function roundHouseholdAmount(value) {
+  const tenths = Math.round(value * 10) / 10;
+  return tenths < 10 ? tenths : Math.round(value);
+}
 function resolveHouseholdAssumptions(config) {
   const fixed = config.fixedAssumptions || {};
   const { automation, review } = config.defaults || {};
@@ -692,7 +689,6 @@ function resolveHouseholdAssumptions(config) {
     reviewMinutes: finiteNumber(fixed.reviewMinutes) ? fixed.reviewMinutes : finiteNumber(review) && review >= 0 ? review : CHECK_MIN,
     foodWastePerPersonYear: finiteNumber(fixed.foodWastePerPersonYear) ? fixed.foodWastePerPersonYear : WASTE_PER_PERSON_YEAR,
     foodWasteSource: textOr(fixed.foodWasteSource, WASTE_SOURCE),
-    wasteShare: finiteNumber(fixed.wasteShare) ? fixed.wasteShare : WASTE_SHARE,
     smartShopping: typeof fixed.smartShopping === "boolean" ? fixed.smartShopping : FEATURE_SMART_SHOPPING,
     smartShare: finiteNumber(fixed.smartShare) ? fixed.smartShare : SMART_SHARE,
     spendBySize: spend && HOUSEHOLD_SIZE_KEYS.every((size) => finiteNumber(spend[size])) ? { ...spend } : { ...SPEND_BY_SIZE },
@@ -702,8 +698,12 @@ function resolveHouseholdAssumptions(config) {
     migrated: !config.fixedAssumptions
   };
 }
+function hasCurrentHouseholdCopy(config) {
+  const copy = config.householdCopy;
+  return !!copy && Object.keys(HOUSEHOLD_COPY).every((key) => typeof copy[key] === "string");
+}
 function resolveHouseholdCopy(config) {
-  const authored = config.fixedAssumptions?.wasteShare !== void 0 && config.householdCopy ? config.householdCopy : {};
+  const authored = hasCurrentHouseholdCopy(config) ? config.householdCopy : {};
   return Object.fromEntries(Object.entries(HOUSEHOLD_COPY).map(([key, fallback]) => [key, typeof authored[key] === "string" ? authored[key] : fallback]));
 }
 function householdStartingValues(config) {
@@ -722,11 +722,9 @@ function evaluateHouseholdEstimate({ assumptions, sessions, minutes, people }) {
   const peopleReady = within(people, "people");
   const rawMinutesBack = timeReady ? sessions * minutes * assumptions.offloadRate - sessions * assumptions.reviewMinutes : 0;
   const minutesBack = Math.max(0, rawMinutesBack);
-  const wasteBack = peopleReady ? assumptions.foodWastePerPersonYear / 12 * people * assumptions.wasteShare : null;
+  const waste = peopleReady ? assumptions.foodWastePerPersonYear / 12 * people : null;
   const smartBack = !assumptions.smartShopping ? 0 : sessionsReady && peopleReady ? assumptions.spendBySize[String(people)] * assumptions.smartShare * (sessions / SMART_SESSIONS_BASELINE) : null;
-  const moneyBack = wasteBack !== null && smartBack !== null ? wasteBack + smartBack : null;
   const price = sessionsReady ? householdTierPrice(assumptions.tiers, sessions) : null;
-  const ratio = moneyBack === null || price === null ? null : price > 0 ? moneyBack / price : 0;
   const yearly = (value) => value === null ? null : value * 12;
   return {
     sessionsReady,
@@ -737,17 +735,12 @@ function evaluateHouseholdEstimate({ assumptions, sessions, minutes, people }) {
     minutesBackYearly: minutesBack * 12,
     reviewExceedsSaving: timeReady && rawMinutesBack < 0,
     smartShopping: assumptions.smartShopping,
-    wasteBack,
-    wasteBackYearly: yearly(wasteBack),
+    waste,
+    wasteYearly: yearly(waste),
     smartBack,
     smartBackYearly: yearly(smartBack),
-    moneyBack,
-    moneyBackYearly: yearly(moneyBack),
     price,
-    priceYearly: price === null ? null : Math.round(price * 1200) / 100,
-    ratio,
-    // A money multiple is shown only when money back is more than the price; otherwise the estimate leads with time.
-    showRatio: ratio !== null && price !== null && price > 0 && moneyBack > price
+    priceYearly: price === null ? null : Math.round(price * 1200) / 100
   };
 }
 function resolveStoreOpsAssumptions(config) {
@@ -911,7 +904,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
     };
     if (!record(fixed)) fail(fp, "Expected fixed assumptions.");
     else {
-      keys(fixed, ["offloadRate", "reviewMinutes", "foodWastePerPersonYear", "foodWasteSource", "wasteShare", "smartShopping", "smartShare", "spendBySize", "spendSource", "userEditable"], fp);
+      keys(fixed, ["offloadRate", "reviewMinutes", "foodWastePerPersonYear", "foodWasteSource", "smartShopping", "smartShare", "spendBySize", "spendSource", "userEditable"], fp);
       const { offloadRate, reviewMinutes, foodWastePerPersonYear, spendBySize } = fixed;
       share(offloadRate, `${fp}.offloadRate`, "0.5 means 50%");
       if (finiteNumber(offloadRate) && offloadRate > 0 && offloadRate <= 1 && defaults.automation !== Math.round(offloadRate * 1e4) / 100) fail(`${bp}.defaults.automation`, "Keep automation equal to the fixed offload rate as a percentage.");
@@ -919,7 +912,6 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
       if (finiteNumber(reviewMinutes) && defaults.review !== reviewMinutes) fail(`${bp}.defaults.review`, "Keep review equal to the fixed review minutes.");
       if (!finiteNumber(foodWastePerPersonYear) || foodWastePerPersonYear < 0 || foodWastePerPersonYear > 1e5) fail(`${fp}.foodWastePerPersonYear`, "Use a non-negative yearly amount per person.");
       text(fixed.foodWasteSource, `${fp}.foodWasteSource`);
-      share(fixed.wasteShare, `${fp}.wasteShare`, "0.2 means 20%");
       if (typeof fixed.smartShopping !== "boolean") fail(`${fp}.smartShopping`, "Set smartShopping to false until offers and price checks are verified live.");
       share(fixed.smartShare, `${fp}.smartShare`, "0.03 means 3%");
       if (!record(spendBySize)) fail(`${fp}.spendBySize`, "Add monthly food spend for households of 1 to 8 people.");
@@ -1160,12 +1152,12 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
   TIME_SHARE,
   TOKEN_ECONOMICS,
   WASTE_PER_PERSON_YEAR,
-  WASTE_SHARE,
   WASTE_SOURCE,
   defaultImpactTabs,
   evaluateBusinessImpact,
   evaluateHouseholdEstimate,
   evaluateStoreOpsEstimate,
+  hasCurrentHouseholdCopy,
   householdStartingValues,
   householdTierPrice,
   initialImpactState,
@@ -1176,6 +1168,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
   resolveHouseholdCopy,
   resolveImpactTabs,
   resolveStoreOpsAssumptions,
+  roundHouseholdAmount,
   storeOpsStartingValues,
   tokenCostFromUsage,
   validPriceTiers,
