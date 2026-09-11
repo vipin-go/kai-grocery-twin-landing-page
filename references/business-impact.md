@@ -171,36 +171,50 @@ A Home calculator with `businessImpact.fixedAssumptions` is a household estimato
 Grocery Twin renders it with its own three-input panel, never the generic tabs:
 
 - **Visitor inputs (exactly three, one panel):** `defaults.volume` (planning sessions
-  each month), `defaults.minutes` (planning minutes per session) and `defaults.people`
-  (a whole household size from 1 to 8). `tabs` holds one tab whose `fields` are exactly
-  `["volume", "minutes", "people"]`, with no review, outcome or package panels.
-- **Fixed assumptions (model-owned, never inputs):** `offloadRate` (a 0–1 share, 0.5 =
-  50%), `reviewMinutes`, `foodWastePerPersonYear`, `foodWasteSource`, and
-  `userEditable: false`. Keep `defaults.automation = offloadRate × 100` and
-  `defaults.review = reviewMinutes`. The offload rate is a placeholder: replace it with
-  measured before/after planning time once usage data exists. It is an output, not an input.
-- **Time back** = sessions × minutes × offloadRate − sessions × reviewMinutes, floored
-  at zero and shown as hours and minutes. Sessions and minutes change only this figure.
-- **Food-waste comparison** = round(foodWastePerPersonYear ÷ 12 × people) a month, or
-  foodWastePerPersonYear × people a year. People changes only this figure. Show it
-  beside the price as a comparison: never a strikethrough, "was/now", discount or saving.
-- **Price:** `pricing.basis: "fixed"`, `defaults.customer_price` (monthly) and
-  `pricing.annualPrice` (yearly). No input changes either; usage packages and margins
-  are rejected.
-- **Copy:** `householdCopy` holds every result label. Composed results are whole-sentence
-  templates so every language can reorder them: `timeBackMonthly`/`timeBackYearly` contain
-  exactly one `{duration}`; `wasteMonthly`/`wasteYearly`/`priceMonthly`/`priceYearly` contain
-  exactly one `{amount}`. No other household copy may contain braces. Never split a sentence
-  into fragments such as "About" + "back a month"; translated alone they lose their meaning.
-  `copy` holds only the interface keys the estimator shows. Keep one disclaimer, for example
-  "Estimates from your inputs, not guaranteed savings." `outcomes` stays empty.
+  each month, a whole number from 1 to 12), `defaults.minutes` (planning minutes per
+  session, 10 to 90, slider step 5) and `defaults.people` (a whole household size from
+  1 to 8). `tabs` holds one tab whose `fields` are exactly `["volume", "minutes", "people"]`,
+  with no review, outcome or package panels.
+- **Fixed assumptions (model-owned, never inputs):** `offloadRate` (0.5), `reviewMinutes`
+  (5), `foodWastePerPersonYear` (EUR 100) with `foodWasteSource`, `wasteShare` (0.2),
+  `smartShopping` (false until price comparison and offers are verified live),
+  `smartShare` (0.03), `spendBySize` (EUR a month for households `"1"` to `"8"`) with
+  `spendSource`, and `userEditable: false`. Keep `defaults.automation = offloadRate × 100`
+  and `defaults.review = reviewMinutes`. The shares and checking minutes are placeholders
+  until measured; they are outputs KAI measures, never visitor inputs.
+- **Price:** `pricing.basis: "tiered"` with `pricing.tiers` of `{ upTo, price }`: monthly
+  prices including VAT by planning sessions (1 to 4 = 6.99, 5 to 8 = 10.99, 9 to 12 =
+  14.99; a boundary uses the lower tier). The last tier ends at 12. Only sessions change
+  the price. Yearly = monthly × 12; `pricing.annualPrice` and `defaults.customer_price`
+  are rejected, as are usage packages and margins. A real annual price may only be added
+  later as a genuine offer, never as a struck-through reference.
+- **Formulas (monthly):** time back = max(0, sessions × minutes × offloadRate − sessions ×
+  reviewMinutes); waste back = foodWastePerPersonYear ÷ 12 × people × wasteShare; smart
+  back = smartShopping ? spendBySize[people] × smartShare × sessions ÷ 4 : 0; money back =
+  waste back + smart back; ratio = money back ÷ price. Money is rounded to whole euros for
+  display only and prices keep their cents. The yearly view multiplies every figure by 12.
+- **Result panel:** the time hero; "Food waste you could avoid" with its Voedingscentrum
+  small print; the smarter-shopping line only while `smartShopping` is true, always with its
+  "A potential estimate. It depends on..." small print; the KAI price; then either the ratio
+  sentence (only when money back is more than the price) or the time-first line. One
+  footnote: "Estimates from your inputs, not guaranteed savings. Amounts in euros, including
+  VAT." No currency conversion, strikethrough, "was/now" or discount anywhere.
+- **Copy:** `householdCopy` holds every result label as whole-sentence templates so every
+  language can reorder them: `timeBack*` contain `{duration}`; `waste*`, `smart*`, `price*`
+  and `timeFirst*` contain `{amount}`; `ratio` contains `{ratio}` and `{unit}`;
+  `householdSize` contains `{people}`; `tierRange` contains `{from}` and `{to}`, each exactly
+  once. No other household copy may contain braces. Never split a sentence into fragments
+  such as "About" + "back a month"; translated alone they lose their meaning. `copy` holds
+  only the interface keys the estimator shows. `outcomes` stays empty.
 
 Estimators never carry delivery-cost values. The validator rejects non-null
 `tokens_per_output`, `platform_cost`, `model_cost`, `tools_cost`,
-`infrastructure_cost`, `budget` and `review_rate` defaults, because the model is public
-page data. Older Home assets without `fixedAssumptions` still validate and render
-with safe migration defaults (offload from `defaults.automation`, review from
-`defaults.review`, €100 per person per year, two people) until they are migrated.
+`infrastructure_cost`, `budget` and `review_rate` defaults and any unknown fixed
+assumption (such as a per-session cost), because the model is public page data. The
+per-session delivery cost and VAT maths live server-side only, in
+`server/src/services/kai-home-unit-economics.ts`; app code must never import them. Older
+Home assets still render with safe migration defaults (the constants above, session tiers,
+and default result copy when the model predates `wasteShare`) until they are migrated.
 Publish-modal saves write this model through the revision-checked landing-page API.
 
 ### Store-ops estimator (fixed assumptions)

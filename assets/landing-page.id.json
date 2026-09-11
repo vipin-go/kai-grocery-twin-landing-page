@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "language": "id",
   "regionKey": null,
-  "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+  "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -407,7 +407,7 @@
         "kicker": "Dampak di rumah",
         "heading": "Pengukur waktu dan friksi",
         "subheading": "Lihat berapa banyak waktu perencanaan yang bisa KAI berikan kembali. Sesuaikan tiga nilai agar sesuai dengan rumah tangga Anda.",
-        "disclaimer": "Estimasi dari masukan Anda, bukan jaminan penghematan.",
+        "disclaimer": "Estimasi dari masukan Anda, bukan jaminan penghematan. Jumlah dalam euro, termasuk PPN.",
         "currency": "EUR",
         "currencyCopy": {
           "native": "Amounts in {currency}.",
@@ -425,34 +425,67 @@
             "minutes": 45,
             "people": 2,
             "automation": 50,
-            "review": 5,
-            "customer_price": 6.99
+            "review": 5
           },
           "fixedAssumptions": {
             "offloadRate": 0.5,
             "reviewMinutes": 5,
             "foodWastePerPersonYear": 100,
-            "foodWasteSource": "Pusat Gizi Belanda (Voedingscentrum), laporan 2026 menggunakan data 2025",
+            "foodWasteSource": "Netherlands Nutrition Centre (Voedingscentrum), pengukuran 2025, laporan Mei 2026: 25,5 kg per orang per tahun",
+            "wasteShare": 0.2,
+            "smartShopping": false,
+            "smartShare": 0.03,
+            "spendBySize": {
+              "1": 275,
+              "2": 500,
+              "3": 565,
+              "4": 630,
+              "5": 695,
+              "6": 760,
+              "7": 825,
+              "8": 890
+            },
+            "spendSource": "Referensi minimum Nibud untuk makanan sehat (via Knab, 2026); ukuran 5 hingga 8 diekstrapolasi",
             "userEditable": false
           },
           "householdCopy": {
             "timeBackMonthly": "Sekitar {duration} kembali per bulan",
             "timeBackYearly": "Sekitar {duration} kembali per tahun",
-            "wasteLabel": "Makanan yang dibuang rumah tangga sebesar Anda",
-            "wasteInfo": "Rata-rata Belanda dari Pusat Gizi Belanda (2026), sekitar €100 per orang per tahun. Rumah tangga Anda mungkin membuang lebih banyak atau lebih sedikit.",
+            "wasteLabel": "Sisa makanan yang bisa Anda hindari",
+            "wasteNote": "Berdasarkan angka Voedingscentrum untuk ukuran rumah tangga Anda.",
             "wasteMonthly": "sekitar {amount} per bulan",
             "wasteYearly": "sekitar {amount} per tahun",
+            "smartLabel": "Belanja lebih cerdas, saat penawaran dan pengecekan harga aktif",
+            "smartNote": "Estimasi potensial. Tergantung pada penawaran yang tersedia dan mengikuti saran KAI.",
+            "smartMonthly": "sekitar {amount} per bulan",
+            "smartYearly": "sekitar {amount} per tahun",
             "priceLabel": "KAI",
             "priceMonthly": "{amount} per bulan",
             "priceYearly": "{amount} per tahun",
+            "ratio": "Itu sekitar {ratio} kembali untuk setiap {unit} yang Anda belanjakan untuk KAI.",
+            "timeFirstMonthly": "Saat ini KAI sebagian besar mengembalikan waktu Anda, ditambah sekitar {amount} lebih sedikit sisa makanan per bulan.",
+            "timeFirstYearly": "Saat ini KAI sebagian besar mengembalikan waktu Anda, ditambah sekitar {amount} lebih sedikit sisa makanan per tahun.",
             "fixedAssumptionsHeading": "Asumsi tetap, bukan masukan",
+            "estimatesNote": "Bagian dan menit pengecekan adalah estimasi kerja sampai KAI mengukurnya dengan rumah tangga nyata.",
             "offloadRateLabel": "Bagian waktu perencanaan yang diambil alih KAI",
-            "reviewMinutesLabel": "Menit untuk memeriksa setiap rencana",
+            "reviewMinutesLabel": "Menit yang masih dihabiskan untuk memeriksa setiap sesi",
             "foodWasteReferenceLabel": "Makanan terbuang per orang setiap tahun",
+            "wasteShareLabel": "Bagian dari sisa makanan yang bisa KAI bantu Anda hindari",
+            "wasteShareNote": "Angka yang hati-hati: uji coba menemukan 24% hingga 46% lebih sedikit sisa makanan dalam jangka pendek, tetapi efeknya memudar.",
+            "smartShareLabel": "Penghematan pengeluaran makanan dengan penawaran dan pengecekan harga",
+            "smartShareNote": "Digunakan hanya saat penawaran dan pengecekan harga aktif, dan hanya jika Anda mengikuti saran KAI.",
+            "smartOffNote": "Belanja lebih cerdas belum termasuk. Ini ditambahkan setelah penawaran dan pengecekan harga aktif.",
+            "spendHeading": "Pengeluaran makanan bulanan berdasarkan ukuran rumah tangga",
+            "householdSize": "Rumah tangga {people} orang",
+            "tiersHeading": "Harga KAI berdasarkan sesi perencanaan per bulan",
+            "tierRange": "{from} hingga {to} sesi",
             "sourceLabel": "Sumber",
-            "timeBackFormula": "Waktu kembali = sesi × menit perencanaan per sesi × bagian yang diambil alih KAI, dikurangi sesi × menit untuk memeriksa setiap rencana.",
-            "wasteFormula": "Perbandingan limbah makanan = limbah makanan per orang setiap tahun ÷ 12 × jumlah orang di rumah tangga Anda, dibulatkan ke euro penuh.",
-            "priceNote": "Harga KAI tetap. Tidak ada masukan ini yang mengubahnya."
+            "timeBackFormula": "Waktu kembali = sesi × menit perencanaan × bagian yang diambil KAI, dikurangi sesi × menit pengecekan, tidak pernah di bawah nol.",
+            "wasteFormula": "Sisa makanan yang dihindari = sisa makanan per orang setiap tahun ÷ 12 × jumlah orang di rumah tangga Anda × bagian yang bisa KAI bantu Anda hindari.",
+            "smartFormula": "Belanja lebih cerdas = pengeluaran makanan bulanan untuk ukuran rumah tangga Anda × penghematan penawaran × sesi ÷ 4.",
+            "ratioFormula": "Uang kembali untuk setiap euro = (sisa makanan yang dihindari + belanja lebih cerdas) ÷ harga KAI.",
+            "priceNote": "Harga termasuk PPN. Harga KAI hanya bergantung pada berapa banyak sesi yang Anda rencanakan setiap bulan; menit dan ukuran rumah tangga tidak pernah mengubahnya.",
+            "yearlyNote": "Tampilan tahunan adalah dua belas kali angka bulanan."
           },
           "copy": {
             "summary": "Perkiraan rumah tangga Anda",
@@ -463,7 +496,7 @@
             "rangeLabel": "Cara menghitungnya",
             "missing": "Masukkan nilai",
             "method": "Cara menghitungnya",
-            "methodBody": "KAI mengambil alih sebagian pekerjaan perencanaan: memeriksa apa yang sudah ada di rumah, memilih resep, dan menyiapkan daftar. Memeriksa setiap rencana masih membutuhkan sebagian waktu Anda, jadi itu dikurangi. Angka limbah makanan adalah rata-rata yang dipublikasikan yang ditampilkan di samping harga KAI untuk perbandingan, bukan janji penghematan.",
+            "methodBody": "KAI mengambil alih sebagian pekerjaan perencanaan: memeriksa apa yang sudah ada di rumah, memilih resep, dan menyiapkan daftar. Memeriksa setiap sesi masih membutuhkan sebagian waktu Anda, jadi itu dikurangi. Uang kembali menggabungkan sisa makanan yang bisa Anda hindari dan, setelah penawaran dan pengecekan harga aktif, belanja lebih cerdas. Keduanya menggunakan rata-rata yang dipublikasikan dan merupakan estimasi, bukan janji penghematan.",
             "burdenHeading": "Rutinitas Anda",
             "opportunityHeading": "Waktu yang kembali untuk Anda",
             "noCurrencyChange": "Perkirakan waktu perencanaan dan harga KAI berdasarkan penggunaan. Sesuaikan nilainya dengan rumah tangga Anda.",
@@ -472,15 +505,15 @@
           "fields": {
             "volume": {
               "label": "Sesi perencanaan",
-              "help": "Perkirakan waktu perencanaan dan harga KAI berdasarkan penggunaan. Sesuaikan nilainya dengan rumah tangga Anda."
+              "help": "Berapa kali sebulan Anda duduk untuk merencanakan belanjaan."
             },
             "minutes": {
               "label": "Menit perencanaan per sesi hari ini",
-              "help": "Perkirakan waktu perencanaan dan harga KAI berdasarkan penggunaan. Sesuaikan nilainya dengan rumah tangga Anda."
+              "help": "Waktu yang dihabiskan untuk memeriksa makanan, memilih resep, dan menyiapkan daftar Anda. Bukan memasak, bepergian, atau waktu di toko."
             },
             "people": {
               "label": "Jumlah orang di rumah tangga Anda",
-              "help": "Digunakan hanya untuk perbandingan limbah makanan. Gunakan bilangan bulat dari 1 hingga 8."
+              "help": "Setiap orang yang secara teratur Anda belanjakan dan masakkan."
             }
           },
           "outcomes": [],
@@ -507,10 +540,23 @@
             }
           ],
           "pricing": {
-            "basis": "fixed",
-            "annualPrice": 59,
+            "basis": "tiered",
+            "tiers": [
+              {
+                "upTo": 4,
+                "price": 6.99
+              },
+              {
+                "upTo": 8,
+                "price": 10.99
+              },
+              {
+                "upTo": 12,
+                "price": 14.99
+              }
+            ],
             "label": "Harga",
-            "help": "Harga KAI tetap. Masukan kalkulator tidak pernah mengubahnya."
+            "help": "Harga KAI hanya bergantung pada berapa banyak sesi perencanaan yang Anda miliki setiap bulan. Harga termasuk PPN."
           }
         },
         "cta": {
@@ -2715,7 +2761,7 @@
         "homeRoiCalculator",
         "disclaimer"
       ],
-      "sourceHash": "65db638a4ed6ede7bbcf91577e090b7afcf973c6e8ccb949d33ca023cfa2d01d"
+      "sourceHash": "008fecea651463acaed1f18e2b49c1be809406c4008f6354b3c707890b2d8c4f"
     },
     {
       "path": [
@@ -2736,7 +2782,18 @@
         "fixedAssumptions",
         "foodWasteSource"
       ],
-      "sourceHash": "19b63e9ffcf262d91bb4af2108e918afdeb13b8dbe9feb5f601178e1b20d7e6c"
+      "sourceHash": "8a0c23d79e1ca12354bd36141c8c6c75a89bdbd382c8e114a7ad6f581e335893"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "fixedAssumptions",
+        "spendSource"
+      ],
+      "sourceHash": "c51868dc1be1448e00dffacbc219b86c178ac05cfe6e7bbcdb84a769e94ed249"
     },
     {
       "path": [
@@ -2769,7 +2826,7 @@
         "householdCopy",
         "wasteLabel"
       ],
-      "sourceHash": "8aaaf29c3cba26d0049c64a153a7fa4207ef570e014df5b00a80bad1ac174ceb"
+      "sourceHash": "a6dd1cdfe0a6fa1bfbbcc5e06a942290f7acaeae8c26375ed698c30c4c93fae3"
     },
     {
       "path": [
@@ -2778,9 +2835,9 @@
         "homeRoiCalculator",
         "businessImpact",
         "householdCopy",
-        "wasteInfo"
+        "wasteNote"
       ],
-      "sourceHash": "86d43ca7d90211324eb975405eb8fb0823ea5d45a41d0198afab3179fb32e69a"
+      "sourceHash": "a3b8fe9ecf683b2a92c086dceb576939b408e981bc54dcb1054d3b718eb0b8fb"
     },
     {
       "path": [
@@ -2801,6 +2858,50 @@
         "businessImpact",
         "householdCopy",
         "wasteYearly"
+      ],
+      "sourceHash": "9115499379d2bd086ef4b11a52782d2fe66204fc5fed056e462e619ef8623b2c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "smartLabel"
+      ],
+      "sourceHash": "b0112cc9cdcc2d317b933abacc271db90063f4882089caf8c26fabc9d9da6922"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "smartNote"
+      ],
+      "sourceHash": "a739e6f374ad64f7e4162f15bebcb39a8f1abeec1f23a8416a32c8a2ee812e68"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "smartMonthly"
+      ],
+      "sourceHash": "cc8e757c96a44df52ff445375f88f9d2c8d828ad6d9e4b552200d53207c4b423"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "smartYearly"
       ],
       "sourceHash": "9115499379d2bd086ef4b11a52782d2fe66204fc5fed056e462e619ef8623b2c"
     },
@@ -2844,9 +2945,53 @@
         "homeRoiCalculator",
         "businessImpact",
         "householdCopy",
+        "ratio"
+      ],
+      "sourceHash": "c1c587794ccc662b65e545a6fda9ee9dc74243a9a7e1cc1b3c88e6f951499d88"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "timeFirstMonthly"
+      ],
+      "sourceHash": "aab22b7ca9aad9dec91de97f77b6295e2915888f85b69525cc0b0d81a7f6e4cf"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "timeFirstYearly"
+      ],
+      "sourceHash": "942646f385a742d839e46bbbdceaf8945c5d1ac84429f0a40516b40446ab3577"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
         "fixedAssumptionsHeading"
       ],
       "sourceHash": "9e1aacbae8b4dbe3fe24ead8195a38933c13a0e0c51fab78847b0951123fe946"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "estimatesNote"
+      ],
+      "sourceHash": "fc80f86f838300a5b3cec65b67d76e880bfe04a98116feccf516388bac761849"
     },
     {
       "path": [
@@ -2868,7 +3013,7 @@
         "householdCopy",
         "reviewMinutesLabel"
       ],
-      "sourceHash": "5ef81b7e4d56f1cf4413e3db0814168d0175b2efb9b6fb5c6706cc47bfc9a5bf"
+      "sourceHash": "968146ff1326a825218f9caca71a96817e62e7929cc2d37314ee0e8eec456773"
     },
     {
       "path": [
@@ -2880,6 +3025,105 @@
         "foodWasteReferenceLabel"
       ],
       "sourceHash": "820eb2127dfea854ad1841802623ee5790d2aa5e29efbf9fb0701120c29738cd"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "wasteShareLabel"
+      ],
+      "sourceHash": "bd63bcbd9d881de2a05c94a48571faebfd3944e824e327fb247e3bb509d1adf5"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "wasteShareNote"
+      ],
+      "sourceHash": "dc233476918e3552cfa55c01f8e23d303b59be0fc9207eca4bf352a6a4aac3d9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "smartShareLabel"
+      ],
+      "sourceHash": "2201fef87e76a2f1398081ed7e694e847d2f5cf5da952596df51233f807eba3b"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "smartShareNote"
+      ],
+      "sourceHash": "118252a4ea4dcad2b2c80ae91669de6361dffcd40130c9b4e392ac28aa29569c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "smartOffNote"
+      ],
+      "sourceHash": "f9d1b49e1530038486f3e970a4f095428db165eeb524280d64dbb042c3e1fe7e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "spendHeading"
+      ],
+      "sourceHash": "e5edaf3229036b1c1d55af9506913f51bc8055cbd5af309331ef5a85af262749"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "householdSize"
+      ],
+      "sourceHash": "52e8b13b11ae181cd262652e263e6f378b4711dc746cf9e777ffdb719d23c7a2"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "tiersHeading"
+      ],
+      "sourceHash": "8fb618253b19e8c549e3355d055c308fcd5638e05de49690e32da0a706515550"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "tierRange"
+      ],
+      "sourceHash": "ff2ebc86f04d44aa82a073f63d7171d9770af6bbd010c78871e02bc040c8f6f1"
     },
     {
       "path": [
@@ -2901,7 +3145,7 @@
         "householdCopy",
         "timeBackFormula"
       ],
-      "sourceHash": "b31f2b2c31e0e765a810d4cd960381ca925aa3bf69784175a874ad050ba99fb0"
+      "sourceHash": "edb86d3656ae15ea343d71869e286afddd6df61e5807836c1ee9d9ca7c0bf865"
     },
     {
       "path": [
@@ -2912,7 +3156,29 @@
         "householdCopy",
         "wasteFormula"
       ],
-      "sourceHash": "d687c83f01dbafa82c25f05b2991c3421f182588c7ec4e9e58511b767395b840"
+      "sourceHash": "586d7ebdbc25cbdfe602ebc3c5632309662f67335d6e9c6b511df038af5d39c6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "smartFormula"
+      ],
+      "sourceHash": "5f56f4bf3bc7eab0a67b0c42ed96a8e6933dc9dd6adf2e89a4ae78b301f380fd"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "ratioFormula"
+      ],
+      "sourceHash": "0f1eb968f660b3aa78759aa46499f1f52b761daaf13660635d6c171c9cc2b22d"
     },
     {
       "path": [
@@ -2923,7 +3189,18 @@
         "householdCopy",
         "priceNote"
       ],
-      "sourceHash": "e3f5ac4d432bb08930488a6fd7edbb3639b7436da9f5bca49824c577a7f0de61"
+      "sourceHash": "0206fafe20f1e651c3f50b3612ae1f36991b228f977dddea49ca9f3e52ead2ac"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
+        "householdCopy",
+        "yearlyNote"
+      ],
+      "sourceHash": "dcdccd322d3110559356199c25649cbdc4da546a4729ededa0c78c41ea5b5e13"
     },
     {
       "path": [
@@ -3022,7 +3299,7 @@
         "copy",
         "methodBody"
       ],
-      "sourceHash": "ab694c2587605e6fd82010b680dc672ef17aaab7e848fa57ed98c44f53245c60"
+      "sourceHash": "49a931fdb7480b4884bdb33bf9211dc0c999f9b8a38953143c29ecb286e9f70d"
     },
     {
       "path": [
@@ -3090,7 +3367,7 @@
         "volume",
         "help"
       ],
-      "sourceHash": "321673a0e4a649dd323c05bd24084b2c573572fb04c58636ce3c385e34250340"
+      "sourceHash": "61b294ab301e39777b4d2949a63f6824987c01d31b65105f5c898713d616bbd8"
     },
     {
       "path": [
@@ -3114,7 +3391,7 @@
         "minutes",
         "help"
       ],
-      "sourceHash": "6c9f65c27493f6e2cd13803c5ab91880a56a4687344be51f54afbf356fdb17b8"
+      "sourceHash": "d6298deabb8f692ae6282eee75ed440632cb7664bc201f496825159c8f3d82ef"
     },
     {
       "path": [
@@ -3138,7 +3415,7 @@
         "people",
         "help"
       ],
-      "sourceHash": "986d0936e58a8d0f87260f237c508f0e97629fb0cab253794a8ea2a36bc05f1a"
+      "sourceHash": "ecfd703c8c52181ad17ce422681036d7737c2500cdde4c7d79e2be33f2c25e9b"
     },
     {
       "path": [
@@ -3250,7 +3527,7 @@
         "pricing",
         "help"
       ],
-      "sourceHash": "56dbe1c363f951709e6512d78a8bb6d01e14711fe264df59f1637fef7c6fcc53"
+      "sourceHash": "d299bc698db89611f16231409b0130ae482f1baf8d4c07ccdddebbb6621ab580"
     },
     {
       "path": [
@@ -5602,5 +5879,5 @@
       "sourceHash": "d15dff1f02872b5a86fe94913f2db1b4928c5840b83dde7a4064da877b668a28"
     }
   ],
-  "generatedAt": "2026-09-11T19:36:13.874Z"
+  "generatedAt": "2026-09-11T20:39:26.790Z"
 }

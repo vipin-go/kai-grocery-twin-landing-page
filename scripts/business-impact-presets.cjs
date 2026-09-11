@@ -30,31 +30,59 @@ __export(business_impact_presets_exports, {
 module.exports = __toCommonJS(business_impact_presets_exports);
 
 // app/shared/utils/business-impact.ts
-var OFFLOAD_RATE_DEFAULT = 0.5;
-var REVIEW_MINUTES_DEFAULT = 5;
-var FOOD_WASTE_PER_PERSON_YEAR_DEFAULT = 100;
-var FOOD_WASTE_SOURCE_DEFAULT = "Netherlands Nutrition Centre (Voedingscentrum), 2026 report using 2025 data";
-var HOUSEHOLD_PEOPLE_DEFAULT = 2;
+var TIME_SHARE = 0.5;
+var CHECK_MIN = 5;
+var WASTE_PER_PERSON_YEAR = 100;
+var WASTE_SOURCE = "Netherlands Nutrition Centre (Voedingscentrum), 2025 measurement, report May 2026: 25.5 kg per person a year";
+var WASTE_SHARE = 0.2;
+var SMART_SHARE = 0.03;
+var SPEND_BY_SIZE = { "1": 275, "2": 500, "3": 565, "4": 630, "5": 695, "6": 760, "7": 825, "8": 890 };
+var SPEND_SOURCE = "Nibud reference minimums for healthy food (via Knab, 2026); sizes 5 to 8 extrapolated";
+var FEATURE_SMART_SHOPPING = false;
+var PRICE_TIERS = [{ upTo: 4, price: 6.99 }, { upTo: 8, price: 10.99 }, { upTo: 12, price: 14.99 }];
+var HOUSEHOLD_STARTING_VALUES = { volume: 4, minutes: 45, people: 2 };
+var HOUSEHOLD_PEOPLE_DEFAULT = HOUSEHOLD_STARTING_VALUES.people;
 var HOUSEHOLD_INPUT_FIELDS = ["volume", "minutes", "people"];
 var HOUSEHOLD_COPY = {
   // Whole-sentence templates: translating "About" or "back a month" as separate fragments produced wrong copy.
   timeBackMonthly: "About {duration} back a month",
   timeBackYearly: "About {duration} back a year",
-  wasteLabel: "Food a household your size throws away",
-  wasteInfo: "Dutch average from the Netherlands Nutrition Centre (2026), about \u20AC100 per person a year. Your household may waste more or less.",
+  wasteLabel: "Food waste you could avoid",
+  wasteNote: "Based on Voedingscentrum figures for a household your size.",
   wasteMonthly: "about {amount} a month",
   wasteYearly: "about {amount} a year",
+  smartLabel: "Smarter shopping, when offers and price checks are on",
+  // Consumer law: whenever this line shows, it carries its "potential estimate ... depends on" wording.
+  smartNote: "A potential estimate. It depends on the offers available and on following KAI's suggestions.",
+  smartMonthly: "about {amount} a month",
+  smartYearly: "about {amount} a year",
   priceLabel: "KAI",
   priceMonthly: "{amount} a month",
   priceYearly: "{amount} a year",
+  ratio: "That is about {ratio} back for every {unit} you spend on KAI.",
+  timeFirstMonthly: "Right now KAI mostly pays you back in time, plus about {amount} less food waste a month.",
+  timeFirstYearly: "Right now KAI mostly pays you back in time, plus about {amount} less food waste a year.",
   fixedAssumptionsHeading: "Fixed assumptions, not inputs",
+  estimatesNote: "The shares and checking minutes are working estimates until KAI measures them with real households.",
   offloadRateLabel: "Share of planning time KAI takes on",
-  reviewMinutesLabel: "Minutes to check each plan",
+  reviewMinutesLabel: "Minutes still spent checking each session",
   foodWasteReferenceLabel: "Food wasted per person each year",
+  wasteShareLabel: "Share of that waste KAI could help you avoid",
+  wasteShareNote: "A cautious figure: trials found 24% to 46% less food waste in the short term, but the effect fades.",
+  smartShareLabel: "Saving on food spend with offers and price checks",
+  smartShareNote: "Used only when offers and price checks are live, and only if you follow KAI's suggestions.",
+  smartOffNote: "Smarter shopping is not included yet. It is added once offers and price checks are live.",
+  spendHeading: "Monthly food spend by household size",
+  householdSize: "Household of {people}",
+  tiersHeading: "KAI price by planning sessions a month",
+  tierRange: "{from} to {to} sessions",
   sourceLabel: "Source",
-  timeBackFormula: "Time back = sessions \xD7 planning minutes per session \xD7 the share KAI takes on, minus sessions \xD7 minutes to check each plan.",
-  wasteFormula: "Food-waste comparison = food wasted per person each year \xF7 12 \xD7 people in your household, rounded to whole euros.",
-  priceNote: "The KAI price is fixed. None of these inputs change it."
+  timeBackFormula: "Time back = sessions \xD7 planning minutes \xD7 the share KAI takes on, minus sessions \xD7 checking minutes, never below zero.",
+  wasteFormula: "Food waste avoided = food wasted per person each year \xF7 12 \xD7 people in your household \xD7 the share KAI could help you avoid.",
+  smartFormula: "Smarter shopping = monthly food spend for your household size \xD7 the offers saving \xD7 sessions \xF7 4.",
+  ratioFormula: "Money back for every euro = (food waste avoided + smarter shopping) \xF7 the KAI price.",
+  priceNote: "Prices include VAT. The KAI price depends only on how many sessions you plan each month; minutes and household size never change it.",
+  yearlyNote: "The yearly view is twelve times the monthly figures."
 };
 var SHARE_HANDLED = 0.5;
 var REVIEW_MIN_PER_STORE_CYCLE = 30;
@@ -401,10 +429,10 @@ function createHouseholdImpactCalculator(pageName = "KAI") {
     summary: "Your household estimate",
     reset: "Reset values",
     missing: "Enter a value",
-    methodBody: "KAI takes on part of the planning work: checking what is already at home, choosing recipes and preparing the list. Checking each plan still takes some of your time, so it is subtracted. The food-waste figure is a published average shown beside the KAI price for comparison, not a promised saving.",
+    methodBody: `${pageName} takes on part of the planning work: checking what is already at home, choosing recipes and preparing the list. Checking each session still takes some of your time, so it is subtracted. Money back combines food waste you could avoid and, once offers and price checks are live, smarter shopping. Both use published averages and are estimates, not promised savings.`,
     burdenHeading: "Less grocery admin",
     opportunityHeading: "More room for everyday life",
-    reviewError: "Checking takes longer than the planning time KAI takes on. At these values there is no time back."
+    reviewError: `Checking takes longer than the planning time ${pageName} takes on. At these values there is no time back.`
   };
   const intro = "Count time spent checking food, choosing recipes and preparing your grocery list, not cooking, travel or time in the shop.";
   return {
@@ -412,8 +440,8 @@ function createHouseholdImpactCalculator(pageName = "KAI") {
     enabled: true,
     kicker: "Home impact",
     heading: "Time & Friction Estimator",
-    subheading: "See how much planning time KAI could give back. Adjust the three values to match your household.",
-    disclaimer: "Estimates from your inputs, not guaranteed savings.",
+    subheading: `See how much planning time ${pageName} could give back. Adjust the three values to match your household.`,
+    disclaimer: "Estimates from your inputs, not guaranteed savings. Amounts in euros, including VAT.",
     currency: "EUR",
     currencyCopy: { ...ROI_CURRENCY_COPY },
     locale: "en-GB",
@@ -421,34 +449,36 @@ function createHouseholdImpactCalculator(pageName = "KAI") {
     metrics: [],
     businessImpact: {
       defaults: {
-        volume: 4,
-        minutes: 45,
-        people: HOUSEHOLD_PEOPLE_DEFAULT,
-        // Mirrors of the fixed assumptions below; the validator keeps them equal.
-        automation: OFFLOAD_RATE_DEFAULT * 100,
-        review: REVIEW_MINUTES_DEFAULT,
-        customer_price: 6.99
+        ...HOUSEHOLD_STARTING_VALUES,
+        // Mirrors of the fixed assumptions below; the validator keeps them equal. The price lives only in pricing.tiers.
+        automation: TIME_SHARE * 100,
+        review: CHECK_MIN
       },
       fixedAssumptions: {
-        offloadRate: OFFLOAD_RATE_DEFAULT,
-        reviewMinutes: REVIEW_MINUTES_DEFAULT,
-        foodWastePerPersonYear: FOOD_WASTE_PER_PERSON_YEAR_DEFAULT,
-        foodWasteSource: FOOD_WASTE_SOURCE_DEFAULT,
+        offloadRate: TIME_SHARE,
+        reviewMinutes: CHECK_MIN,
+        foodWastePerPersonYear: WASTE_PER_PERSON_YEAR,
+        foodWasteSource: WASTE_SOURCE,
+        wasteShare: WASTE_SHARE,
+        smartShopping: FEATURE_SMART_SHOPPING,
+        smartShare: SMART_SHARE,
+        spendBySize: { ...SPEND_BY_SIZE },
+        spendSource: SPEND_SOURCE,
         userEditable: false
       },
       householdCopy: { ...HOUSEHOLD_COPY },
       // Household estimators store only the interface copy and input labels they display.
       copy: shown,
       fields: {
-        volume: { label: "Grocery-planning sessions each month", help: "For example, four weekly plans. Count your whole household once, not once per person." },
-        minutes: { label: "Planning minutes per session today", help: "Include fridge checks, recipe decisions, product comparison and list preparation. Exclude cooking and shopping travel." },
-        people: { label: "People in your household", help: "Used only for the food-waste comparison. Use a whole number from 1 to 8." }
+        volume: { label: "Grocery-planning sessions each month", help: "How many times a month you sit down to plan groceries." },
+        minutes: { label: "Planning minutes per session today", help: "Time spent checking food, choosing recipes and preparing your list. Not cooking, travel or time in the shop." },
+        people: { label: "People in your household", help: "Everyone you regularly shop and cook for." }
       },
       outcomes: [],
       burden: ["Checking the fridge and pantry", "Finding recipes and missing ingredients", "Comparing products and preparing a grocery list"],
       opportunity: ["More time for yourself and your household", "Meals built around food you already have", "A reviewed shopping list, with fewer duplicate purchases"],
       tabs: [{ id: "routine", label: "Your routine", intro, fields: [...HOUSEHOLD_INPUT_FIELDS] }],
-      pricing: { basis: "fixed", annualPrice: 59, label: "Pricing", help: "The KAI price is fixed. Calculator inputs never change it." }
+      pricing: { basis: "tiered", tiers: PRICE_TIERS.map((tier) => ({ ...tier })), label: "Pricing", help: `The ${pageName} price depends only on how many planning sessions you have each month. Prices include VAT.` }
     },
     cta: {
       primaryLabel: `Try a grocery scan with ${pageName}`,

@@ -406,7 +406,7 @@
         "kicker": "Home impact",
         "heading": "Time & Friction Estimator",
         "subheading": "See how much planning time KAI could give back. Adjust the three values to match your household.",
-        "disclaimer": "Estimates from your inputs, not guaranteed savings.",
+        "disclaimer": "Estimates from your inputs, not guaranteed savings. Amounts in euros, including VAT.",
         "currency": "EUR",
         "currencyCopy": {
           "native": "Amounts in {currency}.",
@@ -424,34 +424,67 @@
             "minutes": 45,
             "people": 2,
             "automation": 50,
-            "review": 5,
-            "customer_price": 6.99
+            "review": 5
           },
           "fixedAssumptions": {
             "offloadRate": 0.5,
             "reviewMinutes": 5,
             "foodWastePerPersonYear": 100,
-            "foodWasteSource": "Netherlands Nutrition Centre (Voedingscentrum), 2026 report using 2025 data",
+            "foodWasteSource": "Netherlands Nutrition Centre (Voedingscentrum), 2025 measurement, report May 2026: 25.5 kg per person a year",
+            "wasteShare": 0.2,
+            "smartShopping": false,
+            "smartShare": 0.03,
+            "spendBySize": {
+              "1": 275,
+              "2": 500,
+              "3": 565,
+              "4": 630,
+              "5": 695,
+              "6": 760,
+              "7": 825,
+              "8": 890
+            },
+            "spendSource": "Nibud reference minimums for healthy food (via Knab, 2026); sizes 5 to 8 extrapolated",
             "userEditable": false
           },
           "householdCopy": {
             "timeBackMonthly": "About {duration} back a month",
             "timeBackYearly": "About {duration} back a year",
-            "wasteLabel": "Food a household your size throws away",
-            "wasteInfo": "Dutch average from the Netherlands Nutrition Centre (2026), about €100 per person a year. Your household may waste more or less.",
+            "wasteLabel": "Food waste you could avoid",
+            "wasteNote": "Based on Voedingscentrum figures for a household your size.",
             "wasteMonthly": "about {amount} a month",
             "wasteYearly": "about {amount} a year",
+            "smartLabel": "Smarter shopping, when offers and price checks are on",
+            "smartNote": "A potential estimate. It depends on the offers available and on following KAI's suggestions.",
+            "smartMonthly": "about {amount} a month",
+            "smartYearly": "about {amount} a year",
             "priceLabel": "KAI",
             "priceMonthly": "{amount} a month",
             "priceYearly": "{amount} a year",
+            "ratio": "That is about {ratio} back for every {unit} you spend on KAI.",
+            "timeFirstMonthly": "Right now KAI mostly pays you back in time, plus about {amount} less food waste a month.",
+            "timeFirstYearly": "Right now KAI mostly pays you back in time, plus about {amount} less food waste a year.",
             "fixedAssumptionsHeading": "Fixed assumptions, not inputs",
+            "estimatesNote": "The shares and checking minutes are working estimates until KAI measures them with real households.",
             "offloadRateLabel": "Share of planning time KAI takes on",
-            "reviewMinutesLabel": "Minutes to check each plan",
+            "reviewMinutesLabel": "Minutes still spent checking each session",
             "foodWasteReferenceLabel": "Food wasted per person each year",
+            "wasteShareLabel": "Share of that waste KAI could help you avoid",
+            "wasteShareNote": "A cautious figure: trials found 24% to 46% less food waste in the short term, but the effect fades.",
+            "smartShareLabel": "Saving on food spend with offers and price checks",
+            "smartShareNote": "Used only when offers and price checks are live, and only if you follow KAI's suggestions.",
+            "smartOffNote": "Smarter shopping is not included yet. It is added once offers and price checks are live.",
+            "spendHeading": "Monthly food spend by household size",
+            "householdSize": "Household of {people}",
+            "tiersHeading": "KAI price by planning sessions a month",
+            "tierRange": "{from} to {to} sessions",
             "sourceLabel": "Source",
-            "timeBackFormula": "Time back = sessions × planning minutes per session × the share KAI takes on, minus sessions × minutes to check each plan.",
-            "wasteFormula": "Food-waste comparison = food wasted per person each year ÷ 12 × people in your household, rounded to whole euros.",
-            "priceNote": "The KAI price is fixed. None of these inputs change it."
+            "timeBackFormula": "Time back = sessions × planning minutes × the share KAI takes on, minus sessions × checking minutes, never below zero.",
+            "wasteFormula": "Food waste avoided = food wasted per person each year ÷ 12 × people in your household × the share KAI could help you avoid.",
+            "smartFormula": "Smarter shopping = monthly food spend for your household size × the offers saving × sessions ÷ 4.",
+            "ratioFormula": "Money back for every euro = (food waste avoided + smarter shopping) ÷ the KAI price.",
+            "priceNote": "Prices include VAT. The KAI price depends only on how many sessions you plan each month; minutes and household size never change it.",
+            "yearlyNote": "The yearly view is twelve times the monthly figures."
           },
           "copy": {
             "summary": "Your household estimate",
@@ -462,7 +495,7 @@
             "rangeLabel": "Adjust value",
             "missing": "Enter a value",
             "method": "How this is calculated",
-            "methodBody": "KAI takes on part of the planning work: checking what is already at home, choosing recipes and preparing the list. Checking each plan still takes some of your time, so it is subtracted. The food-waste figure is a published average shown beside the KAI price for comparison, not a promised saving.",
+            "methodBody": "KAI takes on part of the planning work: checking what is already at home, choosing recipes and preparing the list. Checking each session still takes some of your time, so it is subtracted. Money back combines food waste you could avoid and, once offers and price checks are live, smarter shopping. Both use published averages and are estimates, not promised savings.",
             "burdenHeading": "Less grocery admin",
             "opportunityHeading": "More room for everyday life",
             "noCurrencyChange": "Language changes formatting, not your currency or assumptions.",
@@ -471,15 +504,15 @@
           "fields": {
             "volume": {
               "label": "Grocery-planning sessions each month",
-              "help": "For example, four weekly plans. Count your whole household once, not once per person."
+              "help": "How many times a month you sit down to plan groceries."
             },
             "minutes": {
               "label": "Planning minutes per session today",
-              "help": "Include fridge checks, recipe decisions, product comparison and list preparation. Exclude cooking and shopping travel."
+              "help": "Time spent checking food, choosing recipes and preparing your list. Not cooking, travel or time in the shop."
             },
             "people": {
               "label": "People in your household",
-              "help": "Used only for the food-waste comparison. Use a whole number from 1 to 8."
+              "help": "Everyone you regularly shop and cook for."
             }
           },
           "outcomes": [],
@@ -506,10 +539,23 @@
             }
           ],
           "pricing": {
-            "basis": "fixed",
-            "annualPrice": 59,
+            "basis": "tiered",
+            "tiers": [
+              {
+                "upTo": 4,
+                "price": 6.99
+              },
+              {
+                "upTo": 8,
+                "price": 10.99
+              },
+              {
+                "upTo": 12,
+                "price": 14.99
+              }
+            ],
             "label": "Pricing",
-            "help": "The KAI price is fixed. Calculator inputs never change it."
+            "help": "The KAI price depends only on how many planning sessions you have each month. Prices include VAT."
           }
         },
         "cta": {
@@ -847,298 +893,298 @@
           {
             "language": "es",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.es.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "de",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.de.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "ja",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.ja.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "fr",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.fr.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "pt",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.pt.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "ru",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.ru.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "it",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.it.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "nl",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.nl.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "pl",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.pl.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "tr",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.tr.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "zh",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.zh.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "fa",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.fa.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "vi",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.vi.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "cs",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.cs.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "id",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.id.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "ko",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.ko.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "uk",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.uk.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "hu",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.hu.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "ar",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.ar.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "sv",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.sv.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "ro",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.ro.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "el",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.el.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "da",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.da.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "fi",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.fi.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "he",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.he.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "sk",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.sk.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "th",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.th.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "bg",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.bg.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "hr",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.hr.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "nb",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.nb.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "lt",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.lt.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "sr",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.sr.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "sl",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.sl.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "ca",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.ca.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "et",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.et.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "no",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.no.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           },
           {
             "language": "lv",
             "regionKey": null,
-            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
+            "sourceRevision": "e5fd3a24319a26fc8799d2c5bb1b54bc2b31f8d73fdf2e2e9f8f0096396e043a",
             "assetPath": "assets/landing-page.lv.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T19:36:13.874Z"
+            "generatedAt": "2026-09-11T20:39:26.790Z"
           }
         ]
       },
