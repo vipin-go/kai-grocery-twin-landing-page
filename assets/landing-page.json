@@ -425,8 +425,6 @@
             "people": 2,
             "automation": 50,
             "review": 5,
-            "tokens_per_output": 15000,
-            "platform_cost": 0.75,
             "customer_price": 6.99
           },
           "fixedAssumptions": {
@@ -453,12 +451,7 @@
             "sourceLabel": "Source",
             "timeBackFormula": "Time back = sessions × planning minutes per session × the share KAI takes on, minus sessions × minutes to check each plan.",
             "wasteFormula": "Food-waste comparison = food wasted per person each year ÷ 12 × people in your household, rounded to whole euros.",
-            "priceNote": "The KAI price is fixed. None of these inputs change it.",
-            "technicalHeading": "Technical usage details",
-            "technicalNote": "Internal usage estimates. They are not your price or a benefit, and your inputs do not change them.",
-            "tokensPerPlanLabel": "Modelled tokens to build one plan",
-            "tokenCostPerPlanLabel": "Modelled token cost per plan",
-            "serviceCostLabel": "Modelled monthly service cost"
+            "priceNote": "The KAI price is fixed. None of these inputs change it."
           },
           "copy": {
             "summary": "Your household estimate",
@@ -517,10 +510,6 @@
             "annualPrice": 59,
             "label": "Pricing",
             "help": "The KAI price is fixed. Calculator inputs never change it."
-          },
-          "presentation": {
-            "financial": "capacity_only",
-            "showTokenUsage": true
           }
         },
         "cta": {
@@ -724,7 +713,7 @@
       "kicker": "Retail impact",
       "heading": "Store-ops capacity estimate",
       "subheading": "Model vendor-ready order preparation for a multi-store operator. One named human approver remains responsible for every consequential order.",
-      "disclaimer": "Modelled store-ops usage, not observed shrink results or guaranteed savings. KAI prepares and formats orders; a named approver decides what is placed.",
+      "disclaimer": "Estimates from your inputs and published averages, not measured results. KAI prepares orders; a named approver decides what is placed.",
       "currency": "EUR",
       "currencyCopy": {
         "native": "Amounts in {currency}.",
@@ -733,264 +722,87 @@
         "converted": "Amounts converted from {base} to {currency} using the reference rate dated {date}.",
         "basis": "Currency conversion is not local cost research. Enter your own local costs and contribution assumptions. Language changes do not change amounts."
       },
-      "costCopy": {
-        "breakdown": "How the all-in AI cost is built",
-        "perUnit": "{amount} per work unit (average)",
-        "budgetOnly": "This is your total budget. Switch to Cost breakdown to itemize it; no split has been assumed.",
-        "benefitNotice": "Modeled benefits, not charges. Crossed-out amounts are spending you expect to avoid, not discounts on the AI bill.",
-        "remainder": "Other included operating costs",
-        "allocation": "Returned hours are capacity, not automatic savings. Only the portions you assign to actual spending reductions or additional contribution receive a monetary value."
-      },
       "locale": "en-GB",
       "inputs": [],
       "metrics": [],
       "businessImpact": {
         "defaults": {
           "volume": 6,
-          "minutes": 148,
+          "cycles_per_unit": 13,
+          "minutes": 150,
+          "purchases_per_store": 100000,
           "automation": 50,
           "review": 30,
-          "tokens_per_output": 100000,
-          "model_cost": 0,
-          "tools_cost": 0,
-          "infrastructure_cost": 0,
-          "platform_cost": 120,
-          "higher_value_hours": 4.4,
-          "contribution_rate": 35,
-          "cycles_per_unit": 13,
           "customer_price": 250
         },
+        "storeOpsAssumptions": {
+          "shareHandled": 0.5,
+          "reviewMinutesPerStoreCycle": 30,
+          "lossRate": 0.0121,
+          "lossRateSource": "Wageningen University & Research, supermarket food-loss monitor (2024 data)",
+          "userEditable": false
+        },
+        "storeOpsCopy": {
+          "lossLabelOne": "Food your {stores} store loses to expiry and spoilage",
+          "lossLabelOther": "Food your {stores} stores lose to expiry and spoilage",
+          "lossInfo": "Average for Dutch supermarkets: about 1.2% of food bought is lost, mostly to expiry and loss of freshness (Wageningen University & Research, 2024 data). Your own write-offs may be higher or lower.",
+          "lossMonthly": "about {amount} a month",
+          "lossYearly": "about {amount} a year",
+          "priceLabelOne": "KAI for {stores} store",
+          "priceLabelOther": "KAI for {stores} stores",
+          "priceMonthly": "{amount} a month ({perStore} per store)",
+          "priceYearly": "{amount} a year ({perStore} per store a month)",
+          "breakEven": "KAI pays for itself if it prevents about {percent} of that loss.",
+          "breakEvenOver": "At this purchase volume, KAI costs more than the average food loss.",
+          "hoursMonthly": "About {duration} of ordering work back a month",
+          "hoursYearly": "About {duration} of ordering work back a year",
+          "noTimeSaved": "No net time saved at this prep time: review takes about as long as KAI saves.",
+          "fixedAssumptionsHeading": "Fixed assumptions, not inputs",
+          "shareHandledLabel": "Share of order preparation KAI handles",
+          "reviewMinutesLabel": "Review minutes per store per cycle",
+          "lossRateLabel": "Food lost as a share of purchases",
+          "pricePerStoreLabel": "KAI price per store per month",
+          "sourceLabel": "Source",
+          "hoursFormula": "Hours back = stores × cycles per store × (preparation minutes × share KAI handles − review minutes) ÷ 60, rounded.",
+          "lossFormula": "Food loss = stores × monthly food purchases per store × loss rate, rounded to whole euros.",
+          "priceFormula": "KAI price = stores × price per store.",
+          "breakEvenFormula": "Break-even share = KAI price ÷ food loss × 100, rounded.",
+          "yearlyNote": "The yearly view multiplies hours, food loss and price by 12. The break-even share stays the same.",
+          "lossRateNote": "The loss rate is measured by weight at participating chains and used here as a share of spend."
+        },
         "copy": {
-          "navLabel": "Retail impact",
-          "workloadStep": "Stores and cycles",
-          "costStep": "Usage & delivery cost",
-          "valueStep": "Floor time",
-          "workloadIntro": "Model vendor-ready order preparation for independent multi-store operators—not household meal planning and not a shrink guarantee.",
-          "costIntro": "Tokens and delivery cost describe what it costs KAI to provide the service. Customer price and customer value are separate assumptions.",
-          "valueIntro": "Review gross preparation time, human review time and net floor capacity. Add a value assumption only when you can support it.",
-          "sampleNotice": "Typical usage · not observed results",
+          "summary": "Your estimate",
+          "reset": "Reset values",
           "monthly": "Monthly",
           "yearly": "Yearly",
-          "next": "Continue",
-          "back": "Back",
-          "reset": "Reset assumptions",
-          "summary": "Your modeled impact",
-          "volume": "Stores modeled",
-          "grossHours": "Preparation time covered",
-          "capacity": "Net floor capacity returned",
-          "retained": "Capacity still available",
-          "hours": "hours",
-          "days": "days",
-          "percent": "%",
-          "minutes": "minutes",
-          "tokens": "tokens",
-          "monthlyTokens": "Monthly tokens",
-          "tokenCost": "Token usage",
-          "packageLabel": "Usage package",
-          "packageBase": "Base",
-          "packageMedium": "Medium",
-          "packageCustom": "Custom",
-          "reviewMode": "Who handles the review?",
-          "teamReview": "Existing team",
-          "paidReview": "Additional paid reviewer",
-          "reviewNote": "Existing-team review uses returned capacity. Additional paid review is included in operating cost, not deducted again from team capacity.",
-          "totalMode": "Monthly budget",
-          "itemizedMode": "Cost breakdown",
-          "budgetNote": "The budget must include models/media, tools, infrastructure, Gabriel fees and additional paid review. Do not include unchanged payroll as new spending.",
-          "itemizedNote": "Token usage is calculated from volume × tokens per output. Extra media, tools and infrastructure stay at zero unless they apply. Additional paid review is calculated from review hours and its rate.",
-          "paidReviewCost": "Additional paid review cost",
-          "allInCost": "Estimated KAI delivery cost",
-          "missing": "Add your assumptions",
-          "cashValue": "Cash spending avoided",
-          "contribution": "Expected contribution",
-          "expectedLoss": "Expected loss reduction",
-          "riskValue": "Uncertain risk value included",
-          "economicValue": "Modeled customer value",
-          "netBenefit": "Modeled value minus KAI price",
-          "multiple": "Customer value / KAI price",
-          "customerBenefit": "Modelled customer benefit",
-          "customerRoi": "Customer ROI",
-          "payback": "Customer payback period",
-          "notApplicable": "Not applicable",
           "annual": "Annual view",
-          "annualNote": "The same monthly assumptions, without growth or compounding. Hiring savings last only for the entered period.",
-          "method": "How this is calculated",
-          "burdenHeading": "Repetitive work reduced",
-          "opportunityHeading": "Capacity for higher-value work",
-          "methodBody": "Preparation time equals stores × replenishment cycles × preparation minutes × the KAI-handled share. Review time is stores × cycles × review minutes. Net capacity subtracts review only when the existing team handles it. A named approver remains required.",
-          "formulaLabel": "Customer ROI = (modeled customer benefit − customer price) ÷ customer price. Capacity is not automatic payroll savings.",
-          "allocationNote": "Each hour can be allocated once. Unallocated hours remain capacity, with no monetary value.",
-          "overlapLabel": "These benefits are distinct; I have excluded costs and losses already counted elsewhere.",
-          "overlapNote": "Error and risk estimates exclude labor savings and the same incident must not appear in both categories. Contribution excludes AI costs, which are deducted separately.",
-          "hiringLabel": "This hire was genuinely planned and the allocated capacity can cover the work.",
-          "reviewedLabel": "I have reviewed my outcomes; unselected outcomes have no financial value in this estimate.",
-          "cycleResult": "Cycle-time improvement",
-          "throughputResult": "Additional work supported by capacity and demand",
-          "assumptionsIncomplete": "Complete the selected assumptions to calculate financial value.",
-          "allocationError": "Allocated hours exceed the net capacity available. Reduce the allocations.",
-          "reviewError": "Review takes more time than the work reduced. No positive capacity is available at these assumptions.",
-          "cashError": "Avoided spending cannot exceed current spending or have positive value with no hours allocated.",
-          "hiringError": "Allocated capacity must cover the planned hire hours. Confirm the planned hire and its duration.",
-          "riskError": "The after probability cannot exceed the before probability for a loss-reduction estimate.",
-          "overlapError": "Confirm the benefits do not overlap before including them in the financial result.",
-          "boundsError": "Use values within the displayed limits.",
           "rangeLabel": "Adjust value",
-          "noCurrencyChange": "Language changes formatting, not your currency or assumptions.",
-          "currentPreparation": "Current preparation hours",
-          "reviewHours": "Human review hours",
-          "reworkHours": "Avoided or added rework hours",
-          "capacityValue": "Modeled capacity value",
-          "acceptedUnits": "Accepted units",
-          "attendedUnits": "Attended units",
-          "costPerAttended": "Cost per attended unit",
-          "benefitCost": "Benefit-cost multiple",
-          "firstYearCost": "First-year cost",
-          "firstYearRoi": "First-year ROI",
-          "paybackOutsideTerm": "Not recovered within the modeled term",
-          "months": "months"
+          "missing": "Enter a value",
+          "method": "How this is calculated",
+          "methodBody": "KAI prepares vendor-ready orders from counts, photos and invoices, and a named approver still reviews each one, so review time is subtracted. The food-loss figure is a published supermarket average shown beside the KAI price for comparison, not a measured or promised saving.",
+          "burdenHeading": "Less ordering admin",
+          "opportunityHeading": "More time on the floor",
+          "noCurrencyChange": "Language changes formatting, not your currency or assumptions."
         },
         "fields": {
           "volume": {
             "label": "Stores in scope",
             "help": "Count locations that would actually run this inventory loop, not every banner in the group."
           },
-          "accepted_rate": {
-            "label": "Expected acceptance rate",
-            "help": "Optional modeled share of prepared outputs accepted by the recipient. This is not a guarantee or observed result."
+          "cycles_per_unit": {
+            "label": "Replenishment cycles per store each month",
+            "help": "A modelled monthly cadence. Thirteen cycles is about three order cycles per week; replace it with your real cadence."
           },
           "minutes": {
             "label": "Preparation minutes per store per cycle",
-            "help": "Hands-on count, reconciliation and vendor-order preparation time for one cycle. The starting value translates the earlier 1,920 monthly minutes assumption into a weekly order cadence."
+            "help": "Hands-on count, reconciliation and vendor-order preparation time for one store in one cycle."
           },
-          "automation": {
-            "label": "Share of that loop KAI handles",
-            "help": "Illustrative share of inventory and order prep, not a shrink guarantee."
-          },
-          "review": {
-            "label": "Minutes to check each vendor order",
-            "help": "Human confirmation still required before a vendor-ready order goes out."
-          },
-          "cycles_per_unit": {
-            "label": "Replenishment cycles per store each month",
-            "help": "A modelled monthly cadence. Thirteen cycles is approximately three order cycles per week; replace it with your real cadence."
-          },
-          "tokens_per_output": {
-            "label": "Tokens per replenishment cycle",
-            "help": "An explicit modelled assumption for one cycle. Replace it with measured input, output, vision and tool usage when instrumentation is available."
-          },
-          "budget": {
-            "label": "Estimated monthly operating budget",
-            "help": "Include token usage, models/media, tools, infrastructure, Gabriel fees and additional paid review."
-          },
-          "model_cost": {
-            "label": "Extra models and media",
-            "help": "Only image, video or other generation charged separately from token usage. Enter zero if none."
-          },
-          "tools_cost": {
-            "label": "Tools and integrations",
-            "help": "Browser sessions, connectors and other metered services. Enter zero if none."
-          },
-          "infrastructure_cost": {
-            "label": "Infrastructure",
-            "help": "Incremental hosting, storage and compute for this workload. Enter zero if none."
-          },
-          "platform_cost": {
-            "label": "Other monthly delivery and support cost",
-            "help": "Modeled hosting, monitoring, storage and support cost, separate from the customer price."
-          },
-          "customer_price": {
-            "label": "Price per active store per month",
-            "help": "The proposed customer price, separate from KAI delivery cost. Change it to test another commercial offer."
-          },
-          "personal_value_per_hour": {
-            "label": "Optional value you assign to an hour",
-            "help": "An optional personal comparison only. This is not salary, wages or guaranteed cash savings."
-          },
-          "review_rate": {
-            "label": "Additional paid review per hour",
-            "help": "Actual extra reviewer spending, not the salary of an unchanged employee."
-          },
-          "cash_hours": {
-            "label": "Hours that remove paid work",
-            "help": "Allocate only work whose overtime, contractor or processing spend will actually stop."
-          },
-          "cash_baseline": {
-            "label": "Current monthly spending on that work",
-            "help": "The cash budget from which the reduction will come."
-          },
-          "cash_avoided": {
-            "label": "Monthly spending you would stop",
-            "help": "One explicit amount, not hours multiplied by salary; exclude any planned-hire saving entered separately."
-          },
-          "higher_value_hours": {
-            "label": "Hours kept on the floor",
-            "help": "Time redirected from spreadsheets to exceptions. Capacity is not automatic payroll reduction."
-          },
-          "contribution_rate": {
-            "label": "Shadow price of store capacity / hr",
-            "help": "Your estimate of a floor hour, not a wage saved automatically."
-          },
-          "throughput_hours": {
-            "label": "Hours used for additional volume",
-            "help": "This allocation cannot also be used for advisory work or spending reductions."
-          },
-          "extra_minutes": {
-            "label": "Team minutes per additional unit",
-            "help": "The remaining human effort, including review, needed to deliver one more unit."
-          },
-          "demand": {
-            "label": "Additional units with expected demand",
-            "help": "Capacity alone is not demand. Enter the extra monthly work you expect to take on."
-          },
-          "unit_margin": {
-            "label": "Contribution per additional unit",
-            "help": "Incremental revenue less delivery costs; AI operating costs are deducted separately."
-          },
-          "hiring_hours": {
-            "label": "Hours covering the planned hire",
-            "help": "Allocate capacity to specific planned work, not a generic full-time-equivalent estimate."
-          },
-          "planned_hours": {
-            "label": "Monthly hours the planned hire would cover",
-            "help": "The allocated capacity must cover this entire workload."
-          },
-          "hire_cost": {
-            "label": "Monthly hire cost actually deferred",
-            "help": "Use the cost of a genuinely planned hire, not the salary of someone already employed."
-          },
-          "hire_months": {
-            "label": "Months that hire is deferred",
-            "help": "One to twelve months; the annual estimate stops counting savings after this period."
-          },
-          "incidents": {
-            "label": "Order corrections avoided each month",
-            "help": "Optional modelled count. Use a measured before-and-after baseline when a pilot exists."
-          },
-          "incident_cost": {
-            "label": "Cost per avoidable order correction",
-            "help": "Optional incremental cost of a distinct correction or rework event. Do not count the same labor twice."
-          },
-          "probability_before": {
-            "label": "Monthly loss probability before",
-            "help": "Your estimate, not a guaranteed risk assessment."
-          },
-          "probability_after": {
-            "label": "Monthly loss probability after",
-            "help": "Use the same event and monthly time horizon as the baseline."
-          },
-          "loss": {
-            "label": "Loss exposure for that event",
-            "help": "Exclude error incidents and spending already counted. This is uncertain expected value, not cash saved."
-          },
-          "days_before": {
-            "label": "Cycle time before, in days",
-            "help": "Elapsed time from start to completion, separate from hands-on effort."
-          },
-          "days_after": {
-            "label": "Cycle time after, in days",
-            "help": "Shown as an operational change only, without an assumed monetary value."
+          "purchases_per_store": {
+            "label": "Monthly food purchases per store",
+            "help": "Example figure. Use your own supplier spend."
           }
         },
+        "outcomes": [],
         "burden": [
           "Checking live inventory across stores",
           "Building vendor-ready orders by hand"
@@ -999,74 +811,6 @@
           "Floor time for exceptions",
           "Vendor-ready orders without a night of spreadsheets"
         ],
-        "usagePackages": {
-          "medium": {
-            "volume": 6,
-            "tokensPerOutput": 100000,
-            "platform_cost": 120,
-            "minutes": 148,
-            "automation": 50,
-            "review": 30,
-            "model_cost": 0,
-            "tools_cost": 0,
-            "infrastructure_cost": 0,
-            "higher_value_hours": 57.2,
-            "contribution_rate": 35,
-            "cycles_per_unit": 13,
-            "customer_price": 250
-          },
-          "base": {
-            "volume": 3,
-            "tokensPerOutput": 100000,
-            "platform_cost": 60,
-            "minutes": 148,
-            "automation": 50,
-            "review": 30,
-            "model_cost": 0,
-            "tools_cost": 0,
-            "infrastructure_cost": 0,
-            "higher_value_hours": 28.6,
-            "contribution_rate": 35,
-            "cycles_per_unit": 13,
-            "customer_price": 250
-          }
-        },
-        "defaultPackage": "medium",
-        "costMode": "itemized",
-        "reviewMode": "team",
-        "selected": [],
-        "confirmations": {
-          "overlap": false,
-          "hiring": false,
-          "outcomes": false,
-          "hide": false
-        },
-        "hero": {
-          "kind": "capacity",
-          "label": "Net floor capacity returned"
-        },
-        "outcomes": [
-          {
-            "id": "higher_value",
-            "label": "Keep floor teams on exceptions",
-            "help": "Use returned hours on the cases that still need a person, not on rebuilding the order book."
-          },
-          {
-            "id": "error",
-            "label": "Reduce order corrections",
-            "help": "Optionally model distinct correction and rework costs after you have a baseline."
-          }
-        ],
-        "workloadMultiplierField": "cycles_per_unit",
-        "pricing": {
-          "basis": "per_volume",
-          "label": "KAI price hypothesis",
-          "help": "€250 per active store per month. This is an editable hypothesis until a paid pilot supplies evidence."
-        },
-        "presentation": {
-          "financial": "optional",
-          "showCustomerEconomics": true
-        },
         "tabs": [
           {
             "id": "stores",
@@ -1076,34 +820,15 @@
               "volume",
               "cycles_per_unit",
               "minutes",
-              "automation",
-              "review"
-            ],
-            "showPackage": true,
-            "showReview": true
-          },
-          {
-            "id": "tokens",
-            "label": "Usage & delivery cost",
-            "intro": "Tokens and delivery cost describe what it costs KAI to provide the service. Customer value is measured separately.",
-            "fields": [
-              "tokens_per_output",
-              "customer_price",
-              "platform_cost",
-              "tools_cost",
-              "infrastructure_cost"
-            ],
-            "showPackage": true
-          },
-          {
-            "id": "floor",
-            "label": "Floor time",
-            "intro": "Review preparation time covered, human review time and net capacity returned after approval.",
-            "fields": [],
-            "showPackage": true,
-            "showOutcomes": true
+              "purchases_per_store"
+            ]
           }
-        ]
+        ],
+        "pricing": {
+          "basis": "per_volume",
+          "label": "Pricing",
+          "help": "KAI is priced per store per month. Only the number of stores changes the price."
+        }
       },
       "cta": {
         "primaryLabel": "Request a four-week pilot",
@@ -1122,298 +847,298 @@
           {
             "language": "es",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.es.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "de",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.de.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "ja",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.ja.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "fr",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.fr.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "pt",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.pt.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "ru",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.ru.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "it",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.it.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "nl",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.nl.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "pl",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.pl.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "tr",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.tr.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "zh",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.zh.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "fa",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.fa.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "vi",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.vi.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "cs",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.cs.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "id",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.id.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "ko",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.ko.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "uk",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.uk.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "hu",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.hu.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "ar",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.ar.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "sv",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.sv.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "ro",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.ro.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "el",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.el.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "da",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.da.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "fi",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.fi.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "he",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.he.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "sk",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.sk.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "th",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.th.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "bg",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.bg.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "hr",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.hr.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "nb",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.nb.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "lt",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.lt.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "sr",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.sr.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "sl",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.sl.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "ca",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.ca.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "et",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.et.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "no",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.no.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           },
           {
             "language": "lv",
             "regionKey": null,
-            "sourceRevision": "995407e1f7b1fbfd09caeed1e290c210b014fa53e9d7cc1f4cffe645e8e164d1",
+            "sourceRevision": "b136a9c82290b3306914e69a48565a3b9a8385abeaa97cee43d9aee5dd661f25",
             "assetPath": "assets/landing-page.lv.json",
             "assetSchemaVersion": 2,
-            "generatedAt": "2026-09-11T17:53:39.703Z"
+            "generatedAt": "2026-09-11T19:36:13.874Z"
           }
         ]
       },

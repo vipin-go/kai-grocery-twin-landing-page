@@ -195,12 +195,48 @@ Grocery Twin renders it with its own three-input panel, never the generic tabs:
   `copy` holds only the interface keys the estimator shows. Keep one disclaimer, for example
   "Estimates from your inputs, not guaranteed savings." `outcomes` stays empty.
 
-Token and service-cost details are internal, per-plan figures in a collapsed
-technical disclosure. They never change with visitor inputs and are never the price
-or a benefit. Older Home assets without `fixedAssumptions` still validate and render
+Estimators never carry delivery-cost values. The validator rejects non-null
+`tokens_per_output`, `platform_cost`, `model_cost`, `tools_cost`,
+`infrastructure_cost`, `budget` and `review_rate` defaults, because the model is public
+page data. Older Home assets without `fixedAssumptions` still validate and render
 with safe migration defaults (offload from `defaults.automation`, review from
 `defaults.review`, €100 per person per year, two people) until they are migrated.
 Publish-modal saves write this model through the revision-checked landing-page API.
+
+### Store-ops estimator (fixed assumptions)
+
+A Grocery Twin retail calculator (`landingPage.roiCalculator` on a `grocery-twin`
+page) with `businessImpact.storeOpsAssumptions` is a store-ops estimator. The retail
+edition renders it with one four-input panel:
+
+- **Visitor inputs:** `defaults.volume` (stores in scope, a whole number of at least 1),
+  `defaults.cycles_per_unit` (replenishment cycles per store each month),
+  `defaults.minutes` (preparation minutes per store per cycle) and
+  `defaults.purchases_per_store` (monthly food purchases per store, €10,000 to €500,000
+  in €5,000 steps; always labelled as an example figure). `tabs` holds exactly these four.
+- **Fixed assumptions:** `shareHandled` (0–1), `reviewMinutesPerStoreCycle`,
+  `lossRate` (0–1; 0.0121 is the WUR supermarket food-loss monitor, 2024 data),
+  `lossRateSource` and `userEditable: false`. Mirror `defaults.automation = shareHandled × 100`
+  and `defaults.review = reviewMinutesPerStoreCycle`. Share handled and review minutes
+  are placeholders until pilots measure them.
+- **Price:** `defaults.customer_price` is the price per store per month with
+  `pricing.basis: "per_volume"`; price = stores × price per store. No `annualPrice`:
+  yearly figures are monthly × 12.
+- **Results:** hours back = round(stores × cycles × (minutes × shareHandled −
+  reviewMinutesPerStoreCycle) ÷ 60); food loss = round(stores × purchases × lossRate);
+  break-even = round(price ÷ food loss × 100). Stores move hours, loss and price;
+  cycles and minutes move only hours; purchases move only loss and break-even.
+  Above 100% the page says KAI costs more than the average loss. At zero or negative net
+  minutes it says no net time is saved.
+- **Copy:** `storeOpsCopy` holds whole-sentence templates. `{stores}` appears in the
+  `…One`/`…Other` label pairs (singular and plural), `{amount}` in the loss and price
+  amounts, `{perStore}` in the price amounts, `{percent}` in `breakEven` and
+  `{duration}` in the hours sentences. Loss and price are a comparison: never
+  strike through, "was/now" or a discount percentage. Use British "modelled".
+
+Keep one footnote ("Estimates from your inputs and published averages, not measured
+results…"). Older retail assets without `storeOpsAssumptions` render with the same
+fallbacks until the publish-modal Calculator tab or the authoring script migrates them.
 
 All labels, help, notices and accessibility copy belong to the model and translate
 with the landing page. IDs, currency, defaults and methodology version do not.

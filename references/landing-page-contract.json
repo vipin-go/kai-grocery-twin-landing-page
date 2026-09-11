@@ -252,8 +252,28 @@
           "pricing": { "basis": "fixed", "monthly": "defaults.customer_price", "annual": "pricing.annualPrice" },
           "householdCopy": "every key required; timeBack* sentences contain exactly one {duration}, waste*/price* sentences exactly one {amount}; no other braces",
           "forbiddenInputs": ["automation", "review", "personal_value_per_hour", "review_rate", "outcome fields"],
+          "forbiddenDefaults": ["tokens_per_output", "platform_cost", "model_cost", "tools_cost", "infrastructure_cost", "budget", "review_rate"],
           "migration": "assets without fixedAssumptions keep validating and render with default assumptions"
         }
+      },
+      "retailStoreOpsEstimator": {
+        "path": "landingPage.roiCalculator",
+        "enabledBy": "businessImpact.storeOpsAssumptions",
+        "visitorInputs": ["volume", "cycles_per_unit", "minutes", "purchases_per_store"],
+        "stores": "integer >= 1",
+        "purchasesPerStore": { "min": 10000, "max": 500000, "step": 5000 },
+        "fixedAssumptions": {
+          "shareHandled": "number > 0 and <= 1",
+          "reviewMinutesPerStoreCycle": "number >= 0",
+          "lossRate": "number > 0 and < 1",
+          "lossRateSource": "text",
+          "userEditable": false
+        },
+        "mirrors": { "defaults.automation": "shareHandled * 100", "defaults.review": "reviewMinutesPerStoreCycle" },
+        "pricing": { "basis": "per_volume", "pricePerStore": "defaults.customer_price", "yearly": "monthly * 12", "annualPrice": "forbidden" },
+        "storeOpsCopy": "every key required; {stores} in label pairs, {amount} in loss/price amounts, {perStore} in price amounts, {percent} in breakEven, {duration} in hours sentences; no other braces",
+        "forbiddenDefaults": ["tokens_per_output", "platform_cost", "model_cost", "tools_cost", "infrastructure_cost", "budget", "review_rate"],
+        "migration": "assets without storeOpsAssumptions keep validating and render with default assumptions"
       },
       "sections": ["header", "hero", "product", "mobile", "features", "stories", "about", "closing", "footer"],
       "optionalSections": ["retail"],

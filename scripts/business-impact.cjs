@@ -20,6 +20,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // app/shared/utils/business-impact.ts
 var business_impact_exports = {};
 __export(business_impact_exports, {
+  ESTIMATOR_COPY_TEMPLATES: () => ESTIMATOR_COPY_TEMPLATES,
   FOOD_WASTE_PER_PERSON_YEAR_DEFAULT: () => FOOD_WASTE_PER_PERSON_YEAR_DEFAULT,
   FOOD_WASTE_SOURCE_DEFAULT: () => FOOD_WASTE_SOURCE_DEFAULT,
   HOUSEHOLD_COPY: () => HOUSEHOLD_COPY,
@@ -34,22 +35,36 @@ __export(business_impact_exports, {
   IMPACT_OUTCOMES: () => IMPACT_OUTCOMES,
   IMPACT_OUTCOME_FIELDS: () => IMPACT_OUTCOME_FIELDS,
   IMPACT_TOKEN_FIELDS: () => IMPACT_TOKEN_FIELDS,
+  INTERNAL_COST_FIELDS: () => INTERNAL_COST_FIELDS,
+  LOSS_RATE: () => LOSS_RATE,
+  LOSS_RATE_SOURCE_DEFAULT: () => LOSS_RATE_SOURCE_DEFAULT,
   OFFLOAD_RATE_DEFAULT: () => OFFLOAD_RATE_DEFAULT,
+  PRICE_PER_STORE: () => PRICE_PER_STORE,
   REVIEW_MINUTES_DEFAULT: () => REVIEW_MINUTES_DEFAULT,
+  REVIEW_MIN_PER_STORE_CYCLE: () => REVIEW_MIN_PER_STORE_CYCLE,
   ROI_COST_COPY: () => ROI_COST_COPY,
   ROI_CURRENCY_COPY: () => ROI_CURRENCY_COPY,
   ROI_CURRENCY_NEUTRAL_COPY: () => ROI_CURRENCY_NEUTRAL_COPY,
+  SHARE_HANDLED: () => SHARE_HANDLED,
+  STORE_OPS_COPY: () => STORE_OPS_COPY,
+  STORE_OPS_COPY_TEMPLATES: () => STORE_OPS_COPY_TEMPLATES,
+  STORE_OPS_IMPACT_COPY_KEYS: () => STORE_OPS_IMPACT_COPY_KEYS,
+  STORE_OPS_INPUT_FIELDS: () => STORE_OPS_INPUT_FIELDS,
+  STORE_OPS_STARTING_VALUES: () => STORE_OPS_STARTING_VALUES,
   TOKEN_ECONOMICS: () => TOKEN_ECONOMICS,
   defaultImpactTabs: () => defaultImpactTabs,
   evaluateBusinessImpact: () => evaluateBusinessImpact,
   evaluateHouseholdEstimate: () => evaluateHouseholdEstimate,
+  evaluateStoreOpsEstimate: () => evaluateStoreOpsEstimate,
   householdStartingValues: () => householdStartingValues,
   initialImpactState: () => initialImpactState,
-  isHouseholdCopyTemplate: () => isHouseholdCopyTemplate,
+  isCopyTemplate: () => isCopyTemplate,
   matchUsagePackage: () => matchUsagePackage,
   netCapacityHours: () => netCapacityHours,
   resolveHouseholdAssumptions: () => resolveHouseholdAssumptions,
   resolveImpactTabs: () => resolveImpactTabs,
+  resolveStoreOpsAssumptions: () => resolveStoreOpsAssumptions,
+  storeOpsStartingValues: () => storeOpsStartingValues,
   tokenCostFromUsage: () => tokenCostFromUsage,
   validateBusinessImpact: () => validateBusinessImpact,
   validateRoiCostCopy: () => validateRoiCostCopy,
@@ -71,6 +86,7 @@ var IMPACT_FIELDS = {
   correction_minutes_before: [0, 1e4, 0.1],
   correction_minutes_after: [0, 1e4, 0.1],
   cycles_per_unit: [1, 1e3, 1],
+  purchases_per_store: [1e4, 5e5, 5e3],
   tokens_per_output: [0, 1e7, 100],
   budget: [0, 1e8, 1],
   model_cost: [0, 1e8, 1],
@@ -112,6 +128,15 @@ var FOOD_WASTE_PER_PERSON_YEAR_DEFAULT = 100;
 var FOOD_WASTE_SOURCE_DEFAULT = "Netherlands Nutrition Centre (Voedingscentrum), 2026 report using 2025 data";
 var HOUSEHOLD_PEOPLE_DEFAULT = 2;
 var HOUSEHOLD_INPUT_FIELDS = ["volume", "minutes", "people"];
+function isCopyTemplate(text, tokens) {
+  let rest = text;
+  for (const token of tokens) {
+    const parts = rest.split(`{${token}}`);
+    if (parts.length !== 2) return false;
+    rest = parts.join("");
+  }
+  return !/[{}]/.test(rest);
+}
 var HOUSEHOLD_COPY = {
   // Whole-sentence templates: translating "About" or "back a month" as separate fragments produced wrong copy.
   timeBackMonthly: "About {duration} back a month",
@@ -130,26 +155,70 @@ var HOUSEHOLD_COPY = {
   sourceLabel: "Source",
   timeBackFormula: "Time back = sessions \xD7 planning minutes per session \xD7 the share KAI takes on, minus sessions \xD7 minutes to check each plan.",
   wasteFormula: "Food-waste comparison = food wasted per person each year \xF7 12 \xD7 people in your household, rounded to whole euros.",
-  priceNote: "The KAI price is fixed. None of these inputs change it.",
-  technicalHeading: "Technical usage details",
-  technicalNote: "Internal usage estimates. They are not your price or a benefit, and your inputs do not change them.",
-  tokensPerPlanLabel: "Modelled tokens to build one plan",
-  tokenCostPerPlanLabel: "Modelled token cost per plan",
-  serviceCostLabel: "Modelled monthly service cost"
+  priceNote: "The KAI price is fixed. None of these inputs change it."
 };
 var HOUSEHOLD_COPY_TEMPLATES = {
-  timeBackMonthly: "duration",
-  timeBackYearly: "duration",
-  wasteMonthly: "amount",
-  wasteYearly: "amount",
-  priceMonthly: "amount",
-  priceYearly: "amount"
+  timeBackMonthly: ["duration"],
+  timeBackYearly: ["duration"],
+  wasteMonthly: ["amount"],
+  wasteYearly: ["amount"],
+  priceMonthly: ["amount"],
+  priceYearly: ["amount"]
 };
-function isHouseholdCopyTemplate(text, token) {
-  const parts = text.split(`{${token}}`);
-  return parts.length === 2 && !/[{}]/.test(parts.join(""));
-}
-var IMPACT_MONEY_FIELDS = ["budget", "model_cost", "tools_cost", "infrastructure_cost", "platform_cost", "review_rate", "customer_price", "personal_value_per_hour", "capacity_value_per_hour", "overage_price", "setup_fee", "cash_baseline", "cash_avoided", "contribution_rate", "unit_margin", "hire_cost", "incident_cost", "loss"];
+var SHARE_HANDLED = 0.5;
+var REVIEW_MIN_PER_STORE_CYCLE = 30;
+var LOSS_RATE = 0.0121;
+var PRICE_PER_STORE = 250;
+var LOSS_RATE_SOURCE_DEFAULT = "Wageningen University & Research, supermarket food-loss monitor (2024 data)";
+var STORE_OPS_STARTING_VALUES = { volume: 6, cycles_per_unit: 13, minutes: 150, purchases_per_store: 1e5 };
+var STORE_OPS_INPUT_FIELDS = ["volume", "cycles_per_unit", "minutes", "purchases_per_store"];
+var STORE_OPS_COPY = {
+  lossLabelOne: "Food your {stores} store loses to expiry and spoilage",
+  lossLabelOther: "Food your {stores} stores lose to expiry and spoilage",
+  lossInfo: "Average for Dutch supermarkets: about 1.2% of food bought is lost, mostly to expiry and loss of freshness (Wageningen University & Research, 2024 data). Your own write-offs may be higher or lower.",
+  lossMonthly: "about {amount} a month",
+  lossYearly: "about {amount} a year",
+  priceLabelOne: "KAI for {stores} store",
+  priceLabelOther: "KAI for {stores} stores",
+  priceMonthly: "{amount} a month ({perStore} per store)",
+  priceYearly: "{amount} a year ({perStore} per store a month)",
+  breakEven: "KAI pays for itself if it prevents about {percent} of that loss.",
+  breakEvenOver: "At this purchase volume, KAI costs more than the average food loss.",
+  hoursMonthly: "About {duration} of ordering work back a month",
+  hoursYearly: "About {duration} of ordering work back a year",
+  noTimeSaved: "No net time saved at this prep time: review takes about as long as KAI saves.",
+  fixedAssumptionsHeading: "Fixed assumptions, not inputs",
+  shareHandledLabel: "Share of order preparation KAI handles",
+  reviewMinutesLabel: "Review minutes per store per cycle",
+  lossRateLabel: "Food lost as a share of purchases",
+  pricePerStoreLabel: "KAI price per store per month",
+  sourceLabel: "Source",
+  hoursFormula: "Hours back = stores \xD7 cycles per store \xD7 (preparation minutes \xD7 share KAI handles \u2212 review minutes) \xF7 60, rounded.",
+  lossFormula: "Food loss = stores \xD7 monthly food purchases per store \xD7 loss rate, rounded to whole euros.",
+  priceFormula: "KAI price = stores \xD7 price per store.",
+  breakEvenFormula: "Break-even share = KAI price \xF7 food loss \xD7 100, rounded.",
+  yearlyNote: "The yearly view multiplies hours, food loss and price by 12. The break-even share stays the same.",
+  lossRateNote: "The loss rate is measured by weight at participating chains and used here as a share of spend."
+};
+var STORE_OPS_COPY_TEMPLATES = {
+  lossLabelOne: ["stores"],
+  lossLabelOther: ["stores"],
+  lossMonthly: ["amount"],
+  lossYearly: ["amount"],
+  priceLabelOne: ["stores"],
+  priceLabelOther: ["stores"],
+  priceMonthly: ["amount", "perStore"],
+  priceYearly: ["amount", "perStore"],
+  breakEven: ["percent"],
+  hoursMonthly: ["duration"],
+  hoursYearly: ["duration"]
+};
+var ESTIMATOR_COPY_TEMPLATES = {
+  householdCopy: HOUSEHOLD_COPY_TEMPLATES,
+  storeOpsCopy: STORE_OPS_COPY_TEMPLATES
+};
+var INTERNAL_COST_FIELDS = ["tokens_per_output", "platform_cost", "model_cost", "tools_cost", "infrastructure_cost", "budget", "review_rate"];
+var IMPACT_MONEY_FIELDS = ["budget", "model_cost", "tools_cost", "infrastructure_cost", "platform_cost", "review_rate", "customer_price", "purchases_per_store", "personal_value_per_hour", "capacity_value_per_hour", "overage_price", "setup_fee", "cash_baseline", "cash_avoided", "contribution_rate", "unit_margin", "hire_cost", "incident_cost", "loss"];
 var IMPACT_TOKEN_FIELDS = ["tokens_per_output"];
 var ROI_CURRENCY_COPY = {
   native: "Amounts in {currency}.",
@@ -308,6 +377,20 @@ var HOUSEHOLD_IMPACT_COPY_KEYS = [
   "opportunityHeading",
   "noCurrencyChange",
   "reviewError"
+];
+var STORE_OPS_IMPACT_COPY_KEYS = [
+  "summary",
+  "reset",
+  "monthly",
+  "yearly",
+  "annual",
+  "rangeLabel",
+  "missing",
+  "method",
+  "methodBody",
+  "burdenHeading",
+  "opportunityHeading",
+  "noCurrencyChange"
 ];
 var PACKAGE_VALUE_KEYS = ["cycles_per_unit", "customer_price", "personal_value_per_hour", "capacity_value_per_hour", "included_volume", "overage_price", "setup_fee", "contract_months", "minutes", "automation", "review", "correction_rate_before", "correction_rate_after", "correction_minutes_before", "correction_minutes_after", "model_cost", "tools_cost", "infrastructure_cost", "higher_value_hours", "contribution_rate", "cash_hours", "cash_baseline", "cash_avoided", "incidents", "incident_cost", "probability_before", "probability_after", "loss"];
 function tokenCostFromUsage({ volume, tokensPerOutput }) {
@@ -580,6 +663,57 @@ function evaluateHouseholdEstimate({ assumptions, sessions, minutes, people }) {
     priceYearly: assumptions.annualPrice
   };
 }
+function resolveStoreOpsAssumptions(config) {
+  const fixed = config.storeOpsAssumptions || {};
+  const { automation, review, customer_price: price } = config.defaults || {};
+  return {
+    shareHandled: finiteNumber(fixed.shareHandled) ? fixed.shareHandled : finiteNumber(automation) && automation > 0 && automation <= 100 ? automation / 100 : SHARE_HANDLED,
+    reviewMinutesPerStoreCycle: finiteNumber(fixed.reviewMinutesPerStoreCycle) ? fixed.reviewMinutesPerStoreCycle : finiteNumber(review) && review >= 0 ? review : REVIEW_MIN_PER_STORE_CYCLE,
+    lossRate: finiteNumber(fixed.lossRate) ? fixed.lossRate : LOSS_RATE,
+    lossRateSource: typeof fixed.lossRateSource === "string" && fixed.lossRateSource.trim() ? fixed.lossRateSource : LOSS_RATE_SOURCE_DEFAULT,
+    userEditable: false,
+    pricePerStore: finiteNumber(price) && price >= 0 ? price : config.storeOpsAssumptions ? null : PRICE_PER_STORE,
+    migrated: !config.storeOpsAssumptions
+  };
+}
+function storeOpsStartingValues(config) {
+  const values = config.defaults || {};
+  const pick = (field) => {
+    const value = values[field];
+    return finiteNumber(value) && value >= IMPACT_FIELDS[field][0] && value <= IMPACT_FIELDS[field][1] ? value : STORE_OPS_STARTING_VALUES[field];
+  };
+  const stores = pick("volume");
+  return { volume: stores >= 1 ? Math.round(stores) : STORE_OPS_STARTING_VALUES.volume, cycles_per_unit: pick("cycles_per_unit"), minutes: pick("minutes"), purchases_per_store: pick("purchases_per_store") };
+}
+function evaluateStoreOpsEstimate({ assumptions, stores, cyclesPerStore, prepMinutes, purchasesPerStore }) {
+  const inRange = (value, field) => finiteNumber(value) && value >= IMPACT_FIELDS[field][0] && value <= IMPACT_FIELDS[field][1];
+  const storesReady = finiteNumber(stores) && Number.isInteger(stores) && stores >= 1 && stores <= IMPACT_FIELDS.volume[1];
+  const timeReady = storesReady && inRange(cyclesPerStore, "cycles_per_unit") && inRange(prepMinutes, "minutes");
+  const cycles = timeReady ? stores * cyclesPerStore : 0;
+  const netMinutes = timeReady ? cycles * (prepMinutes * assumptions.shareHandled - assumptions.reviewMinutesPerStoreCycle) : 0;
+  const hoursBack = Math.round(netMinutes / 60);
+  const lossReady = storesReady && inRange(purchasesPerStore, "purchases_per_store");
+  const foodLoss = lossReady ? Math.round(stores * purchasesPerStore * assumptions.lossRate) : null;
+  const priceReady = storesReady && assumptions.pricePerStore !== null;
+  const price = priceReady ? stores * assumptions.pricePerStore : null;
+  const breakEvenPct = foodLoss !== null && foodLoss > 0 && price !== null ? Math.round(price / foodLoss * 100) : null;
+  return {
+    storesReady,
+    timeReady,
+    cycles,
+    netMinutes,
+    timeSaved: timeReady && netMinutes > 0,
+    hoursBack,
+    hoursBackYearly: hoursBack * 12,
+    lossReady,
+    foodLoss,
+    foodLossYearly: foodLoss === null ? null : foodLoss * 12,
+    price,
+    priceYearly: price === null ? null : price * 12,
+    breakEvenPct,
+    breakEvenOver: breakEvenPct !== null && breakEvenPct > 100
+  };
+}
 function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
   const issues = [];
   const fail = (p, message) => issues.push({ path: p, message });
@@ -631,8 +765,11 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
   const b = value.businessImpact;
   if (!record(b)) return [...issues, { path: `${path}.businessImpact`, message: "Business impact content is required." }];
   const bp = `${path}.businessImpact`;
-  keys(b, ["defaults", "fixedAssumptions", "householdCopy", "copy", "fields", "outcomes", "burden", "opportunity", "usagePackages", "tabs", "hero", "selected", "reviewMode", "costMode", "confirmations", "defaultPackage", "workloadMultiplierField", "pricing", "presentation"], bp);
+  keys(b, ["defaults", "fixedAssumptions", "householdCopy", "storeOpsAssumptions", "storeOpsCopy", "copy", "fields", "outcomes", "burden", "opportunity", "usagePackages", "tabs", "hero", "selected", "reviewMode", "costMode", "confirmations", "defaultPackage", "workloadMultiplierField", "pricing", "presentation"], bp);
   const household = b.fixedAssumptions !== void 0;
+  const storeOps = b.storeOpsAssumptions !== void 0;
+  const estimator = household || storeOps;
+  if (household && storeOps) fail(`${bp}.storeOpsAssumptions`, "Use either household or store-ops fixed assumptions, not both.");
   if (!record(b.defaults)) fail(`${bp}.defaults`, "Add workload defaults.");
   else {
     const defaults = b.defaults;
@@ -641,14 +778,47 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
       if (defaults[k] !== null) numberInRange(defaults[k], k, `${bp}.defaults.${k}`);
     }
     Object.keys(defaults).forEach((k) => {
-      if (IMPACT_FIELDS[k] && !["volume", "minutes", "automation", "review"].includes(k) && defaults[k] !== null) numberInRange(defaults[k], k, `${bp}.defaults.${k}`);
+      if (IMPACT_FIELDS[k] && !["volume", "minutes", "automation", "review"].includes(k) && !(household && k === "people") && defaults[k] !== null) numberInRange(defaults[k], k, `${bp}.defaults.${k}`);
     });
-    if (defaults.people != null && !Number.isInteger(defaults.people)) fail(`${bp}.defaults.people`, "Use a whole number of people.");
+    if (!household && defaults.people != null && !Number.isInteger(defaults.people)) fail(`${bp}.defaults.people`, "Use a whole number of people.");
+  }
+  const estimatorDefaults = record(b.defaults) ? b.defaults : {};
+  const oneInputPanel = (inputFields, label) => {
+    if (!Array.isArray(b.tabs) || b.tabs.length !== 1) return fail(`${bp}.tabs`, "Use exactly one input panel.");
+    if (!record(b.tabs[0])) return;
+    const tab = b.tabs[0];
+    const fields = Array.isArray(tab.fields) ? tab.fields : [];
+    const exposed = fields.filter((field) => !inputFields.includes(field));
+    if (exposed.length) fail(`${bp}.tabs[0].fields`, `Fixed assumptions, cost and money-comparison fields cannot be public inputs: ${exposed.join(", ")}.`);
+    else if (fields.length !== inputFields.length || inputFields.some((field) => !fields.includes(field))) fail(`${bp}.tabs[0].fields`, `Show exactly ${label}.`);
+    ["showReview", "showOutcomes", "showPackage"].forEach((flag) => {
+      if (tab[flag]) fail(`${bp}.tabs[0].${flag}`, "Estimators show only their input panel.");
+    });
+  };
+  const templatedCopy = (key, english, templates) => {
+    const cp = `${bp}.${key}`;
+    const copy = b[key];
+    if (!record(copy)) return fail(cp, "Add the result copy.");
+    keys(copy, Object.keys(english), cp);
+    Object.keys(english).forEach((k) => {
+      text(copy[k], `${cp}.${k}`);
+      if (typeof copy[k] !== "string") return;
+      const tokens = templates[k];
+      if (tokens && !isCopyTemplate(copy[k], tokens)) fail(`${cp}.${k}`, `Include ${tokens.map((token) => `{${token}}`).join(" and ")} exactly once and no other template fields.`);
+      else if (!tokens && /[{}]/.test(copy[k])) fail(`${cp}.${k}`, "Only the result sentences can contain a template field.");
+    });
+  };
+  if (estimator) {
+    INTERNAL_COST_FIELDS.forEach((field) => {
+      if (estimatorDefaults[field] != null) fail(`${bp}.defaults.${field}`, "Internal cost values cannot be part of a public estimator.");
+    });
+    if (b.usagePackages !== void 0 || b.defaultPackage !== void 0) fail(`${bp}.usagePackages`, "Usage packages would change the estimator price.");
+    if (Array.isArray(b.selected) && b.selected.length) fail(`${bp}.selected`, "Estimators have no money-comparison outcomes.");
   }
   if (household) {
     const fp = `${bp}.fixedAssumptions`;
     const fixed = b.fixedAssumptions;
-    const defaults = record(b.defaults) ? b.defaults : {};
+    const defaults = estimatorDefaults;
     if (!record(fixed)) fail(fp, "Expected fixed assumptions.");
     else {
       keys(fixed, ["offloadRate", "reviewMinutes", "foodWastePerPersonYear", "foodWasteSource", "userEditable"], fp);
@@ -672,38 +842,44 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
       if (!finiteNumber(b.pricing.annualPrice) || b.pricing.annualPrice < 0) fail(`${bp}.pricing.annualPrice`, "Add the fixed annual price.");
       if (b.pricing.minimumMargin !== void 0) fail(`${bp}.pricing.minimumMargin`, "Fixed household pricing has no usage margin.");
     }
-    if (b.usagePackages !== void 0 || b.defaultPackage !== void 0) fail(`${bp}.usagePackages`, "Usage packages would change the household price.");
-    if (Array.isArray(b.selected) && b.selected.length) fail(`${bp}.selected`, "Household estimates have no money-comparison outcomes.");
-    if (!Array.isArray(b.tabs) || b.tabs.length !== 1) fail(`${bp}.tabs`, "Use exactly one input panel.");
-    else if (record(b.tabs[0])) {
-      const tab = b.tabs[0];
-      const fields = Array.isArray(tab.fields) ? tab.fields : [];
-      const exposed = fields.filter((field) => !HOUSEHOLD_INPUT_FIELDS.includes(field));
-      if (exposed.length) fail(`${bp}.tabs[0].fields`, `Fixed assumptions and money-comparison fields cannot be public inputs: ${exposed.join(", ")}.`);
-      else if (fields.length !== HOUSEHOLD_INPUT_FIELDS.length || HOUSEHOLD_INPUT_FIELDS.some((field) => !fields.includes(field))) fail(`${bp}.tabs[0].fields`, "Show exactly sessions, minutes and people.");
-      ["showReview", "showOutcomes", "showPackage"].forEach((flag) => {
-        if (tab[flag]) fail(`${bp}.tabs[0].${flag}`, "Household estimates show only the three inputs.");
-      });
-    }
-    const hp = `${bp}.householdCopy`;
-    const copy = b.householdCopy;
-    if (!record(copy)) fail(hp, "Add household result copy.");
-    else {
-      keys(copy, Object.keys(HOUSEHOLD_COPY), hp);
-      Object.keys(HOUSEHOLD_COPY).forEach((k) => {
-        text(copy[k], `${hp}.${k}`);
-        if (typeof copy[k] !== "string") return;
-        const token = HOUSEHOLD_COPY_TEMPLATES[k];
-        if (token && !isHouseholdCopyTemplate(copy[k], token)) fail(`${hp}.${k}`, `Include exactly one {${token}} and no other template fields.`);
-        else if (!token && /[{}]/.test(copy[k])) fail(`${hp}.${k}`, "Only the time, food-waste and price sentences can contain a template field.");
-      });
-    }
+    oneInputPanel(HOUSEHOLD_INPUT_FIELDS, "sessions, minutes and people");
+    templatedCopy("householdCopy", HOUSEHOLD_COPY, HOUSEHOLD_COPY_TEMPLATES);
   } else if (b.householdCopy !== void 0) fail(`${bp}.householdCopy`, "Household copy requires fixed assumptions.");
+  if (storeOps) {
+    const sp = `${bp}.storeOpsAssumptions`;
+    const fixed = b.storeOpsAssumptions;
+    const defaults = estimatorDefaults;
+    if (!record(fixed)) fail(sp, "Expected store-ops fixed assumptions.");
+    else {
+      keys(fixed, ["shareHandled", "reviewMinutesPerStoreCycle", "lossRate", "lossRateSource", "userEditable"], sp);
+      const { shareHandled, reviewMinutesPerStoreCycle, lossRate } = fixed;
+      if (!finiteNumber(shareHandled) || shareHandled <= 0 || shareHandled > 1) fail(`${sp}.shareHandled`, "Use a share above 0 and at most 1 (0.5 means 50%).");
+      else if (defaults.automation !== Math.round(shareHandled * 1e4) / 100) fail(`${bp}.defaults.automation`, "Keep automation equal to the fixed share handled as a percentage.");
+      numberInRange(reviewMinutesPerStoreCycle, "review", `${sp}.reviewMinutesPerStoreCycle`);
+      if (finiteNumber(reviewMinutesPerStoreCycle) && defaults.review !== reviewMinutesPerStoreCycle) fail(`${bp}.defaults.review`, "Keep review equal to the fixed review minutes per store cycle.");
+      if (!finiteNumber(lossRate) || lossRate <= 0 || lossRate >= 1) fail(`${sp}.lossRate`, "Use a share above 0 and below 1 (0.0121 means 1.21%).");
+      text(fixed.lossRateSource, `${sp}.lossRateSource`);
+      if (fixed.userEditable !== false) fail(`${sp}.userEditable`, "Set userEditable to false. Visitors can never change fixed assumptions.");
+    }
+    const { volume: stores, customer_price: price } = defaults;
+    if (!finiteNumber(stores) || !Number.isInteger(stores) || stores < 1) fail(`${bp}.defaults.volume`, "Use a whole number of stores, at least 1.");
+    ["cycles_per_unit", "minutes", "purchases_per_store"].forEach((k) => {
+      if (defaults[k] == null) fail(`${bp}.defaults.${k}`, "Add a starting value.");
+    });
+    if (!finiteNumber(price) || price < 0) fail(`${bp}.defaults.customer_price`, "Add the fixed price per store per month.");
+    if (!record(b.pricing) || b.pricing.basis !== "per_volume") fail(`${bp}.pricing.basis`, "Store-ops estimates price per store; only the store count changes the price.");
+    else {
+      if (b.pricing.annualPrice !== void 0) fail(`${bp}.pricing.annualPrice`, "The yearly price is the monthly price \xD7 12.");
+      if (b.pricing.minimumMargin !== void 0) fail(`${bp}.pricing.minimumMargin`, "Store-ops pricing has no usage margin.");
+    }
+    oneInputPanel(STORE_OPS_INPUT_FIELDS, "stores, cycles per store, preparation minutes and food purchases per store");
+    templatedCopy("storeOpsCopy", STORE_OPS_COPY, STORE_OPS_COPY_TEMPLATES);
+  } else if (b.storeOpsCopy !== void 0) fail(`${bp}.storeOpsCopy`, "Store-ops copy requires store-ops fixed assumptions.");
   if (!record(b.copy)) fail(`${bp}.copy`, "Localized interface copy is required.");
   else {
     const copy = b.copy;
     keys(copy, Object.keys(IMPACT_COPY), `${bp}.copy`);
-    const required = household ? [...HOUSEHOLD_IMPACT_COPY_KEYS] : Object.keys(IMPACT_COPY);
+    const required = household ? [...HOUSEHOLD_IMPACT_COPY_KEYS] : storeOps ? [...STORE_OPS_IMPACT_COPY_KEYS] : Object.keys(IMPACT_COPY);
     Object.keys(IMPACT_COPY).forEach((k) => {
       if (required.includes(k) || copy[k] !== void 0) text(copy[k], `${bp}.copy.${k}`);
     });
@@ -723,7 +899,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
     }
   }
   const seen = /* @__PURE__ */ new Set();
-  if (!Array.isArray(b.outcomes) || b.outcomes.length > 7 || !b.outcomes.length && !household) fail(`${bp}.outcomes`, "Use one to seven supported outcomes.");
+  if (!Array.isArray(b.outcomes) || b.outcomes.length > 7 || !b.outcomes.length && !estimator) fail(`${bp}.outcomes`, "Use one to seven supported outcomes.");
   else b.outcomes.forEach((o, i) => {
     if (!record(o)) return fail(`${bp}.outcomes[${i}]`, "Expected an outcome.");
     keys(o, ["id", "label", "help"], `${bp}.outcomes[${i}]`);
@@ -824,6 +1000,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  ESTIMATOR_COPY_TEMPLATES,
   FOOD_WASTE_PER_PERSON_YEAR_DEFAULT,
   FOOD_WASTE_SOURCE_DEFAULT,
   HOUSEHOLD_COPY,
@@ -838,22 +1015,36 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
   IMPACT_OUTCOMES,
   IMPACT_OUTCOME_FIELDS,
   IMPACT_TOKEN_FIELDS,
+  INTERNAL_COST_FIELDS,
+  LOSS_RATE,
+  LOSS_RATE_SOURCE_DEFAULT,
   OFFLOAD_RATE_DEFAULT,
+  PRICE_PER_STORE,
   REVIEW_MINUTES_DEFAULT,
+  REVIEW_MIN_PER_STORE_CYCLE,
   ROI_COST_COPY,
   ROI_CURRENCY_COPY,
   ROI_CURRENCY_NEUTRAL_COPY,
+  SHARE_HANDLED,
+  STORE_OPS_COPY,
+  STORE_OPS_COPY_TEMPLATES,
+  STORE_OPS_IMPACT_COPY_KEYS,
+  STORE_OPS_INPUT_FIELDS,
+  STORE_OPS_STARTING_VALUES,
   TOKEN_ECONOMICS,
   defaultImpactTabs,
   evaluateBusinessImpact,
   evaluateHouseholdEstimate,
+  evaluateStoreOpsEstimate,
   householdStartingValues,
   initialImpactState,
-  isHouseholdCopyTemplate,
+  isCopyTemplate,
   matchUsagePackage,
   netCapacityHours,
   resolveHouseholdAssumptions,
   resolveImpactTabs,
+  resolveStoreOpsAssumptions,
+  storeOpsStartingValues,
   tokenCostFromUsage,
   validateBusinessImpact,
   validateRoiCostCopy,

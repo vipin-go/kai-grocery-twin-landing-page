@@ -23,6 +23,7 @@ __export(business_impact_presets_exports, {
   catalogueFields: () => catalogueFields,
   createBusinessImpactCalculator: () => createBusinessImpactCalculator,
   createHouseholdImpactCalculator: () => createHouseholdImpactCalculator,
+  createStoreOpsImpactCalculator: () => createStoreOpsImpactCalculator,
   roundHours: () => roundHours,
   usagePackageFromWorkload: () => usagePackageFromWorkload
 });
@@ -53,12 +54,42 @@ var HOUSEHOLD_COPY = {
   sourceLabel: "Source",
   timeBackFormula: "Time back = sessions \xD7 planning minutes per session \xD7 the share KAI takes on, minus sessions \xD7 minutes to check each plan.",
   wasteFormula: "Food-waste comparison = food wasted per person each year \xF7 12 \xD7 people in your household, rounded to whole euros.",
-  priceNote: "The KAI price is fixed. None of these inputs change it.",
-  technicalHeading: "Technical usage details",
-  technicalNote: "Internal usage estimates. They are not your price or a benefit, and your inputs do not change them.",
-  tokensPerPlanLabel: "Modelled tokens to build one plan",
-  tokenCostPerPlanLabel: "Modelled token cost per plan",
-  serviceCostLabel: "Modelled monthly service cost"
+  priceNote: "The KAI price is fixed. None of these inputs change it."
+};
+var SHARE_HANDLED = 0.5;
+var REVIEW_MIN_PER_STORE_CYCLE = 30;
+var LOSS_RATE = 0.0121;
+var PRICE_PER_STORE = 250;
+var LOSS_RATE_SOURCE_DEFAULT = "Wageningen University & Research, supermarket food-loss monitor (2024 data)";
+var STORE_OPS_STARTING_VALUES = { volume: 6, cycles_per_unit: 13, minutes: 150, purchases_per_store: 1e5 };
+var STORE_OPS_INPUT_FIELDS = ["volume", "cycles_per_unit", "minutes", "purchases_per_store"];
+var STORE_OPS_COPY = {
+  lossLabelOne: "Food your {stores} store loses to expiry and spoilage",
+  lossLabelOther: "Food your {stores} stores lose to expiry and spoilage",
+  lossInfo: "Average for Dutch supermarkets: about 1.2% of food bought is lost, mostly to expiry and loss of freshness (Wageningen University & Research, 2024 data). Your own write-offs may be higher or lower.",
+  lossMonthly: "about {amount} a month",
+  lossYearly: "about {amount} a year",
+  priceLabelOne: "KAI for {stores} store",
+  priceLabelOther: "KAI for {stores} stores",
+  priceMonthly: "{amount} a month ({perStore} per store)",
+  priceYearly: "{amount} a year ({perStore} per store a month)",
+  breakEven: "KAI pays for itself if it prevents about {percent} of that loss.",
+  breakEvenOver: "At this purchase volume, KAI costs more than the average food loss.",
+  hoursMonthly: "About {duration} of ordering work back a month",
+  hoursYearly: "About {duration} of ordering work back a year",
+  noTimeSaved: "No net time saved at this prep time: review takes about as long as KAI saves.",
+  fixedAssumptionsHeading: "Fixed assumptions, not inputs",
+  shareHandledLabel: "Share of order preparation KAI handles",
+  reviewMinutesLabel: "Review minutes per store per cycle",
+  lossRateLabel: "Food lost as a share of purchases",
+  pricePerStoreLabel: "KAI price per store per month",
+  sourceLabel: "Source",
+  hoursFormula: "Hours back = stores \xD7 cycles per store \xD7 (preparation minutes \xD7 share KAI handles \u2212 review minutes) \xF7 60, rounded.",
+  lossFormula: "Food loss = stores \xD7 monthly food purchases per store \xD7 loss rate, rounded to whole euros.",
+  priceFormula: "KAI price = stores \xD7 price per store.",
+  breakEvenFormula: "Break-even share = KAI price \xF7 food loss \xD7 100, rounded.",
+  yearlyNote: "The yearly view multiplies hours, food loss and price by 12. The break-even share stays the same.",
+  lossRateNote: "The loss rate is measured by weight at participating chains and used here as a share of spend."
 };
 var ROI_CURRENCY_COPY = {
   native: "Amounts in {currency}.",
@@ -178,6 +209,20 @@ var HOUSEHOLD_IMPACT_COPY_KEYS = [
   "opportunityHeading",
   "noCurrencyChange",
   "reviewError"
+];
+var STORE_OPS_IMPACT_COPY_KEYS = [
+  "summary",
+  "reset",
+  "monthly",
+  "yearly",
+  "annual",
+  "rangeLabel",
+  "missing",
+  "method",
+  "methodBody",
+  "burdenHeading",
+  "opportunityHeading",
+  "noCurrencyChange"
 ];
 function netCapacityHours({ volume, minutes, automation, review, reviewMode = "team" }) {
   const grossHours = volume * minutes / 60 * automation / 100;
@@ -382,8 +427,6 @@ function createHouseholdImpactCalculator(pageName = "KAI") {
         // Mirrors of the fixed assumptions below; the validator keeps them equal.
         automation: OFFLOAD_RATE_DEFAULT * 100,
         review: REVIEW_MINUTES_DEFAULT,
-        tokens_per_output: 15e3,
-        platform_cost: 0.75,
         customer_price: 6.99
       },
       fixedAssumptions: {
@@ -405,8 +448,7 @@ function createHouseholdImpactCalculator(pageName = "KAI") {
       burden: ["Checking the fridge and pantry", "Finding recipes and missing ingredients", "Comparing products and preparing a grocery list"],
       opportunity: ["More time for yourself and your household", "Meals built around food you already have", "A reviewed shopping list, with fewer duplicate purchases"],
       tabs: [{ id: "routine", label: "Your routine", intro, fields: [...HOUSEHOLD_INPUT_FIELDS] }],
-      pricing: { basis: "fixed", annualPrice: 59, label: "Pricing", help: "The KAI price is fixed. Calculator inputs never change it." },
-      presentation: { financial: "capacity_only", showTokenUsage: true }
+      pricing: { basis: "fixed", annualPrice: 59, label: "Pricing", help: "The KAI price is fixed. Calculator inputs never change it." }
     },
     cta: {
       primaryLabel: `Try a grocery scan with ${pageName}`,
@@ -415,11 +457,67 @@ function createHouseholdImpactCalculator(pageName = "KAI") {
     }
   };
 }
+function createStoreOpsImpactCalculator(pageName = "KAI") {
+  const shown = {
+    ...Object.fromEntries(STORE_OPS_IMPACT_COPY_KEYS.map((key) => [key, IMPACT_COPY[key]])),
+    summary: "Your estimate",
+    reset: "Reset values",
+    missing: "Enter a value",
+    methodBody: `${pageName} prepares vendor-ready orders from counts, photos and invoices, and a named approver still reviews each one, so review time is subtracted. The food-loss figure is a published supermarket average shown beside the ${pageName} price for comparison, not a measured or promised saving.`,
+    burdenHeading: "Less ordering admin",
+    opportunityHeading: "More time on the floor"
+  };
+  return {
+    methodologyVersion: 2,
+    enabled: true,
+    kicker: "Retail impact",
+    heading: "Store-ops capacity estimate",
+    subheading: "Model vendor-ready order preparation for a multi-store operator. One named human approver remains responsible for every consequential order.",
+    disclaimer: `Estimates from your inputs and published averages, not measured results. ${pageName} prepares orders; a named approver decides what is placed.`,
+    currency: "EUR",
+    currencyCopy: { ...ROI_CURRENCY_COPY },
+    locale: "en-GB",
+    inputs: [],
+    metrics: [],
+    businessImpact: {
+      defaults: {
+        ...STORE_OPS_STARTING_VALUES,
+        // Mirrors of the fixed assumptions below; the validator keeps them equal.
+        automation: SHARE_HANDLED * 100,
+        review: REVIEW_MIN_PER_STORE_CYCLE,
+        customer_price: PRICE_PER_STORE
+      },
+      storeOpsAssumptions: {
+        shareHandled: SHARE_HANDLED,
+        reviewMinutesPerStoreCycle: REVIEW_MIN_PER_STORE_CYCLE,
+        lossRate: LOSS_RATE,
+        lossRateSource: LOSS_RATE_SOURCE_DEFAULT,
+        userEditable: false
+      },
+      storeOpsCopy: { ...STORE_OPS_COPY },
+      // Store-ops estimators store only the interface copy and input labels they display.
+      copy: shown,
+      fields: {
+        volume: { label: "Stores in scope", help: "Count locations that would actually run this inventory loop, not every banner in the group." },
+        cycles_per_unit: { label: "Replenishment cycles per store each month", help: "A modelled monthly cadence. Thirteen cycles is about three order cycles per week; replace it with your real cadence." },
+        minutes: { label: "Preparation minutes per store per cycle", help: "Hands-on count, reconciliation and vendor-order preparation time for one store in one cycle." },
+        purchases_per_store: { label: "Monthly food purchases per store", help: "Example figure. Use your own supplier spend." }
+      },
+      outcomes: [],
+      burden: ["Checking live inventory across stores", "Building vendor-ready orders by hand"],
+      opportunity: ["Floor time for exceptions", "Vendor-ready orders without a night of spreadsheets"],
+      tabs: [{ id: "stores", label: "Stores and cycles", intro: "Model the locations and replenishment cycles that actually use this stock and vendor-order loop.", fields: [...STORE_OPS_INPUT_FIELDS] }],
+      pricing: { basis: "per_volume", label: "Pricing", help: `${pageName} is priced per store per month. Only the number of stores changes the price.` }
+    },
+    cta: { primaryLabel: "Request a four-week pilot", primaryTarget: "pilot-form", secondaryLabel: `Talk with ${pageName}`, secondaryTarget: "meet" }
+  };
+}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   catalogueFields,
   createBusinessImpactCalculator,
   createHouseholdImpactCalculator,
+  createStoreOpsImpactCalculator,
   roundHours,
   usagePackageFromWorkload
 });
