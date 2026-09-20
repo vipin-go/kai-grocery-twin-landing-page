@@ -3,13 +3,24 @@
   "target": "landing_page_definition",
   "definitionFile": "assets/landing-page.json",
   "landingPage": {
+    "agentAccess": {
+      "optional": true,
+      "fields": ["enabled", "label"],
+      "additionalProperties": false,
+      "defaultEnabled": true,
+      "labelMaxLength": 80,
+      "placement": "hero",
+      "labelUse": "tooltip",
+      "installCommand": "<origin>/chat/<slug>/install.sh",
+      "shownWhen": "public_published_not_password_protected"
+    },
     "capabilityPreview": {
       "optional": true,
-      "fields": ["enabled", "commandTrigger"],
+      "fields": ["enabled", "commandId"],
       "additionalProperties": false,
       "commandType": "operator_action",
       "requiresWorkflowRef": true,
-      "requiresWorkflowSkill": true,
+      "requiresGuidedJourney": true,
       "journeyPackageSchemaVersion": 2,
       "journeyOwner": "committed_workflow_repository",
       "copyOwner": "workflow_package_generated_locale_catalogue",

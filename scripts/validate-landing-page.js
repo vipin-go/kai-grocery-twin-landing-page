@@ -44,6 +44,7 @@ const sourceRevision = (value) => createHash('sha256').update(JSON.stringify(sta
 const withoutLocalization = (page) => {
   const copy = JSON.parse(JSON.stringify(page));
   delete copy.localization;
+  delete copy.capabilityPreview;
   return copy;
 };
 const selectEmbedCopy = (chatConfigPath) => {
@@ -859,12 +860,13 @@ function validateLandingPageModel(landingPage, chatConfigPath, definitionFilePat
   if (!landingPage || typeof landingPage !== 'object') fail('landingPage object is required');
   if (landingPage.capabilityPreview !== undefined) {
     const binding = landingPage.capabilityPreview;
-    if (!binding || typeof binding !== 'object' || Array.isArray(binding) || Object.keys(binding).some(key => !['enabled', 'commandTrigger'].includes(key)) || typeof binding.enabled !== 'boolean' || !/^\/?[a-z0-9][a-z0-9-]{0,63}$/.test(binding.commandTrigger || '')) fail('landingPage.capabilityPreview accepts only enabled and a registered commandTrigger');
+    if (!binding || typeof binding !== 'object' || Array.isArray(binding) || Object.keys(binding).some(key => !['enabled', 'commandId'].includes(key)) || typeof binding.enabled !== 'boolean' || !/^[a-z][a-z0-9-]{0,63}$/.test(binding.commandId || '')) fail('landingPage.capabilityPreview accepts only enabled and a stable registered commandId');
     if (binding.enabled && chatConfigPath) {
       const config = JSON.parse(fs.readFileSync(chatConfigPath, 'utf8'));
-      const trigger = binding.commandTrigger.replace(/^\/+/, '').toLowerCase();
-      const command = config.publishedConfig?.agentTopology?.slashCommands?.find(item => item.enabled !== false && String(item.trigger || '').replace(/^\/+/, '').toLowerCase() === trigger);
-      if (command?.execution?.type !== 'operator_action' || command.execution.workflowRef?.kind !== 'workflow' || !command.execution.workflowRef.resourceKey || !/^skills\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(command.execution.workflowSkill?.path || '') || !['legacy', 'shadow', 'skill'].includes(command.execution.workflowSkill?.mode)) fail('Shared capability preview requires an enabled, workflow-bound operator_action with a workflowSkill package');
+      const command = config.publishedConfig?.agentTopology?.slashCommands?.find(item => item.enabled !== false && item.id === binding.commandId);
+      const journey = command?.guidedJourney;
+      if (!command || journey?.enabled !== true || !/^skills\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(journey.packagePath || '') || !['shadow', 'active'].includes(journey.rolloutMode)) fail('Shared capability preview requires an enabled registered command with a guidedJourney package');
+      if (command.execution?.type === 'operator_action' && (command.execution.workflowRef?.kind !== 'workflow' || !command.execution.workflowRef.resourceKey)) fail('Operator guided journeys require a portable workflowRef');
     }
   }
   if (!landingPage.headline || !String(landingPage.headline).trim()) fail('landingPage.headline is required');
@@ -1480,6 +1482,23 @@ function validateLandingPageModel(landingPage, chatConfigPath, definitionFilePat
       if (closing[key] !== undefined && typeof closing[key] !== 'string') {
         fail(`landingPage.closing.${key} must be a string`);
       }
+    }
+  }
+
+  if (landingPage.agentAccess !== undefined) {
+    const agentAccess = landingPage.agentAccess;
+    if (!agentAccess || typeof agentAccess !== 'object' || Array.isArray(agentAccess)) {
+      fail('landingPage.agentAccess must be an object');
+    }
+    for (const key of Object.keys(agentAccess)) {
+      if (key !== 'enabled' && key !== 'label') fail(`landingPage.agentAccess.${key} is not allowed`);
+    }
+    if (agentAccess.enabled !== undefined && typeof agentAccess.enabled !== 'boolean') {
+      fail('landingPage.agentAccess.enabled must be a boolean');
+    }
+    if (agentAccess.label !== undefined
+      && (typeof agentAccess.label !== 'string' || !agentAccess.label.trim() || agentAccess.label.length > 80)) {
+      fail('landingPage.agentAccess.label must be a non-empty string of at most 80 characters');
     }
   }
   validateCaptureCommand(landingPage, chatConfigPath);

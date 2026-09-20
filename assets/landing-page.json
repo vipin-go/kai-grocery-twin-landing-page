@@ -3,6 +3,10 @@
   "resourceKey": "landing_page.kai",
   "runtimeDataPolicy": "definitions_only",
   "landingPage": {
+    "capabilityPreview": {
+      "enabled": true,
+      "commandId": "restock"
+    },
     "design": {
       "variant": "grocery-twin",
       "defaultThemeMode": "light",

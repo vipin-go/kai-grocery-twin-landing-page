@@ -255,6 +255,7 @@ valuation rules and translate both configurations independently.
   - When set, every other section's background becomes translucent so the video reads through continuously as the visitor scrolls — this is automatic, nothing else to configure.
   - `backgroundImage` and `backgroundVideo` are mutually exclusive; choose one.
 - `landingPage.closing` (optional, object) — authored final-section `heading`, optional `kicker`/`body`, and optional `ctaLabel`. Newlines in `heading` are preserved.
+- `landingPage.agentAccess` (optional, object) — the hero "Also works with" coding-agent button. It shows only agent icons (the label appears as a tooltip); a click reveals `curl -fsSL <origin>/chat/<slug>/install.sh | bash -s -- --agent <agent>`, with agent icons to switch the command. It is shown by default in every presentation template's hero for public, published, non-password-protected personas. Set `enabled: false` to hide it, or `label` (at most 80 characters) to change the tooltip.
 
 Write in the persona's own voice — read `assets/chat-config.json`'s
 `publishedConfig.systemPrompt`/`name`/`description` first so the headline and
@@ -467,9 +468,9 @@ curl -fsSL https://raw.githubusercontent.com/go-code-bot/landing-page-builder/ma
 ## Workflow-owned capability preview binding
 
 Landing-page schema version 2 additionally accepts an optional root binding:
-`capabilityPreview: { enabled: true, commandTrigger: "<existing-trigger>" }`.
-It must resolve to an enabled `operator_action` command with `workflowRef` and
-`workflowSkill`. These are the only binding fields: no URLs, models, credentials,
+`capabilityPreview: { enabled: true, commandId: "<existing-command-id>" }`.
+It must resolve to an enabled command with a `guidedJourney` package; Operator
+commands additionally require a portable `workflowRef`. These are the only binding fields: no URLs, triggers, models, credentials,
 private stages, graph definitions, or executable behavior belong here.
 
 Author the binding in the landing-page child and mirror it into the parent's
