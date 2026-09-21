@@ -860,7 +860,7 @@ function validateLandingPageModel(landingPage, chatConfigPath, definitionFilePat
   if (!landingPage || typeof landingPage !== 'object') fail('landingPage object is required');
   if (landingPage.capabilityPreview !== undefined) {
     const binding = landingPage.capabilityPreview;
-    if (!binding || typeof binding !== 'object' || Array.isArray(binding) || Object.keys(binding).some(key => !['enabled', 'commandId'].includes(key)) || typeof binding.enabled !== 'boolean' || !/^[a-z][a-z0-9-]{0,63}$/.test(binding.commandId || '')) fail('landingPage.capabilityPreview accepts only enabled and a stable registered commandId');
+    if (!binding || typeof binding !== 'object' || Array.isArray(binding) || Object.keys(binding).some(key => !['enabled', 'commandId', 'presentation'].includes(key)) || typeof binding.enabled !== 'boolean' || !/^[a-z][a-z0-9-]{0,63}$/.test(binding.commandId || '') || (binding.presentation !== undefined && !['journey', 'surface'].includes(binding.presentation))) fail('landingPage.capabilityPreview accepts enabled, a stable registered commandId, and an optional journey or surface presentation');
     if (binding.enabled && chatConfigPath) {
       const config = JSON.parse(fs.readFileSync(chatConfigPath, 'utf8'));
       const command = config.publishedConfig?.agentTopology?.slashCommands?.find(item => item.enabled !== false && item.id === binding.commandId);

@@ -468,10 +468,15 @@ curl -fsSL https://raw.githubusercontent.com/go-code-bot/landing-page-builder/ma
 ## Workflow-owned capability preview binding
 
 Landing-page schema version 2 additionally accepts an optional root binding:
-`capabilityPreview: { enabled: true, commandId: "<existing-command-id>" }`.
+`capabilityPreview: { enabled: true, commandId: "<existing-command-id>", presentation?: "journey" | "surface" }`.
 It must resolve to an enabled command with a `guidedJourney` package; Operator
 commands additionally require a portable `workflowRef`. These are the only binding fields: no URLs, triggers, models, credentials,
 private stages, graph definitions, or executable behavior belong here.
+
+`presentation: "surface"` retains the theme's established visual renderer while
+its service still resolves and executes the same canonical `commandId`. It is
+the compatibility default when `presentation` is omitted; use `"journey"` only
+to opt into the generic journey renderer.
 
 Author the binding in the landing-page child and mirror it into the parent's
 published landing page. Workflow repositories own journey copy/graphs/schemas;

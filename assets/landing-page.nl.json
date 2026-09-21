@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "language": "nl",
   "regionKey": null,
-  "sourceRevision": "70c3e29bf7e443617a942b569d2122c0b21d786fb2f307d94d5d2afeab4b0cc6",
+  "sourceRevision": "294d5aa03462759a0e1af182e6b8c036f9fcd109dbb6d8ec0789fdcf39f67edf",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -180,9 +180,19 @@
           "reviewLabel": "Voorraad controleren",
           "editLabel": "Voorraad bewerken",
           "confirmationHeading": "Voorraad klaar",
-          "confirmationBody": "KAI bevestigt deze lijst opnieuw voordat er een winkelwagen wordt voorgesteld. Er wordt niets besteld zonder jouw goedkeuring.",
-          "signInLabel": "Log in om door te gaan",
-          "signInNotice": "Log in om deze boodschappenscan naar een persoonlijke KAI-sessie te verplaatsen en de aanvulworkflow te voltooien. Er wordt niets besteld zonder jouw uitdrukkelijke goedkeuring.",
+          "confirmationBody": "Controleer de dekking en sla daarna de boodschappen en het verbruiksprofiel op in je privélijst.",
+          "signInLabel": "Log in om boodschappen op te slaan",
+          "signInNotice": "Log in om deze gecontroleerde boodschappenscan en het voorraadprofiel op te slaan in je persoonlijke KAI-werkruimte. Er wordt niet automatisch aangevuld.",
+          "authenticatedActionLabel": "Boodschappen aan lijst toevoegen",
+          "savingLabel": "Boodschappen opslaan…",
+          "anonymousPlanNotice": "Log in om deze gecontroleerde voorraad en de berekende voorraaddrempel op te slaan.",
+          "authenticatedPlanNotice": "Sla deze gecontroleerde voorraad, voedingscontext en berekende voorraaddrempel op. Er wordt niet automatisch aangevuld.",
+          "consumptionEyebrow": "VERBRUIKSPROFIEL",
+          "consumptionHeading": "Hoe gebruik je deze boodschappen?",
+          "consumptionBody": "Deze antwoorden bepalen de voorraadschatting en de volgende aanvuldrempel in je werkruimte.",
+          "completionEyebrow": "VOORRAAD OPGESLAGEN",
+          "completionHeading": "Boodschappen aan je lijst toegevoegd",
+          "completionBody": "KAI heeft de gecontroleerde boodschappen en het verbruiksprofiel opgeslagen en op de achtergrond de voorraadniveaus en volgende aanvuldrempel berekend. Er is geen aanvulling gestart.",
           "expiryCopy": "Niet-opgeëiste previews verlopen na één uur",
           "errorCopy": "KAI kon uit deze afbeelding geen boodschappenlijst aflezen. Probeer een duidelijkere foto van koelkast, voorraadkast, bon of boodschappenlijst."
         }

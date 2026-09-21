@@ -16,8 +16,10 @@
     },
     "capabilityPreview": {
       "optional": true,
-      "fields": ["enabled", "commandId"],
+      "fields": ["enabled", "commandId", "presentation"],
       "additionalProperties": false,
+      "presentationValues": ["journey", "surface"],
+      "defaultPresentation": "surface",
       "commandType": "operator_action",
       "requiresWorkflowRef": true,
       "requiresGuidedJourney": true,
