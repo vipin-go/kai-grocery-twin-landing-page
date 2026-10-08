@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs');
+const { validateLandingMobileContent } = require('./landing-page-mobile.cjs');
 const nodePath = require('path');
 const { createHash } = require('crypto');
 const { validateRoiCalculator } = require('./landing-page-roi');
@@ -874,6 +875,7 @@ function validateLandingPageModel(landingPage, chatConfigPath, definitionFilePat
   validateRoiCalculator({ roiCalculator: landingPage.groceryTwin?.homeRoiCalculator, pathPrefix: 'landingPage.groceryTwin.homeRoiCalculator' }).forEach((issue) => fail(`${issue.path}: ${issue.message}`));
   assertNoEmoji(landingPage);
 
+  if (landingPage.localization?.mobile !== undefined) validateLandingMobileContent(landingPage.localization.mobile,landingPage).forEach(issue=>fail(`${issue.path}: ${issue.message}`));
   if (landingPage.localization !== undefined) {
     const localization = landingPage.localization;
     if (!localization || typeof localization !== 'object' || Array.isArray(localization)) fail('landingPage.localization must be an object');
