@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "language": "pl",
   "regionKey": null,
-  "sourceRevision": "294d5aa03462759a0e1af182e6b8c036f9fcd109dbb6d8ec0789fdcf39f67edf",
+  "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
   "landingPage": {
     "design": {
       "variant": "grocery-twin",
@@ -71,7 +71,7 @@
           "target": "features"
         },
         {
-          "label": "O nas",
+          "label": "O",
           "target": "about"
         }
       ],
@@ -121,7 +121,7 @@
             "target": "features"
           },
           {
-            "label": "O nas",
+            "label": "O",
             "target": "about"
           }
         ],
@@ -181,9 +181,19 @@
           "reviewLabel": "Przejrzyj inwentarz",
           "editLabel": "Edytuj inwentarz",
           "confirmationHeading": "Inwentarz gotowy",
-          "confirmationBody": "KAI potwierdzi tę listę przed zaproponowaniem koszyka. Nic nie jest zamawiane bez Twojej zgody.",
-          "signInLabel": "Zaloguj się, aby kontynuować",
-          "signInNotice": "Zaloguj się, aby przenieść to przechwytywanie zakupów do prywatnej sesji KAI i kontynuować proces uzupełniania zapasów. Nic nie jest zamawiane bez Twojej wyraźnej zgody.",
+          "confirmationBody": "Sprawdź zakres skanowania, potem zapisz produkty i profil zużycia na prywatnej liście.",
+          "signInLabel": "Zaloguj się, zapisz zakupy",
+          "signInNotice": "Zaloguj się, by zapisać sprawdzone produkty i profil zapasów w prywatnym panelu KAI. Uzupełnianie nie ruszy automatycznie.",
+          "authenticatedActionLabel": "Dodaj produkty do listy",
+          "savingLabel": "Zapis produktów…",
+          "anonymousPlanNotice": "Zaloguj się, by zapisać sprawdzone zapasy i wyliczony próg ich uzupełnienia.",
+          "authenticatedPlanNotice": "Zapisz sprawdzone zapasy, dietę i wyliczony próg uzupełnienia. Uzupełnianie nie ruszy automatycznie.",
+          "consumptionEyebrow": "PROFIL ZUŻYCIA",
+          "consumptionHeading": "Jak zużywasz te produkty?",
+          "consumptionBody": "Te odpowiedzi określają szacowane zapasy i kolejny próg ich uzupełnienia widoczny w panelu.",
+          "completionEyebrow": "ZAPASY ZAPISANE",
+          "completionHeading": "Produkty dodane do Twojej listy",
+          "completionBody": "KAI zapisał sprawdzone produkty i profil zużycia, po czym wyliczył w tle poziom zapasów i kolejny próg uzupełnienia. Uzupełnianie nie zostało uruchomione.",
           "expiryCopy": "Nieprzejednane podglądy wygasają po jednej godzinie",
           "errorCopy": "KAI nie mógł odczytać listy zakupów z tego obrazu. Spróbuj wyraźniejszego zdjęcia lodówki, spiżarni, paragonu lub listy zakupów."
         }
@@ -405,16 +415,16 @@
         "methodologyVersion": 2,
         "enabled": true,
         "kicker": "Wpływ w domu",
-        "heading": "Estymator czasu i tarcia",
-        "subheading": "Sprawdź, ile czasu na planowanie może zaoszczędzić KAI. Dostosuj trzy wartości do swojego gospodarstwa domowego.",
-        "disclaimer": "Szacunki na podstawie danych wprowadzonych przez użytkownika, a nie gwarantowane oszczędności. Kwoty w euro, w tym VAT.",
+        "heading": "Ceny i ROI",
+        "subheading": "Twoje dane. Twój szacowany zwrot.",
+        "disclaimer": "Szacunki planistyczne są odrębne od ROI. Pomiar zwrotu opiera się tylko na uznanych wynikach i porównywalnych zapisanych kosztach.",
         "currency": "EUR",
         "currencyCopy": {
           "native": "Amounts in {currency}.",
           "loading": "Checking the local currency. Amounts remain in {currency} until a rate is available.",
           "unavailable": "A current local exchange rate is unavailable. Amounts remain in {currency}.",
           "converted": "Amounts converted from {base} to {currency} using the reference rate dated {date}.",
-          "basis": "Oszacuj czas planowania i cenę KAI na podstawie użycia. Dopasuj wartości do swojego gospodarstwa."
+          "basis": "Przeliczanie walut nie jest badaniem kosztów lokalnych. Wprowadź własne koszty lokalne i założenia dotyczące wkładu. Zmiany językowe nie powodują zmiany kwot."
         },
         "locale": "en-GB",
         "inputs": [],
@@ -425,7 +435,8 @@
             "minutes": 45,
             "people": 2,
             "automation": 50,
-            "review": 5
+            "review": 5,
+            "customer_price": 6.99
           },
           "fixedAssumptions": {
             "offloadRate": 0.5,
@@ -484,17 +495,18 @@
           "copy": {
             "summary": "Szacunek dla gospodarstwa",
             "reset": "Resetuj wartości",
-            "monthly": "Miesięcznie",
-            "yearly": "Rocznie",
-            "annual": "Rocznie",
-            "rangeLabel": "Jak to obliczamy",
+            "monthly": "Monthly",
+            "yearly": "Yearly",
+            "annual": "Annual view",
+            "rangeLabel": "Adjust value",
             "missing": "Wprowadź wartość",
-            "method": "Jak to obliczamy",
+            "method": "How this is calculated",
             "methodBody": "KAI przejmuje część pracy związanej z planowaniem: sprawdzanie, co jest już w domu, wybieranie przepisów i przygotowywanie listy. Sprawdzanie każdej sesji nadal zajmuje trochę Twojego czasu, więc jest to odejmowane. Wartość marnowanej żywności to opublikowana holenderska średnia dla gospodarstwa domowego Twojej wielkości, pokazana obok ceny KAI w celach porównawczych, a nie oszczędność, którą KAI obiecuje.",
             "burdenHeading": "Twoja rutyna",
             "opportunityHeading": "Czas odzyskany dla Ciebie",
-            "noCurrencyChange": "Oszacuj czas planowania i cenę KAI na podstawie użycia. Dopasuj wartości do swojego gospodarstwa.",
-            "reviewError": "Sprawdzanie zajmuje więcej czasu niż czas planowania, który przejmuje KAI. Przy tych wartościach nie ma odzyskanego czasu."
+            "noCurrencyChange": "Język zmienia formatowanie, a nie walutę czy założenia.",
+            "reviewError": "Sprawdzanie zajmuje więcej czasu niż czas planowania, który przejmuje KAI. Przy tych wartościach nie ma odzyskanego czasu.",
+            "navLabel": "Ceny"
           },
           "fields": {
             "volume": {
@@ -549,7 +561,7 @@
                 "price": 14.99
               }
             ],
-            "label": "Cena",
+            "label": "Ceny",
             "help": "Cena KAI zależy wyłącznie od liczby sesji planowania, które masz każdego miesiąca. Ceny zawierają VAT."
           }
         },
@@ -557,6 +569,152 @@
           "primaryLabel": "Wypróbuj skanowanie zakupów z KAI",
           "primaryTarget": "hero-chat",
           "privacyNote": "Twoje szacunki pozostają w tym kalkulatorze. Nic nie jest zamawiane ani zapisywane na podstawie tych danych wejściowych."
+        },
+        "compact": {
+          "schemaVersion": 1,
+          "defaultProfileId": "home",
+          "copy": {
+            "navLabel": "Ceny",
+            "heading": "Ceny i ROI",
+            "intro": "Twoje dane. Twój szacowany zwrot.",
+            "monthly": "Miesiąc",
+            "weekly": "Tydz.",
+            "daily": "Dzień",
+            "cost": "Płacisz",
+            "benefit": "Szacowany zwrot",
+            "net": "Zysk netto",
+            "roi": "Szacowany ROI",
+            "timeBenefit": "Szac. wartość czasu",
+            "timeRoi": "ROI czasu",
+            "timeBack": "Odzyskane godz.",
+            "missing": "Wpisz swoje dane",
+            "noRatio": "Not applicable",
+            "method": "Sposób obliczania",
+            "reset": "Resetuj",
+            "audience": "Odbiorcy",
+            "includedVat": "Z VAT",
+            "excludedVat": "Bez VAT",
+            "perMonth": "miesięcznie",
+            "equivalents": "Opłata co miesiąc. Kwoty dzienne i tygodniowe to średnie, nie opłaty za te okresy ani gwarantowane zwroty.",
+            "timeNote": "Wartość czasu to Twój opcjonalny szacunek, nie przychód ani spadek kosztów płac. Minuty netto uwzględniają czas kontroli i akceptacji.",
+            "estimateNote": "Szacunki planistyczne są odrębne od ROI. Pomiar zwrotu opiera się tylko na uznanych wynikach i porównywalnych zapisanych kosztach.",
+            "limitNote": "Większe zużycie lub osobna wycena prac? Skontaktuj się z nami. Szacunek obejmuje tylko zakres planu.",
+            "timeFormula": "Wartość czasu = jednostki × minuty oszczędzone netto ÷ 60 × stawka.",
+            "profitFormula": "Marża pokrycia = kwalifikujące się sesje rekomendacji × wzrost konwersji ÷ 100 × zysk z dodatkowego zamówienia.",
+            "proceedsFormula": "Dodatkowe wpływy = partie lub odbiory × (wpływy netto po − wpływy netto przed).",
+            "roiFormula": "Netto = korzyść − koszt abonamentu apki. ROI = netto ÷ koszt abonamentu apki × 100. Darmowe plany nie mają ROI %."
+          },
+          "profiles": [
+            {
+              "id": "home",
+              "label": "Strona główna",
+              "model": "time_value",
+              "unitsPerWorkload": 1,
+              "inputs": [
+                {
+                  "id": "units",
+                  "label": "Sesje planowania miesięcznie",
+                  "help": "Praca do oceny w ciągu miesiąca, w ramach uwzględnionego limitu.",
+                  "defaultValue": 4,
+                  "min": 0,
+                  "max": 4,
+                  "step": 1,
+                  "format": "number"
+                },
+                {
+                  "id": "minutes_saved",
+                  "label": "Zyskane minuty",
+                  "help": "Twój szacunek po kontroli, akceptacji i poprawkach. Wartości ujemne oznaczają dodatkową pracę.",
+                  "defaultValue": 17.5,
+                  "min": -1440,
+                  "max": 1440,
+                  "step": 0.1,
+                  "format": "number"
+                },
+                {
+                  "id": "hourly_value",
+                  "label": "Wartość godz.",
+                  "help": "Twoja opcjonalna wycena. To nie obietnica oszczędności pieniężnych ani redukcji płac.",
+                  "defaultValue": null,
+                  "min": 0,
+                  "max": 1000,
+                  "step": 0.01,
+                  "format": "currency"
+                }
+              ],
+              "offer": {
+                "monthlyPrice": 6.99,
+                "basis": "fixed",
+                "unit": "Strona główna",
+                "vatIncluded": true,
+                "includedUnits": 4,
+                "allowance": "4 sesje / 8 skanów",
+                "extras": "Dodatkowe użycie i usługi profesjonalne wyceniamy osobno."
+              },
+              "assumptions": [
+                "Wstępne 17.5 minuty netto to przykładowy szacunek przygotowania, a nie wynik pomiaru.",
+                "Minuty netto obejmują kontrolę klienta. Sam podajesz wartość pieniężną czasu; to nie otrzymane pieniądze."
+              ],
+              "loop": "Zapasy, posiłek lub oferta → ułóż plan zakupów → domownicy sprawdzają i zatwierdzają → zapisz przyjęty plan i wspólny nakład pracy.",
+              "ctaLabel": "Wypróbuj demo",
+              "ctaTarget": "meet"
+            },
+            {
+              "id": "retail",
+              "label": "Detal · na sklep",
+              "model": "time_value",
+              "unitsPerWorkload": 13,
+              "inputs": [
+                {
+                  "id": "units",
+                  "label": "Sklepy",
+                  "help": "Każdy sklep ma trzynaście cykli planowania miesięcznie.",
+                  "defaultValue": 1,
+                  "min": 0,
+                  "max": 1000,
+                  "step": 1,
+                  "format": "number"
+                },
+                {
+                  "id": "minutes_saved",
+                  "label": "Zyskane minuty",
+                  "help": "Twój szacunek po kontroli, akceptacji i poprawkach. Wartości ujemne oznaczają dodatkową pracę.",
+                  "defaultValue": 45,
+                  "min": -1440,
+                  "max": 1440,
+                  "step": 0.1,
+                  "format": "number"
+                },
+                {
+                  "id": "hourly_value",
+                  "label": "Wartość godz.",
+                  "help": "Twoja opcjonalna wycena. To nie obietnica oszczędności pieniężnych ani redukcji płac.",
+                  "defaultValue": null,
+                  "min": 0,
+                  "max": 1000,
+                  "step": 0.01,
+                  "format": "currency"
+                }
+              ],
+              "offer": {
+                "monthlyPrice": 39,
+                "basis": "per_unit",
+                "unit": "Detal · na sklep",
+                "vatIncluded": false,
+                "includedUnits": 13,
+                "allowance": "13 cykli na sklep",
+                "extras": "Dodatkowe użycie i usługi profesjonalne wyceniamy osobno."
+              },
+              "assumptions": [
+                "Wstępne 45 minut netto to przykładowy szacunek przygotowania, a nie wynik pomiaru.",
+                "Minuty netto obejmują kontrolę klienta. Sam podajesz wartość pieniężną czasu; to nie otrzymane pieniądze.",
+                "Każdy sklep ma 13 cykli miesięcznie. Cena abonamentu i nakład pracy rosną wraz z liczbą sklepów."
+              ],
+              "loop": "Sygnał zapasów lub uzupełnienia → plan zamówienia → zgoda zespołu sklepu → zapis przyjętego planu, pracy przy ocenie i udokumentowanych strat.",
+              "ctaLabel": "Wypróbuj demo",
+              "ctaTarget": "meet"
+            }
+          ]
         }
       },
       "retail": {
@@ -582,7 +740,7 @@
           "nav.howItWorks": "Jak to działa",
           "nav.pilot": "4-tygodniowy program pilotażowy",
           "nav.scope": "Zakres",
-          "nav.requestPilot": "Poproś o pilotaż",
+          "nav.requestPilot": "Zamów pilotaż",
           "nav.toggleAria": "Przełącz nawigację",
           "hero.eyebrow": "KAI RETAIL · DOKŁADNOŚĆ ZAPASÓW I ZAMÓWIENIA OD DOSTAWCÓW",
           "hero.heading": "Przekształć zdjęcia zapasów, liczniki i faktury w gotowe zamówienia dla dostawców.",
@@ -625,7 +783,7 @@
           "stage.loopCapture": "Rejestruj",
           "stage.loopTrack": "Śledź",
           "stage.loopSuggest": "Sugeruj",
-          "stage.loopApprove": "Zatwierdź",
+          "stage.loopApprove": "Zatwierdzać",
           "pain.eyebrow": "RZECZYWISTOŚĆ KUPUJĄCEGO",
           "pain.heading": "Trzy kwestie, które właściciel lub kierownik operacyjny zna zbyt dobrze.",
           "media.inventoryCountAlt": "Kierownik operacyjny sklepu spożywczego przeprowadzający fizyczną inwentaryzację w magazynie",
@@ -698,7 +856,7 @@
           "footer.tagline": "Dokładność zapasów, widoczność braków i czystsze zamówienia od dostawców dla zespołów detalicznych i hurtowych.",
           "footer.home": "KAI Home",
           "footer.stockLoop": "Pętla zapasów",
-          "footer.requestPilot": "Poproś o pilotaż",
+          "footer.requestPilot": "Zamów pilotaż",
           "footer.privacy": "Prywatność",
           "footer.privacyNote": "Dane pilotażowe są wykorzystywane wyłącznie do przeglądania i odpowiadania na Twoje zapytanie.",
           "footer.copyright": "© 2026 KAI Retail",
@@ -708,11 +866,11 @@
           "form.sendAnother": "Wyślij kolejne zapytanie",
           "form.formEyebrow": "WNIOSK O PŁATNY PILOTAŻ",
           "form.formHeading": "Opowiedz nam o operacji",
-          "form.nameLabel": "Imię i nazwisko",
-          "form.namePlaceholder": "Twoje imię i nazwisko",
+          "form.nameLabel": "Imię",
+          "form.namePlaceholder": "Twoje imię",
           "form.roleLabel": "Rola",
           "form.rolePlaceholder": "Właściciel, kierownik operacyjny, kupiec",
-          "form.companyLabel": "Firma",
+          "form.companyLabel": "Spółka",
           "form.companyPlaceholder": "Nazwa firmy lub sklepu",
           "form.cityLabel": "Miasto",
           "form.cityPlaceholder": "Miasto lub region",
@@ -725,7 +883,7 @@
           "form.contactPlaceholder": "+31 6… lub ty@firma.com",
           "form.error": "Żądanie nie powiodło się. Spróbuj ponownie.",
           "form.sending": "Wysyłanie…",
-          "form.submit": "Poproś o pilotaż",
+          "form.submit": "Zamów pilotaż",
           "form.note": "Płatny czterotygodniowy pilotaż · zakres i margines błędu uzgodnione przed rozpoczęciem pracy",
           "stock.row1.name": "Napój owsiany · Barista 1 L",
           "stock.row1.supplier": "Northline Wholesale",
@@ -752,16 +910,16 @@
       "methodologyVersion": 2,
       "enabled": true,
       "kicker": "Wpływ w handlu",
-      "heading": "Szacunek przepustowości sklepu",
-      "subheading": "Oszacuj przygotowanie zamówień gotowych dla dostawcy do sprawdzenia przez wyznaczoną osobę.",
-      "disclaimer": "Szacunki na podstawie wprowadzonych danych i opublikowanych średnich, a nie zmierzone wyniki. KAI przygotowuje zamówienia; wyznaczony zatwierdzający decyduje o ich złożeniu.",
+      "heading": "Ceny i ROI",
+      "subheading": "Twoje dane. Twój szacowany zwrot.",
+      "disclaimer": "Szacunki planistyczne są odrębne od ROI. Pomiar zwrotu opiera się tylko na uznanych wynikach i porównywalnych zapisanych kosztach.",
       "currency": "EUR",
       "currencyCopy": {
         "native": "Amounts in {currency}.",
         "loading": "Checking the local currency. Amounts remain in {currency} until a rate is available.",
         "unavailable": "A current local exchange rate is unavailable. Amounts remain in {currency}.",
         "converted": "Amounts converted from {base} to {currency} using the reference rate dated {date}.",
-        "basis": "Oszacuj czas planowania i cenę KAI na podstawie użycia. Dopasuj wartości do swojego gospodarstwa."
+        "basis": "Przeliczanie walut nie jest badaniem kosztów lokalnych. Wprowadź własne koszty lokalne i założenia dotyczące wkładu. Zmiany językowe nie powodują zmiany kwot."
       },
       "locale": "en-GB",
       "inputs": [],
@@ -774,7 +932,7 @@
           "purchases_per_store": 100000,
           "automation": 50,
           "review": 30,
-          "customer_price": 250
+          "customer_price": 6.99
         },
         "storeOpsAssumptions": {
           "shareHandled": 0.5,
@@ -814,16 +972,17 @@
         "copy": {
           "summary": "Twoje oszacowanie",
           "reset": "Resetuj wartości",
-          "monthly": "Miesięcznie",
-          "yearly": "Rocznie",
-          "annual": "Rocznie",
-          "rangeLabel": "Jak to obliczamy",
+          "monthly": "Monthly",
+          "yearly": "Yearly",
+          "annual": "Annual view",
+          "rangeLabel": "Adjust value",
           "missing": "Wprowadź wartość",
-          "method": "Jak to obliczamy",
+          "method": "How this is calculated",
           "methodBody": "KAI przygotowuje gotowe do wysłania zamówienia od dostawców na podstawie stanów magazynowych, zdjęć i faktur, a wyznaczony zatwierdzający nadal przegląda każde z nich, dlatego czas przeglądu jest odejmowany. Wskaźnik strat żywności to opublikowana średnia dla supermarketów, pokazana obok ceny KAI w celu porównania, a nie zmierzona ani obiecana oszczędność.",
           "burdenHeading": "Mniej administracji zamówień",
           "opportunityHeading": "Więcej czasu na sali sprzedaży",
-          "noCurrencyChange": "Oszacuj czas planowania i cenę KAI na podstawie użycia. Dopasuj wartości do swojego gospodarstwa."
+          "noCurrencyChange": "Język zmienia formatowanie, a nie walutę czy założenia.",
+          "navLabel": "Ceny"
         },
         "fields": {
           "volume": {
@@ -867,7 +1026,7 @@
         ],
         "pricing": {
           "basis": "per_volume",
-          "label": "Cena",
+          "label": "Ceny",
           "help": "KAI jest wyceniany za sklep miesięcznie. Tylko liczba sklepów zmienia cenę."
         }
       },
@@ -876,6 +1035,152 @@
         "primaryTarget": "pilot-form",
         "secondaryLabel": "Porozmawiaj z KAI",
         "secondaryTarget": "meet"
+      },
+      "compact": {
+        "schemaVersion": 1,
+        "defaultProfileId": "home",
+        "copy": {
+          "navLabel": "Ceny",
+          "heading": "Ceny i ROI",
+          "intro": "Twoje dane. Twój szacowany zwrot.",
+          "monthly": "Miesiąc",
+          "weekly": "Tydz.",
+          "daily": "Dzień",
+          "cost": "Płacisz",
+          "benefit": "Szacowany zwrot",
+          "net": "Zysk netto",
+          "roi": "Szacowany ROI",
+          "timeBenefit": "Szac. wartość czasu",
+          "timeRoi": "ROI czasu",
+          "timeBack": "Odzyskane godz.",
+          "missing": "Wpisz swoje dane",
+          "noRatio": "Not applicable",
+          "method": "Sposób obliczania",
+          "reset": "Resetuj",
+          "audience": "Odbiorcy",
+          "includedVat": "Z VAT",
+          "excludedVat": "Bez VAT",
+          "perMonth": "miesięcznie",
+          "equivalents": "Opłata co miesiąc. Kwoty dzienne i tygodniowe to średnie, nie opłaty za te okresy ani gwarantowane zwroty.",
+          "timeNote": "Wartość czasu to Twój opcjonalny szacunek, nie przychód ani spadek kosztów płac. Minuty netto uwzględniają czas kontroli i akceptacji.",
+          "estimateNote": "Szacunki planistyczne są odrębne od ROI. Pomiar zwrotu opiera się tylko na uznanych wynikach i porównywalnych zapisanych kosztach.",
+          "limitNote": "Większe zużycie lub osobna wycena prac? Skontaktuj się z nami. Szacunek obejmuje tylko zakres planu.",
+          "timeFormula": "Wartość czasu = jednostki × minuty oszczędzone netto ÷ 60 × stawka.",
+          "profitFormula": "Marża pokrycia = kwalifikujące się sesje rekomendacji × wzrost konwersji ÷ 100 × zysk z dodatkowego zamówienia.",
+          "proceedsFormula": "Dodatkowe wpływy = partie lub odbiory × (wpływy netto po − wpływy netto przed).",
+          "roiFormula": "Netto = korzyść − koszt abonamentu apki. ROI = netto ÷ koszt abonamentu apki × 100. Darmowe plany nie mają ROI %."
+        },
+        "profiles": [
+          {
+            "id": "home",
+            "label": "Strona główna",
+            "model": "time_value",
+            "unitsPerWorkload": 1,
+            "inputs": [
+              {
+                "id": "units",
+                "label": "Sesje planowania miesięcznie",
+                "help": "Praca do oceny w ciągu miesiąca, w ramach uwzględnionego limitu.",
+                "defaultValue": 4,
+                "min": 0,
+                "max": 4,
+                "step": 1,
+                "format": "number"
+              },
+              {
+                "id": "minutes_saved",
+                "label": "Zyskane minuty",
+                "help": "Twój szacunek po kontroli, akceptacji i poprawkach. Wartości ujemne oznaczają dodatkową pracę.",
+                "defaultValue": 17.5,
+                "min": -1440,
+                "max": 1440,
+                "step": 0.1,
+                "format": "number"
+              },
+              {
+                "id": "hourly_value",
+                "label": "Wartość godz.",
+                "help": "Twoja opcjonalna wycena. To nie obietnica oszczędności pieniężnych ani redukcji płac.",
+                "defaultValue": null,
+                "min": 0,
+                "max": 1000,
+                "step": 0.01,
+                "format": "currency"
+              }
+            ],
+            "offer": {
+              "monthlyPrice": 6.99,
+              "basis": "fixed",
+              "unit": "Strona główna",
+              "vatIncluded": true,
+              "includedUnits": 4,
+              "allowance": "4 sesje / 8 skanów",
+              "extras": "Dodatkowe użycie i usługi profesjonalne wyceniamy osobno."
+            },
+            "assumptions": [
+              "Wstępne 17.5 minuty netto to przykładowy szacunek przygotowania, a nie wynik pomiaru.",
+              "Minuty netto obejmują kontrolę klienta. Sam podajesz wartość pieniężną czasu; to nie otrzymane pieniądze."
+            ],
+            "loop": "Zapasy, posiłek lub oferta → ułóż plan zakupów → domownicy sprawdzają i zatwierdzają → zapisz przyjęty plan i wspólny nakład pracy.",
+            "ctaLabel": "Wypróbuj demo",
+            "ctaTarget": "meet"
+          },
+          {
+            "id": "retail",
+            "label": "Detal · na sklep",
+            "model": "time_value",
+            "unitsPerWorkload": 13,
+            "inputs": [
+              {
+                "id": "units",
+                "label": "Sklepy",
+                "help": "Każdy sklep ma trzynaście cykli planowania miesięcznie.",
+                "defaultValue": 1,
+                "min": 0,
+                "max": 1000,
+                "step": 1,
+                "format": "number"
+              },
+              {
+                "id": "minutes_saved",
+                "label": "Zyskane minuty",
+                "help": "Twój szacunek po kontroli, akceptacji i poprawkach. Wartości ujemne oznaczają dodatkową pracę.",
+                "defaultValue": 45,
+                "min": -1440,
+                "max": 1440,
+                "step": 0.1,
+                "format": "number"
+              },
+              {
+                "id": "hourly_value",
+                "label": "Wartość godz.",
+                "help": "Twoja opcjonalna wycena. To nie obietnica oszczędności pieniężnych ani redukcji płac.",
+                "defaultValue": null,
+                "min": 0,
+                "max": 1000,
+                "step": 0.01,
+                "format": "currency"
+              }
+            ],
+            "offer": {
+              "monthlyPrice": 39,
+              "basis": "per_unit",
+              "unit": "Detal · na sklep",
+              "vatIncluded": false,
+              "includedUnits": 13,
+              "allowance": "13 cykli na sklep",
+              "extras": "Dodatkowe użycie i usługi profesjonalne wyceniamy osobno."
+            },
+            "assumptions": [
+              "Wstępne 45 minut netto to przykładowy szacunek przygotowania, a nie wynik pomiaru.",
+              "Minuty netto obejmują kontrolę klienta. Sam podajesz wartość pieniężną czasu; to nie otrzymane pieniądze.",
+              "Każdy sklep ma 13 cykli miesięcznie. Cena abonamentu i nakład pracy rosną wraz z liczbą sklepów."
+            ],
+            "loop": "Sygnał zapasów lub uzupełnienia → plan zamówienia → zgoda zespołu sklepu → zapis przyjętego planu, pracy przy ocenie i udokumentowanych strat.",
+            "ctaLabel": "Wypróbuj demo",
+            "ctaTarget": "meet"
+          }
+        ]
       }
     }
   },
@@ -1535,7 +1840,7 @@
         "restockDemo",
         "confirmationBody"
       ],
-      "sourceHash": "52d9f9ef8483c24c7185a727bf2211244f85030367da02ddf14eb5d6e6011ba0"
+      "sourceHash": "3855bc93caa2a8d399d9cee5cc6e725b20d5e76226eece00ca411c62e98a124a"
     },
     {
       "path": [
@@ -1545,7 +1850,7 @@
         "restockDemo",
         "signInLabel"
       ],
-      "sourceHash": "607a80121c655651dc14cbb057e035943bed91077283e9c6b8d709db1e25ef7f"
+      "sourceHash": "5e4e68bf849048cc43d66bb27eb09dc5d3a299b8e31b9b887643f594b40e1213"
     },
     {
       "path": [
@@ -1555,7 +1860,107 @@
         "restockDemo",
         "signInNotice"
       ],
-      "sourceHash": "7ee6641bab06f804b91bb13e538d9da870890f703c1d8fa24098515f5129a011"
+      "sourceHash": "7ede1f8e3651004f8425e6cd270825174d06112032e615b98f44f4685533c0a4"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "authenticatedActionLabel"
+      ],
+      "sourceHash": "f9e009b781787611e95af47e9e3fcda92f7388f3ac63d03c1f776c30983636de"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "savingLabel"
+      ],
+      "sourceHash": "d24efe13a3c99039ae5fd87d911f1bb8c1a0256ee555f4b795c36c346dfe995b"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "anonymousPlanNotice"
+      ],
+      "sourceHash": "b188a309172988df4f53310bc1cbee0ed1bbcb5fe52c69ddd3600db11a2b783c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "authenticatedPlanNotice"
+      ],
+      "sourceHash": "f0941a190c80a7be7513155ae90092428512a3bf1c602ff0e64573fe3187c32f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "consumptionEyebrow"
+      ],
+      "sourceHash": "35a5df04e06dcc85295db9b8f5416212814a57c87fead2d6404c2277390126f3"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "consumptionHeading"
+      ],
+      "sourceHash": "69e2ecaa6c37e086ee1d3527d5280c056d792e93ab10b9bc69a754cbc9b1eae7"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "consumptionBody"
+      ],
+      "sourceHash": "bbd1b71763c58d8bbfb0e2b31d16ee63622c25677482ba8ce8f0dd85529980d3"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "completionEyebrow"
+      ],
+      "sourceHash": "92ff13d2c84b710bdfdf2f35f8dcbd7aa6919ddbeab8bc75d92e2601ac46c149"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "completionHeading"
+      ],
+      "sourceHash": "bd425d100c0efb4aba5600a0f6d38d3c41481d8bcc4bc4c04dcaf8bc4155e660"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "hero",
+        "restockDemo",
+        "completionBody"
+      ],
+      "sourceHash": "526082e2b6562a5d1f22516612aa32a5b020cb672cb7528330d0e7342027551e"
     },
     {
       "path": [
@@ -2737,7 +3142,7 @@
         "homeRoiCalculator",
         "heading"
       ],
-      "sourceHash": "00d09691ae36347896a16a14f9cf186036ab9b217749a0e7c3a89ececa07da77"
+      "sourceHash": "f605f95a678fe3249ebf6201cbc21b86ea72d7f4bc395cab6e017b8b91a674d6"
     },
     {
       "path": [
@@ -2746,7 +3151,7 @@
         "homeRoiCalculator",
         "subheading"
       ],
-      "sourceHash": "209e73f9787c17fe70de4d7d251523d627ab6d4bcacf53078897e81784b2518f"
+      "sourceHash": "22fd8ffe8dbddd46f41fb690f262f66466bb343bae0b359e4c64dfd2f2f127a5"
     },
     {
       "path": [
@@ -2755,7 +3160,7 @@
         "homeRoiCalculator",
         "disclaimer"
       ],
-      "sourceHash": "008fecea651463acaed1f18e2b49c1be809406c4008f6354b3c707890b2d8c4f"
+      "sourceHash": "28bd6e46023484d9a6b075ba5e7539842d6a2e920782ed0979f21366d56ae02f"
     },
     {
       "path": [
@@ -3290,6 +3695,17 @@
         "groceryTwin",
         "homeRoiCalculator",
         "businessImpact",
+        "copy",
+        "navLabel"
+      ],
+      "sourceHash": "dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "businessImpact",
         "fields",
         "volume",
         "label"
@@ -3487,6 +3903,708 @@
         "privacyNote"
       ],
       "sourceHash": "36339d6a632dfaf44daf8c31dfee01408a3db158d594f04edfc075e51ba0703c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "navLabel"
+      ],
+      "sourceHash": "dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "heading"
+      ],
+      "sourceHash": "f605f95a678fe3249ebf6201cbc21b86ea72d7f4bc395cab6e017b8b91a674d6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "intro"
+      ],
+      "sourceHash": "22fd8ffe8dbddd46f41fb690f262f66466bb343bae0b359e4c64dfd2f2f127a5"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "monthly"
+      ],
+      "sourceHash": "310ca503ef36f177ddbc760463fcaec1edc6eca12bfd590ad7bb244b31e59543"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "weekly"
+      ],
+      "sourceHash": "e78041ab51a818a22e2cfea6c15fe72e9e20092246f496f1670f7be3e42177a6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "daily"
+      ],
+      "sourceHash": "8f2364e11b8be3ff008f32b3dedb54e659362429bcc9e3eb6acb6070de4ffbff"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "cost"
+      ],
+      "sourceHash": "16c6e032c6d9e64e841b58a0298260d9f548fcbe3a8ad8dc475bd977b602898f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "benefit"
+      ],
+      "sourceHash": "a7f9c107913bba92d233f27fbfa5c4c52e4435a763a727214089505b9519d2dc"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "net"
+      ],
+      "sourceHash": "d32a3b8a970a1c2a790bdd47a4a86f208f6ff655d8e9269dcda5776b156d6039"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "roi"
+      ],
+      "sourceHash": "bd75a04bf54fbb79e68559c37be0a8752efacfe4f5b9a326b87143c8d5c87dcc"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "timeBenefit"
+      ],
+      "sourceHash": "cedc575743fa43d9e724db8bd1d54037d41369448eb826b63e1efba54e81c2a4"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "timeRoi"
+      ],
+      "sourceHash": "4b0df8181ded668923d1da293e0fc8ca4d0ac21eed3f933b32891615e67d1f6a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "timeBack"
+      ],
+      "sourceHash": "92947077a2792fb311280e55e4d39fbeb1fbb152e76b389dee5a53697ea548ef"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "missing"
+      ],
+      "sourceHash": "4b11bc702fcdb172c2f88f4af465a9d05ac206b7f7e6304fcded04eb92cccde6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "noRatio"
+      ],
+      "sourceHash": "5237c96ac1a23b98eb13770503afe986b088acd6627fa7649a5afdcbc4bb8e99"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "method"
+      ],
+      "sourceHash": "b79afe297bec4d00ab3a70a61b5e8b607a423a123f23a2fa9ccf8d6af6bcd157"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "reset"
+      ],
+      "sourceHash": "daee7606b339f3c339076fe2c9f372a3ff40c8ee896005d829c7481b64ca5303"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "audience"
+      ],
+      "sourceHash": "545c02357695a6ffed97b01a94a46b9aeb4686f4480173da6d0faeae8eb85053"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "includedVat"
+      ],
+      "sourceHash": "3e366dcdda082eda14db7eab30381a2fcc424c43d183d0e6d7a4b15c9b567d7d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "excludedVat"
+      ],
+      "sourceHash": "744120dab44d48957b4580cadd00fca1f91383823125d1400984a3cf62a76441"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "perMonth"
+      ],
+      "sourceHash": "88b1d1a67e34a269fec10b917a624817de854eeadb142640ab17c8199ab6bdae"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "equivalents"
+      ],
+      "sourceHash": "4a546022be02a950fc59270741b8e4784ca51f74da16e286c77e3f5a371aff38"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "timeNote"
+      ],
+      "sourceHash": "d7c17f23c52c1d9cf5be7fcb5a537017a0a09529bfde38e6b692afa2ecbf453f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "estimateNote"
+      ],
+      "sourceHash": "28bd6e46023484d9a6b075ba5e7539842d6a2e920782ed0979f21366d56ae02f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "limitNote"
+      ],
+      "sourceHash": "61108708047a1a834e46f1ca557d7518e3a63263a8ec7e7aa4301db230beacff"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "timeFormula"
+      ],
+      "sourceHash": "4cf3d8fcb0fa4b9c36d9869e709ba0cbabcd41083c7ff8cf77e9fe32066eacdb"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "profitFormula"
+      ],
+      "sourceHash": "e286f3af8c8f706f737502c898e1ba90c6bbc7680c380bba844ec4f3874b5bc4"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "proceedsFormula"
+      ],
+      "sourceHash": "9de390391c62a87b44f2c9bf74e5223e5d34c5a74cd5e12575f5e1452881a46e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "copy",
+        "roiFormula"
+      ],
+      "sourceHash": "00f9b4df25ca733c11a00e762ab8d95f6e9c9364ce202a6c22ff95c3613e3fcb"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "label"
+      ],
+      "sourceHash": "3a78695388b38b5cceefaf6796b0137877514593543b91af2752d5a17e3d736c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "inputs",
+        0,
+        "label"
+      ],
+      "sourceHash": "92922d01d3070a08cffbcc106feadbac13130a02272e8862d1e125f6c445b192"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "inputs",
+        0,
+        "help"
+      ],
+      "sourceHash": "a8cff02d43e6c0371644e73ec0de532d8ac6ae2eb169301a6e3605e3cb010ab0"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "inputs",
+        1,
+        "label"
+      ],
+      "sourceHash": "9f135e34cc7bc32cafb416bcbf7ef6af035cdb444c22e90cccd0587ba3db19df"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "inputs",
+        1,
+        "help"
+      ],
+      "sourceHash": "d99a99ab817eea4a3a70ded599d0744a02fe8de95ab0b7c6a0fc9d5cb72c400d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "inputs",
+        2,
+        "label"
+      ],
+      "sourceHash": "4b5674419c1cb29206fb7d1486e6492bb74df9523dbc3bd5cdb875a309486100"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "inputs",
+        2,
+        "help"
+      ],
+      "sourceHash": "310e52c988a868b67de05d75913bc83fea7f2ff3d06b15cb07adf6c22d1f94f1"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "offer",
+        "unit"
+      ],
+      "sourceHash": "3a78695388b38b5cceefaf6796b0137877514593543b91af2752d5a17e3d736c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "offer",
+        "allowance"
+      ],
+      "sourceHash": "38d332d445147b25700b15b151093b95ceaa397f82c602d1d627c58b74f83ade"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "offer",
+        "extras"
+      ],
+      "sourceHash": "2dde78d0a4b34a797ac41efa8426f1e98874a7e9bfc38db869338b90175c0a63"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "assumptions",
+        0
+      ],
+      "sourceHash": "d3bbf22ee80780885a8969b7652f42ca72e1648b2e0cc700ef4c6562375e8d67"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "assumptions",
+        1
+      ],
+      "sourceHash": "989a9fcc887e91c895fb2d3cdee45f5d8279d36705594e66f19d87e172656e0e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "loop"
+      ],
+      "sourceHash": "863e77b3387351dede17c131973bebe6fde5fca308da411d5f2c7a5928cd0c63"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "ctaLabel"
+      ],
+      "sourceHash": "6e5fe4ca7c07142fa81eef400c342dea7f8ba0422aa331c3880e6604db8d52a7"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "label"
+      ],
+      "sourceHash": "d558cec47bb7bb6b329c46143e7d66ebdece2a44e513759620f61cc010fbbbeb"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "inputs",
+        0,
+        "label"
+      ],
+      "sourceHash": "f35f08b73c775c44eee1ba3223e3acd8257bd85b0365eb4d646cac6c9d409cde"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "inputs",
+        0,
+        "help"
+      ],
+      "sourceHash": "4c57357c12337fb319235d0d908bdd899d12822e966ceb8c6a24b93082c3943f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "inputs",
+        1,
+        "label"
+      ],
+      "sourceHash": "9f135e34cc7bc32cafb416bcbf7ef6af035cdb444c22e90cccd0587ba3db19df"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "inputs",
+        1,
+        "help"
+      ],
+      "sourceHash": "d99a99ab817eea4a3a70ded599d0744a02fe8de95ab0b7c6a0fc9d5cb72c400d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "inputs",
+        2,
+        "label"
+      ],
+      "sourceHash": "4b5674419c1cb29206fb7d1486e6492bb74df9523dbc3bd5cdb875a309486100"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "inputs",
+        2,
+        "help"
+      ],
+      "sourceHash": "310e52c988a868b67de05d75913bc83fea7f2ff3d06b15cb07adf6c22d1f94f1"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "offer",
+        "unit"
+      ],
+      "sourceHash": "d558cec47bb7bb6b329c46143e7d66ebdece2a44e513759620f61cc010fbbbeb"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "offer",
+        "allowance"
+      ],
+      "sourceHash": "b35a6376b77477df1dc857ad56c735bafa24364122f2494870d50a44cd9df6e9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "offer",
+        "extras"
+      ],
+      "sourceHash": "2dde78d0a4b34a797ac41efa8426f1e98874a7e9bfc38db869338b90175c0a63"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "assumptions",
+        0
+      ],
+      "sourceHash": "e1f069758a1cbe39a7c1410ac10c210304e2f22e9de33af7e855c90fceec6519"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "assumptions",
+        1
+      ],
+      "sourceHash": "989a9fcc887e91c895fb2d3cdee45f5d8279d36705594e66f19d87e172656e0e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "assumptions",
+        2
+      ],
+      "sourceHash": "5a29c054ca6e18f82e950c6a8e5ae28f1cb11b30bd9c940ce1d008415f55f453"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "loop"
+      ],
+      "sourceHash": "a0b75d0d828e36da846fef22be1facb672080122814598d04459e639eba510a9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "groceryTwin",
+        "homeRoiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "ctaLabel"
+      ],
+      "sourceHash": "6e5fe4ca7c07142fa81eef400c342dea7f8ba0422aa331c3880e6604db8d52a7"
     },
     {
       "path": [
@@ -5212,7 +6330,7 @@
         "roiCalculator",
         "heading"
       ],
-      "sourceHash": "19fd5f80006ba77ec550bd8c7697b954987113b65afd508594b4396a9a8af0ea"
+      "sourceHash": "f605f95a678fe3249ebf6201cbc21b86ea72d7f4bc395cab6e017b8b91a674d6"
     },
     {
       "path": [
@@ -5220,7 +6338,7 @@
         "roiCalculator",
         "subheading"
       ],
-      "sourceHash": "d1409afee4701a1dd8db8e6c0712518678482cb1efc7e9f0ed266f87ecc4ad24"
+      "sourceHash": "22fd8ffe8dbddd46f41fb690f262f66466bb343bae0b359e4c64dfd2f2f127a5"
     },
     {
       "path": [
@@ -5228,7 +6346,7 @@
         "roiCalculator",
         "disclaimer"
       ],
-      "sourceHash": "6f17a66acf32d284769b0b8ce661604789ef397db1a49e5cceb5e04842c6fe93"
+      "sourceHash": "28bd6e46023484d9a6b075ba5e7539842d6a2e920782ed0979f21366d56ae02f"
     },
     {
       "path": [
@@ -5634,6 +6752,16 @@
         "landingPage",
         "roiCalculator",
         "businessImpact",
+        "copy",
+        "navLabel"
+      ],
+      "sourceHash": "dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "businessImpact",
         "fields",
         "volume",
         "label"
@@ -5816,7 +6944,651 @@
         "secondaryLabel"
       ],
       "sourceHash": "d15dff1f02872b5a86fe94913f2db1b4928c5840b83dde7a4064da877b668a28"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "navLabel"
+      ],
+      "sourceHash": "dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "heading"
+      ],
+      "sourceHash": "f605f95a678fe3249ebf6201cbc21b86ea72d7f4bc395cab6e017b8b91a674d6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "intro"
+      ],
+      "sourceHash": "22fd8ffe8dbddd46f41fb690f262f66466bb343bae0b359e4c64dfd2f2f127a5"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "monthly"
+      ],
+      "sourceHash": "310ca503ef36f177ddbc760463fcaec1edc6eca12bfd590ad7bb244b31e59543"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "weekly"
+      ],
+      "sourceHash": "e78041ab51a818a22e2cfea6c15fe72e9e20092246f496f1670f7be3e42177a6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "daily"
+      ],
+      "sourceHash": "8f2364e11b8be3ff008f32b3dedb54e659362429bcc9e3eb6acb6070de4ffbff"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "cost"
+      ],
+      "sourceHash": "16c6e032c6d9e64e841b58a0298260d9f548fcbe3a8ad8dc475bd977b602898f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "benefit"
+      ],
+      "sourceHash": "a7f9c107913bba92d233f27fbfa5c4c52e4435a763a727214089505b9519d2dc"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "net"
+      ],
+      "sourceHash": "d32a3b8a970a1c2a790bdd47a4a86f208f6ff655d8e9269dcda5776b156d6039"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "roi"
+      ],
+      "sourceHash": "bd75a04bf54fbb79e68559c37be0a8752efacfe4f5b9a326b87143c8d5c87dcc"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "timeBenefit"
+      ],
+      "sourceHash": "cedc575743fa43d9e724db8bd1d54037d41369448eb826b63e1efba54e81c2a4"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "timeRoi"
+      ],
+      "sourceHash": "4b0df8181ded668923d1da293e0fc8ca4d0ac21eed3f933b32891615e67d1f6a"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "timeBack"
+      ],
+      "sourceHash": "92947077a2792fb311280e55e4d39fbeb1fbb152e76b389dee5a53697ea548ef"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "missing"
+      ],
+      "sourceHash": "4b11bc702fcdb172c2f88f4af465a9d05ac206b7f7e6304fcded04eb92cccde6"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "noRatio"
+      ],
+      "sourceHash": "5237c96ac1a23b98eb13770503afe986b088acd6627fa7649a5afdcbc4bb8e99"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "method"
+      ],
+      "sourceHash": "b79afe297bec4d00ab3a70a61b5e8b607a423a123f23a2fa9ccf8d6af6bcd157"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "reset"
+      ],
+      "sourceHash": "daee7606b339f3c339076fe2c9f372a3ff40c8ee896005d829c7481b64ca5303"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "audience"
+      ],
+      "sourceHash": "545c02357695a6ffed97b01a94a46b9aeb4686f4480173da6d0faeae8eb85053"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "includedVat"
+      ],
+      "sourceHash": "3e366dcdda082eda14db7eab30381a2fcc424c43d183d0e6d7a4b15c9b567d7d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "excludedVat"
+      ],
+      "sourceHash": "744120dab44d48957b4580cadd00fca1f91383823125d1400984a3cf62a76441"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "perMonth"
+      ],
+      "sourceHash": "88b1d1a67e34a269fec10b917a624817de854eeadb142640ab17c8199ab6bdae"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "equivalents"
+      ],
+      "sourceHash": "4a546022be02a950fc59270741b8e4784ca51f74da16e286c77e3f5a371aff38"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "timeNote"
+      ],
+      "sourceHash": "d7c17f23c52c1d9cf5be7fcb5a537017a0a09529bfde38e6b692afa2ecbf453f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "estimateNote"
+      ],
+      "sourceHash": "28bd6e46023484d9a6b075ba5e7539842d6a2e920782ed0979f21366d56ae02f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "limitNote"
+      ],
+      "sourceHash": "61108708047a1a834e46f1ca557d7518e3a63263a8ec7e7aa4301db230beacff"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "timeFormula"
+      ],
+      "sourceHash": "4cf3d8fcb0fa4b9c36d9869e709ba0cbabcd41083c7ff8cf77e9fe32066eacdb"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "profitFormula"
+      ],
+      "sourceHash": "e286f3af8c8f706f737502c898e1ba90c6bbc7680c380bba844ec4f3874b5bc4"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "proceedsFormula"
+      ],
+      "sourceHash": "9de390391c62a87b44f2c9bf74e5223e5d34c5a74cd5e12575f5e1452881a46e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "copy",
+        "roiFormula"
+      ],
+      "sourceHash": "00f9b4df25ca733c11a00e762ab8d95f6e9c9364ce202a6c22ff95c3613e3fcb"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "label"
+      ],
+      "sourceHash": "3a78695388b38b5cceefaf6796b0137877514593543b91af2752d5a17e3d736c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "inputs",
+        0,
+        "label"
+      ],
+      "sourceHash": "92922d01d3070a08cffbcc106feadbac13130a02272e8862d1e125f6c445b192"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "inputs",
+        0,
+        "help"
+      ],
+      "sourceHash": "a8cff02d43e6c0371644e73ec0de532d8ac6ae2eb169301a6e3605e3cb010ab0"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "inputs",
+        1,
+        "label"
+      ],
+      "sourceHash": "9f135e34cc7bc32cafb416bcbf7ef6af035cdb444c22e90cccd0587ba3db19df"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "inputs",
+        1,
+        "help"
+      ],
+      "sourceHash": "d99a99ab817eea4a3a70ded599d0744a02fe8de95ab0b7c6a0fc9d5cb72c400d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "inputs",
+        2,
+        "label"
+      ],
+      "sourceHash": "4b5674419c1cb29206fb7d1486e6492bb74df9523dbc3bd5cdb875a309486100"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "inputs",
+        2,
+        "help"
+      ],
+      "sourceHash": "310e52c988a868b67de05d75913bc83fea7f2ff3d06b15cb07adf6c22d1f94f1"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "offer",
+        "unit"
+      ],
+      "sourceHash": "3a78695388b38b5cceefaf6796b0137877514593543b91af2752d5a17e3d736c"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "offer",
+        "allowance"
+      ],
+      "sourceHash": "38d332d445147b25700b15b151093b95ceaa397f82c602d1d627c58b74f83ade"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "offer",
+        "extras"
+      ],
+      "sourceHash": "2dde78d0a4b34a797ac41efa8426f1e98874a7e9bfc38db869338b90175c0a63"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "assumptions",
+        0
+      ],
+      "sourceHash": "d3bbf22ee80780885a8969b7652f42ca72e1648b2e0cc700ef4c6562375e8d67"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "assumptions",
+        1
+      ],
+      "sourceHash": "989a9fcc887e91c895fb2d3cdee45f5d8279d36705594e66f19d87e172656e0e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "loop"
+      ],
+      "sourceHash": "863e77b3387351dede17c131973bebe6fde5fca308da411d5f2c7a5928cd0c63"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        0,
+        "ctaLabel"
+      ],
+      "sourceHash": "6e5fe4ca7c07142fa81eef400c342dea7f8ba0422aa331c3880e6604db8d52a7"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "label"
+      ],
+      "sourceHash": "d558cec47bb7bb6b329c46143e7d66ebdece2a44e513759620f61cc010fbbbeb"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "inputs",
+        0,
+        "label"
+      ],
+      "sourceHash": "f35f08b73c775c44eee1ba3223e3acd8257bd85b0365eb4d646cac6c9d409cde"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "inputs",
+        0,
+        "help"
+      ],
+      "sourceHash": "4c57357c12337fb319235d0d908bdd899d12822e966ceb8c6a24b93082c3943f"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "inputs",
+        1,
+        "label"
+      ],
+      "sourceHash": "9f135e34cc7bc32cafb416bcbf7ef6af035cdb444c22e90cccd0587ba3db19df"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "inputs",
+        1,
+        "help"
+      ],
+      "sourceHash": "d99a99ab817eea4a3a70ded599d0744a02fe8de95ab0b7c6a0fc9d5cb72c400d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "inputs",
+        2,
+        "label"
+      ],
+      "sourceHash": "4b5674419c1cb29206fb7d1486e6492bb74df9523dbc3bd5cdb875a309486100"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "inputs",
+        2,
+        "help"
+      ],
+      "sourceHash": "310e52c988a868b67de05d75913bc83fea7f2ff3d06b15cb07adf6c22d1f94f1"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "offer",
+        "unit"
+      ],
+      "sourceHash": "d558cec47bb7bb6b329c46143e7d66ebdece2a44e513759620f61cc010fbbbeb"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "offer",
+        "allowance"
+      ],
+      "sourceHash": "b35a6376b77477df1dc857ad56c735bafa24364122f2494870d50a44cd9df6e9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "offer",
+        "extras"
+      ],
+      "sourceHash": "2dde78d0a4b34a797ac41efa8426f1e98874a7e9bfc38db869338b90175c0a63"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "assumptions",
+        0
+      ],
+      "sourceHash": "e1f069758a1cbe39a7c1410ac10c210304e2f22e9de33af7e855c90fceec6519"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "assumptions",
+        1
+      ],
+      "sourceHash": "989a9fcc887e91c895fb2d3cdee45f5d8279d36705594e66f19d87e172656e0e"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "assumptions",
+        2
+      ],
+      "sourceHash": "5a29c054ca6e18f82e950c6a8e5ae28f1cb11b30bd9c940ce1d008415f55f453"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "loop"
+      ],
+      "sourceHash": "a0b75d0d828e36da846fef22be1facb672080122814598d04459e639eba510a9"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "compact",
+        "profiles",
+        1,
+        "ctaLabel"
+      ],
+      "sourceHash": "6e5fe4ca7c07142fa81eef400c342dea7f8ba0422aa331c3880e6604db8d52a7"
     }
   ],
-  "generatedAt": "2026-09-11T22:18:52.077Z"
+  "generatedAt": "2026-10-13T14:19:34.015Z"
 }

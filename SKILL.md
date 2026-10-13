@@ -9,11 +9,24 @@ description: >
   from within ChatGPT Sites, Claude Design, or any other AI site builder.
 metadata:
   author: gabriel-operator
-  version: "1.5"
+  version: "1.6"
   compatibility: Requires Node.js 16+ for the validation script.
 ---
 
 # Landing Page Builder
+
+For persona templates, authored content belongs in the model repository, not in
+platform TSX or a platform English defaults file. This includes header subtitles,
+navigation, both audience tabs, AI previews, sample activities, school options,
+FAQs, artwork URLs and initiation prompts. The platform owns layout and interaction
+contracts. Read [model-owned content](references/model-owned-content.md) before
+adding or extending a theme; do not hide missing authored content behind hard-coded
+English. Shared platform controls may use the platform's normal localization.
+
+For authenticated persona workspace creation, switching, sharing, or agent setup, load the gateway skill topic `persona-workspaces` (canonical [`Persona Workspaces`](../persona-workspaces/SKILL.md)). Keep `personaWorkspaceId` separate from business/harness IDs. Each explicitly created owned workspace gets author-owned definition branches and private runtime bindings. Invitees join the existing workspace; joining creates no copy or branch, and it becomes their default only when none existed. Owner-only definition/member management, private Coach/profile/memory, owner-funded execution and workspace-scoped ROI are required. Keep the standard dashboard/sidebar composition.
+
+For workspace changes, follow the [workspace validation and frontend packaging contract](../persona-workspaces/SKILL.md#validation): run the disposable Lane browser/API test in the platform checkout, verify both Docker frontend input lists for imported shared contracts, and distinguish local fixture coverage from real invitation delivery, account registration and model generation.
+
 
 ## What this actually renders
 
@@ -36,47 +49,36 @@ The FAQ, Contact, and Business Impact sections only render when you provide
 links are authored separately through `landingPage.header.navItems`; a link
 whose target section is absent is hidden automatically. When `roiCalculator`
 is present and `enabled` is not `false`, every renderer injects a header item
-whose localized label comes from `roiCalculator.businessImpact.copy.navLabel`
-(English: **ROI**) and scrolls to
+whose localized label comes from `roiCalculator.compact.copy.navLabel (legacy: businessImpact.copy.navLabel)`
+(English: **Pricing**) and scrolls to
 `persona-landing-roi-calculator`. Do not add that item to pinned theme
 navigation arrays — the renderer owns the injection.
 
-`landingPage.roiCalculator` remains optional. When creating a new business-impact
-section, use `methodologyVersion: 2` and read
-[`references/business-impact.md`](references/business-impact.md) **before authoring
-its copy or defaults**. Start from the persona's real work unit, not its employee's
-salary. Separate operational capacity, operating cost, and explicitly modeled value.
-The platform owns the live calculator tabs, Base/Medium packages, token cost mix and
-deterministic calculations; the landing-page child owns persona-specific tab labels,
-typical usage numbers, outcome selection, and all translated labels and explanations.
-Prefill a typical consumer of this persona. Do not invent observed savings, provider
-quotes, or guaranteed customer outcomes.
+`landingPage.roiCalculator` remains optional for unrelated existing personas.
+When authoring or revising a calculator, use the compact platform model by default.
+Read Gateway topic `persona-roi` and its `references/compact-calculator.md` for the
+schema, offers, three-input formulas, evidence boundaries and planning tools.
 
-Keep this as a live, slider-driven calculator: input tabs and auto-updating results,
-not a form-submit/results replacement. Use direct numeric entry alongside sliders.
-Author localized `currencyCopy` notices from the seed. Country selects currency;
-language only changes copy/formatting. Dated FX conversion is platform-owned, not
-LLM translation or proof of local costs. Read the country-currency rules in
-`references/business-impact.md`, including unavailable-rate fallback and the
-requirement to deploy compatible platform support before publishing new fields.
+Use **Pricing** as the localized navigation label and **Pricing & ROI** as the
+section heading. Author a capped monthly offer and at most three persona-specific
+styled sliders with numeric entry. Results update live and compare daily/weekly/
+monthly cost, benefit and net. Daily and weekly figures are averages; billing stays
+monthly. Keep one collapsed methodology disclosure. Unsupported benefits remain
+null, negative values remain negative, and optional time value is not cash received.
 
-Use **ROI** for the short header link and **ROI Calculator** for the section
-heading (localized in translated pages). Keep the persona-specific supporting copy
-and methodology; the naming does not turn returned capacity into monetary savings.
-Existing unversioned calculators retain their legacy renderer and arithmetic DSL,
-with the same short **ROI** navigation label. Do not migrate an unrelated existing
-persona without authorization. Version 2 uses empty `inputs` and `metrics`
-compatibility arrays; it does not accept authored formulas, scripts, or CSS.
+The platform owns rendering and arithmetic. The model owns copy, audience profiles,
+prices, VAT treatment, allowances and disclosed assumptions. Version 2 `compact`
+uses schemaVersion 1 and empty compatibility `inputs`/`metrics`; no authored
+formulas, scripts or CSS. Preserve existing businessImpact definitions and legacy
+renderers for unrelated models. Use shared styled form primitives, contrast-aware
+themed sliders, keyboard/RTL support and mobile stacking. Never automatically save
+net minutes as a manual baseline or accept an outcome from a public calculator.
 
-The only thing on this page that is **not** configurable from this file is
-the "Made using Gabriel Operator" attribution footer — that's hardcoded in
-the page's source component on purpose, so it can't be edited or removed
-through content. Every other section, including FAQ and Contact, is driven
-entirely by this JSON.
-
-Every field below is optional except `headline` — omit anything you don't
-want and the page renders sensible defaults (e.g. no badge pill, one CTA
-button instead of two, a generic opening line in the hero mockup).
+Language changes copy/formatting only. Preserve numerical IDs, prices, model kinds,
+profile selection and visitor edits. Country/region selects the economic context;
+use the platform's dated FX conversion and keep missing conversions unknown.
+Validate all audience sections and Pricing links, source/child mirrors and existing
+translation catalogs. Deploy compatible platform support before publishing new fields.
 
 ## Portable Git contract (schema v2)
 
@@ -185,12 +187,12 @@ calculator and navigation link. Read `references/business-impact.md` for househo
 valuation rules and translate both configurations independently.
 
 - `landingPage.design` (optional, object) — explicitly selects the renderer's visual treatment; presentation is never inferred from the persona name.
-  - `variant` (optional, `default`, `signature`, `banking`, `form-operations`, `logistics-portal`, `cinematic-campaigns`, `recruiting-operations`, `grocery-twin`, `event-introductions`, or `home-introductions`) — each non-default variant selects one registered, versioned presentation and requires its bounded content object. `logistics-portal` enables Emil's governed logistics portal-twin presentation, and `home-introductions` enables Nest's private buyer/seller introduction presentation.
+  - `variant` (optional, `default`, `signature`, `banking`, `form-operations`, `logistics-portal`, `cinematic-campaigns`, `recruiting-operations`, `grocery-twin`, `wardrobe-twin`, `boli-learning`, `event-introductions`, `home-introductions`, or `chakri-scrap`) — each non-default variant selects one registered, versioned presentation and requires its bounded content object. `wardrobe-twin` enables Cole's Home/Retail presentation with the pinned language → region → person progression; `logistics-portal` enables Emil's governed logistics portal-twin presentation, and `home-introductions` enables Nest's private buyer/seller introduction presentation.
   - `defaultThemeMode` (optional, `light` or `dark`) — initial mode for the landing page and matching chat/embed; a visitor's explicit mode selection still wins.
   - `theme` (optional, theme object) — authored `palette`, required `primaryColor`, and optional `secondaryColor`/`accentColor` used by the landing page.
   - `brand` (optional, object) — bounded exact brand seeds shared by landing, chat, embed, and portalled dialogs. This is the model-generated branding surface; never generate CSS or Tailwind classes.
     - `presetRevision` (optional, currently `1`) — pins the persona to the immutable revision of its selected `variant`.
-    - `colors.light` / `colors.dark` (optional objects) — each accepts normalized six-digit lowercase hex values for `canvas`, `surface`, `sidebar`, `text`, `accent`, and `userBubble`. Dependent hover, muted, border, and contrast-safe foreground tokens are derived by the renderer.
+    - `colors.light` / `colors.dark` (optional objects) — each accepts normalized six-digit lowercase hex values for `canvas`, `surface`, `sidebar`, `text`, `accent`, optional `accentHover`, and `userBubble`. With no authored hover tone, it is derived from the accent. Muted, border, and contrast-safe foreground tokens (including a separate hover foreground) are derived by the renderer.
     - `typography.body` / `typography.display` / `typography.label` (optional objects) — either `{ "source": "builtin", "family": "inter" }` using `dm-sans`, `inter`, `system`, `roboto`, `poppins`, or `outfit`; or `{ "source": "google", "family": "TASA Orbiter" }` using a safe Google Font family name.
     - Normal text must reach WCAG AA contrast against both `canvas` and `surface`. Low decorative-accent contrast is reported as a warning.
 - `landingPage.localization` (required on every new landing page; optional only for backward-compatible reads of legacy pages) — public translation and IP-country routing. This is an additive schema-version-2 field; do not bump the landing-page schema version. New pages must set `translation.enabled: true`, `sourceLanguage: "en"`, `defaultLanguage: "en"`, `autoDetectCountryLanguage: true`, `generatedTranslations: []`, and `regionalPages: []` before authored regions or generated variants are added. Do not disable it during creation.
@@ -213,6 +215,7 @@ valuation rules and translate both configurations independently.
 - `landingPage.featureTags` (optional, string array) — a short caption line under the hero buttons, rendered joined with " · ", e.g. `["No swiping", "Mutual consent only"]`.
 - `landingPage.demoConversation` (optional, array of `{ role: "user" | "assistant", text }`) — the scripted messages shown above the (real, functional) input in the hero chat mockup. Keep it to 2–4 short lines that show what talking to this persona actually feels like. Falls back to one generic opening line if omitted.
 - `landingPage.heroChat` (optional, object) — authored chat-preview microcopy: `statusLabel`, `inputPlaceholder`, and `suggestedPrompts` (a short string array).
+- `landingPage.boliLearning` (required when `design.variant` is `boli-learning`) — complete authored copy for the reusable BOLI learning template: parent/school editions, all shared labels and accessibility copy, three course islands, up to six lessons per course, age-specific descriptions, and one to eight FAQ entries. Start from [`references/boli-learning-example.json`](references/boli-learning-example.json); keep the full copy object so localization includes every visible label. The renderer owns layout, Epilogue/Silkscreen typography, the Minecraft mode switch, and the existing persona-chat handoff. Media must be direct HTTPS or bundled application image paths. Do not author routes, HTML, CSS, tools, or executable actions. Course proposals and examples do not execute or approve a course: the actual persona playbook must stop for parent/teacher review of the outline, activities, and learner evidence.
 - `landingPage.formOperations` (required when `design.variant` is `form-operations`) — the bounded model for the hero demonstration, four-step proof strip, simulation principle and six guarantees, impact cards and percentage bars, six-step process, seven use-case tabs, worked example, controlled-autonomy boundary, local-only lead capture, and footer. `heroDemo.captureAndFill` may opt into the platform-owned public image-preview runtime using only an enabled registered `commandTrigger`; models may author copy but cannot raise upload, analysis, chat, voice, or expiry limits. The validator checks the trigger syntax, `done|active|pending` trace states, `persona|human` actors, `live|next|custom` use-case statuses, percentages from 0–100, supported icons, contact email, media, fonts, colors, accessibility, and the no-emoji rule (with the copyright symbol permitted in `footer.copyright`). Footer `poweredBy`, `closingStatement`, and `copyright` are optional. This object controls copy and repeated data only; it never accepts CSS, Tailwind classes, layout, animation, or executable code.
 - `landingPage.logisticsPortal` (required when `design.variant` is `logistics-portal`) — bounded copy and repeated data for Emil's fixed black/lime logistics presentation: header, hero, proof items, hero chat, local customs/carrier rehearsal, edge architecture, platform twin, six-step fail-closed process, workflows, pilot, and footer. Every `process.steps[]` item requires a direct `image` URL and descriptive `alt` text; keep owned media in the landing-page repository and reference it through a stable raw GitHub URL. `hero.rehearsal.commandTrigger` must reference an enabled `operator_action` command and, for the portable Emil model, `workflow.emil.rehearse-filing`. The renderer owns all CSS, layout, motion, authentication handoff, and simulation authority. Models cannot add routes, code, credentials, external queries, or live portal actions.
 - `landingPage.cinematicCampaigns` (required when `design.variant` is `cinematic-campaigns`) — bounded hospitality copy inside Archer's original cinematic presentation: video hero and chat, concierge intake below the hero, three `send | brand | approve` workflow cards, four fixed 9:16 platforms in the marquee, three explicitly non-client carousel placeholders, six differentiation items in the original bento grid, a five-status workspace-style production tracker, Meet Archer, editorial audience-fit cards, paid four-week pilot, and footer. `pilot.bookingUrl` must be HTTPS. Preserve the registered layout, typography, motion, and styling when changing copy. `accessibility` owns translated navigation and carousel control labels. `hero.instagramCampaign` enables the platform-owned public preview and may contain only `enabled`, the fixed `instagram-campaign` trigger, and localized UI copy, including its greeting, URL request, brand and typography labels, image-format labels, bounded error groups, and claim transcript messages. The paired command must be an enabled `operator_action` referencing `workflow.archer.instagram-campaign-v2`. Anonymous visitors may analyze one public Instagram URL, edit observed/inferred brand attributes, submit an event brief, generate exactly two 1080×1350 images plus one 1080×1920 Story after explicit confirmation, use one revision, download, and approve. Video, persistence, Instagram connection, scheduling, and publishing require authentication; limits, provider IDs, credentials, source acquisition, claims, and executable behavior remain platform-owned. Optional `presentationMedia` restores decorative assets: one hero video and poster, three workflow thumbnails, one workflow image, and exactly three `showcaseVideos` entries. Each showcase entry may be a video with poster (legacy entries default to video) or an explicitly `kind: "image"` static start-frame placeholder; use the latter only while the matching real motion clip is being produced. Seven feature image/video assets (videos require posters), one workspace background, three project images, five filmstrip images, and two audience-fit images are also supported. All media URLs must be direct HTTPS assets, with a required `notice` explicitly distinguishing decorative visuals from client footage or pilot deliverables. Never present these cinematic studies as client work. Archer's character is a direct HTTPS or approved application image. Exact array counts preserve the registered layout. This object never accepts components, JavaScript, CSS, Tailwind classes, routes, executable queries, credentials, provider IDs, or runtime limits.
@@ -370,11 +373,14 @@ compact manifest and every referenced language file into the parent.
 
 For every newly created landing page and after every later authored change, finish and validate the authored English copy,
 then read `../landing-page-translations/SKILL.md` and run its maintained incremental generator with
-the default 37-language catalogue before the initial Git handoff. That skill owns bulk
+the default language catalogue before the initial Git handoff, unless the user has
+specified a smaller market or language scope. A request for country editions is not
+authorization to expand into every language: prioritize market terminology and use
+only the agreed languages. That skill owns bulk
 language selection, safe-string extraction, provider authorization, source revisions,
 resumable generation, validation, and child-to-parent mirroring. Prefer its private
 on-device Chrome provider; external providers still require explicit authorization.
-Do not hand-author `generatedTranslations` or invent source revisions in this skill.
+Do not hand-author `generatedTranslations` or invent source revisions in this skill. Course films and their translated narration are not landing-page JSON: read `../course-video-generation/SKILL.md` and `../course-video-translations/SKILL.md`, and store the media in the persona repository.
 
 After generation, run the generator's `--check`, commit and push a linked child first,
 then commit and push the parent Persona projection. If a provider is unavailable, leave
@@ -489,3 +495,55 @@ the binding is absent or the target backend has not activated the package.
 Do not enable a binding merely because its JSON validates. Check backend handler
 and continuation support, configured locale catalogues, and the domain's live
 guest/login acceptance first. Never treat a local test as production deployment.
+
+### Chakri recycling presentation
+
+`design.variant: "chakri-scrap"` requires the bounded `landingPage.scrapOperations` model in [references/chakri-scrap-copy-schema.json](references/chakri-scrap-copy-schema.json). Home handles household collection; **Business** handles collected inventory sold downstream. Preserve the shared visual identity, native hero chat, floating chat, portrait avatar and full-character chat/footer artwork. Country comes from the trusted detection context, with neutral global copy when no edition matches; never add a public country selector. The shared language control stays visible. `edition=business` selects Business and the old `edition=retail` URL remains compatible.
+
+Registered Chakri markets are India, Netherlands, US, UK, Australia, France, Spain, Germany, Canada, Singapore and Japan (`IN/NL/US/GB/AU/FR/ES/DE/CA/SG/JP`). Country editions control terminology, postcode examples, sample currency and collection context independently of the page language. Preserve the English baseline. For this Persona, the agreed authored languages are Dutch for Netherlands, French for France and Spanish for Spain; adding a market does not authorize a new translation catalogue. The five additional market objects are optional for older six-market JSON; when present, each must contain every registered market field. The renderer supplies their English baseline when older authored content omits them. Sample postcodes and rates do not establish live service coverage or prices.
+
+For a matched country, `markets[code].retailEyebrow`, `retailHeadline` and `retailBody` own the Business hero (the legacy `retail*` JSON keys remain compatible). They describe collected inventory sold downstream, not the household pickup flow. The global Business hero uses `business.labels.heroKicker/heroTitle/heroBody`. Audience-specific complete pages can override the matched market copy too. The matched market’s `retailClosing` owns the Business closing title. Material names use the same market’s aluminium/copper terminology.
+
+Author Business copy under `scrapOperations.business`: complete `labels`, named `sections`, five `materials`, four `controls`, three `plans`, five `faqs`, and bounded `demo` settings. Optional `business.defaultSelected: true` opens Business for a matched audience; an explicit Home tab overrides it. `demo.weightReviewThresholdPercent` accepts 0–100; `demo.maxPickupDays` accepts 1, 3 or 5. The Publish landing editor validates these same fields. Copy can vary through the existing global/country/language/authenticated audience presentation; include Business copy in translations and variant assets. No formulas, executable code, buyer credentials or live rates belong in this JSON.
+
+Business rehearses one selected material lot: inventory → eligible offers → net recommendation → explicit sale approval → explicit dispatch approval → simulated transport → verified weights → prepared settlement → explicit final settlement approval → local receipt and removal of the outgoing lot. Do not call it a live buyer network or register a fake downstream slash command. Talk remains the real Persona chat entry; the existing household commands retain their own meaning. Regulated AC units and uncertain classifications stay on hold for an operator. Offers consider lot minimums, condition, contamination, pickup/storage window, distance, transport and expected deductions. Highest feasible positive **net**, not highest headline price, is recommended. Compare accepted minus collected weight; accepted weight already incorporates the quality reduction and must not be deducted twice. Changing verified weights or the threshold invalidates later settlement approval. Every final settlement requires explicit approval, even within the discrepancy threshold.
+
+The platform fixtures are single-source: `app/shared/content/chakri/sample-rates.ts` for Home and `business-demo.ts` for downstream synthetic offers, weights and value assumptions. All monetary output is visibly illustrative and uses the detected country fixture’s currency. Without a supported country, identify the Netherlands/EUR example as an example. The Business value calculator shows its assumptions and does not claim observed gains. Use styled Input, Checkbox and `app/components/Select.tsx`, including date choices. No messages, dispatch, money or certificate issuance occurs in either public builder. Authenticated playbooks must use verified operator data and their own approvals.
+
+## Automatic audience versions and global country
+
+Use `publishedConfig.personalization` for a global-country baseline plus country,
+language, saved-profile/custom or individual authenticated versions of a whole
+Persona presentation. Configure it in Chat Publish → Audience versions. It can
+change the name, avatar, landing theme/layout, embed appearance and signed-in app.
+Read [the presentation contract](../digital-twin-page/references/personalization.md)
+for precedence, JSON, hierarchy, trusted profile matching and bounded prompt
+generation. Empty country/language lists mean all; global precedes country/language
+and the matched authenticated audience. Never expose a country selector in the
+public header. Use styled form primitives and `app/components/Select.tsx`.
+
+Prompts adapt editable copy through the existing country generation jobs and
+policies; complete layouts are authored validated config. Translations and
+generated assets live under their matched variant and cannot use a shared global
+translation cache. Preserve human approvals, real-data boundaries and access checks.
+
+## Mobile copy and chat presentation
+
+For mobile-specific landing copy or chat-widget content, read
+[`references/mobile-content.md`](references/mobile-content.md). Author bounded
+`localization.mobile` patches with mobile > country > language precedence; keep
+desktop language assets and workflow-owned questions unchanged. The shared compact
+footer applies to hero, floating, photo-upload and free-form chats. Preserve
+critical decision notices and validate the paired SDK plus phone/desktop rendering.
+
+## Signed-in app companion
+
+When the persona includes a signed-in app, use [the dashboard format](../chat-app-builder/references/dashboard-first.md) through `chat-app-builder`. The anonymous hero/widget and marketing sections stay separate from private app data. After login, Home contains the review-only Meet Persona coach and domain records/results/decisions, with a minimal sidebar. Playbooks is sidebar-only, milestones/goals stays in Coach, and routines/Signals/Schedule stays in Signals; never add duplicate Home tabs for them. Carry the same theme, portrait and selected language into the app; do not reuse illustrative landing runs as saved results. Verify the login transition into the actual app, not only the public landing renderer.
+
+## Evidence-backed ROI
+
+For a standard Persona app, include the domain ROI/Impact sidebar destination and connect it to the same landing calculator definitions via `publishedConfig.roiMonitoring`. Read [the ROI algorithm and evidence contract](../chat-app-builder/references/roi-evidence.md) or Gateway topic `persona-roi`: map committed output/List fields to the parent ontology, capture the semantic revision at execution, deduplicate stable identities, preserve acceptance/withdrawal boundaries and measure value with explicit runner baselines or evidenced economic rules. Credits/tokens/top-up funding are distinct; never sum them as one cost or call a budget/row count cash savings. Missing evidence/currency conversion keeps financial ROI unknown. Validate the model and real runner ROI before publication.
+
+ROI/Impact is sidebar-only. Use canonical `agents` (existing Kai `grocery-agents`) metadata as the standalone target; never display an ROI tab beside Meet/Coach.
+
+For a family activity or school-workshop flagship, read [the community activity loop contract](../persona-framework/references/community-activity-loop.md). It covers shared guided state, scoped refreshable feeds, opt-in Signals, reviewed team execution and adult-confirmed occurrence ROI.

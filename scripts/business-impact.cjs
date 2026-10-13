@@ -86,6 +86,116 @@ __export(business_impact_exports, {
   valuesFromUsagePackage: () => valuesFromUsagePackage
 });
 module.exports = __toCommonJS(business_impact_exports);
+
+// app/shared/utils/compact-roi.ts
+var COMPACT_ROI_COPY = {
+  navLabel: "Pricing",
+  heading: "Pricing & ROI",
+  intro: "Your inputs. Your estimated return.",
+  monthly: "Month",
+  weekly: "Week",
+  daily: "Day",
+  cost: "You pay",
+  benefit: "Estimated return",
+  net: "Net gain",
+  roi: "Estimated ROI",
+  timeBenefit: "Estimated time value",
+  timeRoi: "Time-value ROI",
+  timeBack: "Hours returned",
+  missing: "Add your inputs",
+  noRatio: "Not applicable",
+  method: "How it\u2019s calculated",
+  reset: "Reset",
+  audience: "Audience",
+  includedVat: "Including VAT",
+  excludedVat: "Excluding VAT",
+  perMonth: "per month",
+  equivalents: "Billed monthly. Day and week figures are averages, not daily or weekly charges or guaranteed returns.",
+  timeNote: "Time value is your optional estimate, not cash received or a payroll reduction. Net minutes include your checking and approval time.",
+  estimateNote: "Planning estimates are separate from measured ROI. Only accepted outcomes and comparable recorded costs support measured returns.",
+  limitNote: "For more usage or separately quoted work, contact us. This estimate covers the included plan only.",
+  timeFormula: "Time value = units \xD7 net minutes saved \xF7 60 \xD7 your hourly value.",
+  profitFormula: "Contribution profit = eligible recommendation sessions \xD7 conversion uplift \xF7 100 \xD7 profit per additional order.",
+  proceedsFormula: "Incremental proceeds = lots or pickups \xD7 (net proceeds afterward \u2212 net proceeds beforehand).",
+  roiFormula: "Net = benefit \u2212 app subscription cost. ROI = net \xF7 app subscription cost \xD7 100. Free plans have no ROI percentage."
+};
+var COMPACT_MODEL_INPUTS = {
+  time_value: ["units", "minutes_saved", "hourly_value"],
+  conversion_profit: ["units", "conversion_uplift", "order_profit"],
+  net_proceeds: ["units", "net_before", "net_after"]
+};
+var record = (v) => !!v && typeof v === "object" && !Array.isArray(v);
+var finite = (v) => typeof v === "number" && Number.isFinite(v);
+var id = (v) => typeof v === "string" && /^[a-z][a-z0-9_-]{0,63}$/.test(v);
+function validateCompactRoi(value, path = "landingPage.roiCalculator.compact") {
+  const issues = [];
+  const fail = (p, message) => issues.push({ path: p, message });
+  const keys = (v, allowed, p) => Object.keys(v).forEach((k) => {
+    if (!allowed.includes(k)) fail(`${p}.${k}`, "Unsupported compact calculator field.");
+  });
+  const text = (v, p) => {
+    if (typeof v !== "string" || !v.trim() || v.length > 2e3) fail(p, "Expected non-empty copy, up to 2000 characters.");
+  };
+  if (!record(value)) return [{ path, message: "Expected compact calculator configuration." }];
+  keys(value, ["schemaVersion", "defaultProfileId", "copy", "profiles"], path);
+  if (value.schemaVersion !== 1) fail(`${path}.schemaVersion`, "Supported compact version is 1.");
+  if (!record(value.copy)) fail(`${path}.copy`, "Add localized calculator copy.");
+  else {
+    keys(value.copy, Object.keys(COMPACT_ROI_COPY), `${path}.copy`);
+    Object.keys(COMPACT_ROI_COPY).forEach((k) => text(value.copy[k], `${path}.copy.${k}`));
+  }
+  if (!Array.isArray(value.profiles) || !value.profiles.length || value.profiles.length > 8) return [...issues, { path: `${path}.profiles`, message: "Use one to eight audience profiles." }];
+  const seen = /* @__PURE__ */ new Set();
+  value.profiles.forEach((profile, index) => {
+    const p = `${path}.profiles[${index}]`;
+    if (!record(profile)) {
+      fail(p, "Expected audience profile.");
+      return;
+    }
+    keys(profile, ["id", "label", "model", "inputs", "offer", "unitsPerWorkload", "assumptions", "loop", "ctaLabel", "ctaTarget"], p);
+    if (!id(profile.id) || seen.has(profile.id)) fail(`${p}.id`, "Use a unique profile identifier.");
+    else seen.add(profile.id);
+    ["label", "loop", "ctaLabel"].forEach((k) => text(profile[k], `${p}.${k}`));
+    if (!id(profile.ctaTarget)) fail(`${p}.ctaTarget`, "Use an existing section target, never a URL.");
+    if (!finite(profile.unitsPerWorkload) || profile.unitsPerWorkload <= 0 || profile.unitsPerWorkload > 1e3) fail(`${p}.unitsPerWorkload`, "Use a positive workload multiplier up to 1000.");
+    if (!Array.isArray(profile.assumptions) || profile.assumptions.length > 12) fail(`${p}.assumptions`, "Use up to twelve disclosed assumptions.");
+    else profile.assumptions.forEach((t, i) => text(t, `${p}.assumptions[${i}]`));
+    const expected = COMPACT_MODEL_INPUTS[profile.model];
+    if (!expected) fail(`${p}.model`, "Use time_value, conversion_profit or net_proceeds.");
+    if (!Array.isArray(profile.inputs) || profile.inputs.length !== 3) fail(`${p}.inputs`, "Use exactly three declared inputs.");
+    else profile.inputs.forEach((field, i) => {
+      const f = `${p}.inputs[${i}]`;
+      if (!record(field)) {
+        fail(f, "Expected input definition.");
+        return;
+      }
+      keys(field, ["id", "label", "help", "defaultValue", "min", "max", "step", "format"], f);
+      if (expected && field.id !== expected[i]) fail(`${f}.id`, "Inputs must match the selected model in declared order.");
+      text(field.label, `${f}.label`);
+      text(field.help, `${f}.help`);
+      if (!finite(field.min) || !finite(field.max) || field.min > field.max || Math.abs(field.min) > 1e9 || Math.abs(field.max) > 1e9) fail(f, "Use finite ordered bounds within \xB11 billion.");
+      if (!finite(field.step) || field.step <= 0) fail(`${f}.step`, "Use a positive step.");
+      if (!["number", "currency", "percent"].includes(String(field.format))) fail(`${f}.format`, "Unsupported input format.");
+      if (field.defaultValue !== null && (!finite(field.defaultValue) || !finite(field.min) || !finite(field.max) || field.defaultValue < field.min || field.defaultValue > field.max)) fail(`${f}.defaultValue`, "Use null or a number within the declared bounds.");
+      if (field.id === "units" && (field.min !== 0 || field.step !== 1 || !Number.isInteger(field.max) || field.defaultValue !== null && !Number.isInteger(field.defaultValue))) fail(f, "Workload is a nonnegative whole number.");
+    });
+    const offer = profile.offer;
+    if (!record(offer)) fail(`${p}.offer`, "Add offer metadata.");
+    else {
+      keys(offer, ["monthlyPrice", "basis", "unit", "vatIncluded", "includedUnits", "allowance", "extras"], `${p}.offer`);
+      if (offer.monthlyPrice !== null && (!finite(offer.monthlyPrice) || offer.monthlyPrice < 0 || offer.monthlyPrice > 1e9)) fail(`${p}.offer.monthlyPrice`, "Use a nonnegative price or null for a quote.");
+      if (!["fixed", "per_unit"].includes(String(offer.basis))) fail(`${p}.offer.basis`, "Use fixed or per_unit pricing.");
+      if (typeof offer.vatIncluded !== "boolean") fail(`${p}.offer.vatIncluded`, "Declare VAT treatment.");
+      ["unit", "allowance", "extras"].forEach((k) => text(offer[k], `${p}.offer.${k}`));
+      if (!finite(offer.includedUnits) || !Number.isInteger(offer.includedUnits) || offer.includedUnits <= 0) fail(`${p}.offer.includedUnits`, "Declare a positive whole-number allowance.");
+      if (Array.isArray(profile.inputs) && record(profile.inputs[0]) && offer.basis === "fixed" && finite(profile.unitsPerWorkload) && finite(profile.inputs[0].max) && finite(offer.includedUnits) && profile.inputs[0].max * profile.unitsPerWorkload > offer.includedUnits) fail(`${p}.inputs[0].max`, "Workload exceeds the included plan.");
+    }
+  });
+  if (!seen.has(String(value.defaultProfileId))) fail(`${path}.defaultProfileId`, "Choose a declared default audience.");
+  return issues;
+}
+
+// app/shared/utils/business-impact.ts
 var IMPACT_OUTCOMES = ["cash", "higher_value", "throughput", "hiring", "error", "risk", "cycle_time"];
 var IMPACT_FIELDS = {
   volume: [0, 1e6, 1],
@@ -238,7 +348,7 @@ var STORE_OPS_COPY = {
   pricePerStoreLabel: "KAI price per store per month",
   sourceLabel: "Source",
   hoursFormula: "Hours back = stores \xD7 cycles per store \xD7 (preparation minutes \xD7 share KAI handles \u2212 review minutes) \xF7 60, rounded.",
-  lossFormula: "Food loss = stores \xD7 monthly food purchases per store \xD7 loss rate, rounded to whole euros.",
+  lossFormula: "Food loss = stores \xD7 monthly food purchases per store \xD7 loss rate, rounded-sm to whole euros.",
   priceFormula: "KAI price = stores \xD7 price per store.",
   breakEvenFormula: "Break-even share = KAI price \xF7 food loss \xD7 100, rounded.",
   yearlyNote: "The yearly view multiplies hours, food loss and price by 12. The break-even share stays the same.",
@@ -298,10 +408,10 @@ function validateRoiCostCopy(value, path) {
 function validateRoiNoticeCopy(value, path, defaults) {
   if (value === void 0) return [];
   if (!value || typeof value !== "object" || Array.isArray(value)) return [{ path, message: "Expected localized currency notices." }];
-  const record = value;
+  const record2 = value;
   const issues = [];
-  for (const key of /* @__PURE__ */ new Set([...Object.keys(record), ...Object.keys(defaults)])) {
-    const text = record[key];
+  for (const key of /* @__PURE__ */ new Set([...Object.keys(record2), ...Object.keys(defaults)])) {
+    const text = record2[key];
     const original = defaults[key];
     if (!original || typeof text !== "string" || !text.trim() || text.length > 900) issues.push({ path: `${path}.${key}`, message: "Use bounded localized currency notice copy." });
     else if (JSON.stringify((text.match(/\{[a-z]+\}/g) || []).sort()) !== JSON.stringify((original.match(/\{[a-z]+\}/g) || []).sort())) issues.push({ path: `${path}.${key}`, message: "Preserve the currency notice placeholders." });
@@ -481,7 +591,7 @@ function resolveImpactTabs({ config }) {
 }
 function initialImpactState(config) {
   const packageId = config.defaultPackage && config.usagePackages ? config.defaultPackage : config.usagePackages ? "medium" : "custom";
-  const packaged = packageId !== "custom" && config.usagePackages ? { ...config.defaults, ...valuesFromUsagePackage({ pack: config.usagePackages[packageId] }) } : { ...config.defaults };
+  const packaged = packageId !== "custom" && config.usagePackages ? { ...config.defaults, ...valuesFromUsagePackage({ pack: config.usagePackages[packageId] }), ...Object.fromEntries(Object.entries(config.defaults).filter(([, value]) => value === null)) } : { ...config.defaults };
   return {
     values: packaged,
     selected: config.selected?.length ? [...config.selected] : [],
@@ -494,13 +604,14 @@ function initialImpactState(config) {
     workloadMultiplierField: config.workloadMultiplierField,
     pricingBasis: config.pricing?.basis,
     annualBasePrice: config.pricing?.annualPrice,
+    authoredCustomerPrice: config.defaults.customer_price ?? void 0,
     minimumMargin: config.pricing?.minimumMargin,
     financialPresentation: config.presentation?.financial
   };
 }
 function evaluateBusinessImpact(state) {
   const { values: v } = state;
-  const selected = [...new Set(state.selected)].filter((id) => IMPACT_OUTCOMES.includes(id));
+  const selected = [...new Set(state.selected)].filter((id2) => IMPACT_OUTCOMES.includes(id2));
   const has = (...keys) => keys.every((k) => typeof v[k] === "number" && Number.isFinite(v[k]) && v[k] >= IMPACT_FIELDS[k][0] && v[k] <= IMPACT_FIELDS[k][1]);
   const n = (k) => has(k) ? v[k] : 0;
   const errors = [];
@@ -518,7 +629,7 @@ function evaluateBusinessImpact(state) {
   const correctionFields = ["correction_rate_before", "correction_rate_after", "correction_minutes_before", "correction_minutes_after"];
   const correctionProvided = correctionFields.some((k) => v[k] != null);
   correctionFields.filter((k) => v[k] != null).forEach((k) => used.add(k));
-  selected.forEach((id) => IMPACT_OUTCOME_FIELDS[id]?.forEach((k) => used.add(k)));
+  selected.forEach((id2) => IMPACT_OUTCOME_FIELDS[id2]?.forEach((k) => used.add(k)));
   const workloadMultiplier = state.workloadMultiplierField ? n(state.workloadMultiplierField) : 1;
   const generatedUnits = n("volume") * workloadMultiplier;
   const acceptanceRate = has("accepted_rate") ? n("accepted_rate") : 100;
@@ -536,7 +647,7 @@ function evaluateBusinessImpact(state) {
   const rawCapacity = preparationCapacity + (reworkHours || 0);
   const capacity = Math.max(0, rawCapacity);
   if (state.reviewMode === "team" && reviewHours > grossHours) errors.push("reviewError");
-  const allocated = selected.reduce((sum, id) => sum + (IMPACT_ALLOCATION_FIELDS.includes(`${id}_hours`) ? n(`${id}_hours`) : 0), 0);
+  const allocated = selected.reduce((sum, id2) => sum + (IMPACT_ALLOCATION_FIELDS.includes(`${id2}_hours`) ? n(`${id2}_hours`) : 0), 0);
   if (allocated > capacity + 1e-6) errors.push("allocationError");
   const costFields = state.costMode === "total" ? ["budget"] : usesTokens ? ["tokens_per_output", "model_cost", "tools_cost", "infrastructure_cost", "platform_cost", ...state.reviewMode === "paid" ? ["review_rate"] : []] : ["model_cost", "tools_cost", "infrastructure_cost", "platform_cost", ...state.reviewMode === "paid" ? ["review_rate"] : []];
   costFields.forEach((k) => used.add(k));
@@ -556,8 +667,8 @@ function evaluateBusinessImpact(state) {
   const errorValue = selected.includes("error") ? n("incidents") * n("incident_cost") : 0;
   const riskValue = selected.includes("risk") ? Math.max(0, n("probability_before") - n("probability_after")) / 100 * n("loss") : 0;
   if (selected.includes("risk") && n("probability_after") > n("probability_before")) errors.push("riskError");
-  if (selected.some((id) => id !== "cycle_time") && !state.overlapConfirmed) errors.push("overlapError");
-  const valueReady = state.outcomesReviewed && selected.every((id) => has(...IMPACT_OUTCOME_FIELDS[id])) && errors.length === 0 && workloadReady;
+  if (selected.some((id2) => id2 !== "cycle_time") && !state.overlapConfirmed) errors.push("overlapError");
+  const valueReady = state.outcomesReviewed && selected.every((id2) => has(...IMPACT_OUTCOME_FIELDS[id2])) && errors.length === 0 && workloadReady;
   const ready = valueReady && costReady;
   const economicValue = cash + hire + contribution + errorValue + riskValue;
   const personalTimeValue = has("personal_value_per_hour") ? capacity * n("personal_value_per_hour") : 0;
@@ -572,12 +683,12 @@ function evaluateBusinessImpact(state) {
   const pricingReady = tieredPricing ? has("customer_price", "included_volume", "overage_price", "setup_fee", "contract_months") : !usagePricing || costReady && has("volume", "tokens_per_output") && (!state.workloadMultiplierField || has(state.workloadMultiplierField)) && marginReady;
   const tieredOverage = tieredPricing && pricingReady && has("volume") ? Math.max(0, n("volume") - n("included_volume")) * n("overage_price") : 0;
   const recurringCustomerPrice = baseCustomerPrice === null || !pricingReady ? null : baseCustomerPrice + tieredOverage;
-  const annualBasePrice = typeof state.annualBasePrice === "number" && Number.isFinite(state.annualBasePrice) && state.annualBasePrice >= 0 ? state.annualBasePrice * (state.pricingBasis === "per_volume" ? n("volume") : 1) : recurringCustomerPrice === null ? null : recurringCustomerPrice * 12;
+  const annualBasePrice = typeof state.annualBasePrice === "number" && Number.isFinite(state.annualBasePrice) && state.annualBasePrice >= 0 && (state.authoredCustomerPrice === void 0 || n("customer_price") === state.authoredCustomerPrice) ? state.annualBasePrice * (state.pricingBasis === "per_volume" ? n("volume") : 1) : recurringCustomerPrice === null ? null : recurringCustomerPrice * 12;
   const roundPriceUp = (amount) => Math.ceil((amount - 1e-9) * 100) / 100;
   const usagePrice = usagePricing && pricingReady ? serviceCost / (1 - state.minimumMargin) : 0;
   const customerPrice = recurringCustomerPrice === null || !pricingReady ? null : usagePricing ? roundPriceUp(Math.max(recurringCustomerPrice, usagePrice)) : recurringCustomerPrice;
   const annualCustomerPrice = annualBasePrice === null || !pricingReady ? null : (usagePricing ? roundPriceUp(Math.max(annualBasePrice, usagePrice * 12)) : annualBasePrice) + (tieredPricing ? n("setup_fee") : 0);
-  const customerBenefitReady = workloadReady && errors.length === 0 && (valueReady || selected.length === 0 && (capacityValueReady || personalTimeValue > 0)) && (!usagePricing || costReady);
+  const customerBenefitReady = state.financialPresentation !== "capacity_only" && workloadReady && errors.length === 0 && (valueReady || selected.length === 0 && (capacityValueReady || personalTimeValue > 0)) && (!usagePricing || costReady);
   const customerExpense = customerPrice === null ? null : customerPrice + (usagePricing ? reviewCost : 0);
   const customerNet = customerBenefitReady && customerExpense !== null ? customerBenefit - customerExpense : null;
   const customerRoi = customerBenefitReady && customerPrice !== null && customerPrice > 0 ? (customerBenefit - customerExpense) / customerExpense : null;
@@ -797,7 +908,7 @@ function evaluateStoreOpsEstimate({ assumptions, stores, cyclesPerStore, prepMin
 function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
   const issues = [];
   const fail = (p, message) => issues.push({ path: p, message });
-  const record = (v) => !!v && typeof v === "object" && !Array.isArray(v);
+  const record2 = (v) => !!v && typeof v === "object" && !Array.isArray(v);
   const keys = (v, allowed, p) => Object.keys(v).forEach((k) => {
     if (!allowed.includes(k)) fail(`${p}.${k}`, "Unsupported business-impact field.");
   });
@@ -807,7 +918,24 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
   const numberInRange = (n, field, p) => {
     if (typeof n !== "number" || !Number.isFinite(n) || n < IMPACT_FIELDS[field][0] || n > IMPACT_FIELDS[field][1]) fail(p, "Value is outside the supported range.");
   };
-  if (!record(value)) return [{ path, message: "Expected a calculator object." }];
+  if (!record2(value)) return [{ path, message: "Expected a calculator object." }];
+  if (value.compact !== void 0) {
+    const issues2 = validateCompactRoi(value.compact, `${path}.compact`);
+    issues2.push(...validateRoiCurrencyCopy(value.currencyCopy, `${path}.currencyCopy`));
+    issues2.push(...validateRoiCostCopy(value.costCopy, `${path}.costCopy`));
+    if (value.locale !== void 0) {
+      try {
+        if (typeof value.locale !== "string") throw new Error();
+        new Intl.Locale(value.locale);
+      } catch {
+        issues2.push({ path: `${path}.locale`, message: "Use a valid locale." });
+      }
+    }
+    if (value.methodologyVersion !== 2 || !/^[A-Z]{3}$/.test(String(value.currency))) issues2.push({ path, message: "Compact calculators require methodologyVersion 2 and an ISO currency." });
+    if (typeof value.enabled !== "boolean") issues2.push({ path: `${path}.enabled`, message: "Declare calculator availability." });
+    if (!Array.isArray(value.inputs) || value.inputs.length || !Array.isArray(value.metrics) || value.metrics.length) issues2.push({ path, message: "Compact calculators use empty compatibility arrays." });
+    return issues2;
+  }
   keys(value, ["methodologyVersion", "enabled", "heading", "subheading", "kicker", "disclaimer", "currency", "currencyCopy", "costCopy", "locale", "periodToggle", "inputs", "metrics", "businessImpact", "cta"], path);
   issues.push(...validateRoiCurrencyCopy(value.currencyCopy, `${path}.currencyCopy`));
   issues.push(...validateRoiCostCopy(value.costCopy, `${path}.costCopy`));
@@ -830,12 +958,12 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
     if (!Array.isArray(value[k]) || value[k].length) fail(`${path}.${k}`, "Version 2 uses platform calculations; keep this compatibility array empty.");
   });
   if (value.cta !== void 0) {
-    if (!record(value.cta)) fail(`${path}.cta`, "Expected CTA copy.");
+    if (!record2(value.cta)) fail(`${path}.cta`, "Expected CTA copy.");
     else {
       keys(value.cta, ["primaryLabel", "primaryTarget", "secondaryLabel", "secondaryTarget", "privacyNote"], `${path}.cta`);
       text(value.cta.primaryLabel, `${path}.cta.primaryLabel`);
       ["secondaryLabel", "privacyNote"].forEach((k) => {
-        if (value.cta && record(value.cta) && value.cta[k] !== void 0) text(value.cta[k], `${path}.cta.${k}`);
+        if (value.cta && record2(value.cta) && value.cta[k] !== void 0) text(value.cta[k], `${path}.cta.${k}`);
       });
       for (const key of ["primaryTarget", ...value.cta.secondaryLabel !== void 0 ? ["secondaryTarget"] : []]) {
         if (typeof value.cta[key] !== "string" || !/^[a-z][a-z-]{0,60}$/.test(value.cta[key])) fail(`${path}.cta.${key}`, "Use a section target, never a URL.");
@@ -843,14 +971,14 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
     }
   }
   const b = value.businessImpact;
-  if (!record(b)) return [...issues, { path: `${path}.businessImpact`, message: "Business impact content is required." }];
+  if (!record2(b)) return [...issues, { path: `${path}.businessImpact`, message: "Business impact content is required." }];
   const bp = `${path}.businessImpact`;
   keys(b, ["defaults", "fixedAssumptions", "householdCopy", "storeOpsAssumptions", "storeOpsCopy", "copy", "fields", "outcomes", "burden", "opportunity", "usagePackages", "tabs", "hero", "selected", "reviewMode", "costMode", "confirmations", "defaultPackage", "workloadMultiplierField", "pricing", "presentation"], bp);
   const household = b.fixedAssumptions !== void 0;
   const storeOps = b.storeOpsAssumptions !== void 0;
   const estimator = household || storeOps;
   if (household && storeOps) fail(`${bp}.storeOpsAssumptions`, "Use either household or store-ops fixed assumptions, not both.");
-  if (!record(b.defaults)) fail(`${bp}.defaults`, "Add workload defaults.");
+  if (!record2(b.defaults)) fail(`${bp}.defaults`, "Add workload defaults.");
   else {
     const defaults = b.defaults;
     keys(defaults, Object.keys(IMPACT_FIELDS), `${bp}.defaults`);
@@ -862,10 +990,10 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
     });
     if (!household && defaults.people != null && !Number.isInteger(defaults.people)) fail(`${bp}.defaults.people`, "Use a whole number of people.");
   }
-  const estimatorDefaults = record(b.defaults) ? b.defaults : {};
+  const estimatorDefaults = record2(b.defaults) ? b.defaults : {};
   const oneInputPanel = (inputFields, label) => {
     if (!Array.isArray(b.tabs) || b.tabs.length !== 1) return fail(`${bp}.tabs`, "Use exactly one input panel.");
-    if (!record(b.tabs[0])) return;
+    if (!record2(b.tabs[0])) return;
     const tab = b.tabs[0];
     const fields = Array.isArray(tab.fields) ? tab.fields : [];
     const exposed = fields.filter((field) => !inputFields.includes(field));
@@ -878,7 +1006,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
   const templatedCopy = (key, english, templates) => {
     const cp = `${bp}.${key}`;
     const copy = b[key];
-    if (!record(copy)) return fail(cp, "Add the result copy.");
+    if (!record2(copy)) return fail(cp, "Add the result copy.");
     keys(copy, Object.keys(english), cp);
     Object.keys(english).forEach((k) => {
       text(copy[k], `${cp}.${k}`);
@@ -902,7 +1030,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
     const share = (value2, p, example) => {
       if (!finiteNumber(value2) || value2 <= 0 || value2 > 1) fail(p, `Use a share above 0 and at most 1 (${example}).`);
     };
-    if (!record(fixed)) fail(fp, "Expected fixed assumptions.");
+    if (!record2(fixed)) fail(fp, "Expected fixed assumptions.");
     else {
       keys(fixed, ["offloadRate", "reviewMinutes", "foodWastePerPersonYear", "foodWasteSource", "smartShopping", "smartShare", "spendBySize", "spendSource", "userEditable"], fp);
       const { offloadRate, reviewMinutes, foodWastePerPersonYear, spendBySize } = fixed;
@@ -914,7 +1042,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
       text(fixed.foodWasteSource, `${fp}.foodWasteSource`);
       if (typeof fixed.smartShopping !== "boolean") fail(`${fp}.smartShopping`, "Set smartShopping to false until offers and price checks are verified live.");
       share(fixed.smartShare, `${fp}.smartShare`, "0.03 means 3%");
-      if (!record(spendBySize)) fail(`${fp}.spendBySize`, "Add monthly food spend for households of 1 to 8 people.");
+      if (!record2(spendBySize)) fail(`${fp}.spendBySize`, "Add monthly food spend for households of 1 to 8 people.");
       else {
         keys(spendBySize, HOUSEHOLD_SIZE_KEYS, `${fp}.spendBySize`);
         HOUSEHOLD_SIZE_KEYS.forEach((size) => {
@@ -934,7 +1062,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
     startingValue("minutes", "Use planning minutes from 10 to 90.");
     startingValue("people", "Use a whole household size from 1 to 8.");
     if (defaults.customer_price != null) fail(`${bp}.defaults.customer_price`, "Household prices come from pricing.tiers. Remove customer_price.");
-    if (!record(b.pricing) || b.pricing.basis !== "tiered") fail(`${bp}.pricing.basis`, "Household estimates price by planning sessions; only the session count changes the price.");
+    if (!record2(b.pricing) || b.pricing.basis !== "tiered") fail(`${bp}.pricing.basis`, "Household estimates price by planning sessions; only the session count changes the price.");
     else {
       const tiers = b.pricing.tiers;
       if (!Array.isArray(tiers) || !tiers.length || tiers.length > 6) fail(`${bp}.pricing.tiers`, "Add one to six session tiers.");
@@ -942,7 +1070,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
         let previous = 0;
         tiers.forEach((tier, i) => {
           const tp = `${bp}.pricing.tiers[${i}]`;
-          if (!record(tier)) return fail(tp, "Expected a session tier.");
+          if (!record2(tier)) return fail(tp, "Expected a session tier.");
           keys(tier, ["upTo", "price"], tp);
           if (!Number.isInteger(tier.upTo) || tier.upTo <= previous) fail(`${tp}.upTo`, "Use whole session limits that increase from tier to tier.");
           else previous = tier.upTo;
@@ -960,7 +1088,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
     const sp = `${bp}.storeOpsAssumptions`;
     const fixed = b.storeOpsAssumptions;
     const defaults = estimatorDefaults;
-    if (!record(fixed)) fail(sp, "Expected store-ops fixed assumptions.");
+    if (!record2(fixed)) fail(sp, "Expected store-ops fixed assumptions.");
     else {
       keys(fixed, ["shareHandled", "reviewMinutesPerStoreCycle", "lossRate", "lossRateSource", "userEditable"], sp);
       const { shareHandled, reviewMinutesPerStoreCycle, lossRate } = fixed;
@@ -978,7 +1106,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
       if (defaults[k] == null) fail(`${bp}.defaults.${k}`, "Add a starting value.");
     });
     if (!finiteNumber(price) || price < 0) fail(`${bp}.defaults.customer_price`, "Add the fixed price per store per month.");
-    if (!record(b.pricing) || b.pricing.basis !== "per_volume") fail(`${bp}.pricing.basis`, "Store-ops estimates price per store; only the store count changes the price.");
+    if (!record2(b.pricing) || b.pricing.basis !== "per_volume") fail(`${bp}.pricing.basis`, "Store-ops estimates price per store; only the store count changes the price.");
     else {
       if (b.pricing.annualPrice !== void 0) fail(`${bp}.pricing.annualPrice`, "The yearly price is the monthly price \xD7 12.");
       if (b.pricing.minimumMargin !== void 0) fail(`${bp}.pricing.minimumMargin`, "Store-ops pricing has no usage margin.");
@@ -986,7 +1114,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
     oneInputPanel(STORE_OPS_INPUT_FIELDS, "stores, cycles per store, preparation minutes and food purchases per store");
     templatedCopy("storeOpsCopy", STORE_OPS_COPY, STORE_OPS_COPY_TEMPLATES);
   } else if (b.storeOpsCopy !== void 0) fail(`${bp}.storeOpsCopy`, "Store-ops copy requires store-ops fixed assumptions.");
-  if (!record(b.copy)) fail(`${bp}.copy`, "Localized interface copy is required.");
+  if (!record2(b.copy)) fail(`${bp}.copy`, "Localized interface copy is required.");
   else {
     const copy = b.copy;
     keys(copy, Object.keys(IMPACT_COPY), `${bp}.copy`);
@@ -995,13 +1123,13 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
       if (required.includes(k) || copy[k] !== void 0) text(copy[k], `${bp}.copy.${k}`);
     });
   }
-  if (!record(b.fields)) fail(`${bp}.fields`, "Authored input labels and help are required.");
+  if (!record2(b.fields)) fail(`${bp}.fields`, "Authored input labels and help are required.");
   else {
     keys(b.fields, Object.keys(IMPACT_FIELDS), `${bp}.fields`);
     for (const k of Object.keys(b.fields)) {
       const f = b.fields[k];
       if (!IMPACT_FIELDS[k]) fail(`${bp}.fields.${k}`, "Use a supported input field.");
-      else if (!record(f)) fail(`${bp}.fields.${k}`, "Add label and help.");
+      else if (!record2(f)) fail(`${bp}.fields.${k}`, "Add label and help.");
       else {
         keys(f, ["label", "help"], `${bp}.fields.${k}`);
         text(f.label, `${bp}.fields.${k}.label`, 160);
@@ -1012,7 +1140,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
   const seen = /* @__PURE__ */ new Set();
   if (!Array.isArray(b.outcomes) || b.outcomes.length > 7 || !b.outcomes.length && !estimator) fail(`${bp}.outcomes`, "Use one to seven supported outcomes.");
   else b.outcomes.forEach((o, i) => {
-    if (!record(o)) return fail(`${bp}.outcomes[${i}]`, "Expected an outcome.");
+    if (!record2(o)) return fail(`${bp}.outcomes[${i}]`, "Expected an outcome.");
     keys(o, ["id", "label", "help"], `${bp}.outcomes[${i}]`);
     if (!IMPACT_OUTCOMES.includes(o.id) || seen.has(o.id)) fail(`${bp}.outcomes[${i}].id`, "Use a unique supported outcome.");
     seen.add(o.id);
@@ -1025,13 +1153,13 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
     else list.forEach((v, i) => text(v, `${bp}.${k}[${i}]`, 240));
   });
   if (b.selected !== void 0) {
-    if (!Array.isArray(b.selected) || b.selected.some((id) => !seen.has(id))) fail(`${bp}.selected`, "Preselected outcomes must be included in outcomes.");
+    if (!Array.isArray(b.selected) || b.selected.some((id2) => !seen.has(id2))) fail(`${bp}.selected`, "Preselected outcomes must be included in outcomes.");
   }
   if (b.reviewMode !== void 0 && b.reviewMode !== "team" && b.reviewMode !== "paid") fail(`${bp}.reviewMode`, "Use team or paid review.");
   if (b.costMode !== void 0 && b.costMode !== "total" && b.costMode !== "itemized") fail(`${bp}.costMode`, "Use total or itemized cost.");
   if (b.defaultPackage !== void 0 && b.defaultPackage !== "base" && b.defaultPackage !== "medium") fail(`${bp}.defaultPackage`, "Use base or medium.");
   if (b.confirmations !== void 0) {
-    if (!record(b.confirmations)) fail(`${bp}.confirmations`, "Expected confirmation flags.");
+    if (!record2(b.confirmations)) fail(`${bp}.confirmations`, "Expected confirmation flags.");
     else {
       keys(b.confirmations, ["overlap", "hiring", "outcomes", "hide"], `${bp}.confirmations`);
       for (const key of ["overlap", "hiring", "outcomes", "hide"]) {
@@ -1040,7 +1168,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
     }
   }
   if (b.hero !== void 0) {
-    if (!record(b.hero)) fail(`${bp}.hero`, "Expected a hero metric.");
+    if (!record2(b.hero)) fail(`${bp}.hero`, "Expected a hero metric.");
     else {
       keys(b.hero, ["kind", "label"], `${bp}.hero`);
       if (b.hero.kind !== "volume" && b.hero.kind !== "capacity" && b.hero.kind !== "money") fail(`${bp}.hero.kind`, "Use volume, capacity or money.");
@@ -1050,7 +1178,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
   if (b.tabs !== void 0) {
     if (!Array.isArray(b.tabs) || !b.tabs.length || b.tabs.length > 4) fail(`${bp}.tabs`, "Use one to four tabs.");
     else b.tabs.forEach((tab, i) => {
-      if (!record(tab)) return fail(`${bp}.tabs[${i}]`, "Expected a tab.");
+      if (!record2(tab)) return fail(`${bp}.tabs[${i}]`, "Expected a tab.");
       keys(tab, ["id", "label", "intro", "fields", "showReview", "showOutcomes", "showPackage"], `${bp}.tabs[${i}]`);
       if (typeof tab.id !== "string" || !/^[a-z][a-z0-9-]{0,40}$/.test(tab.id)) fail(`${bp}.tabs[${i}].id`, "Use a compact tab id.");
       text(tab.label, `${bp}.tabs[${i}].label`, 80);
@@ -1062,13 +1190,13 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
     });
   }
   if (b.usagePackages !== void 0) {
-    if (!record(b.usagePackages)) fail(`${bp}.usagePackages`, "Expected base and medium packages.");
+    if (!record2(b.usagePackages)) fail(`${bp}.usagePackages`, "Expected base and medium packages.");
     else {
       keys(b.usagePackages, ["base", "medium"], `${bp}.usagePackages`);
       for (const name of ["base", "medium"]) {
         const pack = b.usagePackages[name];
         const pp = `${bp}.usagePackages.${name}`;
-        if (!record(pack)) fail(pp, "Expected a usage package.");
+        if (!record2(pack)) fail(pp, "Expected a usage package.");
         else {
           keys(pack, ["volume", "tokensPerOutput", "platform_cost", ...PACKAGE_VALUE_KEYS], pp);
           numberInRange(pack.volume, "volume", `${pp}.volume`);
@@ -1083,7 +1211,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
   }
   if (b.workloadMultiplierField !== void 0 && b.workloadMultiplierField !== "cycles_per_unit") fail(`${bp}.workloadMultiplierField`, "Use cycles_per_unit when configuring recurring workload cycles.");
   if (b.pricing !== void 0) {
-    if (!record(b.pricing)) fail(`${bp}.pricing`, "Expected pricing metadata.");
+    if (!record2(b.pricing)) fail(`${bp}.pricing`, "Expected pricing metadata.");
     else {
       keys(b.pricing, ["basis", "annualPrice", "tiers", "minimumMargin", "label", "help"], `${bp}.pricing`);
       if (!["fixed", "per_volume", "usage", "tiered"].includes(b.pricing.basis)) fail(`${bp}.pricing.basis`, "Use fixed, per_volume, usage or tiered.");
@@ -1097,7 +1225,7 @@ function validateBusinessImpact(value, path = "landingPage.roiCalculator") {
     }
   }
   if (b.presentation !== void 0) {
-    if (!record(b.presentation)) fail(`${bp}.presentation`, "Expected presentation metadata.");
+    if (!record2(b.presentation)) fail(`${bp}.presentation`, "Expected presentation metadata.");
     else {
       keys(b.presentation, ["financial", "showCustomerEconomics", "hideEconomicMultiple", "costFocus", "showTokenUsage", "showInternalCost"], `${bp}.presentation`);
       if (!["capacity_only", "optional", "required"].includes(b.presentation.financial)) fail(`${bp}.presentation.financial`, "Use capacity_only, optional or required.");

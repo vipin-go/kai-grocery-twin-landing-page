@@ -1,22 +1,27 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const { validateLandingMobileContent } = require('./landing-page-mobile.cjs');
+const { validateChakriLandingContent } = require('./chakri-landing-validation');
 const nodePath = require('path');
 const { createHash } = require('crypto');
 const { validateRoiCalculator } = require('./landing-page-roi');
+const boliCopySchema = require('../references/boli-learning-copy-schema.json');
+const wardrobeCopySchema = require('../references/wardrobe-twin-copy-schema.json');
+const { validateMiravLandingCopy, isMiravPreviewIconPath } = require('./mirav-landing-copy.cjs');
 
 const ALLOWED_ICONS = new Set([
   'heart', 'shield-check', 'sparkles', 'chat', 'users', 'lock', 'check', 'star',
   'search', 'lightbulb', 'user-plus', 'calendar', 'question-mark', 'envelope',
 ]);
 const ALLOWED_ROLES = new Set(['user', 'assistant']);
-const ALLOWED_DESIGN_VARIANTS = new Set(['default', 'signature', 'banking', 'form-operations', 'logistics-portal', 'cinematic-campaigns', 'recruiting-operations', 'grocery-twin', 'event-introductions', 'home-introductions']);
+const ALLOWED_DESIGN_VARIANTS = new Set(['default', 'signature', 'banking', 'form-operations', 'logistics-portal', 'cinematic-campaigns', 'recruiting-operations', 'grocery-twin', 'wardrobe-twin', 'boli-learning', 'event-introductions', 'home-introductions', 'chakri-scrap', 'klok', 'community-connections']);
 const ALLOWED_BRAND_MARKS = new Set(['heart', 'image', 'initial']);
 const ALLOWED_NAV_TARGETS = new Set([
   'meet', 'about', 'capabilities', 'use-cases', 'trust',
   'how-it-works', 'stories', 'faq', 'contact', 'roi-calculator',
 ]);
 const GROCERY_TARGETS = new Set(['top', 'product', 'mobile', 'stories', 'features', 'about', 'contact', 'hero-chat', 'roi-calculator']);
+const WARDROBE_TARGETS = new Set(['top', 'how-it-works', 'try-on', 'exchange', 'capabilities', 'marketplace', 'about', 'hero-chat']);
 const EVENT_INTRODUCTION_TARGETS = new Set(['top', 'about', 'how-it-works', 'pairings', 'faqs', 'waitlist', 'closing', 'hero-chat', 'roi-calculator']);
 const HOME_INTRODUCTION_TARGETS = new Set(['top', 'audience', 'privacy', 'how-it-works', 'proposals', 'meet', 'hero-chat', 'roi-calculator']);
 const LOGISTICS_PORTAL_TARGETS = new Set(['top', 'edge', 'control', 'workflows', 'pilot', 'simulation', 'roi-calculator']);
@@ -26,7 +31,7 @@ const ALLOWED_THEME_MODES = new Set(['light', 'dark']);
 const ALLOWED_BUILTIN_FONTS = new Set(['dm-sans', 'inter', 'system', 'roboto', 'poppins', 'outfit']);
 const NORMALIZED_HEX = /^#[0-9a-f]{6}$/;
 const SAFE_GOOGLE_FONT = /^[A-Za-z0-9][A-Za-z0-9 .'-]{0,79}$/;
-const BRAND_COLOR_KEYS = ['canvas', 'surface', 'sidebar', 'text', 'accent', 'userBubble'];
+const BRAND_COLOR_KEYS = ['canvas', 'surface', 'sidebar', 'text', 'accent', 'accentHover', 'userBubble'];
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const IMAGE_EXTENSION = /\.(?:avif|gif|jpe?g|png|svg|webp)(?:[?#]|$)/i;
 const VIDEO_EXTENSION = /\.(?:m4v|mov|mp4|webm)(?:[?#]|$)/i;
@@ -97,6 +102,12 @@ function isDirectImageSource(value) {
     && (/^https:\/\//i.test(value) || SAFE_APP_IMAGE_PATH.test(value));
 }
 
+function isDirectVideoSource(value) {
+  return typeof value === 'string'
+    && VIDEO_EXTENSION.test(value)
+    && (/^https:\/\//i.test(value) || /^\/(?:(?:assets|landing-pages)\/[a-z0-9][a-z0-9/_-]*|persona-course-media\/[a-z0-9][a-z0-9-]*\/[a-z0-9][a-z0-9._-]*)\.(?:m4v|mov|mp4|webm)(?:[?#]|$)/i.test(value));
+}
+
 function validateIcon(icon, label, required = false) {
   if (icon === undefined) {
     if (required) fail(`${label} is required`);
@@ -120,6 +131,7 @@ function contrastRatio(first, second) {
 
 function assertNoEmoji(value, path = 'landingPage') {
   if (typeof value === 'string') {
+    if (isMiravPreviewIconPath(path)) return;
     if (/\p{Extended_Pictographic}/u.test(value.replace(/↔/g, '')) && !path.endsWith('.footer.copyright')) {
       fail(`${path} must not contain emoji; use a supported icon key instead`);
     }
@@ -307,6 +319,89 @@ function validateLogisticsPortal(landingPage) {
   inspect(root, 'landingPage.logisticsPortal');
 }
 
+function validateBoliLearningContent(content) {
+  const isRecord = (value) => Boolean(value) && typeof value === 'object' && !Array.isArray(value);
+  const issues = [];
+  const prefix = 'landingPage.boliLearning';
+  const issue = (path, message) => { issues.push({ path: `${prefix}${path ? `.${path}` : ''}`, message }); };
+  const record = (value, path, keys) => {
+    if (!isRecord(value)) { issue(path, 'Provide the complete BOLI Learning content object.'); return false; }
+    for (const key of Object.keys(value)) if (!keys.includes(key)) issue(path ? `${path}.${key}` : key, 'Only registered BOLI Learning content fields are allowed.');
+    return true;
+  };
+  const text = (value, path, max = 600) => {
+    if (typeof value !== 'string' || !value.trim() || value.length > max) issue(path, `Provide text between 1 and ${max} characters.`);
+  };
+  const strings = (value, path, count) => {
+    if (!Array.isArray(value) || value.length !== count) { issue(path, `Provide exactly ${count} entries.`); return; }
+    value.forEach((item, index) => text(item, `${path}[${index}]`));
+  };
+  if (!record(content, '', ['contentVersion', 'brandName', 'tagline', 'mascotImage', 'avatarImage', 'minecraftMascotImage', 'minecraftAvatarImage', 'logoImage', 'islandsImage', 'parents', 'schools', 'copy', 'courses', 'faq'])) return issues;
+  if (content.contentVersion !== undefined && (!Number.isInteger(content.contentVersion) || Number(content.contentVersion) < 1)) issue('contentVersion', 'Use a positive integer content version.');
+  text(content.brandName, 'brandName', 80);
+  text(content.tagline, 'tagline');
+  for (const key of ['mascotImage', 'islandsImage']) if (!isDirectImageSource(content[key])) issue(key, 'Use a direct HTTPS or bundled application image URL.');
+  for (const key of ['avatarImage', 'minecraftMascotImage', 'minecraftAvatarImage', 'logoImage']) if (content[key] !== undefined && !isDirectImageSource(content[key])) issue(key, 'Use a direct HTTPS or bundled application image URL.');
+  const optionalCopyKeys = boliCopySchema.optional;
+  const copyKeys = boliCopySchema.required;
+  if (record(content.copy, 'copy', [...copyKeys, ...optionalCopyKeys])) {
+    for (const key of copyKeys) text(content.copy[key], `copy.${key}`);
+    for (const key of optionalCopyKeys) if (content.copy[key] !== undefined) text(content.copy[key], `copy.${key}`);
+  }
+  const editionKeys = ["eyebrow", "headline", "description", "flagshipQuestion", "flagshipDescription", "learnerLabel", "approvalLabel", "chatQuestion", "chatAnswer", "chartTitle", "chartNote", "createPrompt", "startPrompt"];
+  for (const name of ['parents', 'schools']) {
+    const edition = content[name];
+    if (!record(edition, name, [...editionKeys, 'chartLabels'])) continue;
+    for (const key of editionKeys) text(edition[key], `${name}.${key}`, key.endsWith('Prompt') ? 2000 : 600);
+    strings(edition.chartLabels, `${name}.chartLabels`, 3);
+  }
+  const courseIds = new Set();
+  const registeredCourseIds = Number(content.contentVersion || 0) >= 3
+    ? ['neural', 'motion', 'living', 'electricity']
+    : ['neural', 'motion', 'living'];
+  if (!Array.isArray(content.courses) || content.courses.length !== registeredCourseIds.length) issue('courses', `Provide the ${registeredCourseIds.length} registered course islands.`);
+  else content.courses.forEach((course, index) => {
+    const path = `courses[${index}]`;
+    if (!record(course, path, ['id', 'title', 'island', 'subject', 'goal', 'descriptions', 'lessons', 'symbol', 'color', 'ageContent'])) return;
+    const id = String(course.id || '');
+    if (!registeredCourseIds.includes(id) || courseIds.has(id)) issue(`${path}.id`, `Use ${registeredCourseIds.join(', ')} exactly once.`);
+    courseIds.add(id);
+    if (!['lavender', 'peach', 'green', 'sky'].includes(String(course.color))) issue(`${path}.color`, 'Choose lavender, peach, green, or sky.');
+    for (const key of ['title', 'island', 'subject', 'goal']) text(course[key], `${path}.${key}`);
+    text(course.symbol, `${path}.symbol`, 8);
+    const ages = ['9–11', '12–14', '15–18'];
+    if (record(course.descriptions, `${path}.descriptions`, ages)) for (const age of ages) text(course.descriptions[age], `${path}.descriptions.${age}`);
+    if (!Array.isArray(course.lessons) || course.lessons.length < 1 || course.lessons.length > 6) issue(`${path}.lessons`, 'Provide between 1 and 6 lessons.');
+    else course.lessons.forEach((lesson, lessonIndex) => text(lesson, `${path}.lessons[${lessonIndex}]`));
+    if (course.ageContent !== undefined && record(course.ageContent, `${path}.ageContent`, ages)) {
+      for (const age of ages) {
+        const entry = course.ageContent[age];
+        if (entry === undefined || !record(entry, `${path}.ageContent.${age}`, ['title', 'island', 'subject', 'goal', 'description', 'lessons', 'puzzle', 'gameTitle', 'storyboardImage', 'storyboardAlt', 'pathImage', 'evidenceImage', 'introVideo'])) continue;
+        for (const key of ['title', 'island', 'subject', 'goal', 'description', 'gameTitle', 'storyboardAlt']) text(entry[key], `${path}.ageContent.${age}.${key}`);
+        if (!isDirectImageSource(entry.storyboardImage)) issue(`${path}.ageContent.${age}.storyboardImage`, 'Use a direct HTTPS or bundled application image URL.');
+        if (entry.pathImage !== undefined && !isDirectImageSource(entry.pathImage)) issue(`${path}.ageContent.${age}.pathImage`, 'Use a direct HTTPS or bundled application image URL.');
+        if (entry.evidenceImage !== undefined && !isDirectImageSource(entry.evidenceImage)) issue(`${path}.ageContent.${age}.evidenceImage`, 'Use a direct HTTPS or bundled application image URL.');
+        if (entry.introVideo !== undefined && !isDirectVideoSource(entry.introVideo)) issue(`${path}.ageContent.${age}.introVideo`, 'Use a direct HTTPS or bundled application video URL.');
+        if (!Array.isArray(entry.lessons) || entry.lessons.length < 1 || entry.lessons.length > 6) issue(`${path}.ageContent.${age}.lessons`, 'Provide between 1 and 6 lessons.');
+        else entry.lessons.forEach((lesson, lessonIndex) => text(lesson, `${path}.ageContent.${age}.lessons[${lessonIndex}]`));
+        if (record(entry.puzzle, `${path}.ageContent.${age}.puzzle`, ['title', 'prompt', 'choices', 'correct', 'hint', 'unlockQuestion'])) {
+          for (const key of ['title', 'prompt', 'hint', 'unlockQuestion']) text(entry.puzzle[key], `${path}.ageContent.${age}.puzzle.${key}`);
+          strings(entry.puzzle.choices, `${path}.ageContent.${age}.puzzle.choices`, 3);
+          if (!Number.isInteger(entry.puzzle.correct) || Number(entry.puzzle.correct) < 0 || Number(entry.puzzle.correct) > 2) issue(`${path}.ageContent.${age}.puzzle.correct`, 'Choose a zero-based answer index from 0 to 2.');
+        }
+      }
+    }
+  });
+  if (!Array.isArray(content.faq) || content.faq.length < 1 || content.faq.length > 8) issue('faq', 'Provide between 1 and 8 questions.');
+  else content.faq.forEach((item, index) => {
+    const path = `faq[${index}]`;
+    if (!record(item, path, ['question', 'answer'])) return;
+    text(item.question, `${path}.question`);
+    text(item.answer, `${path}.answer`, 2000);
+  });
+  return issues;
+}
+
 function validateGroceryTwin(landingPage) {
   const root = landingPage.groceryTwin;
   if (!root || typeof root !== 'object' || Array.isArray(root)) fail('landingPage.groceryTwin is required when design.variant is "grocery-twin"');
@@ -351,6 +446,44 @@ function validateGroceryTwin(landingPage) {
   get('features.items').forEach((item, index) => {
     if (!['purple', 'blue', 'lime'].includes(item?.accent)) fail(`landingPage.groceryTwin.features.items[${index}].accent must be purple, blue, or lime`);
   });
+}
+
+function validateWardrobeTwin(landingPage) {
+  const root = landingPage.wardrobeTwin;
+  if (!root || typeof root !== 'object' || Array.isArray(root)) fail('landingPage.wardrobeTwin is required when design.variant is "wardrobe-twin"');
+  const get = (path) => path.split('.').reduce((value, key) => value && typeof value === 'object' ? value[key] : undefined, root);
+  for (const path of [...wardrobeCopySchema.required, ...wardrobeCopySchema.optional]) {
+    const value = get(path);
+    if (value === undefined && wardrobeCopySchema.optional.includes(path)) continue;
+    if (typeof value !== 'string' || !value.trim()) fail(`landingPage.wardrobeTwin.${path} must contain non-empty copy`);
+  }
+  for (const path of wardrobeCopySchema.optionalObjects) {
+    const value = get(path);
+    if (value !== undefined && (!value || typeof value !== 'object' || Array.isArray(value))) fail(`landingPage.wardrobeTwin.${path} must be an object`);
+  }
+  for (const [path, count] of Object.entries({ ...wardrobeCopySchema.requiredArrays, ...wardrobeCopySchema.optionalArrays })) {
+    const value = get(path);
+    if (value === undefined && Object.prototype.hasOwnProperty.call(wardrobeCopySchema.optionalArrays, path)) continue;
+    if (!Array.isArray(value) || value.length !== count) fail(`landingPage.wardrobeTwin.${path} must contain exactly ${count} items`);
+  }
+  get('header.navItems').forEach((item, index) => {
+    if (!WARDROBE_TARGETS.has(item?.target)) fail(`landingPage.wardrobeTwin.header.navItems[${index}].target must use a registered Wardrobe Twin section`);
+  });
+  const stageIds = new Set(get('retail.stages').map((stage) => stage?.id));
+  if (stageIds.size !== 3 || !['language', 'region', 'person'].every((id) => stageIds.has(id))) fail('landingPage.wardrobeTwin.retail.stages must configure language, region, and person exactly once');
+  get('retail.stages').forEach((stage, index) => {
+    if (!Array.isArray(stage?.bullets) || stage.bullets.length !== 3) fail(`landingPage.wardrobeTwin.retail.stages[${index}].bullets must contain exactly 3 items`);
+  });
+  (get('retail.markets.experiences') || []).forEach((experience, index) => {
+    if (!['NL', 'FR', 'UK', 'IN'].includes(experience?.code)) fail(`landingPage.wardrobeTwin.retail.markets.experiences[${index}].code must stay NL, FR, UK, or IN`);
+    ['country', 'title', 'feature'].forEach((field) => {
+      if (typeof experience?.[field] !== 'string' || !experience[field].trim()) fail(`landingPage.wardrobeTwin.retail.markets.experiences[${index}].${field} is required`);
+    });
+    if (!Array.isArray(experience?.details) || experience.details.length !== 3 || experience.details.some((detail) => typeof detail !== 'string' || !detail.trim())) {
+      fail(`landingPage.wardrobeTwin.retail.markets.experiences[${index}].details must contain exactly 3 items`);
+    }
+  });
+  if (!isDirectImageSource(get('hero.characterImage'))) fail('landingPage.wardrobeTwin.hero.characterImage must be a direct HTTPS or bundled application image URL');
 }
 
 function validateCinematicCampaigns(landingPage) {
@@ -861,7 +994,7 @@ function validateLandingPageModel(landingPage, chatConfigPath, definitionFilePat
   if (!landingPage || typeof landingPage !== 'object') fail('landingPage object is required');
   if (landingPage.capabilityPreview !== undefined) {
     const binding = landingPage.capabilityPreview;
-    if (!binding || typeof binding !== 'object' || Array.isArray(binding) || Object.keys(binding).some(key => !['enabled', 'commandId', 'presentation'].includes(key)) || typeof binding.enabled !== 'boolean' || !/^[a-z][a-z0-9-]{0,63}$/.test(binding.commandId || '') || (binding.presentation !== undefined && !['journey', 'surface'].includes(binding.presentation))) fail('landingPage.capabilityPreview accepts enabled, a stable registered commandId, and an optional journey or surface presentation');
+    if (!binding || typeof binding !== 'object' || Array.isArray(binding) || Object.keys(binding).some(key => !['enabled', 'commandId', 'presentation'].includes(key)) || typeof binding.enabled !== 'boolean' || !/^[a-z][a-z0-9-]{0,63}$/.test(binding.commandId || '') || binding.presentation !== undefined && !['journey', 'surface'].includes(binding.presentation)) fail('landingPage.capabilityPreview accepts enabled, a stable registered commandId, and an optional supported presentation');
     if (binding.enabled && chatConfigPath) {
       const config = JSON.parse(fs.readFileSync(chatConfigPath, 'utf8'));
       const command = config.publishedConfig?.agentTopology?.slashCommands?.find(item => item.enabled !== false && item.id === binding.commandId);
@@ -875,10 +1008,10 @@ function validateLandingPageModel(landingPage, chatConfigPath, definitionFilePat
   validateRoiCalculator({ roiCalculator: landingPage.groceryTwin?.homeRoiCalculator, pathPrefix: 'landingPage.groceryTwin.homeRoiCalculator' }).forEach((issue) => fail(`${issue.path}: ${issue.message}`));
   assertNoEmoji(landingPage);
 
-  if (landingPage.localization?.mobile !== undefined) validateLandingMobileContent(landingPage.localization.mobile,landingPage).forEach(issue=>fail(`${issue.path}: ${issue.message}`));
   if (landingPage.localization !== undefined) {
     const localization = landingPage.localization;
     if (!localization || typeof localization !== 'object' || Array.isArray(localization)) fail('landingPage.localization must be an object');
+    if (localization.mobile !== undefined) validateLandingMobileContent(localization.mobile,landingPage).forEach(issue=>fail(`${issue.path}: ${issue.message}`));
     if (localization.translation !== undefined) {
       const translation = localization.translation;
       if (!translation || typeof translation !== 'object' || Array.isArray(translation)) fail('landingPage.localization.translation must be an object');
@@ -1072,7 +1205,11 @@ function validateLandingPageModel(landingPage, chatConfigPath, definitionFilePat
   if (landingPage.design?.variant === 'logistics-portal') validateLogisticsPortal(landingPage);
   if (landingPage.design?.variant === 'cinematic-campaigns') validateCinematicCampaigns(landingPage);
   if (landingPage.design?.variant === 'recruiting-operations') validateRecruitingOperations(landingPage);
+  if (landingPage.design?.variant === 'chakri-scrap' || landingPage.scrapOperations !== undefined) validateChakriLandingContent(landingPage.scrapOperations).forEach(issue => fail(`${issue.path}: ${issue.message}`));
+  if (landingPage.design?.variant === 'community-connections' || landingPage.mirav !== undefined) validateMiravLandingCopy(landingPage.mirav).forEach(issue => fail(`${issue.path}: ${issue.message}`));
   if (landingPage.design?.variant === 'grocery-twin') validateGroceryTwin(landingPage);
+  if (landingPage.design?.variant === 'boli-learning' || landingPage.boliLearning !== undefined) validateBoliLearningContent(landingPage.boliLearning).forEach((issue) => fail(`${issue.path}: ${issue.message}`));
+  if (landingPage.design?.variant === 'wardrobe-twin') validateWardrobeTwin(landingPage);
   if (landingPage.design?.variant === 'event-introductions') validateEventIntroductions(landingPage);
   if (landingPage.design?.variant === 'home-introductions') validateHomeIntroductions(landingPage);
 
@@ -1087,7 +1224,11 @@ function validateLandingPageModel(landingPage, chatConfigPath, definitionFilePat
     }
     if (header.navItems !== undefined) {
       if (!Array.isArray(header.navItems)) fail('landingPage.header.navItems must be an array');
-      const allowedHeaderTargets = landingPage.design?.variant === 'grocery-twin' ? GROCERY_TARGETS : ALLOWED_NAV_TARGETS;
+      const allowedHeaderTargets = landingPage.design?.variant === 'grocery-twin'
+        ? GROCERY_TARGETS
+        : landingPage.design?.variant === 'wardrobe-twin'
+          ? WARDROBE_TARGETS
+          : ALLOWED_NAV_TARGETS;
       header.navItems.forEach((item, index) => {
         const label = `landingPage.header.navItems[${index}]`;
         if (!item || typeof item !== 'object') fail(`${label} must be an object`);
@@ -1521,6 +1662,9 @@ function validate(filePath, chatConfigPath) {
   validateLandingPageModel(parsed.landingPage, chatConfigPath, filePath);
 }
 
+module.exports = { validateLandingPageModel, validate };
+
+if (require.main === module) {
 const filePath = process.argv[2] || 'assets/landing-page.json';
 const chatConfigPath = process.argv[3];
 try {
@@ -1529,4 +1673,6 @@ try {
 } catch (error) {
   console.error(error instanceof Error ? error.message : String(error));
   process.exit(1);
+}
+
 }
