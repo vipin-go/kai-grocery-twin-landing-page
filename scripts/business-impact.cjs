@@ -91,7 +91,7 @@ module.exports = __toCommonJS(business_impact_exports);
 var COMPACT_ROI_COPY = {
   navLabel: "Pricing",
   heading: "Pricing & ROI",
-  intro: "Your inputs. Your estimated return.",
+  intro: "Choose a plan. See your forecast.",
   monthly: "Month",
   weekly: "Week",
   daily: "Day",
@@ -102,7 +102,7 @@ var COMPACT_ROI_COPY = {
   timeBenefit: "Estimated time value",
   timeRoi: "Time-value ROI",
   timeBack: "Hours returned",
-  missing: "Add your inputs",
+  missing: "Forecast unavailable",
   noRatio: "Not applicable",
   method: "How it\u2019s calculated",
   reset: "Reset",
@@ -111,10 +111,10 @@ var COMPACT_ROI_COPY = {
   excludedVat: "Excluding VAT",
   perMonth: "per month",
   equivalents: "Billed monthly. Day and week figures are averages, not daily or weekly charges or guaranteed returns.",
-  timeNote: "Time value is your optional estimate, not cash received or a payroll reduction. Net minutes include your checking and approval time.",
+  timeNote: "Forecast time value is returned capacity, not cash received or a payroll reduction. Net minutes include checking and approval.",
   estimateNote: "Planning estimates are separate from measured ROI. Only accepted outcomes and comparable recorded costs support measured returns.",
   limitNote: "For more usage or separately quoted work, contact us. This estimate covers the included plan only.",
-  timeFormula: "Time value = units \xD7 net minutes saved \xF7 60 \xD7 your hourly value.",
+  timeFormula: "Forecast time value = included work \xD7 fixed net minutes returned \xF7 60 \xD7 reference hourly value.",
   profitFormula: "Contribution profit = eligible recommendation sessions \xD7 conversion uplift \xF7 100 \xD7 profit per additional order.",
   proceedsFormula: "Incremental proceeds = lots or pickups \xD7 (net proceeds afterward \u2212 net proceeds beforehand).",
   roiFormula: "Net = benefit \u2212 app subscription cost. ROI = net \xF7 app subscription cost \xD7 100. Free plans have no ROI percentage."
@@ -182,7 +182,21 @@ function validateCompactRoi(value, path = "landingPage.roiCalculator.compact") {
     const offer = profile.offer;
     if (!record(offer)) fail(`${p}.offer`, "Add offer metadata.");
     else {
-      keys(offer, ["monthlyPrice", "basis", "unit", "vatIncluded", "includedUnits", "allowance", "extras"], `${p}.offer`);
+      keys(offer, ["monthlyPrice", "basis", "unit", "vatIncluded", "includedUnits", "allowance", "extras", "free", "trialDays", "trialLabel"], `${p}.offer`);
+      if (offer.trialDays !== void 0 && offer.trialDays !== 7) fail(`${p}.offer.trialDays`, "The draft paid trial is seven days.");
+      if (offer.trialLabel !== void 0) text(offer.trialLabel, `${p}.offer.trialLabel`);
+      if (offer.free !== void 0) {
+        const free = offer.free;
+        if (!record(free)) fail(`${p}.offer.free`, "Expected a bounded free allowance.");
+        else {
+          keys(free, ["includedUnits", "allowance", "unitsPerWorkload", "benefitFactor"], `${p}.offer.free`);
+          if (!finite(free.includedUnits) || free.includedUnits <= 0 || !Number.isInteger(free.includedUnits) || free.includedUnits > Number(offer.includedUnits)) fail(`${p}.offer.free.includedUnits`, "Free capacity must fit within the base allowance.");
+          text(free.allowance, `${p}.offer.free.allowance`);
+          if (finite(free.includedUnits) && finite(profile.unitsPerWorkload) && finite(offer.includedUnits) && free.includedUnits * (finite(free.unitsPerWorkload) ? free.unitsPerWorkload : profile.unitsPerWorkload) > offer.includedUnits) fail(`${p}.offer.free`, "Free work cannot exceed the base workload capacity.");
+          if (free.unitsPerWorkload !== void 0 && (!finite(free.unitsPerWorkload) || free.unitsPerWorkload <= 0 || free.unitsPerWorkload > 1e3)) fail(`${p}.offer.free.unitsPerWorkload`, "Use a bounded positive free workload multiplier.");
+          if (free.benefitFactor !== void 0 && (!finite(free.benefitFactor) || free.benefitFactor <= 0 || free.benefitFactor > 1)) fail(`${p}.offer.free.benefitFactor`, "Use a free-work benefit fraction greater than zero and at most one.");
+        }
+      }
       if (offer.monthlyPrice !== null && (!finite(offer.monthlyPrice) || offer.monthlyPrice < 0 || offer.monthlyPrice > 1e9)) fail(`${p}.offer.monthlyPrice`, "Use a nonnegative price or null for a quote.");
       if (!["fixed", "per_unit"].includes(String(offer.basis))) fail(`${p}.offer.basis`, "Use fixed or per_unit pricing.");
       if (typeof offer.vatIncluded !== "boolean") fail(`${p}.offer.vatIncluded`, "Declare VAT treatment.");

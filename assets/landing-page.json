@@ -420,7 +420,7 @@
         "enabled": true,
         "kicker": "Home impact",
         "heading": "Pricing & ROI",
-        "subheading": "Your inputs. Your estimated return.",
+        "subheading": "Choose a plan. See your forecast.",
         "disclaimer": "Planning estimates are separate from measured ROI. Only accepted outcomes and comparable recorded costs support measured returns.",
         "currency": "EUR",
         "currencyCopy": {
@@ -580,7 +580,7 @@
           "copy": {
             "navLabel": "Pricing",
             "heading": "Pricing & ROI",
-            "intro": "Your inputs. Your estimated return.",
+            "intro": "Choose a plan. See your forecast.",
             "monthly": "Month",
             "weekly": "Week",
             "daily": "Day",
@@ -591,7 +591,7 @@
             "timeBenefit": "Estimated time value",
             "timeRoi": "Time-value ROI",
             "timeBack": "Hours returned",
-            "missing": "Add your inputs",
+            "missing": "Forecast unavailable",
             "noRatio": "Not applicable",
             "method": "How it’s calculated",
             "reset": "Reset",
@@ -600,10 +600,10 @@
             "excludedVat": "Excluding VAT",
             "perMonth": "per month",
             "equivalents": "Billed monthly. Day and week figures are averages, not daily or weekly charges or guaranteed returns.",
-            "timeNote": "Time value is your optional estimate, not cash received or a payroll reduction. Net minutes include your checking and approval time.",
+            "timeNote": "Forecast time value is returned capacity, not cash received or a payroll reduction. Net minutes include checking and approval.",
             "estimateNote": "Planning estimates are separate from measured ROI. Only accepted outcomes and comparable recorded costs support measured returns.",
             "limitNote": "For more usage or separately quoted work, contact us. This estimate covers the included plan only.",
-            "timeFormula": "Time value = units × net minutes saved ÷ 60 × your hourly value.",
+            "timeFormula": "Forecast time value = included work × fixed net minutes returned ÷ 60 × reference hourly value.",
             "profitFormula": "Contribution profit = eligible recommendation sessions × conversion uplift ÷ 100 × profit per additional order.",
             "proceedsFormula": "Incremental proceeds = lots or pickups × (net proceeds afterward − net proceeds beforehand).",
             "roiFormula": "Net = benefit − app subscription cost. ROI = net ÷ app subscription cost × 100. Free plans have no ROI percentage."
@@ -618,7 +618,7 @@
                 {
                   "id": "units",
                   "label": "Planning sessions per month",
-                  "help": "Work you expect to review in one month, within the included allowance.",
+                  "help": "Forecast assumes the included monthly allowance is used. Higher draft tiers increase capacity and price together.",
                   "defaultValue": 4,
                   "min": 0,
                   "max": 4,
@@ -628,8 +628,8 @@
                 {
                   "id": "minutes_saved",
                   "label": "Minutes saved",
-                  "help": "Your estimate after checking, approval and any rework. Negative values mean extra effort.",
-                  "defaultValue": 17.5,
+                  "help": "Fixed forecast after preparation, checking, approval and rework; not a measured saving.",
+                  "defaultValue": 14,
                   "min": -1440,
                   "max": 1440,
                   "step": 0.1,
@@ -638,8 +638,8 @@
                 {
                   "id": "hourly_value",
                   "label": "Hourly value",
-                  "help": "Your own optional valuation. This is not a promised cash saving or salary reduction.",
-                  "defaultValue": null,
+                  "help": "Fixed reference valuation of returned capacity; not cash received or a salary reduction.",
+                  "defaultValue": 14.99,
                   "min": 0,
                   "max": 1000,
                   "step": 0.01,
@@ -653,11 +653,21 @@
                 "vatIncluded": true,
                 "includedUnits": 4,
                 "allowance": "4 sessions / 8 scans",
-                "extras": "Additional usage and professional services are separately quoted."
+                "extras": "Additional usage and professional services are separately quoted.",
+                "free": {
+                  "includedUnits": 1,
+                  "allowance": "Free · 1 session / 1 scan"
+                },
+                "trialDays": 7,
+                "trialLabel": "7-day trial · monthly price afterward"
               },
               "assumptions": [
-                "The starting 17.5 net minutes is an illustrative preparation estimate, not a measured result.",
-                "Net minutes include customer review. Monetary time value is supplied by you; it is not cash received."
+                "Forecast revision 2026-10-13. Full included usage, available work and a linear 1×/2×/3× capacity scenario; no extra demand is guaranteed.",
+                "Authored task budget: 70 manual minutes versus 56 assisted human minutes per work unit, including checking, approval and rework. The 14 net minutes (20%) is a scenario, not observed persona performance.",
+                "The 20% time-reduction scenario is informed by research on AI-assisted knowledge tasks. Its results do not establish savings for this persona or for every task: https://aiinstitute.hbs.edu/navigating-the-jagged-technological-frontier/",
+                "Personal time is valued at €14.99/hour, using the Dutch adult gross minimum wage effective July 2026 as an illustrative reference only. It is not a measured willingness to pay or an international wage estimate: https://www.government.nl/themes/work/minimum-wage/minimum-wage-amounts",
+                "All figures are forecasts. Setup effort, learning time and any additional services are excluded; actual net returns can be lower or negative. No sale, placement, funding, learning result or social outcome is monetized.",
+                "Free access renews monthly with the displayed basic allowance. Premium media, integrations and extra usage are excluded. Paid tiers have a seven-day trial; trial usage is capped at one basic free allowance, not an extra full monthly allowance. Prices shown are recurring prices after the trial. These are authored offer proposals; the calculator does not provision entitlements or change billing."
               ],
               "loop": "Pantry, meal or offer signal → prepare a shopping plan → household checks and approves → record accepted plan and paired effort.",
               "ctaLabel": "Try the demo",
@@ -672,7 +682,7 @@
                 {
                   "id": "units",
                   "label": "Stores",
-                  "help": "Each store includes thirteen planning cycles each month.",
+                  "help": "Forecast for one store using the included cycles; higher draft tiers increase cycles per store.",
                   "defaultValue": 1,
                   "min": 0,
                   "max": 1000,
@@ -682,8 +692,8 @@
                 {
                   "id": "minutes_saved",
                   "label": "Minutes saved",
-                  "help": "Your estimate after checking, approval and any rework. Negative values mean extra effort.",
-                  "defaultValue": 45,
+                  "help": "Fixed forecast after preparation, checking, approval and rework; not a measured saving.",
+                  "defaultValue": 24,
                   "min": -1440,
                   "max": 1440,
                   "step": 0.1,
@@ -692,8 +702,8 @@
                 {
                   "id": "hourly_value",
                   "label": "Hourly value",
-                  "help": "Your own optional valuation. This is not a promised cash saving or salary reduction.",
-                  "defaultValue": null,
+                  "help": "Fixed reference valuation of returned capacity; not cash received or a salary reduction.",
+                  "defaultValue": 34.9,
                   "min": 0,
                   "max": 1000,
                   "step": 0.01,
@@ -707,12 +717,22 @@
                 "vatIncluded": false,
                 "includedUnits": 13,
                 "allowance": "13 store cycles per store",
-                "extras": "Additional usage and professional services are separately quoted."
+                "extras": "Additional usage and professional services are separately quoted.",
+                "free": {
+                  "includedUnits": 1,
+                  "allowance": "Free · 1 cycle / 1 store",
+                  "unitsPerWorkload": 1
+                },
+                "trialDays": 7,
+                "trialLabel": "7-day trial · monthly price afterward"
               },
               "assumptions": [
-                "The starting 45 net minutes is an illustrative preparation estimate, not a measured result.",
-                "Net minutes include customer review. Monetary time value is supplied by you; it is not cash received.",
-                "Each store runs thirteen cycles per month. Both the subscription price and workload scale with stores."
+                "Forecast revision 2026-10-13. Full included usage, available work and a linear 1×/2×/3× capacity scenario; no extra demand is guaranteed.",
+                "Authored task budget: 120 manual minutes versus 96 assisted human minutes per work unit, including checking, approval and rework. The 24 net minutes (20%) is a scenario, not observed persona performance.",
+                "The 20% time-reduction scenario is informed by research on AI-assisted knowledge tasks. Its results do not establish savings for this persona or for every task: https://aiinstitute.hbs.edu/navigating-the-jagged-technological-frontier/",
+                "Returned business capacity is valued at €34.90/hour, the EU whole-economy hourly labour-cost reference for 2025. It is not a profession-specific rate or a payroll saving: https://ec.europa.eu/eurostat/en/web/products-eurostat-news/w/ddn-20260331-2",
+                "All figures are forecasts. Setup effort, learning time and any additional services are excluded; actual net returns can be lower or negative. No sale, placement, funding, learning result or social outcome is monetized.",
+                "Free access renews monthly with the displayed basic allowance. Premium media, integrations and extra usage are excluded. Paid tiers have a seven-day trial; trial usage is capped at one basic free allowance, not an extra full monthly allowance. Prices shown are recurring prices after the trial. These are authored offer proposals; the calculator does not provision entitlements or change billing."
               ],
               "loop": "Stock or replenishment signal → prepare an order plan → store team approves → record accepted plan, review effort and evidenced losses.",
               "ctaLabel": "Try the demo",
@@ -915,7 +935,7 @@
       "enabled": true,
       "kicker": "Retail impact",
       "heading": "Pricing & ROI",
-      "subheading": "Your inputs. Your estimated return.",
+      "subheading": "Choose a plan. See your forecast.",
       "disclaimer": "Planning estimates are separate from measured ROI. Only accepted outcomes and comparable recorded costs support measured returns.",
       "currency": "EUR",
       "currencyCopy": {
@@ -1046,7 +1066,7 @@
         "copy": {
           "navLabel": "Pricing",
           "heading": "Pricing & ROI",
-          "intro": "Your inputs. Your estimated return.",
+          "intro": "Choose a plan. See your forecast.",
           "monthly": "Month",
           "weekly": "Week",
           "daily": "Day",
@@ -1057,7 +1077,7 @@
           "timeBenefit": "Estimated time value",
           "timeRoi": "Time-value ROI",
           "timeBack": "Hours returned",
-          "missing": "Add your inputs",
+          "missing": "Forecast unavailable",
           "noRatio": "Not applicable",
           "method": "How it’s calculated",
           "reset": "Reset",
@@ -1066,10 +1086,10 @@
           "excludedVat": "Excluding VAT",
           "perMonth": "per month",
           "equivalents": "Billed monthly. Day and week figures are averages, not daily or weekly charges or guaranteed returns.",
-          "timeNote": "Time value is your optional estimate, not cash received or a payroll reduction. Net minutes include your checking and approval time.",
+          "timeNote": "Forecast time value is returned capacity, not cash received or a payroll reduction. Net minutes include checking and approval.",
           "estimateNote": "Planning estimates are separate from measured ROI. Only accepted outcomes and comparable recorded costs support measured returns.",
           "limitNote": "For more usage or separately quoted work, contact us. This estimate covers the included plan only.",
-          "timeFormula": "Time value = units × net minutes saved ÷ 60 × your hourly value.",
+          "timeFormula": "Forecast time value = included work × fixed net minutes returned ÷ 60 × reference hourly value.",
           "profitFormula": "Contribution profit = eligible recommendation sessions × conversion uplift ÷ 100 × profit per additional order.",
           "proceedsFormula": "Incremental proceeds = lots or pickups × (net proceeds afterward − net proceeds beforehand).",
           "roiFormula": "Net = benefit − app subscription cost. ROI = net ÷ app subscription cost × 100. Free plans have no ROI percentage."
@@ -1084,7 +1104,7 @@
               {
                 "id": "units",
                 "label": "Planning sessions per month",
-                "help": "Work you expect to review in one month, within the included allowance.",
+                "help": "Forecast assumes the included monthly allowance is used. Higher draft tiers increase capacity and price together.",
                 "defaultValue": 4,
                 "min": 0,
                 "max": 4,
@@ -1094,8 +1114,8 @@
               {
                 "id": "minutes_saved",
                 "label": "Minutes saved",
-                "help": "Your estimate after checking, approval and any rework. Negative values mean extra effort.",
-                "defaultValue": 17.5,
+                "help": "Fixed forecast after preparation, checking, approval and rework; not a measured saving.",
+                "defaultValue": 14,
                 "min": -1440,
                 "max": 1440,
                 "step": 0.1,
@@ -1104,8 +1124,8 @@
               {
                 "id": "hourly_value",
                 "label": "Hourly value",
-                "help": "Your own optional valuation. This is not a promised cash saving or salary reduction.",
-                "defaultValue": null,
+                "help": "Fixed reference valuation of returned capacity; not cash received or a salary reduction.",
+                "defaultValue": 14.99,
                 "min": 0,
                 "max": 1000,
                 "step": 0.01,
@@ -1119,11 +1139,21 @@
               "vatIncluded": true,
               "includedUnits": 4,
               "allowance": "4 sessions / 8 scans",
-              "extras": "Additional usage and professional services are separately quoted."
+              "extras": "Additional usage and professional services are separately quoted.",
+              "free": {
+                "includedUnits": 1,
+                "allowance": "Free · 1 session / 1 scan"
+              },
+              "trialDays": 7,
+              "trialLabel": "7-day trial · monthly price afterward"
             },
             "assumptions": [
-              "The starting 17.5 net minutes is an illustrative preparation estimate, not a measured result.",
-              "Net minutes include customer review. Monetary time value is supplied by you; it is not cash received."
+              "Forecast revision 2026-10-13. Full included usage, available work and a linear 1×/2×/3× capacity scenario; no extra demand is guaranteed.",
+              "Authored task budget: 70 manual minutes versus 56 assisted human minutes per work unit, including checking, approval and rework. The 14 net minutes (20%) is a scenario, not observed persona performance.",
+              "The 20% time-reduction scenario is informed by research on AI-assisted knowledge tasks. Its results do not establish savings for this persona or for every task: https://aiinstitute.hbs.edu/navigating-the-jagged-technological-frontier/",
+              "Personal time is valued at €14.99/hour, using the Dutch adult gross minimum wage effective July 2026 as an illustrative reference only. It is not a measured willingness to pay or an international wage estimate: https://www.government.nl/themes/work/minimum-wage/minimum-wage-amounts",
+              "All figures are forecasts. Setup effort, learning time and any additional services are excluded; actual net returns can be lower or negative. No sale, placement, funding, learning result or social outcome is monetized.",
+              "Free access renews monthly with the displayed basic allowance. Premium media, integrations and extra usage are excluded. Paid tiers have a seven-day trial; trial usage is capped at one basic free allowance, not an extra full monthly allowance. Prices shown are recurring prices after the trial. These are authored offer proposals; the calculator does not provision entitlements or change billing."
             ],
             "loop": "Pantry, meal or offer signal → prepare a shopping plan → household checks and approves → record accepted plan and paired effort.",
             "ctaLabel": "Try the demo",
@@ -1138,7 +1168,7 @@
               {
                 "id": "units",
                 "label": "Stores",
-                "help": "Each store includes thirteen planning cycles each month.",
+                "help": "Forecast for one store using the included cycles; higher draft tiers increase cycles per store.",
                 "defaultValue": 1,
                 "min": 0,
                 "max": 1000,
@@ -1148,8 +1178,8 @@
               {
                 "id": "minutes_saved",
                 "label": "Minutes saved",
-                "help": "Your estimate after checking, approval and any rework. Negative values mean extra effort.",
-                "defaultValue": 45,
+                "help": "Fixed forecast after preparation, checking, approval and rework; not a measured saving.",
+                "defaultValue": 24,
                 "min": -1440,
                 "max": 1440,
                 "step": 0.1,
@@ -1158,8 +1188,8 @@
               {
                 "id": "hourly_value",
                 "label": "Hourly value",
-                "help": "Your own optional valuation. This is not a promised cash saving or salary reduction.",
-                "defaultValue": null,
+                "help": "Fixed reference valuation of returned capacity; not cash received or a salary reduction.",
+                "defaultValue": 34.9,
                 "min": 0,
                 "max": 1000,
                 "step": 0.01,
@@ -1173,12 +1203,22 @@
               "vatIncluded": false,
               "includedUnits": 13,
               "allowance": "13 store cycles per store",
-              "extras": "Additional usage and professional services are separately quoted."
+              "extras": "Additional usage and professional services are separately quoted.",
+              "free": {
+                "includedUnits": 1,
+                "allowance": "Free · 1 cycle / 1 store",
+                "unitsPerWorkload": 1
+              },
+              "trialDays": 7,
+              "trialLabel": "7-day trial · monthly price afterward"
             },
             "assumptions": [
-              "The starting 45 net minutes is an illustrative preparation estimate, not a measured result.",
-              "Net minutes include customer review. Monetary time value is supplied by you; it is not cash received.",
-              "Each store runs thirteen cycles per month. Both the subscription price and workload scale with stores."
+              "Forecast revision 2026-10-13. Full included usage, available work and a linear 1×/2×/3× capacity scenario; no extra demand is guaranteed.",
+              "Authored task budget: 120 manual minutes versus 96 assisted human minutes per work unit, including checking, approval and rework. The 24 net minutes (20%) is a scenario, not observed persona performance.",
+              "The 20% time-reduction scenario is informed by research on AI-assisted knowledge tasks. Its results do not establish savings for this persona or for every task: https://aiinstitute.hbs.edu/navigating-the-jagged-technological-frontier/",
+              "Returned business capacity is valued at €34.90/hour, the EU whole-economy hourly labour-cost reference for 2025. It is not a profession-specific rate or a payroll saving: https://ec.europa.eu/eurostat/en/web/products-eurostat-news/w/ddn-20260331-2",
+              "All figures are forecasts. Setup effort, learning time and any additional services are excluded; actual net returns can be lower or negative. No sale, placement, funding, learning result or social outcome is monetized.",
+              "Free access renews monthly with the displayed basic allowance. Premium media, integrations and extra usage are excluded. Paid tiers have a seven-day trial; trial usage is capped at one basic free allowance, not an extra full monthly allowance. Prices shown are recurring prices after the trial. These are authored offer proposals; the calculator does not provision entitlements or change billing."
             ],
             "loop": "Stock or replenishment signal → prepare an order plan → store team approves → record accepted plan, review effort and evidenced losses.",
             "ctaLabel": "Try the demo",
@@ -1197,7 +1237,7 @@
           {
             "language": "ar",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.ar.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1205,7 +1245,7 @@
           {
             "language": "bg",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.bg.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1213,7 +1253,7 @@
           {
             "language": "ca",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.ca.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1221,7 +1261,7 @@
           {
             "language": "cs",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.cs.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1229,7 +1269,7 @@
           {
             "language": "da",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.da.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1237,7 +1277,7 @@
           {
             "language": "de",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.de.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1245,7 +1285,7 @@
           {
             "language": "el",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.el.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1253,7 +1293,7 @@
           {
             "language": "es",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.es.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1261,7 +1301,7 @@
           {
             "language": "et",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.et.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1269,7 +1309,7 @@
           {
             "language": "fa",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.fa.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1277,7 +1317,7 @@
           {
             "language": "fi",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.fi.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1285,7 +1325,7 @@
           {
             "language": "fr",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.fr.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1293,7 +1333,7 @@
           {
             "language": "he",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.he.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1301,7 +1341,7 @@
           {
             "language": "hr",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.hr.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1309,7 +1349,7 @@
           {
             "language": "hu",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.hu.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1317,7 +1357,7 @@
           {
             "language": "id",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.id.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1325,7 +1365,7 @@
           {
             "language": "it",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.it.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1333,7 +1373,7 @@
           {
             "language": "ja",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.ja.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1341,7 +1381,7 @@
           {
             "language": "ko",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.ko.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1349,7 +1389,7 @@
           {
             "language": "lt",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.lt.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1357,7 +1397,7 @@
           {
             "language": "lv",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.lv.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1365,7 +1405,7 @@
           {
             "language": "nb",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.nb.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1373,7 +1413,7 @@
           {
             "language": "nl",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.nl.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1381,7 +1421,7 @@
           {
             "language": "no",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.no.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1389,7 +1429,7 @@
           {
             "language": "pl",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.pl.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1397,7 +1437,7 @@
           {
             "language": "pt",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.pt.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1405,7 +1445,7 @@
           {
             "language": "ro",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.ro.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1413,7 +1453,7 @@
           {
             "language": "ru",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.ru.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1421,7 +1461,7 @@
           {
             "language": "sk",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.sk.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1429,7 +1469,7 @@
           {
             "language": "sl",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.sl.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1437,7 +1477,7 @@
           {
             "language": "sr",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.sr.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1445,7 +1485,7 @@
           {
             "language": "sv",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.sv.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1453,7 +1493,7 @@
           {
             "language": "th",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.th.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1461,7 +1501,7 @@
           {
             "language": "tr",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.tr.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1469,7 +1509,7 @@
           {
             "language": "uk",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.uk.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1477,7 +1517,7 @@
           {
             "language": "vi",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.vi.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
@@ -1485,7 +1525,7 @@
           {
             "language": "zh",
             "regionKey": null,
-            "sourceRevision": "1638595e006bef34d9b28624748aee05c8835ff63eebaf2ce7423950061a1db3",
+            "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
             "assetPath": "assets/landing-page.zh.json",
             "assetSchemaVersion": 2,
             "generatedAt": "2026-10-13T14:19:34.015Z"
