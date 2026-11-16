@@ -2,13 +2,8 @@
   "schemaVersion": 2,
   "language": "sl",
   "regionKey": null,
-  "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
+  "sourceRevision": "e109add0e4fe301964f8a19341549a6101f0e29e2c6783073414963417b1e42b",
   "landingPage": {
-    "capabilityPreview": {
-      "enabled": true,
-      "commandId": "restock",
-      "presentation": "surface"
-    },
     "design": {
       "variant": "grocery-twin",
       "defaultThemeMode": "light",
@@ -57,14 +52,14 @@
     },
     "header": {
       "brandMark": "image",
-      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "logoImageUrl": "https://gabrieloperator.com/assets/gabriel-twins/brand-marks/kai.webp",
       "navItems": [
         {
           "label": "Izdelek",
           "target": "product"
         },
         {
-          "label": "Mobilno",
+          "label": "Mobilni",
           "target": "mobile"
         },
         {
@@ -72,7 +67,7 @@
           "target": "stories"
         },
         {
-          "label": "Funkcije",
+          "label": "Značilnosti",
           "target": "features"
         },
         {
@@ -80,41 +75,41 @@
           "target": "about"
         }
       ],
-      "ctaLabel": "Spoznajte KAI"
+      "ctaLabel": "Spoznaj Kaija"
     },
-    "badge": "Vaša trgovina, recepti in načrt kalorij, povezani",
+    "badge": "Vaša trgovina, recepti in načrt kalorij – povezani",
     "headline": "Nakupovanje živil naj bo spet preprosto",
     "headlineAccent": "naj bo spet preprosto",
-    "subheadline": "Skenirajte hladilnik ali račun. KAI iz tega, kar že imate, ustvari recepte, preračuna kalorije in doda v košarico le še tisto, kar za posamezen obrok še manjka.",
-    "ctaLabel": "Pogovor s KAI",
-    "secondaryCtaLabel": "Od skena do receptov",
+    "subheadline": "Skenirajte hladilnik ali račun. Kai spremeni tisto, kar je že tam, v recepte, šteje kalorije in nakupuje samo tisto, kar vsak obrok še potrebuje.",
+    "ctaLabel": "Pogovori se s Kaijem",
+    "secondaryCtaLabel": "Skeniraj po receptih",
     "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
     "featureTags": [
-      "Resnični izdelki in cene",
+      "Pravi izdelki in cene",
       "Preglejte vsako izbiro",
-      "Kalorije, načrtovane za gospodinjstvo",
+      "Kalorije, ki jih načrtuje gospodinjstvo",
       "Recepti iz tega, kar imate"
     ],
     "seoImage": {
       "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
-      "alt": "KAI, vaš dvojnik za živila, v sončni kuhinji ob svežem sadju in tedenskem načrtu obrokov"
+      "alt": "Kai, vaš dvojček z živili, v s soncem obsijani kuhinji, obdani s svežimi pridelki in tedenskim načrtom obrokov"
     },
     "contact": {
       "heading": "Začnite s tem, kar imate",
-      "body": "Skenirajte hladilnik ali račun in pustite KAI, da pripravi manjkajoče izdelke za pregled."
+      "body": "Preglejte hladilnik ali potrdilo in pustite, da Kai pripravi vrzeli v živilih za pregled."
     },
     "groceryTwin": {
       "header": {
-        "editionLabel": "Domov",
-        "subtitle": "Vaš dvojnik za živila",
-        "secondaryEditionLabel": "Trgovina",
+        "editionLabel": "Dom",
+        "subtitle": "Tvoja trgovina z živili",
+        "secondaryEditionLabel": "Trgovina na drobno",
         "navItems": [
           {
             "label": "Izdelek",
             "target": "product"
           },
           {
-            "label": "Mobilno",
+            "label": "Mobilni",
             "target": "mobile"
           },
           {
@@ -122,7 +117,7 @@
             "target": "stories"
           },
           {
-            "label": "Funkcije",
+            "label": "Značilnosti",
             "target": "features"
           },
           {
@@ -130,40 +125,40 @@
             "target": "about"
           }
         ],
-        "secondaryCtaLabel": "Spoznajte KAI",
-        "primaryCtaLabel": "Spoznajte KAI"
+        "secondaryCtaLabel": "Spoznaj Kaija",
+        "primaryCtaLabel": "Začnite voziček"
       },
       "hero": {
-        "ratingLabel": "Vaša trgovina, recepti in načrt kalorij, povezani",
-        "heading": "Nakupovanje živil naj bo spet preprosto",
-        "body": "Skenirajte hladilnik ali račun. KAI iz tega, kar že imate, ustvari recepte, preračuna kalorije in doda v košarico le še tisto, kar za posamezen obrok še manjka.",
-        "primaryCtaLabel": "Pogovor s KAI",
-        "secondaryCtaLabel": "Od skena do receptov",
+        "ratingLabel": "Vaša trgovina, recepti in načrt kalorij – povezani",
+        "heading": "Naj bo nakupovanje živil spet enostavno",
+        "body": "Skenirajte hladilnik ali račun. Kai spremeni tisto, kar je že tam, v recepte, šteje kalorije in nakupuje samo tisto, kar vsak obrok še potrebuje.",
+        "primaryCtaLabel": "Pogovori se s Kaijem",
+        "secondaryCtaLabel": "Skeniraj po receptih",
         "trustItems": [
-          "Resnični izdelki in cene",
+          "Pravi izdelki in cene",
           "Preglejte vsako izbiro",
-          "Kalorije, načrtovane za gospodinjstvo",
+          "Kalorije, ki jih načrtuje gospodinjstvo",
           "Recepti iz tega, kar imate"
         ],
         "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
-        "characterAlt": "KAI, vaš popoln dvojnik za živila",
+        "characterAlt": "Kai, vaša osebnost dvojčka za celotno telo",
         "chat": {
-          "statusLabel": "Spletno",
-          "subtitle": "Pomočnik od hladilnika do receptov",
-          "openingMessage": "Živjo, sem KAI. Pokažite mi hladilnik, shrambo ali zadnji račun. Predlagal bom recepte iz tega, kar imate, in poskrbel, da bodo stroški, kalorije in manjkajoče sestavine vedno na vidiku.",
-          "visitorMessage": "Skeniraj moj hladilnik in pokaži, kaj lahko danes skuham.",
-          "assistantMessage": "Iz tega, kar je že tam, bom pripravil možnosti za recepte, pokazal kalorike na porcijo in v košarico dodal le še manjkajoče sestavine.",
-          "inputPlaceholder": "Vprašajte za živila, recept ali pregled kalorij…",
+          "statusLabel": "na spletu",
+          "subtitle": "Pomočnik za živila v hladilniku na recept",
+          "openingMessage": "Živjo, jaz sem Kai. Pokaži mi hladilnik, shrambo ali nedavni račun. Predlagal bom recepte iz tega, kar imate, in da bodo poraba, kalorije in manjkajoče sestavine vidni.",
+          "visitorMessage": "Preglejte moj hladilnik in pokažite, kaj lahko skuham nocoj.",
+          "assistantMessage": "Kar je že tam, bom spremenil v možnosti receptov, pokazal kalorije na porcijo in nakupoval samo sestavine, ki še manjkajo.",
+          "inputPlaceholder": "Vprašajte živila, recept ali kalorični pregled ...",
           "suggestions": [
-            "Akcije za ovsenovo mleko",
+            "Ponudbe iz ovsenega mleka",
             "Uravnoteži moj teden",
-            "Kuhaj iz mojega hladilnika"
+            "Kuhajte iz mojega hladilnika"
           ],
-          "demoNote": "Predstavitveni prikaz živil, receptov in prehrane · Preverite sestavine in prehranske potrebe",
+          "demoNote": "Ilustrativna predstavitev živil, receptov in prehrane · Preverite sestavine in prehranske potrebe",
           "sampleProduct": {
             "badge": "Najdena ponudba · Pantry+",
             "name": "Oatly Barista Edition",
-            "detail": "1 L · 590 kcal · 20 % popust",
+            "detail": "1 l · 590 kcal · 20 % popust",
             "price": "2,39 €",
             "actionLabel": "Try /restock"
           }
@@ -171,24 +166,24 @@
         "restockDemo": {
           "enabled": true,
           "commandTrigger": "restock",
-          "uploadLabel": "Izberite sliko hladilnika, shrambe, računa ali nakupovalnega seznama",
-          "uploadHint": "JPEG, PNG, WebP ali HEIC · do 6 slik in 10 MB vsaka",
-          "analyzingLabel": "KAI bere vidna živila…",
-          "inventoryHeading": "Preglejte razpoznano zalogo",
-          "inventoryBody": "Popravite količine, odstranite napake ali dodajte, kar je KAI morda prezrl.",
-          "itemNameLabel": "Izdelek",
+          "uploadLabel": "Izberite hladilnik, shrambo, potrdilo ali sliko nakupovalnega seznama",
+          "uploadHint": "JPEG, PNG, WebP ali HEIC · Do 6 slik in 10 MB",
+          "analyzingLabel": "Kai bere vidna živila ...",
+          "inventoryHeading": "Preglejte izvlečeni inventar",
+          "inventoryBody": "Popravite količine, odstranite napake ali dodajte vse, kar je Kai zamudil.",
+          "itemNameLabel": "Predmet",
           "quantityLabel": "Količina",
           "unitLabel": "Enota",
-          "addItemLabel": "Dodaj izdelek",
-          "removeItemLabel": "Odstrani",
-          "chatLabel": "Popravi v klepetu",
-          "voiceLabel": "Popravi z glasom · 5 min",
-          "reviewLabel": "Preglej zalogo",
-          "editLabel": "Uredi zalogo",
-          "confirmationHeading": "Zaloga pripravljena",
-          "confirmationBody": "Preverite obseg zajema, nato shranite živila in profil porabe na zasebni seznam.",
-          "signInLabel": "Prijava za shranitev živil",
-          "signInNotice": "Prijavite se in shranite pregledan zajem živil in profil zalog v zasebni prostor KAI. Dopolnjevanje zalog se ne začne samodejno.",
+          "addItemLabel": "Dodaj predmet",
+          "removeItemLabel": "Odstraniti",
+          "chatLabel": "Popravi s klepetom",
+          "voiceLabel": "Pravilno z glasom · 5 min",
+          "reviewLabel": "Preglejte inventar",
+          "editLabel": "Uredi inventar",
+          "confirmationHeading": "Inventar pripravljen",
+          "confirmationBody": "Kai bo ta seznam ponovno potrdil, preden bo predlagal voziček. Nič ni naročeno brez vaše odobritve.",
+          "signInLabel": "Prijavite se za nadaljevanje",
+          "signInNotice": "Prijavite se, če želite premakniti ta zajem živil v zasebno sejo KAI in nadaljujte z delovnim tokom obnavljanja zalog. Nič ni naročeno brez vaše izrecne odobritve.",
           "authenticatedActionLabel": "Dodaj živila na seznam",
           "savingLabel": "Shranjevanje živil…",
           "anonymousPlanNotice": "Prijavite se za shranitev pregledane zaloge in izračunanega praga zalog.",
@@ -199,100 +194,100 @@
           "completionEyebrow": "ZALOGA SHRANJENA",
           "completionHeading": "Živila dodana na vaš seznam",
           "completionBody": "KAI je shranil pregledana živila in profil porabe ter v ozadju izračunal stanje zalog in naslednji prag dopolnitve. Dopolnjevanje zalog se ni začelo.",
-          "expiryCopy": "Nepotrjeni predogledi potečejo po eni uri",
-          "errorCopy": "KAI s te slike ni mogel razbrati nakupovalnega seznama. Poskusite z bolj jasno fotografijo hladilnika, shrambe, računa ali nakupovalnega seznama."
+          "expiryCopy": "Nezahtevani predogledi potečejo po eni uri",
+          "errorCopy": "Kai s te slike ni mogel prebrati seznama živil. Preizkusite jasnejšo fotografijo hladilnika, shrambe, potrdila ali nakupovalnega seznama."
         }
       },
       "product": {
-        "kicker": "Vaš dvojnik za živila, recepte in kalorije",
-        "heading": "Kaj lahko skuhamo in kaj je treba še dokupiti?",
-        "body": "KAI poveže skeniranje, recepte, iskanje izdelkov, kalorije in košarico, tako da vsak obrok začne s tem, kar že imate.",
+        "kicker": "Vaša trgovina z živili + recept + kalorična dvojčka",
+        "heading": "Kaj lahko skuhamo – in kaj še vedno potrebuje nakupovanje?",
+        "body": "Kai poveže skeniranje, recepte, iskanje izdelkov, kalorije in košarico, tako da se vsak obrok začne s tem, kar že imate.",
         "capabilityLabels": [
           "Iskanje izdelkov",
           "Načrt kalorij",
-          "Ideje za recepte",
-          "Slika v seznam",
+          "Ideje za recept",
+          "Slika za seznam",
           "Glasovna pomoč",
-          "Ujemanje ponudb"
+          "Ujemanje dogovora"
         ],
         "cards": [
           {
-            "title": "Košarica v živo",
-            "body": "Primerjajte resnične izdelke, količine in cene v eni pregledni košarici.",
-            "metric": "Stroški in kalorije skupaj"
+            "title": "Živi voziček",
+            "body": "Primerjajte realne izdelke, količine in cene v enem košarico, ki jo je mogoče pregledati.",
+            "metric": "Porabite + kalorije skupaj"
           },
           {
-            "title": "Recepti iz vašega skena",
-            "body": "Oglejte si recepte, ki jih je mogoče skuhati, razvrščene po tem, kaj je že v hladilniku in kaj manjka.",
-            "metric": "Najprej kuhaj, nato nakupuj"
+            "title": "Recepti iz vašega skeniranja",
+            "body": "Oglejte si recepte, ki jih je mogoče kuhati, razvrščene po tem, kar je že v hladilniku in kaj manjka.",
+            "metric": "Kuhajte najprej, nakupujte drugo"
           },
           {
-            "title": "Spremljevalec ponudb",
-            "body": "Primerjajte uporabne zadetke, pri tem pa ohranite pokritost receptov in cilje gospodinjstva.",
-            "metric": "Resnični viri živil"
+            "title": "Radar dogovora",
+            "body": "Primerjajte uporabne tekme, hkrati pa ohranite pokritost receptov in cilje v gospodinjstvu.",
+            "metric": "Pravi viri živil"
           }
         ]
       },
       "mobile": {
-        "kicker": "KAI v vašem žepu",
+        "kicker": "Kai v žepu",
         "heading": "Od hladilnika do recepta do košarice,",
-        "accentHeading": "kjerkoli ste.",
+        "accentHeading": "kjerkoli že si.",
         "items": [
           {
-            "label": "Sestavite košarico",
-            "title": "Košarica v živo z vašimi stroški in načrtom kalorij na enem mestu.",
-            "body": "Povprašajte za izdelek, primerjajte pravo ujemanje in spremljajte, kako se cena, kalorije in količina spreminjajo čez teden."
+            "label": "Zgradite voziček",
+            "title": "Košarica v živo z vašo porabo in načrtom kalorij skupaj.",
+            "body": "Vprašajte izdelek, primerjajte pravo ujemanje in si oglejte, kako se cena, kalorije in količina spreminjajo v tednu."
           },
           {
-            "label": "Skenirajte hladilnik",
-            "title": "Spremenite fotografijo hladilnika ali računa v recepte, ki jih lahko skuhate.",
-            "body": "KAI prepozna, kaj imate na voljo, oceni kalorije in predlaga recepte, preden sestavi seznam manjkajočih sestavin."
+            "label": "Preglejte hladilnik",
+            "title": "Fotografijo hladilnika ali potrdila spremenite v recepte, ki jih lahko kuhate.",
+            "body": "Kai identificira, kaj je pri roki, oceni kalorije in predlaga recepte, preden sestavi seznam manjkajočih sestavin."
           },
           {
             "label": "Izberite recept",
-            "title": "Izberite obrok, nato kupite le manjkajoče.",
-            "body": "Primerjajte čas kuhanja, kalorije na porcijo, pokritost sestavin in manjši nakupovalni primanjkljaj za vsak recept."
+            "title": "Izberite obrok, nato kupite samo tisto, kar manjka.",
+            "body": "Primerjajte čas kuhanja, kalorije na porcijo, pokritost sestavin in majhno vrzel v živilih za vsak recept."
           },
           {
-            "label": "Pogovor s KAI",
-            "title": "Skupaj določita nakup in tedenski cilj.",
-            "body": "Povejte, kaj vam je zmanjkalo ali kaj želite skuhati. KAI ohranja košarico, porabo in kalorični primanjkljaj v kontekstu."
+            "label": "Pogovori se s Kaijem",
+            "title": "Pogovorite se o trgovini in svojem tedenskem cilju.",
+            "body": "Povejte, kaj je zmanjkalo ali kaj želite skuhati. Kai ohranja vrzel v vozičku, porabi in kalorijah v kontekstu."
           }
         ]
       },
       "features": {
-        "kicker": "Tedenski nakup, prenovljen",
-        "heading": "Upravljajte živila, recepte, porabo in kalorije pregledno",
+        "kicker": "Tedenska trgovina, obnovljena",
+        "heading": "Jasno upravljajte z živili, recepti, porabo in kalorijami",
         "items": [
           {
             "number": "01",
             "title": "Odkrivanje receptov, izdelkov in kalorij",
-            "body": "Skenirajte, kar imate, ali opišite želeni obrok. KAI prikaže kuharske recepte, kalorije na porcijo in natančen nakupovalni primanjkljaj za vsako možnost.",
+            "body": "Preglejte, kaj imate ali opišite obrok, ki ga želite. Kai prikazuje recepte, ki jih je mogoče kuhati, kalorije na porcijo in natančno vrzel v trgovini za vsako možnost.",
             "tags": [
               "Skeniranje hladilnika",
               "Recepti",
               "Kalorije",
-              "Manjkajoči izdelki"
+              "Manjkajoči predmeti"
             ],
             "accent": "purple"
           },
           {
             "number": "02",
-            "title": "Košarica, sestavljena iz izbranih obrokov",
-            "body": "Izberite recept in KAI odstrani sestavine, ki jih že imate. Le manjkajoči izdelki gredo v košarico, pri čemer se poraba in kalorije gospodinjstva posodabljajo skupaj.",
+            "title": "Voziček, izdelan iz obrokov, ki jih izberete",
+            "body": "Izberite recept in Kai odstrani sestavine, ki so že pri roki. V košarico vstopijo samo manjkajoči izdelki, pri čemer se porabijo in gospodinjske kalorije skupaj posodabljajo.",
             "tags": [
               "Pokritost recepta",
-              "Le manjkajoče",
-              "Tedenske kcal"
+              "Manjka samo",
+              "Tedenski kcal"
             ],
             "accent": "blue"
           },
           {
             "number": "03",
-            "title": "Enkrat skenirajte. Kuhajte iz tega, kar imate.",
-            "body": "KAI spremeni sken hladilnika, shrambe ali računa v tri praktične recepte. Primerjajte čas in kalorije, izberite enega, nato pregledajte le manjkajoče sestavine.",
+            "title": "Skeniraj enkrat. Kuhajte od tega, kar je tam.",
+            "body": "Kai spremeni hladilnik, shrambo ali skeniranje potrdila v tri praktične recepte. Primerjajte čas in kalorije, izberite eno, nato preglejte samo manjkajoče sestavine.",
             "tags": [
-              "3 možnosti receptov",
+              "3 možnosti recepta",
               "Čas kuhanja",
               "Kalorije / porcija"
             ],
@@ -301,67 +296,67 @@
         ]
       },
       "stories": {
-        "kicker": "Kako se počutite ob kuhanju in nakupovanju s KAI",
+        "kicker": "Kako se počuti kuhanje in nakupovanje s Kaijem",
         "heading": "Majhni trenutki jasnosti od hladilnika do večerje",
         "testimonials": [
           {
-            "quote": "KAI spremeni tisto, kar je že v našem hladilniku, v ideje za večerjo, nato pa pred izbiro prikaže stroške in družinske kalorije.",
+            "quote": "Kai spremeni tisto, kar je že v našem hladilniku, v ideje za večerjo, nato pa pokaže stroške in družinske kalorije, preden izberem.",
             "name": "Mila",
-            "meta": "Zaposlen starš"
+            "meta": "zaposlen starš"
           },
           {
-            "quote": "Povprašam za ponudbe sira, primerjam resnične možnosti in dodam natančno tistega, ki ga želim. Brez preskakovanja med zavihki.",
+            "quote": "Prosim za ponudbe s sirom, primerjam prave možnosti in dodam točno tisto, ki jo želim. Brez skakanja po zavihku.",
             "name": "Noah",
-            "meta": "Tedenski kupec"
+            "meta": "Tedenski nakupovalec"
           },
           {
-            "quote": "Sken računa mi je dal tri recepte, kalorije na porcijo in le sestavine, ki jih še moram kupiti.",
-            "name": "Sofia",
-            "meta": "Domači kuhar"
+            "quote": "Pregled potrdila mi je dal tri recepte, kalorije na porcijo in samo sestavine, ki sem jih še moral kupiti.",
+            "name": "Sofija",
+            "meta": "Domača kuharica"
           },
           {
-            "quote": "Všeč mi je, da KAI najprej sestavi košarico in vprašanja za načrtovanje zastavi le takrat, ko so pomembna.",
+            "quote": "Všeč mi je, da Kai najprej zgradi voziček in postavlja vprašanja o načrtovanju le, ko so pomembna.",
             "name": "Lucas",
             "meta": "Študent"
           },
           {
-            "quote": "Glas je popoln, ko so moje roke polne v kuhinji. KAI-ju samo povem, kaj mi je zmanjkalo.",
+            "quote": "Glas je popoln, ko so moje roke polne v kuhinji. Kaiju samo povem, kaj je zmanjkalo.",
             "name": "Emma",
-            "meta": "Navdušenec nad pripravo obrokov"
+            "meta": "Ventilator za pripravo obrokov"
           },
           {
-            "quote": "Vse ostaja pregledno. Lahko spremenim količine in vidim, kako se poraba in skupne kalorije premikajo z mano.",
-            "name": "Daan",
-            "meta": "Pameten kupec"
+            "quote": "Vse ostane na pregledu. Lahko spremenim količine in vidim, da se tako poraba kot skupna kalorija premikata z mano.",
+            "name": "daan",
+            "meta": "Pametni kupec"
           }
         ],
         "articles": [
           {
             "category": "Tedenska rutina",
-            "title": "Sedemminutni nakup in načrt obrokov",
-            "body": "Samski kupec je razpršen seznam osnovnih živil spremenil v košarico, tri kuharske večerje in 10.850 načrtovanih kalorij."
+            "title": "Sedemminutna trgovina in načrt obrokov",
+            "body": "Samostojni kupec je razpršeni seznam osnovnih izdelkov spremenil v voziček, tri večerje, ki jih je mogoče kuhati, in 10.850 načrtovanih kalorij."
           },
           {
-            "category": "Od hladilnika do recepta",
-            "title": "Od fotografije hladilnika do večerje",
-            "body": "KAI je prepoznal sestavine, predlagal tri recepte in ločil tisto, kar je bilo že tam, od tistega, kar je bilo treba še kupiti."
+            "category": "Hladilnik po receptu",
+            "title": "Od hladilnika do nocojšnje večerje",
+            "body": "Kai je prepoznal sestavine, predlagal tri recepte in ločil tisto, kar je bilo že tam, od tistega, kar je še vedno treba kupiti."
           },
           {
             "category": "Pametno iskanje receptov",
-            "title": "Pametno iskanje, ki vidi celoten teden",
-            "body": "Iskanje je upoštevalo ceno, kalorije, pokritost recepta in primanjkljaj beljakovin, ne da bi izgubilo nit nakupa."
+            "title": "Pametno iskanje, ki traja cel teden",
+            "body": "Iskanje je pretehtalo ceno, kalorije, pokritost receptov in vrzel v beljakovinah, ne da bi pri tem izgubili nit trgovine."
           }
         ]
       },
       "about": {
-        "kicker": "Eno mesto, veliko načinov vstopa",
-        "heading": "Vsak vnos postane recepti, ena košarica in en načrt kalorij",
-        "body": "Fotografija, glasovno sporočilo, račun ali seznam prikazujejo isti pogled: sestavine na zalogi, recepti, ki jih lahko skuhate, manjkajoči izdelki, tedenska poraba in kalorije gospodinjstva.",
+        "kicker": "eno mesto, veliko načinov",
+        "heading": "Vsak vložek so recepti, en voziček in en kalorični načrt",
+        "body": "Fotografija, glasovna opomba, potrdilo ali seznam hranijo enak pogled spodaj: sestavine pri roki, recepti, ki jih lahko kuhate, izdelki, ki še vedno manjkajo, tedenska poraba in gospodinjske kalorije.",
         "capabilities": [
-          "Fotografija",
+          "fotografija",
           "Glas",
-          "Ponudbe",
-          "Račun",
+          "Dogovori",
+          "Prejem",
           "Seznam",
           "Dostava",
           "Kalorije",
@@ -371,18 +366,18 @@
       },
       "closing": {
         "kicker": "Vaš naslednji načrt od hladilnika do večerje",
-        "heading": "Začnite s tem, kar imate. Kupujte le manjkajoče.",
-        "body": "Skenirajte hladilnik ali račun. KAI predlaga kuharske recepte, prikaže kalorije na porcijo in manjkajoče sestavine spremeni v košarico, ki jo lahko pregledate.",
-        "ctaLabel": "Skenirajte za iskanje receptov"
+        "heading": "Začnite s tem, kar imate. Nakupujte samo za tisto, kar manjka.",
+        "body": "Skenirajte hladilnik ali račun. Kai predlaga recepte za kuhanje, prikazuje kalorije na porcijo in manjkajoče sestavine spremeni v košarico, ki jo lahko pregledate.",
+        "ctaLabel": "Skenirajte, da poiščete recepte"
       },
       "footer": {
-        "tagline": "Vaš Grocery Twin od hladilnika do košarice. Poiščite recepte iz tega, kar imate, spremljajte kalorije in kupujte le manjkajoče.",
+        "tagline": "Vaš dvojček z živili v hladilniku do vozička. Poiščite recepte iz tega, kar imate, glejte kalorije in nakupujte samo za tisto, kar manjka.",
         "groups": [
           {
             "label": "Izdelek",
             "links": [
               {
-                "label": "Demo živil",
+                "label": "Demo z živili",
                 "target": "product"
               },
               {
@@ -396,10 +391,10 @@
             ]
           },
           {
-            "label": "KAI",
+            "label": "kai",
             "links": [
               {
-                "label": "O KAI",
+                "label": "O Kaiju",
                 "target": "about"
               },
               {
@@ -413,7 +408,7 @@
             ]
           }
         ],
-        "copyright": "© 2026 KAI · Grocery Twin",
+        "copyright": "© 2026 Kai · Trgovina z živili",
         "closingStatement": "Dobre izbire. Odličen teden."
       },
       "homeRoiCalculator": {
@@ -1293,7 +1288,7 @@
         "landingPage",
         "badge"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1484,7 +1479,7 @@
         "header",
         "primaryCtaLabel"
       ],
-      "sourceHash": "f6f2913c3ee65c4e5fa410960649ae928ee8a5cd7f384972c7275007686b7ac2"
+      "sourceHash": "ab23cde5c8e7eb47ed87cea252cff38249f120f377190c482f92ae0cf70f715d"
     },
     {
       "path": [
@@ -1493,7 +1488,7 @@
         "hero",
         "ratingLabel"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1885,7 +1880,7 @@
         "restockDemo",
         "confirmationBody"
       ],
-      "sourceHash": "3855bc93caa2a8d399d9cee5cc6e725b20d5e76226eece00ca411c62e98a124a"
+      "sourceHash": "52d9f9ef8483c24c7185a727bf2211244f85030367da02ddf14eb5d6e6011ba0"
     },
     {
       "path": [
@@ -1895,7 +1890,7 @@
         "restockDemo",
         "signInLabel"
       ],
-      "sourceHash": "5e4e68bf849048cc43d66bb27eb09dc5d3a299b8e31b9b887643f594b40e1213"
+      "sourceHash": "607a80121c655651dc14cbb057e035943bed91077283e9c6b8d709db1e25ef7f"
     },
     {
       "path": [
@@ -1905,7 +1900,7 @@
         "restockDemo",
         "signInNotice"
       ],
-      "sourceHash": "7ede1f8e3651004f8425e6cd270825174d06112032e615b98f44f4685533c0a4"
+      "sourceHash": "7ee6641bab06f804b91bb13e538d9da870890f703c1d8fa24098515f5129a011"
     },
     {
       "path": [
@@ -2043,7 +2038,7 @@
         "product",
         "heading"
       ],
-      "sourceHash": "c172cd2a53e02e6d2763843e2a4f04c33b97f43ddaa3d1af868a01a8d445d7e1"
+      "sourceHash": "989cacb42de5017d3d7942afe20d93c7d79c5617f70de63c4dbb7a4f1174baf2"
     },
     {
       "path": [
@@ -6543,6 +6538,42 @@
         "landingPage",
         "roiCalculator",
         "currencyCopy",
+        "native"
+      ],
+      "sourceHash": "cd2604270cd9656f4abdccbee7bf11038b88a1ae5a8657f9933a807fdcdff8bf"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "loading"
+      ],
+      "sourceHash": "efc980d9dce429c644a6dce658df91cdacbff328ea38504d8ce80bfe9b76b32d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "unavailable"
+      ],
+      "sourceHash": "b01a152edb76137a0a16fe29cc942fa282d98fbdc4123b830397f9fde7f85095"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "converted"
+      ],
+      "sourceHash": "450c38574200c1402496596e9f8177d31fd0e64cf58d9468c350eb3ba2c60d10"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
         "basis"
       ],
       "sourceHash": "17cc8491fcdfe8ddd4f8dec6a3859229ecacffb562b383e1283f1c0be0019806"
@@ -7914,5 +7945,5 @@
       "sourceHash": "6e5fe4ca7c07142fa81eef400c342dea7f8ba0422aa331c3880e6604db8d52a7"
     }
   ],
-  "generatedAt": "2026-10-13T14:19:34.015Z"
+  "generatedAt": "2026-09-01T19:15:50.031Z"
 }

@@ -2,13 +2,8 @@
   "schemaVersion": 2,
   "language": "hu",
   "regionKey": null,
-  "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
+  "sourceRevision": "e109add0e4fe301964f8a19341549a6101f0e29e2c6783073414963417b1e42b",
   "landingPage": {
-    "capabilityPreview": {
-      "enabled": true,
-      "commandId": "restock",
-      "presentation": "surface"
-    },
     "design": {
       "variant": "grocery-twin",
       "defaultThemeMode": "light",
@@ -57,7 +52,7 @@
     },
     "header": {
       "brandMark": "image",
-      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "logoImageUrl": "https://gabrieloperator.com/assets/gabriel-twins/brand-marks/kai.webp",
       "navItems": [
         {
           "label": "Termék",
@@ -68,7 +63,7 @@
           "target": "mobile"
         },
         {
-          "label": "történetek",
+          "label": "Történetek",
           "target": "stories"
         },
         {
@@ -76,37 +71,37 @@
           "target": "features"
         },
         {
-          "label": "Ról ről",
+          "label": "Rólunk",
           "target": "about"
         }
       ],
-      "ctaLabel": "Ismerd meg KAI-t"
+      "ctaLabel": "Ismerje meg KAI-t"
     },
-    "badge": "A te boltod, receptjeid és kalóriaterved, összekapcsolva",
-    "headline": "Tedd újra egyszerűvé a bevásárlást",
-    "headlineAccent": "Tedd újra egyszerűvé a bevásárlást",
-    "subheadline": "Szkenneld be a hűtőt vagy a számlát. A KAI a már meglévőből recepteket készít, megszámolja a kalóriákat, és csak azt vásárolja meg, amire még szükség van minden étkezéshez.",
-    "ctaLabel": "Beszélj KAI-val",
-    "secondaryCtaLabel": "Szkennelésből receptek",
+    "badge": "Az Ön boltja, receptjei és kalóriaterve – összekapcsolva",
+    "headline": "Tegye újra egyszerűvé a bevásárlást",
+    "headlineAccent": "újra egyszerű",
+    "subheadline": "Szkennelje be a hűtőt vagy egy nyugtát. A KAI a meglévő alapanyagokból recepteket készít, kiszámolja a kalóriákat, és csak azt szerzi be, ami még hiányzik az étkezéshez.",
+    "ctaLabel": "Beszéljen KAI-val",
+    "secondaryCtaLabel": "Szkennerből receptek",
     "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
     "featureTags": [
-      "Valós termékek és árak",
-      "Tekintsd át minden választást",
-      "Kalóriatervezés háztartás szerint",
-      "Receptek abból, amid van"
+      "Valódi termékek és árak",
+      "Tekintse át minden választást",
+      "Családi kalóriaterv",
+      "Receptek a meglévőkből"
     ],
     "seoImage": {
       "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
-      "alt": "KAI, a Grocery Twin-ed egy napfényes konyhában, friss zöldségekkel és heti étkezési tervvel"
+      "alt": "KAI, az Ön Grocery Twinje egy napfényes konyhában, friss alapanyagok és egy heti étkezési terv között"
     },
     "contact": {
-      "heading": "Kezdd azzal, amid van",
-      "body": "Szkenneld be a hűtőt vagy egy számlát, és hagyd, hogy a KAI elkészítse a pótlandó bevásárlólistát."
+      "heading": "Kezdje azzal, ami van",
+      "body": "Szkennelje be a hűtőt vagy egy nyugtát, és hagyja, hogy a KAI összeállítsa a bevásárlólistát átnézésre."
     },
     "groceryTwin": {
       "header": {
         "editionLabel": "Kezdőlap",
-        "subtitle": "A Grocery Twin-ed",
+        "subtitle": "Az Ön Grocery Twinje",
         "secondaryEditionLabel": "Kiskereskedelem",
         "navItems": [
           {
@@ -118,7 +113,7 @@
             "target": "mobile"
           },
           {
-            "label": "történetek",
+            "label": "Történetek",
             "target": "stories"
           },
           {
@@ -126,40 +121,40 @@
             "target": "features"
           },
           {
-            "label": "Ról ről",
+            "label": "Rólunk",
             "target": "about"
           }
         ],
-        "secondaryCtaLabel": "Ismerd meg KAI-t",
-        "primaryCtaLabel": "Ismerd meg KAI-t"
+        "secondaryCtaLabel": "Ismerje meg KAI-t",
+        "primaryCtaLabel": "Kosár indítása"
       },
       "hero": {
-        "ratingLabel": "A te boltod, receptjeid és kalóriaterved, összekapcsolva",
-        "heading": "Tedd újra egyszerűvé a bevásárlást",
-        "body": "Szkenneld be a hűtőt vagy a számlát. A KAI a már meglévőből recepteket készít, megszámolja a kalóriákat, és csak azt vásárolja meg, amire még szükség van minden étkezéshez.",
-        "primaryCtaLabel": "Beszélj KAI-val",
-        "secondaryCtaLabel": "Szkennelésből receptek",
+        "ratingLabel": "Az Ön boltja, receptjei és kalóriaterve – összekapcsolva",
+        "heading": "Tegye újra egyszerűvé a bevásárlást",
+        "body": "Szkennelje be a hűtőt vagy egy nyugtát. A KAI a meglévő alapanyagokból recepteket készít, kiszámolja a kalóriákat, és csak azt szerzi be, ami még hiányzik az étkezéshez.",
+        "primaryCtaLabel": "Beszéljen KAI-val",
+        "secondaryCtaLabel": "Szkennerből receptek",
         "trustItems": [
-          "Valós termékek és árak",
-          "Tekintsd át minden választást",
-          "Kalóriatervezés háztartás szerint",
-          "Receptek abból, amid van"
+          "Valódi termékek és árak",
+          "Tekintse át minden választást",
+          "Családi kalóriaterv",
+          "Receptek a meglévőkből"
         ],
         "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
-        "characterAlt": "KAI, a teljes testű Grocery Twin személyiség",
+        "characterAlt": "KAI, az Ön teljes Grocery Twin személyisége",
         "chat": {
           "statusLabel": "Online",
-          "subtitle": "Hűtőből-receptbe bevásárlási asszisztens",
-          "openingMessage": "Sziasztok, én vagyok KAI. Mutasd a hűtőt, kamrát vagy egy friss számlát. Javaslok recepteket abból, amid van, és láthatóan tartom a költségeket, kalóriákat és hiányzó alapanyagokat.",
-          "visitorMessage": "Szkenneld be a hűtőmet, és mutasd, mit tudok ma este elkészíteni.",
-          "assistantMessage": "Amit már van, azt receptopciókká alakítom, megmutatom az adagonkénti kalóriákat, és csak a hiányzó alapanyagokat vásárolom meg.",
-          "inputPlaceholder": "Kérdezz bevásárlásról, receptről vagy kalóriavizsgálatról…",
+          "subtitle": "Hűtőtől a receptig – bevásárlóasszisztens",
+          "openingMessage": "Szia, én vagyok KAI. Mutassa meg a hűtőt, a kamrát vagy egy friss nyugtát. Javaslok recepteket a meglévőkből, és nyilván tartom a költést, a kalóriákat és a hiányzó alapanyagokat.",
+          "visitorMessage": "Szkeneld be a hűtőmet, és mutasd meg, mit főzhetek ma este.",
+          "assistantMessage": "A meglévőkből receptlehetőségeket készítek, megadom az egy adagra jutó kalóriákat, és csak a még hiányzó alapanyagokat szerzem be.",
+          "inputPlaceholder": "Kérjen élelmiszert, receptet vagy kalória-ellenőrzést…",
           "suggestions": [
-            "Zabtej akciók",
-            "Egyensúlyozd a hetemet",
-            "Főzzek a hűtőmből"
+            "Akciók zabtejre",
+            "Egyensúlyozza ki a hetemet",
+            "Főzz a hűtőmből"
           ],
-          "demoNote": "Illusztratív bevásárlási, recept- és táplálkozási bemutató · Ellenőrizd az alapanyagokat és étrendi igényeket",
+          "demoNote": "Illusztratív élelmiszer-, recept- és tápanyag-bemutató · Ellenőrizze az alapanyagokat és az étrendi igényeket",
           "sampleProduct": {
             "badge": "Akció találva · Pantry+",
             "name": "Oatly Barista Edition",
@@ -171,24 +166,24 @@
         "restockDemo": {
           "enabled": true,
           "commandTrigger": "restock",
-          "uploadLabel": "Válassz hűtő, kamra, számla vagy bevásárlólista képet",
-          "uploadHint": "JPEG, PNG, WebP vagy HEIC · max. 6 kép és 10 MB kép",
-          "analyzingLabel": "KAI épp olvassa a látható élelmiszereket…",
-          "inventoryHeading": "Tekintsd át a kiolvasott leltárt",
-          "inventoryBody": "Javítsd a mennyiségeket, töröld a hibákat, vagy adj hozzá mindent, amit a KAI kihagyott.",
+          "uploadLabel": "Válasszon egy hűtő-, kamra-, nyugta- vagy bevásárlólista-képet",
+          "uploadHint": "JPEG, PNG, WebP vagy HEIC · legfeljebb 6 kép, egyenként 10 MB-ig",
+          "analyzingLabel": "A KAI olvassa a látható élelmiszereket…",
+          "inventoryHeading": "Tekintse át a kinyert készletet",
+          "inventoryBody": "Javítsa ki a mennyiségeket, törölje a hibákat, vagy adjon hozzá bármit, amit a KAI kihagyott.",
           "itemNameLabel": "Tétel",
           "quantityLabel": "Mennyiség",
           "unitLabel": "Egység",
           "addItemLabel": "Tétel hozzáadása",
           "removeItemLabel": "Eltávolítás",
-          "chatLabel": "Javítás chatben",
+          "chatLabel": "Javítás chaten",
           "voiceLabel": "Javítás hanggal · 5 perc",
-          "reviewLabel": "Leltár áttekintése",
-          "editLabel": "Leltár szerkesztése",
-          "confirmationHeading": "Leltár kész",
-          "confirmationBody": "Nézd át a beolvasás körét, majd mentsd az élelmiszereket és fogyasztási profilt a privát listádra.",
-          "signInLabel": "Mentéshez jelentkezz be",
-          "signInNotice": "Jelentkezz be az átnézett élelmiszerlista és készletprofil mentéséhez privát KAI-munkateredbe. Utánpótlás nem indul automatikusan.",
+          "reviewLabel": "Készlet átnézése",
+          "editLabel": "Készlet szerkesztése",
+          "confirmationHeading": "Készlet kész",
+          "confirmationBody": "A KAI újra megerősíti ezt a listát, mielőtt kosarat javasol. Semmi sem kerül megrendelésre az Ön jóváhagyása nélkül.",
+          "signInLabel": "Jelentkezzen be a folytatáshoz",
+          "signInNotice": "Jelentkezzen be, hogy ezt az élelmiszer-rögzítést egy privát KAI-munkamenetbe helyezze át, és folytassa az utánpótlási folyamatot. Semmi sem kerül megrendelésre az Ön kifejezett jóváhagyása nélkül.",
           "authenticatedActionLabel": "Élelmiszerek listázása",
           "savingLabel": "Élelmiszer mentése…",
           "anonymousPlanNotice": "Jelentkezz be az átnézett készlet és a számított készletküszöb mentéséhez.",
@@ -199,89 +194,89 @@
           "completionEyebrow": "KÉSZLET MENTVE",
           "completionHeading": "Élelmiszerek a listádra mentve",
           "completionBody": "KAI mentette az átnézett élelmiszereket és fogyasztási profilt, majd a háttérben kiszámította a készletszinteket és a következő utánpótlási küszöböt. Utánpótlás nem indult.",
-          "expiryCopy": "A le nem hódított előnézetek egy óra után lejárnak",
-          "errorCopy": "A KAI nem tudott bevásárlólistát olvasni ebből a képből. Próbálj egy tisztább hűtő, kamra, számla vagy bevásárlólista fotót."
+          "expiryCopy": "A nem igényelt előnézetek egy óra után lejárnak",
+          "errorCopy": "A KAI nem tudott élelmiszerlistát kiolvasni ebből a képből. Próbáljon tisztább hűtő-, kamra-, nyugta- vagy bevásárlólista-fotót."
         }
       },
       "product": {
-        "kicker": "A Grocery + Recipe + Calorie Twin-ed",
-        "heading": "Mit főzhetünk, és mi kell még a bevásárláshoz?",
-        "body": "A KAI összekapcsolja a szkennelést, recepteket, termékkeresést, kalóriákat és kosarat, így minden étkezés abból indul, amid már van.",
+        "kicker": "Az Ön Grocery + Recept + Kalória Twinje",
+        "heading": "Mit főzhetünk – és mit kell még beszerezni?",
+        "body": "A KAI összekapcsolja a szkennelést, a recepteket, a termékkeresést, a kalóriákat és a kosarat, hogy minden étkezés a meglévőkből induljon.",
         "capabilityLabels": [
           "Termékkeresés",
           "Kalóriaterv",
           "Receptötletek",
           "Képből lista",
           "Hangsegítség",
-          "Akcióillesztés"
+          "Akcióegyeztetés"
         ],
         "cards": [
           {
             "title": "Élő kosár",
-            "body": "Hasonlítsd össze a valós termékeket, mennyiségeket és árakat egy áttekinthető kosárban.",
-            "metric": "Költség és kalóriák együtt"
+            "body": "Hasonlítson össze valódi termékeket, mennyiségeket és árakat egyetlen áttekinthető kosárban.",
+            "metric": "Költés + kalória együtt"
           },
           {
-            "title": "Receptek a szkennodből",
-            "body": "Nézd meg a elkészíthető recepteket, rangsortabban aszerint, mi van már a hűtőben és mi hiányzik.",
-            "metric": "Először főzz, aztán vásárolj"
+            "title": "Receptek a szkennelésből",
+            "body": "Nézze meg a főzhető recepteket aszerint rangsorolva, mi van már a hűtőben, és mi hiányzik.",
+            "metric": "Először főzzön, aztán vásároljon"
           },
           {
             "title": "Akcióradar",
-            "body": "Hasonlítsd össze a hasznos találatokat, miközben megőrzöd a receptlefedettséget és a háztartási célokat.",
-            "metric": "Valós bevásárlási források"
+            "body": "Hasonlítson össze hasznos egyezéseket a receptlefedettség és a háztartási célok megőrzésével.",
+            "metric": "Valódi élelmiszer-források"
           }
         ]
       },
       "mobile": {
-        "kicker": "KAI a zsebedben",
-        "heading": "Hűtőből receptbe kosárba,",
-        "accentHeading": "Bárhol is vagy.",
+        "kicker": "KAI a zsebében",
+        "heading": "A hűtőtől a receptig a kosárig,",
+        "accentHeading": "Bárhol is legyen.",
         "items": [
           {
             "label": "Kosár összeállítása",
-            "title": "Egy élő kosár a költségeiddel és kalóriaterveddel együtt.",
-            "body": "Kérjen egy terméket, hasonlítson össze valódi találatokat, és nézze meg, hogyan változik az ár, a kalória és a mennyiség a hét során."
+            "title": "Élő kosár a költésével és a kalóriatervével együtt.",
+            "body": "Kérjen egy terméket, hasonlítson össze egy valódi egyezést, és nézze meg, hogyan változtatja a hetet az ár, a kalória és a mennyiség."
           },
           {
-            "label": "Szkennelje be a hűtőt",
-            "title": "Alakítsa át a hűtő vagy blokk fotóját elkészíthető receptekké.",
-            "body": "A KAI azonosítja, mi van kéznél, becsüli a kalóriákat, és recepteket javasol, mielőtt összeállítaná a hiányzó alapanyagok listáját."
+            "label": "Hűtő szkennelése",
+            "title": "Alakítson egy hűtő- vagy nyugtafotót főzhető receptekké.",
+            "body": "A KAI felismeri, ami van, megbecsüli a kalóriákat, és recepteket javasol, mielőtt összeállítja a hiányzó alapanyagok listáját."
           },
           {
             "label": "Válasszon receptet",
-            "title": "Válasszon étkezést, majd csak azt vásárolja meg, ami hiányzik.",
-            "body": "Hasonlítsa össze az elkészítési időt, az adagonkénti kalóriát, az alapanyag-lefedettséget és a kis élelmiszer-különbséget minden receptnél."
+            "title": "Válasszon ételt, és csak a hiányzókat vásárolja meg.",
+            "body": "Hasonlítsa össze a főzési időt, az egy adagra jutó kalóriákat, az alapanyag-lefedettséget és a kis bevásárlólistát minden receptnél."
           },
           {
-            "label": "Beszélj KAI-val",
-            "title": "Beszélje át a bevásárlást és heti célját.",
-            "body": "Mondja el, mi fogyott el vagy mit szeretne főzni. A KAI figyelemmel kíséri a kosarat, a kiadásokat és a kalória-különbséget."
+            "label": "Beszéljen KAI-val",
+            "title": "Beszélje át a bevásárlást és a heti célját.",
+            "body": "Mondja el, mi fogyott el, vagy mit szeretne főzni. A KAI folyamatosan nyilván tartja a kosarat, a költést és a kalóriahiányt."
           }
         ]
       },
       "features": {
-        "kicker": "A heti bevásárlás, újragondolva",
-        "heading": "Vásároljon, tervezzen recepteket és kezelje a kiadásait és kalóriáit átláthatóan",
+        "kicker": "A heti bevásárlás újraépzav",
+        "heading": "Kezeje élelmiszereit, receptjeit, költését és kalóriáit – érthetően",
         "items": [
           {
             "number": "01",
-            "title": "Recept-, termék- és kalória-felfedezés",
-            "body": "Szkennelje be, ami van, vagy írja le, mit szeretne enni. A KAI megmutatja az elkészíthető recepteket, az adagonkénti kalóriákat és a pontos élelmiszer-különbséget minden opcióhoz.",
+            "title": "Receptek, termékek és kalóriák felfedezése",
+            "body": "Szkennelje be, ami van, vagy írja le a kívánt ételt. A KAI megmutatja a főzhető recepteket, az egy adagra jutó kalóriákat és a pontos bevásárlólistát minden lehetőséghez.",
             "tags": [
-              "Hűtő szkenner",
+              "Hűtő szkennelése",
               "Receptek",
               "Kalóriák",
-              "Hiányzó termékek"
+              "Hiányzó tételek"
             ],
             "accent": "purple"
           },
           {
             "number": "02",
-            "title": "A kiválasztott ételekből összeállított kosár",
-            "body": "Válasszon egy receptet, és a KAI eltávolítja a már meglévő alapanyagokat. Csak a hiányzó termékek kerülnek a kosárba, a kiadások és a háztartási kalóriák együtt frissülnek.",
+            "title": "Az Ön által választott ételekből összeállított kosár",
+            "body": "Válasszon egy receptet, és a KAI eltávolítja a már meglévő alapanyagokat. Csak a hiányzó termékek kerülnek a kosárba, a költés és a családi kalóriák pedig együtt frissülnek.",
             "tags": [
-              "Recept-lefedettség",
+              "Receptlefedettség",
               "Csak a hiányzó",
               "Heti kcal"
             ],
@@ -289,11 +284,11 @@
           },
           {
             "number": "03",
-            "title": "Szkenneljen egyszer. Főzzön abból, ami van.",
-            "body": "A KAI a hűtőből, kamrából vagy blokkból három praktikus receptet készít. Hasonlítsa össze az időt és a kalóriákat, válasszon egyet, majd tekintse át csak annak hiányzó alapanyagait.",
+            "title": "Szkenneljen egyszer. Főzzön a meglévőkből.",
+            "body": "A KAI egy hűtő-, kamra- vagy nyugtaszkennelésből három gyakorlatias receptet készít. Hasonlítsa össze az időt és a kalóriákat, válasszon egyet, majd csak a hiányzó alapanyagait nézze át.",
             "tags": [
-              "3 recept opció",
-              "Elkészítési idő",
+              "3 receptlehetőség",
+              "Főzési idő",
               "Kalória / adag"
             ],
             "accent": "lime"
@@ -301,36 +296,36 @@
         ]
       },
       "stories": {
-        "kicker": "Így érződik a KAI-val való főzés és bevásárlás",
+        "kicker": "Így érezhető a főzés és bevásárlás a KAI-val",
         "heading": "Apró pillanatok a hűtőtől a vacsoráig",
         "testimonials": [
           {
-            "quote": "A KAI a hűtőnk tartalmából vacsoraötleteket készít, majd megmutatja az árat és a család kalóriáit, mielőtt választanék.",
+            "quote": "A KAI a hűtőnkben lévőkből vacsoraötleteket készít, majd a választásom előtt megmutatja a költséget és a családi kalóriákat.",
             "name": "Mila",
-            "meta": " Elfoglalt szülő"
+            "meta": "Elfoglalt szülő"
           },
           {
-            "quote": "Kérek sajtajánlatokat, összehasonlítom a valódi opciókat, és pontosan azt adom hozzá, amit szeretnék. Nincs tabváltás.",
+            "quote": "Sajt akcióit kérem, összehasonlítom a valódi opciókat, és hozzáadom pontosan azt, amelyiket akarom. Nincs lapváltogatás.",
             "name": "Noah",
-            "meta": "Heti bevásárló"
+            "meta": "Heti vásárló"
           },
           {
-            "quote": "A blokk szkenner három receptet, az adagonkénti kalóriákat és csak azokat az alapanyagokat mutatta, amiket még meg kell vásárolnom.",
-            "name": "Sofia",
-            "meta": "Otthoni szakács"
+            "quote": "A nyugtaszkennelés három receptet, az egy adagra jutó kalóriákat és csak a még szükséges alapanyagokat adta.",
+            "name": "Szófia",
+            "meta": "Házi szakács"
           },
           {
-            "quote": "Tetszik, hogy a KAI először összeállítja a kosarat, és csak akkor teszi fel a tervezési kérdéseket, amikor azok relevánsak.",
-            "name": "Lucas",
-            "meta": "Egyetemista"
+            "quote": "Tetszik, hogy a KAI először a kosarat állítja össze, és a tervezési kérdéseket csak akkor teszi fel, amikor az valóban számít.",
+            "name": "Lukács",
+            "meta": "Diák"
           },
           {
-            "quote": "A hang tökéletes, amikor a kezem tele van a konyhában. Csak megmondom a KAI-nak, mi fogyott el.",
+            "quote": "A hang tökéletes, amikor tele vannak a kezeim a konyhában. Csak mondom a KAI-nak, mi fogyott el.",
             "name": "Emma",
-            "meta": "Étkezés-előkészítő"
+            "meta": "Meal prep rajongó"
           },
           {
-            "quote": "Minden áttekinthető marad. Módosíthatom a mennyiségeket, és látom, ahogy a kiadás és a kalória-összesítés együtt változik velem.",
+            "quote": "Minden átnézhető marad. Módosíthatom a mennyiségeket, és látom, ahogy a költés és a kalóriaösszeg együtt változik velem.",
             "name": "Daan",
             "meta": "Okos vásárló"
           }
@@ -338,30 +333,30 @@
         "articles": [
           {
             "category": "Heti rutin",
-            "title": "A hétperces bevásárlás és étkezésterv",
-            "body": "Egy magányos vásárló egy szétszórt alapanyaglistából kosarat, három elkészíthető vacsorát és 10 850 tervezett kalóriát készített."
+            "title": "A hétperces bevásárlás és étkezési terv",
+            "body": "Egyedülálló vásárló egy szétszórt alaplista helyett összeállított egy kosarat, három főzhető vacsorát és 10 850 tervezett kalóriát."
           },
           {
             "category": "Hűtőtől a receptig",
-            "title": "A hűtő fotójától a mai vacsoráig",
-            "body": "A KAI felismerte az alapanyagokat, három receptet javasolt, és szétválasztotta a már meglévőket a még megvásárolandóktól."
+            "title": "A hűtőfotótól a mai vacsoráig",
+            "body": "A KAI felismerte az alapanyagokat, három receptet javasolt, és szétválasztotta, ami már megvolt, attól, amit még meg kellett venni."
           },
           {
             "category": "Okos receptkeresés",
-            "title": "Okos keresés, ami az egész hetet látja",
-            "body": "Egy keresés mérlegelte az árat, a kalóriákat, a recept-lefedettséget és a fehérje-különbséget anélkül, hogy elveszítette volna a bevásárlás fonalát."
+            "title": "Okos keresés, amely az egész hetet látja",
+            "body": "Egy keresés, amely egyensúlyba hozza az árat, a kalóriákat, a receptlefedettséget és a fehérjehiányt anélkül, hogy elvesztené a bevásárlás fonalát."
           }
         ]
       },
       "about": {
-        "kicker": "Egy hely, sok belépési mód",
-        "heading": "Minden bemenet receptekké, egy kosárrá és egy kalória-tervvé válik",
-        "body": "Egy fotó, hangposta, blokk vagy lista ugyanahhoz a nézethez vezet: kéznél lévő alapanyagok, elkészíthető receptek, hiányzó termékek, heti kiadás és háztartási kalóriák.",
+        "kicker": "Egy hely, sokféle belépés",
+        "heading": "Minden bemenetből receptek, egy kosár és egy kalóriaterv lesz",
+        "body": "Egy fotó, hangjegyzet, nyugta vagy lista ugyanazt a nézetet táplálja: a meglévő alapanyagok, a főzhető receptek, a még hiányzó termékek, a heti költés és a háztartási kalóriák.",
         "capabilities": [
           "Fotó",
           "Hang",
-          "Ajánlatok",
-          "Blokk",
+          "Akciók",
+          "Nyugta",
           "Lista",
           "Szállítás",
           "Kalóriák",
@@ -370,19 +365,19 @@
         ]
       },
       "closing": {
-        "kicker": "Az Ön következő hűtőtől-vacsoráig terve",
+        "kicker": "Az Ön következő hűtőtől a vacsoráig terve",
         "heading": "Kezdje azzal, ami van. Csak azt vásárolja meg, ami hiányzik.",
-        "body": "Szkennelje be a hűtőt vagy egy blokkot. A KAI elkészíthető recepteket javasol, megmutatja az adagonkénti kalóriákat, és a hiányzó alapanyagokból áttekinthető kosarat készít.",
-        "ctaLabel": "Szkennelés receptek kereséséhez"
+        "body": "Szkennelje be a hűtőt vagy egy nyugtát. A KAI főzhető recepteket javasol, megadja az egy adagra jutó kalóriákat, és a hiányzó alapanyagokat egy átnézhető kosárrá alakítja.",
+        "ctaLabel": "Szkenneljen recepteket keresve"
       },
       "footer": {
-        "tagline": "Az Ön hűtő-kosár Grocery Twin-je. Találjon recepteket abból, ami van, nézze meg a kalóriákat, és csak azt vásárolja meg, ami hiányzik.",
+        "tagline": "Az Ön hűtőtől a kosárig Grocery Twinje. Találjon recepteket a meglévőkből, nézze meg a kalóriákat, és csak azt vásárolja meg, ami hiányzik.",
         "groups": [
           {
             "label": "Termék",
             "links": [
               {
-                "label": "Grocery bemutató",
+                "label": "Bevásárló demó",
                 "target": "product"
               },
               {
@@ -390,7 +385,7 @@
                 "target": "features"
               },
               {
-                "label": "történetek",
+                "label": "Történetek",
                 "target": "stories"
               }
             ]
@@ -399,22 +394,22 @@
             "label": "KAI",
             "links": [
               {
-                "label": "A KAI-ról",
+                "label": "A KAI-ről",
                 "target": "about"
               },
               {
-                "label": "Érintkezés",
+                "label": "Kapcsolat",
                 "target": "contact"
               },
               {
-                "label": "Vissza fel",
+                "label": "Vissza a tetejére",
                 "target": "top"
               }
             ]
           }
         ],
         "copyright": "© 2026 KAI · Grocery Twin",
-        "closingStatement": "Jó döntések. Remek hét."
+        "closingStatement": "Jó választások. Remek hét."
       },
       "homeRoiCalculator": {
         "methodologyVersion": 2,
@@ -1293,7 +1288,7 @@
         "landingPage",
         "badge"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1484,7 +1479,7 @@
         "header",
         "primaryCtaLabel"
       ],
-      "sourceHash": "f6f2913c3ee65c4e5fa410960649ae928ee8a5cd7f384972c7275007686b7ac2"
+      "sourceHash": "ab23cde5c8e7eb47ed87cea252cff38249f120f377190c482f92ae0cf70f715d"
     },
     {
       "path": [
@@ -1493,7 +1488,7 @@
         "hero",
         "ratingLabel"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1885,7 +1880,7 @@
         "restockDemo",
         "confirmationBody"
       ],
-      "sourceHash": "3855bc93caa2a8d399d9cee5cc6e725b20d5e76226eece00ca411c62e98a124a"
+      "sourceHash": "52d9f9ef8483c24c7185a727bf2211244f85030367da02ddf14eb5d6e6011ba0"
     },
     {
       "path": [
@@ -1895,7 +1890,7 @@
         "restockDemo",
         "signInLabel"
       ],
-      "sourceHash": "5e4e68bf849048cc43d66bb27eb09dc5d3a299b8e31b9b887643f594b40e1213"
+      "sourceHash": "607a80121c655651dc14cbb057e035943bed91077283e9c6b8d709db1e25ef7f"
     },
     {
       "path": [
@@ -1905,7 +1900,7 @@
         "restockDemo",
         "signInNotice"
       ],
-      "sourceHash": "7ede1f8e3651004f8425e6cd270825174d06112032e615b98f44f4685533c0a4"
+      "sourceHash": "7ee6641bab06f804b91bb13e538d9da870890f703c1d8fa24098515f5129a011"
     },
     {
       "path": [
@@ -2043,7 +2038,7 @@
         "product",
         "heading"
       ],
-      "sourceHash": "c172cd2a53e02e6d2763843e2a4f04c33b97f43ddaa3d1af868a01a8d445d7e1"
+      "sourceHash": "989cacb42de5017d3d7942afe20d93c7d79c5617f70de63c4dbb7a4f1174baf2"
     },
     {
       "path": [
@@ -6543,6 +6538,42 @@
         "landingPage",
         "roiCalculator",
         "currencyCopy",
+        "native"
+      ],
+      "sourceHash": "cd2604270cd9656f4abdccbee7bf11038b88a1ae5a8657f9933a807fdcdff8bf"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "loading"
+      ],
+      "sourceHash": "efc980d9dce429c644a6dce658df91cdacbff328ea38504d8ce80bfe9b76b32d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "unavailable"
+      ],
+      "sourceHash": "b01a152edb76137a0a16fe29cc942fa282d98fbdc4123b830397f9fde7f85095"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "converted"
+      ],
+      "sourceHash": "450c38574200c1402496596e9f8177d31fd0e64cf58d9468c350eb3ba2c60d10"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
         "basis"
       ],
       "sourceHash": "17cc8491fcdfe8ddd4f8dec6a3859229ecacffb562b383e1283f1c0be0019806"
@@ -7914,5 +7945,5 @@
       "sourceHash": "6e5fe4ca7c07142fa81eef400c342dea7f8ba0422aa331c3880e6604db8d52a7"
     }
   ],
-  "generatedAt": "2026-10-13T14:19:34.015Z"
+  "generatedAt": "2026-09-01T19:15:50.031Z"
 }

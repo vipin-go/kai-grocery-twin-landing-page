@@ -2,13 +2,8 @@
   "schemaVersion": 2,
   "language": "nl",
   "regionKey": null,
-  "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
+  "sourceRevision": "e109add0e4fe301964f8a19341549a6101f0e29e2c6783073414963417b1e42b",
   "landingPage": {
-    "capabilityPreview": {
-      "enabled": true,
-      "commandId": "restock",
-      "presentation": "surface"
-    },
     "design": {
       "variant": "grocery-twin",
       "defaultThemeMode": "light",
@@ -57,7 +52,7 @@
     },
     "header": {
       "brandMark": "image",
-      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "logoImageUrl": "https://gabrieloperator.com/assets/gabriel-twins/brand-marks/kai.webp",
       "navItems": [
         {
           "label": "Product",
@@ -68,7 +63,7 @@
           "target": "mobile"
         },
         {
-          "label": "verhalen",
+          "label": "Verhalen",
           "target": "stories"
         },
         {
@@ -82,31 +77,31 @@
       ],
       "ctaLabel": "Ontmoet KAI"
     },
-    "badge": "Jouw winkel, recepten en calorieplan, verbonden",
+    "badge": "Uw winkel, recepten en calorieplan—verbonden",
     "headline": "Maak boodschappen doen weer makkelijk",
     "headlineAccent": "weer makkelijk",
-    "subheadline": "Scan de koelkast of een bon. KAI zet wat er al is om in recepten, telt de calorieën en bestelt alleen wat er voor elke maaltijd nog ontbreekt.",
+    "subheadline": "Scan de koelkast of een kassabon. KAI maakt van wat er al is recepten, telt de calorieën en koopt alleen wat elke maaltijd nog nodig heeft.",
     "ctaLabel": "Praat met KAI",
-    "secondaryCtaLabel": "Van scan naar recept",
+    "secondaryCtaLabel": "Scan naar recepten",
     "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
     "featureTags": [
       "Echte producten en prijzen",
-      "Elke keuze controleren",
-      "Calorieën per huishouden gepland",
-      "Recepten van wat je hebt"
+      "Beoordeel elke keuze",
+      "Calorieën gepland per huishouden",
+      "Recepten van wat u heeft"
     ],
     "seoImage": {
       "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
-      "alt": "KAI, jouw Grocery Twin, in een zonovergoten keuken omringd door verse producten en een weekmenu"
+      "alt": "KAI, uw boodschappen-twin, in een zonnige keuken omringd door verse producten en een weekmenu"
     },
     "contact": {
-      "heading": "Begin met wat je hebt",
-      "body": "Scan de koelkast of een bon en laat KAI de ontbrekende boodschappen klaarzetten om te beoordelen."
+      "heading": "Begin met wat u heeft",
+      "body": "Scan de koelkast of een kassabon en laat KAI de boodschappen aanvullen ter beoordeling."
     },
     "groceryTwin": {
       "header": {
-        "editionLabel": "Start",
-        "subtitle": "Jouw Grocery Twin",
+        "editionLabel": "Home",
+        "subtitle": "Uw Boodschappen Tweeling",
         "secondaryEditionLabel": "Retail",
         "navItems": [
           {
@@ -118,7 +113,7 @@
             "target": "mobile"
           },
           {
-            "label": "verhalen",
+            "label": "Verhalen",
             "target": "stories"
           },
           {
@@ -131,37 +126,37 @@
           }
         ],
         "secondaryCtaLabel": "Ontmoet KAI",
-        "primaryCtaLabel": "Ontmoet KAI"
+        "primaryCtaLabel": "Start een boodschappenlijst"
       },
       "hero": {
-        "ratingLabel": "Jouw winkel, recepten en calorieplan, verbonden",
+        "ratingLabel": "Uw winkel, recepten en calorieplan—verbonden",
         "heading": "Maak boodschappen doen weer makkelijk",
-        "body": "Scan de koelkast of een bon. KAI zet wat er al is om in recepten, telt de calorieën en bestelt alleen wat er voor elke maaltijd nog ontbreekt.",
+        "body": "Scan de koelkast of een kassabon. KAI maakt van wat er al is recepten, telt de calorieën en koopt alleen wat elke maaltijd nog nodig heeft.",
         "primaryCtaLabel": "Praat met KAI",
-        "secondaryCtaLabel": "Van scan naar recept",
+        "secondaryCtaLabel": "Scan naar recepten",
         "trustItems": [
           "Echte producten en prijzen",
-          "Elke keuze controleren",
-          "Calorieën per huishouden gepland",
-          "Recepten van wat je hebt"
+          "Beoordeel elke keuze",
+          "Calorieën gepland per huishouden",
+          "Recepten van wat u heeft"
         ],
         "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
-        "characterAlt": "KAI, jouw complete Grocery Twin-persona",
+        "characterAlt": "KAI, uw volledige Boodschappen Tweeling persona",
         "chat": {
           "statusLabel": "Online",
-          "subtitle": "Boodschappenassistent van koelkast tot recept",
-          "openingMessage": "Hoi, ik ben KAI. Laat me de koelkast, voorraadkast of een recente bon zien. Ik stel recepten voor op basis van wat je hebt en houd de uitgaven, calorieën en ontbrekende ingrediënten inzichtelijk.",
+          "subtitle": "Koelkast-naar-recept boodschappenassistent",
+          "openingMessage": "Hallo, ik ben KAI. Laat me de koelkast, voorraadkast of een recente kassabon zien. Ik stel recepten voor van wat u heeft en houd de uitgaven, calorieën en ontbrekende ingrediënten zichtbaar.",
           "visitorMessage": "Scan mijn koelkast en laat zien wat ik vanavond kan koken.",
-          "assistantMessage": "Ik maak van wat er al is receptopties, toon calorieën per portie en bestel alleen de ingrediënten die nog ontbreken.",
-          "inputPlaceholder": "Vraag boodschappen, een recept of een caloriecheck aan…",
+          "assistantMessage": "Ik maak van wat er al is receptopties, toon calorieën per portie en koop alleen de ingrediënten die nog ontbreken.",
+          "inputPlaceholder": "Vraag om boodschappen, een recept of een caloriecheck…",
           "suggestions": [
             "Aanbiedingen havermelk",
             "Balanceer mijn week",
             "Koken uit mijn koelkast"
           ],
-          "demoNote": "Illustratieve demo voor boodschappen, recepten en voeding · Controleer ingrediënten en dieetwensen",
+          "demoNote": "Illustratieve demo van boodschappen, recepten en voeding · Controleer ingrediënten en dieetwensen",
           "sampleProduct": {
-            "badge": "Aanbieding gevonden · Pantry+",
+            "badge": "Aanbieding gevonden · Voorraad+",
             "name": "Oatly Barista Edition",
             "detail": "1 L · 590 kcal · 20% korting",
             "price": "€2,39",
@@ -171,44 +166,44 @@
         "restockDemo": {
           "enabled": true,
           "commandTrigger": "restock",
-          "uploadLabel": "Kies een afbeelding van koelkast, voorraadkast, bon of boodschappenlijst",
-          "uploadHint": "JPEG, PNG, WebP of HEIC · tot 6 afbeeldingen en 10 MB per stuk",
+          "uploadLabel": "Kies een afbeelding van de koelkast, voorraadkast, kassabon of boodschappenlijst",
+          "uploadHint": "JPEG, PNG, WebP of HEIC · maximaal 6 afbeeldingen van 10 MB per stuk",
           "analyzingLabel": "KAI leest de zichtbare boodschappen…",
-          "inventoryHeading": "Controleer de herkende voorraad",
+          "inventoryHeading": "Beoordeel de gescande inventaris",
           "inventoryBody": "Corrigeer hoeveelheden, verwijder fouten of voeg toe wat KAI heeft gemist.",
-          "itemNameLabel": "Product",
+          "itemNameLabel": "Artikel",
           "quantityLabel": "Hoeveelheid",
           "unitLabel": "Eenheid",
-          "addItemLabel": "Product toevoegen",
+          "addItemLabel": "Artikel toevoegen",
           "removeItemLabel": "Verwijderen",
           "chatLabel": "Corrigeren via chat",
           "voiceLabel": "Corrigeren via spraak · 5 min",
-          "reviewLabel": "Voorraad controleren",
-          "editLabel": "Voorraad bewerken",
-          "confirmationHeading": "Voorraad klaar",
-          "confirmationBody": "Bekijk wat de scan dekt en sla de boodschappen en het verbruiksprofiel op in je privélijst.",
-          "signInLabel": "Bewaar boodschappen: log in",
-          "signInNotice": "Log in om deze getoetste boodschappenscan en het voorraadprofiel in je privéwerkruimte van KAI op te slaan. Aanvullen start nooit automatisch.",
-          "authenticatedActionLabel": "Boodschappen toevoegen",
-          "savingLabel": "Waren opslaan…",
-          "anonymousPlanNotice": "Log in om deze getoetste voorraad en de berekende voorraaddrempel op te slaan.",
-          "authenticatedPlanNotice": "Sla deze getoetste voorraad, dieetcontext en berekende voorraaddrempel op. Aanvullen start nooit automatisch.",
-          "consumptionEyebrow": "VERBRUIKSPROFIEL",
-          "consumptionHeading": "Hoe gebruik je deze boodschappen?",
-          "consumptionBody": "Je antwoorden bepalen de voorraadraming en volgende aanvuldrempel die je in je werkruimte ziet.",
-          "completionEyebrow": "VOORRAAD BEWAARD",
-          "completionHeading": "Boodschappen op je lijst gezet",
-          "completionBody": "KAI sloeg de getoetste boodschappen en het verbruiksprofiel op en berekende op de achtergrond de voorraadniveaus en de volgende aanvuldrempel. Aanvullen is niet gestart.",
-          "expiryCopy": "Niet-opgeëiste previews verlopen na één uur",
-          "errorCopy": "KAI kon uit deze afbeelding geen boodschappenlijst aflezen. Probeer een duidelijkere foto van koelkast, voorraadkast, bon of boodschappenlijst."
+          "reviewLabel": "Inventaris beoordelen",
+          "editLabel": "Inventaris bewerken",
+          "confirmationHeading": "Inventaris klaar",
+          "confirmationBody": "KAI zal deze lijst opnieuw bevestigen voordat een boodschappenlijst wordt voorgesteld. Niets wordt besteld zonder uw goedkeuring.",
+          "signInLabel": "Meld u aan om door te gaan",
+          "signInNotice": "Meld u aan om deze boodschappenlijst in een privé KAI-sessie te plaatsen en de aanvullingsworkflow voort te zetten. Niets wordt besteld zonder uw uitdrukkelijke goedkeuring.",
+          "authenticatedActionLabel": "Boodschappen toevoegen aan lijst",
+          "savingLabel": "Boodschappen opslaan…",
+          "anonymousPlanNotice": "Meld u aan om deze beoordeelde voorraad en de berekende voorraaddrempel op te slaan.",
+          "authenticatedPlanNotice": "Sla deze beoordeelde voorraad, dieetcontext en berekende voorraaddrempel op. Er wordt niet automatisch aangevuld.",
+          "consumptionEyebrow": "CONSUMPTIEPROFIEL",
+          "consumptionHeading": "Hoe gebruikt u deze boodschappen?",
+          "consumptionBody": "Deze antwoorden bepalen de voorraadschatting en de volgende voorraaddrempel die in uw werkruimte worden weergegeven.",
+          "completionEyebrow": "VOORRAAD OPGESLAGEN",
+          "completionHeading": "Boodschappen toegevoegd aan uw lijst",
+          "completionBody": "KAI heeft de beoordeelde boodschappen en het consumptieprofiel opgeslagen, vervolgens de voorraadniveaus en de volgende voorraaddrempel op de achtergrond berekend. Er werd geen aanvulling gestart.",
+          "expiryCopy": "Ongeclaimde previews verlopen na een uur",
+          "errorCopy": "KAI kon geen boodschappenlijst uit deze afbeelding lezen. Probeer een duidelijkere foto van de koelkast, voorraadkast, kassabon of boodschappenlijst."
         }
       },
       "product": {
-        "kicker": "Jouw Boodschappen + Recept + Calorieën Twin",
-        "heading": "Wat kunnen we koken, en wat moet er nog worden gehaald?",
-        "body": "KAI koppelt scan, recepten, productzoeker, calorieën en winkelwagen zodat elke maaltijd begint met wat je al in huis hebt.",
+        "kicker": "Uw Boodschappen + Recept + Calorie Twin",
+        "heading": "Wat kunnen we koken — en wat moet er nog worden ingekocht?",
+        "body": "KAI koppelt de scan, recepten, productzoekopdrachten, calorieën en de winkelwagen, zodat elke maaltijd begint met wat u al in huis heeft.",
         "capabilityLabels": [
-          "Productzoeker",
+          "Product zoeken",
           "Calorieplan",
           "Receptideeën",
           "Afbeelding naar lijst",
@@ -218,79 +213,79 @@
         "cards": [
           {
             "title": "Live winkelwagen",
-            "body": "Vergelijk echte producten, hoeveelheden en prijzen in één te beoordelen winkelwagen.",
+            "body": "Vergelijk echte producten, hoeveelheden en prijzen in één beoordeelbare winkelwagen.",
             "metric": "Uitgaven + calorieën samen"
           },
           {
-            "title": "Recepten van jouw scan",
-            "body": "Bekijk kookbare recepten, gerangschikt op wat al in de koelkast ligt en wat er nog ontbreekt.",
-            "metric": "Eerst koken, dan boodschappen"
+            "title": "Recepten uit uw scan",
+            "body": "Bekijk kookbare recepten, gerangschikt op wat al in de koelkast staat en wat er ontbreekt.",
+            "metric": "Eerst koken, dan boodschappen doen"
           },
           {
             "title": "Aanbiedingenradar",
-            "body": "Vergelijk nuttige matches met behoud van receptdekking en huishouddoelen.",
+            "body": "Vergelijk nuttige matches met behoud van receptdekking en huishoudelijke doelen.",
             "metric": "Echte boodschappenbronnen"
           }
         ]
       },
       "mobile": {
-        "kicker": "KAI in je zak",
+        "kicker": "KAI in uw zak",
         "heading": "Van koelkast naar recept naar winkelwagen,",
-        "accentHeading": "waar je ook bent.",
+        "accentHeading": "Waar u ook bent.",
         "items": [
           {
-            "label": "Stel een winkelwagen samen",
-            "title": "Een live winkelwagen met je uitgaven en calorieplan samen.",
-            "body": "Vraag om een product, vergelijk een echte match, en zie hoe prijs, calorieën en hoeveelheid de week veranderen."
+            "label": "Bouw een winkelwagen",
+            "title": "Een live winkelwagen met uw uitgaven en calorieplan samen.",
+            "body": "Vraag om een artikel, vergelijk een echte match en zie hoe prijs, calorieën en hoeveelheid de week veranderen."
           },
           {
             "label": "Scan de koelkast",
-            "title": "Zet een foto van de koelkast of kassabon om in recepten die je kunt koken.",
-            "body": "KAI identificeert wat er is, schat de calorieën in, en stelt recepten voor voordat de lijst met ontbrekende ingrediënten wordt opgebouwd."
+            "title": "Verander een foto van de koelkast of kassabon in recepten die u kunt koken.",
+            "body": "KAI identificeert wat er aanwezig is, schat de calorieën en stelt recepten voor voordat de lijst met ontbrekende ingrediënten wordt samengesteld."
           },
           {
             "label": "Kies een recept",
             "title": "Kies een maaltijd, koop dan alleen wat ontbreekt.",
-            "body": "Vergelijk kooktijd, calorieën per portie, ingrediëntdekking en de kleine boodschappenkloof voor elk recept."
+            "body": "Vergelijk kooktijd, calorieën per portie, ingrediënten dekking en de kleine boodschappenkloof voor elk recept."
           },
           {
             "label": "Praat met KAI",
-            "title": "Bespaak de boodschappen en je weekdoel.",
-            "body": "Zeg wat op is of wat je wilt koken. KAI houdt de winkelwagen, uitgaven en caloriekloof in context."
+            "title": "Praat over de boodschappen en uw weekdoel.",
+            "body": "Zeg wat er op is of wat u wilt koken. KAI houdt de winkelwagen, uitgaven en caloriekloof in context."
           }
         ]
       },
       "features": {
-        "kicker": "De wekelijkse boodschappen, opnieuw uitgevonden",
+        "kicker": "De weekboodschappen, opnieuw opgebouwd",
         "heading": "Beheer boodschappen, recepten, uitgaven en calorieën met duidelijkheid",
         "items": [
           {
             "number": "01",
             "title": "Recept-, product- en calorieontdekking",
-            "body": "Scan wat je hebt of beschrijf de maaltijd die je wilt. KAI toont kookbare recepten, calorieën per portie en de exacte boodschappenkloof voor elke optie.",
+            "body": "Scan wat u heeft of beschrijf de maaltijd die u wilt. KAI toont kookbare recepten, calorieën per portie en de exacte boodschappenkloof voor elke optie.",
             "tags": [
               "Koelkastscan",
               "Recepten",
               "Calorieën",
-              "Ontbrekende producten"
+              "Ontbrekende items"
             ],
             "accent": "purple"
           },
           {
             "number": "02",
-            "title": "Een winkelwagen op basis van de maaltijden die je kiest",
-            "body": "Kies een recept en KAI verwijdert ingrediënten die al op voorraad zijn. Alleen de ontbrekende producten komen in de winkelwagen, met bijgewerkte uitgaven en huishoudelijke calorieën.",
+            "title": "Een winkelwagen gebouwd uit de door u gekozen maaltijden",
+            "body": "Kies een recept en KAI verwijdert ingrediënten die al aanwezig zijn. Alleen de ontbrekende producten komen in de winkelwagen, waarbij de uitgaven en huishoudelijke calorieën samen worden bijgewerkt.",
             "tags": [
-              "Receptendekking",
-              "Alleen ontbrekende",
+              "Receptdekking",
+              "Alleen ontbrekend",
               "Wekelijkse kcal"
             ],
             "accent": "blue"
           },
           {
             "number": "03",
-            "title": "Scan één keer. Kook met wat er is.",
-            "body": "KAI zet een scan van de koelkast, voorraadkast of kassabon om in drie praktische recepten. Vergelijk tijd en calorieën, kies er één, en bekijk dan alleen de ontbrekende ingrediënten.",
+            "title": "Scan één keer. Kook uit wat er is.",
+            "body": "KAI verandert een scan van de koelkast, voorraadkast of kassabon in drie praktische recepten. Vergelijk tijd en calorieën, kies er één, bekijk dan alleen de ontbrekende ingrediënten.",
             "tags": [
               "3 receptopties",
               "Kooktijd",
@@ -301,62 +296,62 @@
         ]
       },
       "stories": {
-        "kicker": "Zo voelt koken en boodschappen doen met KAI",
-        "heading": "Kleine momenten van koelkast-tot-avondeten duidelijkheid",
+        "kicker": "Hoe koken en boodschappen doen met KAI voelt",
+        "heading": "Kleine momenten van koelkast-tot-diner duidelijkheid",
         "testimonials": [
           {
-            "quote": "KAI zet wat er al in onze koelkast ligt om in dinerr IDEAS, en toont de kosten en familiecalorieën voordat ik kies.",
+            "quote": "KAI verandert wat er al in onze koelkast ligt in dinerideeën, toont dan de kosten en gezinscalorieën voordat ik kies.",
             "name": "Mila",
             "meta": "Drukke ouder"
           },
           {
-            "quote": "Ik vraag om kaasacties, vergelijk de echte opties, en voeg precies degene toe die ik wil. Geen tabbladen schakelen.",
+            "quote": "Ik vraag om kaasacties, vergelijk de echte opties en voeg degene toe die ik wil. Geen tabbladen hoppen.",
             "name": "Noah",
-            "meta": "Wekelijkse boodschapper"
+            "meta": "Wekelijkse shopper"
           },
           {
-            "quote": "De kassabonscan gaf me drie recepten, de calorieën per portie, en alleen de ingrediënten die ik nog moest kopen.",
+            "quote": "De kassabanscan gaf me drie recepten, de calorieën per portie en alleen de ingrediënten die ik nog moest kopen.",
             "name": "Sofia",
             "meta": "Thuiskok"
           },
           {
-            "quote": "Ik vind het fijn dat KAI eerst de winkelwagen opbouwt en de planningsvragen pas stelt wanneer ze ertoe doen.",
+            "quote": "Ik vind het fijn dat KAI eerst de winkelwagen bouwt en de planningsvragen pas stelt als ze ertoe doen.",
             "name": "Lucas",
             "meta": "Student"
           },
           {
-            "quote": "Spraak is perfect als mijn handen vol zijn in de keuken. Ik vertel KAI gewoon wat op is.",
+            "quote": "Spraak is perfect als mijn handen vol zijn in de keuken. Ik zeg KAI gewoon wat er op is.",
             "name": "Emma",
-            "meta": "Maaltijdprep-fan"
+            "meta": "Maaltijdplanner"
           },
           {
-            "quote": "Alles blijft beoordeelbaar. Ik kan hoeveelheden wijzigen en zien hoe zowel de uitgaven als de calorietotalen met me meebewegen.",
+            "quote": "Alles blijft controleerbaar. Ik kan hoeveelheden aanpassen en zie dat het totale bestedingsbedrag en calorieën meebewegen.",
             "name": "Daan",
-            "meta": "Slimme boodschapper"
+            "meta": "Slimme shopper"
           }
         ],
         "articles": [
           {
             "category": "Wekelijkse routine",
-            "title": "De zevenminutenboodschap en maaltijdplan",
-            "body": "Een solo-boodschapper zette een versnipperde boodschappenlijst om in een winkelwagen, drie kookbare diners en 10.850 geplande calorieën."
+            "title": "De winkel- en maaltijdplanner van zeven minuten",
+            "body": "Een solo-shopper veranderde een versnipperde boodschappenlijst in een winkelwagen, drie te koken diners en 10.850 geplande calorieën."
           },
           {
-            "category": "Van koelkast naar recept",
-            "title": "Van koelkastfoto naar vanavond diner",
-            "body": "KAI herkende de ingrediënten, stelde drie recepten voor, en scheidde wat er al lag van wat nog gekocht moest worden."
+            "category": "Koelkast naar recept",
+            "title": "Van koelkastfoto naar het avondeten van vandaag",
+            "body": "KAI herkende de ingrediënten, stelde drie recepten voor en scheidde wat er al was van wat er nog gekocht moest worden."
           },
           {
-            "category": "Slimme receptzoektocht",
-            "title": "Slim zoeken die de hele week ziet",
-            "body": "Een zoekopdracht gewogen op prijs, calorieën, receptendekking en een eiwitkloof zonder de draad van het boodschappenlijstje te verliezen."
+            "category": "Slimme recepten zoeken",
+            "title": "Slim zoeken dat de hele week overziet",
+            "body": "Een zoekopdracht woog prijs, calorieën, receptdekking en een eiwitgat zonder de rode draad van de boodschappen te verliezen."
           }
         ]
       },
       "about": {
-        "kicker": "Één plek, veel ingangen",
+        "kicker": "Eén plek, vele manieren",
         "heading": "Elke invoer wordt recepten, één winkelwagen en één calorieplan",
-        "body": "Een foto, spraaknotitie, kassabon of lijst voedt dezelfde onderliggende weergave: ingrediënten op voorraad, recepten die je kunt koken, ontbrekende producten, wekelijkse uitgaven en huishoudelijke calorieën.",
+        "body": "Een foto, spraakmemo, kassabon of lijst voedt dezelfde weergave eronder: ingrediënten op voorraad, recepten die je kunt koken, producten die nog ontbreken, wekelijkse uitgaven en huishoudelijke calorieën.",
         "capabilities": [
           "Foto",
           "Spraak",
@@ -370,19 +365,19 @@
         ]
       },
       "closing": {
-        "kicker": "Jouw volgende koelkast-tot-dinerplan",
-        "heading": "Begin met wat je hebt. Koop alleen voor wat ontbreekt.",
-        "body": "Scan de koelkast of een kassabon. KAI stelt kookbare recepten voor, toont calorieën per portie, en zet de ontbrekende ingrediënten om in een winkelwagen die je kunt bekijken.",
-        "ctaLabel": "Scan om recepten te vinden"
+        "kicker": "Je volgende koelkast-naar-dinerplan",
+        "heading": "Begin met wat je hebt. Koop alleen wat ontbreekt.",
+        "body": "Scan de koelkast of een kassabon. KAI stelt recepten voor die je kunt koken, toont calorieën per portie en verandert de ontbrekende ingrediënten in een winkelwagen die je kunt bekijken.",
+        "ctaLabel": "Scannen om recepten te vinden"
       },
       "footer": {
-        "tagline": "Jouw koelkast-tot-winkelwagen Grocery Twin. Vind recepten van wat je hebt, bekijk calorieën, en koop alleen voor wat ontbreekt.",
+        "tagline": "Je koelkast-naar-winkelwagen Grocery Twin. Vind recepten van wat je hebt, zie calorieën en koop alleen wat ontbreekt.",
         "groups": [
           {
             "label": "Product",
             "links": [
               {
-                "label": "Grocery demo",
+                "label": "Boodschappen demo",
                 "target": "product"
               },
               {
@@ -390,7 +385,7 @@
                 "target": "features"
               },
               {
-                "label": "verhalen",
+                "label": "Verhalen",
                 "target": "stories"
               }
             ]
@@ -420,16 +415,16 @@
         "methodologyVersion": 2,
         "enabled": true,
         "kicker": "Impact thuis",
-        "heading": "Prijzen en ROI",
-        "subheading": "Kies een abonnement. Bekijk je prognose.",
-        "disclaimer": "Planramingen staan los van gemeten ROI. Alleen aanvaarde resultaten en vergelijkbare vastgelegde kosten onderbouwen gemeten rendement.",
+        "heading": "Prijzen & ROI",
+        "subheading": "Kies een plan. Zie uw prognose.",
+        "disclaimer": "Schattingen voor planning zijn gescheiden van gemeten ROI. Alleen geaccepteerde resultaten en vergelijkbare geregistreerde kosten ondersteunen gemeten rendementen.",
         "currency": "EUR",
         "currencyCopy": {
           "native": "Amounts in {currency}.",
           "loading": "Checking the local currency. Amounts remain in {currency} until a rate is available.",
           "unavailable": "A current local exchange rate is unavailable. Amounts remain in {currency}.",
           "converted": "Amounts converted from {base} to {currency} using the reference rate dated {date}.",
-          "basis": "Valutaconversie is geen onderzoek naar lokale kosten. Voer uw eigen lokale kosten en bijdrageaannames in. Taalwijzigingen veranderen de bedragen niet."
+          "basis": "Valutaconversie is geen lokaal kostenonderzoek. Voer uw eigen lokale kosten en bijdrageaannames in. Taalwijzigingen veranderen de bedragen niet."
         },
         "locale": "en-GB",
         "inputs": [],
@@ -447,7 +442,7 @@
             "offloadRate": 0.5,
             "reviewMinutes": 5,
             "foodWastePerPersonYear": 100,
-            "foodWasteSource": "Voedingscentrum, meting 2025, rapport mei 2026: 25,5 kg per persoon per jaar",
+            "foodWasteSource": "Nederlands Voedingscentrum, meting 2025, rapport mei 2026: 25,5 kg per persoon per jaar",
             "smartShopping": false,
             "smartShare": 0.03,
             "spendBySize": {
@@ -460,62 +455,62 @@
               "7": 825,
               "8": 890
             },
-            "spendSource": "Nibud referentieminimum voor gezonde voeding (via Knab, 2026); maten 5 t/m 8 geëxtrapoleerd",
+            "spendSource": "Nibud referentieminima voor gezond eten (via Knab, 2026); maten 5 tot 8 geëxtrapoleerd",
             "userEditable": false
           },
           "householdCopy": {
-            "timeBackMonthly": "Ongeveer {duration} terug per maand",
-            "timeBackYearly": "Ongeveer {duration} terug per jaar",
+            "timeBackMonthly": "Ongeveer {duration} per maand terug",
+            "timeBackYearly": "Ongeveer {duration} per jaar terug",
             "wasteLabel": "Voedsel dat uw huishouden weggooit",
-            "wasteNote": "Nederlands gemiddelde voor een huishouden van uw grootte (Voedingscentrum, meting 2025).",
+            "wasteNote": "Nederlands gemiddelde voor een huishouden van uw omvang (Voedingscentrum, meting 2025).",
             "wasteMonthly": "ongeveer {amount} per maand",
             "wasteYearly": "ongeveer {amount} per jaar",
-            "smartLabel": "Slimmer boodschappen doen, wanneer aanbiedingen en prijscontroles actief zijn",
-            "smartNote": "Een potentiële schatting. Het hangt af van de beschikbare aanbiedingen en het opvolgen van KAI's suggesties.",
+            "smartLabel": "Slimmer winkelen, wanneer aanbiedingen en prijscontroles zijn ingeschakeld",
+            "smartNote": "Een mogelijke schatting. Het hangt af van de beschikbare aanbiedingen en van het volgen van KAI's suggesties.",
             "smartMonthly": "ongeveer {amount} per maand",
             "smartYearly": "ongeveer {amount} per jaar",
             "priceLabel": "KAI",
             "priceMonthly": "{amount} per maand",
             "priceYearly": "{amount} per jaar",
-            "kaiNote": "KAI helpt u te koken met wat er al in de koelkast ligt, zodat er minder in de prullenbak belandt.",
+            "kaiNote": "KAI helpt u koken met wat er al in de koelkast ligt, zodat er minder in de prullenbak belandt.",
             "fixedAssumptionsHeading": "Vaste aannames, geen invoer",
-            "estimatesNote": "De aandelen en controletijd zijn werkbare schattingen totdat KAI ze meet met echte huishoudens.",
-            "offloadRateLabel": "Aandeel van de plantijd dat KAI overneemt",
-            "reviewMinutesLabel": "Minuten die nog worden besteed aan controle per sessie",
+            "estimatesNote": "De aandelen en controleminuten zijn werkende schattingen totdat KAI ze met echte huishoudens meet.",
+            "offloadRateLabel": "Aandeel van de plantijd dat KAI op zich neemt",
+            "reviewMinutesLabel": "Minuten nog besteed aan het controleren van elke sessie",
             "foodWasteReferenceLabel": "Voedselverspilling per persoon per jaar",
-            "smartShareLabel": "Besparen op voedseluitgaven met aanbiedingen en prijscontroles",
-            "smartShareNote": "Alleen gebruikt wanneer aanbiedingen en prijscontroles actief zijn, en alleen als u de suggesties van KAI opvolgt.",
-            "smartOffNote": "Slimmer boodschappen doen is nog niet inbegrepen. Het wordt toegevoegd zodra aanbiedingen en prijscontroles actief zijn.",
-            "spendHeading": "Maandelijkse voedseluitgaven per huishoudgrootte",
+            "smartShareLabel": "Besparing op voedseluitgaven met aanbiedingen en prijscontroles",
+            "smartShareNote": "Alleen gebruikt wanneer aanbiedingen en prijscontroles actief zijn, en alleen als u KAI's suggesties volgt.",
+            "smartOffNote": "Slimmer winkelen is nog niet inbegrepen. Het wordt toegevoegd zodra aanbiedingen en prijscontroles actief zijn.",
+            "spendHeading": "Maandelijkse voedseluitgaven per huishoudengrootte",
             "householdSize": "Huishouden van {people}",
-            "tiersHeading": "KAI-prijs per planningssessies per maand",
+            "tiersHeading": "KAI-prijs per planningssessie per maand",
             "tierRange": "{from} tot {to} sessies",
             "sourceLabel": "Bron",
-            "timeBackFormula": "Tijd terug = sessies × planningsminuten × het deel dat KAI overneemt, minus sessies × controletijd, nooit onder nul.",
-            "wasteFormula": "Voedsel dat uw huishouden weggooit = verspild voedsel per persoon per jaar ÷ 12 × aantal personen in uw huishouden, weergegeven met één decimaal onder €10.",
-            "smartFormula": "Slimmer boodschappen doen = maandelijkse voedseluitgaven voor uw huishoudgrootte × de aanbiedingsbesparing × sessies ÷ 4.",
-            "priceNote": "Prijzen zijn inclusief btw. De KAI-prijs hangt alleen af van het aantal sessies dat u per maand plant; minuten en huishoudgrootte veranderen dit nooit.",
-            "yearlyNote": "De jaarlijkse weergave is twaalf keer de maandelijkse cijfers."
+            "timeBackFormula": "Tijd terug = sessies × plantijd × het aandeel dat KAI op zich neemt, minus sessies × controleminuten, nooit minder dan nul.",
+            "wasteFormula": "Voedsel dat uw huishouden weggooit = verspild voedsel per persoon per jaar ÷ 12 × personen in uw huishouden, weergegeven met één decimaal onder €10.",
+            "smartFormula": "Slimmer winkelen = maandelijkse voedseluitgaven voor uw huishoudgrootte × de aanbiedingen die besparen × sessies ÷ 4.",
+            "priceNote": "Prijzen zijn inclusief btw. De KAI-prijs hangt alleen af van het aantal sessies dat u per maand plant; minuten en huishoudgrootte veranderen deze nooit.",
+            "yearlyNote": "Het jaaroverzicht is twaalf keer de maandelijkse cijfers."
           },
           "copy": {
-            "summary": "Jouw huishoudschatting",
+            "summary": "Uw huishoudschatting",
             "reset": "Waarden resetten",
             "monthly": "Maandelijks",
             "yearly": "Jaarlijks",
-            "annual": "Jaarlijks overzicht",
+            "annual": "Jaaroverzicht",
             "rangeLabel": "Waarde aanpassen",
             "missing": "Voer een waarde in",
             "method": "Hoe dit wordt berekend",
-            "methodBody": "KAI neemt een deel van het planwerk over: controleren wat er al in huis is, recepten kiezen en de lijst voorbereiden. Elke sessie controleren kost nog steeds een deel van uw tijd, dus dat wordt afgetrokken. Het cijfer voor voedselverspilling is het gepubliceerde Nederlandse gemiddelde voor een huishouden van uw grootte, ter vergelijking naast de KAI-prijs weergegeven, niet een besparing die KAI belooft.",
-            "burdenHeading": "Jouw routine",
-            "opportunityHeading": "Tijd terug voor jou",
+            "methodBody": "KAI neemt een deel van het planningswerk op zich: controleren wat er al in huis is, recepten kiezen en de lijst voorbereiden. Elke sessie controleren kost nog steeds wat van uw tijd, dus die wordt afgetrokken. Het voedselverspillingscijfer is het gepubliceerde Nederlandse gemiddelde voor een huishouden van uw grootte, weergegeven naast de KAI-prijs ter vergelijking, niet een besparing die KAI belooft.",
+            "burdenHeading": "Minder boodschappenadministratie",
+            "opportunityHeading": "Meer ruimte voor het dagelijks leven",
             "noCurrencyChange": "Taal verandert de opmaak, niet uw valuta of aannames.",
-            "reviewError": "Controleren duurt langer dan de plantijd die KAI overneemt. Bij deze waarden is er geen tijd terug.",
+            "reviewError": "Controleren kost meer tijd dan de plantijd die KAI op zich neemt. Bij deze waarden is er geen tijd terug.",
             "navLabel": "Prijzen"
           },
           "fields": {
             "volume": {
-              "label": "Planningssessies",
+              "label": "Boodschappenplanningssessies per maand",
               "help": "Hoe vaak per maand u gaat zitten om boodschappen te plannen."
             },
             "minutes": {
@@ -529,20 +524,20 @@
           },
           "outcomes": [],
           "burden": [
-            "Planningsminuten per sessie vandaag",
-            "Aandeel dat KAI kan verminderen",
-            "Minuten om elk plan te controleren"
+            "Controleren van de koelkast en voorraadkast",
+            "Recepten en ontbrekende ingrediënten vinden",
+            "Producten vergelijken en een boodschappenlijst maken"
           ],
           "opportunity": [
-            "Tijd terug voor jou",
-            "Gecontroleerde plannen / boodschappenlijsten",
-            "Extra gebruik"
+            "Meer tijd voor uzelf en uw huishouden",
+            "Maaltijden gebouwd rond voedsel dat u al in huis heeft",
+            "Een beoordeelde boodschappenlijst, met minder dubbele aankopen"
           ],
           "tabs": [
             {
               "id": "routine",
-              "label": "Jouw routine",
-              "intro": "Tel de tijd die u besteedt aan het controleren van voedsel, het kiezen van recepten en het voorbereiden van uw boodschappenlijst, niet het koken, reizen of de tijd in de winkel.",
+              "label": "Uw routine",
+              "intro": "Tel de tijd die u besteedt aan het controleren van voedsel, het kiezen van recepten en het voorbereiden van uw boodschappenlijst, niet koken, reizen of tijd in de winkel.",
               "fields": [
                 "volume",
                 "minutes",
@@ -571,55 +566,55 @@
           }
         },
         "cta": {
-          "primaryLabel": "Probeer een boodschappen-scan met KAI",
+          "primaryLabel": "Probeer een boodschappenscan met KAI",
           "primaryTarget": "hero-chat",
-          "privacyNote": "Uw schattingen blijven in deze calculator. Er wordt niets besteld of opgeslagen op basis van deze invoer."
+          "privacyNote": "Uw schattingen blijven in deze calculator. Niets wordt besteld of opgeslagen van deze invoer."
         },
         "compact": {
           "schemaVersion": 1,
           "defaultProfileId": "home",
           "copy": {
             "navLabel": "Prijzen",
-            "heading": "Prijzen en ROI",
-            "intro": "Kies een abonnement. Bekijk je prognose.",
+            "heading": "Prijzen & ROI",
+            "intro": "Kies een plan. Zie uw prognose.",
             "monthly": "Maand",
             "weekly": "Week",
             "daily": "Dag",
             "cost": "U betaalt",
             "benefit": "Geschat rendement",
             "net": "Nettowinst",
-            "roi": "Geschat ROI",
-            "timeBenefit": "Geschatte tijdwaarde",
-            "timeRoi": "Tijdwaarde-ROI",
-            "timeBack": "Hergewonnen uren",
+            "roi": "Geschatte ROI",
+            "timeBenefit": "Geschatte tijdswaarde",
+            "timeRoi": "Tijd-waarde ROI",
+            "timeBack": "Uren terugverdiend",
             "missing": "Prognose niet beschikbaar",
             "noRatio": "Niet van toepassing",
-            "method": "Berekeningswijze",
-            "reset": "Herstel",
+            "method": "Hoe het wordt berekend",
+            "reset": "Herstellen",
             "audience": "Publiek",
             "includedVat": "Inclusief btw",
             "excludedVat": "Exclusief btw",
             "perMonth": "per maand",
-            "equivalents": "Maandfactuur. Dag- en weekcijfers zijn gemiddelden, geen dag- of weekkosten of gegarandeerd rendement.",
-            "timeNote": "De geraamde tijdwaarde is vrijgekomen capaciteit, geen ontvangen geld of lagere loonkosten. Netto minuten zijn inclusief controle en goedkeuring.",
-            "estimateNote": "Planramingen staan los van gemeten ROI. Alleen aanvaarde resultaten en vergelijkbare vastgelegde kosten onderbouwen gemeten rendement.",
-            "limitNote": "Neem contact op voor meer gebruik of maatwerkoffertes. Deze raming betreft alleen het inbegrepen pakket.",
-            "timeFormula": "Geraamde tijdwaarde = inbegrepen werk × vaste netto vrijgekomen minuten ÷ 60 × referentiewaarde per uur.",
-            "profitFormula": "Dekkingsbijdrage = geldige adviessessies × conversiestijging ÷ 100 × winst per extra bestelling.",
-            "proceedsFormula": "Extra opbrengst = partijen of afhalingen × (netto-opbrengst achteraf − netto-opbrengst vooraf).",
-            "roiFormula": "Netto = voordeel − appabonnementskosten. ROI = netto ÷ appabonnementskosten × 100. Gratis abonnementen: geen ROI-percentage."
+            "equivalents": "Maandelijks gefactureerd. Dag- en weekcijfers zijn gemiddelden, geen dagelijkse of wekelijkse kosten of gegarandeerde rendementen.",
+            "timeNote": "Prognose tijdswaarde is teruggewonnen capaciteit, geen ontvangen contant geld of een salarisvermindering. Nettominuten omvatten controle en goedkeuring.",
+            "estimateNote": "Schattingen voor planning zijn gescheiden van gemeten ROI. Alleen geaccepteerde resultaten en vergelijkbare geregistreerde kosten ondersteunen gemeten rendementen.",
+            "limitNote": "Voor meer gebruik of apart gefactureerd werk, neem contact met ons op. Deze schatting dekt alleen het inbegrepen plan.",
+            "timeFormula": "Prognose tijdswaarde = inbegrepen werk × vaste nettominuten terugverdiend ÷ 60 × referentie uurtarief.",
+            "profitFormula": "Bijdrage winst = in aanmerking komende aanbevelingssessies × conversie uplift ÷ 100 × winst per extra bestelling.",
+            "proceedsFormula": "Incrementele opbrengsten = partijen of afhalingen × (netto opbrengsten achteraf − netto opbrengsten vooraf).",
+            "roiFormula": "Netto = voordeel − app abonnementskosten. ROI = netto ÷ app abonnementskosten × 100. Gratis abonnementen hebben geen ROI-percentage."
           },
           "profiles": [
             {
               "id": "home",
-              "label": "Start",
+              "label": "Home",
               "model": "time_value",
               "unitsPerWorkload": 1,
               "inputs": [
                 {
                   "id": "units",
-                  "label": "Planningssessies per maand",
-                  "help": "De prognose gaat uit van volledig gebruik van het maandtegoed. Hogere voorgestelde niveaus verhogen zowel capaciteit als prijs.",
+                  "label": "Planning sessies per maand",
+                  "help": "Prognose gaat ervan uit dat de inbegrepen maandelijkse toelage wordt gebruikt. Hogere niveaus verhogen de capaciteit en prijs samen.",
                   "defaultValue": 4,
                   "min": 0,
                   "max": 4,
@@ -628,8 +623,8 @@
                 },
                 {
                   "id": "minutes_saved",
-                  "label": "Bespaarde min.",
-                  "help": "Vaste prognose na voorbereiding, controle, goedkeuring en herwerk; geen gemeten besparing.",
+                  "label": "Minuten bespaard",
+                  "help": "Vaste prognose na voorbereiding, controle, goedkeuring en herziening; geen gemeten besparing.",
                   "defaultValue": 14,
                   "min": -1440,
                   "max": 1440,
@@ -638,8 +633,8 @@
                 },
                 {
                   "id": "hourly_value",
-                  "label": "Waarde per uur",
-                  "help": "Vaste referentiewaarde van vrijgekomen capaciteit; geen ontvangen geld of salarisverlaging.",
+                  "label": "Uurtarief",
+                  "help": "Vaste referentiewaarde van teruggewonnen capaciteit; geen ontvangen contant geld of salarisvermindering.",
                   "defaultValue": 14.99,
                   "min": 0,
                   "max": 1000,
@@ -650,28 +645,28 @@
               "offer": {
                 "monthlyPrice": 6.99,
                 "basis": "fixed",
-                "unit": "Start",
+                "unit": "Home",
                 "vatIncluded": true,
                 "includedUnits": 4,
                 "allowance": "4 sessies / 8 scans",
-                "extras": "Extra gebruik en professionele diensten krijgen een aparte offerte.",
+                "extras": "Extra gebruik en professionele diensten worden apart gefactureerd.",
                 "free": {
                   "includedUnits": 1,
                   "allowance": "Gratis · 1 sessie / 1 scan"
                 },
                 "trialDays": 7,
-                "trialLabel": "7 dagen op proef · daarna maandprijs"
+                "trialLabel": "7 dagen proef · daarna maandprijs"
               },
               "assumptions": [
-                "Prognoseversie 2026-10-13. Volledig gebruik van het tegoed, beschikbaar werk en een lineair capaciteitsscenario van 1×/2×/3×; extra vraag is niet gegarandeerd.",
-                "Opgestelde taakraming: 70 minuten handmatig tegenover 56 minuten menselijk werk met ondersteuning per werkeenheid, inclusief controle, goedkeuring en herwerk. De 14 netto minuten (20%) zijn een scenario, geen waargenomen prestaties van deze persona.",
-                "Het scenario van 20% tijdsbesparing is gebaseerd op onderzoek naar kennistaken met AI-ondersteuning. De resultaten bewijzen geen besparingen voor deze persona of voor elke taak: https://aiinstitute.hbs.edu/navigating-the-jagged-technological-frontier/",
-                "Persoonlijke tijd wordt gewaardeerd op €14.99/uur, met het Nederlandse bruto minimumloon voor volwassenen per juli 2026 uitsluitend als illustratieve referentie. Dit is geen gemeten betalingsbereidheid of internationale loonraming: https://www.government.nl/themes/work/minimum-wage/minimum-wage-amounts",
-                "Alle cijfers zijn prognoses. Opstartwerk, leertijd en aanvullende diensten zijn uitgesloten; het werkelijke nettorendement kan lager of negatief zijn. Verkoop, plaatsing, financiering, leerresultaten en maatschappelijke uitkomsten krijgen geen geldwaarde.",
-                "Gratis toegang wordt maandelijks vernieuwd met het getoonde basistegoed. Premium media, integraties en extra gebruik zijn uitgesloten. Betaalde niveaus hebben een proefperiode van zeven dagen; proefgebruik is beperkt tot één gratis basistegoed, geen extra volledig maandtegoed. Getoonde prijzen zijn terugkerende prijzen na de proefperiode. Dit zijn opgestelde aanbodvoorstellen; de calculator kent geen gebruiksrechten toe en wijzigt de facturering niet."
+                "Prognoseherziening 2026-10-13. Volledig inbegrepen gebruik, beschikbaar werk en een lineair 1×/2×/3× capaciteitsscenario; geen extra vraag gegarandeerd.",
+                "Vastgesteld taakbudget: 70 handmatige minuten versus 56 geassisteerde menselijke minuten per werkeenheid, inclusief controle, goedkeuring en herziening. De 14 nettominuten (20%) is een scenario, geen waargenomen prestatie.",
+                "Het scenario van 20% tijdsreductie is gebaseerd op onderzoek naar AI-ondersteunde kenniswerk. De resultaten ervan vestigen geen besparingen voor deze persona of voor elke taak: https://aiinstitute.hbs.edu/navigating-the-jagged-technological-frontier/",
+                "Persoonlijke tijd wordt gewaardeerd op €14,99/uur, met gebruikmaking van het Nederlandse bruto minimumloon voor volwassenen per juli 2026 als enige illustratieve referentie. Het is geen gemeten bereidheid tot betalen of een internationale schatting van lonen: https://www.government.nl/themes/work/minimum-wage/minimum-wage-amounts",
+                "Alle cijfers zijn prognoses. Installatie-inspanning, leertijd en eventuele aanvullende diensten zijn uitgesloten; werkelijke netto rendementen kunnen lager of negatief zijn. Geen verkoop, plaatsing, financiering, leerresultaat of sociaal resultaat wordt gemonetiseerd.",
+                "Gratis toegang wordt maandelijks verlengd met de getoonde basistoelage. Premium media, integraties en extra gebruik zijn uitgesloten. Betaalde niveaus hebben een proefperiode van zeven dagen; proefgebruik is beperkt tot één basistoelage, niet een extra volledige maandelijkse toelage. Getoonde prijzen zijn terugkerende prijzen na de proefperiode. Dit zijn voorgestelde aanbiedingen; de calculator verstrekt geen rechten of wijzigt de facturering."
               ],
-              "loop": "Signaal uit voorraad, maaltijd of aanbod → koopplan maken → huishouden toetst en keurt goed → aanvaard plan en gedeelde inzet vastleggen.",
-              "ctaLabel": "Probeer demo",
+              "loop": "Voorraadkast, maaltijd of aanbiedingssignaal → boodschappenplan voorbereiden → huishoudelijke controles en goedkeuring → geaccepteerd plan en bijbehorende inspanning registreren.",
+              "ctaLabel": "Probeer de demo",
               "ctaTarget": "meet"
             },
             {
@@ -683,7 +678,7 @@
                 {
                   "id": "units",
                   "label": "Winkels",
-                  "help": "Prognose voor één winkel die de inbegrepen cycli gebruikt; hogere voorgestelde niveaus bieden meer cycli per winkel.",
+                  "help": "Prognose voor één winkel met de inbegrepen cycli; hogere niveaus verhogen de cycli per winkel.",
                   "defaultValue": 1,
                   "min": 0,
                   "max": 1000,
@@ -692,8 +687,8 @@
                 },
                 {
                   "id": "minutes_saved",
-                  "label": "Bespaarde min.",
-                  "help": "Vaste prognose na voorbereiding, controle, goedkeuring en herwerk; geen gemeten besparing.",
+                  "label": "Minuten bespaard",
+                  "help": "Vaste prognose na voorbereiding, controle, goedkeuring en herziening; geen gemeten besparing.",
                   "defaultValue": 24,
                   "min": -1440,
                   "max": 1440,
@@ -702,8 +697,8 @@
                 },
                 {
                   "id": "hourly_value",
-                  "label": "Waarde per uur",
-                  "help": "Vaste referentiewaarde van vrijgekomen capaciteit; geen ontvangen geld of salarisverlaging.",
+                  "label": "Uurtarief",
+                  "help": "Vaste referentiewaarde van teruggewonnen capaciteit; geen ontvangen contant geld of salarisvermindering.",
                   "defaultValue": 34.9,
                   "min": 0,
                   "max": 1000,
@@ -718,25 +713,25 @@
                 "vatIncluded": false,
                 "includedUnits": 13,
                 "allowance": "13 winkelcycli per winkel",
-                "extras": "Extra gebruik en professionele diensten krijgen een aparte offerte.",
+                "extras": "Extra gebruik en professionele diensten worden apart gefactureerd.",
                 "free": {
                   "includedUnits": 1,
                   "allowance": "Gratis · 1 cyclus / 1 winkel",
                   "unitsPerWorkload": 1
                 },
                 "trialDays": 7,
-                "trialLabel": "7 dagen op proef · daarna maandprijs"
+                "trialLabel": "7 dagen proef · daarna maandprijs"
               },
               "assumptions": [
-                "Prognoseversie 2026-10-13. Volledig gebruik van het tegoed, beschikbaar werk en een lineair capaciteitsscenario van 1×/2×/3×; extra vraag is niet gegarandeerd.",
-                "Opgestelde taakraming: 120 minuten handmatig tegenover 96 minuten menselijk werk met ondersteuning per werkeenheid, inclusief controle, goedkeuring en herwerk. De 24 netto minuten (20%) zijn een scenario, geen waargenomen prestaties van deze persona.",
-                "Het scenario van 20% tijdsbesparing is gebaseerd op onderzoek naar kennistaken met AI-ondersteuning. De resultaten bewijzen geen besparingen voor deze persona of voor elke taak: https://aiinstitute.hbs.edu/navigating-the-jagged-technological-frontier/",
-                "Vrijgekomen bedrijfscapaciteit wordt gewaardeerd op €34.90/uur, de referentie voor arbeidskosten per uur in de gehele EU-economie in 2025. Dit is geen beroepsspecifiek tarief of besparing op loonkosten: https://ec.europa.eu/eurostat/en/web/products-eurostat-news/w/ddn-20260331-2",
-                "Alle cijfers zijn prognoses. Opstartwerk, leertijd en aanvullende diensten zijn uitgesloten; het werkelijke nettorendement kan lager of negatief zijn. Verkoop, plaatsing, financiering, leerresultaten en maatschappelijke uitkomsten krijgen geen geldwaarde.",
-                "Gratis toegang wordt maandelijks vernieuwd met het getoonde basistegoed. Premium media, integraties en extra gebruik zijn uitgesloten. Betaalde niveaus hebben een proefperiode van zeven dagen; proefgebruik is beperkt tot één gratis basistegoed, geen extra volledig maandtegoed. Getoonde prijzen zijn terugkerende prijzen na de proefperiode. Dit zijn opgestelde aanbodvoorstellen; de calculator kent geen gebruiksrechten toe en wijzigt de facturering niet."
+                "Prognoseherziening 2026-10-13. Volledig inbegrepen gebruik, beschikbaar werk en een lineair 1×/2×/3× capaciteitsscenario; geen extra vraag gegarandeerd.",
+                "Vastgesteld taakbudget: 120 handmatige minuten versus 96 geassisteerde menselijke minuten per werkeenheid, inclusief controle, goedkeuring en herziening. De 24 nettominuten (20%) is een scenario, geen waargenomen prestatie.",
+                "Het scenario van 20% tijdsreductie is gebaseerd op onderzoek naar AI-ondersteunde kenniswerkzaamheden. De resultaten ervan vestigen geen besparingen voor deze persona of voor elke taak: https://aiinstitute.hbs.edu/navigating-the-jagged-technological-frontier/",
+                "Teruggewonnen zakelijke capaciteit wordt gewaardeerd op €34,90/uur, de EU-referentie voor de uurlonen in de gehele economie voor 2025. Het is geen beroepsspecifiek tarief of een besparing op de salarisadministratie: https://ec.europa.eu/eurostat/en/web/products-eurostat-news/w/ddn-20260331-2",
+                "Alle cijfers zijn prognoses. Installatie-inspanning, leertijd en eventuele aanvullende diensten zijn uitgesloten; werkelijke netto-opbrengsten kunnen lager of negatief zijn. Geen enkele verkoop, plaatsing, financiering, leerresultaat of sociaal resultaat wordt gemonetiseerd.",
+                "Gratis toegang wordt maandelijks vernieuwd met de getoonde basislimiet. Premium media, integraties en extra gebruik zijn uitgesloten. Betaalde abonnementen hebben een proefperiode van zeven dagen; proefgebruik is beperkt tot één gratis basislimiet, niet een extra volledige maandelijkse limiet. Getoonde prijzen zijn terugkerende prijzen na de proefperiode. Dit zijn voorgestelde aanbiedingen; de calculator verstrekt geen rechten of wijzigt de facturering."
               ],
-              "loop": "Voorraad- of aanvulsignaal → bestelplan maken → winkelteam keurt goed → aanvaard plan, toetsingswerk en aangetoonde verliezen vastleggen.",
-              "ctaLabel": "Probeer demo",
+              "loop": "Voorraad- of aanvullingssignaal → bestelplan opstellen → winkelteam keurt goed → geaccepteerd plan registreren, inspanning en aangetoonde verliezen beoordelen.",
+              "ctaLabel": "Demo proberen",
               "ctaTarget": "meet"
             }
           ]
@@ -755,146 +750,146 @@
           "consumerDelivery": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/consumer-delivery.webp"
         },
         "copy": {
-          "brand.ariaLabel": "KAI Retail: Voorraad en Leveranciersbestellingen",
+          "brand.ariaLabel": "KAI Retail: Voorraad en Leveranciersbestelling",
           "brand.edition": "Retail",
-          "brand.subtitle": "Voorraad & Leveranciersbestellingen",
+          "brand.subtitle": "Voorraad & Leveranciersbestelling",
           "nav.editionsAria": "KAI-edities",
-          "nav.home": "Start",
+          "nav.home": "Home",
           "nav.retail": "Retail",
           "nav.sectionsAria": "Retailsecties",
           "nav.howItWorks": "Hoe het werkt",
-          "nav.pilot": "4-weken pilot",
-          "nav.scope": "Bereik",
-          "nav.requestPilot": "Pilot aanvragen",
+          "nav.pilot": "4-Weekse proef",
+          "nav.scope": "Scope",
+          "nav.requestPilot": "Proef aanvragen",
           "nav.toggleAria": "Navigatie wisselen",
-          "hero.eyebrow": "KAI RETAIL · VOORRAADNAUWKEURIGHEID & LEVERANCIERSBESTELLINGEN",
-          "hero.heading": "Zet voorraadfotos, tellingen en facturen om in leveranciersklare bestellingen.",
-          "hero.body": "Voor supermarkten en speciaalzaken met meerdere locaties die nog steeds afhankelijk zijn van spreadsheets en vloertijd. Uw benoemde goedkeurder beoordeelt elke voorgestelde bestelling.",
-          "hero.primaryCta": "Boek een betaalde pilot van 4 weken",
-          "hero.secondaryCta": "Bekijk de voorraadcyclus",
-          "stage.ariaLabel": "Interactieve KAI Retail voorraadcyclus",
+          "hero.eyebrow": "KAI RETAIL · VOORRAAD ACCURATEID & LEVERANCIERSBESTELLINGEN",
+          "hero.heading": "Verander voorraadfoto's, tellingen en facturen in leveranciersklare bestellingen.",
+          "hero.body": "Voor groothandels- en speciaalzakenoperators met meerdere locaties die nog steeds afhankelijk zijn van spreadsheets en vloertijd. Uw aangewezen goedkeurder beoordeelt elke voorgestelde bestelling.",
+          "hero.primaryCta": "Boek een 4-weekse betaalde proef",
+          "hero.secondaryCta": "Bekijk de voorraadlus",
+          "stage.ariaLabel": "Interactieve KAI Retail voorraadlus",
           "stage.liveLocation": "LIVE LOCATIE",
-          "stage.location": "Centrale winkel · achterkamer",
+          "stage.location": "Centrale winkel · achterruimte",
           "stage.inventoryLive": "Voorraad live",
           "stage.captureAria": "Bron voorraadregistratie",
-          "stage.photo": "Voorraadfotos",
+          "stage.photo": "Voorraadfoto",
           "stage.invoice": "Factuur",
           "stage.list": "Eenvoudige lijst",
-          "stage.inventoryKicker": "LIVE SKU-VOORRAAD",
-          "stage.inventoryHeading": "Waarschijnlijk opraken",
-          "stage.attention": "2 hebben aandacht nodig",
+          "stage.inventoryKicker": "LIVE SKU VOORRAAD",
+          "stage.inventoryHeading": "Waarschijnlijk uitverkocht",
+          "stage.attention": "2 vereisen aandacht",
           "stage.reading": "Reading {mode}…",
           "stage.matching": "Overeenkomende SKU's en verpakkingsgroottes",
           "stage.updated": "Voorraad bijgewerkt",
-          "stage.reconciledNow": "Fysieke telling zojuist afgestemd",
+          "stage.reconciledNow": "Fysieke telling zojuist gereconcilieerd",
           "stage.captureFrom": "Capture from {mode}",
           "stage.captureHint": "Tik om de voorbeeldvoorraadcontrole uit te voeren",
-          "stage.onHandLabel": "In voorraad",
-          "stage.lastReconciled": "Laatste fysieke telling afgestemd met de live lijst",
+          "stage.onHandLabel": "Op voorraad",
+          "stage.lastReconciled": "Laatste fysieke telling gereconcilieerd met de live lijst",
           "stage.orderKicker": "VOORGESTELDE LEVERANCIERSBESTELLING",
-          "stage.orderHeading": "Concept inkooporder · Northline",
+          "stage.orderHeading": "Concept PO · Northline",
           "stage.ready": "Klaar om te beoordelen",
           "stage.orderLine": "Haverdrank · doos van 8",
           "stage.orderQuantity": "6 dozen",
-          "stage.incoming": "Inkomende voorraad",
+          "stage.incoming": "Binnenkomende voorraad",
           "stage.incomingQuantity": "48 eenheden",
           "stage.minimum": "Minimum leverancier",
-          "stage.met": "Gehaald",
+          "stage.met": "Voldaan",
           "stage.deliveryWindow": "Leveringsvenster",
           "stage.deliveryTomorrow": "Morgenochtend",
           "stage.approved": "Leveranciersbestelling goedgekeurd",
           "stage.approve": "Leveranciersbestelling goedkeuren",
-          "stage.billingNote": "U behoudt de directe facturatie van de leverancier. KAI bereidt de hoeveelheden en het bestelformaat voor.",
+          "stage.billingNote": "U behoudt directe facturering door leveranciers. KAI bereidt de hoeveelheden en het bestelformaat voor.",
           "stage.loopCapture": "Vastleggen",
           "stage.loopTrack": "Volgen",
           "stage.loopSuggest": "Voorstellen",
           "stage.loopApprove": "Goedkeuren",
-          "pain.eyebrow": "DE REALITEIT VAN DE INKOPER",
-          "pain.heading": "Drie regels die een eigenaar of operationeel leider maar al te goed kent.",
-          "media.inventoryCountAlt": "Een operationeel leider van een supermarkt die een fysieke voorraadtelling uitvoert in een opslagruimte",
-          "pain.mediaCaption": "Begin met een fysieke telling die uw team kan vertrouwen.",
-          "media.painStockSpreadsheetAlt": "Een operationeel leider die de schapvoorraad controleert aan de hand van een spreadsheet op een laptop in een supermarktmagazijn",
-          "pain.card1.heading": "Voorraad geteld in een spreadsheet die al fout is.",
-          "pain.card1.body": "De telling was nauwkeurig toen iemand deze invoerde. Verkoop, beschadigde voorraad en nieuwe leveringen veranderden dit onmiddellijk.",
-          "media.painVendorLateAlt": "Een supermarktinkoper die een telefoon controleert naast verse producten terwijl hij te maken heeft met een late aanvullingskloof",
+          "pain.eyebrow": "DE REALITEIT VAN DE KOPER",
+          "pain.heading": "Drie regels die een eigenaar of operationeel leidinggevende maar al te goed kent.",
+          "media.inventoryCountAlt": "Een operationeel leidinggevende in de supermarkt die een fysieke voorraadtelling uitvoert in een magazijn",
+          "pain.mediaCaption": "Begin met een fysieke telling waarop uw team kan vertrouwen.",
+          "media.painStockSpreadsheetAlt": "Een operationeel leidinggevende die de voorraad in het schap controleert aan de hand van een laptop-spreadsheet in een magazijn van een supermarkt",
+          "pain.card1.heading": "Voorraad geteld in een spreadsheet die al verkeerd is.",
+          "pain.card1.body": "De telling was nauwkeurig toen iemand deze invoerde. Verkoop, beschadigde voorraad en nieuwe leveringen hebben dit onmiddellijk veranderd.",
+          "media.painVendorLateAlt": "Een inkoper van een supermarkt die een telefoon bekijkt naast verse producten terwijl hij geconfronteerd wordt met een late aanvullingskloof",
           "pain.card2.heading": "Leveranciersbestellingen te laat geplaatst.",
-          "pain.card2.body": "De schaptekort is pas zichtbaar nadat de besteldeadline is verstreken, waardoor een normale aanvulling een noodgeval wordt.",
-          "media.painMultiShopAlt": "Een inkoper voor meerdere winkels die telefoongesprekken, facturen en een laptop jongleert aan een supermarktbalie",
+          "pain.card2.body": "De schapkloof is pas zichtbaar nadat de besteldeadline is verstreken, waardoor een normale aanvulling een noodsituatie wordt.",
+          "media.painMultiShopAlt": "Een inkoper voor meerdere winkels die telefoontjes, facturen en een laptop beheert aan een toonbank van een supermarkt",
           "pain.card3.heading": "Eén persoon die meerdere winkels beheert.",
           "pain.card3.body": "Dezelfde inkoper controleert berichten, facturen, verpakkingsgroottes en voorraadnotities op verschillende locaties zonder één actueel overzicht.",
-          "loop.eyebrow": "DE VOORRAADLUS",
-          "loop.heading": "Leg vast wat er is. Bestel wat er bijna ontbreekt.",
-          "loop.body": "Een praktische lus voor de mensen die al verantwoordelijk zijn voor het schap, niet nog een systeem om te onderhouden.",
-          "loop.step1.heading": "Leg voorraad vast via foto's, facturen of een eenvoudige lijst.",
-          "loop.step1.body": "Een foto van de achterkamer, leveranciersfactuur of snelle telling is voldoende om de werkvoorraad bij te werken.",
-          "loop.step1.photo": "Schapfoto",
+          "loop.eyebrow": "DE VOORRAADLOOP",
+          "loop.heading": "Leg vast wat er is. Bestel wat er bijna niet meer is.",
+          "loop.body": "Een praktische cyclus voor de mensen die al verantwoordelijk zijn voor het schap, niet nog een systeem om te onderhouden.",
+          "loop.step1.heading": "Leg voorraad vast uit foto's, facturen of een eenvoudige lijst.",
+          "loop.step1.body": "Een foto van het magazijn, een leveranciersfactuur of een snelle telling is voldoende om de werkende inventaris bij te werken.",
+          "loop.step1.photo": "Foto van schap",
           "loop.step1.invoice": "Factuur",
-          "loop.step1.list": "Tellijst",
-          "loop.step2.heading": "KAI volgt de voorraad, inkomende goederen en waarschijnlijke tekorten.",
-          "loop.step2.body": "Elke SKU blijft gekoppeld aan de huidige voorraad, inkomende leveringen en het recente bewegingstempo.",
-          "loop.step2.onHand": "In voorraad",
+          "loop.step1.list": "Tel lijst",
+          "loop.step2.heading": "KAI volgt de voorraad, inkomende leveringen en waarschijnlijke uitloop.",
+          "loop.step2.body": "Elke SKU blijft gekoppeld aan de huidige voorraad, inkomende leveringen en het recente verbruikspatroon.",
+          "loop.step2.onHand": "Op voorraad",
           "loop.step2.quantity": "14 eenheden",
-          "loop.step2.runout": "Waarschijnlijk op · 18 uur",
+          "loop.step2.runout": "Waarschijnlijke uitloop · 18 uur",
           "loop.step3.heading": "U keurt een leveranciersbestelling goed.",
-          "loop.step3.body": "KAI stelt de hoeveelheden op tegen verpakkingsgroottes en leveranciersminima. Eén benoemde goedkeurder beslist wat er wordt geplaatst.",
-          "loop.step3.ready": "Concept klaar",
+          "loop.step3.body": "KAI stelt de hoeveelheden samen op basis van verpakkingsgroottes en leveranciersminimums. Eén aangewezen goedkeurder beslist wat er wordt geplaatst.",
+          "loop.step3.ready": "Concept gereed",
           "loop.step3.checked": "Hoeveelheden en leveranciersformaat gecontroleerd",
-          "loop.step3.review": "Beoordelen",
+          "loop.step3.review": "Beoordeling",
           "loop.step4.heading": "U behoudt uw leveranciers.",
-          "loop.step4.body": "KAI vervangt uw ERP niet op dag één. Het begint als de operationele laag tussen de fysieke telling en de bestelling.",
+          "loop.step4.body": "KAI vervangt uw ERP niet vanaf dag één. Het begint als de operationele laag tussen de fysieke telling en de bestelling.",
           "loop.step4.shop": "Uw winkel",
           "loop.step4.vendor": "Uw leverancier",
-          "pilot.eyebrow": "4-WEKEN BETAALDE PILOT",
-          "pilot.heading": "Bewijs de voorraadlus op één plek voordat u deze uitbreidt.",
-          "pilot.body": "Kies één locatie of één categorie. Uw personeel gebruikt KAI in het echte operationele ritme, en één benoemde goedkeurder beoordeelt elke voorgestelde bestelling.",
-          "pilot.cta": "Vraag de pilot aan",
-          "media.vendorOrderAlt": "Een onafhankelijke supermarktinkoper die een leveranciersbestelling beoordeelt naast inkomende producten",
+          "pilot.eyebrow": "4-WEEKSE BETAALDE PILOT",
+          "pilot.heading": "Bewijs de voorraadloop op één plek voordat u deze uitbreidt.",
+          "pilot.body": "Kies één locatie of één categorie. Uw personeel gebruikt KAI in het echte operationele ritme, en één aangewezen goedkeurder beoordeelt elke voorgestelde bestelling.",
+          "pilot.cta": "Pilot aanvragen",
+          "media.vendorOrderAlt": "Een onafhankelijke inkoper van een supermarkt die een leveranciersbestelling beoordeelt naast binnenkomende producten",
           "pilot.guaranteeLabel": "DE GARANTIE",
-          "pilot.guaranteeHeading": "De inventaris komt overeen met een fysieke telling binnen een afgesproken foutmarge, of de week is gratis.",
+          "pilot.guaranteeHeading": "Voorraad komt overeen met een fysieke telling binnen een afgesproken foutmarge, anders is de week gratis.",
           "pilot.bullet1": "Vier weken, betaald",
           "pilot.bullet2": "Eén locatie of één categorie",
-          "pilot.bullet3": "Eén benoemde goedkeurder",
-          "pilot.bullet4": "Uw bestaande leveranciers blijven behouden",
+          "pilot.bullet3": "Eén aangewezen goedkeurder",
+          "pilot.bullet4": "Uw bestaande leveranciers blijven",
           "pilot.boundaryLabel": "Duidelijke grens",
-          "pilot.boundaryBody": "Wij garanderen geen verkoop of leveranciersprijzen. De pilot meet de voorraadnauwkeurigheid en de correctheid van leveranciersbestellingen.",
-          "scope.eyebrow": "GERICHT DOOR ONTWERP",
+          "pilot.boundaryBody": "We garanderen geen doorverkoop of leveranciersprijzen. De pilot meet de nauwkeurigheid van de voorraad en de correctheid van leveranciersbestellingen.",
+          "scope.eyebrow": "GERICHT ONTWORPEN",
           "scope.heading": "Voor wie KAI Retail niet is.",
-          "media.vendorDeliveryAlt": "Winkelpersoneel dat kruideniersvoorraad ontvangt van een bestaande bezorgpartner",
-          "scope.mediaCaption": "Uw leveranciers blijven behouden. KAI maakt de overdracht soepeler.",
-          "media.homeCookAlt": "Een thuiskok die het avondeten bereidt in een huiselijke keuken",
+          "media.vendorDeliveryAlt": "Winkelpersoneel dat boodschappen ontvangt van een bestaande leverancier",
+          "scope.mediaCaption": "Uw leveranciers blijven. KAI maakt de overdracht soepeler.",
+          "media.homeCookAlt": "Een thuiskok die een maaltijd bereidt in een huiselijke keuken",
           "scope.card1.heading": "Thuiskoks",
-          "scope.card1.body": "KAI Retail is voor winkels, groothandelsteams en de mensen die verantwoordelijk zijn voor de voorraad.",
+          "scope.card1.body": "KAI Retail is voor winkels, groothandels en de mensen die verantwoordelijk zijn voor de voorraad.",
           "media.mealPlanningAlt": "Een persoon die maaltijden plant aan een keukentafel",
           "scope.card2.heading": "Maaltijdplanning",
-          "scope.card2.body": "Geen recepten, kookplannen of consumentenmaaltijdsuggesties verschijnen in de retailwerkruimte.",
-          "media.consumerDeliveryAlt": "Een boodschappenkoerier die tassen thuis bij een klant bezorgt",
-          "scope.card3.heading": "Boodschappenbezorging voor consumenten",
+          "scope.card2.body": "Geen recepten, kookplannen of consumentenmaaltijd suggesties verschijnen in de winkelruimte.",
+          "media.consumerDeliveryAlt": "Een bezorger van boodschappen die tassen aflevert bij een klant thuis",
+          "scope.card3.heading": "Bezorging van boodschappen aan huis",
           "scope.card3.body": "Deze pagina gaat over het aanvullen van winkels en downstream retailers via bestaande leveranciers.",
-          "scope.homePrompt": "Winkelen voor thuis?",
+          "scope.homePrompt": "Boodschappen doen voor thuis?",
           "scope.homeCta": "Ga naar KAI Home",
-          "form.eyebrow": "VRAAG EEN PILOT AAN",
+          "form.eyebrow": "PILOT AANVRAGEN",
           "form.heading": "Begin met de operatie die u het meest betrouwbaar wilt maken.",
-          "form.body": "Vertel ons waar voorraadnauwkeurigheid vandaag het moeilijkst is. Wij antwoorden met een kort tijdslot om de locatie, categorie, foutmarge en goedkeurder te bevestigen.",
+          "form.body": "Vertel ons waar de voorraadnauwkeurigheid vandaag het moeilijkst is. We antwoorden met een korte tijd om de locatie, categorie, foutmarge en goedkeurder te bevestigen.",
           "form.promise1": "Vier weken scope",
           "form.promise2": "Eén locatie of categorie",
           "form.promise3": "Eén goedkeurder",
-          "footer.tagline": "Voorraadnauwkeurigheid, inzicht in uitloop en schonere leveranciersbestellingen voor retail- en groothandelsteams.",
+          "footer.tagline": "Voorraadnauwkeurigheid, zichtbaarheid van uitverkoop en betere leveranciersbestellingen voor retail- en groothandels-teams.",
           "footer.home": "KAI Home",
-          "footer.stockLoop": "Voorraadcyclus",
+          "footer.stockLoop": "Voorraadlus",
           "footer.requestPilot": "Pilot aanvragen",
           "footer.privacy": "Privacy",
-          "footer.privacyNote": "Pilotdetails worden alleen gebruikt om uw aanvraag te beoordelen en te beantwoorden.",
+          "footer.privacyNote": "Pilotgegevens worden alleen gebruikt om uw aanvraag te beoordelen en te beantwoorden.",
           "footer.copyright": "© 2026 KAI Retail",
           "footer.closing": "Eén product. Twee deuren.",
           "form.successEyebrow": "AANVRAAG ONTVANGEN",
           "form.successHeading": "We antwoorden met een tijdslot van 15 minuten.",
-          "form.sendAnother": "Stuur nog een aanvraag",
+          "form.sendAnother": "Nog een aanvraag sturen",
           "form.formEyebrow": "BETAALDE PILOT AANVRAAG",
           "form.formHeading": "Vertel ons over de operatie",
           "form.nameLabel": "Naam",
           "form.namePlaceholder": "Uw naam",
           "form.roleLabel": "Rol",
-          "form.rolePlaceholder": "Eigenaar, operations lead, inkoper",
+          "form.rolePlaceholder": "Eigenaar, operationeel leidinggevende, inkoper",
           "form.companyLabel": "Bedrijf",
           "form.companyPlaceholder": "Bedrijfs- of winkelnaam",
           "form.cityLabel": "Stad",
@@ -906,12 +901,12 @@
           "form.location20plus": "20+ locaties",
           "form.contactLabel": "WhatsApp of e-mail",
           "form.contactPlaceholder": "+31 6… of u@bedrijf.com",
-          "form.error": "De aanvraag is niet verzonden. Probeer het opnieuw.",
-          "form.sending": "Verzenden…",
+          "form.error": "De aanvraag is niet gelukt. Probeer het opnieuw.",
+          "form.sending": "Versturen…",
           "form.submit": "Pilot aanvragen",
-          "form.note": "Betaalde pilot van vier weken · scope en foutmarge overeengekomen voordat het werk begint",
+          "form.note": "Betaalde pilot van vier weken · scope en foutmarge overeengekomen voordat werk begint",
           "stock.row1.name": "Haverdrank · Barista 1 L",
-          "stock.row1.supplier": "Northline Groothandel",
+          "stock.row1.supplier": "Northline Wholesale",
           "stock.row1.onHand": "14 eenheden",
           "stock.row1.velocity": "18 / dag",
           "stock.row1.runout": "18 uur",
@@ -934,17 +929,17 @@
     "roiCalculator": {
       "methodologyVersion": 2,
       "enabled": true,
-      "kicker": "Impact in retail",
-      "heading": "Prijzen en ROI",
-      "subheading": "Kies een abonnement. Bekijk je prognose.",
-      "disclaimer": "Planramingen staan los van gemeten ROI. Alleen aanvaarde resultaten en vergelijkbare vastgelegde kosten onderbouwen gemeten rendement.",
+      "kicker": "Retail impact",
+      "heading": "Prijzen & ROI",
+      "subheading": "Kies een abonnement. Bekijk uw prognose.",
+      "disclaimer": "Planningsschattingen staan los van gemeten ROI. Alleen geaccepteerde resultaten en vergelijkbare geregistreerde kosten ondersteunen gemeten rendementen.",
       "currency": "EUR",
       "currencyCopy": {
         "native": "Amounts in {currency}.",
         "loading": "Checking the local currency. Amounts remain in {currency} until a rate is available.",
         "unavailable": "A current local exchange rate is unavailable. Amounts remain in {currency}.",
         "converted": "Amounts converted from {base} to {currency} using the reference rate dated {date}.",
-        "basis": "Valutaconversie is geen onderzoek naar lokale kosten. Voer uw eigen lokale kosten en bijdrageaannames in. Taalwijzigingen veranderen de bedragen niet."
+        "basis": "Valutaconversie is geen lokaal kostenonderzoek. Voer uw eigen lokale kosten en bijdrageaannames in. Taalwijzigingen veranderen de bedragen niet."
       },
       "locale": "en-GB",
       "inputs": [],
@@ -967,9 +962,9 @@
           "userEditable": false
         },
         "storeOpsCopy": {
-          "lossLabelOne": "Voedsel dat uw {stores} winkel verliest door houdbaarheidsdatum en bederf",
-          "lossLabelOther": "Voedsel dat uw {stores} winkels verliezen door houdbaarheidsdatum en bederf",
-          "lossInfo": "Gemiddelde voor Nederlandse supermarkten: ongeveer 1,2% van het gekochte voedsel gaat verloren, voornamelijk door houdbaarheidsdatum en verlies van versheid (Wageningen University & Research, gegevens 2024). Uw eigen afschrijvingen kunnen hoger of lager zijn.",
+          "lossLabelOne": "Voedsel dat uw {stores} winkel verliest aan verval en bederf",
+          "lossLabelOther": "Voedsel dat uw {stores} winkels verliezen aan verval en bederf",
+          "lossInfo": "Gemiddeld voor Nederlandse supermarkten: ongeveer 1,2% van het gekochte voedsel gaat verloren, voornamelijk door verval en verlies van versheid (Wageningen University & Research, 2024 data). Uw eigen afschrijvingen kunnen hoger of lager zijn.",
           "lossMonthly": "ongeveer {amount} per maand",
           "lossYearly": "ongeveer {amount} per jaar",
           "priceLabelOne": "KAI voor {stores} winkel",
@@ -977,50 +972,50 @@
           "priceMonthly": "{amount} per maand ({perStore} per winkel)",
           "priceYearly": "{amount} per jaar ({perStore} per winkel per maand)",
           "breakEven": "KAI betaalt zichzelf terug als het ongeveer {percent} van dat verlies voorkomt.",
-          "breakEvenOver": "Bij dit aankoopvolume kost KAI meer dan het gemiddelde voedselverlies.",
-          "hoursMonthly": "Ongeveer {duration} minder bestelwerk per maand",
-          "hoursYearly": "Ongeveer {duration} minder bestelwerk per jaar",
-          "noTimeSaved": "Geen netto tijdsbesparing bij deze voorbereidingstijd: de controle duurt ongeveer even lang als KAI bespaart.",
+          "breakEvenOver": "Bij dit inkoopvolume kost KAI meer dan het gemiddelde voedselverlies.",
+          "hoursMonthly": "Ongeveer {duration} bestelwerk terug per maand",
+          "hoursYearly": "Ongeveer {duration} bestelwerk terug per jaar",
+          "noTimeSaved": "Geen netto tijd bespaard bij deze voorbereidingstijd: beoordeling duurt ongeveer even lang als KAI bespaart.",
           "fixedAssumptionsHeading": "Vaste aannames, geen invoer",
-          "shareHandledLabel": "Aandeel van ordervoorbereiding dat KAI afhandelt",
-          "reviewMinutesLabel": "Controleminuten per winkel per cyclus",
+          "shareHandledLabel": "Aandeel orderbereiding dat KAI afhandelt",
+          "reviewMinutesLabel": "Beoordelingsminuten per winkel per cyclus",
           "lossRateLabel": "Voedselverlies als aandeel van aankopen",
-          "pricePerStoreLabel": "KAI prijs per winkel per maand",
+          "pricePerStoreLabel": "KAI-prijs per winkel per maand",
           "sourceLabel": "Bron",
-          "hoursFormula": "Uren terug = winkels × cycli per winkel × (voorbereidingsminuten × aandeel KAI afhandelt − controleminuten) ÷ 60, afgerond.",
+          "hoursFormula": "Uren terug = winkels × cycli per winkel × (voorbereidingsminuten × aandeel KAI afhandelt − beoordelingsminuten) ÷ 60, afgerond.",
           "lossFormula": "Voedselverlies = winkels × maandelijkse voedselaankopen per winkel × verliespercentage, afgerond op hele euro's.",
-          "priceFormula": "KAI prijs = winkels × prijs per winkel.",
-          "breakEvenFormula": "Break-even aandeel = KAI prijs ÷ voedselverlies × 100, afgerond.",
-          "yearlyNote": "De jaarlijkse weergave vermenigvuldigt uren, voedselverlies en prijs met 12. Het break-even aandeel blijft hetzelfde.",
-          "lossRateNote": "Het verliespercentage wordt gemeten op gewicht bij deelnemende ketens en hier gebruikt als aandeel van de uitgaven."
+          "priceFormula": "KAI-prijs = winkels × prijs per winkel.",
+          "breakEvenFormula": "Break-even aandeel = KAI-prijs ÷ voedselverlies × 100, afgerond.",
+          "yearlyNote": "Het jaaroverzicht vermenigvuldigt uren, voedselverlies en prijs met 12. Het break-even aandeel blijft hetzelfde.",
+          "lossRateNote": "Het verliespercentage wordt gemeten naar gewicht bij deelnemende ketens en hier gebruikt als aandeel van de uitgaven."
         },
         "copy": {
           "summary": "Uw schatting",
           "reset": "Waarden resetten",
           "monthly": "Maandelijks",
           "yearly": "Jaarlijks",
-          "annual": "Jaarlijks overzicht",
+          "annual": "Jaaroverzicht",
           "rangeLabel": "Waarde aanpassen",
           "missing": "Voer een waarde in",
           "method": "Hoe dit wordt berekend",
-          "methodBody": "KAI bereidt leveranciersklare bestellingen voor op basis van tellingen, foto's en facturen, en een benoemde goedkeurder controleert nog steeds elke bestelling, dus de controletijd wordt afgetrokken. Het cijfer voor voedselverlies is een gepubliceerd supermarktgemiddelde dat ter vergelijking naast de KAI-prijs wordt getoond, geen gemeten of beloofde besparing.",
+          "methodBody": "KAI bereidt bestellingen voor leveranciers voor op basis van tellingen, foto's en facturen, en een aangewezen goedkeurder beoordeelt er elk, dus de beoordelingstijd wordt afgetrokken. Het cijfer voor voedselverlies is een gepubliceerd supermarktgemiddelde dat naast de KAI-prijs wordt getoond ter vergelijking, geen gemeten of beloofde besparing.",
           "burdenHeading": "Minder besteladministratie",
-          "opportunityHeading": "Meer tijd op de werkvloer",
+          "opportunityHeading": "Meer tijd op de winkelvloer",
           "noCurrencyChange": "Taal verandert de opmaak, niet uw valuta of aannames.",
           "navLabel": "Prijzen"
         },
         "fields": {
           "volume": {
             "label": "Winkels in scope",
-            "help": "Schat de voorbereiding van leveranciersklare bestellingen die een aangewezen verantwoordelijke kan controleren."
+            "help": "Tel locaties die deze inventarisloop daadwerkelijk zouden uitvoeren, niet elke winkelketen in de groep."
           },
           "cycles_per_unit": {
-            "label": "Aanvulcycli per winkel per maand",
+            "label": "Aanvullingscycli per winkel per maand",
             "help": "Een gemodelleerde maandelijkse cadans. Dertien cycli is ongeveer drie bestelcycli per week; vervang dit door uw werkelijke cadans."
           },
           "minutes": {
-            "label": "Voorbereidingsminuten per cyclus",
-            "help": "Praktische tel-, reconciliatie- en leveranciersorder-voorbereidingstijd voor één winkel in één cyclus."
+            "label": "Voorbereidingsminuten per winkel per cyclus",
+            "help": "Handmatige telling, reconciliatie en voorbereiding van leveranciersbestellingen voor één winkel in één cyclus."
           },
           "purchases_per_store": {
             "label": "Maandelijkse voedselaankopen per winkel",
@@ -1029,18 +1024,18 @@
         },
         "outcomes": [],
         "burden": [
-          "Winkels in scope",
-          "Aanvulcycli per winkel per maand"
+          "Live voorraad controleren in winkels",
+          "Leveranciersklare bestellingen met de hand maken"
         ],
         "opportunity": [
-          "Netto winkelcapaciteit teruggewonnen",
-          "Basisprijs"
+          "Tijd op de vloer voor uitzonderingen",
+          "Leveranciersklare bestellingen zonder een nacht vol spreadsheets"
         ],
         "tabs": [
           {
             "id": "stores",
             "label": "Winkels en cycli",
-            "intro": "Schat de voorbereiding van leveranciersklare bestellingen die een aangewezen verantwoordelijke kan controleren.",
+            "intro": "Modelleer de locaties en aanvullingscycli die deze voorraad- en leveranciersbestellingsloop daadwerkelijk gebruiken.",
             "fields": [
               "volume",
               "cycles_per_unit",
@@ -1056,7 +1051,7 @@
         }
       },
       "cta": {
-        "primaryLabel": "Vraag een pilot van vier weken aan",
+        "primaryLabel": "Vraag een proefperiode van vier weken aan",
         "primaryTarget": "pilot-form",
         "secondaryLabel": "Praat met KAI",
         "secondaryTarget": "meet"
@@ -1066,46 +1061,46 @@
         "defaultProfileId": "home",
         "copy": {
           "navLabel": "Prijzen",
-          "heading": "Prijzen en ROI",
-          "intro": "Kies een abonnement. Bekijk je prognose.",
+          "heading": "Prijzen & ROI",
+          "intro": "Kies een abonnement. Bekijk uw prognose.",
           "monthly": "Maand",
           "weekly": "Week",
           "daily": "Dag",
           "cost": "U betaalt",
-          "benefit": "Geschat rendement",
-          "net": "Nettowinst",
-          "roi": "Geschat ROI",
-          "timeBenefit": "Geschatte tijdwaarde",
-          "timeRoi": "Tijdwaarde-ROI",
-          "timeBack": "Hergewonnen uren",
+          "benefit": "Geschatte opbrengst",
+          "net": "Netto winst",
+          "roi": "Geschatte ROI",
+          "timeBenefit": "Geschatte tijdswaarde",
+          "timeRoi": "Tijdswaarde ROI",
+          "timeBack": "Uren teruggewonnen",
           "missing": "Prognose niet beschikbaar",
           "noRatio": "Niet van toepassing",
-          "method": "Berekeningswijze",
-          "reset": "Herstel",
+          "method": "Hoe het wordt berekend",
+          "reset": "Reset",
           "audience": "Publiek",
           "includedVat": "Inclusief btw",
           "excludedVat": "Exclusief btw",
           "perMonth": "per maand",
-          "equivalents": "Maandfactuur. Dag- en weekcijfers zijn gemiddelden, geen dag- of weekkosten of gegarandeerd rendement.",
-          "timeNote": "De geraamde tijdwaarde is vrijgekomen capaciteit, geen ontvangen geld of lagere loonkosten. Netto minuten zijn inclusief controle en goedkeuring.",
-          "estimateNote": "Planramingen staan los van gemeten ROI. Alleen aanvaarde resultaten en vergelijkbare vastgelegde kosten onderbouwen gemeten rendement.",
-          "limitNote": "Neem contact op voor meer gebruik of maatwerkoffertes. Deze raming betreft alleen het inbegrepen pakket.",
-          "timeFormula": "Geraamde tijdwaarde = inbegrepen werk × vaste netto vrijgekomen minuten ÷ 60 × referentiewaarde per uur.",
-          "profitFormula": "Dekkingsbijdrage = geldige adviessessies × conversiestijging ÷ 100 × winst per extra bestelling.",
-          "proceedsFormula": "Extra opbrengst = partijen of afhalingen × (netto-opbrengst achteraf − netto-opbrengst vooraf).",
-          "roiFormula": "Netto = voordeel − appabonnementskosten. ROI = netto ÷ appabonnementskosten × 100. Gratis abonnementen: geen ROI-percentage."
+          "equivalents": "Maandelijks gefactureerd. Dag- en weekcijfers zijn gemiddelden, geen dagelijkse of wekelijkse kosten of gegarandeerde opbrengsten.",
+          "timeNote": "Prognose tijdswaarde is teruggewonnen capaciteit, geen ontvangen geld of een salarisvermindering. Netto minuten omvatten controle en goedkeuring.",
+          "estimateNote": "Planningsschattingen staan los van gemeten ROI. Alleen geaccepteerde resultaten en vergelijkbare geregistreerde kosten ondersteunen gemeten rendementen.",
+          "limitNote": "Voor meer gebruik of afzonderlijk aangevraagd werk, neem contact met ons op. Deze schatting heeft alleen betrekking op het inbegrepen abonnement.",
+          "timeFormula": "Prognose tijdswaarde = inbegrepen werk × vaste netto minuten teruggewonnen ÷ 60 × referentie uurtarief.",
+          "profitFormula": "Bijdrage winst = in aanmerking komende aanbevelingssessies × conversie-uplift ÷ 100 × winst per extra bestelling.",
+          "proceedsFormula": "Incrementele opbrengsten = kavels of afhalingen × (netto opbrengsten achteraf − netto opbrengsten vooraf).",
+          "roiFormula": "Netto = voordeel − app-abonnementskosten. ROI = netto ÷ app-abonnementskosten × 100. Gratis abonnementen hebben geen ROI-percentage."
         },
         "profiles": [
           {
             "id": "home",
-            "label": "Start",
+            "label": "Home",
             "model": "time_value",
             "unitsPerWorkload": 1,
             "inputs": [
               {
                 "id": "units",
                 "label": "Planningssessies per maand",
-                "help": "De prognose gaat uit van volledig gebruik van het maandtegoed. Hogere voorgestelde niveaus verhogen zowel capaciteit als prijs.",
+                "help": "Prognose gaat ervan uit dat de inbegrepen maandelijkse limiet wordt gebruikt. Hogere abonnementsniveaus verhogen de capaciteit en prijs samen.",
                 "defaultValue": 4,
                 "min": 0,
                 "max": 4,
@@ -1114,8 +1109,8 @@
               },
               {
                 "id": "minutes_saved",
-                "label": "Bespaarde min.",
-                "help": "Vaste prognose na voorbereiding, controle, goedkeuring en herwerk; geen gemeten besparing.",
+                "label": "Minuten bespaard",
+                "help": "Vaste prognose na voorbereiding, controle, goedkeuring en herziening; geen gemeten besparing.",
                 "defaultValue": 14,
                 "min": -1440,
                 "max": 1440,
@@ -1124,8 +1119,8 @@
               },
               {
                 "id": "hourly_value",
-                "label": "Waarde per uur",
-                "help": "Vaste referentiewaarde van vrijgekomen capaciteit; geen ontvangen geld of salarisverlaging.",
+                "label": "Uurtarief",
+                "help": "Vaste referentiewaarde van teruggewonnen capaciteit; geen ontvangen geld of salarisvermindering.",
                 "defaultValue": 14.99,
                 "min": 0,
                 "max": 1000,
@@ -1136,28 +1131,28 @@
             "offer": {
               "monthlyPrice": 6.99,
               "basis": "fixed",
-              "unit": "Start",
+              "unit": "Home",
               "vatIncluded": true,
               "includedUnits": 4,
               "allowance": "4 sessies / 8 scans",
-              "extras": "Extra gebruik en professionele diensten krijgen een aparte offerte.",
+              "extras": "Extra gebruik en professionele diensten worden afzonderlijk aangeboden.",
               "free": {
                 "includedUnits": 1,
                 "allowance": "Gratis · 1 sessie / 1 scan"
               },
               "trialDays": 7,
-              "trialLabel": "7 dagen op proef · daarna maandprijs"
+              "trialLabel": "7-daagse proef · maandelijkse prijs daarna"
             },
             "assumptions": [
-              "Prognoseversie 2026-10-13. Volledig gebruik van het tegoed, beschikbaar werk en een lineair capaciteitsscenario van 1×/2×/3×; extra vraag is niet gegarandeerd.",
-              "Opgestelde taakraming: 70 minuten handmatig tegenover 56 minuten menselijk werk met ondersteuning per werkeenheid, inclusief controle, goedkeuring en herwerk. De 14 netto minuten (20%) zijn een scenario, geen waargenomen prestaties van deze persona.",
-              "Het scenario van 20% tijdsbesparing is gebaseerd op onderzoek naar kennistaken met AI-ondersteuning. De resultaten bewijzen geen besparingen voor deze persona of voor elke taak: https://aiinstitute.hbs.edu/navigating-the-jagged-technological-frontier/",
-              "Persoonlijke tijd wordt gewaardeerd op €14.99/uur, met het Nederlandse bruto minimumloon voor volwassenen per juli 2026 uitsluitend als illustratieve referentie. Dit is geen gemeten betalingsbereidheid of internationale loonraming: https://www.government.nl/themes/work/minimum-wage/minimum-wage-amounts",
-              "Alle cijfers zijn prognoses. Opstartwerk, leertijd en aanvullende diensten zijn uitgesloten; het werkelijke nettorendement kan lager of negatief zijn. Verkoop, plaatsing, financiering, leerresultaten en maatschappelijke uitkomsten krijgen geen geldwaarde.",
-              "Gratis toegang wordt maandelijks vernieuwd met het getoonde basistegoed. Premium media, integraties en extra gebruik zijn uitgesloten. Betaalde niveaus hebben een proefperiode van zeven dagen; proefgebruik is beperkt tot één gratis basistegoed, geen extra volledig maandtegoed. Getoonde prijzen zijn terugkerende prijzen na de proefperiode. Dit zijn opgestelde aanbodvoorstellen; de calculator kent geen gebruiksrechten toe en wijzigt de facturering niet."
+              "Prognoseherziening 2026-10-13. Volledig inbegrepen gebruik, beschikbaar werk en een lineair 1×/2×/3× capaciteitsscenario; geen extra vraag gegarandeerd.",
+              "Vastgestelde taakbudget: 70 handmatige minuten versus 56 door AI ondersteunde menselijke minuten per werkeenheid, inclusief controle, goedkeuring en herziening. De 14 netto minuten (20%) is een scenario, geen waargenomen prestatie van de persona.",
+              "Het scenario van 20% tijdsreductie is gebaseerd op onderzoek naar AI-ondersteunde kenniswerkzaamheden. De resultaten ervan vestigen geen besparingen voor deze persona of voor elke taak: https://aiinstitute.hbs.edu/navigating-the-jagged-technological-frontier/",
+              "Persoonlijke tijd wordt gewaardeerd op €14,99/uur, met het Nederlandse bruto minimumloon voor volwassenen per juli 2026 als illustratieve referentie. Het is geen gemeten bereidheid tot betalen of een internationale loonschatting: https://www.government.nl/themes/work/minimum-wage/minimum-wage-amounts",
+              "Alle cijfers zijn prognoses. Installatie-inspanning, leertijd en eventuele aanvullende diensten zijn uitgesloten; werkelijke netto-opbrengsten kunnen lager of negatief zijn. Geen enkele verkoop, plaatsing, financiering, leerresultaat of sociaal resultaat wordt gemonetiseerd.",
+              "Gratis toegang wordt maandelijks vernieuwd met de getoonde basislimiet. Premium media, integraties en extra gebruik zijn uitgesloten. Betaalde abonnementen hebben een proefperiode van zeven dagen; proefgebruik is beperkt tot één gratis basislimiet, niet een extra volledige maandelijkse limiet. Getoonde prijzen zijn terugkerende prijzen na de proefperiode. Dit zijn voorgestelde aanbiedingen; de calculator verstrekt geen rechten of wijzigt de facturering."
             ],
-            "loop": "Signaal uit voorraad, maaltijd of aanbod → koopplan maken → huishouden toetst en keurt goed → aanvaard plan en gedeelde inzet vastleggen.",
-            "ctaLabel": "Probeer demo",
+            "loop": "Voorraad-, maaltijd- of aanbiedingssignaal → boodschappenplan opstellen → huishouden controleert en keurt goed → geaccepteerd plan en bijbehorende inspanning registreren.",
+            "ctaLabel": "Demo proberen",
             "ctaTarget": "meet"
           },
           {
@@ -1169,7 +1164,7 @@
               {
                 "id": "units",
                 "label": "Winkels",
-                "help": "Prognose voor één winkel die de inbegrepen cycli gebruikt; hogere voorgestelde niveaus bieden meer cycli per winkel.",
+                "help": "Prognose voor één winkel met de inbegrepen cycli; hogere abonnementsniveaus verhogen de cycli per winkel.",
                 "defaultValue": 1,
                 "min": 0,
                 "max": 1000,
@@ -1178,8 +1173,8 @@
               },
               {
                 "id": "minutes_saved",
-                "label": "Bespaarde min.",
-                "help": "Vaste prognose na voorbereiding, controle, goedkeuring en herwerk; geen gemeten besparing.",
+                "label": "Minuten bespaard",
+                "help": "Vaste prognose na voorbereiding, controle, goedkeuring en herziening; geen gemeten besparing.",
                 "defaultValue": 24,
                 "min": -1440,
                 "max": 1440,
@@ -1188,8 +1183,8 @@
               },
               {
                 "id": "hourly_value",
-                "label": "Waarde per uur",
-                "help": "Vaste referentiewaarde van vrijgekomen capaciteit; geen ontvangen geld of salarisverlaging.",
+                "label": "Uurtarief",
+                "help": "Vaste referentiewaarde van teruggewonnen capaciteit; geen ontvangen geld of salarisvermindering.",
                 "defaultValue": 34.9,
                 "min": 0,
                 "max": 1000,
@@ -1204,25 +1199,25 @@
               "vatIncluded": false,
               "includedUnits": 13,
               "allowance": "13 winkelcycli per winkel",
-              "extras": "Extra gebruik en professionele diensten krijgen een aparte offerte.",
+              "extras": "Extra gebruik en professionele diensten worden afzonderlijk aangeboden.",
               "free": {
                 "includedUnits": 1,
                 "allowance": "Gratis · 1 cyclus / 1 winkel",
                 "unitsPerWorkload": 1
               },
               "trialDays": 7,
-              "trialLabel": "7 dagen op proef · daarna maandprijs"
+              "trialLabel": "7-daagse proef · maandelijkse prijs daarna"
             },
             "assumptions": [
-              "Prognoseversie 2026-10-13. Volledig gebruik van het tegoed, beschikbaar werk en een lineair capaciteitsscenario van 1×/2×/3×; extra vraag is niet gegarandeerd.",
-              "Opgestelde taakraming: 120 minuten handmatig tegenover 96 minuten menselijk werk met ondersteuning per werkeenheid, inclusief controle, goedkeuring en herwerk. De 24 netto minuten (20%) zijn een scenario, geen waargenomen prestaties van deze persona.",
-              "Het scenario van 20% tijdsbesparing is gebaseerd op onderzoek naar kennistaken met AI-ondersteuning. De resultaten bewijzen geen besparingen voor deze persona of voor elke taak: https://aiinstitute.hbs.edu/navigating-the-jagged-technological-frontier/",
-              "Vrijgekomen bedrijfscapaciteit wordt gewaardeerd op €34.90/uur, de referentie voor arbeidskosten per uur in de gehele EU-economie in 2025. Dit is geen beroepsspecifiek tarief of besparing op loonkosten: https://ec.europa.eu/eurostat/en/web/products-eurostat-news/w/ddn-20260331-2",
-              "Alle cijfers zijn prognoses. Opstartwerk, leertijd en aanvullende diensten zijn uitgesloten; het werkelijke nettorendement kan lager of negatief zijn. Verkoop, plaatsing, financiering, leerresultaten en maatschappelijke uitkomsten krijgen geen geldwaarde.",
-              "Gratis toegang wordt maandelijks vernieuwd met het getoonde basistegoed. Premium media, integraties en extra gebruik zijn uitgesloten. Betaalde niveaus hebben een proefperiode van zeven dagen; proefgebruik is beperkt tot één gratis basistegoed, geen extra volledig maandtegoed. Getoonde prijzen zijn terugkerende prijzen na de proefperiode. Dit zijn opgestelde aanbodvoorstellen; de calculator kent geen gebruiksrechten toe en wijzigt de facturering niet."
+              "Prognoseherziening 2026-10-13. Volledig inbegrepen gebruik, beschikbaar werk en een lineair 1×/2×/3× capaciteitsscenario; geen extra vraag gegarandeerd.",
+              "Vastgestelde taakbudget: 120 handmatige minuten versus 96 door AI ondersteunde menselijke minuten per werkeenheid, inclusief controle, goedkeuring en herziening. De 24 netto minuten (20%) is een scenario, geen waargenomen prestatie van de persona.",
+              "Het scenario van 20% tijdsreductie is gebaseerd op onderzoek naar AI-ondersteunde kenniswerkzaamheden. De resultaten ervan vestigen geen besparingen voor deze persona of voor elke taak: https://aiinstitute.hbs.edu/navigating-the-jagged-technological-frontier/",
+              "Teruggewonnen zakelijke capaciteit wordt gewaardeerd op €34,90/uur, de EU-referentie voor de uurlonen in de gehele economie voor 2025. Het is geen beroepsspecifiek tarief of een besparing op de salarisadministratie: https://ec.europa.eu/eurostat/en/web/products-eurostat-news/w/ddn-20260331-2",
+              "Alle cijfers zijn prognoses. Opstartinspanning, leertijd en eventuele aanvullende diensten zijn uitgesloten; werkelijke netto-opbrengsten kunnen lager of negatief zijn. Geen enkele verkoop, plaatsing, financiering, leerresultaat of sociaal resultaat wordt gemonetiseerd.",
+              "Gratis toegang wordt maandelijks verlengd met de getoonde basistoelage. Premium media, integraties en extra gebruik zijn uitgesloten. Betaalde niveaus hebben een proefperiode van zeven dagen; proefgebruik is beperkt tot één basistoelage, niet een extra volledige maandelijkse toelage. Getoonde prijzen zijn terugkerende prijzen na de proefperiode. Dit zijn opgestelde aanbiedingsvoorstellen; de calculator verstrekt geen rechten of wijzigt facturering."
             ],
-            "loop": "Voorraad- of aanvulsignaal → bestelplan maken → winkelteam keurt goed → aanvaard plan, toetsingswerk en aangetoonde verliezen vastleggen.",
-            "ctaLabel": "Probeer demo",
+            "loop": "Voorraad- of aanvullingssignaal → bestelplan opstellen → winkelteam keurt goed → geaccepteerd plan vastleggen, inspanning en aangetoonde verliezen beoordelen.",
+            "ctaLabel": "Probeer de demo",
             "ctaTarget": "meet"
           }
         ]
@@ -1293,7 +1288,7 @@
         "landingPage",
         "badge"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1484,7 +1479,7 @@
         "header",
         "primaryCtaLabel"
       ],
-      "sourceHash": "f6f2913c3ee65c4e5fa410960649ae928ee8a5cd7f384972c7275007686b7ac2"
+      "sourceHash": "ab23cde5c8e7eb47ed87cea252cff38249f120f377190c482f92ae0cf70f715d"
     },
     {
       "path": [
@@ -1493,7 +1488,7 @@
         "hero",
         "ratingLabel"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1885,7 +1880,7 @@
         "restockDemo",
         "confirmationBody"
       ],
-      "sourceHash": "3855bc93caa2a8d399d9cee5cc6e725b20d5e76226eece00ca411c62e98a124a"
+      "sourceHash": "52d9f9ef8483c24c7185a727bf2211244f85030367da02ddf14eb5d6e6011ba0"
     },
     {
       "path": [
@@ -1895,7 +1890,7 @@
         "restockDemo",
         "signInLabel"
       ],
-      "sourceHash": "5e4e68bf849048cc43d66bb27eb09dc5d3a299b8e31b9b887643f594b40e1213"
+      "sourceHash": "607a80121c655651dc14cbb057e035943bed91077283e9c6b8d709db1e25ef7f"
     },
     {
       "path": [
@@ -1905,7 +1900,7 @@
         "restockDemo",
         "signInNotice"
       ],
-      "sourceHash": "7ede1f8e3651004f8425e6cd270825174d06112032e615b98f44f4685533c0a4"
+      "sourceHash": "7ee6641bab06f804b91bb13e538d9da870890f703c1d8fa24098515f5129a011"
     },
     {
       "path": [
@@ -2043,7 +2038,7 @@
         "product",
         "heading"
       ],
-      "sourceHash": "c172cd2a53e02e6d2763843e2a4f04c33b97f43ddaa3d1af868a01a8d445d7e1"
+      "sourceHash": "989cacb42de5017d3d7942afe20d93c7d79c5617f70de63c4dbb7a4f1174baf2"
     },
     {
       "path": [
@@ -6543,6 +6538,42 @@
         "landingPage",
         "roiCalculator",
         "currencyCopy",
+        "native"
+      ],
+      "sourceHash": "cd2604270cd9656f4abdccbee7bf11038b88a1ae5a8657f9933a807fdcdff8bf"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "loading"
+      ],
+      "sourceHash": "efc980d9dce429c644a6dce658df91cdacbff328ea38504d8ce80bfe9b76b32d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "unavailable"
+      ],
+      "sourceHash": "b01a152edb76137a0a16fe29cc942fa282d98fbdc4123b830397f9fde7f85095"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "converted"
+      ],
+      "sourceHash": "450c38574200c1402496596e9f8177d31fd0e64cf58d9468c350eb3ba2c60d10"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
         "basis"
       ],
       "sourceHash": "17cc8491fcdfe8ddd4f8dec6a3859229ecacffb562b383e1283f1c0be0019806"
@@ -7914,5 +7945,5 @@
       "sourceHash": "6e5fe4ca7c07142fa81eef400c342dea7f8ba0422aa331c3880e6604db8d52a7"
     }
   ],
-  "generatedAt": "2026-10-13T14:19:34.015Z"
+  "generatedAt": "2026-10-18T10:17:44.290Z"
 }

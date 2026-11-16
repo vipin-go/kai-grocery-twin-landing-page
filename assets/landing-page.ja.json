@@ -2,13 +2,8 @@
   "schemaVersion": 2,
   "language": "ja",
   "regionKey": null,
-  "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
+  "sourceRevision": "e109add0e4fe301964f8a19341549a6101f0e29e2c6783073414963417b1e42b",
   "landingPage": {
-    "capabilityPreview": {
-      "enabled": true,
-      "commandId": "restock",
-      "presentation": "surface"
-    },
     "design": {
       "variant": "grocery-twin",
       "defaultThemeMode": "light",
@@ -57,7 +52,7 @@
     },
     "header": {
       "brandMark": "image",
-      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "logoImageUrl": "https://gabrieloperator.com/assets/gabriel-twins/brand-marks/kai.webp",
       "navItems": [
         {
           "label": "製品",
@@ -68,7 +63,7 @@
           "target": "mobile"
         },
         {
-          "label": "物語",
+          "label": "ストーリー",
           "target": "stories"
         },
         {
@@ -76,37 +71,37 @@
           "target": "features"
         },
         {
-          "label": "約",
+          "label": "概要",
           "target": "about"
         }
       ],
-      "ctaLabel": "KAIをご紹介します"
+      "ctaLabel": "KAIを紹介"
     },
-    "badge": "店舗、レシピ、カロリー計画が一元管理",
-    "headline": "食料品ショッピングをもう一度簡単に",
-    "headlineAccent": "もう一度簡単に",
-    "subheadline": "冷蔵庫またはレシートをスキャン。KAIが持っている食材をレシピに変換し、カロリーを計算し、各食事でまだ必要なものだけを買い物します。",
+    "badge": "あなたのショップ、レシピ、カロリー計画がつながります",
+    "headline": "食料品の買い物を再び簡単に",
+    "headlineAccent": "再び簡単に",
+    "subheadline": "冷蔵庫またはレシートをスキャン。KAIはすでにあるものからレシピを作り、カロリーを計算し、各食事に足りないものだけを注文します。",
     "ctaLabel": "KAIと話す",
-    "secondaryCtaLabel": "スキャンしてレシピへ",
+    "secondaryCtaLabel": "スキャンからレシピへ",
     "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
     "featureTags": [
-      "実際の商品と価格",
+      "実在する商品と価格",
       "すべての選択を確認",
-      "世帯別のカロリー計画",
-      "持っている食材からのレシピ"
+      "世帯別カロリー計画",
+      "手持ちの食材からレシピ"
     ],
     "seoImage": {
       "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
-      "alt": "日光の当たるキッチンで、新鮮な農産物と週間食事プランに囲まれたKAI、Grocery Twin"
+      "alt": "新鮮な食材と一週間の meal plan に囲まれた日当たりの良いキッチンにいる、あなたの Grocery Twin である KAI"
     },
     "contact": {
-      "heading": "持っているものから始める",
-      "body": "冷蔵庫またはレシートをスキャンして、KAIに不足している食料品を用意してもらい、確認してください。"
+      "heading": "手元にあるものから始める",
+      "body": "冷蔵庫またはレシートをスキャンし、KAIに買い物ギャップを確認用に準備させましょう。"
     },
     "groceryTwin": {
       "header": {
         "editionLabel": "ホーム",
-        "subtitle": "あなたのGrocery Twin",
+        "subtitle": "あなたの Grocery Twin",
         "secondaryEditionLabel": "小売",
         "navItems": [
           {
@@ -118,7 +113,7 @@
             "target": "mobile"
           },
           {
-            "label": "物語",
+            "label": "ストーリー",
             "target": "stories"
           },
           {
@@ -126,44 +121,44 @@
             "target": "features"
           },
           {
-            "label": "約",
+            "label": "概要",
             "target": "about"
           }
         ],
-        "secondaryCtaLabel": "KAIをご紹介します",
-        "primaryCtaLabel": "KAIをご紹介します"
+        "secondaryCtaLabel": "KAIを紹介",
+        "primaryCtaLabel": "カートを開始"
       },
       "hero": {
-        "ratingLabel": "店舗、レシピ、カロリー計画が一元管理",
-        "heading": "食料品ショッピングをもう一度簡単に",
-        "body": "冷蔵庫またはレシートをスキャン。KAIが持っている食材をレシピに変換し、カロリーを計算し、各食事でまだ必要なものだけを買い物します。",
+        "ratingLabel": "あなたのショップ、レシピ、カロリー計画がつながります",
+        "heading": "食料品の買い物を再び簡単に",
+        "body": "冷蔵庫またはレシートをスキャン。KAIはすでにあるものからレシピを作り、カロリーを計算し、各食事に足りないものだけを注文します。",
         "primaryCtaLabel": "KAIと話す",
-        "secondaryCtaLabel": "スキャンしてレシピへ",
+        "secondaryCtaLabel": "スキャンからレシピへ",
         "trustItems": [
-          "実際の商品と価格",
+          "実在する商品と価格",
           "すべての選択を確認",
-          "世帯別のカロリー計画",
-          "持っている食材からのレシピ"
+          "世帯別カロリー計画",
+          "手持ちの食材からレシピ"
         ],
         "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
-        "characterAlt": "全身のGrocery TwinペルソナであるKAI",
+        "characterAlt": "KAI、あなたの全身 Grocery Twin ペルソナ",
         "chat": {
           "statusLabel": "オンライン",
-          "subtitle": "冷蔵庫からレシピへの食料品アシスタント",
-          "openingMessage": "はじめまして、KAIです。冷蔵庫、パントリー、または最近のレシートを見せてください。持っている食材からレシピを提案し、支出、カロリー、不足している食材を見えるようにします。",
-          "visitorMessage": "冷蔵庫をスキャンして、今夜作れるものを表示して。",
-          "assistantMessage": "そこにある食材をレシピの選択肢に変換し、1人分のカロリーを表示し、まだ不足している材料だけを買い物します。",
-          "inputPlaceholder": "食料品、レシピ、カロリーチェックをリクエストしてください…",
+          "subtitle": "冷蔵庫からレシピまでアシスタント",
+          "openingMessage": "こんにちは、KAI です。冷蔵庫、パントリー、最近のレシートを見せてください。手元にあるものからレシピを提案し、支出、カロリー、足りない食材を見えるようにします。",
+          "visitorMessage": "冷蔵庫をスキャンして、今夜作れる料理を教えて。",
+          "assistantMessage": "すでにあるものからレシピ案を作り、1 人前のカロリーを表示し、まだ足りない食材だけを注文します。",
+          "inputPlaceholder": "食料品、レシピ、カロリー確認をリクエスト…",
           "suggestions": [
-            "オーツミルクのお買い得情報",
-            "週間バランスを調整",
-            "冷蔵庫から料理する"
+            "オーツミルクのお得情報",
+            "一週間をバランス良く",
+            "冷蔵庫にあるもので料理"
           ],
-          "demoNote": "Illustrative grocery, recipe, and nutrition demo · Check ingredients and dietary needs",
+          "demoNote": "食料品・レシピ・栄養のデモ · 食材と食事ニーズを確認",
           "sampleProduct": {
-            "badge": "Deal found · Pantry+",
+            "badge": "お得発見 · Pantry+",
             "name": "Oatly Barista Edition",
-            "detail": "1 L · 590 kcal · 20% off",
+            "detail": "1 L · 590 kcal · 20%オフ",
             "price": "€2.39",
             "actionLabel": "Try /restock"
           }
@@ -171,24 +166,24 @@
         "restockDemo": {
           "enabled": true,
           "commandTrigger": "restock",
-          "uploadLabel": "冷蔵庫、パントリー、レシート、または買い物リスト画像を選択してください",
-          "uploadHint": "JPEG、PNG、WebP、またはHEIC · 最大6画像、各10MBまで",
-          "analyzingLabel": "KAIは表示されている食料品を読み取っています…",
+          "uploadLabel": "冷蔵庫・パントリー・レシート・買い物リストの画像を選んでください",
+          "uploadHint": "JPEG、PNG、WebP、または HEIC · 最大 6 枚、各 10 MB まで",
+          "analyzingLabel": "KAI が見えている食料品を読み取っています…",
           "inventoryHeading": "抽出された在庫を確認",
-          "inventoryBody": "数量を修正、問題点を削除、KAIが見落としたものを追加してください。",
-          "itemNameLabel": "品目",
+          "inventoryBody": "数量を修正し、誤りを削除し、KAI が見落としたものを追加してください。",
+          "itemNameLabel": "商品",
           "quantityLabel": "数量",
           "unitLabel": "単位",
-          "addItemLabel": "品目を追加",
+          "addItemLabel": "商品を追加",
           "removeItemLabel": "削除",
           "chatLabel": "チャットで修正",
-          "voiceLabel": "音声で修正 · 5分",
+          "voiceLabel": "音声で修正 · 5 分",
           "reviewLabel": "在庫を確認",
           "editLabel": "在庫を編集",
           "confirmationHeading": "在庫準備完了",
-          "confirmationBody": "スキャン範囲を確認し、食料品と消費プロフィールを非公開リストに保存してください。",
-          "signInLabel": "ログインして食料品を保存",
-          "signInNotice": "ログインして、確認済みの食料品スキャンと在庫プロフィールを非公開のKAIワークスペースに保存してください。補充は自動では始まりません。",
+          "confirmationBody": "KAI はカートを提案する前にこのリストを再度確認します。あなたが承認しなければ何も注文されません。",
+          "signInLabel": "続行するにはサインイン",
+          "signInNotice": "サインインして、この食料品キャプチャをプライベートな KAI セッションに移し、補充ワークフローを続行してください。明示的な承認なしに注文されることはありません。",
           "authenticatedActionLabel": "食料品をリストに追加",
           "savingLabel": "食料品を保存中…",
           "anonymousPlanNotice": "ログインして、確認済みの在庫と算出した在庫基準値を保存してください。",
@@ -199,164 +194,164 @@
           "completionEyebrow": "在庫を保存しました",
           "completionHeading": "食料品をリストに追加しました",
           "completionBody": "KAIは確認済みの食料品と消費プロフィールを保存し、バックグラウンドで在庫量と次回の補充基準値を算出しました。補充は開始していません。",
-          "expiryCopy": "未請求のプレビューは1時間後に期限切れになります",
-          "errorCopy": "KAIはその画像から食料品リストを読み取ることができませんでした。より鮮明な冷蔵庫、パントリー、レシート、または買い物リストの写真を試してください。"
+          "expiryCopy": "未確定のプレビューは 1 時間後に失効します",
+          "errorCopy": "KAI はその画像から買い物リストを読み取れませんでした。冷蔵庫、パントリー、レシート、買い物リストのより鮮明な写真で試してください。"
         }
       },
       "product": {
-        "kicker": "あなたのGrocery + Recipe + Calorie Twin",
-        "heading": "何が料理できるか、まだ買い物は何が必要ですか？",
-        "body": "KAIはスキャン、レシピ、商品検索、カロリー、カートを連携させ、すべての食事を開始食材から始められるようにします。",
+        "kicker": "あなたの買い物 + レシピ + カロリーの双子",
+        "heading": "何が作れて、まだ何を買う必要がある？",
+        "body": "KAI はスキャン、レシピ、商品検索、カロリー、カートをつなぎ、すべての食事がすでにあるものから始まるようにします。",
         "capabilityLabels": [
           "商品検索",
           "カロリー計画",
-          "レシピアイデア",
+          "レシピのアイデア",
           "画像からリストへ",
           "音声ヘルプ",
-          "お得情報マッチング"
+          "お得マッチング"
         ],
         "cards": [
           {
             "title": "ライブカート",
-            "body": "1つの確認可能なカートで、実際の商品、数量、価格を比較します。",
-            "metric": "支出とカロリーを一緒に管理"
+            "body": "実際 products、qty、price を 1 つの reviewable cart で比較。",
+            "metric": "支出とカロリーを一緒に"
           },
           {
-            "title": "スキャンからのレシピ",
-            "body": "冷蔵庫に既に 있는食材と不足している食材で料理可能なレシピをランキング表示します。",
+            "title": "スキャンからレシピ",
+            "body": "冷蔵庫にあるものと足りないもので並べた、作れるレシピを確認。",
             "metric": "まず料理、それから買い物"
           },
           {
-            "title": "お得情報レーダー",
-            "body": "レシピの範囲と世帯の目標を維持しながら、便利なマッチを比較します。",
-            "metric": "実際の食料品ソース"
+            "title": "お得レーダー",
+            "body": "レシピの網羅性と世帯の目標を維持しながら、有用な候補を比較。",
+            "metric": "実在する食料品ソース"
           }
         ]
       },
       "mobile": {
-        "kicker": "ポケットの中のKAI",
-        "heading": "冷蔵庫からレシピへ、カートへ、",
-        "accentHeading": "どこでもあなたのそばに。",
+        "kicker": "ポケットの中の KAI",
+        "heading": "冷蔵庫からレシピ、カートへ、",
+        "accentHeading": "どこにいても。",
         "items": [
           {
-            "label": "カートを構築",
-            "title": "支出とカロリー計画が一緒に見られるライブカート。",
-            "body": "食材について質問し、実際の一致商品を比較して、価格、カロリー、数量が週ごとにどう変わるかを確認できます。"
+            "label": "カートを作成",
+            "title": "支出とカロリー計画をまとめたライブカート。",
+            "body": "商品をリクエストし、実際の一致候補を比較して、価格、カロリー、数量が週を通じてどう変わるかを確認。"
           },
           {
             "label": "冷蔵庫をスキャン",
-            "title": "冷蔵庫やレシートの写真を、作れるレシピへと変換します。",
-            "body": "KAIは手元にある食材を特定し、カロリーを見積もり、不足する食材リストを作る前にレシピを提案します。"
+            "title": "冷蔵庫やレシートの写真を、作れるレシピに変換。",
+            "body": "KAI は手元の食材を特定し、カロリーを見積もり、不足食材リストを作る前にレシピを提案します。"
           },
           {
-            "label": "レシピを選ぶ",
-            "title": "mealを選び、足りない食材だけを購入します。",
-            "body": "各レシピの調理時間、1食あたりのカロリー、材料の充足率、そして少額の不足食材を比較します。"
+            "label": "レシピを選択",
+            "title": "料理を選び、足りないものだけを買う。",
+            "body": "調理時間、1 人前のカロリー、食材の網羅性、各レシピの小さな買い物ギャップを比較。"
           },
           {
             "label": "KAIと話す",
-            "title": "買い物と週の目標について話します。",
-            "body": "何がなくなったか、何を作りたいかを伝えてください。KAIがカート、支出、カロリーの差を文脈に沿って管理します。"
+            "title": "買い物と一週間の目標について話す。",
+            "body": "何がなくなったか、何を作りたいかを伝えてください。KAI はカート、支出、カロリーギャップを文脈に沿って把握します。"
           }
         ]
       },
       "features": {
-        "kicker": "再建された週間買い物",
-        "heading": "食料品の購入、レシピ、支出、カロリーを明確 manage に管理します",
+        "kicker": "再構築された週の買い物",
+        "heading": "食料品、レシピ、支出、カロリーを明確に管理",
         "items": [
           {
             "number": "01",
-            "title": "レシピ、商品、カロリーの探索",
-            "body": "手元にある物をスキャンするか、作りたい meal を説明してください。KAIが調理可能なレシピ、1食あたりのカロリー、そして各選択肢の正確な不足食材を表示します。",
+            "title": "レシピ・商品・カロリーの発見",
+            "body": "手元のものをスキャンするか、欲しい料理を入力してください。KAI は作れるレシピ、1 人前のカロリー、各オプションの正確な買い物ギャップを表示します。",
             "tags": [
               "冷蔵庫スキャン",
               "レシピ",
               "カロリー",
-              "不足している食材"
+              "不足商品"
             ],
             "accent": "purple"
           },
           {
             "number": "02",
-            "title": "選んだ meal から構築されたカート",
-            "body": "レシピを選ぶと、KAIはすでにある食材を取り除きます。不足している商品だけがカートに入り、支出と世帯のカロリーが同時に更新されます。",
+            "title": "選んだ料理から作られるカート",
+            "body": "レシピを選ぶと、KAI はすでにある食材を取り除きます。カートに入るのは不足している商品だけで、支出と世帯カロリーが同時に更新されます。",
             "tags": [
-              "レシピの充足率",
+              "レシピ網羅性",
               "不足分のみ",
-              "週間kcal"
+              "週間 kcal"
             ],
             "accent": "blue"
           },
           {
             "number": "03",
-            "title": "一度スキャン。 手元の物から調理。",
-            "body": "KAIは冷蔵庫、パントリー、またはレシートのスキャンを3つの実用的なレシピに変換します。時間とカロリーを比較し、1つを選び、その不足食材のみを確認します。",
+            "title": "一度スキャンすれば、あるもので料理できる。",
+            "body": "KAI は冷蔵庫、パントリー、レシートのスキャンを 3 つの実用的なレシピに変換します。時間とカロリーを比較し、1 つを選んで、不足食材だけを確認。",
             "tags": [
-              "3つのレシピ候補",
+              "レシピ 3 案",
               "調理時間",
-              "1食あたりのカロリー"
+              "カロリー / 1 人前"
             ],
             "accent": "lime"
           }
         ]
       },
       "stories": {
-        "kicker": "KAIでの料理と買い物はどのような体験か",
-        "heading": "冷蔵庫から dinner までの小さな明確さの瞬間",
+        "kicker": "KAI での料理と買い物はこんな感じ",
+        "heading": "冷蔵庫から dinner までの小さな clarity の瞬間",
         "testimonials": [
           {
-            "quote": "KAIは私たちの冷蔵庫にある物から dinner のアイデアに変換し、私が選ぶ前にコストと家族のカロリーを表示します。",
-            "name": "ミラ",
-            "meta": "忙しい parent"
+            "quote": "KAI は冷蔵庫にあるものを dinner のアイデアに変換し、私が選ぶ前にコストと家族のカロリーを表示します。",
+            "name": "Mila",
+            "meta": "忙しい親"
           },
           {
-            "quote": "チーズのお得な情報を尋ね、実際 options を比較し、希望どおりのものを正確に追加します。タブの切り替えは不要です。",
-            "name": "ノア",
-            "meta": "週間の買い物客"
+            "quote": "チーズのお得情報をリクエストし、実際 options を比較して、欲しいものをそのまま追加。タブの切り替えは不要。",
+            "name": "Noah",
+            "meta": "週間 shopper"
           },
           {
-            "quote": "レシートスキャンが3つのレシピ、1食あたりのカロリー、そしてまだ購入が必要な ingredients だけを提供してくれました。",
-            "name": "ソフィア",
-            "meta": "家庭の料理人"
+            "quote": "レシートスキャンから、3 つのレシピ、1 人前のカロリー、そしてまだ買う必要のある食材だけが得られました。",
+            "name": "Sofia",
+            "meta": "家庭料理人"
           },
           {
-            "quote": "KAIが最初にカートを構築し、必要なときにだけ planning の質問をしてくることが気に入っています。",
-            "name": "ルーカス",
+            "quote": "KAI がまずカートを作り、プランニングの質問は重要なときにだけ聞いてくれるのが好きです。",
+            "name": "Lucas",
             "meta": "学生"
           },
           {
-            "quote": "キッチンで手がふさがっているときに音声は最適です。なくなった物をKAIに伝えるだけです。",
-            "name": "エマ",
-            "meta": "meal prep のファン"
+            "quote": "キッチンで手がふさがっているとき、音声入力は完璧です。KAI に何がなくなったか伝えるだけ。",
+            "name": "Emma",
+            "meta": "meal prep 好き"
           },
           {
-            "quote": "すべてが確認可能な状態のままです。数量を変更でき、支出とカロリーの合計が一緒に動くのを確認できます。",
-            "name": "ダーン",
-            "meta": "賢い買い物客"
+            "quote": "すべて確認可能。数量を変更すると、支出とカロリー合計が一緒に動くのが見えます。",
+            "name": "Daan",
+            "meta": "賢い shopper"
           }
         ],
         "articles": [
           {
-            "category": "週間の routine",
-            "title": "7分の買い物と meal プラン",
-            "body": "一人暮らしの買い物客が散らかった staple のリストをカート、3つの調理可能な dinner、10,850の計画カロリーに変換しました。"
+            "category": "週間ルーティン",
+            "title": "7 分で終わる買い物と meal plan",
+            "body": "一人で買う人が、バラバラの staples リストをカートと 3 つの作れる dinner、そして 10,850 kcal の計画に変えました。"
           },
           {
             "category": "冷蔵庫からレシピへ",
-            "title": "冷蔵庫の写真から今夜 dinner まで",
-            "body": "KAIが食材を認識し、3つのレシピを提案し、すでにある物とまだ購入が必要な物を区別しました。"
+            "title": "冷蔵庫の写真から今夜 dinner へ",
+            "body": "KAI は食材を認識し、3 つのレシピを提案し、すでにあるものとまだ買う必要があるものを分けました。"
           },
           {
             "category": "スマートレシピ検索",
-            "title": "週全体を見渡すスマート検索",
-            "body": "買い物の流れを失うことなく、価格、カロリー、レシピの充足率、タンパク質の不足を考慮した検索。"
+            "title": "一週間全体を見渡すスマート検索",
+            "body": "価格、カロリー、レシピ網羅性、そしてタンパク質のギャップを考慮した検索が、買い物全体の一貫性を失いませんでした。"
           }
         ]
       },
       "about": {
-        "kicker": "1か所、多くの入り口",
-        "heading": "すべての入力がレシピ、1つのカート、1つのカロリープランになります",
-        "body": "写真、音声メモ、レシート、またはリストが同じ view に供給します：手元にある食材、調理可能なレシピ、まだ不足している商品、週の支出、世帯のカロリー。",
+        "kicker": "1 か所、多くの入り口",
+        "heading": "あらゆる入力が、レシピ、1 つのカート、1 つのカロリー計画になります",
+        "body": "写真、音声メモ、レシート、リストのいずれも同じ下層のビューを動かします。手元にある食材、作れるレシピ、まだ足りない商品、週間の支出、世帯のカロリー。",
         "capabilities": [
           "写真",
           "音声",
@@ -370,19 +365,19 @@
         ]
       },
       "closing": {
-        "kicker": "次の冷蔵庫から dinner までのプラン",
-        "heading": "手元にある物から始めましょう。不足分のみを購入します。",
-        "body": "冷蔵庫またはレシートをスキャンしてください。KAIが調理可能なレシピを提案し、1食あたりのカロリーを表示し、不足している食材を確認可能なカートに変換します。",
+        "kicker": "次の冷蔵庫から dinner までの計画",
+        "heading": "手元にあるものから始めて、足りないものだけを買う。",
+        "body": "冷蔵庫またはレシートをスキャン。KAI が作れるレシピを提案し、1 人前のカロリーを表示し、足りない食材を確認可能なカートに変換します。",
         "ctaLabel": "スキャンしてレシピを見つける"
       },
       "footer": {
-        "tagline": "冷蔵庫からカートまでのGrocery Twin。手元の物からレシピを見つけ、カロリーを確認し、不足分のみを購入します。",
+        "tagline": "あなたの冷蔵庫からカートまでの Grocery Twin。手元にあるものからレシピを見つけ、カロリーを確認し、足りないものだけを買う。",
         "groups": [
           {
             "label": "製品",
             "links": [
               {
-                "label": " grocery のデモ",
+                "label": "食料品デモ",
                 "target": "product"
               },
               {
@@ -390,7 +385,7 @@
                 "target": "features"
               },
               {
-                "label": "物語",
+                "label": "ストーリー",
                 "target": "stories"
               }
             ]
@@ -399,11 +394,11 @@
             "label": "KAI",
             "links": [
               {
-                "label": "KAIについて",
+                "label": "KAI について",
                 "target": "about"
               },
               {
-                "label": "接触",
+                "label": "お問い合わせ",
                 "target": "contact"
               },
               {
@@ -414,7 +409,7 @@
           }
         ],
         "copyright": "© 2026 KAI · Grocery Twin",
-        "closingStatement": "良い選択。素晴らしい1週間。"
+        "closingStatement": "良い選択。素晴らしい一週間。"
       },
       "homeRoiCalculator": {
         "methodologyVersion": 2,
@@ -1293,7 +1288,7 @@
         "landingPage",
         "badge"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1484,7 +1479,7 @@
         "header",
         "primaryCtaLabel"
       ],
-      "sourceHash": "f6f2913c3ee65c4e5fa410960649ae928ee8a5cd7f384972c7275007686b7ac2"
+      "sourceHash": "ab23cde5c8e7eb47ed87cea252cff38249f120f377190c482f92ae0cf70f715d"
     },
     {
       "path": [
@@ -1493,7 +1488,7 @@
         "hero",
         "ratingLabel"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1885,7 +1880,7 @@
         "restockDemo",
         "confirmationBody"
       ],
-      "sourceHash": "3855bc93caa2a8d399d9cee5cc6e725b20d5e76226eece00ca411c62e98a124a"
+      "sourceHash": "52d9f9ef8483c24c7185a727bf2211244f85030367da02ddf14eb5d6e6011ba0"
     },
     {
       "path": [
@@ -1895,7 +1890,7 @@
         "restockDemo",
         "signInLabel"
       ],
-      "sourceHash": "5e4e68bf849048cc43d66bb27eb09dc5d3a299b8e31b9b887643f594b40e1213"
+      "sourceHash": "607a80121c655651dc14cbb057e035943bed91077283e9c6b8d709db1e25ef7f"
     },
     {
       "path": [
@@ -1905,7 +1900,7 @@
         "restockDemo",
         "signInNotice"
       ],
-      "sourceHash": "7ede1f8e3651004f8425e6cd270825174d06112032e615b98f44f4685533c0a4"
+      "sourceHash": "7ee6641bab06f804b91bb13e538d9da870890f703c1d8fa24098515f5129a011"
     },
     {
       "path": [
@@ -2043,7 +2038,7 @@
         "product",
         "heading"
       ],
-      "sourceHash": "c172cd2a53e02e6d2763843e2a4f04c33b97f43ddaa3d1af868a01a8d445d7e1"
+      "sourceHash": "989cacb42de5017d3d7942afe20d93c7d79c5617f70de63c4dbb7a4f1174baf2"
     },
     {
       "path": [
@@ -6543,6 +6538,42 @@
         "landingPage",
         "roiCalculator",
         "currencyCopy",
+        "native"
+      ],
+      "sourceHash": "cd2604270cd9656f4abdccbee7bf11038b88a1ae5a8657f9933a807fdcdff8bf"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "loading"
+      ],
+      "sourceHash": "efc980d9dce429c644a6dce658df91cdacbff328ea38504d8ce80bfe9b76b32d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "unavailable"
+      ],
+      "sourceHash": "b01a152edb76137a0a16fe29cc942fa282d98fbdc4123b830397f9fde7f85095"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "converted"
+      ],
+      "sourceHash": "450c38574200c1402496596e9f8177d31fd0e64cf58d9468c350eb3ba2c60d10"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
         "basis"
       ],
       "sourceHash": "17cc8491fcdfe8ddd4f8dec6a3859229ecacffb562b383e1283f1c0be0019806"
@@ -7914,5 +7945,5 @@
       "sourceHash": "6e5fe4ca7c07142fa81eef400c342dea7f8ba0422aa331c3880e6604db8d52a7"
     }
   ],
-  "generatedAt": "2026-10-13T14:19:34.015Z"
+  "generatedAt": "2026-09-01T19:15:50.031Z"
 }

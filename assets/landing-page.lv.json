@@ -2,13 +2,8 @@
   "schemaVersion": 2,
   "language": "lv",
   "regionKey": null,
-  "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
+  "sourceRevision": "e109add0e4fe301964f8a19341549a6101f0e29e2c6783073414963417b1e42b",
   "landingPage": {
-    "capabilityPreview": {
-      "enabled": true,
-      "commandId": "restock",
-      "presentation": "surface"
-    },
     "design": {
       "variant": "grocery-twin",
       "defaultThemeMode": "light",
@@ -57,14 +52,14 @@
     },
     "header": {
       "brandMark": "image",
-      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "logoImageUrl": "https://gabrieloperator.com/assets/gabriel-twins/brand-marks/kai.webp",
       "navItems": [
         {
           "label": "Produkts",
           "target": "product"
         },
         {
-          "label": "Mobilā lietotne",
+          "label": "Mobilais",
           "target": "mobile"
         },
         {
@@ -76,37 +71,37 @@
           "target": "features"
         },
         {
-          "label": "Par",
+          "label": "Par mums",
           "target": "about"
         }
       ],
-      "ctaLabel": "Iepazīsti KAI"
+      "ctaLabel": "Iepazīstiet KAI"
     },
-    "badge": "Jūsu veikals, receptes un kaloriju plāns, savienoti",
-    "headline": "Padariet iepirkšanos vieglu",
-    "headlineAccent": "Padariet iepirkšanos vieglu",
-    "subheadline": "Skenējiet ledusskapi vai čeks. KAI pārvērš esošās mantas receptēs, saskaita kalorijas un iepērkas tikai to, kas katram ēdienam vēl nepieciešams.",
+    "badge": "Jūsu veikals, receptes un kaloriju plāns—savienoti",
+    "headline": "Padariet pārtikas iepirkšanos atkal vieglu",
+    "headlineAccent": "atkal vieglu",
+    "subheadline": "Skenējiet ledusskapi vai čeku. KAI pārvērš to, kas jau ir, receptēs, skaita kalorijas un iepērkas tikai par to, kas vēl nepieciešams katrai maltītei.",
     "ctaLabel": "Runājiet ar KAI",
-    "secondaryCtaLabel": "No skenēšanas līdz receptēm",
+    "secondaryCtaLabel": "Skenējiet receptēm",
     "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
     "featureTags": [
       "Īsti produkti un cenas",
       "Pārskatiet katru izvēli",
-      "Kalorijas plānotas pēc mājsaimniecības",
+      "Kalorijas plānotas mājsaimniecībai",
       "Receptes no tā, kas jums ir"
     ],
     "seoImage": {
       "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
-      "alt": "KAI, jūsu iepirkumu dvīnis, saulainā virtuvē, ko ieskauj svaigi produkti un nedēļas ēdienkarte"
+      "alt": "KAI, jūsu pārtikas Dvīnis, saulainā virtuvē, ko ieskauj svaigi produkti un nedēļas ēdienreižu plāns"
     },
     "contact": {
       "heading": "Sāciet ar to, kas jums ir",
-      "body": "Skenējiet ledusskapi vai čeks un ļaujiet KAI sagatavot iepirkumu atšķirības pārskatīšanai."
+      "body": "Skenējiet ledusskapi vai čeku un ļaujiet KAI sagatavot pārtikas trūkumus pārskatīšanai."
     },
     "groceryTwin": {
       "header": {
         "editionLabel": "Sākums",
-        "subtitle": "Jūsu iepirkumu dvīnis",
+        "subtitle": "Jūsu pārtikas Dvīnis",
         "secondaryEditionLabel": "Mazumtirdzniecība",
         "navItems": [
           {
@@ -114,7 +109,7 @@
             "target": "product"
           },
           {
-            "label": "Mobilā lietotne",
+            "label": "Mobilais",
             "target": "mobile"
           },
           {
@@ -126,42 +121,42 @@
             "target": "features"
           },
           {
-            "label": "Par",
+            "label": "Par mums",
             "target": "about"
           }
         ],
-        "secondaryCtaLabel": "Iepazīsti KAI",
-        "primaryCtaLabel": "Iepazīsti KAI"
+        "secondaryCtaLabel": "Iepazīstiet KAI",
+        "primaryCtaLabel": "Sāciet grozu"
       },
       "hero": {
-        "ratingLabel": "Jūsu veikals, receptes un kaloriju plāns, savienoti",
-        "heading": "Padariet iepirkšanos vieglu",
-        "body": "Skenējiet ledusskapi vai čeks. KAI pārvērš esošās mantas receptēs, saskaita kalorijas un iepērkas tikai to, kas katram ēdienam vēl nepieciešams.",
+        "ratingLabel": "Jūsu veikals, receptes un kaloriju plāns—savienoti",
+        "heading": "Padariet pārtikas iepirkšanos atkal vieglu",
+        "body": "Skenējiet ledusskapi vai čeku. KAI pārvērš to, kas jau ir, receptēs, skaita kalorijas un iepērkas tikai par to, kas vēl nepieciešams katrai maltītei.",
         "primaryCtaLabel": "Runājiet ar KAI",
-        "secondaryCtaLabel": "No skenēšanas līdz receptēm",
+        "secondaryCtaLabel": "Skenējiet receptēm",
         "trustItems": [
           "Īsti produkti un cenas",
           "Pārskatiet katru izvēli",
-          "Kalorijas plānotas pēc mājsaimniecības",
+          "Kalorijas plānotas mājsaimniecībai",
           "Receptes no tā, kas jums ir"
         ],
         "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
-        "characterAlt": "KAI, jūsu pilnvērtīgā iepirkumu dvīņa personība",
+        "characterAlt": "KAI, jūsu pilna ķermeņa pārtikas Dvīņa personība",
         "chat": {
           "statusLabel": "Tiešsaistē",
-          "subtitle": "No ledusskapja līdz recepšu iepirkumu asistentam",
-          "openingMessage": "Sveiki, es esmu KAI. Parādiet man ledusskapi, pārtikas krātuvi vai nesenā čeka attēlu. Es ieteikšu receptes no jums esošajiem produktiem un nodrošināšu, ka tēriņi, kalorijas un trūkstošās sastāvdaļas būs redzamas.",
+          "subtitle": "Pārtikas asistents no ledusskapja līdz receptei",
+          "openingMessage": "Sveiki, es esmu KAI. Parādiet man ledusskapi, pieliekamo vai nesen čeku. Es ieteikšu receptes no tā, kas jums ir, un saglabāšu redzamus tēriņus, kalorijas un trūkstošās sastāvdaļas.",
           "visitorMessage": "Skenējiet manu ledusskapi un parādiet, ko es varu pagatavot šovakar.",
-          "assistantMessage": "Es pārvērtīšu esošās sastāvdaļas par receptu variantiem, parādīšu kalorijas porcijā un iepērkos tikai to, kas vēl trūkst.",
-          "inputPlaceholder": "Pieprasiet iepirkumus, recepti vai kaloriju pārbaudi…",
+          "assistantMessage": "Es pārvērtīšu to, kas jau ir, recepšu opcijās, parādīšu kalorijas porcijā un iepirkšos tikai par trūkstošajām sastāvdaļām.",
+          "inputPlaceholder": "Jautājiet par pārtiku, recepti vai kaloriju pārbaudi…",
           "suggestions": [
-            "Auzu piena akcijas",
-            "Līdzsvaro manu nedēļu",
-            "Gatavo no mana ledusskapja"
+            "Auzu piena piedāvājumi",
+            "Līdzsvarojiet manu nedēļu",
+            "Gatavojiet no mana ledusskapja"
           ],
-          "demoNote": "Ilustratīva iepirkumu, recepšu un uztura demonstrācija · Pārbaudiet sastāvdaļas un diētiskās vajadzības",
+          "demoNote": "Ilustratīva pārtikas, recepšu un uztura demonstrācija · Pārbaudiet sastāvdaļas un uztura vajadzības",
           "sampleProduct": {
-            "badge": "Atrasta akcija · Pantry+",
+            "badge": "Piedāvājums atrasts · Pieliekamais+",
             "name": "Oatly Barista Edition",
             "detail": "1 L · 590 kcal · 20% atlaide",
             "price": "€2.39",
@@ -171,24 +166,24 @@
         "restockDemo": {
           "enabled": true,
           "commandTrigger": "restock",
-          "uploadLabel": "Izvēlieties ledusskapja, pārtikas krātuves, čeka vai iepirkumu saraksta attēlu",
+          "uploadLabel": "Izvēlieties ledusskapja, pieliekamā, čeka vai iepirkumu saraksta attēlu",
           "uploadHint": "JPEG, PNG, WebP vai HEIC · līdz 6 attēliem un 10 MB katrs",
-          "analyzingLabel": "KAI lasa redzamos iepirkumus…",
-          "inventoryHeading": "Pārskatiet iegūto krājumu",
-          "inventoryBody": "Labojiet daudzumus, noņemiet kļūdas vai pievienojiet to, ko KAI palaida garām.",
+          "analyzingLabel": "KAI lasa redzamos pārtikas produktus…",
+          "inventoryHeading": "Pārskatiet iegūto inventāru",
+          "inventoryBody": "Labojiet daudzumus, noņemiet kļūdas vai pievienojiet visu, ko KAI palaida garām.",
           "itemNameLabel": "Vienums",
           "quantityLabel": "Daudzums",
           "unitLabel": "Vienība",
           "addItemLabel": "Pievienot vienumu",
           "removeItemLabel": "Noņemt",
-          "chatLabel": "Labot tērzētavā",
-          "voiceLabel": "Labot ar balsi · 5 min",
-          "reviewLabel": "Pārskatīt krājumu",
-          "editLabel": "Rediģēt krājumu",
-          "confirmationHeading": "Krājums gatavs",
-          "confirmationBody": "Pārbaudiet skenējuma aptvērumu, tad saglabājiet pārtiku un patēriņa profilu privātajā sarakstā.",
-          "signInLabel": "Ienāc un saglabā pārtiku",
-          "signInNotice": "Ieejiet, lai saglabātu pārskatīto pārtikas uzskaiti un krājumu profilu privātajā KAI vidē. Krājumu papildināšana nesākas automātiski.",
+          "chatLabel": "Labojiet tērzēšanā",
+          "voiceLabel": "Labojiet ar balsi · 5 min",
+          "reviewLabel": "Pārskatiet inventāru",
+          "editLabel": "Rediģēt inventāru",
+          "confirmationHeading": "Inventārs gatavs",
+          "confirmationBody": "KAI vēlreiz apstiprinās šo sarakstu pirms groza ieteikšanas. Nekas netiek pasūtīts bez jūsu apstiprinājuma.",
+          "signInLabel": "Pierakstieties, lai turpinātu",
+          "signInNotice": "Pierakstieties, lai pārvietotu šo pārtikas uzņemšanu privātā KAI sesijā un turpinātu papildināšanas darbplūsmu. Nekas netiek pasūtīts bez jūsu skaidra apstiprinājuma.",
           "authenticatedActionLabel": "Pievienot pārtiku",
           "savingLabel": "Saglabā pārtiku…",
           "anonymousPlanNotice": "Ieejiet, lai saglabātu pārskatītos krājumus un aprēķināto krājumu slieksni.",
@@ -199,89 +194,89 @@
           "completionEyebrow": "KRĀJUMI SAGLABĀTI",
           "completionHeading": "Pārtika pievienota sarakstam",
           "completionBody": "KAI saglabāja pārskatīto pārtiku un patēriņa profilu, tad fonā aprēķināja krājumu līmeni un nākamo papildināšanas slieksni. Papildināšana netika sākta.",
-          "expiryCopy": "Neizmantotie priekšskatījumi beidzas pēc stundas",
-          "errorCopy": "KAI nevarēja nolasīt iepirkumu sarakstu no šī attēla. Mēģiniet skaidrāku ledusskapja, pārtikas krātuves, čeka vai iepirkumu saraksta fotoattēlu."
+          "expiryCopy": "Nepieprasīti priekšskatījumi beidzas pēc vienas stundas",
+          "errorCopy": "KAI nevarēja nolasīt pārtikas sarakstu no šī attēla. Mēģiniet ar skaidrāku ledusskapja, pieliekamā, čeka vai iepirkumu saraksta fotoattēlu."
         }
       },
       "product": {
-        "kicker": "Jūsu iepirkumu + Recepšu + Kaloriju dvīnis",
-        "heading": "Ko mēs varam pagatavot, un kas vēl nepieciešams iegādāties?",
-        "body": "KAI savieno skenēšanu, receptes, produktu meklēšanu, kalorijas un grozu, lai katrs ēdiens sāktos ar to, kas jums jau ir.",
+        "kicker": "Jūsu pārtikas + recepšu + kaloriju Dvīnis",
+        "heading": "Ko mēs varam pagatavot—un kas vēl jāiepērkas?",
+        "body": "KAI savieno skenēšanu, receptes, produktu meklēšanu, kalorijas un grozu, lai katra maltīte sāktos ar to, kas jums jau ir.",
         "capabilityLabels": [
           "Produktu meklēšana",
           "Kaloriju plāns",
           "Recepšu idejas",
           "Attēls uz sarakstu",
           "Balss palīdzība",
-          "Akciju saskaņošana"
+          "Piedāvājumu saskaņošana"
         ],
         "cards": [
           {
-            "title": "Tiešsaistes grozs",
+            "title": "Tiešraides grozs",
             "body": "Salīdziniet īstus produktus, daudzumus un cenas vienā pārskatāmā grozā.",
             "metric": "Tēriņi + kalorijas kopā"
           },
           {
             "title": "Receptes no jūsu skenējuma",
-            "body": "Skatiet gatavojamas receptes, kas sarindotas pēc tā, kas jau ir ledusskapī, un kas trūkst.",
-            "metric": "Vispirms gatavo, pēc tam iepērcies"
+            "body": "Skatiet gatavās receptes, kas sakārtotas pēc tā, kas jau ir ledusskapī un kas trūkst.",
+            "metric": "Vispirms gatavojiet, pēc tam iepērcieties"
           },
           {
-            "title": "Akciju radars",
-            "body": "Salīdziniet noderīgas atbilstības, saglabājot recepšu pārklājumu un mājsaimniecības mērķus.",
-            "metric": "Īstas iepirkumu vietas"
+            "title": "Piedāvājumu radars",
+            "body": "Salīdziniet noderīgas atbilstības, saglabājot recepšu segumu un mājsaimniecības mērķus.",
+            "metric": "Īsti pārtikas avoti"
           }
         ]
       },
       "mobile": {
         "kicker": "KAI jūsu kabatā",
         "heading": "No ledusskapja līdz receptei līdz grozam,",
-        "accentHeading": "Kur vien jūs atrodaties.",
+        "accentHeading": "Lai kur jūs būtu.",
         "items": [
           {
-            "label": "Veidojiet grozu",
-            "title": "Tiešsaistes grozs ar jūsu tēriņiem un kaloriju plānu kopā.",
-            "body": "Vaicājiet par produktu, salīdziniet reālu atbilstību un vērojiet, kā cena, kalorijas un daudzums maina nedēļu."
+            "label": "Izveidojiet grozu",
+            "title": "Tiešraides grozs ar jūsu tēriņiem un kaloriju plānu kopā.",
+            "body": "Jautājiet par vienumu, salīdziniet īstu atbilstību un skatiet, kā cena, kalorijas un daudzums maina nedēļu."
           },
           {
-            "label": "Noskenēt ledusskapi",
-            "title": "Pārvērtiet ledusskapja vai čeka fotoattēlu receptēs, ko varat pagatavot.",
-            "body": "KAI atpazīst, kas ir pieejams, aprēķina kalorijas un piedāvā receptes, pirms izveidot trūkstošo sastāvdaļu sarakstu."
+            "label": "Skenējiet ledusskapi",
+            "title": "Pārvērtiet ledusskapja vai čeka fotoattēlu receptēs, kuras varat pagatavot.",
+            "body": "KAI identificē, kas ir pieejams, novērtē kalorijas un iesaka receptes pirms trūkstošo sastāvdaļu saraksta izveides."
           },
           {
             "label": "Izvēlieties recepti",
-            "title": "Izvēlieties ēdienu, tad pērciet tikai to, kas trūkst.",
-            "body": "Salīdziniet gatavošanas laiku, kalorijas uz porciju, sastāvdaļu segumu un nelielo pārtikas trūkumu katrai receptei."
+            "title": "Izvēlieties maltīti un pēc tam iegādājieties tikai to, kas trūkst.",
+            "body": "Salīdziniet gatavošanas laiku, kalorijas porcijā, sastāvdaļu segumu un nelielo pārtikas trūkumu katrai receptei."
           },
           {
             "label": "Runājiet ar KAI",
-            "title": "Pārrunājiet iepirkšanos un savu nedēļas mērķi.",
-            "body": "Pateiciet, kas beidzies vai ko vēlaties pagatavot. KAI uztur grozu, izdevumus un kaloriju bilanci kontekstā."
+            "title": "Runājiet par iepirkšanos un savu nedēļas mērķi.",
+            "body": "Pasakiet, kas beidzies vai ko vēlaties gatavot. KAI saglabā grozu, tēriņus un kaloriju trūkumu kontekstā."
           }
         ]
       },
       "features": {
-        "kicker": "Nedēļas iepirkums, pārbūvēts",
-        "heading": "Pārvaldiet pārtikas preces, receptes, izdevumus un kalorijas skaidri",
+        "kicker": "Nedēļas iepirkšanās, pārveidota",
+        "heading": "Pārvaldiet pārtiku, receptes, tēriņus un kalorijas skaidrī",
         "items": [
           {
             "number": "01",
-            "title": "Receptes, produktu un kaloriju atklāšana",
-            "body": "Noskenējiet, kas jums ir, vai aprakstiet ēdienu, ko vēlaties. KAI parāda gatavojamas receptes, kalorijas uz porciju un precīzu trūkstošo produktu sarakstu katrai opcijai.",
+            "title": "Recepšu, produktu un kaloriju atklāšana",
+            "body": "Skenējiet to, kas jums ir, vai aprakstiet vēlamo maltīti. KAI rāda gatavās receptes, kalorijas porcijā un precīzu pārtikas trūkumu katrai opcijai.",
             "tags": [
               "Ledusskapja skenēšana",
               "Receptes",
               "Kalorijas",
-              "Trūkstošie produkti"
+              "Trūkstošie vienumi"
             ],
             "accent": "purple"
           },
           {
             "number": "02",
-            "title": "Grozs, kas veidots no izvēlētajām maltītēm",
-            "body": "Izvēlieties recepti, un KAI izņem sastāvdaļas, kas jau ir mājās. Grozā nonāk tikai trūkstošie produkti, vienlaikus atjauninot izdevumus un mājsaimniecības kalorijas.",
+            "title": "Grozs, kas izveidots no jūsu izvēlētajām maltītēm",
+            "body": "Izvēlieties recepti, un KAI noņem sastāvdaļas, kas jums jau ir. Grozā iekļūst tikai trūkstošie produkti, un mājsaimniecības tēriņi un kalorijas tiek atjaunināti kopā.",
             "tags": [
-              "Receptes segums",
+              "Recepšu segums",
               "Tikai trūkstošais",
               "Nedēļas kcal"
             ],
@@ -289,8 +284,8 @@
           },
           {
             "number": "03",
-            "title": "Skenējiet vienreiz. Gatavojiet no esošā.",
-            "body": "KAI pārvērš ledusskapja, pieliekamā vai čeka skenējumu trīs praktiskās receptēs. Salīdziniet laiku un kalorijas, izvēlieties vienu, tad pārskatiet tikai trūkstošās sastāvdaļas.",
+            "title": "Skenējiet vienreiz. Gatavojiet no tā, kas ir.",
+            "body": "KAI pārvērš ledusskapja, pieliekamā vai čeka skenējumu trīs praktiskās receptēs. Salīdziniet laiku un kalorijas, izvēlieties vienu un pēc tam pārskatiet tikai tās trūkstošās sastāvdaļas.",
             "tags": [
               "3 recepšu opcijas",
               "Gatavošanas laiks",
@@ -301,62 +296,62 @@
         ]
       },
       "stories": {
-        "kicker": "Kā jūtas ēdiena gatavošana un iepirkšanās ar KAI",
-        "heading": "Mazi ledusskapja līdz vakariņām skaidrības brīži",
+        "kicker": "Kā jūtas gatavošana un iepirkšanās ar KAI",
+        "heading": "Mazi skaidrības mirkļi no ledusskapja līdz vakariņām",
         "testimonials": [
           {
-            "quote": "KAI pārvērš to, kas jau ir mūsu ledusskapī, vakariņu idejās, tad parāda izmaksas un ģimenes kalorijas pirms izvēlos.",
+            "quote": "KAI pārvērš to, kas mums jau ir ledusskapī, vakariņu idejās, pēc tam parāda izmaksas un ģimenes kalorijas, pirms es izvēlos.",
             "name": "Mila",
             "meta": "Aizņemts vecāks"
           },
           {
-            "quote": "Vaicāju par siera piedāvājumiem, salīdzinu reālās iespējas un pievienoju tieši to, ko vēlos. Bez cilpošanas pa cilnēm.",
-            "name": "Noah",
+            "quote": "Es jautāju par siera piedāvājumiem, salīdzinu īstās opcijas un pievienoju tieši to, ko vēlos. Bez cilņu lēkšanas.",
+            "name": "Noa",
             "meta": "Nedēļas pircējs"
           },
           {
-            "quote": "Čeka skenēšana manali deva trīs receptes, kalorijas uz porciju un tikai tās sastāvdaļas, kas vēl bija jāpērk.",
+            "quote": "Čeka skenēšana man deva trīs receptes, kalorijas porcijā un tikai sastāvdaļas, kas man vēl bija jāiepērkas.",
             "name": "Sofija",
             "meta": "Mājas pavārs"
           },
           {
-            "quote": "Man patīk, ka KAI vispirms izveido grozu un plānošanas jautājumus uzdod tikai tad, kad tas tiešām svarīgi.",
-            "name": "Lukass",
+            "quote": "Man patīk, ka KAI vispirms izveido grozu un uzdod plānošanas jautājumus tikai tad, kad tie ir svarīgi.",
+            "name": "Lukas",
             "meta": "Students"
           },
           {
-            "quote": "Balss ir ideāla, kad virtuvē rokas ir aizņemtas. Vienkārši saku KAI, kas beidzies.",
-            "name": "Emma",
-            "meta": "Ēdienu sagatavošanas entuziasts"
+            "quote": "Balss ir ideāla, kad manas rokas virtuvē ir aizņemtas. Es vienkārši pasaku KAI, kas beidzies.",
+            "name": "Ema",
+            "meta": "Ēdienreižu sagatavošanas cienītājs"
           },
           {
-            "quote": "Viss paliek pārskatāms. Varu mainīt daudzumus un redzēt, kā līdz ar mani mainās gan izdevumi, gan kopējais kaloriju daudzums.",
+            "quote": "Viss paliek pārskatāms. Es varu mainīt daudzumus un redzēt, kā tēriņi un kaloriju kopsumā kustās līdz ar mani.",
             "name": "Dāns",
-            "meta": "Gudrais pircējs"
+            "meta": "Gudrs pircējs"
           }
         ],
         "articles": [
           {
             "category": "Nedēļas rutīna",
-            "title": "Septiņu minūšu iepirkums un ēdienu plāns",
-            "body": "Viens pircējs no nesakārtota pamatproduktu saraksta izveidoja grozu, trīs gatavojamas vakariņas un 10 850 plānotās kalorijas."
+            "title": "Septiņu minūšu iepirkšanās un ēdienreižu plāns",
+            "body": "Vientulis pircējs pārvērta izkliedētu pamatproduktu sarakstu grozā, trīs gatavām vakariņām un 10 850 plānotām kalorijām."
           },
           {
             "category": "No ledusskapja līdz receptei",
-            "title": "No ledusskapja foto līdz šī vakara vakariņām",
-            "body": "KAI atpazina sastāvdaļas, ieteica trīs receptes un atdalīja to, kas jau bija mājās, no tā, kas vēl jāpērk."
+            "title": "No ledusskapja fotoattēla līdz šovakara vakariņām",
+            "body": "KAI atpazina sastāvdaļas, ieteicāja trīs receptes un atdaļīja to, kas jau bija, no tā, kas vēl bija jāiepērkas."
           },
           {
-            "category": "Gudrā recepšu meklēšana",
-            "title": "Gudrā meklēšana, kas redz visu nedēļu",
-            "body": "Meklēšana, kas ņēma vērā cenu, kalorijas, recepšu segumu un proteīna trūkumu, nepazaudējot iepirkuma pavedienu."
+            "category": "Gudra recepšu meklēšana",
+            "title": "Gudra meklēšana, kas redz visu nedēļu",
+            "body": "Meklēšana izsvēra cenu, kalorijas, recepšu segumu un olbaltumvielu trūkumu, nezaudot iepirkšanās pavedienu."
           }
         ]
       },
       "about": {
-        "kicker": "Viena vieta, daudzi ieejas veidi",
-        "heading": "Katrs ievads kļūst par receptēm, vienu grozu un vienu kaloriju plānu",
-        "body": "Fotoattēls, balss ziņa, čeks vai saraksts baro vienu un to pašu skatu apakšā: pieejamās sastāvdaļas, gatavojamās receptes, trūkstošie produkti, nedēļas izdevumi un mājsaimniecības kalorijas.",
+        "kicker": "Viena vieta, daudz veidi, kā ieiet",
+        "heading": "Katrs ievade kļūst par receptēm, vienu grozu un vienu kaloriju plānu",
+        "body": "Foto, balss piezīme, čeks vai saraksts baro to pašu skatu zem: pieejamās sastāvdaļas, receptes, ko varat gatavot, trūkstošie produkti, nedēļas tēriņi un mājsaimniecības kalorijas.",
         "capabilities": [
           "Foto",
           "Balss",
@@ -371,22 +366,22 @@
       },
       "closing": {
         "kicker": "Jūsu nākamais plāns no ledusskapja līdz vakariņām",
-        "heading": "Sāciet ar to, kas jums ir. Pērciet tikai to, kas trūkst.",
-        "body": "Noskenējiet ledusskapi vai čeku. KAI piedāvā gatavojamas receptes, parāda kalorijas uz porciju un pārvērš trūkstošās sastāvdaļas grozā, ko varat pārskatīt.",
+        "heading": "Sāciet ar to, kas jums ir. Iepērcieties tikai to, kas trūkst.",
+        "body": "Skenējiet ledusskapi vai čeku. KAI iesaka gatavās receptes, rāda kalorijas porcijā un pārvērš trūkstošās sastāvdaļas pārskatāmā grozā.",
         "ctaLabel": "Skenējiet, lai atrastu receptes"
       },
       "footer": {
-        "tagline": "Jūsu ledusskapja–groza Grocery Twin. Atrodiet receptes no tā, kas jums ir, skatiet kalorijas un pērciet tikai to, kas trūkst.",
+        "tagline": "Jūsu pārtikas Dvīnis no ledusskapja līdz grozam. Atrodiet receptes no tā, kas jums ir, redziet kalorijas un iepērcieties tikai par to, kas trūkst.",
         "groups": [
           {
             "label": "Produkts",
             "links": [
               {
-                "label": "Pārtikas demo",
+                "label": "Pārtikas demonstrācija",
                 "target": "product"
               },
               {
-                "label": "Kā tas darbojas",
+                "label": "Kā tas strādā",
                 "target": "features"
               },
               {
@@ -403,7 +398,7 @@
                 "target": "about"
               },
               {
-                "label": "Kontakti",
+                "label": "Kontakts",
                 "target": "contact"
               },
               {
@@ -413,8 +408,8 @@
             ]
           }
         ],
-        "copyright": "© 2026 KAI · Grocery Twin",
-        "closingStatement": "Gudras izvēles. Lieliska nedēļa."
+        "copyright": "© 2026 KAI · Pārtikas Dvīnis",
+        "closingStatement": "Labas izvēles. Lieliska nedēļa."
       },
       "homeRoiCalculator": {
         "methodologyVersion": 2,
@@ -1293,7 +1288,7 @@
         "landingPage",
         "badge"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1484,7 +1479,7 @@
         "header",
         "primaryCtaLabel"
       ],
-      "sourceHash": "f6f2913c3ee65c4e5fa410960649ae928ee8a5cd7f384972c7275007686b7ac2"
+      "sourceHash": "ab23cde5c8e7eb47ed87cea252cff38249f120f377190c482f92ae0cf70f715d"
     },
     {
       "path": [
@@ -1493,7 +1488,7 @@
         "hero",
         "ratingLabel"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1885,7 +1880,7 @@
         "restockDemo",
         "confirmationBody"
       ],
-      "sourceHash": "3855bc93caa2a8d399d9cee5cc6e725b20d5e76226eece00ca411c62e98a124a"
+      "sourceHash": "52d9f9ef8483c24c7185a727bf2211244f85030367da02ddf14eb5d6e6011ba0"
     },
     {
       "path": [
@@ -1895,7 +1890,7 @@
         "restockDemo",
         "signInLabel"
       ],
-      "sourceHash": "5e4e68bf849048cc43d66bb27eb09dc5d3a299b8e31b9b887643f594b40e1213"
+      "sourceHash": "607a80121c655651dc14cbb057e035943bed91077283e9c6b8d709db1e25ef7f"
     },
     {
       "path": [
@@ -1905,7 +1900,7 @@
         "restockDemo",
         "signInNotice"
       ],
-      "sourceHash": "7ede1f8e3651004f8425e6cd270825174d06112032e615b98f44f4685533c0a4"
+      "sourceHash": "7ee6641bab06f804b91bb13e538d9da870890f703c1d8fa24098515f5129a011"
     },
     {
       "path": [
@@ -2043,7 +2038,7 @@
         "product",
         "heading"
       ],
-      "sourceHash": "c172cd2a53e02e6d2763843e2a4f04c33b97f43ddaa3d1af868a01a8d445d7e1"
+      "sourceHash": "989cacb42de5017d3d7942afe20d93c7d79c5617f70de63c4dbb7a4f1174baf2"
     },
     {
       "path": [
@@ -6543,6 +6538,42 @@
         "landingPage",
         "roiCalculator",
         "currencyCopy",
+        "native"
+      ],
+      "sourceHash": "cd2604270cd9656f4abdccbee7bf11038b88a1ae5a8657f9933a807fdcdff8bf"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "loading"
+      ],
+      "sourceHash": "efc980d9dce429c644a6dce658df91cdacbff328ea38504d8ce80bfe9b76b32d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "unavailable"
+      ],
+      "sourceHash": "b01a152edb76137a0a16fe29cc942fa282d98fbdc4123b830397f9fde7f85095"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "converted"
+      ],
+      "sourceHash": "450c38574200c1402496596e9f8177d31fd0e64cf58d9468c350eb3ba2c60d10"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
         "basis"
       ],
       "sourceHash": "17cc8491fcdfe8ddd4f8dec6a3859229ecacffb562b383e1283f1c0be0019806"
@@ -7914,5 +7945,5 @@
       "sourceHash": "6e5fe4ca7c07142fa81eef400c342dea7f8ba0422aa331c3880e6604db8d52a7"
     }
   ],
-  "generatedAt": "2026-10-13T14:19:34.015Z"
+  "generatedAt": "2026-09-01T19:15:50.031Z"
 }

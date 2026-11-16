@@ -2,13 +2,8 @@
   "schemaVersion": 2,
   "language": "da",
   "regionKey": null,
-  "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
+  "sourceRevision": "e109add0e4fe301964f8a19341549a6101f0e29e2c6783073414963417b1e42b",
   "landingPage": {
-    "capabilityPreview": {
-      "enabled": true,
-      "commandId": "restock",
-      "presentation": "surface"
-    },
     "design": {
       "variant": "grocery-twin",
       "defaultThemeMode": "light",
@@ -57,14 +52,14 @@
     },
     "header": {
       "brandMark": "image",
-      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "logoImageUrl": "https://gabrieloperator.com/assets/gabriel-twins/brand-marks/kai.webp",
       "navItems": [
         {
           "label": "Produkt",
           "target": "product"
         },
         {
-          "label": "Mobil",
+          "label": "mobil",
           "target": "mobile"
         },
         {
@@ -80,41 +75,41 @@
           "target": "about"
         }
       ],
-      "ctaLabel": "Mød KAI"
+      "ctaLabel": "Mød Kai"
     },
-    "badge": "Din butik, opskrifter og kalorieplan, forbundet",
+    "badge": "Din butik, opskrifter og kalorieplan – forbundet",
     "headline": "Gør indkøb til en let oplevelse igen",
     "headlineAccent": "Gør indkøb til en let oplevelse igen",
-    "subheadline": "Scan køleskabet eller en kvittering. KAI laver det, du allerede har, til opskrifter, tæller kalorierne og køber kun det, hvert måltid stadig mangler.",
-    "ctaLabel": "Tal med KAI",
+    "subheadline": "Scan køleskabet eller en kvittering. Kai forvandler det, der allerede er der, til opskrifter, tæller kalorierne og handler kun for, hvad hvert måltid stadig har brug for.",
+    "ctaLabel": "Tal med Kai",
     "secondaryCtaLabel": "Scan til opskrifter",
     "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
     "featureTags": [
-      "Rigti ge produkter og priser",
+      "Rigtige produkter og priser",
       "Gennemgå hvert valg",
-      "Kalorier planlagt pr. husstand",
-      "Opskrifter ud fra det, du har"
+      "Kalorier planlagt af husstanden",
+      "opskrifter fra hvad du har"
     ],
     "seoImage": {
       "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
-      "alt": "KAI, din Grocery Twin, i et solbeskinnet køkken omgivet af friske råvarer og en ugentlig madplan"
+      "alt": "Kai, din købmands-tvilling, i et solbelyst køkken omgivet af friske råvarer og en ugentlig madplan"
     },
     "contact": {
-      "heading": "Start med det, du har",
-      "body": "Scan køleskabet eller en kvittering, og lad KAI klargøre indkøbsbehovene til gennemsyn."
+      "heading": "Start med det du har",
+      "body": "Scan køleskabet eller en kvittering, og lad Kai forberede købmandshullerne til gennemgang."
     },
     "groceryTwin": {
       "header": {
         "editionLabel": "Hjem",
-        "subtitle": "Din Grocery Twin",
-        "secondaryEditionLabel": "Detail",
+        "subtitle": "Din købmand tvilling",
+        "secondaryEditionLabel": "Detailhandel",
         "navItems": [
           {
             "label": "Produkt",
             "target": "product"
           },
           {
-            "label": "Mobil",
+            "label": "mobil",
             "target": "mobile"
           },
           {
@@ -130,65 +125,65 @@
             "target": "about"
           }
         ],
-        "secondaryCtaLabel": "Mød KAI",
-        "primaryCtaLabel": "Mød KAI"
+        "secondaryCtaLabel": "Mød Kai",
+        "primaryCtaLabel": "Start en vogn"
       },
       "hero": {
-        "ratingLabel": "Din butik, opskrifter og kalorieplan, forbundet",
-        "heading": "Gør indkøb til en let oplevelse igen",
-        "body": "Scan køleskabet eller en kvittering. KAI laver det, du allerede har, til opskrifter, tæller kalorierne og køber kun det, hvert måltid stadig mangler.",
-        "primaryCtaLabel": "Tal med KAI",
+        "ratingLabel": "Din butik, opskrifter og kalorieplan – forbundet",
+        "heading": "Få dagligvareindkøb til at føles let igen",
+        "body": "Scan køleskabet eller en kvittering. Kai forvandler det, der allerede er der, til opskrifter, tæller kalorierne og handler kun for, hvad hvert måltid stadig har brug for.",
+        "primaryCtaLabel": "Tal med Kai",
         "secondaryCtaLabel": "Scan til opskrifter",
         "trustItems": [
-          "Rigti ge produkter og priser",
+          "Rigtige produkter og priser",
           "Gennemgå hvert valg",
-          "Kalorier planlagt pr. husstand",
-          "Opskrifter ud fra det, du har"
+          "Kalorier planlagt af husstanden",
+          "opskrifter fra hvad du har"
         ],
         "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
-        "characterAlt": "KAI, din fuldkrops-Grocery Twin-persona",
+        "characterAlt": "Kai, din helkropskøbmands-tvillingpersona",
         "chat": {
-          "statusLabel": "Online",
-          "subtitle": "Køleskab-til-opskrift indkøbsassistent",
-          "openingMessage": "Hej, jeg er KAI. Vis mig køleskabet, spisekammeret eller en nylig kvittering. Jeg foreslår opskrifter ud fra det, du har, og holder forbrug, kalorier og manglende ingredienser synlige.",
+          "statusLabel": "online",
+          "subtitle": "Køleskab-til-opskrift købmandsassistent",
+          "openingMessage": "Hej, jeg er Kai. Vis mig køleskabet, spisekammeret eller en nylig kvittering. Jeg vil foreslå opskrifter fra det, du har, og holde forbruget, kalorierne og manglende ingredienser synlige.",
           "visitorMessage": "Scan mit køleskab og vis, hvad jeg kan lave i aften.",
-          "assistantMessage": "Jeg laver det, der allerede er der, til opskriftsforslag, viser kalorier pr. portion og køber kun de ingredienser, der stadig mangler.",
-          "inputPlaceholder": "Spørg om indkøb, en opskrift eller et kalorietjek…",
+          "assistantMessage": "Jeg vil omdanne det, der allerede er der, til opskriftsmuligheder, vise kalorier pr. portion og kun shoppe for de ingredienser, der stadig mangler.",
+          "inputPlaceholder": "Spørg efter dagligvarer, en opskrift eller et kalorietjek...",
           "suggestions": [
-            "Havremælk-tilbud",
-            "Balanceer min uge",
-            "Lav mad fra mit køleskab"
+            "Havremælk tilbud",
+            "balancere min uge",
+            "lave mad fra mit køleskab"
           ],
-          "demoNote": "Illustrativ demo af indkøb, opskrift og ernæring · Tjek ingredienser og kostbehov",
+          "demoNote": "Illustrative købmands-, opskrifts- og ernæringsdemoer · Tjek ingredienser og kostbehov",
           "sampleProduct": {
-            "badge": "Tilbud fundet · Pantry+",
+            "badge": "Deal fundet · Pantry+",
             "name": "Oatly Barista Edition",
             "detail": "1 L · 590 kcal · 20% rabat",
-            "price": "€2,39",
+            "price": "2,39 €",
             "actionLabel": "Try /restock"
           }
         },
         "restockDemo": {
           "enabled": true,
           "commandTrigger": "restock",
-          "uploadLabel": "Vælg et billede af køleskab, spisekammer, kvittering eller indkøbsliste",
+          "uploadLabel": "Vælg et køleskabs-, spisekammer-, kvitterings- eller indkøbslistebillede",
           "uploadHint": "JPEG, PNG, WebP eller HEIC · op til 6 billeder og 10 MB hver",
-          "analyzingLabel": "KAI læser de synlige varer…",
-          "inventoryHeading": "Gennemgå den fundne beholdning",
-          "inventoryBody": "Ret mængder, fjern fejl, eller tilføj noget, KAI overså.",
-          "itemNameLabel": "Vare",
-          "quantityLabel": "Mængde",
+          "analyzingLabel": "Kai læser de synlige dagligvarer...",
+          "inventoryHeading": "gennemgå den udtrukne beholdning",
+          "inventoryBody": "Ret mængder, fjern fejl, eller tilføj noget, Kai gik glip af.",
+          "itemNameLabel": "Punkt",
+          "quantityLabel": "Kvantitet",
           "unitLabel": "Enhed",
           "addItemLabel": "Tilføj vare",
-          "removeItemLabel": "Fjern",
-          "chatLabel": "Ret via chat",
-          "voiceLabel": "Ret via stemme · 5 min",
-          "reviewLabel": "Gennemgå beholdning",
+          "removeItemLabel": "Fjerne",
+          "chatLabel": "Ret ved chat",
+          "voiceLabel": "Korrekt med stemme · 5 min",
+          "reviewLabel": "Gennemgå beholdningen",
           "editLabel": "Rediger beholdning",
-          "confirmationHeading": "Beholdning klar",
-          "confirmationBody": "Tjek scanningens dækning, og gem dagligvarerne og forbrugsprofilen på din private liste.",
-          "signInLabel": "Log ind og gem dagligvarer",
-          "signInNotice": "Log ind og gem de gennemgåede dagligvarer og lagerprofilen i dit private KAI-område. Ingen genopfyldning starter automatisk.",
+          "confirmationHeading": "inventar klar",
+          "confirmationBody": "Kai vil genbekræfte denne liste, før han foreslår en vogn. Intet er bestilt uden din godkendelse.",
+          "signInLabel": "Log ind for at fortsætte",
+          "signInNotice": "Log ind for at flytte denne dagligvarefangst ind i en privat KAI-session og fortsæt genopbygningsarbejdsgangen. Intet er bestilt uden din udtrykkelige godkendelse.",
           "authenticatedActionLabel": "Føj madvarer til listen",
           "savingLabel": "Gemmer dagligvarer…",
           "anonymousPlanNotice": "Log ind og gem den gennemgåede beholdning og dens beregnede lagergrænse.",
@@ -199,77 +194,77 @@
           "completionEyebrow": "BEHOLDNING GEMT",
           "completionHeading": "Dagligvarer føjet til din liste",
           "completionBody": "KAI gemte de gennemgåede dagligvarer og forbrugsprofilen og beregnede beholdning og næste genopfyldningsgrænse i baggrunden. Ingen genopfyldning blev startet.",
-          "expiryCopy": "Ikke-krævede forhåndsvisninger udløber efter en time",
-          "errorCopy": "KAI kunne ikke læse en indkøbsliste fra det billede. Prøv et tydeligere billede af køleskab, spisekammer, kvittering eller indkøbsliste."
+          "expiryCopy": "Uafhentede forhåndsvisninger udløber efter en time",
+          "errorCopy": "Kai kunne ikke læse en indkøbsliste fra det billede. Prøv et klarere køleskab, spisekammer, kvittering eller fotoliste."
         }
       },
       "product": {
-        "kicker": "Din Grocery + Opskrift + Kalorie-Twin",
-        "heading": "Hvad kan vi lave, og hvad skal der stadig købes?",
-        "body": "KAI forbinder scanning, opskrifter, produktsøgning, kalorier og kurv, så ethvert måltid starter med det, du allerede har.",
+        "kicker": "Din købmand + opskrift + kalorie tvilling",
+        "heading": "Hvad kan vi lave mad - og hvad skal der stadig til indkøb?",
+        "body": "Kai forbinder scanningen, opskrifter, produktsøgning, kalorier og indkøbskurv, så hvert måltid starter med det, du allerede har.",
         "capabilityLabels": [
           "Produktsøgning",
           "Kalorieplan",
-          "Opskriftsidéer",
-          "Billede til liste",
-          "Stemmehjælp",
-          "Tilbudsmatchning"
+          "Idéer til opskrifter",
+          "billede til liste",
+          "stemmehjælp",
+          "Deal matching"
         ],
         "cards": [
           {
-            "title": "Live kurv",
-            "body": "Sammenlign rigtige produkter, mængder og priser i én kurv, der kan gennemgås.",
-            "metric": "Forbrug + kalorier samlet"
+            "title": "levende vogn",
+            "body": "Sammenlign rigtige produkter, mængder og priser i én anmeldelsesbar vogn.",
+            "metric": "bruge + kalorier sammen"
           },
           {
             "title": "Opskrifter fra din scanning",
-            "body": "Se tilgængelige opskrifter rangeret efter, hvad der allerede er i køleskabet, og hvad der mangler.",
-            "metric": "Lav mad først, køb bagefter"
+            "body": "Se kogbare opskrifter rangeret efter, hvad der allerede er i køleskabet, og hvad der mangler.",
+            "metric": "Lav mad først, shop derefter"
           },
           {
-            "title": "Tilbudsradar",
-            "body": "Sammenlign nyttige matches, mens opskriftsdækning og husstandsmål bevares.",
-            "metric": "Rigtige indkøbskilder"
+            "title": "Deal radar",
+            "body": "Sammenlign nyttige kampe, mens du bevarer opskriftsdækning og husstandsmål.",
+            "metric": "Rigtige dagligvarekilder"
           }
         ]
       },
       "mobile": {
-        "kicker": "KAI i lommen",
-        "heading": "Fra køleskab til opskrift til kurv,",
+        "kicker": "Kai i lommen",
+        "heading": "fra køleskab til opskrift til indkøbskurv,",
         "accentHeading": "hvor end du er.",
         "items": [
           {
-            "label": "Byg en kurv",
-            "title": "En live kurv med dit forbrug og kalorieplan samlet.",
-            "body": "Bed om en vare, sammenlign et reelt match, og se hvordan pris, kalorier og mængde ændrer ugen."
+            "label": "Byg en vogn",
+            "title": "En levende vogn med din forbrugs- og kalorieplan sammen.",
+            "body": "Bed om en vare, sammenlign et rigtigt match, og se, hvordan pris, kalorier og mængde ændrer ugen."
           },
           {
             "label": "Scan køleskabet",
-            "title": "Forvandl et foto af køleskabet eller en kvittering til opskrifter, du kan lave.",
-            "body": "KAI identificerer, hvad der er på hånden, beregner kalorierne og foreslår opskrifter, før den bygger listen over manglende ingredienser."
+            "title": "Gør et køleskab eller et kvitteringsbillede til opskrifter, du kan lave.",
+            "body": "Kai identificerer, hvad der er ved hånden, estimerer kalorierne og foreslår opskrifter, før du bygger listen over manglende ingredienser."
           },
           {
             "label": "Vælg en opskrift",
-            "title": "Vælg et måltid, og køb kun det, der mangler.",
-            "body": "Sammenlign tilberedningstid, kalorier pr. portion, ingrediensdækning og det lille indkøbsefterslæb for hver opskrift."
+            "title": "Vælg et måltid, og køb derefter kun det, der mangler.",
+            "body": "Sammenlign tilberedningstid, kalorier pr. portion, ingrediensdækning og det lille købmandsgab for hver opskrift."
           },
           {
-            "label": "Tal med KAI",
-            "title": "Tal om indkøbet og dit ugentlige mål.",
-            "body": "Fortæl, hvad der slap op, eller hvad du vil lave. KAI holder kurv, forbrug og kaloriegab i kontekst."
+            "label": "Tal med Kai",
+            "title": "Tal gennem butikken og dit ugentlige mål.",
+            "body": "Sig, hvad der løb tør, eller hvad du vil lave mad. Kai holder vogn-, forbrugs- og kaloriegabet i sammenhæng."
           }
         ]
       },
       "features": {
-        "kicker": "Det ugentlige indkøb, genopbygget",
-        "heading": "Håndtér dagligvarer, opskrifter, forbrug og kalorier med overblik",
+        "kicker": "den ugentlige butik, genopbygget",
+        "heading": "Administrer dagligvarer, opskrifter, forbrug og kalorier med klarhed",
         "items": [
           {
             "number": "01",
-            "title": "Opskrift-, produkt- og kaloriemøde",
-            "body": "Scan det, du har, eller beskriv måltidet, du vil have. KAI viser tilberedelige opskrifter, kalorier pr. portion og det præcise indkøbsefterslæb for hver mulighed.",
+            "title": "Opskrift, produkt og kalorieopdagelse",
+            "body": "Scan det, du har, eller beskriv det måltid, du ønsker. Kai viser kogbare opskrifter, kalorier pr. portion og det nøjagtige købmandsgab for hver mulighed.",
             "tags": [
-              "Køleskabsscan",
+              "køleskabsscanning",
               "Opskrifter",
               "Kalorier",
               "Manglende varer"
@@ -278,90 +273,90 @@
           },
           {
             "number": "02",
-            "title": "En kurv bygget ud fra de måltider, du vælger",
-            "body": "Vælg en opskrift, så fjerner KAI ingredienser, der allerede er på hånden. Kun de manglende produkter lægges i kurven, mens forbrug og husstandens kalorier opdateres samtidig.",
+            "title": "En vogn bygget ud fra de måltider, du vælger",
+            "body": "Vælg en opskrift, og Kai fjerner ingredienser, der allerede er ved hånden. Kun de manglende produkter kommer ind i indkøbskurven, med forbrugs- og husholdningskalorier opdateret sammen.",
             "tags": [
               "Opskriftsdækning",
-              "Kun manglende",
-              "Ugentlige kcal"
+              "mangler kun",
+              "Ugentlig kcal"
             ],
             "accent": "blue"
           },
           {
             "number": "03",
-            "title": "Scan én gang. Lav mad ud fra det, der er der.",
-            "body": "KAI forvandler et scan af køleskab, pantry eller kvittering til tre praktiske opskrifter. Sammenlign tid og kalorier, vælg én, og gennemgå kun dens manglende ingredienser.",
+            "title": "scan én gang. lave mad fra det, der er der.",
+            "body": "Kai forvandler et køleskab, spisekammer eller kvitteringsscanning til tre praktiske opskrifter. Sammenlign tid og kalorier, vælg en, og gennemgå derefter kun dens manglende ingredienser.",
             "tags": [
-              "3 opskriftsmuligheder",
+              "3 Opskriftsmuligheder",
               "Tilberedningstid",
-              "Kalorier / portion"
+              "Kalorier / servering"
             ],
             "accent": "lime"
           }
         ]
       },
       "stories": {
-        "kicker": "Sådan føles det at lave mad og handle med KAI",
-        "heading": "Små øjeblikke med køleskab-til-aften-overblik",
+        "kicker": "Hvordan det føles at lave mad og shoppe med Kai",
+        "heading": "Små øjeblikke af klarhed i køleskabet til middagen",
         "testimonials": [
           {
-            "quote": "KAI forvandler det, der allerede er i vores køleskab, til middagsidéer og viser prisen og familiens kalorier, før jeg vælger.",
+            "quote": "Kai forvandler det, der allerede er i vores køleskab, til middagsideer, og viser derefter omkostningerne og familiens kalorier, før jeg vælger.",
             "name": "Mila",
-            "meta": "Travl forælder"
+            "meta": "travl forælder"
           },
           {
-            "quote": "Jeg spørger efter ostetilbud, sammenligner de reelle muligheder og tilføjer præcis den, jeg vil have. Ingen fanehop.",
+            "quote": "Jeg beder om ostetilbud, sammenligner de reelle muligheder og tilføjer præcis den, jeg ønsker. Ingen fanehop.",
             "name": "Noah",
             "meta": "Ugentlig shopper"
           },
           {
-            "quote": "Kvitteringsscanningen gav mig tre opskrifter, kalorier pr. portion og kun de ingredienser, jeg stadig manglede at købe.",
+            "quote": "Kvitteringsscanningen gav mig tre opskrifter, kalorierne pr. portion og kun de ingredienser, jeg stadig manglede at købe.",
             "name": "Sofia",
-            "meta": "Hjemmekok"
+            "meta": "hjemmekok"
           },
           {
-            "quote": "Jeg kan godt lide, at KAI først bygger kurven og kun stiller planlægningsspørgsmålene, når det er relevant.",
+            "quote": "Jeg kan godt lide, at Kai bygger vognen først og stiller planlægningsspørgsmålene, når de betyder noget.",
             "name": "Lucas",
             "meta": "Studerende"
           },
           {
-            "quote": "Stemme er perfekt, når mine hænder er fulde i køkkenet. Jeg fortæller bare KAI, hvad der slap op.",
+            "quote": "Stemmen er perfekt, når mine hænder er fulde i køkkenet. Jeg fortæller bare Kai, hvad der løb tør.",
             "name": "Emma",
-            "meta": "Måltidsforberedelsesfan"
+            "meta": "Forberedelse af måltider"
           },
           {
-            "quote": "Alt forbliver gennemgåeligt. Jeg kan ændre mængder og se både forbrug og det samlede kalorietal bevæge sig med mig.",
-            "name": "Daan",
+            "quote": "Alt forbliver gennemgående. Jeg kan ændre mængder og se både forbruget og det samlede kalorieindhold flytte med mig.",
+            "name": "daan",
             "meta": "Smart shopper"
           }
         ],
         "articles": [
           {
             "category": "Ugentlig rutine",
-            "title": "Det syv minutters indkøb og madplan",
-            "body": "En enlig shopper forvandlede en spredt basisindkøbsliste til en kurv, tre tilberedelige middagsretter og 10.850 planlagte kalorier."
+            "title": "den syv minutter lange butik og madplan",
+            "body": "En solo-shopper forvandlede en spredt hæfteklammerliste til en vogn, tre madlavningsmiddage og 10.850 planlagte kalorier."
           },
           {
             "category": "Køleskab til opskrift",
-            "title": "Fra køleskabsfoto til aftenens middag",
-            "body": "KAI genkendte ingredienserne, foreslog tre opskrifter og adskilte det, der allerede var der, fra det, der stadig manglede at købes."
+            "title": "Fra køleskabsbillede til aftenens middag",
+            "body": "Kai genkendte ingredienserne, foreslog tre opskrifter og adskilte det, der allerede var der, fra det, der stadig skulle købes."
           },
           {
             "category": "Smart opskriftssøgning",
-            "title": "Smart søgning, der ser hele ugen",
-            "body": "En søgning, der afvejede pris, kalorier, opskriftsdækning og et proteingab uden at miste tråden i indkøbet."
+            "title": "smart søgning, der ser hele ugen",
+            "body": "En søgning vejede pris, kalorier, opskriftsdækning og et proteingab uden at miste tråden i butikken."
           }
         ]
       },
       "about": {
-        "kicker": "Ét sted, mange indgange",
-        "heading": "Hver input bliver til opskrifter, én kurv og én kalorieplan",
-        "body": "Et foto, stemmenote, kvittering eller liste fylder det samme underliggende overblik: ingredienser på hånden, opskrifter du kan lave, produkter der stadig mangler, ugentligt forbrug og husstandens kalorier.",
+        "kicker": "ét sted, mange veje ind",
+        "heading": "Hvert input bliver til opskrifter, én vogn og én kalorieplan",
+        "body": "Et foto, en stemmenote, en kvittering eller en liste fodrer den samme visning nedenunder: ingredienser ved hånden, opskrifter, du kan lave, produkter, der stadig mangler, ugentligt forbrug og husholdningskalorier.",
         "capabilities": [
           "Foto",
           "Stemme",
-          "Tilbud",
-          "Kvittering",
+          "tilbud",
+          "Modtagelse",
           "Liste",
           "Levering",
           "Kalorier",
@@ -370,19 +365,19 @@
         ]
       },
       "closing": {
-        "kicker": "Din næste køleskab-til-middag-plan",
-        "heading": "Start med det, du har. Køb kun det, der mangler.",
-        "body": "Scan køleskabet eller en kvittering. KAI foreslår tilberedelige opskrifter, viser kalorier pr. portion og gør de manglende ingredienser til en kurv, du kan gennemgå.",
+        "kicker": "Din næste plan for køleskab til middag",
+        "heading": "Start med det du har. Køb kun det, der mangler.",
+        "body": "Scan køleskabet eller en kvittering. Kai foreslår madlavningsopskrifter, viser kalorier pr. portion og forvandler de manglende ingredienser til en vogn, du kan anmelde.",
         "ctaLabel": "Scan for at finde opskrifter"
       },
       "footer": {
-        "tagline": "Din køleskab-til-kurv Grocery Twin. Find opskrifter ud fra det, du har, se kalorier, og køb kun det, der mangler.",
+        "tagline": "Din køleskab-til-vogn købmand tvilling. Find opskrifter fra det, du har, se kalorier, og shop kun for det, der mangler.",
         "groups": [
           {
             "label": "Produkt",
             "links": [
               {
-                "label": "Dagligvaredemo",
+                "label": "Købmandsdemo",
                 "target": "product"
               },
               {
@@ -396,10 +391,10 @@
             ]
           },
           {
-            "label": "KAI",
+            "label": "kai",
             "links": [
               {
-                "label": "Om KAI",
+                "label": "Om Kai",
                 "target": "about"
               },
               {
@@ -413,8 +408,8 @@
             ]
           }
         ],
-        "copyright": "© 2026 KAI · Grocery Twin",
-        "closingStatement": "Gode valg. God uge."
+        "copyright": "© 2026 Kai · Købmands-tvilling",
+        "closingStatement": "gode valg. Fantastisk uge."
       },
       "homeRoiCalculator": {
         "methodologyVersion": 2,
@@ -1293,7 +1288,7 @@
         "landingPage",
         "badge"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1484,7 +1479,7 @@
         "header",
         "primaryCtaLabel"
       ],
-      "sourceHash": "f6f2913c3ee65c4e5fa410960649ae928ee8a5cd7f384972c7275007686b7ac2"
+      "sourceHash": "ab23cde5c8e7eb47ed87cea252cff38249f120f377190c482f92ae0cf70f715d"
     },
     {
       "path": [
@@ -1493,7 +1488,7 @@
         "hero",
         "ratingLabel"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1885,7 +1880,7 @@
         "restockDemo",
         "confirmationBody"
       ],
-      "sourceHash": "3855bc93caa2a8d399d9cee5cc6e725b20d5e76226eece00ca411c62e98a124a"
+      "sourceHash": "52d9f9ef8483c24c7185a727bf2211244f85030367da02ddf14eb5d6e6011ba0"
     },
     {
       "path": [
@@ -1895,7 +1890,7 @@
         "restockDemo",
         "signInLabel"
       ],
-      "sourceHash": "5e4e68bf849048cc43d66bb27eb09dc5d3a299b8e31b9b887643f594b40e1213"
+      "sourceHash": "607a80121c655651dc14cbb057e035943bed91077283e9c6b8d709db1e25ef7f"
     },
     {
       "path": [
@@ -1905,7 +1900,7 @@
         "restockDemo",
         "signInNotice"
       ],
-      "sourceHash": "7ede1f8e3651004f8425e6cd270825174d06112032e615b98f44f4685533c0a4"
+      "sourceHash": "7ee6641bab06f804b91bb13e538d9da870890f703c1d8fa24098515f5129a011"
     },
     {
       "path": [
@@ -2043,7 +2038,7 @@
         "product",
         "heading"
       ],
-      "sourceHash": "c172cd2a53e02e6d2763843e2a4f04c33b97f43ddaa3d1af868a01a8d445d7e1"
+      "sourceHash": "989cacb42de5017d3d7942afe20d93c7d79c5617f70de63c4dbb7a4f1174baf2"
     },
     {
       "path": [
@@ -6543,6 +6538,42 @@
         "landingPage",
         "roiCalculator",
         "currencyCopy",
+        "native"
+      ],
+      "sourceHash": "cd2604270cd9656f4abdccbee7bf11038b88a1ae5a8657f9933a807fdcdff8bf"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "loading"
+      ],
+      "sourceHash": "efc980d9dce429c644a6dce658df91cdacbff328ea38504d8ce80bfe9b76b32d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "unavailable"
+      ],
+      "sourceHash": "b01a152edb76137a0a16fe29cc942fa282d98fbdc4123b830397f9fde7f85095"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "converted"
+      ],
+      "sourceHash": "450c38574200c1402496596e9f8177d31fd0e64cf58d9468c350eb3ba2c60d10"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
         "basis"
       ],
       "sourceHash": "17cc8491fcdfe8ddd4f8dec6a3859229ecacffb562b383e1283f1c0be0019806"
@@ -7914,5 +7945,5 @@
       "sourceHash": "6e5fe4ca7c07142fa81eef400c342dea7f8ba0422aa331c3880e6604db8d52a7"
     }
   ],
-  "generatedAt": "2026-10-13T14:19:34.015Z"
+  "generatedAt": "2026-09-01T19:15:50.031Z"
 }

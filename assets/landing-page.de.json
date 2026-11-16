@@ -2,13 +2,8 @@
   "schemaVersion": 2,
   "language": "de",
   "regionKey": null,
-  "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
+  "sourceRevision": "e109add0e4fe301964f8a19341549a6101f0e29e2c6783073414963417b1e42b",
   "landingPage": {
-    "capabilityPreview": {
-      "enabled": true,
-      "commandId": "restock",
-      "presentation": "surface"
-    },
     "design": {
       "variant": "grocery-twin",
       "defaultThemeMode": "light",
@@ -57,7 +52,7 @@
     },
     "header": {
       "brandMark": "image",
-      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "logoImageUrl": "https://gabrieloperator.com/assets/gabriel-twins/brand-marks/kai.webp",
       "navItems": [
         {
           "label": "Produkt",
@@ -80,32 +75,32 @@
           "target": "about"
         }
       ],
-      "ctaLabel": "Kennenlernen KAI"
+      "ctaLabel": "Lerne KAI kennen"
     },
-    "badge": "Dein Shop, Rezepte und Kalorienplan – vernetzt",
-    "headline": "Mach Einkaufen wieder einfach",
+    "badge": "Dein Shop, deine Rezepte und dein Kalorienplan – alles verbunden",
+    "headline": "Mach den Wocheneinkauf wieder einfach",
     "headlineAccent": "wieder einfach",
-    "subheadline": "Scanne den Kühlschrank oder eine Quittung. KAI wandelt das, was bereits da ist, in Rezepte um, zählt die Kalorien und kauft nur das, was für jede Mahlzeit noch fehlt.",
-    "ctaLabel": "Mit KAI sprechen",
-    "secondaryCtaLabel": "Scan zu Rezepten",
+    "subheadline": "Scanne den Kühlschrank oder einen Kassenbon. KAI verwandelt das, was schon da ist, in Rezepte, zählt die Kalorien und kauft nur das, was für jede Mahlzeit noch fehlt.",
+    "ctaLabel": "Sprich mit KAI",
+    "secondaryCtaLabel": "Vom Scan zu Rezepten",
     "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
     "featureTags": [
-      "Echte Produkte und Preise",
-      "Jede Auswahl prüfen",
-      "Kalorien geplant nach Haushalt",
-      "Rezepte aus deinem Vorrat"
+      "Echte Produkte und echte Preise",
+      "Überprüfe jede Auswahl",
+      "Kalorienplanung pro Haushalt",
+      "Rezepte aus dem, was du hast"
     ],
     "seoImage": {
       "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
-      "alt": "KAI, dein Grocery Twin, in einer sonnigen Küche umgeben von frischem Obst und Gemüse und einem wöchentlichen Essensplan"
+      "alt": "KAI, dein Grocery Twin, in einer sonnigen Küche umgeben von frischen Produkten und einem Wochenplan"
     },
     "contact": {
-      "heading": "Beginne mit dem, was du hast",
-      "body": "Scanne den Kühlschrank oder eine Quittung und lass KAI die Einkaufslücken zur Prüfung vorbereiten."
+      "heading": "Starte mit dem, was du hast",
+      "body": "Scanne den Kühlschrank oder einen Kassenbon und lass KAI die Einkaufslücken zur Überprüfung vorbereiten."
     },
     "groceryTwin": {
       "header": {
-        "editionLabel": "Startseite",
+        "editionLabel": "Start",
         "subtitle": "Dein Grocery Twin",
         "secondaryEditionLabel": "Einzelhandel",
         "navItems": [
@@ -130,65 +125,65 @@
             "target": "about"
           }
         ],
-        "secondaryCtaLabel": "Kennenlernen KAI",
-        "primaryCtaLabel": "Kennenlernen KAI"
+        "secondaryCtaLabel": "Lerne KAI kennen",
+        "primaryCtaLabel": "Warenkorb starten"
       },
       "hero": {
-        "ratingLabel": "Dein Shop, Rezepte und Kalorienplan – vernetzt",
-        "heading": "Mach Einkaufen wieder einfach",
-        "body": "Scanne den Kühlschrank oder eine Quittung. KAI wandelt das, was bereits da ist, in Rezepte um, zählt die Kalorien und kauft nur das, was für jede Mahlzeit noch fehlt.",
-        "primaryCtaLabel": "Mit KAI sprechen",
-        "secondaryCtaLabel": "Scan zu Rezepten",
+        "ratingLabel": "Dein Shop, deine Rezepte und dein Kalorienplan – alles verbunden",
+        "heading": "Mach den Wocheneinkauf wieder einfach",
+        "body": "Scanne den Kühlschrank oder einen Kassenbon. KAI verwandelt das, was schon da ist, in Rezepte, zählt die Kalorien und kauft nur das, was für jede Mahlzeit noch fehlt.",
+        "primaryCtaLabel": "Sprich mit KAI",
+        "secondaryCtaLabel": "Vom Scan zu Rezepten",
         "trustItems": [
-          "Echte Produkte und Preise",
-          "Jede Auswahl prüfen",
-          "Kalorien geplant nach Haushalt",
-          "Rezepte aus deinem Vorrat"
+          "Echte Produkte und echte Preise",
+          "Überprüfe jede Auswahl",
+          "Kalorienplanung pro Haushalt",
+          "Rezepte aus dem, was du hast"
         ],
         "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
-        "characterAlt": "KAI, deine Ganzkörper-Grocery-Twin-Persona",
+        "characterAlt": "KAI, deine vollständige Grocery-Twin-Persona",
         "chat": {
           "statusLabel": "Online",
-          "subtitle": "Kühlschrank-zu-Rezept Einkaufshelfer",
-          "openingMessage": "Hallo, ich bin KAI. Zeig mir den Kühlschrank, Vorratsschrank oder eine aktuelle Quittung. Ich schlage Rezepte aus dem vor, was du hast, und halte Ausgaben, Kalorien und fehlende Zutaten sichtbar.",
+          "subtitle": "Kühlschrank-zu-Rezept-Assistent",
+          "openingMessage": "Hi, ich bin KAI. Zeig mir den Kühlschrank, die Vorratskammer oder einen aktuellen Kassenbon. Ich schlage dir Rezepte mit dem vor, was du hast, und halte Ausgaben, Kalorien und fehlende Zutaten im Blick.",
           "visitorMessage": "Scanne meinen Kühlschrank und zeig mir, was ich heute Abend kochen kann.",
-          "assistantMessage": "Ich wandle das, was bereits da ist, in Rezeptoptionen um, zeige Kalorien pro Portion und kaufe nur die Zutaten, die noch fehlen.",
-          "inputPlaceholder": "Frag nach Lebensmitteln, einem Rezept oder einer Kalorienprüfung…",
+          "assistantMessage": "Ich verwandle das, was schon da ist, in Rezeptoptionen, zeige die Kalorien pro Portion und kaufe nur die Zutaten, die noch fehlen.",
+          "inputPlaceholder": "Frag nach Lebensmitteln, einem Rezept oder einem Kaloriencheck …",
           "suggestions": [
-            "Hafermilch-Angebote",
-            "Meine Woche ausgleichen",
-            "Aus meinem Kühlschrank kochen"
+            "Angebote für Hafermilch",
+            "Bring meine Woche ins Gleichgewicht",
+            "Koche mit dem, was mein Kühlschrank hergibt"
           ],
-          "demoNote": "Illustrative Demo für Lebensmittel, Rezepte und Ernährung · Zutaten und Ernährungsbedürfnisse prüfen",
+          "demoNote": "Illustrative Demo für Einkauf, Rezepte und Ernährung · Zutaten und Ernährungsbedürfnisse prüfen",
           "sampleProduct": {
             "badge": "Angebot gefunden · Pantry+",
             "name": "Oatly Barista Edition",
-            "detail": "1 L · 590 kcal · 20% Rabatt",
-            "price": "€2.39",
+            "detail": "1 L · 590 kcal · 20 % Rabatt",
+            "price": "2,39 €",
             "actionLabel": "Try /restock"
           }
         },
         "restockDemo": {
           "enabled": true,
           "commandTrigger": "restock",
-          "uploadLabel": "Wähle ein Bild von Kühlschrank, Vorratsschrank, Quittung oder Einkaufsliste",
+          "uploadLabel": "Wähle ein Bild von Kühlschrank, Vorratskammer, Kassenbon oder Einkaufsliste",
           "uploadHint": "JPEG, PNG, WebP oder HEIC · bis zu 6 Bilder und je 10 MB",
-          "analyzingLabel": "KAI liest die sichtbaren Lebensmittel…",
-          "inventoryHeading": "Überprüfe das extrahierte Inventar",
-          "inventoryBody": "Mengen korrigieren, Fehler entfernen oder etwas hinzufügen, das KAI übersehen hat.",
+          "analyzingLabel": "KAI liest die sichtbaren Lebensmittel …",
+          "inventoryHeading": "Überprüfe den erfassten Bestand",
+          "inventoryBody": "Korrigiere Mengen, entferne Fehler oder füge hinzu, was KAI übersehen hat.",
           "itemNameLabel": "Artikel",
           "quantityLabel": "Menge",
           "unitLabel": "Einheit",
           "addItemLabel": "Artikel hinzufügen",
           "removeItemLabel": "Entfernen",
           "chatLabel": "Per Chat korrigieren",
-          "voiceLabel": "Per Sprache korrigieren · 5 Min.",
-          "reviewLabel": "Inventar prüfen",
-          "editLabel": "Inventar bearbeiten",
-          "confirmationHeading": "Inventar bereit",
-          "confirmationBody": "Prüfe den Scanumfang und speichere Lebensmittel und Verbrauchsprofil in deiner privaten Liste.",
-          "signInLabel": "Zum Speichern anmelden",
-          "signInNotice": "Melde dich an, um geprüfte Lebensmittel und Bestandsprofil privat in KAI zu speichern. Keine automatische Nachbestellung.",
+          "voiceLabel": "Per Sprache korrigieren · 5 Min",
+          "reviewLabel": "Bestand prüfen",
+          "editLabel": "Bestand bearbeiten",
+          "confirmationHeading": "Bestand bereit",
+          "confirmationBody": "KAI bestätigt diese Liste erneut, bevor ein Warenkorb vorgeschlagen wird. Ohne deine Zustunft wird nichts bestellt.",
+          "signInLabel": "Anmelden, um fortzufahren",
+          "signInNotice": "Melde dich an, um diesen Lebensmittel-Scan in eine private KAI-Sitzung zu übernehmen und den Nachschub-Workflow fortzusetzen. Ohne deine ausdrückliche Zustimmung wird nichts bestellt.",
           "authenticatedActionLabel": "Lebensmittel auflisten",
           "savingLabel": "Speichere Vorräte…",
           "anonymousPlanNotice": "Zum Speichern des geprüften Bestands samt berechneter Bestandsschwelle anmelden.",
@@ -199,14 +194,14 @@
           "completionEyebrow": "BESTAND GESICHERT",
           "completionHeading": "Lebensmittel zur Liste ergänzt",
           "completionBody": "KAI hat geprüfte Lebensmittel und Verbrauchsprofil gespeichert, Bestand und nächste Nachbestellschwelle im Hintergrund berechnet. Keine Nachbestellung gestartet.",
-          "expiryCopy": "Nicht beanspruchte Vorschauen laufen nach einer Stunde ab",
-          "errorCopy": "KAI konnte keine Einkaufsliste aus diesem Bild lesen. Versuche ein klareres Foto von Kühlschrank, Vorratsschrank, Quittung oder Einkaufsliste."
+          "expiryCopy": "Nicht beanspruchte Vorschauen verfallen nach einer Stunde",
+          "errorCopy": "KAI konnte aus diesem Bild keine Einkaufsliste lesen. Versuche es mit einem deutlicheren Foto von Kühlschrank, Vorratskammer, Kassenbon oder Einkaufsliste."
         }
       },
       "product": {
-        "kicker": "Dein Grocery + Rezept + Kalorien Twin",
-        "heading": "Was können wir kochen, und was muss noch eingekauft werden?",
-        "body": "KAI verbindet Scan, Rezepte, Produktsuche, Kalorien und Warenkorb, damit jede Mahlzeit mit dem beginnt, was du bereits hast.",
+        "kicker": "Dein Einkauf + Rezept + Kalorien Twin",
+        "heading": "Was können wir kochen – und was muss noch eingekauft werden?",
+        "body": "KAI verbindet Scan, Rezepte, Produktsuche, Kalorien und Warenkorb – damit jede Mahlzeit mit dem beginnt, was du schon hast.",
         "capabilityLabels": [
           "Produktsuche",
           "Kalorienplan",
@@ -218,56 +213,56 @@
         "cards": [
           {
             "title": "Live-Warenkorb",
-            "body": "Vergleiche echte Produkte, Mengen und Preise in einem überprüfbaren Warenkorb.",
-            "metric": "Ausgaben und Kalorien zusammen"
+            "body": "Vergleiche echte Produkte, Mengen und Preise in einem prüfbaren Warenkorb.",
+            "metric": "Ausgaben + Kalorien zusammen"
           },
           {
             "title": "Rezepte aus deinem Scan",
-            "body": "Sieh kochbare Rezepte sortiert nach dem, was bereits im Kühlschrank ist und was noch fehlt.",
+            "body": "Sieh kochbare Rezepte, sortiert danach, was schon im Kühlschrank ist und was fehlt.",
             "metric": "Erst kochen, dann einkaufen"
           },
           {
             "title": "Angebotsradar",
-            "body": "Vergleiche passende Angebote unter Beibehaltung der Rezeptabdeckung und Haushaltsziele.",
-            "metric": "Echte Einkaufsquellen"
+            "body": "Vergleiche passende Angebote, ohne Rezeptabdeckung und Haushaltsziele aus den Augen zu verlieren.",
+            "metric": "Echte Lebensmittelquellen"
           }
         ]
       },
       "mobile": {
         "kicker": "KAI in deiner Tasche",
-        "heading": "Vom Kühlschrank zum Rezept zum Warenkorb,",
-        "accentHeading": "Wo immer du bist.",
+        "heading": "Vom Kühlschrank über das Rezept bis zum Warenkorb,",
+        "accentHeading": "wo auch immer du bist.",
         "items": [
           {
             "label": "Warenkorb erstellen",
-            "title": "Ein Live-Warenkorb mit deinen Ausgaben und Kalorienplan zusammen.",
-            "body": "Einen Artikel anfragen, einen echten Treffer vergleichen und sehen, wie Preis, Kalorien und Menge die Woche verändern."
+            "title": "Ein Live-Warenkorb, der deine Ausgaben und deinen Kalorienplan zusammenführt.",
+            "body": "Frag nach einem Artikel, vergleiche einen echten Treffer und sieh, wie sich Preis, Kalorien und Menge im Wochenverlauf verändern."
           },
           {
             "label": "Kühlschrank scannen",
-            "title": "Verwandle ein Kühlschrank- oder Kassenbonfoto in Rezepte, die du kochen kannst.",
-            "body": "KAI erkennt, was vorhanden ist, schätzt die Kalorien und schlägt Rezepte vor, bevor die Einkaufsliste für fehlende Zutaten erstellt wird."
+            "title": "Verwandle ein Foto vom Kühlschrank oder einen Kassenbon in Rezepte, die du kochen kannst.",
+            "body": "KAI erkennt, was vorhanden ist, schätzt die Kalorien und schlägt Rezepte vor, bevor die Liste der fehlenden Zutaten erstellt wird."
           },
           {
-            "label": "Rezept auswählen",
+            "label": "Wähle ein Rezept",
             "title": "Wähle ein Gericht und kaufe nur, was fehlt.",
-            "body": "Vergleiche Kochzeit, Kalorien pro Portion, Zutatenabdeckung und die kleine Einkaufslücke für jedes Rezept."
+            "body": "Vergleiche Kochzeit, Kalorien pro Portion, Zutatenabdeckung und die kleine Einkaufslücke jeder Rezeptur."
           },
           {
-            "label": "Mit KAI sprechen",
+            "label": "Sprich mit KAI",
             "title": "Sprich über den Einkauf und dein Wochenziel.",
-            "body": "Sag, was ausgegangen ist oder was du kochen möchtest. KAI behält den Warenkorb, die Ausgaben und die Kalorienlücke im Blick."
+            "body": "Sag, was ausgegangen ist oder was du kochen willst. KAI behält Warenkorb, Ausgaben und Kalorienlücke im Kontext."
           }
         ]
       },
       "features": {
-        "kicker": "Der Wocheneinkauf, neu aufgebaut",
-        "heading": "Lebensmittel, Rezepte, Ausgaben und Kalorien mit Klarheit verwalten",
+        "kicker": "Der Wocheneinkauf, neu gedacht",
+        "heading": "Verwalte Lebensmittel, Rezepte, Ausgaben und Kalorien mit Klarheit",
         "items": [
           {
             "number": "01",
-            "title": "Rezept-, Produkt- und Kalorienentdeckung",
-            "body": "Scanne, was du hast, oder beschreibe das gewünschte Gericht. KAI zeigt kochbare Rezepte, Kalorien pro Portion und die genaue Einkaufslücke für jede Option.",
+            "title": "Rezept-, Produkt- und Kalorien-Entdeckung",
+            "body": "Scanne, was du hast, oder beschreibe das Gericht, das du möchtest. KAI zeigt kochbare Rezepte, Kalorien pro Portion und die genaue Einkaufslücke für jede Option.",
             "tags": [
               "Kühlschrank-Scan",
               "Rezepte",
@@ -279,7 +274,7 @@
           {
             "number": "02",
             "title": "Ein Warenkorb, der aus deinen Mahlzeiten entsteht",
-            "body": "Wähle ein Rezept und KAI entfernt bereits vorhandene Zutaten. Nur die fehlenden Produkte gelangen in den Warenkorb, wobei Ausgaben und Haushaltskalorien gemeinsam aktualisiert werden.",
+            "body": "Wähle ein Rezept und KAI entfernt die Zutaten, die schon da sind. Nur die fehlenden Produkte landen im Warenkorb – Ausgaben und Haushaltskalorien werden gemeinsam aktualisiert.",
             "tags": [
               "Rezeptabdeckung",
               "Nur Fehlendes",
@@ -290,7 +285,7 @@
           {
             "number": "03",
             "title": "Einmal scannen. Kochen, was da ist.",
-            "body": "KAI verwandelt einen Kühlschrank-, Vorrats- oder Kassenbon-Scan in drei praktische Rezepte. Vergleiche Zeit und Kalorien, wähle eines und prüfe dann nur seine fehlenden Zutaten.",
+            "body": "KAI verwandelt einen Kühlschrank-, Vorrats- oder Kassenbon-Scan in drei praktische Rezepte. Vergleiche Zeit und Kalorien, wähle eins und prüfe nur die fehlenden Zutaten.",
             "tags": [
               "3 Rezeptoptionen",
               "Kochzeit",
@@ -302,35 +297,35 @@
       },
       "stories": {
         "kicker": "Wie sich Kochen und Einkaufen mit KAI anfühlen",
-        "heading": "Kleine Momente der Klarheit vom Kühlschrank zum Abendessen",
+        "heading": "Kleine Momente der Klarheit vom Kühlschrank bis zum Abendessen",
         "testimonials": [
           {
-            "quote": "KAI verwandelt das, was schon in unserem Kühlschrank ist, in Abendessen-Ideen und zeigt mir die Kosten und Familienkalorien, bevor ich mich entscheide.",
+            "quote": "KAI verwandelt das, was schon in unserem Kühlschrank ist, in Abendessen-Ideen und zeigt mir dann vor der Auswahl die Kosten und Familienkalorien.",
             "name": "Mila",
             "meta": "Beschäftigter Elternteil"
           },
           {
-            "quote": "Ich frage nach Käseangeboten, vergleiche die echten Optionen und füge genau das hinzu, das ich will. Kein Tab-Wechsel.",
+            "quote": "Ich frage nach Käseangeboten, vergleiche die echten Optionen und füge genau das hinzu, was ich will. Kein Tab-Hopping.",
             "name": "Noah",
             "meta": "Wöchentlicher Einkäufer"
           },
           {
-            "quote": "Der Kassenbon-Scan hat mir drei Rezepte geliefert, die Kalorien pro Portion und nur die Zutaten, die ich noch kaufen musste.",
+            "quote": "Der Kassenbon-Scan lieferte mir drei Rezepte, die Kalorien pro Portion und nur die Zutaten, die ich noch kaufen musste.",
             "name": "Sofia",
             "meta": "Hobbykoch"
           },
           {
-            "quote": "Ich mag es, dass KAI zuerst den Warenkorb baut und die Planungsfragen erst stellt, wenn sie wichtig werden.",
+            "quote": "Mir gefällt, dass KAI zuerst den Warenkorb baut und Planungsfragen nur stellt, wenn sie wirklich zählen.",
             "name": "Lucas",
             "meta": "Student"
           },
           {
-            "quote": "Sprache ist perfekt, wenn meine Hände in der Küche voll sind. Ich sage KAI einfach, was ausgegangen ist.",
+            "quote": "Spracheingabe ist perfekt, wenn ich in der Küche die Hände voll habe. Ich sage KAI einfach, was ausgegangen ist.",
             "name": "Emma",
             "meta": "Meal-Prep-Fan"
           },
           {
-            "quote": "Alles bleibt überprüfbar. Ich kann Mengen ändern und sehe, wie sich Ausgaben und Kaloriengesamt mit mir bewegen.",
+            "quote": "Alles bleibt prüfbar. Ich kann Mengen ändern und sehe, wie sich Ausgaben und Kaloriensumme gemeinsam bewegen.",
             "name": "Daan",
             "meta": "Smarter Einkäufer"
           }
@@ -338,24 +333,24 @@
         "articles": [
           {
             "category": "Wochenroutine",
-            "title": "Der Sieben-Minuten-Einkauf und Essensplan",
-            "body": "Ein Solo-Einkäufer hat eine verstreute Grundnahrungsmittelliste in einen Warenkorb, drei kochbare Abendessen und 10.850 geplante Kalorien verwandelt."
+            "title": "Der Sieben-Minuten-Einkauf und Meal-Plan",
+            "body": "Ein Single-Einkäufer hat aus einer verstreuten Vorratsliste einen Warenkorb, drei kochbare Abendessen und 10.850 geplante Kalorien gemacht."
           },
           {
             "category": "Vom Kühlschrank zum Rezept",
-            "title": "Vom Kühlschrankfoto zum heutigen Abendessen",
-            "body": "KAI erkannte die Zutaten, schlug drei Rezepte vor und trennte das, was schon da war, von dem, was noch gekauft werden musste."
+            "title": "Vom Kühlschrankfoto zum Abendessen heute",
+            "body": "KAI erkannte die Zutaten, schlug drei Rezepte vor und trennte das Vorhandene vom noch zu Kaufenden."
           },
           {
             "category": "Intelligente Rezeptsuche",
             "title": "Intelligente Suche, die die ganze Woche sieht",
-            "body": "Eine Suche, die Preis, Kalorien, Rezeptabdeckung und eine Proteinlücke abwog, ohne den roten Faden des Einkaufs zu verlieren."
+            "body": "Eine Suche, die Preis, Kalorien, Rezeptabdeckung und eine Proteinlücke abwog – ohne den roten Faden des Einkaufs zu verlieren."
           }
         ]
       },
       "about": {
         "kicker": "Ein Ort, viele Wege hinein",
-        "heading": "Jede Eingabe wird zu Rezepten, einem Warenkorb und einem Kalorienplan",
+        "heading": "Jeder Input wird zu Rezepten, einem Warenkorb und einem Kalorienplan",
         "body": "Ein Foto, eine Sprachnotiz, ein Kassenbon oder eine Liste speist dieselbe Ansicht darunter: vorhandene Zutaten, kochbare Rezepte, noch fehlende Produkte, Wochenausgaben und Haushaltskalorien.",
         "capabilities": [
           "Foto",
@@ -370,13 +365,13 @@
         ]
       },
       "closing": {
-        "kicker": "Dein nächster Kühlschrank-zum-Abendessen-Plan",
-        "heading": "Starte mit dem, was du hast. Kaufe nur, was fehlt.",
-        "body": "Scanne den Kühlschrank oder einen Kassenbon. KAI schlägt kochbare Rezepte vor, zeigt Kalorien pro Portion und verwandelt die fehlenden Zutaten in einen überprüfbaren Warenkorb.",
+        "kicker": "Dein nächster Kühlschrank-bis-Abendessen-Plan",
+        "heading": "Starte mit dem, was du hast. Kauf nur, was fehlt.",
+        "body": "Scanne den Kühlschrank oder einen Kassenbon. KAI schlägt kochbare Rezepte vor, zeigt Kalorien pro Portion und macht aus den fehlenden Zutaten einen prüfbaren Warenkorb.",
         "ctaLabel": "Scannen, um Rezepte zu finden"
       },
       "footer": {
-        "tagline": "Dein Kühlschrank-zum-Warenkorb Grocery Twin. Finde Rezepte aus dem, was du hast, sieh Kalorien und kaufe nur, was fehlt.",
+        "tagline": "Dein Grocery Twin vom Kühlschrank bis zum Warenkorb. Finde Rezepte mit dem, was du hast, sieh Kalorien und kauf nur, was fehlt.",
         "groups": [
           {
             "label": "Produkt",
@@ -386,7 +381,7 @@
                 "target": "product"
               },
               {
-                "label": "Wie es funktioniert",
+                "label": "So funktioniert es",
                 "target": "features"
               },
               {
@@ -414,7 +409,7 @@
           }
         ],
         "copyright": "© 2026 KAI · Grocery Twin",
-        "closingStatement": "Gute Entscheidungen. Tolle Woche."
+        "closingStatement": "Gute Entscheidungen. Großartige Woche."
       },
       "homeRoiCalculator": {
         "methodologyVersion": 2,
@@ -1293,7 +1288,7 @@
         "landingPage",
         "badge"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1484,7 +1479,7 @@
         "header",
         "primaryCtaLabel"
       ],
-      "sourceHash": "f6f2913c3ee65c4e5fa410960649ae928ee8a5cd7f384972c7275007686b7ac2"
+      "sourceHash": "ab23cde5c8e7eb47ed87cea252cff38249f120f377190c482f92ae0cf70f715d"
     },
     {
       "path": [
@@ -1493,7 +1488,7 @@
         "hero",
         "ratingLabel"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1885,7 +1880,7 @@
         "restockDemo",
         "confirmationBody"
       ],
-      "sourceHash": "3855bc93caa2a8d399d9cee5cc6e725b20d5e76226eece00ca411c62e98a124a"
+      "sourceHash": "52d9f9ef8483c24c7185a727bf2211244f85030367da02ddf14eb5d6e6011ba0"
     },
     {
       "path": [
@@ -1895,7 +1890,7 @@
         "restockDemo",
         "signInLabel"
       ],
-      "sourceHash": "5e4e68bf849048cc43d66bb27eb09dc5d3a299b8e31b9b887643f594b40e1213"
+      "sourceHash": "607a80121c655651dc14cbb057e035943bed91077283e9c6b8d709db1e25ef7f"
     },
     {
       "path": [
@@ -1905,7 +1900,7 @@
         "restockDemo",
         "signInNotice"
       ],
-      "sourceHash": "7ede1f8e3651004f8425e6cd270825174d06112032e615b98f44f4685533c0a4"
+      "sourceHash": "7ee6641bab06f804b91bb13e538d9da870890f703c1d8fa24098515f5129a011"
     },
     {
       "path": [
@@ -2043,7 +2038,7 @@
         "product",
         "heading"
       ],
-      "sourceHash": "c172cd2a53e02e6d2763843e2a4f04c33b97f43ddaa3d1af868a01a8d445d7e1"
+      "sourceHash": "989cacb42de5017d3d7942afe20d93c7d79c5617f70de63c4dbb7a4f1174baf2"
     },
     {
       "path": [
@@ -6543,6 +6538,42 @@
         "landingPage",
         "roiCalculator",
         "currencyCopy",
+        "native"
+      ],
+      "sourceHash": "cd2604270cd9656f4abdccbee7bf11038b88a1ae5a8657f9933a807fdcdff8bf"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "loading"
+      ],
+      "sourceHash": "efc980d9dce429c644a6dce658df91cdacbff328ea38504d8ce80bfe9b76b32d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "unavailable"
+      ],
+      "sourceHash": "b01a152edb76137a0a16fe29cc942fa282d98fbdc4123b830397f9fde7f85095"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "converted"
+      ],
+      "sourceHash": "450c38574200c1402496596e9f8177d31fd0e64cf58d9468c350eb3ba2c60d10"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
         "basis"
       ],
       "sourceHash": "17cc8491fcdfe8ddd4f8dec6a3859229ecacffb562b383e1283f1c0be0019806"
@@ -7914,5 +7945,5 @@
       "sourceHash": "6e5fe4ca7c07142fa81eef400c342dea7f8ba0422aa331c3880e6604db8d52a7"
     }
   ],
-  "generatedAt": "2026-10-13T14:19:34.015Z"
+  "generatedAt": "2026-09-01T19:15:50.031Z"
 }

@@ -2,13 +2,8 @@
   "schemaVersion": 2,
   "language": "cs",
   "regionKey": null,
-  "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
+  "sourceRevision": "e109add0e4fe301964f8a19341549a6101f0e29e2c6783073414963417b1e42b",
   "landingPage": {
-    "capabilityPreview": {
-      "enabled": true,
-      "commandId": "restock",
-      "presentation": "surface"
-    },
     "design": {
       "variant": "grocery-twin",
       "defaultThemeMode": "light",
@@ -57,7 +52,7 @@
     },
     "header": {
       "brandMark": "image",
-      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "logoImageUrl": "https://gabrieloperator.com/assets/gabriel-twins/brand-marks/kai.webp",
       "navItems": [
         {
           "label": "Produkt",
@@ -68,7 +63,7 @@
           "target": "mobile"
         },
         {
-          "label": "příběhy",
+          "label": "Příběhy",
           "target": "stories"
         },
         {
@@ -76,23 +71,23 @@
           "target": "features"
         },
         {
-          "label": "O",
+          "label": "O nás",
           "target": "about"
         }
       ],
       "ctaLabel": "Seznamte se s KAI"
     },
-    "badge": "Váš obchod, recepty a kalorický plán propojené",
+    "badge": "Váš obchod, recepty a kalorický plán – propojeno",
     "headline": "Nakupování potravin bude opět snadné",
     "headlineAccent": "bude opět snadné",
-    "subheadline": "Naskenujte lednici nebo účtenku. KAI promění to, co už doma máte, v recepty, spočítá kalorie a nakoupí jen to, co každému jídlu ještě chybí.",
-    "ctaLabel": "Promluvit si s KAI",
-    "secondaryCtaLabel": "Ze snímku na recepty",
+    "subheadline": "Naskenujte lednici nebo účtenku. KAI promění to, co už máte, v recepty, spočítá kalorie a nakoupí jen to, co každé jídlo ještě potřebuje.",
+    "ctaLabel": "Mluvte s KAI",
+    "secondaryCtaLabel": "Skenovat na recepty",
     "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
     "featureTags": [
       "Skutečné produkty a ceny",
-      "Každou volbu zkontrolujte",
-      "Kalorie plánované pro domácnost",
+      "Zkontrolujte každou volbu",
+      "Kalorie plánované podle domácnosti",
       "Recepty z toho, co máte"
     ],
     "seoImage": {
@@ -101,7 +96,7 @@
     },
     "contact": {
       "heading": "Začněte s tím, co máte",
-      "body": "Naskenujte lednici nebo účtenku a nechte KAI připravit chybějící položky ke kontrole."
+      "body": "Naskenujte lednici nebo účtenku a nechte KAI připravit seznam chybějících potravin ke kontrole."
     },
     "groceryTwin": {
       "header": {
@@ -118,7 +113,7 @@
             "target": "mobile"
           },
           {
-            "label": "příběhy",
+            "label": "Příběhy",
             "target": "stories"
           },
           {
@@ -126,45 +121,45 @@
             "target": "features"
           },
           {
-            "label": "O",
+            "label": "O nás",
             "target": "about"
           }
         ],
         "secondaryCtaLabel": "Seznamte se s KAI",
-        "primaryCtaLabel": "Seznamte se s KAI"
+        "primaryCtaLabel": "Spustit košík"
       },
       "hero": {
-        "ratingLabel": "Váš obchod, recepty a kalorický plán propojené",
-        "heading": "Nakupování potravin bude opět snadné",
-        "body": "Naskenujte lednici nebo účtenku. KAI promění to, co už doma máte, v recepty, spočítá kalorie a nakoupí jen to, co každému jídlu ještě chybí.",
-        "primaryCtaLabel": "Promluvit si s KAI",
-        "secondaryCtaLabel": "Ze snímku na recepty",
+        "ratingLabel": "Váš obchod, recepty a kalorický plán – propojeno",
+        "heading": "Udělejte nakupování potravin opět snadným",
+        "body": "Naskenujte lednici nebo účtenku. KAI promění to, co už máte, v recepty, spočítá kalorie a nakoupí jen to, co každé jídlo ještě potřebuje.",
+        "primaryCtaLabel": "Mluvte s KAI",
+        "secondaryCtaLabel": "Skenovat na recepty",
         "trustItems": [
           "Skutečné produkty a ceny",
-          "Každou volbu zkontrolujte",
-          "Kalorie plánované pro domácnost",
+          "Zkontrolujte každou volbu",
+          "Kalorie plánované podle domácnosti",
           "Recepty z toho, co máte"
         ],
         "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
-        "characterAlt": "KAI, vaše kompletní Grocery Twin persona",
+        "characterAlt": "KAI, vaše plnohodnotná persona Grocery Twin",
         "chat": {
           "statusLabel": "Online",
-          "subtitle": "Asistent pro přípravu jídla z lednice",
-          "openingMessage": "Ahoj, jsem KAI. Ukažte mi lednici, spíž nebo nedávnou účtenku. Navrhnu recepty z toho, co máte, a budu mít přehled o výdajích, kaloriích i chybějících surovinách.",
-          "visitorMessage": "Naskenuj mi lednici a ukaž, co dnes mohu uvařit.",
-          "assistantMessage": "Proměním to, co už máte, v návrhy receptů, ukážu kalorie na porci a nakoupím jen suroviny, které chybí.",
-          "inputPlaceholder": "Požádejte o nákup, recept nebo kontrolu kalorií…",
+          "subtitle": "Asistent pro nákup potravin od lednice k receptu",
+          "openingMessage": "Ahoj, jsem KAI. Ukažte mi lednici, spíž nebo nedávnou účtenku. Navrhnu recepty z toho, co máte, a budu mít na očích výdaje, kalorie i chybějící suroviny.",
+          "visitorMessage": "Naskenujte mou lednici a ukažte mi, co mohu dnes večer vařit.",
+          "assistantMessage": "Proměním to, co už máte, v možnosti receptů, ukážu kalorie na porci a nakoupím jen chybějící suroviny.",
+          "inputPlaceholder": "Zeptejte se na potraviny, recept nebo kontrolu kalorií…",
           "suggestions": [
-            "Akce na ovesné mléko",
-            "Vyrovnat celý týden",
-            "Vařit z lednice"
+            "Nabídky ovesného mléka",
+            "Vyvážit můj týden",
+            "Vařit z mé lednice"
           ],
-          "demoNote": "Ukázka nákupu, receptů a výživy · Zkontrolujte suroviny a dietní potřeby",
+          "demoNote": "Ilustrativní demo nákupu, receptů a výživy · Zkontrolujte suroviny a dietní potřeby",
           "sampleProduct": {
-            "badge": "Nalezena akce · Pantry+",
+            "badge": "Nalezena nabídka · Pantry+",
             "name": "Oatly Barista Edition",
-            "detail": "1 l · 590 kcal · sleva 20 %",
-            "price": "€2,39",
+            "detail": "1 L · 590 kcal · 20% sleva",
+            "price": "2,39 €",
             "actionLabel": "Try /restock"
           }
         },
@@ -172,10 +167,10 @@
           "enabled": true,
           "commandTrigger": "restock",
           "uploadLabel": "Vyberte obrázek lednice, spíže, účtenky nebo nákupního seznamu",
-          "uploadHint": "JPEG, PNG, WebP nebo HEIC · až 6 obrázků po 10 MB",
+          "uploadHint": "JPEG, PNG, WebP nebo HEIC · až 6 obrázků a 10 MB každý",
           "analyzingLabel": "KAI čte viditelné potraviny…",
-          "inventoryHeading": "Zkontrolujte rozpoznaný seznam",
-          "inventoryBody": "Opravte množství, odstraňte chyby nebo doplňte, co KAI přehlédl.",
+          "inventoryHeading": "Zkontrolujte extrahovaný seznam",
+          "inventoryBody": "Opravte množství, odstraňte chyby nebo přidejte cokoli, co KAI přehlédl.",
           "itemNameLabel": "Položka",
           "quantityLabel": "Množství",
           "unitLabel": "Jednotka",
@@ -186,9 +181,9 @@
           "reviewLabel": "Zkontrolovat seznam",
           "editLabel": "Upravit seznam",
           "confirmationHeading": "Seznam je připraven",
-          "confirmationBody": "Zkontrolujte rozsah skenu a uložte potraviny i profil spotřeby do soukromého seznamu.",
-          "signInLabel": "Pro uložení se přihlaste",
-          "signInNotice": "Přihlaste se a uložte ověřený záznam potravin i profil zásob do soukromého prostoru KAI. Doplňování se nespustí automaticky.",
+          "confirmationBody": "KAI tento seznam před návrhem košíku znovu potvrdí. Bez vašeho souhlasu se nic neobjedná.",
+          "signInLabel": "Pro pokračování se přihlaste",
+          "signInNotice": "Přihlaste se, aby se tento záznam nákupu přesunul do soukromé relace KAI a pokračoval v procesu doplnění zásob. Bez vašeho výslovného souhlasu se nic neobjedná.",
           "authenticatedActionLabel": "Přidat jídlo do seznamu",
           "savingLabel": "Ukládání potravin…",
           "anonymousPlanNotice": "Přihlaste se a uložte ověřené zásoby i vypočtený limit pro doplnění.",
@@ -199,75 +194,75 @@
           "completionEyebrow": "ZÁSOBY ULOŽENY",
           "completionHeading": "Potraviny přidány do seznamu",
           "completionBody": "KAI uložil ověřené potraviny i profil spotřeby a na pozadí vypočítal stav zásob a příští limit pro doplnění. Doplňování nebylo spuštěno.",
-          "expiryCopy": "Nepřevzaté náhledy vyprší za hodinu",
-          "errorCopy": "KAI z tohoto obrázku nedokázal přečíst nákupní seznam. Zkuste jasnější fotografii lednice, spíže, účtenky nebo nákupního seznamu."
+          "expiryCopy": "Nepřevzaté náhledy vyprší po jedné hodině",
+          "errorCopy": "KAI nedokázal z tohoto obrázku přečíst seznam potravin. Zkuste jasnější fotografii lednice, spíže, účtenky nebo nákupního seznamu."
         }
       },
       "product": {
-        "kicker": "Váš Grocery + receptový + kalorický Twin",
-        "heading": "Co můžeme uvařit a co je ještě třeba dokoupit?",
-        "body": "KAI propojuje sken, recepty, vyhledávání produktů, kalorie i košík, aby každé jídlo začalo tím, co už doma máte.",
+        "kicker": "Váš Grocery + Recipe + Calorie Twin",
+        "heading": "Co můžeme uvařit – a co ještě musíme nakoupit?",
+        "body": "KAI propojuje skenování, recepty, vyhledávání produktů, kalorie a košík, aby každé jídlo začalo tím, co už máte.",
         "capabilityLabels": [
           "Vyhledávání produktů",
           "Kalorický plán",
           "Nápady na recepty",
           "Obrázek na seznam",
           "Hlasová nápověda",
-          "Hledání akcí"
+          "Párování nabídek"
         ],
         "cards": [
           {
             "title": "Živý košík",
             "body": "Porovnejte skutečné produkty, množství a ceny v jednom kontrolovatelném košíku.",
-            "metric": "Výdaje a kalorie společně"
+            "metric": "Výdaje + kalorie dohromady"
           },
           {
             "title": "Recepty z vašeho skenu",
-            "body": "Prohlédněte si uvařitelné recepty seřazené podle toho, co už je v lednici a co chybí.",
-            "metric": "Nejprve vařit, poté nakupovat"
+            "body": "Prohlédněte si uvařitelné recepty seřazené podle toho, co je v lednici, a co chybí.",
+            "metric": "Nejprve vařte, pak nakupujte"
           },
           {
-            "title": "Radar akcí",
-            "body": "Porovnejte užitečné nabídky a zároveň zachovejte pokrytí receptů a cíle domácnosti.",
-            "metric": "Skuteční prodejci potravin"
+            "title": "Radar nabídek",
+            "body": "Porovnejte užitečné shody při zachování pokrytí receptů a cílů domácnosti.",
+            "metric": "Skutečné zdroje potravin"
           }
         ]
       },
       "mobile": {
         "kicker": "KAI ve vaší kapse",
-        "heading": "Od lednice přes recept až ke košíku,",
-        "accentHeading": "ať jste kdekoli.",
+        "heading": "Od lednice k receptu ke košíku,",
+        "accentHeading": "Ať jste kdekoli.",
         "items": [
           {
             "label": "Sestavit košík",
-            "title": "Živý košík s přehledem výdajů i kalorického plánu.",
+            "title": "Živý košík s vašimi výdaji a kalorickým plánem dohromady.",
             "body": "Požádejte o položku, porovnejte skutečnou shodu a sledujte, jak cena, kalorie a množství mění celý týden."
           },
           {
-            "label": "Naskenujte lednici",
-            "title": "Proměňte fotografii lednice nebo účtenky v recepty, které můžete vařit.",
-            "body": "KAI rozpozná, co máte k dispozici, odhadne kalorie a navrhne recepty dříve, než sestaví seznam chybějících surovin."
+            "label": "Naskenovat lednici",
+            "title": "Proměňte fotografii lednice nebo účtenky v recepty, které můžete uvařit.",
+            "body": "KAI identifikuje, co máte po ruce, odhadne kalorie a navrhne recepty dříve, než sestaví seznam chybějících surovin."
           },
           {
             "label": "Vyberte recept",
-            "title": "Zvolte jídlo a kupte jen to, co chybí.",
-            "body": "Porovnejte dobu vaření, kalorie na porci, pokrytí surovin a malý nákupní rozdíl u každého receptu."
+            "title": "Vyberte jídlo a poté kupte jen to, co chybí.",
+            "body": "Porovnejte dobu vaření, kalorie na porci, pokrytí surovin a malý nedostatek potravin pro každý recept."
           },
           {
-            "label": "Promluvit si s KAI",
-            "title": "Proberte nákup i svůj týdenní cíl.",
-            "body": "Řekněte, co došlo nebo co chcete vařit. KAI sleduje košík, výdaje i kalorický rozdíl v kontextu."
+            "label": "Mluvte s KAI",
+            "title": "Proberte nákup a váš týdenní cíl.",
+            "body": "Řekněte, co došlo, nebo co chcete vařit. KAI udržuje košík, výdaje a kalorický rozdíl v kontextu."
           }
         ]
       },
       "features": {
-        "kicker": "Týdenní nákup, přestavěný",
-        "heading": "Spravujte nákupy, recepty, výdaje a kalorie s přehledem",
+        "kicker": "Týdenní nákup, přestavěn",
+        "heading": "Spravujte potraviny, recepty, výdaje a kalorie s přehledností",
         "items": [
           {
             "number": "01",
             "title": "Objevování receptů, produktů a kalorií",
-            "body": "Naskenujte, co máte, nebo popište jídlo, které chcete. KAI ukáže uvařitelné recepty, kalorie na porci a přesný nákupní rozdíl pro každou možnost.",
+            "body": "Naskenujte, co máte, nebo popište jídlo, které chcete. KAI ukáže uvařitelné recepty, kalorie na porci a přesný nedostatek potravin pro každou možnost.",
             "tags": [
               "Sken lednice",
               "Recepty",
@@ -278,10 +273,10 @@
           },
           {
             "number": "02",
-            "title": "Košík sestavený z vámi vybraných jídel",
-            "body": "Vyberte recept a KAI odebere suroviny, které již máte doma. Do košíku se dostanou jen chybějící produkty, přičemž výdaje i kalorie domácnosti se aktualizují společně.",
+            "title": "Košík sestavený z jídel, která si vyberete",
+            "body": "Vyberte recept a KAI odstraní suroviny, které už máte. Do košíku se dostanou jen chybějící produkty, přičemž se výdaje a kalorie domácnosti aktualizují společně.",
             "tags": [
-              "Pokrytí receptu",
+              "Pokrytí receptů",
               "Jen chybějící",
               "Týdenní kcal"
             ],
@@ -289,10 +284,10 @@
           },
           {
             "number": "03",
-            "title": "Naskenujte jednou. Vařte z toho, co je doma.",
-            "body": "KAI promění sken lednice, spíže nebo účtenky ve tři praktické recepty. Porovnejte čas a kalorie, vyberte si a prohlédněte si jen chybějící suroviny.",
+            "title": "Naskenujte jednou. Vařte z toho, co tam je.",
+            "body": "KAI promění sken lednice, spíže nebo účtenky ve tři praktické recepty. Porovnejte čas a kalorie, vyberte si a poté zkontrolujte jen chybějící suroviny.",
             "tags": [
-              "3 varianty receptu",
+              "3 možnosti receptu",
               "Doba vaření",
               "Kalorie / porce"
             ],
@@ -302,20 +297,20 @@
       },
       "stories": {
         "kicker": "Jaké to je vařit a nakupovat s KAI",
-        "heading": "Malé momenty jasné cesty z lednice k večeři",
+        "heading": "Malé momenty jasnosti od lednice k večeři",
         "testimonials": [
           {
-            "quote": "KAI promění to, co už máme v lednici, v nápady na večeři, a pak mi ukáže cenu i kalorie pro rodinu dříve, než si vyberu.",
+            "quote": "KAI promění to, co už máme v lednici, v nápady na večeři, a pak mi před výběrem ukáže cenu a kalorie pro rodinu.",
             "name": "Mila",
-            "meta": "Zaměstnaný rodič"
+            "meta": "Zaneprázdněný rodič"
           },
           {
-            "quote": "Zeptám se na sýrové akce, porovnám skutečné možnosti a přidám přesně ten, který chci. Žádné přepínání záložek.",
+            "quote": "Zeptám se na sýrové nabídky, porovnám skutečné možnosti a přidám přesně ten, který chci. Žádné přepínání karet.",
             "name": "Noah",
             "meta": "Týdenní nakupující"
           },
           {
-            "quote": "Sken účtenky mi dal tři recepty, kalorie na porci a jen suroviny, které jsem ještě musel koupit.",
+            "quote": "Sken účtenky mi dal tři recepty, kalorie na porci a jen suroviny, které jsem ještě potřeboval koupit.",
             "name": "Sofia",
             "meta": "Domácí kuchař"
           },
@@ -325,12 +320,12 @@
             "meta": "Student"
           },
           {
-            "quote": "Hlas je perfektní, když mám v kuchyni plné ruce. Jen řeknu KAI, co došlo.",
+            "quote": "Hlas je perfektní, když mám v kuchyni plné ruce. Jen KAI řeknu, co došlo.",
             "name": "Emma",
             "meta": "Fanoušek přípravy jídel"
           },
           {
-            "quote": "Vše zůstává kontrolovatelné. Můžu měnit množství a vidím, jak se se mnou posouvají výdaje i celkové kalorie.",
+            "quote": "Vše zůstává kontrolovatelné. Mohu měnit množství a sledovat, jak se výdaje i celkové kalorie pohybují se mnou.",
             "name": "Daan",
             "meta": "Chytrý nakupující"
           }
@@ -339,28 +334,28 @@
           {
             "category": "Týdenní rutina",
             "title": "Sedmiminutový nákup a jídelníček",
-            "body": "Samostatný nakupující proměnil rozptýlený seznam základních potravin v košík, tři uvařitelné večeře a 10 850 plánovaných kalorií."
+            "body": "Samostatný nakupující proměnil rozptýlený seznam základních potravin v košík, tři uvařitelné večeře a 10 850 naplánovaných kalorií."
           },
           {
-            "category": "Z lednice k receptu",
-            "title": "Z fotky lednice k dnešní večeři",
-            "body": "KAI rozpoznal suroviny, navrhl tři recepty a oddělil to, co už bylo doma, od toho, co se ještě muselo koupit."
+            "category": "Od lednice k receptu",
+            "title": "Od fotografie lednice k dnešní večeři",
+            "body": "KAI rozpoznal suroviny, navrhl tři recepty a oddělil to, co už tam bylo, od toho, co ještě bylo třeba koupit."
           },
           {
-            "category": "Chytré hledání receptů",
+            "category": "Chytré vyhledávání receptů",
             "title": "Chytré vyhledávání, které vidí celý týden",
-            "body": "Vyhledávání zvážilo cenu, kalorie, pokrytí receptu a nedostatek bílkovin, aniž ztratilo kontext nákupu."
+            "body": "Vyhledávání zvážilo cenu, kalorie, pokrytí receptů a nedostatek bílkovin, aniž by ztratilo nit nákupu."
           }
         ]
       },
       "about": {
         "kicker": "Jedno místo, mnoho vstupů",
         "heading": "Každý vstup se stane recepty, jedním košíkem a jedním kalorickým plánem",
-        "body": "Fotografie, hlasová poznámka, účtenka nebo seznam napájí stejný pohled pod povrchem: suroviny doma, recepty, které můžete vařit, chybějící produkty, týdenní výdaje a kalorie domácnosti.",
+        "body": "Fotografie, hlasová poznámka, účtenka nebo seznam napájí stejný pohled pod povrchem: suroviny po ruce, recepty, které můžete vařit, chybějící produkty, týdenní výdaje a kalorie domácnosti.",
         "capabilities": [
-          "Fotka",
+          "Fotografie",
           "Hlas",
-          "Akce",
+          "Nabídky",
           "Účtenka",
           "Seznam",
           "Doručení",
@@ -370,13 +365,13 @@
         ]
       },
       "closing": {
-        "kicker": "Váš další plán z lednice k večeři",
+        "kicker": "Váš další plán od lednice k večeři",
         "heading": "Začněte s tím, co máte. Nakupujte jen to, co chybí.",
-        "body": "Naskenujte lednici nebo účtenku. KAI navrhne uvařitelné recepty, ukáže kalorie na porci a promění chybějící suroviny v košík, který si můžete zkontrolovat.",
-        "ctaLabel": "Skenem najděte recepty"
+        "body": "Naskenujte lednici nebo účtenku. KAI navrhne uvařitelné recepty, ukáže kalorie na porci a promění chybějící suroviny v košík, který můžete zkontrolovat.",
+        "ctaLabel": "Skenovat pro nalezení receptů"
       },
       "footer": {
-        "tagline": "Váš Grocery Twin z lednice do košíku. Najděte recepty z toho, co máte, sledujte kalorie a nakupujte jen to, co chybí.",
+        "tagline": "Váš Grocery Twin od lednice ke košíku. Najděte recepty z toho, co máte, podívejte se na kalorie a nakupujte jen to, co chybí.",
         "groups": [
           {
             "label": "Produkt",
@@ -390,7 +385,7 @@
                 "target": "features"
               },
               {
-                "label": "příběhy",
+                "label": "Příběhy",
                 "target": "stories"
               }
             ]
@@ -414,7 +409,7 @@
           }
         ],
         "copyright": "© 2026 KAI · Grocery Twin",
-        "closingStatement": "Dobrá rozhodnutí. Skvělý týden."
+        "closingStatement": "Dobré volby. Skvělý týden."
       },
       "homeRoiCalculator": {
         "methodologyVersion": 2,
@@ -1293,7 +1288,7 @@
         "landingPage",
         "badge"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1484,7 +1479,7 @@
         "header",
         "primaryCtaLabel"
       ],
-      "sourceHash": "f6f2913c3ee65c4e5fa410960649ae928ee8a5cd7f384972c7275007686b7ac2"
+      "sourceHash": "ab23cde5c8e7eb47ed87cea252cff38249f120f377190c482f92ae0cf70f715d"
     },
     {
       "path": [
@@ -1493,7 +1488,7 @@
         "hero",
         "ratingLabel"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1885,7 +1880,7 @@
         "restockDemo",
         "confirmationBody"
       ],
-      "sourceHash": "3855bc93caa2a8d399d9cee5cc6e725b20d5e76226eece00ca411c62e98a124a"
+      "sourceHash": "52d9f9ef8483c24c7185a727bf2211244f85030367da02ddf14eb5d6e6011ba0"
     },
     {
       "path": [
@@ -1895,7 +1890,7 @@
         "restockDemo",
         "signInLabel"
       ],
-      "sourceHash": "5e4e68bf849048cc43d66bb27eb09dc5d3a299b8e31b9b887643f594b40e1213"
+      "sourceHash": "607a80121c655651dc14cbb057e035943bed91077283e9c6b8d709db1e25ef7f"
     },
     {
       "path": [
@@ -1905,7 +1900,7 @@
         "restockDemo",
         "signInNotice"
       ],
-      "sourceHash": "7ede1f8e3651004f8425e6cd270825174d06112032e615b98f44f4685533c0a4"
+      "sourceHash": "7ee6641bab06f804b91bb13e538d9da870890f703c1d8fa24098515f5129a011"
     },
     {
       "path": [
@@ -2043,7 +2038,7 @@
         "product",
         "heading"
       ],
-      "sourceHash": "c172cd2a53e02e6d2763843e2a4f04c33b97f43ddaa3d1af868a01a8d445d7e1"
+      "sourceHash": "989cacb42de5017d3d7942afe20d93c7d79c5617f70de63c4dbb7a4f1174baf2"
     },
     {
       "path": [
@@ -6543,6 +6538,42 @@
         "landingPage",
         "roiCalculator",
         "currencyCopy",
+        "native"
+      ],
+      "sourceHash": "cd2604270cd9656f4abdccbee7bf11038b88a1ae5a8657f9933a807fdcdff8bf"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "loading"
+      ],
+      "sourceHash": "efc980d9dce429c644a6dce658df91cdacbff328ea38504d8ce80bfe9b76b32d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "unavailable"
+      ],
+      "sourceHash": "b01a152edb76137a0a16fe29cc942fa282d98fbdc4123b830397f9fde7f85095"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "converted"
+      ],
+      "sourceHash": "450c38574200c1402496596e9f8177d31fd0e64cf58d9468c350eb3ba2c60d10"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
         "basis"
       ],
       "sourceHash": "17cc8491fcdfe8ddd4f8dec6a3859229ecacffb562b383e1283f1c0be0019806"
@@ -7914,5 +7945,5 @@
       "sourceHash": "6e5fe4ca7c07142fa81eef400c342dea7f8ba0422aa331c3880e6604db8d52a7"
     }
   ],
-  "generatedAt": "2026-10-13T14:19:34.015Z"
+  "generatedAt": "2026-09-01T19:15:50.031Z"
 }

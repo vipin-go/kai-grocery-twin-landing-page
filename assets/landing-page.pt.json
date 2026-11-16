@@ -2,13 +2,8 @@
   "schemaVersion": 2,
   "language": "pt",
   "regionKey": null,
-  "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
+  "sourceRevision": "e109add0e4fe301964f8a19341549a6101f0e29e2c6783073414963417b1e42b",
   "landingPage": {
-    "capabilityPreview": {
-      "enabled": true,
-      "commandId": "restock",
-      "presentation": "surface"
-    },
     "design": {
       "variant": "grocery-twin",
       "defaultThemeMode": "light",
@@ -57,14 +52,14 @@
     },
     "header": {
       "brandMark": "image",
-      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "logoImageUrl": "https://gabrieloperator.com/assets/gabriel-twins/brand-marks/kai.webp",
       "navItems": [
         {
           "label": "Produto",
           "target": "product"
         },
         {
-          "label": "Móvel",
+          "label": "Mobile",
           "target": "mobile"
         },
         {
@@ -80,33 +75,33 @@
           "target": "about"
         }
       ],
-      "ctaLabel": "Conheça a KAI"
+      "ctaLabel": "Conheça o KAI"
     },
-    "badge": "A sua loja, receitas e plano calórico, conectados",
-    "headline": "Torne as compras de supermercado fáceis novamente",
-    "headlineAccent": "Torne as compras de supermercado fáceis novamente",
-    "subheadline": "Escaneie a geladeira ou um recibo. A KAI transforma o que já tem em receitas, conta as calorias e compra apenas o que cada refeição ainda precisa.",
-    "ctaLabel": "Fale com a KAI",
-    "secondaryCtaLabel": "Escaneie para receitas",
+    "badge": "A sua loja, receitas e plano calórico—ligados",
+    "headline": "Torne as compras de supermercado fáceis de novo",
+    "headlineAccent": "fáceis de novo",
+    "subheadline": "Digitalize o frigorífico ou um recibo. O KAI transforma o que já tem em receitas, conta as calorias e compra apenas o que cada refeição ainda precisa.",
+    "ctaLabel": "Fale com o KAI",
+    "secondaryCtaLabel": "Digitalizar para receitas",
     "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
     "featureTags": [
       "Produtos e preços reais",
-      "Revise cada escolha",
-      "Calorias planejadas por família",
-      "Receitas do que tem"
+      "Rever cada escolha",
+      "Calorias planeadas por agregado familiar",
+      "Receitas com o que tem"
     ],
     "seoImage": {
       "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
-      "alt": "KAI, a sua Gêmea de Compras, numa cozinha ensolarada rodeada de produtos frescos e um plano semanal de refeições"
+      "alt": "KAI, o seu Gémeo de Mercearia, numa cozinha ensolarada rodeado de produtos frescos e um plano de refeições semanal"
     },
     "contact": {
       "heading": "Comece com o que tem",
-      "body": "Escaneie a geladeira ou um recibo e deixe a KAI preparar as compras em falta para revisão."
+      "body": "Digitalize o frigorífico ou um recibo e deixe-o preparar as falhas da mercearia para revisão."
     },
     "groceryTwin": {
       "header": {
         "editionLabel": "Início",
-        "subtitle": "A sua Gêmea de Compras",
+        "subtitle": "O seu Gémeo de Mercearia",
         "secondaryEditionLabel": "Retalho",
         "navItems": [
           {
@@ -114,7 +109,7 @@
             "target": "product"
           },
           {
-            "label": "Móvel",
+            "label": "Mobile",
             "target": "mobile"
           },
           {
@@ -130,65 +125,65 @@
             "target": "about"
           }
         ],
-        "secondaryCtaLabel": "Conheça a KAI",
-        "primaryCtaLabel": "Conheça a KAI"
+        "secondaryCtaLabel": "Conheça o KAI",
+        "primaryCtaLabel": "Iniciar um carrinho"
       },
       "hero": {
-        "ratingLabel": "A sua loja, receitas e plano calórico, conectados",
-        "heading": "Torne as compras de supermercado fáceis novamente",
-        "body": "Escaneie a geladeira ou um recibo. A KAI transforma o que já tem em receitas, conta as calorias e compra apenas o que cada refeição ainda precisa.",
-        "primaryCtaLabel": "Fale com a KAI",
-        "secondaryCtaLabel": "Escaneie para receitas",
+        "ratingLabel": "A sua loja, receitas e plano calórico—ligados",
+        "heading": "Torne as compras de supermercado fáceis de novo",
+        "body": "Digitalize o frigorífico ou um recibo. O KAI transforma o que já tem em receitas, conta as calorias e compra apenas o que cada refeição ainda precisa.",
+        "primaryCtaLabel": "Fale com o KAI",
+        "secondaryCtaLabel": "Digitalizar para receitas",
         "trustItems": [
           "Produtos e preços reais",
-          "Revise cada escolha",
-          "Calorias planejadas por família",
-          "Receitas do que tem"
+          "Rever cada escolha",
+          "Calorias planeadas por agregado familiar",
+          "Receitas com o que tem"
         ],
         "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
-        "characterAlt": "KAI, a sua persona completa de Gêmea de Compras",
+        "characterAlt": "KAI, a sua persona completa de Gémeo de Mercearia",
         "chat": {
           "statusLabel": "Online",
-          "subtitle": "Assistente de compras de geladeira a receitas",
-          "openingMessage": "Olá, eu sou a KAI. Mostre-me a geladeira, despensa ou um recibo recente. Vou sugerir receitas do que tem e manter visíveis os gastos, calorias e ingredientes em falta.",
-          "visitorMessage": "Escaneie a minha geladeira e mostre o que posso cozinhar hoje à noite.",
-          "assistantMessage": "Vou transformar o que já tem em opções de receitas, mostrar as calorias por dose e comprar apenas os ingredientes em falta.",
-          "inputPlaceholder": "Peça compras, uma receita ou uma verificação de calorias…",
+          "subtitle": "Assistente de mercearia do frigorífico à receita",
+          "openingMessage": "Olá, sou o KAI. Mostre-me o frigorífico, a despensa ou um recibo recente. Vou sugerir receitas com o que tem e manter visíveis o gasto, as calorias e os ingredientes em falta.",
+          "visitorMessage": "Digitalize o meu frigorífico e mostre o que posso cozinhar hoje à noite.",
+          "assistantMessage": "Vou transformar o que já tem em opções de receita, mostrar calorias por dose e comprar apenas os ingredientes que ainda faltam.",
+          "inputPlaceholder": "Peça mercearias, uma receita ou uma verificação calórica…",
           "suggestions": [
-            "Ofertas de leite de aveia",
-            "Equilibre a minha semana",
-            "Cozinhar com a minha geladeira"
+            "Promoções de leite de aveia",
+            "Equilibrar a minha semana",
+            "Cozinhar com o meu frigorífico"
           ],
-          "demoNote": "Demonstração ilustrativa de compras, receitas e nutrição · Verifique ingredientes e necessidades dietéticas",
+          "demoNote": "Demonstração ilustrativa de mercearias, receitas e nutrição · Verifique ingredientes e necessidades dietéticas",
           "sampleProduct": {
-            "badge": "Oferta encontrada · Pantry+",
+            "badge": "Promoção encontrada · Pantry+",
             "name": "Oatly Barista Edition",
-            "detail": "1 L · 590 kcal · 20% off",
-            "price": "€2.39",
+            "detail": "1 L · 590 kcal · 20% de desconto",
+            "price": "€2,39",
             "actionLabel": "Try /restock"
           }
         },
         "restockDemo": {
           "enabled": true,
           "commandTrigger": "restock",
-          "uploadLabel": "Escolha uma imagem de geladeira, despensa, recibo ou lista de compras",
+          "uploadLabel": "Escolha uma imagem de frigorífico, despensa, recibo ou lista de compras",
           "uploadHint": "JPEG, PNG, WebP ou HEIC · até 6 imagens e 10 MB cada",
-          "analyzingLabel": "A KAI está a ler as compras visíveis…",
-          "inventoryHeading": "Reveja o inventário extraído",
-          "inventoryBody": "Corrija quantidades, remova erros ou adicione algo que a KAI tenha perdido.",
-          "itemNameLabel": "Item",
+          "analyzingLabel": "O KAI está a ler os produtos visíveis…",
+          "inventoryHeading": "Rever o inventário extraído",
+          "inventoryBody": "Corrija quantidades, remova erros ou adicione algo que o KAI tenha esquecido.",
+          "itemNameLabel": "Artigo",
           "quantityLabel": "Quantidade",
           "unitLabel": "Unidade",
-          "addItemLabel": "Adicionar item",
+          "addItemLabel": "Adicionar artigo",
           "removeItemLabel": "Remover",
           "chatLabel": "Corrigir por chat",
           "voiceLabel": "Corrigir por voz · 5 min",
           "reviewLabel": "Rever inventário",
           "editLabel": "Editar inventário",
           "confirmationHeading": "Inventário pronto",
-          "confirmationBody": "Reveja a cobertura da análise e guarde os alimentos e o perfil de consumo na sua lista privada.",
-          "signInLabel": "Entre e guarde os alimentos",
-          "signInNotice": "Entre para guardar os alimentos revistos e o perfil de stock na sua área privada KAI. Nenhuma reposição começa automaticamente.",
+          "confirmationBody": "O KAI voltará a confirmar esta lista antes de propor um carrinho. Nada é encomendado sem a sua aprovação.",
+          "signInLabel": "Inicie sessão para continuar",
+          "signInNotice": "Inicie sessão para mover esta captura de mercearia para uma sessão privada do KAI e continuar o fluxo de reabastecimento. Nada é encomendado sem a sua aprovação explícita.",
           "authenticatedActionLabel": "Pôr alimentos na lista",
           "savingLabel": "Guardar alimentos…",
           "anonymousPlanNotice": "Entre para guardar o inventário revisto e o limite de stock calculado.",
@@ -199,190 +194,190 @@
           "completionEyebrow": "INVENTÁRIO SALVO",
           "completionHeading": "Alimentos adicionados à lista",
           "completionBody": "KAI guardou os alimentos revistos e o perfil de consumo e calculou o stock e o próximo limite de reposição em segundo plano. Nenhuma reposição foi iniciada.",
-          "expiryCopy": "As pré-visualizações não reclamadas expiram após uma hora",
-          "errorCopy": "A KAI não conseguiu ler uma lista de compras dessa imagem. Tente uma foto mais clara de geladeira, despensa, recibo ou lista de compras."
+          "expiryCopy": "Pré-visualizações não reclamadas expiram após uma hora",
+          "errorCopy": "O KAI não conseguiu ler uma lista de compras nessa imagem. Tente uma fotografia mais nítida do frigorífico, despensa, recibo ou lista de compras."
         }
       },
       "product": {
-        "kicker": "A sua Gêmea de Compras + Receitas + Calorias",
-        "heading": "O que podemos cozinhar e o que ainda precisa de ser comprado?",
-        "body": "A KAI conecta a análise, receitas, pesquisa de produtos, calorias e carrinho para que cada refeição comece com o que já tem.",
+        "kicker": "O seu Gémeo de Mercearia + Receitas + Calorias",
+        "heading": "O que podemos cozinhar — e o que ainda precisamos comprar?",
+        "body": "O KAI liga o scan, as receitas, a pesquisa de produtos, as calorias e o carrinho para que cada refeição comece com o que já tem.",
         "capabilityLabels": [
           "Pesquisa de produtos",
           "Plano calórico",
           "Ideias de receitas",
           "Imagem para lista",
           "Ajuda por voz",
-          "Correspondência de ofertas"
+          "Correspondência de promoções"
         ],
         "cards": [
           {
-            "title": "Carrinho em direto",
-            "body": "Compare produtos reais, quantidades e preços num único carrinho reviável.",
-            "metric": "Gastos + calorias em conjunto"
+            "title": "Carrinho ao vivo",
+            "body": "Compare produtos reais, quantidades e preços num único carrinho revísivel.",
+            "metric": "Gasto + calorias juntos"
           },
           {
-            "title": "Receitas da sua análise",
-            "body": "Veja receitas cozinháveis classificadas pelo que já está na geladeira e pelo que está em falta.",
+            "title": "Receitas do seu scan",
+            "body": "Veja receitas cozinháveis ordenadas pelo que já está no frigorífico e pelo que falta.",
             "metric": "Cozinhe primeiro, compre depois"
           },
           {
-            "title": "Radar de ofertas",
-            "body": "Compare correspondências úteis preservando a cobertura de receitas e os objetivos familiares.",
-            "metric": "Fontes reais de compras"
+            "title": "Radar de promoções",
+            "body": "Compare correspondências úteis preservando a cobertura de receitas e os objetivos do agregado familiar.",
+            "metric": "Fontes reais de mercearia"
           }
         ]
       },
       "mobile": {
-        "kicker": "A KAI no seu bolso",
-        "heading": "De geladeira a receita a carrinho,",
+        "kicker": "KAI no seu bolso",
+        "heading": "Do frigorífico à receita ao carrinho,",
         "accentHeading": "Onde quer que esteja.",
         "items": [
           {
-            "label": "Monte um carrinho",
-            "title": "Um carrinho em direto com os seus gastos e plano calórico em conjunto.",
-            "body": "Peça um produto, compare uma opção real e veja como preço, calorias e quantidade mudam na semana."
+            "label": "Construir um carrinho",
+            "title": "Um carrinho ao vivo com o seu gasto e plano calórico juntos.",
+            "body": "Peça um artigo, compare uma correspondência real e veja como preço, calorias e quantidade mudam a semana."
           },
           {
-            "label": "Escaneie a geladeira",
-            "title": "Transforme uma foto da geladeira ou recibo em receitas que você pode preparar.",
-            "body": "KAI identifica o que você tem, estima as calorias e sugere receitas antes de montar a lista de ingredientes faltantes."
+            "label": "Digitalizar o frigorífico",
+            "title": "Transforme uma foto do frigorífico ou do recibo em receitas que pode cozinhar.",
+            "body": "O KAI identifica o que tem em casa, estima as calorias e sugere receitas antes de construir a lista de ingredientes em falta."
           },
           {
-            "label": "Escolha uma receita",
+            "label": "Escolher uma receita",
             "title": "Escolha uma refeição e compre apenas o que falta.",
-            "body": "Compare tempo de preparo, calorias por porção, cobertura de ingredientes e a pequena lista de compras para cada receita."
+            "body": "Compare tempo de preparo, calorias por dose, cobertura de ingredientes e a pequena lacuna de mercearia para cada receita."
           },
           {
-            "label": "Fale com a KAI",
-            "title": "Converse sobre as compras e sua meta semanal.",
-            "body": "Diga o que acabou ou o que quer cozinhar. KAI mantém o carrinho, gastos e déficit calórico em contexto."
+            "label": "Fale com o KAI",
+            "title": "Converse sobre as compras e o seu objetivo semanal.",
+            "body": "Diga o que acabou ou o que quer cozinhar. O KAI mantém o carrinho, o gasto e a lacuna calórica em contexto."
           }
         ]
       },
       "features": {
-        "kicker": "As compras da semana, reinventadas",
-        "heading": "Gerencie compras, receitas, gastos e calorias com clareza",
+        "kicker": "A compra semanal, reconstruída",
+        "heading": "Faça a gestão de mercearias, receitas, gastos e calorias com clareza",
         "items": [
           {
             "number": "01",
             "title": "Descoberta de receitas, produtos e calorias",
-            "body": "Escaneie o que você tem ou descreva a refeição que deseja. KAI mostra receitas que você pode cozinhar, calorias por porção e a lista exata de compras para cada opção.",
+            "body": "Digitalize o que tem ou descreva a refeição que deseja. O KAI mostra receitas cozinháveis, calorias por dose e a lacuna exata de mercearia para cada opção.",
             "tags": [
-              "Escaneamento da geladeira",
+              "Scan do frigorífico",
               "Receitas",
               "Calorias",
-              "Itens faltantes"
+              "Itens em falta"
             ],
             "accent": "purple"
           },
           {
             "number": "02",
-            "title": "Um carrinho montado a partir das refeições que você escolhe",
-            "body": "Escolha uma receita e KAI remove os ingredientes que você já tem. Apenas os produtos faltantes entram no carrinho, com gastos e calorias familiares atualizados juntos.",
+            "title": "Um carrinho construído a partir das refeições que escolhe",
+            "body": "Escolha uma receita e o KAI remove os ingredientes que já tem em casa. Só os produtos em falta entram no carrinho, com o gasto e as calorias do agregado atualizados em conjunto.",
             "tags": [
               "Cobertura de receitas",
               "Apenas o que falta",
-              "Quilocalorias semanais"
+              "kcal semanais"
             ],
             "accent": "blue"
           },
           {
             "number": "03",
-            "title": "Escaneie uma vez. Cozinhe com o que tem.",
-            "body": "KAI transforma um escaneamento da geladeira, despensa ou recibo em três receitas práticas. Compare tempo e calorias, escolha uma e veja apenas os ingredientes que faltam.",
+            "title": "Digitalize uma vez. Cozinhe com o que tem.",
+            "body": "O KAI transforma um scan do frigorífico, despensa ou recibo em três receitas práticas. Compare tempo e calorias, escolha uma e reveja apenas os ingredientes em falta.",
             "tags": [
-              "3 opções de receitas",
+              "3 opções de receita",
               "Tempo de preparo",
-              "Calorias / porção"
+              "Calorias / dose"
             ],
             "accent": "lime"
           }
         ]
       },
       "stories": {
-        "kicker": "Como é cozinhar e fazer compras com KAI",
-        "heading": "Pequenos momentos de clareza da geladeira ao jantar",
+        "kicker": "Como é cozinhar e fazer compras com o KAI",
+        "heading": "Pequenos momentos de clareza do frigorífico ao jantar",
         "testimonials": [
           {
-            "quote": "KAI transforma o que já temos na geladeira em ideias de jantar, depois mostra o custo e as calorias da família antes de eu escolher.",
+            "quote": "O KAI transforma o que já está no nosso frigorífico em ideias de jantar e depois mostra o custo e as calorias da família antes de eu escolher.",
             "name": "Mila",
-            "meta": "Pai ocupado"
+            "meta": "Pai/mãe ocupado(a)"
           },
           {
-            "quote": "Peço ofertas de queijo, comparo as opções reais e adiciono exatamente a que quero. Sem trocar de aba.",
+            "quote": "Peço promoções de queijo, comparo as opções reais e adiciono exatamente a que quero. Sem saltar entre separadores.",
             "name": "Noah",
             "meta": "Comprador semanal"
           },
           {
-            "quote": "O escaneamento do recibo me deu três receitas, as calorias por porção e apenas os ingredientes que ainda precisava comprar.",
+            "quote": "O scan do recibo deu-me três receitas, as calorias por dose e apenas os ingredientes que ainda precisava de comprar.",
             "name": "Sofia",
-            "meta": "Cozinheira caseira"
+            "meta": "Cozinheiro(a) caseiro(a)"
           },
           {
-            "quote": "Gosto que KAI monte o carrinho primeiro e faça as perguntas de planejamento apenas quando importam.",
+            "quote": "Gosto que o KAI construa primeiro o carrinho e faça as perguntas de planeamento só quando elas importam.",
             "name": "Lucas",
             "meta": "Estudante"
           },
           {
-            "quote": "Voz é perfeito quando minhas mãos estão ocupadas na cozinha. Eu só digo ao KAI o que acabou.",
+            "quote": "A voz é perfeita quando tenho as mãos ocupadas na cozinha. Apenas digo ao KAI o que acabou.",
             "name": "Emma",
-            "meta": "Fã de preparação de refeições"
+            "meta": "Fã de meal prep"
           },
           {
-            "quote": "Tudo fica revisável. Posso alterar quantidades e ver tanto os gastos quanto o total de calorias se moverem comigo.",
+            "quote": "Tudo permanece revísivel. Posso alterar quantidades e ver tanto o gasto como o total calórico a moverem-se comigo.",
             "name": "Daan",
-            "meta": "Comprador esperto"
+            "meta": "Comprador inteligente"
           }
         ],
         "articles": [
           {
             "category": "Rotina semanal",
-            "title": "As compras de sete minutos e o plano de refeições",
-            "body": "Uma compradora solo transformou uma lista bagunçada de básicos em um carrinho, três jantares preparáveis e 10.850 calorias planejadas."
+            "title": "A compra e plano de refeições de sete minutos",
+            "body": "Um comprador solo transformou uma lista dispersa de produtos básicos num carrinho, três jantares cozinháveis e 10 850 calorias planeadas."
           },
           {
-            "category": "Da geladeira à receita",
-            "title": "Da foto da geladeira ao jantar de hoje",
-            "body": "KAI reconheceu os ingredientes, sugeriu três receitas e separou o que já tinha do que ainda precisava comprar."
+            "category": "Do frigorífico à receita",
+            "title": "Da foto do frigorífico ao jantar de hoje",
+            "body": "O KAI reconheceu os ingredientes, sugeriu três receitas e separou o que já estava lá do que ainda precisava de comprar."
           },
           {
-            "category": "Busca inteligente de receitas",
-            "title": "Busca inteligente que vê a semana inteira",
-            "body": "Uma busca considerou preço, calorias, cobertura de receitas e déficit de proteína sem perder o foco das compras."
+            "category": "Pesquisa inteligente de receitas",
+            "title": "Pesquisa inteligente que vê a semana inteira",
+            "body": "Uma pesquisa que ponderou preço, calorias, cobertura de receitas e uma lacuna de proteína sem perder o fio da compra."
           }
         ]
       },
       "about": {
-        "kicker": "Um lugar, várias formas de entrada",
-        "heading": "Cada entrada se torna receitas, um carrinho e um plano de calorias",
-        "body": "Uma foto, mensagem de voz, recibo ou lista alimentam a mesma visão por baixo: ingredientes disponíveis, receitas que você pode cozinhar, produtos faltantes, gastos semanais e calorias da família.",
+        "kicker": "Um lugar, muitas formas de entrar",
+        "heading": "Cada entrada torna-se em receitas, um carrinho e um plano calórico",
+        "body": "Uma foto, nota de voz, recibo ou lista alimenta a mesma visão por baixo: ingredientes disponíveis, receitas que pode cozinhar, produtos ainda em falta, gasto semanal e calorias do agregado.",
         "capabilities": [
           "Foto",
           "Voz",
-          "Ofertas",
+          "Promoções",
           "Recibo",
           "Lista",
           "Entrega",
           "Calorias",
-          "Família",
+          "Agregado familiar",
           "Receitas"
         ]
       },
       "closing": {
-        "kicker": "Seu próximo plano da geladeira ao jantar",
-        "heading": "Comece com o que você tem. Compre apenas o que falta.",
-        "body": "Escaneie a geladeira ou um recibo. KAI sugere receitas que você pode cozinhar, mostra calorias por porção e transforma os ingredientes faltantes em um carrinho que você pode revisar.",
-        "ctaLabel": "Escaneie para encontrar receitas"
+        "kicker": "O seu próximo plano do frigorífico ao jantar",
+        "heading": "Comece com o que tem. Compre apenas o que falta.",
+        "body": "Digitalize o frigorífico ou um recibo. O KAI sugere receitas cozinháveis, mostra calorias por dose e transforma os ingredientes em falta num carrinho que pode rever.",
+        "ctaLabel": "Digitalize para encontrar receitas"
       },
       "footer": {
-        "tagline": "Seu Gêmeo de Compras da geladeira ao carrinho. Encontre receitas do que você tem, veja calorias e compre apenas o que falta.",
+        "tagline": "O seu Gémeo de Mercearia do frigorífico ao carrinho. Encontre receitas com o que tem, veja calorias e compre apenas o que falta.",
         "groups": [
           {
             "label": "Produto",
             "links": [
               {
-                "label": "Demonstração de compras",
+                "label": "Demonstração de mercearia",
                 "target": "product"
               },
               {
@@ -399,11 +394,11 @@
             "label": "KAI",
             "links": [
               {
-                "label": "Sobre KAI",
+                "label": "Sobre o KAI",
                 "target": "about"
               },
               {
-                "label": "Contato",
+                "label": "Contacto",
                 "target": "contact"
               },
               {
@@ -414,7 +409,7 @@
           }
         ],
         "copyright": "© 2026 KAI · Grocery Twin",
-        "closingStatement": "Boas escolhas. Semana incrível."
+        "closingStatement": "Boas escolhas. Ótima semana."
       },
       "homeRoiCalculator": {
         "methodologyVersion": 2,
@@ -1293,7 +1288,7 @@
         "landingPage",
         "badge"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1484,7 +1479,7 @@
         "header",
         "primaryCtaLabel"
       ],
-      "sourceHash": "f6f2913c3ee65c4e5fa410960649ae928ee8a5cd7f384972c7275007686b7ac2"
+      "sourceHash": "ab23cde5c8e7eb47ed87cea252cff38249f120f377190c482f92ae0cf70f715d"
     },
     {
       "path": [
@@ -1493,7 +1488,7 @@
         "hero",
         "ratingLabel"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1885,7 +1880,7 @@
         "restockDemo",
         "confirmationBody"
       ],
-      "sourceHash": "3855bc93caa2a8d399d9cee5cc6e725b20d5e76226eece00ca411c62e98a124a"
+      "sourceHash": "52d9f9ef8483c24c7185a727bf2211244f85030367da02ddf14eb5d6e6011ba0"
     },
     {
       "path": [
@@ -1895,7 +1890,7 @@
         "restockDemo",
         "signInLabel"
       ],
-      "sourceHash": "5e4e68bf849048cc43d66bb27eb09dc5d3a299b8e31b9b887643f594b40e1213"
+      "sourceHash": "607a80121c655651dc14cbb057e035943bed91077283e9c6b8d709db1e25ef7f"
     },
     {
       "path": [
@@ -1905,7 +1900,7 @@
         "restockDemo",
         "signInNotice"
       ],
-      "sourceHash": "7ede1f8e3651004f8425e6cd270825174d06112032e615b98f44f4685533c0a4"
+      "sourceHash": "7ee6641bab06f804b91bb13e538d9da870890f703c1d8fa24098515f5129a011"
     },
     {
       "path": [
@@ -2043,7 +2038,7 @@
         "product",
         "heading"
       ],
-      "sourceHash": "c172cd2a53e02e6d2763843e2a4f04c33b97f43ddaa3d1af868a01a8d445d7e1"
+      "sourceHash": "989cacb42de5017d3d7942afe20d93c7d79c5617f70de63c4dbb7a4f1174baf2"
     },
     {
       "path": [
@@ -6543,6 +6538,42 @@
         "landingPage",
         "roiCalculator",
         "currencyCopy",
+        "native"
+      ],
+      "sourceHash": "cd2604270cd9656f4abdccbee7bf11038b88a1ae5a8657f9933a807fdcdff8bf"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "loading"
+      ],
+      "sourceHash": "efc980d9dce429c644a6dce658df91cdacbff328ea38504d8ce80bfe9b76b32d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "unavailable"
+      ],
+      "sourceHash": "b01a152edb76137a0a16fe29cc942fa282d98fbdc4123b830397f9fde7f85095"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "converted"
+      ],
+      "sourceHash": "450c38574200c1402496596e9f8177d31fd0e64cf58d9468c350eb3ba2c60d10"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
         "basis"
       ],
       "sourceHash": "17cc8491fcdfe8ddd4f8dec6a3859229ecacffb562b383e1283f1c0be0019806"
@@ -7914,5 +7945,5 @@
       "sourceHash": "6e5fe4ca7c07142fa81eef400c342dea7f8ba0422aa331c3880e6604db8d52a7"
     }
   ],
-  "generatedAt": "2026-10-13T14:19:34.015Z"
+  "generatedAt": "2026-09-01T19:15:50.031Z"
 }

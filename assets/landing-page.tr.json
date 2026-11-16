@@ -2,13 +2,8 @@
   "schemaVersion": 2,
   "language": "tr",
   "regionKey": null,
-  "sourceRevision": "0b09bfd2f5a976cc4a27c3de2dfd3224d1ae4e9db9791f498ddb2cc685d96eaa",
+  "sourceRevision": "e109add0e4fe301964f8a19341549a6101f0e29e2c6783073414963417b1e42b",
   "landingPage": {
-    "capabilityPreview": {
-      "enabled": true,
-      "commandId": "restock",
-      "presentation": "surface"
-    },
     "design": {
       "variant": "grocery-twin",
       "defaultThemeMode": "light",
@@ -57,7 +52,7 @@
     },
     "header": {
       "brandMark": "image",
-      "logoImageUrl": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/favicon.svg",
+      "logoImageUrl": "https://gabrieloperator.com/assets/gabriel-twins/brand-marks/kai.webp",
       "navItems": [
         {
           "label": "Ürün",
@@ -68,7 +63,7 @@
           "target": "mobile"
         },
         {
-          "label": "hikayeler",
+          "label": "Hikayeler",
           "target": "stories"
         },
         {
@@ -82,31 +77,31 @@
       ],
       "ctaLabel": "KAI ile Tanışın"
     },
-    "badge": "Mağazanız, tarifleriniz ve kalori planınız bağlı",
-    "headline": "Pazar alışverişini tekrar kolay hissettirin",
-    "headlineAccent": "Pazar alışverişini tekrar kolay hissettirin",
-    "subheadline": "Buzdolabını veya bir fişi tarayın. KAI, orada olanı tariflere dönüştürür, kalorileri sayar ve her öğün için hâlâ gerekenleri satın alır.",
+    "badge": "Mağazanız, tarifleriniz ve kalori planınız — bağlantılı",
+    "headline": "Market alışverişi yine kolay hissettirsin",
+    "headlineAccent": "yine kolay hissettirsin",
+    "subheadline": "Buzdolabını veya fişi tarayın. KAI, elinizde olan malzemeleri tariflere dönüştürür, kalorileri hesaplar ve her öğün için yalnızca eksik olanları satın alır.",
     "ctaLabel": "KAI ile konuşun",
-    "secondaryCtaLabel": "Tarifler için tara",
+    "secondaryCtaLabel": "Tareden tariflere",
     "heroCharacterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
     "featureTags": [
       "Gerçek ürünler ve fiyatlar",
-      "Her seçimi gözden geçirin",
-      "Hane başına planlanan kaloriler",
-      "Sahip olduğunuzdan tarifler"
+      "Her seçimi inceleyin",
+      "Hane halkına göre planlanan kaloriler",
+      "Elinizdeki malzemelerden tarifler"
     ],
     "seoImage": {
       "src": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-seo-banner.jpg",
-      "alt": "Taze üretiler ve haftalık yemek planıyla çevrili aydınlık bir mutfakta KAI, Pazar İkiziniz"
+      "alt": "Güneşli bir mutfakta, taze ürünler ve haftalık yemek planıyla çevrili Grocery Twin'ınız KAI"
     },
     "contact": {
-      "heading": "Sahip olduğunuzla başlayın",
-      "body": "Buzdolabını veya bir fişi tarayın, KAI eksik ürünleri gözden geçirmeniz için hazırlasın."
+      "heading": "Elinizdekinden başlayın",
+      "body": "Buzdolabını veya fişi tarayın ve KAI'nın eksik market listesini incelemeniz için hazırlamasına izin verin."
     },
     "groceryTwin": {
       "header": {
-        "editionLabel": "Ana Sayfa",
-        "subtitle": "Pazar İkiziniz",
+        "editionLabel": "Ana sayfa",
+        "subtitle": "Grocery Twin'ınız",
         "secondaryEditionLabel": "Perakende",
         "navItems": [
           {
@@ -118,7 +113,7 @@
             "target": "mobile"
           },
           {
-            "label": "hikayeler",
+            "label": "Hikayeler",
             "target": "stories"
           },
           {
@@ -131,51 +126,51 @@
           }
         ],
         "secondaryCtaLabel": "KAI ile Tanışın",
-        "primaryCtaLabel": "KAI ile Tanışın"
+        "primaryCtaLabel": "Sepet oluştur"
       },
       "hero": {
-        "ratingLabel": "Mağazanız, tarifleriniz ve kalori planınız bağlı",
-        "heading": "Pazar alışverişini tekrar kolay hissettirin",
-        "body": "Buzdolabını veya bir fişi tarayın. KAI, orada olanı tariflere dönüştürür, kalorileri sayar ve her öğün için hâlâ gerekenleri satın alır.",
+        "ratingLabel": "Mağazanız, tarifleriniz ve kalori planınız — bağlantılı",
+        "heading": "Market alışverişi yine kolay hissettirsin",
+        "body": "Buzdolabını veya fişi tarayın. KAI, elinizde olan malzemeleri tariflere dönüştürür, kalorileri hesaplar ve her öğün için yalnızca eksik olanları satın alır.",
         "primaryCtaLabel": "KAI ile konuşun",
-        "secondaryCtaLabel": "Tarifler için tara",
+        "secondaryCtaLabel": "Tareden tariflere",
         "trustItems": [
           "Gerçek ürünler ve fiyatlar",
-          "Her seçimi gözden geçirin",
-          "Hane başına planlanan kaloriler",
-          "Sahip olduğunuzdan tarifler"
+          "Her seçimi inceleyin",
+          "Hane halkına göre planlanan kaloriler",
+          "Elinizdeki malzemelerden tarifler"
         ],
         "characterImage": "https://raw.githubusercontent.com/vipin-go/kai-grocery-twin-landing-page/main/assets/media/kai-full-body.png",
-        "characterAlt": "KAI, tam gövdeli Pazar İkizi kişiliği",
+        "characterAlt": "KAI, tam vücut Grocery Twin karakteriniz",
         "chat": {
           "statusLabel": "Çevrimiçi",
-          "subtitle": "Buzdolabından-tarife pazar asistanı",
-          "openingMessage": "Merhaba, ben KAI. Buzdolabınızı, kilerinizi veya son bir fişi gösterin. Sahip olduğunuz ürünlerden tarif önerileri sunacağım ve harcama, kaloriler ile eksik malzemeleri görünür tutacağım.",
-          "visitorMessage": "Buzdolabımı tarayın ve bu gece ne pişirebileceğimi gösterin.",
-          "assistantMessage": "Orada olanı tarif seçeneklerine dönüştüreceğim, porsiyon başına kalorileri göstereceğim ve yalnızca eksik malzemeleri satın alacağım.",
-          "inputPlaceholder": "Pazar listesini, bir tarif veya kalori kontrolü isteyin…",
+          "subtitle": "Buzdolabından tarife market asistanı",
+          "openingMessage": "Merhaba, ben KAI. Bana buzdolabını, kileri veya son fişi gösterin. Elinizdeki malzemelerden tarifler önereceğim ve harcama, kalori ve eksik malzemeleri görünür tutacağım.",
+          "visitorMessage": "Buzdolabımı tarayın ve bu akşam ne pişirebileceğimi gösterin.",
+          "assistantMessage": "Elinizde olanı tarif seçeneklerine dönüştüreceğim, porsiyon başına kalorileri göstereceğim ve yalnızca eksik malzemeleri satın alacağım.",
+          "inputPlaceholder": "Market alışverişi, tarif veya kalori kontrolü isteyin…",
           "suggestions": [
             "Yulaf sütü fırsatları",
-            "Haftamı dengele",
-            "Buzdolabımdan pişir"
+            "Haftamı dengeleyin",
+            "Buzdolabımdakilerle pişir"
           ],
-          "demoNote": "Çizimsel pazar, tarif ve beslenme demosu · Malzemeleri ve diyet ihtiyaçlarını kontrol edin",
+          "demoNote": "Örnek market, tarif ve beslenme demosu · Malzemeleri ve diyet ihtiyaçlarını kontrol edin",
           "sampleProduct": {
-            "badge": "Fırsat bulundu · Kiler+",
+            "badge": "Fırsat bulundu · Pantry+",
             "name": "Oatly Barista Edition",
             "detail": "1 L · 590 kcal · %20 indirim",
-            "price": "€2.39",
+            "price": "€2,39",
             "actionLabel": "Try /restock"
           }
         },
         "restockDemo": {
           "enabled": true,
           "commandTrigger": "restock",
-          "uploadLabel": "Buzdolabı, kiler, fiş veya alışveriş listesi görseli seçin",
-          "uploadHint": "JPEG, PNG, WebP veya HEIC · en fazla 6 görsel ve her biri 10 MB",
-          "analyzingLabel": "KAI görünür ürünleri okuyor…",
-          "inventoryHeading": "Çıkarılan envanteri gözden geçirin",
-          "inventoryBody": "Miktarları düzeltin, hataları kaldırın veya KAI'nin atladığı bir şeyleri ekleyin.",
+          "uploadLabel": "Bir buzdolabı, kiler, fiş veya alışveriş listesi görseli seçin",
+          "uploadHint": "JPEG, PNG, WebP veya HEIC · en fazla 6 görsel ve her biri 10 MB'a kadar",
+          "analyzingLabel": "KAI görünen market ürünlerini okuyor…",
+          "inventoryHeading": "Çıkarılan envanteri inceleyin",
+          "inventoryBody": "Miktarları düzeltin, hataları kaldırın veya KAI'nın kaçırdıklarını ekleyin.",
           "itemNameLabel": "Ürün",
           "quantityLabel": "Miktar",
           "unitLabel": "Birim",
@@ -183,12 +178,12 @@
           "removeItemLabel": "Kaldır",
           "chatLabel": "Sohbetle düzelt",
           "voiceLabel": "Sesle düzelt · 5 dk",
-          "reviewLabel": "Envanteri gözden geçir",
+          "reviewLabel": "Envanteri incele",
           "editLabel": "Envanteri düzenle",
           "confirmationHeading": "Envanter hazır",
-          "confirmationBody": "Tarama kapsamını inceleyin, ardından gıdaları ve tüketim profilini özel listenize kaydedin.",
-          "signInLabel": "Gıdaları kaydetmek için gir",
-          "signInNotice": "İncelenen gıda kaydını ve stok profilini özel KAI alanınıza kaydetmek için giriş yapın. Otomatik stok yenileme başlamaz.",
+          "confirmationBody": "KAI, bir sepet önermeden önce bu listeyi yeniden onaylayacak. Sizin onayınız olmadan hiçbir şey sipariş edilmez.",
+          "signInLabel": "Devam etmek için giriş yapın",
+          "signInNotice": "Bu market kaydını özel bir KAI oturumuna taşımak ve stok yenileme iş akışına devam etmek için giriş yapın. Açık onayınız olmadan hiçbir şey sipariş edilmez.",
           "authenticatedActionLabel": "Gıdaları listeye ekle",
           "savingLabel": "Gıdalar saklanıyor…",
           "anonymousPlanNotice": "İncelenen envanteri ve hesaplanan stok eşiğini kaydetmek için giriş yapın.",
@@ -199,16 +194,16 @@
           "completionEyebrow": "ENVANTER KAYITLI",
           "completionHeading": "Gıdalar listenize eklendi",
           "completionBody": "KAI, incelenen gıdaları ve tüketim profilini kaydedip stok düzeylerini ve sonraki stok yenileme eşiğini arka planda hesapladı. Stok yenileme başlatılmadı.",
-          "expiryCopy": "Talep edilmemiş önizlemeler bir saat sonra süresi dolar",
-          "errorCopy": "KAI bu görselden pazar listesi okuyamadı. Daha net bir buzdolabı, kiler, fiş veya alışveriş listesi fotoğrafı deneyin."
+          "expiryCopy": "Sahipsiz önizlemeler bir saat sonra sona erer",
+          "errorCopy": "KAI bu görselden bir market listesi okuyamadı. Daha net bir buzdolabı, kiler, fiş veya alışveriş listesi fotoğrafı deneyin."
         }
       },
       "product": {
-        "kicker": "Pazarınız + Tarifiniz + Kalori İkiziniz",
-        "heading": "Ne pişirebiliriz ve neyin alışverişi hâlâ gerekli?",
-        "body": "KAI taramayı, tarifleri, ürün aramasını, kalorileri ve sepeti bağlar böylece her öğün sahip olduğunuz şeylerle başlar.",
+        "kicker": "Market + Tarif + Kalori Twin'ınız",
+        "heading": "Ne pişirebiliriz — ve neyi hâlâ almamız gerekir?",
+        "body": "KAI; tarama, tarifler, ürün arama, kaloriler ve sepeti birbirine bağlayarak her öğünün elinizdeki malzemelerle başlamasını sağlar.",
         "capabilityLabels": [
-          "Ürün araması",
+          "Ürün arama",
           "Kalori planı",
           "Tarif fikirleri",
           "Görselden listeye",
@@ -218,56 +213,56 @@
         "cards": [
           {
             "title": "Canlı sepet",
-            "body": "Gerçek ürünleri, miktarları ve fiyatları tek bir gözden geçirilebilir sepetde karşılaştırın.",
-            "metric": "Harcama ve kalorileri birlikte"
+            "body": "Gerçek ürünleri, miktarları ve fiyatları incelenebilir tek bir sepette karşılaştırın.",
+            "metric": "Harcama + kaloriler birlikte"
           },
           {
-            "title": "Taramanızdaki tarifler",
-            "body": "Buzdolabında zaten olan ve eksik olanlara göre sıralanmış pişirilebilir tarifleri görün.",
+            "title": "Taramanızdan tarifler",
+            "body": "Buzdolabında olanlara ve eksik olanlara göre sıralanmış pişirilebilir tarifleri görün.",
             "metric": "Önce pişir, sonra satın al"
           },
           {
             "title": "Fırsat radarı",
-            "body": "Tarif kapsamını ve hane hedeflerini korurken kullanışlı eşleşmeleri karşılaştırın.",
-            "metric": "Gerçek pazar kaynakları"
+            "body": "Tarif kapsamını ve hane hedeflerini koruyarak faydalı eşleşmeleri karşılaştırın.",
+            "metric": "Gerçek market kaynakları"
           }
         ]
       },
       "mobile": {
         "kicker": "KAI cebinizde",
-        "heading": "Buzdolabından tarife, sepete,",
+        "heading": "Buzdolabından tarife, oradan sepete,",
         "accentHeading": "Nerede olursanız olun.",
         "items": [
           {
-            "label": "Sepet oluştur",
-            "title": "Harcamanız ve kalori planınız bir arada canlı sepet.",
-            "body": "Bir ürün isteyin, gerçek bir eşleşmeyi karşılaştırın ve fiyatın, kalorinin ve miktarın haftayı nasıl değiştirdiğini görün."
+            "label": "Sepet oluşturun",
+            "title": "Harcamanız ve kalori planınız bir arada olan canlı bir sepet.",
+            "body": "Bir ürün isteyin, gerçek bir eşleşmeyi karşılaştırın ve fiyatın, kalorilerin ve miktarın haftayı nasıl değiştirdiğini görün."
           },
           {
-            "label": "Buzdolabını tara",
-            "title": "Buzdolabı veya fiş fotoğrafını pişirebileceğiniz tariflere dönüştürün.",
-            "body": "KAI eldekileri belirler, kalorileri tahmin eder ve eksik malzeme listesini oluşturmadan önce tarif önerir."
+            "label": "Buzdolabını tarayın",
+            "title": "Bir buzdolabı veya fiş fotoğrafını pişirebileceğiniz tariflere dönüştürün.",
+            "body": "KAI, elinizde olanları tanımlar, kalorileri tahmin eder ve eksik malzeme listesini oluşturmadan önce tarifler önerir."
           },
           {
             "label": "Bir tarif seçin",
             "title": "Bir yemek seçin, ardından yalnızca eksik olanı satın alın.",
-            "body": "Pişirme süresini, porsiyon başına kalorileri, malzeme kapsamını ve her tarif için küçük bakkal farkını karşılaştırın."
+            "body": "Pişirme süresini, porsiyon başına kalorileri, malzeme kapsamını ve her tarif için küçük market eksiklerini karşılaştırın."
           },
           {
             "label": "KAI ile konuşun",
-            "title": "Alışverişi ve haftalık hedefinizi konuşun.",
-            "body": "Biten veya pişirmek istediğiniz şeyi söyleyin. KAI sepeti, harcamayı ve kalori farkını bağlamda tutar."
+            "title": "Alışverişinizi ve haftalık hedefinizi konuşun.",
+            "body": "Ne bittiğini ya da ne pişirmek istediğinizi söyleyin. KAI; sepeti, harcamayı ve kalori farkını bağlamda tutar."
           }
         ]
       },
       "features": {
-        "kicker": "Yeniden yapılandırılmış haftalık alışveriş",
-        "heading": "Sebzeleri, tarifleri, harcamaları ve kalorileri netlikle yönetin",
+        "kicker": "Haftalık market, yeniden inşa edildi",
+        "heading": "Market, tarif, harcama ve kalorileri açık bir şekilde yönetin",
         "items": [
           {
             "number": "01",
             "title": "Tarif, ürün ve kalori keşfi",
-            "body": "Elinizdeki ürünleri tarayın veya istediğiniz yemeği tanımlayın. KAI pişirilebilir tarifleri, porsiyon başına kalorileri ve her seçenek için tam bakkal farkını gösterir.",
+            "body": "Elinizdekini tarayın veya istediğiniz yemeği tarif edin. KAI; pişirilebilir tarifleri, porsiyon başına kalorileri ve her seçenek için tam eksik market listesini gösterir.",
             "tags": [
               "Buzdolabı taraması",
               "Tarifler",
@@ -279,7 +274,7 @@
           {
             "number": "02",
             "title": "Seçtiğiniz yemeklerden oluşturulmuş bir sepet",
-            "body": "Bir tarif seçin ve KAI elinizdeki malzemeleri sepetten çıkarsın. Yalnızca eksik ürünler sepete girer, harcama ve kalori birlikte güncellenir.",
+            "body": "Bir tarif seçin, KAI elinizde olan malzemeleri çıkarır. Sepete yalnızca eksik ürünler girer; harcama ve hane kalorileri birlikte güncellenir.",
             "tags": [
               "Tarif kapsamı",
               "Yalnızca eksik",
@@ -289,74 +284,74 @@
           },
           {
             "number": "03",
-            "title": "Bir kez tarayın. Olduğu gibi pişirin.",
-            "body": "KAI bir buzdolabı, kiler veya fiş taramasını üç pratik tarife dönüştürür. Süreyi ve kalorileri karşılaştırın, birini seçin, ardından yalnızca eksik malzemelerini inceleyin.",
+            "title": "Bir kez tarayın. Elinizdekinden pişirin.",
+            "body": "KAI, bir buzdolabı, kiler veya fiş taramasını üç pratik tarife dönüştürür. Süreyi ve kalorileri karşılaştırın, birini seçin, ardından yalnızca eksik malzemelerini inceleyin.",
             "tags": [
               "3 tarif seçeneği",
               "Pişirme süresi",
-              "Kalori / porsiyon"
+              "Porsiyon başına kalori"
             ],
             "accent": "lime"
           }
         ]
       },
       "stories": {
-        "kicker": "KAI ile pişirme ve alışveriş nasıl hissettiriyor",
-        "heading": "Buzdolabından akşam yemeğine kadar net anlar",
+        "kicker": "KAI ile pişirmek ve alışveriş yapmak nasıl hissettiriyor",
+        "heading": "Buzdolabından akşam yemeğine kadar küçük netlik anları",
         "testimonials": [
           {
-            "quote": "KAI buzdolabımızda olanları akşam yemeği fikirlerine dönüştürüyor, seçim yapmadan önce maliyeti ve aile kalorilerini gösteriyor.",
+            "quote": "KAI, buzdolabımızda zaten olanları akşam yemeği fikirlerine dönüştürür ve ben seçmeden önce maliyeti ile aile kalorilerini gösterir.",
             "name": "Mila",
-            "meta": "Meşgul ebeveyn"
+            "meta": "Yoğun ebeveyn"
           },
           {
-            "quote": "Peynir fırsatlarını soruyorum, gerçek seçenekleri karşılaştırıyorum ve tam istediğimi ekliyorum. Sekme değiştirmeye gerek yok.",
+            "quote": "Peynir fırsatlarını soruyorum, gerçek seçenekleri karşılaştırıyorum ve istediğim tam ürünü ekliyorum. Sekme atlama yok.",
             "name": "Noah",
-            "meta": "Haftalık alışveriş yapan"
+            "meta": "Haftalık alışverişçi"
           },
           {
-            "quote": "Fiş taraması bana üç tarif, porsiyon başına kalorileri ve satın almam gereken malzemeleri verdi.",
+            "quote": "Fiş taraması bana üç tarif, porsiyon başına kalorileri ve hâlâ almam gereken malzemeleri verdi.",
             "name": "Sofia",
             "meta": "Ev aşçısı"
           },
           {
-            "quote": "KAI'nin önce sepeti oluşturmasını ve planlama sorularını yalnızca önemli olduğunda sormasını beğeniyorum.",
+            "quote": "KAI'nın önce sepeti oluşturmasını ve planlama sorularını yalnızca önemli olduklarında sormasını seviyorum.",
             "name": "Lucas",
             "meta": "Öğrenci"
           },
           {
-            "quote": "Ses, ellerim mutfakta dolu olduğunda mükemmel. KAI'ye neyin bittiğini söylüyorum.",
+            "quote": "Mutfakta ellerim doluyken ses mükemmel oluyor. KAI'ya neyin bittiğini söylüyorum.",
             "name": "Emma",
-            "meta": "Yemek hazırlama tutkunu"
+            "meta": "Yemek hazırlığı tutkunu"
           },
           {
-            "quote": "Her şey incelenebilir kalıyor. Miktarı değiştirebilir ve hem harcama hem de kalori toplamının benimle hareket ettiğini görebilirim.",
+            "quote": "Her şey incelenebilir kalıyor. Miktarları değiştirebilir ve hem harcamaların hem de toplam kalorilerin benimle birlikte hareket ettiğini görebilirim.",
             "name": "Daan",
-            "meta": "Akıllı alışveriş yapan"
+            "meta": "Akıllı alışverişçi"
           }
         ],
         "articles": [
           {
             "category": "Haftalık rutin",
-            "title": "Yedi dakikalık alışveriş ve yemek planı",
-            "body": "Yalnız alışveriş yapan biri dağınık temel malzeme listesini bir sepete, üç pişirilebilir akşam yemeğine ve 10.850 planlı kaloriye dönüştürdü."
+            "title": "Yedi dakikalık market ve yemek planı",
+            "body": "Yalnız bir alışverişçi, dağınık temel gıda listesini bir sepete, üç pişirilebilir akşam yemeğine ve 10.850 planlanmış kalorilik öğüne dönüştürdü."
           },
           {
             "category": "Buzdolabından tarife",
             "title": "Buzdolabı fotoğrafından bu akşamın yemeğine",
-            "body": "KAI malzemeleri tanıdı, üç tarif önerdi ve orada olanları hâlâ satın alınması gerekenlerden ayırdı."
+            "body": "KAI malzemeleri tanıdı, üç tarif önerdi ve elde olanları hâlâ alınması gerekenlerden ayırdı."
           },
           {
             "category": "Akıllı tarif araması",
             "title": "Tüm haftayı gören akıllı arama",
-            "body": "Alışverişin akışını kaybetmeden fiyatı, kalorileri, tarif kapsamını ve protein açığını tartan bir arama."
+            "body": "Alışverişin akışını kaybetmeden fiyat, kalori, tarif kapsamı ve protein açığını dengeleyen bir arama."
           }
         ]
       },
       "about": {
         "kicker": "Tek yer, birçok giriş yolu",
-        "heading": "Her girdi aynı alt yapıda tariflere, bir sepete ve bir kalori planına dönüşür",
-        "body": "Bir fotoğraf, sesli not, fiş veya liste aynı görünümü besler: eldeki malzemeler, pişirebileceğiniz tarifler, eksik ürünler, haftalık harcama ve ev kalorileri.",
+        "heading": "Her girdi tariflere, tek bir sepete ve tek bir kalori planına dönüşür",
+        "body": "Bir fotoğraf, sesli not, fiş veya liste alttaki aynı görünümü besler: eldeki malzemeler, pişirebileceğiniz tarifler, hâlâ eksik ürünler, haftalık harcama ve hane kalorileri.",
         "capabilities": [
           "Fotoğraf",
           "Ses",
@@ -365,24 +360,24 @@
           "Liste",
           "Teslimat",
           "Kaloriler",
-          "Hane halkı",
+          "Hane",
           "Tarifler"
         ]
       },
       "closing": {
-        "kicker": "Bir sonraki buzdolabı-akşam yemeği planınız",
-        "heading": "Elinizdekiyle başlayın. Yalnızca eksik olanı satın alın.",
-        "body": "Buzdolabını veya bir fişi tarayın. KAI pişirilebilir tarifler önerir, porsiyon başına kalorileri gösterir ve eksik malzemeleri inceleyebileceğiniz bir sepete dönüştürür.",
-        "ctaLabel": "Tarifleri bulmak için tarayın"
+        "kicker": "Bir sonraki buzdolabından akşam yemeğine planınız",
+        "heading": "Elinizdekinden başlayın. Yalnızca eksik olanı satın alın.",
+        "body": "Buzdolabını veya fişi tarayın. KAI; pişirilebilir tarifler önerir, porsiyon başına kalorileri gösterir ve eksik malzemeleri incelenebilir bir sepete dönüştürür.",
+        "ctaLabel": "Tarif bulmak için tarayın"
       },
       "footer": {
-        "tagline": "Buzdolabınızdan sepete Grocery Twin. Elinizdeki ürünlerden tarifler bulun, kalorileri görün ve yalnızca eksik olanı satın alın.",
+        "tagline": "Buzdolabından sepete Grocery Twin'ınız. Elinizdeki malzemelerden tarifler bulun, kalorileri görün ve yalnızca eksik olanı satın alın.",
         "groups": [
           {
             "label": "Ürün",
             "links": [
               {
-                "label": "Grocery demo",
+                "label": "Market demosu",
                 "target": "product"
               },
               {
@@ -390,7 +385,7 @@
                 "target": "features"
               },
               {
-                "label": "hikayeler",
+                "label": "Hikayeler",
                 "target": "stories"
               }
             ]
@@ -399,11 +394,11 @@
             "label": "KAI",
             "links": [
               {
-                "label": "KAI Hakkında",
+                "label": "KAI hakkında",
                 "target": "about"
               },
               {
-                "label": "Temas",
+                "label": "İletişim",
                 "target": "contact"
               },
               {
@@ -414,7 +409,7 @@
           }
         ],
         "copyright": "© 2026 KAI · Grocery Twin",
-        "closingStatement": "İyi seçimler. Harika hafta."
+        "closingStatement": "İyi seçimler. Harika bir hafta."
       },
       "homeRoiCalculator": {
         "methodologyVersion": 2,
@@ -1293,7 +1288,7 @@
         "landingPage",
         "badge"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1484,7 +1479,7 @@
         "header",
         "primaryCtaLabel"
       ],
-      "sourceHash": "f6f2913c3ee65c4e5fa410960649ae928ee8a5cd7f384972c7275007686b7ac2"
+      "sourceHash": "ab23cde5c8e7eb47ed87cea252cff38249f120f377190c482f92ae0cf70f715d"
     },
     {
       "path": [
@@ -1493,7 +1488,7 @@
         "hero",
         "ratingLabel"
       ],
-      "sourceHash": "7dafd2ab65ee67c9d9905d1388b233af4314a4b117a4b45e47a7a9dd4de5aaf9"
+      "sourceHash": "9954239c49087e0bf9f6666c0e5717fdb57f30578a2e321cb60674cf75301b6e"
     },
     {
       "path": [
@@ -1885,7 +1880,7 @@
         "restockDemo",
         "confirmationBody"
       ],
-      "sourceHash": "3855bc93caa2a8d399d9cee5cc6e725b20d5e76226eece00ca411c62e98a124a"
+      "sourceHash": "52d9f9ef8483c24c7185a727bf2211244f85030367da02ddf14eb5d6e6011ba0"
     },
     {
       "path": [
@@ -1895,7 +1890,7 @@
         "restockDemo",
         "signInLabel"
       ],
-      "sourceHash": "5e4e68bf849048cc43d66bb27eb09dc5d3a299b8e31b9b887643f594b40e1213"
+      "sourceHash": "607a80121c655651dc14cbb057e035943bed91077283e9c6b8d709db1e25ef7f"
     },
     {
       "path": [
@@ -1905,7 +1900,7 @@
         "restockDemo",
         "signInNotice"
       ],
-      "sourceHash": "7ede1f8e3651004f8425e6cd270825174d06112032e615b98f44f4685533c0a4"
+      "sourceHash": "7ee6641bab06f804b91bb13e538d9da870890f703c1d8fa24098515f5129a011"
     },
     {
       "path": [
@@ -2043,7 +2038,7 @@
         "product",
         "heading"
       ],
-      "sourceHash": "c172cd2a53e02e6d2763843e2a4f04c33b97f43ddaa3d1af868a01a8d445d7e1"
+      "sourceHash": "989cacb42de5017d3d7942afe20d93c7d79c5617f70de63c4dbb7a4f1174baf2"
     },
     {
       "path": [
@@ -6543,6 +6538,42 @@
         "landingPage",
         "roiCalculator",
         "currencyCopy",
+        "native"
+      ],
+      "sourceHash": "cd2604270cd9656f4abdccbee7bf11038b88a1ae5a8657f9933a807fdcdff8bf"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "loading"
+      ],
+      "sourceHash": "efc980d9dce429c644a6dce658df91cdacbff328ea38504d8ce80bfe9b76b32d"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "unavailable"
+      ],
+      "sourceHash": "b01a152edb76137a0a16fe29cc942fa282d98fbdc4123b830397f9fde7f85095"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
+        "converted"
+      ],
+      "sourceHash": "450c38574200c1402496596e9f8177d31fd0e64cf58d9468c350eb3ba2c60d10"
+    },
+    {
+      "path": [
+        "landingPage",
+        "roiCalculator",
+        "currencyCopy",
         "basis"
       ],
       "sourceHash": "17cc8491fcdfe8ddd4f8dec6a3859229ecacffb562b383e1283f1c0be0019806"
@@ -7914,5 +7945,5 @@
       "sourceHash": "6e5fe4ca7c07142fa81eef400c342dea7f8ba0422aa331c3880e6604db8d52a7"
     }
   ],
-  "generatedAt": "2026-10-13T14:19:34.015Z"
+  "generatedAt": "2026-09-01T19:15:50.031Z"
 }
